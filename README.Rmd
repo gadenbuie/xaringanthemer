@@ -27,7 +27,7 @@ output:
 Then, in the first knitr chunk, try this:
 
 ````markdown
-```{r setup} `r ''`
+```{r setup}`r ""`
 options(htmltools.dir.version = FALSE)
 library(xaringanthemer)
 mono_dark(
