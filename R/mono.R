@@ -40,6 +40,7 @@
 #' @param code_font_url Code Font URL, defaults to https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700
 #' @param code_font_family_fallback Code Font Fallback, defaults to 'Lucida Console', Monaco
 #' @param outfile Customized xaringan CSS output file name
+#' @family Monotone themes
 #' @export
 mono_light <- function(
   base_color                      = "#23395b",
@@ -85,7 +86,7 @@ mono_light <- function(
 ) {
   eval(parse(text = call_write_xaringan_theme()))
 }
-# generator: setup_theme_function("mono_light", template_mono_light, TRUE, "#' @export", body = "  eval(parse(text = call_write_xaringan_theme()))")
+# generator: setup_theme_function("mono_light", template_mono_light, "#' @family Monotone themes", "#' @export", body = "  eval(parse(text = call_write_xaringan_theme()))")
 
 #' Monotone Dark Theme
 #'
@@ -129,6 +130,7 @@ mono_light <- function(
 #' @param code_font_url Code Font URL, defaults to https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700
 #' @param code_font_family_fallback Code Font Fallback, defaults to 'Lucida Console', Monaco
 #' @param outfile Customized xaringan CSS output file name
+#' @family Monotone themes
 #' @export
 mono_dark <- function(
   base_color                      = "#cbf7ed",
@@ -174,7 +176,7 @@ mono_dark <- function(
 ) {
   eval(parse(text = call_write_xaringan_theme()))
 }
-# setup_theme_function("mono_dark", template_mono_dark, "#' @export", body = "  eval(parse(text = call_write_xaringan_theme()))")
+# setup_theme_function("mono_dark", template_mono_dark, "#' @family Monotone themes", "#' @export", body = "  eval(parse(text = call_write_xaringan_theme()))")
 
 #' Monotone Accent Theme
 #'
@@ -218,6 +220,7 @@ mono_dark <- function(
 #' @param code_font_url Code Font URL, defaults to https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700
 #' @param code_font_family_fallback Code Font Fallback, defaults to 'Lucida Console', Monaco
 #' @param outfile Customized xaringan CSS output file name
+#' @family Monotone themes
 #' @export
 mono_accent <- function(
   base_color                      = "#23395b",
@@ -263,7 +266,7 @@ mono_accent <- function(
 ) {
   eval(parse(text = call_write_xaringan_theme()))
 }
-# setup_theme_function("mono_accent", template_mono_accent, "#' @export", body = "  eval(parse(text = call_write_xaringan_theme()))")
+# setup_theme_function("mono_accent", template_mono_accent, "#' @family Monotone themes", "#' @export", body = "  eval(parse(text = call_write_xaringan_theme()))")
 
 #' Monotone Accent Inverse Theme
 #'
@@ -307,6 +310,7 @@ mono_accent <- function(
 #' @param code_font_url Code Font URL, defaults to https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700
 #' @param code_font_family_fallback Code Font Fallback, defaults to 'Lucida Console', Monaco
 #' @param outfile Customized xaringan CSS output file name
+#' @family Monotone themes
 #' @export
 mono_accent_inverse <- function(
   base_color                      = "#cbf7ed",
@@ -352,4 +356,4 @@ mono_accent_inverse <- function(
 ) {
   eval(parse(text = call_write_xaringan_theme()))
 }
-# setup_theme_function("mono_accent_inverse", template_mono_accent_inverse, "#' @export", body = "  eval(parse(text = call_write_xaringan_theme()))")
+# setup_theme_function("mono_accent_inverse", template_mono_accent_inverse, "#' @family Monotone themes", "#' @export", body = "  eval(parse(text = call_write_xaringan_theme()))")

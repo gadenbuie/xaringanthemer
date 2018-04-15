@@ -116,3 +116,7 @@ mono_accent(base_color = "#23395b", white_color = "#FFFFFF",
 \description{
 Monotone Accent Theme
 }
+\seealso{
+Other Monotone themes: \code{\link{mono_accent_inverse}},
+  \code{\link{mono_dark}}, \code{\link{mono_light}}
+}

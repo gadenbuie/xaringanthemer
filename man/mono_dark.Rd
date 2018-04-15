@@ -117,3 +117,7 @@ mono_dark(base_color = "#cbf7ed", white_color = lighten_color(base_color,
 \description{
 Monotone Dark Theme
 }
+\seealso{
+Other Monotone themes: \code{\link{mono_accent_inverse}},
+  \code{\link{mono_accent}}, \code{\link{mono_light}}
+}
