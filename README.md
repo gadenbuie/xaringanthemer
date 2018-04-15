@@ -32,14 +32,16 @@ Then, in the first knitr chunk, try this:
 ```{r setup}
 options(htmltools.dir.version = FALSE)
 library(xaringanthemer)
-mono_dark(
-  base_color = "#b6174b",
+mono_light(
+  base_color = "#1c5253",
   header_font_google = google_font("Josefin Sans"),
   text_font_google = google_font("Montserrat", "300", "300i"),
   code_font_google = google_font("Droid Mono")
 )
 ```
 ````
+
+![](docs/example_mono_light_1c5253.png)
 
 ## Monotone Themes
 
