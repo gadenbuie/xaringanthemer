@@ -1,37 +1,25 @@
----
-output: github_document
----
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-```{r setup, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>",
-  fig.path = "man/figures/README-",
-  out.width = "100%"
-)
-```
 # xaringanthemer
 
-[xaringan]: https://github.com/yihui/xaringan
-
-Easily style your [xaringan] slides with **xaringanthemer**
+Easily style your [xaringan](https://github.com/yihui/xaringan) slides
+with **xaringanthemer**
 
 ## Installation
 
-Currently, this is a work in progress.
-Try it yourself:
+Currently, this is a work in progress. Try it yourself:
 
-```r
+``` r
 devtools::install_github("gadenbuie/xaringanthemer")
 ```
 
 ## Make it work
 
-To make it work, add `css: xaringan-themed.css` to your xaringan slides YAML header under `xaringan::moonreader:`
+To make it work, add `css: xaringan-themed.css` to your xaringan slides
+YAML header under `xaringan::moonreader:`
 
-```yaml
+``` yaml
 output:
   xaringan::moon_reader:
     lib_dir: libs
@@ -40,8 +28,8 @@ output:
 
 Then, in the first knitr chunk, try this:
 
-````markdown
-```{r setup}`r ""`
+```` markdown
+```{r setup}
 options(htmltools.dir.version = FALSE)
 library(xaringanthemer)
 mono_dark(
