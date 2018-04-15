@@ -40,3 +40,19 @@ mono_dark(
 )
 ```
 ````
+
+## Monotone Themes
+
+Use these functions to automatically create a consistent color palette
+for your slides, based around a single color.
+
+  - `mono_light()`: A light theme based around a single color
+
+  - `mono_dark()`: A dark theme based around a single color
+
+  - `mono_accent()`: The default xaringan theme with a single color used
+    for color accents on select elements (headers, bold text, etc.)
+
+  - `mono_accent_inverse()`: An “inverted” default xaringan theme with a
+    single color used for color accents on select elements (headers,
+    bold text, etc.)
