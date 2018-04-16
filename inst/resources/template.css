@@ -50,7 +50,7 @@ a, a > code {
 .inverse h1, .inverse h2, .inverse h3 {
   color: {{inverse_header_color}};
 }
-.title-slide, .title-slide h1, ..title-slide h2, .title-slide h3 {
+.title-slide, .title-slide h1, .title-slide h2, .title-slide h3 {
   background-color: {{title_slide_background_color}};
   color: {{title_slide_text_color}};
   {{ifelse(!is.na(title_slide_background_image), paste0("background-image: url(", title_slide_background_image, ");"), "")}}
