@@ -67,6 +67,9 @@ a, a > code {
   {{ifelse(!is.na(title_slide_background_image), paste0("background-image: url(", title_slide_background_image, ");"), "")}}
   {{ifelse(!is.na(title_slide_background_image), "background-size: cover;", "")}}
 }
+.title-slide .remark-slide-number {
+  display: none;
+}
 /* Two-column layout */
 .left-column {
   width: 20%;
