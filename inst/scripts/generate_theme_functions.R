@@ -99,3 +99,45 @@ setup_theme_function(
   ),
   file = here::here("R/mono_accent_inverse.R")
 )
+
+# ---- Duotone ----
+setup_theme_function(
+  "duo",
+  template_duo,
+  "#' @template duo",
+  "#' @family Duotone themes",
+  "#' @export",
+  body = c(
+    "  # DO NOT EDIT - Generated from inst/scripts/generate_theme_functions.R",
+    "  eval(parse(text = call_write_xaringan_theme()))"
+  ),
+  file = here::here("R/duo.R")
+)
+
+# ---- Duotone Accent ----
+setup_theme_function(
+  "duo_accent",
+  template_duo_accent,
+  "#' @template duo_accent",
+  "#' @family Duotone themes",
+  "#' @export",
+  body = c(
+    "  # DO NOT EDIT - Generated from inst/scripts/generate_theme_functions.R",
+    "  eval(parse(text = call_write_xaringan_theme()))"
+  ),
+  file = here::here("R/duo_accent.R")
+)
+
+# ---- Duotone Accent Inverse ----
+setup_theme_function(
+  "duo_accent_inverse",
+  template_duo_accent_inverse,
+  "#' @template duo_accent_inverse",
+  "#' @family Duotone themes",
+  "#' @export",
+  body = c(
+    "  # DO NOT EDIT - Generated from inst/scripts/generate_theme_functions.R",
+    "  eval(parse(text = call_write_xaringan_theme()))"
+  ),
+  file = here::here("R/duo_accent_inverse.R")
+)

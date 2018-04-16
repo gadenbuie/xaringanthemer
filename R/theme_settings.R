@@ -141,3 +141,99 @@ template_mono_accent_inverse <- set_default(
   left_column_selected_color      = "{base_color}",
   blockquote_left_color           = "{apply_alpha(base_color, 0.5)}",
   table_row_even_background_color = "{darken_color(base_color, 0.7)}")
+
+template_duo_light <- tibble::tribble(
+  ~ variable, ~ default, ~ element, ~ description
+  , "primary_color", "#1F4257", "mutliple", "Duotone Secondary Color"
+  , "secondary_color", "#F97B64", "multiple", "Duotone Primary Color"
+  , "white_color", "{lighten_color(primary_color, 0.99)}", "multiple", "Brightest color used, default is a very light version of `primary_color`"
+  , "black_color", "{darken_color(secondary_color, 0.9)}", "multiple", "Darkest color used, default is a very dark version of `secondary_color`"
+)
+template_duo_light <- do.call('rbind', list(template_duo_light, template_variables))
+template_duo_light <- set_default(
+  template_duo_light,
+  text_color                      = "{black_color}",
+  header_color                    = "{primary_color}",
+  background_color                = "{white_color}",
+  link_color                      = "{secondary_color}",
+  text_bold_color                 = "{secondary_color}",
+  text_slide_number_color         = "{primary_color}",
+  code_inline_color               = "{secondary_color}",
+  inverse_background_color        = "{primary_color}",
+  inverse_text_color              = "{secondary_color}",
+  inverse_header_color            = "{secondary_color}",
+  left_column_subtle_color        = "{apply_alpha(secondary_color, 0.6)}",
+  left_column_selected_color      = "{secondary_color}",
+  blockquote_left_color           = "{apply_alpha(secondary_color, 0.5)}",
+  table_row_even_background_color = "{lighten_color(secondary_color, 0.7)}")
+
+template_duo <- tibble::tribble(
+  ~ variable, ~ default, ~ element, ~ description
+  , "primary_color", "#1F4257", "mutliple", "Duotone Primary Color"
+  , "secondary_color", "#F97B64", "multiple", "Duotone Secondary Color"
+)
+template_duo <- do.call('rbind', list(template_duo, template_variables))
+template_duo <- set_default(
+  template_duo,
+  text_color                      = "{choose_dark_or_light(primary_color, darken_color(primary_color, 0.9), lighten_color(secondary_color, 0.99))}",
+  header_color                    = "{secondary_color}",
+  background_color                = "{primary_color}",
+  link_color                      = "{secondary_color}",
+  text_bold_color                 = "{secondary_color}",
+  text_slide_number_color         = "{text_color}",
+  code_inline_color               = "{secondary_color}",
+  inverse_background_color        = "{secondary_color}",
+  inverse_text_color              = "{primary_color}",
+  inverse_header_color            = "{primary_color}",
+  title_slide_text_color          = "{secondary_color}",
+  title_slide_background_color    = "{primary_color}",
+  left_column_subtle_color        = "{apply_alpha(secondary_color, 0.6)}",
+  left_column_selected_color      = "{secondary_color}",
+  blockquote_left_color           = "{apply_alpha(secondary_color, 0.5)}",
+  table_row_even_background_color = "{lighten_color(primary_color, 0.3)}")
+
+template_duo_accent <- tibble::tribble(
+  ~ variable, ~ default, ~ element, ~ description
+  , "primary_color", "#006747", "mutliple", "Duotone Primary Color"
+  , "secondary_color", "#CFC493", "multiple", "Duotone Secondary Color"
+  , "white_color", "#FFFFFF", "multiple", "Brightest color used"
+  , "black_color", "#000000", "multiple", "Darkest color used"
+)
+template_duo_accent <- do.call('rbind', list(template_duo_accent, template_variables))
+template_duo_accent <- set_default(
+  template_duo_accent,
+  text_color                      = "{black_color}",
+  header_color                    = "{primary_color}",
+  background_color                = "{white_color}",
+  link_color                      = "{choose_dark_or_light(secondary_color, primary_color, secondary_color)}",
+  text_bold_color                 = "{choose_dark_or_light(secondary_color, primary_color, secondary_color)}",
+  text_slide_number_color         = "{primary_color}",
+  code_inline_color               = "{choose_dark_or_light(secondary_color, primary_color, secondary_color)}",
+  inverse_background_color        = "{secondary_color}",
+  inverse_text_color              = "{choose_dark_or_light(secondary_color, black_color, white_color)}",
+  inverse_header_color            = "{choose_dark_or_light(secondary_color, black_color, white_color)}",
+  title_slide_background_color    = "{primary_color}",
+  title_slide_text_color          = "{choose_dark_or_light(primary_color, black_color, white_color)}",
+  left_column_subtle_color        = "{apply_alpha(primary_color, 0.6)}",
+  left_column_selected_color      = "{primary_color}",
+  blockquote_left_color           = "{apply_alpha(secondary_color, 0.5)}",
+  table_row_even_background_color = "{lighten_color(secondary_color, 0.3)}")
+
+template_duo_accent_inverse <- set_default(
+  template_duo_accent,
+  text_color                      = "{white_color}",
+  header_color                    = "{primary_color}",
+  background_color                = "{black_color}",
+  link_color                      = "{choose_dark_or_light(secondary_color, primary_color, secondary_color)}",
+  text_bold_color                 = "{choose_dark_or_light(secondary_color, primary_color, secondary_color)}",
+  text_slide_number_color         = "{primary_color}",
+  code_inline_color               = "{choose_dark_or_light(secondary_color, primary_color, secondary_color)}",
+  inverse_background_color        = "{secondary_color}",
+  inverse_text_color              = "{choose_dark_or_light(secondary_color, black_color, white_color)}",
+  inverse_header_color            = "{choose_dark_or_light(secondary_color, black_color, white_color)}",
+  title_slide_background_color    = "{primary_color}",
+  title_slide_text_color          = "{choose_dark_or_light(primary_color, black_color, white_color)}",
+  left_column_subtle_color        = "{apply_alpha(primary_color, 0.6)}",
+  left_column_selected_color      = "{primary_color}",
+  blockquote_left_color           = "{apply_alpha(secondary_color, 0.5)}",
+  table_row_even_background_color = "{darken_color(choose_dark_or_light(primary_color, secondary_color, primary_color), 0.3)}")
