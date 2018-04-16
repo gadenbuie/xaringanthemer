@@ -7,17 +7,27 @@ body {
   font-weight: {{text_font_weight}};
   color: {{text_color}};
 }
-.remark-slide-content {
-  background-color: {{background_color}};
-}
-
 h1, h2, h3 {
   font-family: {{header_font_family}};
   font-weight: {{header_font_weight}};
   color: {{header_color}};
 }
+.remark-slide-content {
+  background-color: {{background_color}};
+  font-size: {{text_size}};
+}
+.remark-slide-content h1 {
+    font-size: {{text_size_h1}};
+}
+.remark-slide-content h2 {
+    font-size: {{text_size_h2}};
+}
+.remark-slide-content h3 {
+    font-size: {{text_size_h3}};
+}
 .remark-code, .remark-inline-code {
   font-family: {{code_font_family}}, {{code_font_family_fallback}}, monospace;
+  font-size: {{text_size_code}};
 }
 .remark-inline-code {
   {{ifelse(!is.na(code_inline_color), paste0("color: ", code_inline_color, ";"), "")}}
@@ -27,6 +37,7 @@ h1, h2, h3 {
 .remark-slide-number {
   color: {{text_slide_number_color}};
   opacity: 1;
+  text-size: {{text_size_slide_number}};
 }
 {{ifelse(!is.na(text_bold_color), paste0("strong{color:", text_bold_color,";}"), "")}}
 a, a > code {

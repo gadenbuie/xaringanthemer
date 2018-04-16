@@ -20,6 +20,12 @@
 #' @param table_border_color Table top/bottom border, defaults to #657b83
 #' @param table_row_border_color Table row inner bottom border, defaults to #657b83
 #' @param table_row_even_background_color Table Even Row Background Color, defaults to #073642
+#' @param text_size Slide Body Text Size, defaults to 20px
+#' @param text_size_h1 h1 Header Text Size, defaults to 55px
+#' @param text_size_h2 h2 Header Text Size, defaults to 45px
+#' @param text_size_h3 h3 Header Text Size, defaults to 35px
+#' @param text_size_slide_number Slide Number Text Size, defaults to 20px
+#' @param text_size_code Code Text Size, defaults to 20px
 #' @param text_font_google Use `google_font()` to specify body font, defaults to `NULL`
 #' @param text_font_family Body Text Font Family, defaults to 'Droid Serif'
 #' @param text_font_weight Body Text Font Weight, defaults to normal
@@ -61,6 +67,12 @@ solarized_dark <- function(
   table_border_color = "#657b83",
   table_row_border_color = "#657b83",
   table_row_even_background_color = "#073642",
+  text_size = "20px",
+  text_size_h1 = "55px",
+  text_size_h2 = "45px",
+  text_size_h3 = "35px",
+  text_size_slide_number = "20px",
+  text_size_code = "20px",
   text_font_google = NULL,
   text_font_family = "'Droid Serif'",
   text_font_weight = "normal",

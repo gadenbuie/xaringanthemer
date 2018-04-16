@@ -26,8 +26,11 @@ duo_accent_inverse(primary_color = "#006747", secondary_color = "#CFC493",
   blockquote_left_color = apply_alpha(secondary_color, 0.5),
   table_border_color = "#666", table_row_border_color = "#ddd",
   table_row_even_background_color = darken_color(choose_dark_or_light(primary_color,
-  secondary_color, primary_color), 0.3), text_font_google = NULL,
-  text_font_family = "'Droid Serif'", text_font_weight = "normal",
+  secondary_color, primary_color), 0.3), text_size = "20px",
+  text_size_h1 = "55px", text_size_h2 = "45px", text_size_h3 = "35px",
+  text_size_slide_number = "20px", text_size_code = "20px",
+  text_font_google = NULL, text_font_family = "'Droid Serif'",
+  text_font_weight = "normal",
   text_font_url = "https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic",
   text_font_family_fallback = "'Palatino Linotype', 'Book Antiqua', Palatino, 'Microsoft YaHei', 'Songti SC'",
   text_font_base = "serif", header_font_google = NULL,
@@ -90,6 +93,18 @@ duo_accent_inverse(primary_color = "#006747", secondary_color = "#CFC493",
 \item{table_row_border_color}{Table row inner bottom border, defaults to #ddd}
 
 \item{table_row_even_background_color}{Table Even Row Background Color, defaults to \code{darken_color(choose_dark_or_light(primary_color, secondary_color, primary_color), 0.3)}}
+
+\item{text_size}{Slide Body Text Size, defaults to 20px}
+
+\item{text_size_h1}{h1 Header Text Size, defaults to 55px}
+
+\item{text_size_h2}{h2 Header Text Size, defaults to 45px}
+
+\item{text_size_h3}{h3 Header Text Size, defaults to 35px}
+
+\item{text_size_slide_number}{Slide Number Text Size, defaults to 20px}
+
+\item{text_size_code}{Code Text Size, defaults to 20px}
 
 \item{text_font_google}{Use \code{google_font()} to specify body font, defaults to \code{NULL}}
 
