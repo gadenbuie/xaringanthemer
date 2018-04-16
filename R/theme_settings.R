@@ -237,3 +237,74 @@ template_duo_accent_inverse <- set_default(
   left_column_selected_color      = "{primary_color}",
   blockquote_left_color           = "{apply_alpha(secondary_color, 0.5)}",
   table_row_even_background_color = "{darken_color(choose_dark_or_light(primary_color, secondary_color, primary_color), 0.3)}")
+
+solarized <- list(
+  "base03"  = "#002b36",
+  "base02"  = "#073642",
+  "base01"  = "#586e75",
+  "base00"  = "#657b83",
+  "base0"   = "#839496",
+  "base1"   = "#93a1a1",
+  "base2"   = "#eee8d5",
+  "base3"   = "#fdf6e3",
+  "yellow"  = "#b58900",
+  "orange"  = "#cb4b16",
+  "red"     = "#dc322f",
+  "magenta" = "#d33682",
+  "violet"  = "#6c71c4",
+  "blue"    = "#268bd2",
+  "cyan"    = "#2aa198",
+  "green"   = "#859900")
+
+
+template_solarized_light <- set_default(
+  template_variables,
+  text_color                      = solarized$base00,
+  header_color                    = solarized$red,
+  background_color                = solarized$base3,
+  link_color                      = solarized$yellow,
+  text_bold_color                 = solarized$magenta,
+  text_slide_number_color         = solarized$base1,
+  code_highlight_color            = "#268bd240", #xaringanthemer:::apply_alpha(solarized$blue, 0.25)
+  code_inline_color               = solarized$violet,
+  code_inline_background_color    = "NA",
+  inverse_background_color        = solarized$base03,
+  inverse_text_color              = solarized$base3,
+  inverse_text_shadow             = "{FALSE}",
+  inverse_header_color            = "{inverse_text_color}",
+  title_slide_text_color          = "{inverse_text_color}",
+  title_slide_background_color    = "{inverse_background_color}",
+  title_slide_background_image    = "NA",
+  left_column_subtle_color        = solarized$base1,
+  left_column_selected_color      = solarized$base01,
+  blockquote_left_color           = solarized$orange,
+  table_border_color              = solarized$base0,
+  table_row_border_color          = solarized$base0,
+  table_row_even_background_color = solarized$base2
+)
+
+template_solarized_dark <- set_default(
+  template_variables,
+  text_color                      = solarized$base0,
+  header_color                    = solarized$red,
+  background_color                = solarized$base03,
+  link_color                      = solarized$yellow,
+  text_bold_color                 = solarized$magenta,
+  text_slide_number_color         = solarized$base01,
+  code_highlight_color            = "#268bd240", #xaringanthemer:::apply_alpha(solarized$blue, 0.25)
+  code_inline_color               = solarized$violet,
+  code_inline_background_color    = "NA",
+  inverse_background_color        = solarized$base3,
+  inverse_text_color              = solarized$base03,
+  inverse_text_shadow             = "{FALSE}",
+  inverse_header_color            = "{inverse_text_color}",
+  title_slide_text_color          = "{inverse_text_color}",
+  title_slide_background_color    = "{inverse_background_color}",
+  title_slide_background_image    = "NA",
+  left_column_subtle_color        = solarized$base01,
+  left_column_selected_color      = solarized$base1,
+  blockquote_left_color           = solarized$orange,
+  table_border_color              = solarized$base00,
+  table_row_border_color          = solarized$base00,
+  table_row_even_background_color = solarized$base02
+)

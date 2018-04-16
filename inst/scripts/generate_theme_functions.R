@@ -141,3 +141,31 @@ setup_theme_function(
   ),
   file = here::here("R/duo_accent_inverse.R")
 )
+
+# ---- Solarized Light ----
+setup_theme_function(
+  "solarized_light",
+  template_solarized_light,
+  "#' @template solarized_light",
+  "#' @family Solarized themes",
+  "#' @export",
+  body = c(
+    "  # DO NOT EDIT - Generated from inst/scripts/generate_theme_functions.R",
+    "  eval(parse(text = call_write_xaringan_theme()))"
+  ),
+  file = here::here("R/solarized_light.R")
+)
+
+# ---- Solarized Dark ----
+setup_theme_function(
+  "solarized_dark",
+  template_solarized_dark,
+  "#' @template solarized_dark",
+  "#' @family Solarized themes",
+  "#' @export",
+  body = c(
+    "  # DO NOT EDIT - Generated from inst/scripts/generate_theme_functions.R",
+    "  eval(parse(text = call_write_xaringan_theme()))"
+  ),
+  file = here::here("R/solarized_dark.R")
+)
