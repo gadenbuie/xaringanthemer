@@ -16,6 +16,19 @@ darken_color <- function(color_hex, strength = 0.8) {
   rgb(color_rgb[1], color_rgb[2], color_rgb[3], maxColorValue = 255)
 }
 
+adjust_value_color <- function(color_hext, strength = 0.5) {
+  color_hsv <- rgb2hsv(col2rgb(color_hex))[, 1]
+  color_hsv['v'] <- strength
+  hsv(color_hsv[1], color_hsv[2], color_hsv[3])
+}
+
+#' @keywords internal
+call_write_xaringan_theme <- function() {
+  paste0("write_xaringan_theme(",
+         paste(template_variables$variable, collapse = ", "),
+         ")")
+}
+
 #' Specify Google Font
 #'
 #' Builds Google Fonts URL from family name. Extra weights are given in the

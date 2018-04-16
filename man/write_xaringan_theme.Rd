@@ -2,17 +2,17 @@
 % Please edit documentation in R/theme.R
 \name{write_xaringan_theme}
 \alias{write_xaringan_theme}
-\title{Write Customized Xaringan Theme}
+\title{Write A Customized Xaringan Theme}
 \usage{
 write_xaringan_theme(text_color = "#000", header_color = "#000",
   background_color = "#FFF", link_color = "rgb(249, 38, 114)",
-  text_bold_color = NA, text_slide_number_color = color_inverse_bg,
-  code_highlight_color = "#ffff88", code_inline_color = "#000",
+  text_bold_color = NA, text_slide_number_color = inverse_background_color,
+  code_highlight_color = "rgba(255,255,0,0.5)", code_inline_color = "#000",
   code_inline_background_color = NA, inverse_background_color = "#272822",
   inverse_text_color = "#d6d6d6", inverse_text_shadow = FALSE,
   inverse_header_color = "#f3f3f3",
-  title_slide_text_color = color_inverse_text,
-  title_slide_background_color = color_inverse_bg,
+  title_slide_text_color = inverse_text_color,
+  title_slide_background_color = inverse_background_color,
   title_slide_background_image = NA, left_column_subtle_color = "#777",
   left_column_selected_color = "#000", blockquote_left_color = "lightgray",
   table_border_color = "#666", table_row_border_color = "#ddd",
@@ -29,80 +29,80 @@ write_xaringan_theme(text_color = "#000", header_color = "#000",
   outfile = "xaringan-themed.css")
 }
 \arguments{
-\item{text_color}{Text Color}
+\item{text_color}{Text Color, defaults to #000}
 
-\item{header_color}{Header Color}
+\item{header_color}{Header Color, defaults to #000}
 
-\item{background_color}{Slide Background Color}
+\item{background_color}{Slide Background Color, defaults to #FFF}
 
-\item{link_color}{Link Color}
+\item{link_color}{Link Color, defaults to rgb(249, 38, 114)}
 
-\item{text_bold_color}{Bold Text Color}
+\item{text_bold_color}{Bold Text Color, defaults to NA}
 
-\item{text_slide_number_color}{Slide Number Color}
+\item{text_slide_number_color}{Slide Number Color, defaults to \code{inverse_background_color}}
 
-\item{code_highlight_color}{Code Line Highlight}
+\item{code_highlight_color}{Code Line Highlight, defaults to rgba(255,255,0,0.5)}
 
-\item{code_inline_color}{Inline Code Color}
+\item{code_inline_color}{Inline Code Color, defaults to #000}
 
-\item{code_inline_background_color}{Inline Code Background Color}
+\item{code_inline_background_color}{Inline Code Background Color, defaults to NA}
 
-\item{inverse_background_color}{Inverse Background Color}
+\item{inverse_background_color}{Inverse Background Color, defaults to #272822}
 
-\item{inverse_text_color}{Inverse Text Color}
+\item{inverse_text_color}{Inverse Text Color, defaults to #d6d6d6}
 
-\item{inverse_text_shadow}{Enables Shadow on text of inverse slides}
+\item{inverse_text_shadow}{Enables Shadow on text of inverse slides, defaults to \code{FALSE}}
 
-\item{inverse_header_color}{Inverse Header Color}
+\item{inverse_header_color}{Inverse Header Color, defaults to #f3f3f3}
 
-\item{title_slide_text_color}{Title Slide Text Color}
+\item{title_slide_text_color}{Title Slide Text Color, defaults to \code{inverse_text_color}}
 
-\item{title_slide_background_color}{Title Slide Background Color}
+\item{title_slide_background_color}{Title Slide Background Color, defaults to \code{inverse_background_color}}
 
-\item{title_slide_background_image}{Title Slide Background Image URL}
+\item{title_slide_background_image}{Title Slide Background Image URL, defaults to NA}
 
-\item{left_column_subtle_color}{Left Column Text (not last)}
+\item{left_column_subtle_color}{Left Column Text (not last), defaults to #777}
 
-\item{left_column_selected_color}{Left Column Current Selection}
+\item{left_column_selected_color}{Left Column Current Selection, defaults to #000}
 
-\item{blockquote_left_color}{Blockquote Left Border Color}
+\item{blockquote_left_color}{Blockquote Left Border Color, defaults to lightgray}
 
-\item{table_border_color}{Table top/bottom border}
+\item{table_border_color}{Table top/bottom border, defaults to #666}
 
-\item{table_row_border_color}{Table row inner bottom border}
+\item{table_row_border_color}{Table row inner bottom border, defaults to #ddd}
 
-\item{table_row_even_background_color}{Table Even Row Background Color}
+\item{table_row_even_background_color}{Table Even Row Background Color, defaults to #eee}
 
-\item{text_font_google}{Use \code{google_font()} to specify body font}
+\item{text_font_google}{Use \code{google_font()} to specify body font, defaults to \code{NULL}}
 
-\item{text_font_family}{Body Text Font Family}
+\item{text_font_family}{Body Text Font Family, defaults to 'Droid Serif'}
 
-\item{text_font_weight}{Body Text Font Weight}
+\item{text_font_weight}{Body Text Font Weight, defaults to normal}
 
-\item{text_font_url}{Body Text Font URL(s)}
+\item{text_font_url}{Body Text Font URL(s), defaults to https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic}
 
-\item{text_font_family_fallback}{Body Text Font Fallbacks}
+\item{text_font_family_fallback}{Body Text Font Fallbacks, defaults to 'Palatino Linotype', 'Book Antiqua', Palatino, 'Microsoft YaHei', 'Songti SC'}
 
-\item{text_font_base}{Body Text Base Font (Total Failure Fallback)}
+\item{text_font_base}{Body Text Base Font (Total Failure Fallback), defaults to serif}
 
-\item{header_font_google}{Use \code{google_font()} to specify header font}
+\item{header_font_google}{Use \code{google_font()} to specify header font, defaults to \code{NULL}}
 
-\item{header_font_family}{Header Font Family}
+\item{header_font_family}{Header Font Family, defaults to 'Yanone Kaffeesatz'}
 
-\item{header_font_weight}{Header Font Weight}
+\item{header_font_weight}{Header Font Weight, defaults to normal}
 
-\item{header_font_url}{Header Font URL}
+\item{header_font_url}{Header Font URL, defaults to https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz}
 
-\item{code_font_google}{Use \code{google_font()} to specify code font}
+\item{code_font_google}{Use \code{google_font()} to specify code font, defaults to \code{NULL}}
 
-\item{code_font_family}{Code Font Family}
+\item{code_font_family}{Code Font Family, defaults to 'Source Code Pro'}
 
-\item{code_font_url}{Code Font URL}
+\item{code_font_url}{Code Font URL, defaults to https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700}
 
-\item{code_font_family_fallback}{Code Font Fallback}
+\item{code_font_family_fallback}{Code Font Fallback, defaults to 'Lucida Console', Monaco}
 
 \item{outfile}{Customized xaringan CSS output file name}
 }
 \description{
-Write Customized Xaringan Theme
+Creates a customized Xaringan theme CSS file.
 }

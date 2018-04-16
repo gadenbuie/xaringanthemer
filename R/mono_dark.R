@@ -1,25 +1,28 @@
-#' @param text_color Text Color, defaults to #000
-#' @param header_color Header Color, defaults to #000
-#' @param background_color Slide Background Color, defaults to #FFF
-#' @param link_color Link Color, defaults to rgb(249, 38, 114)
-#' @param text_bold_color Bold Text Color, defaults to NA
-#' @param text_slide_number_color Slide Number Color, defaults to `inverse_background_color`
+#' @param base_color Monotone Base Color, works best with a light color., defaults to #cbf7ed
+#' @param white_color Brightest color used, default is a very light version of `base_color`, defaults to `lighten_color(base_color, 0.8)`
+#' @param black_color Darkest color used, default is a very dark, version of `base_color`, defaults to `darken_color(base_color, 0.85)`
+#' @param text_color Text Color, defaults to `white_color`
+#' @param header_color Header Color, defaults to `base_color`
+#' @param background_color Slide Background Color, defaults to `black_color`
+#' @param link_color Link Color, defaults to `base_color`
+#' @param text_bold_color Bold Text Color, defaults to `base_color`
+#' @param text_slide_number_color Slide Number Color, defaults to `base_color`
 #' @param code_highlight_color Code Line Highlight, defaults to rgba(255,255,0,0.5)
-#' @param code_inline_color Inline Code Color, defaults to #000
+#' @param code_inline_color Inline Code Color, defaults to `base_color`
 #' @param code_inline_background_color Inline Code Background Color, defaults to NA
-#' @param inverse_background_color Inverse Background Color, defaults to #272822
-#' @param inverse_text_color Inverse Text Color, defaults to #d6d6d6
+#' @param inverse_background_color Inverse Background Color, defaults to `base_color`
+#' @param inverse_text_color Inverse Text Color, defaults to `black_color`
 #' @param inverse_text_shadow Enables Shadow on text of inverse slides, defaults to `FALSE`
-#' @param inverse_header_color Inverse Header Color, defaults to #f3f3f3
+#' @param inverse_header_color Inverse Header Color, defaults to `black_color`
 #' @param title_slide_text_color Title Slide Text Color, defaults to `inverse_text_color`
 #' @param title_slide_background_color Title Slide Background Color, defaults to `inverse_background_color`
 #' @param title_slide_background_image Title Slide Background Image URL, defaults to NA
-#' @param left_column_subtle_color Left Column Text (not last), defaults to #777
-#' @param left_column_selected_color Left Column Current Selection, defaults to #000
-#' @param blockquote_left_color Blockquote Left Border Color, defaults to lightgray
+#' @param left_column_subtle_color Left Column Text (not last), defaults to `darken_color(base_color, 0.5)`
+#' @param left_column_selected_color Left Column Current Selection, defaults to `base_color`
+#' @param blockquote_left_color Blockquote Left Border Color, defaults to `darken_color(base_color, 0.5)`
 #' @param table_border_color Table top/bottom border, defaults to #666
 #' @param table_row_border_color Table row inner bottom border, defaults to #ddd
-#' @param table_row_even_background_color Table Even Row Background Color, defaults to #eee
+#' @param table_row_even_background_color Table Even Row Background Color, defaults to `darken_color(base_color, 0.7)`
 #' @param text_font_google Use `google_font()` to specify body font, defaults to `NULL`
 #' @param text_font_family Body Text Font Family, defaults to 'Droid Serif'
 #' @param text_font_weight Body Text Font Weight, defaults to normal
@@ -35,31 +38,35 @@
 #' @param code_font_url Code Font URL, defaults to https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700
 #' @param code_font_family_fallback Code Font Fallback, defaults to 'Lucida Console', Monaco
 #' @param outfile Customized xaringan CSS output file name
-#' @template write_xaringan_theme
+#' @template mono_dark
+#' @family Monotone themes
 #' @export
-write_xaringan_theme <- function(
-  text_color = "#000",
-  header_color = "#000",
-  background_color = "#FFF",
-  link_color = "rgb(249, 38, 114)",
-  text_bold_color = NA,
-  text_slide_number_color = inverse_background_color,
+mono_dark <- function(
+  base_color = "#cbf7ed",
+  white_color = lighten_color(base_color, 0.8),
+  black_color = darken_color(base_color, 0.85),
+  text_color = white_color,
+  header_color = base_color,
+  background_color = black_color,
+  link_color = base_color,
+  text_bold_color = base_color,
+  text_slide_number_color = base_color,
   code_highlight_color = "rgba(255,255,0,0.5)",
-  code_inline_color = "#000",
+  code_inline_color = base_color,
   code_inline_background_color = NA,
-  inverse_background_color = "#272822",
-  inverse_text_color = "#d6d6d6",
+  inverse_background_color = base_color,
+  inverse_text_color = black_color,
   inverse_text_shadow = FALSE,
-  inverse_header_color = "#f3f3f3",
+  inverse_header_color = black_color,
   title_slide_text_color = inverse_text_color,
   title_slide_background_color = inverse_background_color,
   title_slide_background_image = NA,
-  left_column_subtle_color = "#777",
-  left_column_selected_color = "#000",
-  blockquote_left_color = "lightgray",
+  left_column_subtle_color = darken_color(base_color, 0.5),
+  left_column_selected_color = base_color,
+  blockquote_left_color = darken_color(base_color, 0.5),
   table_border_color = "#666",
   table_row_border_color = "#ddd",
-  table_row_even_background_color = "#eee",
+  table_row_even_background_color = darken_color(base_color, 0.7),
   text_font_google = NULL,
   text_font_family = "'Droid Serif'",
   text_font_weight = "normal",
@@ -76,40 +83,6 @@ write_xaringan_theme <- function(
   code_font_family_fallback = "'Lucida Console', Monaco",
   outfile = "xaringan-themed.css"
 ) {
-  # Make sure font names are wrapped in quotes if they have spaces
-  f_args <- names(formals(sys.function()))
-  for (var in f_args[grepl("font_family$", f_args)]) {
-    eval(parse(text = paste0(
-      var, "<-quote_elements_w_spaces(", var, ")"
-    )))
-  }
-  
-  # Use font_..._google args to overwrite font args
-  for (var in f_args[grepl("font_google$", f_args)]) {
-    gf <- eval(parse(text = var))
-    if (is.null(gf)) next
-    if (!inherits(gf, "google_font")) stop(
-      "`", var, "` must be set using `google_font()`."
-    )
-    group <- stringr::str_split(var, "_")[[1]][1]
-    if (group == "text") {
-      text_font_family <- gf$family
-      text_font_weight <- gf$weights %||% "normal"
-      text_font_weight <- substr(text_font_weight, 1, regexpr(",", text_font_weight)[1]-1)
-      text_font_url    <- gf$url
-    } else {
-      for (thing in c("family", "url")) {
-        eval(parse(text = paste0(
-          group, "_font_", thing, " <- gf$", thing
-        )))
-      }
-    }
-  }
-  
-  tf <- system.file("resources", "template.css", package = "xaringanthemer")
-  template <- readLines(tf, warn = FALSE)
-  template <- paste(template, collapse = "\n")
-  x <- glue::glue(template, .open = "{{", .close = "}}")
-  cat(x, file = outfile)
-  outfile
+  # DO NOT EDIT - Generated from inst/scripts/generate_theme_functions.R
+  eval(parse(text = call_write_xaringan_theme()))
 }
