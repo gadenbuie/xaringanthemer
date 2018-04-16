@@ -58,3 +58,35 @@ for your slides, based around a single color.
   - `mono_accent_inverse()`: An “inverted” default xaringan theme with a
     single color used for color accents on select elements (headers,
     bold text, etc.)
+
+## Duotone Themes
+
+These themes build from two (ideally) complementary colors.
+
+  - `duo()`: A two-colored theme based on a primary and secondary color.
+
+  - `duo_accent()`: The default Xaringan theme with two accent colors.
+
+  - `duo_accent_inverse()`: An “inverted” default Xaringan theme with
+    two accent colors.
+
+## Solarized
+
+There are also two themes based around the [solarized color
+palette](http://ethanschoonover.com/solarized), `solarized_light()` and
+`solarized_dark()`. For both themes, it is advisted to change the syntax
+highlighting theme to `solarized-light` or `solarized-dark` (looks great
+paired or constrasted).
+
+To do this, your YAML header should look more-or-less like this:
+
+``` yaml
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: ["xaringan-themed.css"]
+    nature:
+      highlightStyle: solarized-dark
+      highlightLines: true
+      countIncrementalSlides: false
+```
