@@ -6,7 +6,7 @@ template_variables <- tibble::tribble(
   , "link_color", "rgb(249, 38, 114)", "a, a > code", "Link Color"
   , "text_bold_color", NA_character_, "strong", "Bold Text Color"
   , "text_slide_number_color", "{inverse_background_color}", ".remark-slide-number", "Slide Number Color"
-  , "code_highlight_color", "#ffff88", ".remark-code-line-highlighted", "Code Line Highlight"
+  , "code_highlight_color", "rgba(255,255,0,0.5)", ".remark-code-line-highlighted", "Code Line Highlight"
   , "code_inline_color", "#000", ".remark-inline-code", "Inline Code Color"
   , "code_inline_background_color", NA_character_, ".remark-inline-code", "Inline Code Background Color"
   , "inverse_background_color", "#272822", ".inverse", "Inverse Background Color"
