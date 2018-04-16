@@ -120,7 +120,7 @@ template_mono_accent <- set_default(
 
 template_mono_accent_inverse <- tibble::tribble(
   ~ variable, ~ default, ~ element, ~ description
-  , "base_color", "#cbf7ed", "multiple", "Monotone Base Color, works best with a light color."
+  , "base_color", "#3C989E", "multiple", "Monotone Base Color, works best with a light color."
   , "white_color", "#FFFFFF", "multiple", "Brightest color used, default is a very light version of `base_color`"
   , "black_color", "{darken_color(base_color, 0.9)}", "multiple", "Darkest color used, default is a very dark, version of `base_color`"
 )

@@ -1,4 +1,4 @@
-#' @param base_color Monotone Base Color, works best with a light color., defaults to #cbf7ed
+#' @param base_color Monotone Base Color, works best with a light color., defaults to #3C989E
 #' @param white_color Brightest color used, default is a very light version of `base_color`, defaults to #FFFFFF
 #' @param black_color Darkest color used, default is a very dark, version of `base_color`, defaults to `darken_color(base_color, 0.9)`
 #' @param text_color Text Color, defaults to `white_color`
@@ -42,7 +42,7 @@
 #' @family Monotone themes
 #' @export
 mono_accent_inverse <- function(
-  base_color = "#cbf7ed",
+  base_color = "#3C989E",
   white_color = "#FFFFFF",
   black_color = darken_color(base_color, 0.9),
   text_color = white_color,
