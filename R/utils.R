@@ -16,10 +16,41 @@ darken_color <- function(color_hex, strength = 0.8) {
   rgb(color_rgb[1], color_rgb[2], color_rgb[3], maxColorValue = 255)
 }
 
-adjust_value_color <- function(color_hext, strength = 0.5) {
+#' @export
+apply_alpha <- function(color_hex, opacity = 0.5) {
+  paste0(color_hex, as.hexmode(round(255*opacity, 0)))
+}
+
+adjust_value_color <- function(color_hex, strength = 0.5) {
   color_hsv <- rgb2hsv(col2rgb(color_hex))[, 1]
   color_hsv['v'] <- strength
   hsv(color_hsv[1], color_hsv[2], color_hsv[3])
+}
+
+#' Choose dark or light color
+#'
+#' Takes a color input as `x` and returns either the black or white color (or
+#' expression) if dark or light text should be used over the input color for
+#' best contrast. Follows W3C Recommendations.
+#'
+#' @references <https://stackoverflow.com/a/3943023/2022615>
+#' @param x The background color
+#' @param black Text or foreground color, e.g. "#222" or
+#' `substitute(darken_color(x, 0.8))`, if black text provides the best contrast.
+#' @param white Text or foreground color or expression, e.g. "#EEE" or
+#' `substitute(lighten_color(x, 0.8))`, if white text provides the best contrast.
+#' @export
+choose_dark_or_light <- function(x, black = "#000", white = "#FFF") {
+  # x = color_hex
+  # black <- substitute(black)
+  # white <- substitute(white)
+  color_rgb <- col2rgb(x)[, 1]
+  # from https://stackoverflow.com/a/3943023/2022615
+  color_rgb <- color_rgb / 255
+  color_rgb[color_rgb <= 0.03928] <- color_rgb[color_rgb <= 0.03928]/12.92
+  color_rgb[color_rgb > 0.03928] <- ((color_rgb[color_rgb > 0.03928] + 0.055)/1.055)^2.4
+  lum <- t(c(0.2126, 0.7152, 0.0722)) %*% color_rgb
+  if (lum[1, 1] > 0.179) eval(black) else eval(white)
 }
 
 #' @keywords internal

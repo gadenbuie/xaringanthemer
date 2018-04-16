@@ -16,9 +16,9 @@ mono_accent(base_color = "#23395b", white_color = "#FFFFFF",
   title_slide_text_color = inverse_text_color,
   title_slide_background_color = inverse_background_color,
   title_slide_background_image = NA,
-  left_column_subtle_color = lighten_color(base_color, 0.5),
+  left_column_subtle_color = apply_alpha(base_color, 0.6),
   left_column_selected_color = base_color,
-  blockquote_left_color = lighten_color(base_color, 0.5),
+  blockquote_left_color = apply_alpha(base_color, 0.5),
   table_border_color = "#666", table_row_border_color = "#ddd",
   table_row_even_background_color = lighten_color(base_color, 0.7),
   text_font_google = NULL, text_font_family = "'Droid Serif'",
@@ -72,11 +72,11 @@ mono_accent(base_color = "#23395b", white_color = "#FFFFFF",
 
 \item{title_slide_background_image}{Title Slide Background Image URL, defaults to NA}
 
-\item{left_column_subtle_color}{Left Column Text (not last), defaults to \code{lighten_color(base_color, 0.5)}}
+\item{left_column_subtle_color}{Left Column Text (not last), defaults to \code{apply_alpha(base_color, 0.6)}}
 
 \item{left_column_selected_color}{Left Column Current Selection, defaults to \code{base_color}}
 
-\item{blockquote_left_color}{Blockquote Left Border Color, defaults to \code{lighten_color(base_color, 0.5)}}
+\item{blockquote_left_color}{Blockquote Left Border Color, defaults to \code{apply_alpha(base_color, 0.5)}}
 
 \item{table_border_color}{Table top/bottom border, defaults to #666}
 

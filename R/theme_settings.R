@@ -65,9 +65,9 @@ template_mono_light <- set_default(
   inverse_background_color        = "{base_color}",
   inverse_text_color              = "{white_color}",
   inverse_header_color            = "{white_color}",
-  left_column_subtle_color        = "{lighten_color(base_color, 0.5)}",
+  left_column_subtle_color        = "{apply_alpha(base_color, 0.6)}",
   left_column_selected_color      = "{base_color}",
-  blockquote_left_color           = "{lighten_color(base_color, 0.5)}",
+  blockquote_left_color           = "{apply_alpha(base_color, 0.5)}",
   table_row_even_background_color = "{lighten_color(base_color, 0.8)}")
 
 template_mono_dark <- tibble::tribble(
@@ -89,9 +89,9 @@ template_mono_dark <- set_default(
   inverse_background_color        = "{base_color}",
   inverse_text_color              = "{black_color}",
   inverse_header_color            = "{black_color}",
-  left_column_subtle_color        = "{darken_color(base_color, 0.5)}",
+  left_column_subtle_color        = "{apply_alpha(base_color, 0.6)}",
   left_column_selected_color      = "{base_color}",
-  blockquote_left_color           = "{darken_color(base_color, 0.5)}",
+  blockquote_left_color           = "{apply_alpha(base_color, 0.5)}",
   table_row_even_background_color = "{darken_color(base_color, 0.7)}")
 
 template_mono_accent <- tibble::tribble(
@@ -113,9 +113,9 @@ template_mono_accent <- set_default(
   inverse_background_color        = "{base_color}",
   inverse_text_color              = "{white_color}",
   inverse_header_color            = "{white_color}",
-  left_column_subtle_color        = "{lighten_color(base_color, 0.5)}",
+  left_column_subtle_color        = "{apply_alpha(base_color, 0.6)}",
   left_column_selected_color      = "{base_color}",
-  blockquote_left_color           = "{lighten_color(base_color, 0.5)}",
+  blockquote_left_color           = "{apply_alpha(base_color, 0.5)}",
   table_row_even_background_color = "{lighten_color(base_color, 0.7)}")
 
 template_mono_accent_inverse <- tibble::tribble(
@@ -137,7 +137,7 @@ template_mono_accent_inverse <- set_default(
   inverse_background_color        = "{base_color}",
   inverse_text_color              = "{black_color}",
   inverse_header_color            = "{black_color}",
-  left_column_subtle_color        = "{darken_color(base_color, 0.5)}",
+  left_column_subtle_color        = "{apply_alpha(base_color, 0.6)}",
   left_column_selected_color      = "{base_color}",
-  blockquote_left_color           = "{darken_color(base_color, 0.5)}",
+  blockquote_left_color           = "{apply_alpha(base_color, 0.5)}",
   table_row_even_background_color = "{darken_color(base_color, 0.7)}")

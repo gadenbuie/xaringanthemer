@@ -17,9 +17,9 @@
 #' @param title_slide_text_color Title Slide Text Color, defaults to `inverse_text_color`
 #' @param title_slide_background_color Title Slide Background Color, defaults to `inverse_background_color`
 #' @param title_slide_background_image Title Slide Background Image URL, defaults to NA
-#' @param left_column_subtle_color Left Column Text (not last), defaults to `darken_color(base_color, 0.5)`
+#' @param left_column_subtle_color Left Column Text (not last), defaults to `apply_alpha(base_color, 0.6)`
 #' @param left_column_selected_color Left Column Current Selection, defaults to `base_color`
-#' @param blockquote_left_color Blockquote Left Border Color, defaults to `darken_color(base_color, 0.5)`
+#' @param blockquote_left_color Blockquote Left Border Color, defaults to `apply_alpha(base_color, 0.5)`
 #' @param table_border_color Table top/bottom border, defaults to #666
 #' @param table_row_border_color Table row inner bottom border, defaults to #ddd
 #' @param table_row_even_background_color Table Even Row Background Color, defaults to `darken_color(base_color, 0.7)`
@@ -61,9 +61,9 @@ mono_accent_inverse <- function(
   title_slide_text_color = inverse_text_color,
   title_slide_background_color = inverse_background_color,
   title_slide_background_image = NA,
-  left_column_subtle_color = darken_color(base_color, 0.5),
+  left_column_subtle_color = apply_alpha(base_color, 0.6),
   left_column_selected_color = base_color,
-  blockquote_left_color = darken_color(base_color, 0.5),
+  blockquote_left_color = apply_alpha(base_color, 0.5),
   table_border_color = "#666",
   table_row_border_color = "#ddd",
   table_row_even_background_color = darken_color(base_color, 0.7),
