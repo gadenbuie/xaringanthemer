@@ -99,6 +99,25 @@ table {
 table thead th { border-bottom: 1px solid {{table_row_border_color}}; }
 th, td { padding: 5px; }
 thead, tfoot, tr:nth-child(even) { background: {{table_row_even_background_color}} }
+table.dataTable tbody {
+  background-color: {{background_color}};
+  color: {{text_color}};
+}
+table.dataTable.display tbody tr.odd {
+  background-color: {{background_color}};
+}
+table.dataTable.display tbody tr.even {
+  background-color: {{ifelse(!is.na(table_row_even_background_color), table_row_even_background_color, background_color)}};
+}
+table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_processing, .dataTables_wrapper .dataTables_paginate {
+  color: {{text_color}};
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+  color: {{text_color}} !important;
+}
 
 @page { margin: 0; }
 @media print {
