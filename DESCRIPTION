@@ -1,18 +1,23 @@
 Package: xaringanthemer
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Xaringan CSS Theme Generator
 Version: 0.0.0.9000
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Date: 2018-04-16
+Authors@R: person("Garrick", "Aden-Buie", email = "g.adenbuie@gmail.com", role = c("aut", "cre"))
+Description: Create and edit your xaringan CSS files from within your R
+    R Markdown slide source. More technically, this package actually creates
+    valid remarkjs CSS themes that are easily used by xarangan.
+License: MIT + file LICENSE
+URL: https://github.com/gadenbuie/xaringanthemer
+BugReports: https://github.com/gadenbuie/xaringanthemer/issues
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.0.1
 Roxygen: list(markdown = TRUE)
 Suggests: 
-    testthat
+    testthat,
+    xaringan,
+    here
 Imports: 
     purrr,
     tibble,
