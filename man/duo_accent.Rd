@@ -138,7 +138,7 @@ duo_accent(primary_color = "#006747", secondary_color = "#CFC493",
 
 \item{extra_css}{A named list of CSS definitions each containing a named list
 of CSS property-value pairs, i.e.
-`list(".class-id" = list("css-property" = "value"))`}
+\code{list(".class-id" = list("css-property" = "value"))}}
 
 \item{outfile}{Customized xaringan CSS output file name, default is "xaringan-themer.css"}
 }
