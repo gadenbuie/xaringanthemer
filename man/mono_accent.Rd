@@ -4,7 +4,7 @@
 \alias{mono_accent}
 \title{Monotone Accent Theme}
 \usage{
-mono_accent(base_color = "#23395b", white_color = "#FFFFFF",
+mono_accent(base_color = "#43418A", white_color = "#FFFFFF",
   black_color = "#272822", text_color = black_color,
   header_color = base_color, background_color = white_color,
   link_color = base_color, text_bold_color = base_color,
@@ -36,7 +36,7 @@ mono_accent(base_color = "#23395b", white_color = "#FFFFFF",
   outfile = "xaringan-themed.css")
 }
 \arguments{
-\item{base_color}{Monotone Base Color, works best with a strong color., defaults to #23395b}
+\item{base_color}{Monotone Base Color, works best with a strong color., defaults to #43418A}
 
 \item{white_color}{Brightest color used, defaults to #FFFFFF}
 

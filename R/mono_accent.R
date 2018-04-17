@@ -1,4 +1,4 @@
-#' @param base_color Monotone Base Color, works best with a strong color., defaults to #23395b
+#' @param base_color Monotone Base Color, works best with a strong color., defaults to #43418A
 #' @param white_color Brightest color used, defaults to #FFFFFF
 #' @param black_color Darkest color used, defaults to #272822
 #' @param text_color Text Color, defaults to `black_color`
@@ -48,7 +48,7 @@
 #' @family Monotone themes
 #' @export
 mono_accent <- function(
-  base_color = "#23395b",
+  base_color = "#43418A",
   white_color = "#FFFFFF",
   black_color = "#272822",
   text_color = black_color,
