@@ -45,7 +45,8 @@
 #' @param code_font_family Code Font Family, defaults to 'Source Code Pro'
 #' @param code_font_url Code Font URL, defaults to https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700
 #' @param code_font_family_fallback Code Font Fallback, defaults to 'Lucida Console', Monaco
-#' @param outfile Customized xaringan CSS output file name
+#' @template extra_css
+#' @param outfile Customized xaringan CSS output file name, default is "xaringan-themer.css"
 #' @template duo_accent_inverse
 #' @family Duotone themes
 #' @export
@@ -97,6 +98,7 @@ duo_accent_inverse <- function(
   code_font_family = "'Source Code Pro'",
   code_font_url = "https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700",
   code_font_family_fallback = "'Lucida Console', Monaco",
+  extra_css = NULL,
   outfile = "xaringan-themer.css"
 ) {
   # DO NOT EDIT - Generated from inst/scripts/generate_theme_functions.R

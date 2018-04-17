@@ -14,7 +14,8 @@ with **xaringanthemer**.
       - [Monotone](#monotone)
       - [Duotone](#duotone)
       - [Solarized](#solarized)
-      - [Fully Customized](#fully-customized)
+  - [Theme Settings](#theme-settings)
+  - [Adding Custom CSS](#adding-custom-css)
   - [Fonts](#fonts)
 
 ## Installation
@@ -144,7 +145,7 @@ output:
       countIncrementalSlides: false
 ```
 
-### Fully Customized
+## Theme Settings
 
 The theme functions listed above are just wrappers around the central
 function of this package, `write_xaringan_theme()`. If you want to start
@@ -177,6 +178,53 @@ And here are the title slide theme options:
   - `title_slide_text_color`
   - `title_slide_background_color`
   - `title_slide_background_image`
+
+## Adding Custom CSS
+
+You can also add custom CSS classes using the `extra_css` argument in
+the theme functions. This argument takes a named list of CSS definitions
+each containing a named list of CSS property-value pairs.
+
+``` r
+extra_css <- list(
+  ".red"   = list(color = "red"),
+  ".small" = list("font-size" = "90%"),
+  ".full-width" = list(
+    display = "flex",
+    width   = "100%",
+    flex    = "1 1 auto"
+  )
+)
+```
+
+If you would rather keep your additional css definitions in a separate
+file, you can call `write_extra_css()` separately. Just be sure to
+include your new CSS file in the list of applied files in your YAML
+header.
+
+``` r
+write_extra_css(css = extra_css, outfile = "custom.css")
+```
+
+``` css
+/* Extra CSS */
+.red {
+  color: red;
+}
+.small {
+  font-size: 90%;
+}
+.full-width {
+  display: flex;
+  width: 100%;
+  flex: 1 1 auto;
+}
+```
+
+This is most helpful when wanting to define helper classes to work with
+the [remark.js](https://github.com/gnab/remark) `.class[]` syntax. Using
+the above example, we could color text red `.red[like this]` or write
+`.small[in smaller font size]`.
 
 ## Fonts
 

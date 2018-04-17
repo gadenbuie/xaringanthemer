@@ -11,10 +11,12 @@ knitr::opts_chunk$set(
   fig.path = "man/figures/README-",
   out.width = "100%"
 )
+library(xaringanthemer)
 ```
 # xaringanthemer
 
 [xaringan]: https://github.com/yihui/xaringan
+[remarkjs]: https://github.com/gnab/remark
 
 Easily style your [xaringan] slides with **xaringanthemer**.
 
@@ -146,7 +148,7 @@ output:
       countIncrementalSlides: false
 ```
 
-### Fully Customized
+## Theme Settings
 
 The theme functions listed above are just wrappers around the central function of this package, `write_xaringan_theme()`.
 If you want to start from the default **xaringan** theme and make a few modifications, start there.
@@ -172,6 +174,52 @@ And here are the title slide theme options:
 ```{r results='asis', echo=FALSE}
 cat(paste0("- `", tvv[grepl("^title_slide_", tvv)], "`"), sep = "\n")
 ```
+
+## Adding Custom CSS
+
+You can also add custom CSS classes using the `extra_css` argument in the theme functions.
+This argument takes a named list of CSS definitions each containing a named list of CSS property-value pairs.
+
+```r
+extra_css <- list(
+  ".red"   = list(color = "red"),
+  ".small" = list("font-size" = "90%"),
+  ".full-width" = list(
+    display = "flex",
+    width   = "100%",
+    flex    = "1 1 auto"
+  )
+)
+```
+
+If you would rather keep your additional css definitions in a separate file, you can call `write_extra_css()` separately.
+Just be sure to include your new CSS file in the list of applied files in your YAML header.
+
+```r
+write_extra_css(css = extra_css, outfile = "custom.css")
+```
+
+```{r results='asis', echo=FALSE}
+extra_css <- list(
+  ".red"   = list(color = "red"),
+  ".small" = list("font-size" = "90%"),
+  ".full-width" = list(
+    display = "flex",
+    width   = "100%",
+    flex    = "1 1 auto"
+  )
+)
+cat(
+  "\n```css",
+  "/* Extra CSS */",
+  xaringanthemer:::list2css(extra_css),
+  "```",
+  sep = "\n"
+)
+```
+
+This is most helpful when wanting to define helper classes to work with the [remark.js][remarkjs] `.class[]` syntax.
+Using the above example, we could color text red `.red[like this]` or write `.small[in smaller font size]`.
 
 ## Fonts
 

@@ -28,7 +28,7 @@ solarized_dark(text_color = "#839496", header_color = "#dc322f",
   header_font_url = "https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz",
   code_font_google = NULL, code_font_family = "'Source Code Pro'",
   code_font_url = "https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700",
-  code_font_family_fallback = "'Lucida Console', Monaco",
+  code_font_family_fallback = "'Lucida Console', Monaco", extra_css = NULL,
   outfile = "xaringan-themer.css")
 }
 \arguments{
@@ -118,7 +118,11 @@ solarized_dark(text_color = "#839496", header_color = "#dc322f",
 
 \item{code_font_family_fallback}{Code Font Fallback, defaults to 'Lucida Console', Monaco}
 
-\item{outfile}{Customized xaringan CSS output file name}
+\item{extra_css}{A named list of CSS definitions each containing a named list
+of CSS property-value pairs, i.e.
+`list(".class-id" = list("css-property" = "value"))`}
+
+\item{outfile}{Customized xaringan CSS output file name, default is "xaringan-themer.css"}
 }
 \description{
 A dark theme based around on the solarized color scheme.

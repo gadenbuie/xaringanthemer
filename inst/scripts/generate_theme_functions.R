@@ -16,11 +16,13 @@ setup_theme_function <- function(
     as.character(
       glue::glue_data(
         tv, "#' @param {variable} {description}, defaults to {stringr::str_replace_all(default, '[{{}}]', '`')}")) %,%
-    "#' @param outfile Customized xaringan CSS output file name" %,%
+    "#' @template extra_css" %,%
+    "#' @param outfile Customized xaringan CSS output file name, default is \"xaringan-themer.css\"" %,%
     c(...) %,%
     glue::glue("{f_name} <- function(") %,%
     as.character(glue::glue_data(
       tv, "  {variable} = {ifelse(!stringr::str_detect(default, '^[{].+[}]$'), paste0('\"', default, '\"'), stringr::str_replace_all(default, '[{}]', ''))},")) %,%
+    "  extra_css = NULL," %,%
     "  outfile = \"xaringan-themer.css\"" %,%
     ") {"
   if (!is.null(body)) x <- c(x, body, "}")
