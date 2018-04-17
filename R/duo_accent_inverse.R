@@ -5,11 +5,11 @@
 #' @param text_color Text Color, defaults to `white_color`
 #' @param header_color Header Color, defaults to `primary_color`
 #' @param background_color Slide Background Color, defaults to `black_color`
-#' @param link_color Link Color, defaults to `choose_dark_or_light(secondary_color, primary_color, secondary_color)`
-#' @param text_bold_color Bold Text Color, defaults to `choose_dark_or_light(secondary_color, primary_color, secondary_color)`
+#' @param link_color Link Color, defaults to `choose_dark_or_light(secondary_color, secondary_color, primary_color)`
+#' @param text_bold_color Bold Text Color, defaults to `choose_dark_or_light(secondary_color, secondary_color, primary_color)`
 #' @param text_slide_number_color Slide Number Color, defaults to `primary_color`
 #' @param code_highlight_color Code Line Highlight, defaults to rgba(255,255,0,0.5)
-#' @param code_inline_color Inline Code Color, defaults to `choose_dark_or_light(secondary_color, primary_color, secondary_color)`
+#' @param code_inline_color Inline Code Color, defaults to `choose_dark_or_light(secondary_color, secondary_color, primary_color)`
 #' @param code_inline_background_color Inline Code Background Color, defaults to NA
 #' @param inverse_background_color Inverse Background Color, defaults to `secondary_color`
 #' @param inverse_text_color Inverse Text Color, defaults to `choose_dark_or_light(secondary_color, black_color, white_color)`
@@ -57,11 +57,11 @@ duo_accent_inverse <- function(
   text_color = white_color,
   header_color = primary_color,
   background_color = black_color,
-  link_color = choose_dark_or_light(secondary_color, primary_color, secondary_color),
-  text_bold_color = choose_dark_or_light(secondary_color, primary_color, secondary_color),
+  link_color = choose_dark_or_light(secondary_color, secondary_color, primary_color),
+  text_bold_color = choose_dark_or_light(secondary_color, secondary_color, primary_color),
   text_slide_number_color = primary_color,
   code_highlight_color = "rgba(255,255,0,0.5)",
-  code_inline_color = choose_dark_or_light(secondary_color, primary_color, secondary_color),
+  code_inline_color = choose_dark_or_light(secondary_color, secondary_color, primary_color),
   code_inline_background_color = NA,
   inverse_background_color = secondary_color,
   inverse_text_color = choose_dark_or_light(secondary_color, black_color, white_color),

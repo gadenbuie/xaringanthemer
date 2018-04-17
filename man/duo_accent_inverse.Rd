@@ -8,12 +8,12 @@ duo_accent_inverse(primary_color = "#006747", secondary_color = "#CFC493",
   white_color = "#FFFFFF", black_color = "#000000",
   text_color = white_color, header_color = primary_color,
   background_color = black_color,
-  link_color = choose_dark_or_light(secondary_color, primary_color,
-  secondary_color), text_bold_color = choose_dark_or_light(secondary_color,
-  primary_color, secondary_color), text_slide_number_color = primary_color,
+  link_color = choose_dark_or_light(secondary_color, secondary_color,
+  primary_color), text_bold_color = choose_dark_or_light(secondary_color,
+  secondary_color, primary_color), text_slide_number_color = primary_color,
   code_highlight_color = "rgba(255,255,0,0.5)",
-  code_inline_color = choose_dark_or_light(secondary_color, primary_color,
-  secondary_color), code_inline_background_color = NA,
+  code_inline_color = choose_dark_or_light(secondary_color, secondary_color,
+  primary_color), code_inline_background_color = NA,
   inverse_background_color = secondary_color,
   inverse_text_color = choose_dark_or_light(secondary_color, black_color,
   white_color), inverse_text_shadow = FALSE,
@@ -56,15 +56,15 @@ duo_accent_inverse(primary_color = "#006747", secondary_color = "#CFC493",
 
 \item{background_color}{Slide Background Color, defaults to \code{black_color}}
 
-\item{link_color}{Link Color, defaults to \code{choose_dark_or_light(secondary_color, primary_color, secondary_color)}}
+\item{link_color}{Link Color, defaults to \code{choose_dark_or_light(secondary_color, secondary_color, primary_color)}}
 
-\item{text_bold_color}{Bold Text Color, defaults to \code{choose_dark_or_light(secondary_color, primary_color, secondary_color)}}
+\item{text_bold_color}{Bold Text Color, defaults to \code{choose_dark_or_light(secondary_color, secondary_color, primary_color)}}
 
 \item{text_slide_number_color}{Slide Number Color, defaults to \code{primary_color}}
 
 \item{code_highlight_color}{Code Line Highlight, defaults to rgba(255,255,0,0.5)}
 
-\item{code_inline_color}{Inline Code Color, defaults to \code{choose_dark_or_light(secondary_color, primary_color, secondary_color)}}
+\item{code_inline_color}{Inline Code Color, defaults to \code{choose_dark_or_light(secondary_color, secondary_color, primary_color)}}
 
 \item{code_inline_background_color}{Inline Code Background Color, defaults to NA}
 
