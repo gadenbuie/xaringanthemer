@@ -41,7 +41,7 @@ setup_theme_function(
   "#' @template write_xaringan_theme",
   "#' @export",
   body = paste0("  ", readLines(here::here("inst/scripts/write_xaringan_theme_body.R"))),
-  file = here::here("R/theme.R")
+  file = here::here("R/write_theme.R")
 )
 
 # ---- Monotone Light ----
