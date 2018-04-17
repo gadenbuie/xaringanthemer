@@ -1,5 +1,14 @@
 `%||%` <- function(x, y) if (is.null(x)) y else x
 
+#' @title Generate lighter or darker version of a color
+#' @description Produces a linear blend of the color with white or black.
+#' @param color_hex A character string representing a hex color
+#' @param strength The "strength" of the blend with white or black,
+#'   0 low to 1 high.
+#' @name lighten_darken_color
+NULL
+
+#' @rdname lighten_darken_color
 #' @export
 lighten_color <- function(color_hex, strength = 0.7) {
   stopifnot(strength >= 0 && strength <= 1)
@@ -8,6 +17,7 @@ lighten_color <- function(color_hex, strength = 0.7) {
   rgb(color_rgb[1], color_rgb[2], color_rgb[3], maxColorValue = 255)
 }
 
+#' @rdname lighten_darken_color
 #' @export
 darken_color <- function(color_hex, strength = 0.8) {
   stopifnot(strength >= 0 && strength <= 1)
@@ -16,6 +26,9 @@ darken_color <- function(color_hex, strength = 0.8) {
   rgb(color_rgb[1], color_rgb[2], color_rgb[3], maxColorValue = 255)
 }
 
+#' @title Add alpha to hex color
+#' @inheritParams lighten_darken_color
+#' @param opacity Desired opacity of the output color
 #' @export
 apply_alpha <- function(color_hex, opacity = 0.5) {
   paste0(color_hex, as.hexmode(round(255*opacity, 0)))
@@ -90,6 +103,9 @@ google_font <- function(family, ..., languages = NULL) {
   ), class = "google_font")
 }
 
+#' @title List Valid Google Language Codes
+#' @seealso [google_font()]
+#' @param x Vector of potential Google language codes
 #' @export
 google_language_codes <- function(
   x = c("latin", "latin-ext", "sinhala", "greek", "hebrew", "vietnamese",
