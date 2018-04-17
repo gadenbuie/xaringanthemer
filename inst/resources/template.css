@@ -27,9 +27,12 @@ h1, h2, h3 {
 }
 .remark-code, .remark-inline-code {
   font-family: {{code_font_family}}, {{code_font_family_fallback}}, monospace;
+}
+.remark-code {
   font-size: {{text_size_code}};
 }
 .remark-inline-code {
+  font-size: {{text_size_code_inline}};
   {{ifelse(!is.na(code_inline_color), paste0("color: ", code_inline_color, ";"), "")}}
   {{ifelse(!is.na(code_inline_background_color), paste0("background-color: ", code_inline_background_color, ";"), "")}}
   {{ifelse(!is.na(code_inline_background_color), "padding: 2px;", "")}}

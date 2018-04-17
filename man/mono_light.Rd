@@ -23,8 +23,9 @@ mono_light(base_color = "#23395b", white_color = lighten_color(base_color,
   table_row_even_background_color = lighten_color(base_color, 0.8),
   text_size = "20px", text_size_h1 = "55px", text_size_h2 = "45px",
   text_size_h3 = "35px", text_size_slide_number = "20px",
-  text_size_code = "20px", text_font_google = NULL,
-  text_font_family = "'Droid Serif'", text_font_weight = "normal",
+  text_size_code_inline = "20px", text_size_code = "18px",
+  text_font_google = NULL, text_font_family = "'Droid Serif'",
+  text_font_weight = "normal",
   text_font_url = "https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic",
   text_font_family_fallback = "'Palatino Linotype', 'Book Antiqua', Palatino, 'Microsoft YaHei', 'Songti SC'",
   text_font_base = "serif", header_font_google = NULL,
@@ -96,7 +97,9 @@ mono_light(base_color = "#23395b", white_color = lighten_color(base_color,
 
 \item{text_size_slide_number}{Slide Number Text Size, defaults to 20px}
 
-\item{text_size_code}{Code Text Size, defaults to 20px}
+\item{text_size_code_inline}{Inline Code Text Size, defaults to 20px}
+
+\item{text_size_code}{Code Text Size, defaults to 18px}
 
 \item{text_font_google}{Use \code{google_font()} to specify body font, defaults to \code{NULL}}
 

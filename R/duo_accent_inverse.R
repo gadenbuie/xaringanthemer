@@ -29,7 +29,8 @@
 #' @param text_size_h2 h2 Header Text Size, defaults to 45px
 #' @param text_size_h3 h3 Header Text Size, defaults to 35px
 #' @param text_size_slide_number Slide Number Text Size, defaults to 20px
-#' @param text_size_code Code Text Size, defaults to 20px
+#' @param text_size_code_inline Inline Code Text Size, defaults to 20px
+#' @param text_size_code Code Text Size, defaults to 18px
 #' @param text_font_google Use `google_font()` to specify body font, defaults to `NULL`
 #' @param text_font_family Body Text Font Family, defaults to 'Droid Serif'
 #' @param text_font_weight Body Text Font Weight, defaults to normal
@@ -80,7 +81,8 @@ duo_accent_inverse <- function(
   text_size_h2 = "45px",
   text_size_h3 = "35px",
   text_size_slide_number = "20px",
-  text_size_code = "20px",
+  text_size_code_inline = "20px",
+  text_size_code = "18px",
   text_font_google = NULL,
   text_font_family = "'Droid Serif'",
   text_font_weight = "normal",
