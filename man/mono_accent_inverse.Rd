@@ -34,7 +34,7 @@ mono_accent_inverse(base_color = "#3C989E", white_color = "#FFFFFF",
   code_font_google = NULL, code_font_family = "'Source Code Pro'",
   code_font_url = "https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700",
   code_font_family_fallback = "'Lucida Console', Monaco",
-  outfile = "xaringan-themed.css")
+  outfile = "xaringan-themer.css")
 }
 \arguments{
 \item{base_color}{Monotone Base Color, works best with a light color., defaults to #3C989E}

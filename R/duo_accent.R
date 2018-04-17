@@ -97,7 +97,7 @@ duo_accent <- function(
   code_font_family = "'Source Code Pro'",
   code_font_url = "https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700",
   code_font_family_fallback = "'Lucida Console', Monaco",
-  outfile = "xaringan-themed.css"
+  outfile = "xaringan-themer.css"
 ) {
   # DO NOT EDIT - Generated from inst/scripts/generate_theme_functions.R
   eval(parse(text = call_write_xaringan_theme()))

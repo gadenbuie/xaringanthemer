@@ -88,7 +88,7 @@ write_xaringan_theme <- function(
   code_font_family = "'Source Code Pro'",
   code_font_url = "https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700",
   code_font_family_fallback = "'Lucida Console', Monaco",
-  outfile = "xaringan-themed.css"
+  outfile = "xaringan-themer.css"
 ) {
   # Make sure font names are wrapped in quotes if they have spaces
   f_args <- names(formals(sys.function()))

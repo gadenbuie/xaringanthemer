@@ -28,22 +28,23 @@ devtools::install_github("gadenbuie/xaringanthemer")
 
 ## Quick Intro
 
-First, add `css: xaringan-themed.css` to your xaringan slides YAML
+First, add `css: xaringan-themer.css` to your xaringan slides YAML
 header under `xaringan::moonreader:`.
 
 ``` yaml
 output:
   xaringan::moon_reader:
     lib_dir: libs
-    css: xaringan-themed.css
+    css: xaringan-themer.css
 ```
 
-Then, in the first knitr chunk, load **xaringanthemer** and try one of
+Then, in the knitr setup chunk, load **xaringanthemer** and try one of
 the [theme functions](#themes).
 
 ```` markdown
 ```{r setup, include = FALSE}
 options(htmltools.dir.version = FALSE)
+
 library(xaringanthemer)
 mono_light(
   base_color = "#1c5253",
@@ -68,27 +69,27 @@ for your slides, based around a single color.
 
 #### `mono_light()`
 
-A light theme based around a single color
+A light theme based around a single color.
 
 ![](docs/example_mono_light.png)
 
 #### `mono_dark()`
 
-A dark theme based around a single color
+A dark theme based around a single color.
 
 ![](docs/example_mono_dark.png)
 
 #### `mono_accent()`
 
 The default xaringan theme with a single color used for color accents on
-select elements (headers, bold text, etc.)
+select elements (headers, bold text, etc.).
 
 ![](docs/example_mono_accent.png)
 
 #### `mono_accent_inverse()`
 
 An “inverted” default xaringan theme with a single color used for color
-accents on select elements (headers, bold text, etc.)
+accents on select elements (headers, bold text, etc.).
 
 ![](docs/example_mono_accent_inverse.png)
 
@@ -136,7 +137,7 @@ To do this, your YAML header should look more-or-less like this:
 output:
   xaringan::moon_reader:
     lib_dir: libs
-    css: ["xaringan-themed.css"]
+    css: ["xaringan-themer.css"]
     nature:
       highlightStyle: solarized-dark
       highlightLines: true

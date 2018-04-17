@@ -29,7 +29,7 @@ solarized_light(text_color = "#657b83", header_color = "#dc322f",
   code_font_google = NULL, code_font_family = "'Source Code Pro'",
   code_font_url = "https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700",
   code_font_family_fallback = "'Lucida Console', Monaco",
-  outfile = "xaringan-themed.css")
+  outfile = "xaringan-themer.css")
 }
 \arguments{
 \item{text_color}{Text Color, defaults to #657b83}

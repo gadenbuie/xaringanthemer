@@ -34,7 +34,7 @@ mono_light(base_color = "#23395b", white_color = lighten_color(base_color,
   code_font_google = NULL, code_font_family = "'Source Code Pro'",
   code_font_url = "https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700",
   code_font_family_fallback = "'Lucida Console', Monaco",
-  outfile = "xaringan-themed.css")
+  outfile = "xaringan-themer.css")
 }
 \arguments{
 \item{base_color}{Monotone base color, works best with a strong color, defaults to #23395b}

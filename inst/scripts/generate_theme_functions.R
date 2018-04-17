@@ -21,7 +21,7 @@ setup_theme_function <- function(
     glue::glue("{f_name} <- function(") %,%
     as.character(glue::glue_data(
       tv, "  {variable} = {ifelse(!stringr::str_detect(default, '^[{].+[}]$'), paste0('\"', default, '\"'), stringr::str_replace_all(default, '[{}]', ''))},")) %,%
-    "  outfile = \"xaringan-themed.css\"" %,%
+    "  outfile = \"xaringan-themer.css\"" %,%
     ") {"
   if (!is.null(body)) x <- c(x, body, "}")
   if (file == "clip") {

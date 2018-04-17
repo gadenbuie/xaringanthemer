@@ -35,7 +35,7 @@ duo(primary_color = "#1F4257", secondary_color = "#F97B64",
   code_font_google = NULL, code_font_family = "'Source Code Pro'",
   code_font_url = "https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700",
   code_font_family_fallback = "'Lucida Console', Monaco",
-  outfile = "xaringan-themed.css")
+  outfile = "xaringan-themer.css")
 }
 \arguments{
 \item{primary_color}{Duotone Primary Color, defaults to #1F4257}
