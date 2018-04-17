@@ -17,22 +17,22 @@ h1, h2, h3 {
   font-size: {{text_size}};
 }
 .remark-slide-content h1 {
-    font-size: {{text_size_h1}};
+    font-size: {{header_h1_font_size}};
 }
 .remark-slide-content h2 {
-    font-size: {{text_size_h2}};
+    font-size: {{header_h2_font_size}};
 }
 .remark-slide-content h3 {
-    font-size: {{text_size_h3}};
+    font-size: {{header_h3_font_size}};
 }
 .remark-code, .remark-inline-code {
   font-family: {{code_font_family}}, {{code_font_family_fallback}}, monospace;
 }
 .remark-code {
-  font-size: {{text_size_code}};
+  font-size: {{code_font_size}};
 }
 .remark-inline-code {
-  font-size: {{text_size_code_inline}};
+  font-size: {{code_inline_font_size}};
   {{ifelse(!is.na(code_inline_color), paste0("color: ", code_inline_color, ";"), "")}}
   {{ifelse(!is.na(code_inline_background_color), paste0("background-color: ", code_inline_background_color, ";"), "")}}
   {{ifelse(!is.na(code_inline_background_color), "padding: 2px;", "")}}
@@ -40,7 +40,7 @@ h1, h2, h3 {
 .remark-slide-number {
   color: {{text_slide_number_color}};
   opacity: 1;
-  text-size: {{text_size_slide_number}};
+  text-size: {{text_slide_number_font_size}};
 }
 {{ifelse(!is.na(text_bold_color), paste0("strong{color:", text_bold_color,";}"), "")}}
 a, a > code {
