@@ -34,7 +34,7 @@ mono_accent_inverse(base_color = "#3C989E", white_color = "#FFFFFF",
   code_font_google = NULL, code_font_family = "'Source Code Pro'",
   code_font_url = "https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700",
   code_font_family_fallback = "'Lucida Console', Monaco", extra_css = NULL,
-  outfile = "xaringan-themer.css")
+  extra_fonts = NULL, outfile = "xaringan-themer.css")
 }
 \arguments{
 \item{base_color}{Monotone Base Color, works best with a light color., defaults to #3C989E}
@@ -132,6 +132,10 @@ mono_accent_inverse(base_color = "#3C989E", white_color = "#FFFFFF",
 \item{extra_css}{A named list of CSS definitions each containing a named list
 of CSS property-value pairs, i.e.
 \code{list(".class-id" = list("css-property" = "value"))}}
+
+\item{extra_fonts}{A list of additional fonts to import, each list element
+can be either a URL as a character string or a call to
+\code{\link{google_fonts}()}}
 
 \item{outfile}{Customized xaringan CSS output file name, default is "xaringan-themer.css"}
 }

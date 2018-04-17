@@ -35,7 +35,7 @@ duo(primary_color = "#1F4257", secondary_color = "#F97B64",
   code_font_google = NULL, code_font_family = "'Source Code Pro'",
   code_font_url = "https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700",
   code_font_family_fallback = "'Lucida Console', Monaco", extra_css = NULL,
-  outfile = "xaringan-themer.css")
+  extra_fonts = NULL, outfile = "xaringan-themer.css")
 }
 \arguments{
 \item{primary_color}{Duotone Primary Color, defaults to #1F4257}
@@ -131,6 +131,10 @@ duo(primary_color = "#1F4257", secondary_color = "#F97B64",
 \item{extra_css}{A named list of CSS definitions each containing a named list
 of CSS property-value pairs, i.e.
 \code{list(".class-id" = list("css-property" = "value"))}}
+
+\item{extra_fonts}{A list of additional fonts to import, each list element
+can be either a URL as a character string or a call to
+\code{\link{google_fonts}()}}
 
 \item{outfile}{Customized xaringan CSS output file name, default is "xaringan-themer.css"}
 }

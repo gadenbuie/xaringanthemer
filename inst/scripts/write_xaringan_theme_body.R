@@ -28,6 +28,8 @@ for (var in f_args[grepl("font_google$", f_args)]) {
   }
 }
 
+extra_font_imports <- if (is.null(extra_fonts)) "" else list2fonts(extra_fonts)
+
 tf <- system.file("resources", "template.css", package = "xaringanthemer")
 template <- readLines(tf, warn = FALSE)
 template <- paste(template, collapse = "\n")

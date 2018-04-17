@@ -63,3 +63,14 @@ list2css <- function(css) {
     )
   })
 }
+
+list2fonts <- function(fonts) {
+  fonts <- purrr::map_chr(fonts, function(f) {
+    if (inherits(f, "google_font")) {
+      f$url
+    } else if (inherits(f, "character")) {
+      f
+    } else NA_character_
+  })
+  paste0("@import url(", fonts[!is.na(fonts)], ");")
+}

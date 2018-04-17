@@ -257,6 +257,15 @@ solarized_dark(
 )
 ```
 
+If you need to import additional fonts for use in [custom CSS definitions](#adding-custom-css), you can use the `extra_fonts` argument to pass a list of URLs or `google_font()`s.
+
+```r
+mono_light(
+  extra_fonts = list(google_font("Sofia")),
+  extra_css = list(".title-slide h2" = list("font-family" = "Sofia"))
+)
+```
+
 ***
 
 **xaringanthemer** was built by [Garrick Aden-Buie](https://www.garrickadenbuie.com) ([&commat;grrrck](https://twitter.com/grrrck)).

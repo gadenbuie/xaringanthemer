@@ -90,6 +90,7 @@ write_xaringan_theme <- function(
   code_font_url = "https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700",
   code_font_family_fallback = "'Lucida Console', Monaco",
   extra_css = NULL,
+  extra_fonts = NULL,
   outfile = "xaringan-themer.css"
 ) {
   # Make sure font names are wrapped in quotes if they have spaces
@@ -121,6 +122,8 @@ write_xaringan_theme <- function(
       }
     }
   }
+  
+  extra_font_imports <- if (is.null(extra_fonts)) "" else list2fonts(extra_fonts)
   
   tf <- system.file("resources", "template.css", package = "xaringanthemer")
   template <- readLines(tf, warn = FALSE)

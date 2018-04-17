@@ -170,7 +170,7 @@ Here are some of the `text_` theme options:
   - `text_bold_color`
   - `text_slide_number_color`
   - `text_size`
-  - `text_size_h1`
+  - `text_slide_number_font_size`
   - *and more …*
 
 And here are the title slide theme options:
@@ -261,6 +261,17 @@ set `code_font_family` and `code_font_url`\!
 solarized_dark(
   code_font_family = "Fira Code",
   code_font_url = "https://cdn.rawgit.com/tonsky/FiraCode/1.204/distr/fira_code.css"
+)
+```
+
+If you need to import additional fonts for use in [custom CSS
+definitions](#adding-custom-css), you can use the `extra_fonts` argument
+to pass a list of URLs or `google_font()`s.
+
+``` r
+mono_light(
+  extra_fonts = list(google_font("Sofia")),
+  extra_css = list(".title-slide h2" = list("font-family" = "Sofia"))
 )
 ```
 

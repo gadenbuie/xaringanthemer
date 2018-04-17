@@ -1,6 +1,7 @@
 @import url({{text_font_url}});
 @import url({{header_font_url}});
 @import url({{code_font_url}});
+{{extra_font_imports}}
 
 body {
   font-family: {{paste(text_font_family, text_font_family_fallback, text_font_base, sep = ", ")}};

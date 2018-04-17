@@ -91,6 +91,7 @@ solarized_light <- function(
   code_font_url = "https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700",
   code_font_family_fallback = "'Lucida Console', Monaco",
   extra_css = NULL,
+  extra_fonts = NULL,
   outfile = "xaringan-themer.css"
 ) {
   # DO NOT EDIT - Generated from inst/scripts/generate_theme_functions.R
