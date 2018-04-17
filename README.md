@@ -271,7 +271,9 @@ Aden-Buie](https://www.garrickadenbuie.com)
 ([@grrrck](https://twitter.com/grrrck)).
 
 Big thank you to [Yihui Xie](https://yihui.name), especially for
-[xaringan](https://github.com/yihui/xaringan).
+[xaringan](https://github.com/yihui/xaringan). Also thanks to [Ole
+Petter Bang](http://gnab.org) for
+[remark.js](https://github.com/gnab/remark).
 
 Feel free to [file an
 issue](https://github.com/gadenbuie/xaringanthemer/issues) if you find a
