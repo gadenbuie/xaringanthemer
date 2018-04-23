@@ -61,6 +61,15 @@ mono_light(
 **xaringanthemer** is <kbd>Tab</kbd> friendly – [use autocomplete to
 explore](#fully-customized) the themes\!
 
+<center>
+
+<img src="docs/rmarkdown-template-screenshot.png" width="350px">
+
+</center>
+
+You can also skip the above and just create a *Ninja Themed
+Presentation* from the New R Markdown Document menu in RStudio.
+
 ## Themes
 
 ### Monotone
@@ -178,6 +187,8 @@ And here are the title slide theme options:
   - `title_slide_text_color`
   - `title_slide_background_color`
   - `title_slide_background_image`
+  - `title_slide_background_size`
+  - `title_slide_background_position`
 
 ## Adding Custom CSS
 
