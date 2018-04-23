@@ -1,0 +1,5 @@
+name: Ninja Themed Presentation
+description: >
+  Create a themed presentation using the xaringanthemer package, to make a
+  xaringan presentation based on remark.js.
+create_dir: false
