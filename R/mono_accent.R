@@ -17,6 +17,8 @@
 #' @param title_slide_text_color Title Slide Text Color, defaults to `inverse_text_color`
 #' @param title_slide_background_color Title Slide Background Color, defaults to `inverse_background_color`
 #' @param title_slide_background_image Title Slide Background Image URL, defaults to NA
+#' @param title_slide_background_size Title Slide Background Image Size, defaults to "cover" if background image is set, defaults to NA
+#' @param title_slide_background_position Title Slide Background Image Position, defaults to NA
 #' @param left_column_subtle_color Left Column Text (not last), defaults to `apply_alpha(base_color, 0.6)`
 #' @param left_column_selected_color Left Column Current Selection, defaults to `base_color`
 #' @param blockquote_left_color Blockquote Left Border Color, defaults to `apply_alpha(base_color, 0.5)`
@@ -69,6 +71,8 @@ mono_accent <- function(
   title_slide_text_color = inverse_text_color,
   title_slide_background_color = inverse_background_color,
   title_slide_background_image = NA,
+  title_slide_background_size = NA,
+  title_slide_background_position = NA,
   left_column_subtle_color = apply_alpha(base_color, 0.6),
   left_column_selected_color = base_color,
   blockquote_left_color = apply_alpha(base_color, 0.5),

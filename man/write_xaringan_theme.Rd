@@ -13,7 +13,8 @@ write_xaringan_theme(text_color = "#000", header_color = "#000",
   inverse_header_color = "#f3f3f3",
   title_slide_text_color = inverse_text_color,
   title_slide_background_color = inverse_background_color,
-  title_slide_background_image = NA, left_column_subtle_color = "#777",
+  title_slide_background_image = NA, title_slide_background_size = NA,
+  title_slide_background_position = NA, left_column_subtle_color = "#777",
   left_column_selected_color = "#000", blockquote_left_color = "lightgray",
   table_border_color = "#666", table_row_border_color = "#ddd",
   table_row_even_background_color = "#eee", text_size = "20px",
@@ -64,6 +65,10 @@ write_xaringan_theme(text_color = "#000", header_color = "#000",
 \item{title_slide_background_color}{Title Slide Background Color, defaults to \code{inverse_background_color}}
 
 \item{title_slide_background_image}{Title Slide Background Image URL, defaults to NA}
+
+\item{title_slide_background_size}{Title Slide Background Image Size, defaults to "cover" if background image is set, defaults to NA}
+
+\item{title_slide_background_position}{Title Slide Background Image Position, defaults to NA}
 
 \item{left_column_subtle_color}{Left Column Text (not last), defaults to #777}
 

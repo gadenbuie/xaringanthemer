@@ -16,6 +16,8 @@ template_variables <- tibble::tribble(
   , "title_slide_text_color", "{inverse_text_color}", ".title-slide", "Title Slide Text Color"
   , "title_slide_background_color", "{inverse_background_color}", ".title-slide", "Title Slide Background Color"
   , "title_slide_background_image", NA_character_, ".title-slide", "Title Slide Background Image URL"
+  , "title_slide_background_size", NA_character_, ".title-slide", "Title Slide Background Image Size, defaults to \"cover\" if background image is set"
+  , "title_slide_background_position", NA_character_, ".title-slide", "Title Slide Background Image Position"
   , "left_column_subtle_color", "#777", ".left-column", "Left Column Text (not last)"
   , "left_column_selected_color", "#000", ".left-column h2:last-of-type, .left-column h3:last-child", "Left Column Current Selection"
   , "blockquote_left_color", "lightgray", "blockquote", "Blockquote Left Border Color"

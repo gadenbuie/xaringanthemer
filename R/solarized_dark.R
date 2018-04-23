@@ -14,6 +14,8 @@
 #' @param title_slide_text_color Title Slide Text Color, defaults to `inverse_text_color`
 #' @param title_slide_background_color Title Slide Background Color, defaults to `inverse_background_color`
 #' @param title_slide_background_image Title Slide Background Image URL, defaults to NA
+#' @param title_slide_background_size Title Slide Background Image Size, defaults to "cover" if background image is set, defaults to NA
+#' @param title_slide_background_position Title Slide Background Image Position, defaults to NA
 #' @param left_column_subtle_color Left Column Text (not last), defaults to #586e75
 #' @param left_column_selected_color Left Column Current Selection, defaults to #93a1a1
 #' @param blockquote_left_color Blockquote Left Border Color, defaults to #cb4b16
@@ -63,6 +65,8 @@ solarized_dark <- function(
   title_slide_text_color = inverse_text_color,
   title_slide_background_color = inverse_background_color,
   title_slide_background_image = NA,
+  title_slide_background_size = NA,
+  title_slide_background_position = NA,
   left_column_subtle_color = "#586e75",
   left_column_selected_color = "#93a1a1",
   blockquote_left_color = "#cb4b16",

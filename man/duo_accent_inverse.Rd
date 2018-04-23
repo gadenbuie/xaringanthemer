@@ -20,7 +20,8 @@ duo_accent_inverse(primary_color = "#006747", secondary_color = "#CFC493",
   inverse_header_color = choose_dark_or_light(secondary_color, black_color,
   white_color), title_slide_text_color = choose_dark_or_light(primary_color,
   black_color, white_color), title_slide_background_color = primary_color,
-  title_slide_background_image = NA,
+  title_slide_background_image = NA, title_slide_background_size = NA,
+  title_slide_background_position = NA,
   left_column_subtle_color = apply_alpha(primary_color, 0.6),
   left_column_selected_color = primary_color,
   blockquote_left_color = apply_alpha(secondary_color, 0.5),
@@ -82,6 +83,10 @@ duo_accent_inverse(primary_color = "#006747", secondary_color = "#CFC493",
 \item{title_slide_background_color}{Title Slide Background Color, defaults to \code{primary_color}}
 
 \item{title_slide_background_image}{Title Slide Background Image URL, defaults to NA}
+
+\item{title_slide_background_size}{Title Slide Background Image Size, defaults to "cover" if background image is set, defaults to NA}
+
+\item{title_slide_background_position}{Title Slide Background Image Position, defaults to NA}
 
 \item{left_column_subtle_color}{Left Column Text (not last), defaults to \code{apply_alpha(primary_color, 0.6)}}
 

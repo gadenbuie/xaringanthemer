@@ -13,7 +13,9 @@ solarized_light(text_color = "#657b83", header_color = "#dc322f",
   inverse_header_color = inverse_text_color,
   title_slide_text_color = inverse_text_color,
   title_slide_background_color = inverse_background_color,
-  title_slide_background_image = NA, left_column_subtle_color = "#93a1a1",
+  title_slide_background_image = NA, title_slide_background_size = NA,
+  title_slide_background_position = NA,
+  left_column_subtle_color = "#93a1a1",
   left_column_selected_color = "#586e75", blockquote_left_color = "#cb4b16",
   table_border_color = "#839496", table_row_border_color = "#839496",
   table_row_even_background_color = "#eee8d5", text_size = "20px",
@@ -64,6 +66,10 @@ solarized_light(text_color = "#657b83", header_color = "#dc322f",
 \item{title_slide_background_color}{Title Slide Background Color, defaults to \code{inverse_background_color}}
 
 \item{title_slide_background_image}{Title Slide Background Image URL, defaults to NA}
+
+\item{title_slide_background_size}{Title Slide Background Image Size, defaults to "cover" if background image is set, defaults to NA}
+
+\item{title_slide_background_position}{Title Slide Background Image Position, defaults to NA}
 
 \item{left_column_subtle_color}{Left Column Text (not last), defaults to #93a1a1}
 

@@ -15,7 +15,8 @@ mono_accent(base_color = "#43418A", white_color = "#FFFFFF",
   inverse_text_shadow = FALSE, inverse_header_color = white_color,
   title_slide_text_color = inverse_text_color,
   title_slide_background_color = inverse_background_color,
-  title_slide_background_image = NA,
+  title_slide_background_image = NA, title_slide_background_size = NA,
+  title_slide_background_position = NA,
   left_column_subtle_color = apply_alpha(base_color, 0.6),
   left_column_selected_color = base_color,
   blockquote_left_color = apply_alpha(base_color, 0.5),
@@ -74,6 +75,10 @@ mono_accent(base_color = "#43418A", white_color = "#FFFFFF",
 \item{title_slide_background_color}{Title Slide Background Color, defaults to \code{inverse_background_color}}
 
 \item{title_slide_background_image}{Title Slide Background Image URL, defaults to NA}
+
+\item{title_slide_background_size}{Title Slide Background Image Size, defaults to "cover" if background image is set, defaults to NA}
+
+\item{title_slide_background_position}{Title Slide Background Image Position, defaults to NA}
 
 \item{left_column_subtle_color}{Left Column Text (not last), defaults to \code{apply_alpha(base_color, 0.6)}}
 

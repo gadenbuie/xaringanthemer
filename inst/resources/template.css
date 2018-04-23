@@ -66,10 +66,13 @@ a, a > code {
   color: {{inverse_header_color}};
 }
 .title-slide, .title-slide h1, .title-slide h2, .title-slide h3 {
-  background-color: {{title_slide_background_color}};
   color: {{title_slide_text_color}};
+}
+.title-slide {
+  background-color: {{title_slide_background_color}};
   {{ifelse(!is.na(title_slide_background_image), paste0("background-image: url(", title_slide_background_image, ");"), "")}}
-  {{ifelse(!is.na(title_slide_background_image), "background-size: cover;", "")}}
+  {{ifelse(!is.na(title_slide_background_size), paste0("background-size: ", title_slide_background_size, ";"), ifelse(!is.na(title_slide_background_image), "background-size: cover;", ""))}}
+  {{ifelse(!is.na(title_slide_background_position), paste0("background-position: ", title_slide_background_position, ";"), "")}}
 }
 .title-slide .remark-slide-number {
   display: none;
