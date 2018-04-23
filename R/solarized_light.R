@@ -23,10 +23,10 @@
 #' @param table_row_border_color Table row inner bottom border, defaults to #839496
 #' @param table_row_even_background_color Table Even Row Background Color, defaults to #eee8d5
 #' @param text_size Slide Body Text Size, defaults to 20px
-#' @param header_h1_font_size h1 Header Text Size, defaults to 55px
-#' @param header_h2_font_size h2 Header Text Size, defaults to 45px
-#' @param header_h3_font_size h3 Header Text Size, defaults to 35px
-#' @param text_slide_number_font_size Slide Number Text Size, defaults to 20px
+#' @param header_h1_font_size h1 Header Text Size, defaults to 2.75em
+#' @param header_h2_font_size h2 Header Text Size, defaults to 2.25em
+#' @param header_h3_font_size h3 Header Text Size, defaults to 1.75em
+#' @param text_slide_number_font_size Slide Number Text Size, defaults to 0.9em
 #' @param code_inline_font_size Inline Code Text Size, defaults to 1em
 #' @param code_font_size Code Text Size, defaults to 0.9em
 #' @param text_font_google Use `google_font()` to specify body font, defaults to `NULL`
@@ -74,10 +74,10 @@ solarized_light <- function(
   table_row_border_color = "#839496",
   table_row_even_background_color = "#eee8d5",
   text_size = "20px",
-  header_h1_font_size = "55px",
-  header_h2_font_size = "45px",
-  header_h3_font_size = "35px",
-  text_slide_number_font_size = "20px",
+  header_h1_font_size = "2.75em",
+  header_h2_font_size = "2.25em",
+  header_h3_font_size = "1.75em",
+  text_slide_number_font_size = "0.9em",
   code_inline_font_size = "1em",
   code_font_size = "0.9em",
   text_font_google = NULL,
