@@ -25,13 +25,13 @@
 #' @param table_border_color Table top/bottom border, defaults to #666
 #' @param table_row_border_color Table row inner bottom border, defaults to #ddd
 #' @param table_row_even_background_color Table Even Row Background Color, defaults to `lighten_color(base_color, 0.8)`
-#' @param text_size Slide Body Text Size, defaults to 20px
-#' @param header_h1_font_size h1 Header Text Size, defaults to 55px
-#' @param header_h2_font_size h2 Header Text Size, defaults to 45px
-#' @param header_h3_font_size h3 Header Text Size, defaults to 35px
-#' @param text_slide_number_font_size Slide Number Text Size, defaults to 0.9em
-#' @param code_inline_font_size Inline Code Text Size, defaults to 1em
-#' @param code_font_size Code Text Size, defaults to 0.9em
+#' @param text_font_size Slide Body Text Font Size, defaults to 20px
+#' @param header_h1_font_size h1 Header Text Font Size, defaults to 55px
+#' @param header_h2_font_size h2 Header Text Font Size, defaults to 45px
+#' @param header_h3_font_size h3 Header Text Font Size, defaults to 35px
+#' @param text_slide_number_font_size Slide Number Text Font Size, defaults to 0.9em
+#' @param code_inline_font_size Inline Code Text Font Size, defaults to 1em
+#' @param code_font_size Code Text Font Size, defaults to 0.9em
 #' @param text_font_google Use `google_font()` to specify body font, defaults to `NULL`
 #' @param text_font_family Body Text Font Family, defaults to 'Droid Serif'
 #' @param text_font_weight Body Text Font Weight, defaults to normal
@@ -79,7 +79,7 @@ mono_light <- function(
   table_border_color = "#666",
   table_row_border_color = "#ddd",
   table_row_even_background_color = lighten_color(base_color, 0.8),
-  text_size = "20px",
+  text_font_size = "20px",
   header_h1_font_size = "55px",
   header_h2_font_size = "45px",
   header_h3_font_size = "35px",

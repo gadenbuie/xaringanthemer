@@ -18,7 +18,7 @@ solarized_light(text_color = "#657b83", header_color = "#dc322f",
   left_column_subtle_color = "#93a1a1",
   left_column_selected_color = "#586e75", blockquote_left_color = "#cb4b16",
   table_border_color = "#839496", table_row_border_color = "#839496",
-  table_row_even_background_color = "#eee8d5", text_size = "20px",
+  table_row_even_background_color = "#eee8d5", text_font_size = "20px",
   header_h1_font_size = "55px", header_h2_font_size = "45px",
   header_h3_font_size = "35px", text_slide_number_font_size = "0.9em",
   code_inline_font_size = "1em", code_font_size = "0.9em",
@@ -83,19 +83,19 @@ solarized_light(text_color = "#657b83", header_color = "#dc322f",
 
 \item{table_row_even_background_color}{Table Even Row Background Color, defaults to #eee8d5}
 
-\item{text_size}{Slide Body Text Size, defaults to 20px}
+\item{text_font_size}{Slide Body Text Font Size, defaults to 20px}
 
-\item{header_h1_font_size}{h1 Header Text Size, defaults to 55px}
+\item{header_h1_font_size}{h1 Header Text Font Size, defaults to 55px}
 
-\item{header_h2_font_size}{h2 Header Text Size, defaults to 45px}
+\item{header_h2_font_size}{h2 Header Text Font Size, defaults to 45px}
 
-\item{header_h3_font_size}{h3 Header Text Size, defaults to 35px}
+\item{header_h3_font_size}{h3 Header Text Font Size, defaults to 35px}
 
-\item{text_slide_number_font_size}{Slide Number Text Size, defaults to 0.9em}
+\item{text_slide_number_font_size}{Slide Number Text Font Size, defaults to 0.9em}
 
-\item{code_inline_font_size}{Inline Code Text Size, defaults to 1em}
+\item{code_inline_font_size}{Inline Code Text Font Size, defaults to 1em}
 
-\item{code_font_size}{Code Text Size, defaults to 0.9em}
+\item{code_font_size}{Code Text Font Size, defaults to 0.9em}
 
 \item{text_font_google}{Use \code{google_font()} to specify body font, defaults to \code{NULL}}
 
