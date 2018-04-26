@@ -7,6 +7,8 @@ output: github_document
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
+  results = "asis",
+  echo = FALSE,
   comment = "#>",
   fig.path = "man/figures/README-",
   out.width = "100%"
@@ -82,11 +84,29 @@ Use these functions to automatically create a consistent color palette for your 
 
 A light theme based around a single color.
 
+```{r mono_light}
+demo_function_call <- function(f, n_params = 1) {
+  cat(sep = "",
+    "```r\n",
+    paste(substitute(f)), "(",
+    if (n_params > 0) paste(collapse = ", ",
+      sapply(1:n_params, function(i) {
+        paste0(names(formals(f))[i], ' = "', formals(f)[[i]], '"')})),
+    ")\n```"
+    )
+}
+demo_function_call(mono_light, 1)
+```
+
 ![](docs/example_mono_light.png)
 
 #### `mono_dark()`
 
 A dark theme based around a single color.
+
+```{r mono_dark}
+demo_function_call(mono_dark, 1)
+```
 
 ![](docs/example_mono_dark.png)
 
@@ -94,11 +114,19 @@ A dark theme based around a single color.
 
 The default xaringan theme with a single color used for color accents on select elements (headers, bold text, etc.).
 
+```{r mono_accent}
+demo_function_call(mono_accent, 1)
+```
+
 ![](docs/example_mono_accent.png)
 
 #### `mono_accent_inverse()`
 
 An "inverted" default xaringan theme with a single color used for color accents on select elements (headers, bold text, etc.).
+
+```{r mono_accent_inverse}
+demo_function_call(mono_accent_inverse, 1)
+```
 
 ![](docs/example_mono_accent_inverse.png)
     
@@ -111,17 +139,29 @@ These themes build from two (ideally) complementary colors.
 
 A two-colored theme based on a primary and secondary color.
 
+```{r duo}
+demo_function_call(duo, 2)
+```
+
 ![](docs/example_duo.png)
 
 #### `duo_accent()`
 
 The default Xaringan theme with two accent colors.
 
+```{r duo_accent}
+demo_function_call(duo_accent, 2)
+```
+
 ![](docs/example_duo_accent.png)
 
 #### `duo_accent_inverse()`
 
 An "inverted" default Xaringan theme with two accent colors.
+
+```{r duo_accent_inverse}
+demo_function_call(duo_accent_inverse, 2)
+```
 
 ![](docs/example_duo_accent_inverse.png)
 
@@ -132,9 +172,17 @@ For both themes, it is advisted to change the syntax highlighting theme to `sola
 
 #### `solarized_light()`
 
+```{r solarized_light}
+demo_function_call(solarized_light, 0)
+```
+
 ![](docs/example_solarized_light.png)
 
 #### `solarized_dark()`
+
+```{r solarized_dark}
+demo_function_call(solarized_dark, 0)
+```
 
 ![](docs/example_solarized_dark.png)
 

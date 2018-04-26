@@ -81,11 +81,19 @@ for your slides, based around a single color.
 
 A light theme based around a single color.
 
+``` r
+mono_light(base_color = "#23395b")
+```
+
 ![](docs/example_mono_light.png)
 
 #### `mono_dark()`
 
 A dark theme based around a single color.
+
+``` r
+mono_dark(base_color = "#cbf7ed")
+```
 
 ![](docs/example_mono_dark.png)
 
@@ -94,12 +102,20 @@ A dark theme based around a single color.
 The default xaringan theme with a single color used for color accents on
 select elements (headers, bold text, etc.).
 
+``` r
+mono_accent(base_color = "#43418A")
+```
+
 ![](docs/example_mono_accent.png)
 
 #### `mono_accent_inverse()`
 
 An “inverted” default xaringan theme with a single color used for color
 accents on select elements (headers, bold text, etc.).
+
+``` r
+mono_accent_inverse(base_color = "#3C989E")
+```
 
 ![](docs/example_mono_accent_inverse.png)
 
@@ -111,17 +127,30 @@ These themes build from two (ideally) complementary colors.
 
 A two-colored theme based on a primary and secondary color.
 
+``` r
+duo(primary_color = "#1F4257", secondary_color = "#F97B64")
+```
+
 ![](docs/example_duo.png)
 
 #### `duo_accent()`
 
 The default Xaringan theme with two accent colors.
 
+``` r
+duo_accent(primary_color = "#006747", secondary_color = "#CFC493")
+```
+
 ![](docs/example_duo_accent.png)
 
 #### `duo_accent_inverse()`
 
-An “inverted” default Xaringan theme with two accent colors.
+An “inverted” default Xaringan theme with two accent
+colors.
+
+``` r
+duo_accent_inverse(primary_color = "#006747", secondary_color = "#CFC493")
+```
 
 ![](docs/example_duo_accent_inverse.png)
 
@@ -135,9 +164,17 @@ paired or constrasted).
 
 #### `solarized_light()`
 
+``` r
+solarized_light()
+```
+
 ![](docs/example_solarized_light.png)
 
 #### `solarized_dark()`
+
+``` r
+solarized_dark()
+```
 
 ![](docs/example_solarized_dark.png)
 
@@ -178,7 +215,7 @@ Here are some of the `text_` theme options:
   - `text_color`
   - `text_bold_color`
   - `text_slide_number_color`
-  - `text_size`
+  - `text_font_size`
   - `text_slide_number_font_size`
   - *and more …*
 
