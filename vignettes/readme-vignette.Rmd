@@ -1,6 +1,25 @@
 ---
-output: github_document
+title: "Xaringan CSS Theme Generator"
+author: "Garrick Aden-Buie"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Overview of xaringanthemer}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
 ---
+<!-- This vignette was automatically created from README.Rmd
+
+Please consider removing installation instructions, badges, and
+any other README-specific material.
+                            
+You can include short independent documents in README.Rmd using
+the following chunk argument syntax:
+child='vignettes/rmdhunks/example1.Rmd'
+                            
+https://yihui.name/knitr/demo/child/
+or read-in chunks stored in an independent R script using knitr::read_chunk()
+https://yihui.name/knitr/demo/externalization/ -->
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
@@ -22,21 +41,12 @@ library(xaringanthemer)
 
 Easily style your [xaringan] slides with **xaringanthemer**.
 
-![](vignettes/images/examples.gif)
+![](images/examples.gif)
 
 ```{r toc, results='asis', echo=FALSE, message=FALSE}
 devtools::source_gist("c83e078bf8c81b035e32c3fc0cf04ee8", filename = 'render_toc.R')
-x <- render_toc("README.Rmd", toc_depth = 3)
+x <- render_toc("readme-vignette.Rmd", toc_depth = 3)
 gsub("    -", "-", sub("^-.+?\n", "", x))
-```
-
-## Installation
-
-**xaringanthemer** lives here on GitHub.
-
-```r
-# install.packages("devtools")
-devtools::install_github("gadenbuie/xaringanthemer")
 ```
 
 ## Quick Intro
@@ -66,11 +76,11 @@ mono_light(
 ```
 ````
 
-![](vignettes/images/example_mono_light_1c5253.png)
+![](images/example_mono_light_1c5253.png)
 
 **xaringanthemer** is <kbd>Tab</kbd> friendly -- [use autocomplete to explore](#fully-customized) the themes!
 
-<center><img src="vignettes/images/rmarkdown-template-screenshot.png" width="350px"></center>
+<center><img src="images/rmarkdown-template-screenshot.png" width="350px"></center>
 
 You can also skip the above and just create a *Ninja Themed Presentation* from the New R Markdown Document menu in RStudio.
 
@@ -98,7 +108,7 @@ demo_function_call <- function(f, n_params = 1) {
 demo_function_call(mono_light, 1)
 ```
 
-![](vignettes/images/example_mono_light.png)
+![](images/example_mono_light.png)
 
 #### `mono_dark()`
 
@@ -108,7 +118,7 @@ A dark theme based around a single color.
 demo_function_call(mono_dark, 1)
 ```
 
-![](vignettes/images/example_mono_dark.png)
+![](images/example_mono_dark.png)
 
 #### `mono_accent()`
 
@@ -118,7 +128,7 @@ The default xaringan theme with a single color used for color accents on select 
 demo_function_call(mono_accent, 1)
 ```
 
-![](vignettes/images/example_mono_accent.png)
+![](images/example_mono_accent.png)
 
 #### `mono_accent_inverse()`
 
@@ -128,7 +138,7 @@ An "inverted" default xaringan theme with a single color used for color accents 
 demo_function_call(mono_accent_inverse, 1)
 ```
 
-![](vignettes/images/example_mono_accent_inverse.png)
+![](images/example_mono_accent_inverse.png)
     
 
 ### Duotone
@@ -143,7 +153,7 @@ A two-colored theme based on a primary and secondary color.
 demo_function_call(duo, 2)
 ```
 
-![](vignettes/images/example_duo.png)
+![](images/example_duo.png)
 
 #### `duo_accent()`
 
@@ -153,7 +163,7 @@ The default Xaringan theme with two accent colors.
 demo_function_call(duo_accent, 2)
 ```
 
-![](vignettes/images/example_duo_accent.png)
+![](images/example_duo_accent.png)
 
 #### `duo_accent_inverse()`
 
@@ -163,7 +173,7 @@ An "inverted" default Xaringan theme with two accent colors.
 demo_function_call(duo_accent_inverse, 2)
 ```
 
-![](vignettes/images/example_duo_accent_inverse.png)
+![](images/example_duo_accent_inverse.png)
 
 ### Solarized
 
@@ -176,7 +186,7 @@ For both themes, it is advisted to change the syntax highlighting theme to `sola
 demo_function_call(solarized_light, 0)
 ```
 
-![](vignettes/images/example_solarized_light.png)
+![](images/example_solarized_light.png)
 
 #### `solarized_dark()`
 
@@ -184,7 +194,7 @@ demo_function_call(solarized_light, 0)
 demo_function_call(solarized_dark, 0)
 ```
 
-![](vignettes/images/example_solarized_dark.png)
+![](images/example_solarized_dark.png)
 
 
 To do this, your YAML header should look more-or-less like this:
@@ -215,7 +225,7 @@ All of the theme options are named so that you first think of the element you wa
 Here are some of the `text_` theme options:
 
 ```{r, results='asis', echo=FALSE}
-source("R/theme_settings.R")
+source("../R/theme_settings.R")
 tvv <- template_variables$variable
 cat(paste0("- `", tvv[grepl("^text_", tvv)][1:5], "`"), sep = "\n")
 cat("- *and more ...*")

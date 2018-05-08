@@ -6,7 +6,7 @@
 Easily style your [xaringan](https://github.com/yihui/xaringan) slides
 with **xaringanthemer**.
 
-![](docs/examples.gif)
+![](vignettes/images/examples.gif)
 
   - [Installation](#installation)
   - [Quick Intro](#quick-intro)
@@ -56,14 +56,15 @@ mono_light(
 ```
 ````
 
-![](docs/example_mono_light_1c5253.png)
+![](vignettes/images/example_mono_light_1c5253.png)
 
 **xaringanthemer** is <kbd>Tab</kbd> friendly – [use autocomplete to
-explore](#fully-customized) the themes\!
+explore](#fully-customized) the
+themes\!
 
 <center>
 
-<img src="docs/rmarkdown-template-screenshot.png" width="350px">
+<img src="vignettes/images/rmarkdown-template-screenshot.png" width="350px">
 
 </center>
 
@@ -85,7 +86,7 @@ A light theme based around a single color.
 mono_light(base_color = "#23395b")
 ```
 
-![](docs/example_mono_light.png)
+![](vignettes/images/example_mono_light.png)
 
 #### `mono_dark()`
 
@@ -95,7 +96,7 @@ A dark theme based around a single color.
 mono_dark(base_color = "#cbf7ed")
 ```
 
-![](docs/example_mono_dark.png)
+![](vignettes/images/example_mono_dark.png)
 
 #### `mono_accent()`
 
@@ -106,7 +107,7 @@ select elements (headers, bold text, etc.).
 mono_accent(base_color = "#43418A")
 ```
 
-![](docs/example_mono_accent.png)
+![](vignettes/images/example_mono_accent.png)
 
 #### `mono_accent_inverse()`
 
@@ -117,7 +118,7 @@ accents on select elements (headers, bold text, etc.).
 mono_accent_inverse(base_color = "#3C989E")
 ```
 
-![](docs/example_mono_accent_inverse.png)
+![](vignettes/images/example_mono_accent_inverse.png)
 
 ### Duotone
 
@@ -131,7 +132,7 @@ A two-colored theme based on a primary and secondary color.
 duo(primary_color = "#1F4257", secondary_color = "#F97B64")
 ```
 
-![](docs/example_duo.png)
+![](vignettes/images/example_duo.png)
 
 #### `duo_accent()`
 
@@ -141,7 +142,7 @@ The default Xaringan theme with two accent colors.
 duo_accent(primary_color = "#006747", secondary_color = "#CFC493")
 ```
 
-![](docs/example_duo_accent.png)
+![](vignettes/images/example_duo_accent.png)
 
 #### `duo_accent_inverse()`
 
@@ -152,7 +153,7 @@ colors.
 duo_accent_inverse(primary_color = "#006747", secondary_color = "#CFC493")
 ```
 
-![](docs/example_duo_accent_inverse.png)
+![](vignettes/images/example_duo_accent_inverse.png)
 
 ### Solarized
 
@@ -168,7 +169,7 @@ paired or constrasted).
 solarized_light()
 ```
 
-![](docs/example_solarized_light.png)
+![](vignettes/images/example_solarized_light.png)
 
 #### `solarized_dark()`
 
@@ -176,7 +177,7 @@ solarized_light()
 solarized_dark()
 ```
 
-![](docs/example_solarized_dark.png)
+![](vignettes/images/example_solarized_dark.png)
 
 To do this, your YAML header should look more-or-less like this:
 

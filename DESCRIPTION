@@ -17,9 +17,12 @@ Roxygen: list(markdown = TRUE)
 Suggests: 
     testthat,
     xaringan,
-    here
+    here,
+    knitr,
+    rmarkdown
 Imports: 
     purrr,
     tibble,
     glue,
     stringr
+VignetteBuilder: knitr

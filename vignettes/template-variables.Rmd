@@ -1,0 +1,36 @@
+---
+title: "Template Variables"
+author: "Garrick Aden-Buie"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Template Variables}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+The following table shows the template variables, their default values in the standard `xaringan` theme, the primary element to which the property is applied, and a brief description of the template variable. 
+
+For example, `background_color` by default sets the `background-color` CSS property of the `.remark-slide-content` class to `#FFF`.
+
+Use this table to find the template variable you would like to modify.
+You can also use this table to find the CSS class or element associated with a particular template item.
+
+Note that themes, like `mono_accent()`, have additional parameters, but with any theme function you can override the theme by directly setting the arguments below when calling the theme function.
+For example, to use `mono_accent()` with a different slide background color, you can call `mono_accent(background_color = "#abc123")`.
+
+```{r table, results = "asis", echo=FALSE}
+source("../R/theme_settings.R")
+template_variables$variable <- glue::glue_data(template_variables, "`{variable}`")
+template_variables$default <- gsub("[{}]", "", template_variables$default)
+template_variables$default <- glue::glue_data(template_variables, "`{default}`")
+knitr::kable(template_variables)
+```
+
