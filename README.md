@@ -60,7 +60,7 @@ mono_light(
 ![](vignettes/images/example_mono_light_1c5253.png)
 
 **xaringanthemer** is <kbd>Tab</kbd> friendly – [use autocomplete to
-explore](#fully-customized) the [template
+explore](#theme-settings) the [template
 variables](vignettes/template-variables.md) that you can adjust in each
 of the
 themes\!

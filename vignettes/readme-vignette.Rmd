@@ -88,7 +88,7 @@ mono_light(
 
 ![](images/example_mono_light_1c5253.png)
 
-**xaringanthemer** is <kbd>Tab</kbd> friendly -- [use autocomplete to explore](#fully-customized) the template variables^[tv] that you can adjust in each of the themes!
+**xaringanthemer** is <kbd>Tab</kbd> friendly -- [use autocomplete to explore](#theme-settings) the template variables^[tv] that you can adjust in each of the themes!
 
 [tv]: See `vignette("template-variables", "xaringanthemer")`
 

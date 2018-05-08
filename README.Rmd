@@ -79,7 +79,7 @@ mono_light(
 
 ![](vignettes/images/example_mono_light_1c5253.png)
 
-**xaringanthemer** is <kbd>Tab</kbd> friendly -- [use autocomplete to explore](#fully-customized) the [template variables][template-variables] that you can adjust in each of the themes!
+**xaringanthemer** is <kbd>Tab</kbd> friendly -- [use autocomplete to explore](#theme-settings) the [template variables][template-variables] that you can adjust in each of the themes!
 
 <center><img src="vignettes/images/rmarkdown-template-screenshot.png" width="350px"></center>
 
