@@ -3,8 +3,9 @@
 
 # xaringanthemer
 
-Easily style your [xaringan](https://github.com/yihui/xaringan) slides
-with **xaringanthemer**.
+Give your [xaringan](https://github.com/yihui/xaringan) slides some
+style with **xaringanthemer** within your `slides.Rmd` file without
+(much) CSS.
 
 ![](vignettes/images/examples.gif)
 
