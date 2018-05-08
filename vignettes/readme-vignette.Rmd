@@ -43,11 +43,21 @@ Easily style your [xaringan] slides with **xaringanthemer**.
 
 ![](images/examples.gif)
 
-```{r toc, results='asis', echo=FALSE, message=FALSE}
+```{r toc, results='asis', echo=FALSE, message=FALSE, eval=FALSE}
 devtools::source_gist("c83e078bf8c81b035e32c3fc0cf04ee8", filename = 'render_toc.R')
-x <- render_toc("readme-vignette.Rmd", toc_depth = 3)
+x <- render_toc("README.Rmd", toc_depth = 3)
 gsub("    -", "-", sub("^-.+?\n", "", x))
 ```
+
+- [Installation](#installation)
+- [Quick Intro](#quick-intro)
+- [Themes](#themes)
+    - [Monotone](#monotone)
+    - [Duotone](#duotone)
+    - [Solarized](#solarized)
+- [Theme Settings](#theme-settings)
+- [Adding Custom CSS](#adding-custom-css)
+- [Fonts](#fonts)
 
 ## Quick Intro
 
@@ -78,7 +88,9 @@ mono_light(
 
 ![](images/example_mono_light_1c5253.png)
 
-**xaringanthemer** is <kbd>Tab</kbd> friendly -- [use autocomplete to explore](#fully-customized) the themes!
+**xaringanthemer** is <kbd>Tab</kbd> friendly -- [use autocomplete to explore](#fully-customized) the template variables^[tv] that you can adjust in each of the themes!
+
+[tv]: See `vignette("template-variables", "xaringanthemer")`
 
 <center><img src="images/rmarkdown-template-screenshot.png" width="350px"></center>
 
@@ -217,6 +229,7 @@ If you want to start from the default **xaringan** theme and make a few modifica
 
 All of the theme template variables are repeated in each of the theme functions (instead of relying on `...`) so that you can use autocompletion to find and change the defaults for any theme function.
 To override the default value of any theme functions, set the appropriate argument in the theme function.
+A table of all template variables is included in `vignette("template-variables", "xaringanthemer")`.
 
 As an example, try loading `xaringanthemer`, type out `duo_theme(` and then press <kbd>Tab</kbd> to see all of the theme options.
 

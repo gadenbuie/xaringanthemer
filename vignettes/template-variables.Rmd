@@ -2,11 +2,12 @@
 title: "Template Variables"
 author: "Garrick Aden-Buie"
 date: "`r Sys.Date()`"
-output: rmarkdown::html_vignette
+output: 
+  rmarkdown::html_vignette: default
 vignette: >
   %\VignetteIndexEntry{Template Variables}
-  %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
+  %\VignetteEngine{knitr::rmarkdown}
 ---
 
 ```{r setup, include = FALSE}

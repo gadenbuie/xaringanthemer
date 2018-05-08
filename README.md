@@ -59,7 +59,9 @@ mono_light(
 ![](vignettes/images/example_mono_light_1c5253.png)
 
 **xaringanthemer** is <kbd>Tab</kbd> friendly – [use autocomplete to
-explore](#fully-customized) the
+explore](#fully-customized) the [template
+variables](vignettes/template-variables.md) that you can adjust in each
+of the
 themes\!
 
 <center>
@@ -199,11 +201,14 @@ function of this package, `write_xaringan_theme()`. If you want to start
 from the default **xaringan** theme and make a few modifications, start
 there.
 
-All of the theme template variables are repeated in each of the theme
-functions (instead of relying on `...`) so that you can use
-autocompletion to find and change the defaults for any theme function.
-To override the default value of any theme functions, set the
-appropriate argument in the theme function.
+All of the [theme template variables](vignettes/template-variables.md)
+are repeated in each of the theme functions (instead of relying on
+`...`) so that you can use autocompletion to find and change the
+defaults for any theme function. To override the default value of any
+theme functions, set the appropriate argument in the theme function. A
+table of all template variables is included in
+[`vignette("template-variables",
+"xaringanthemer")`](vignettes/template-variables.md).
 
 As an example, try loading `xaringanthemer`, type out `duo_theme(` and
 then press <kbd>Tab</kbd> to see all of the theme options.
