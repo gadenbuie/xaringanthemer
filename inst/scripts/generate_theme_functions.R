@@ -1,5 +1,22 @@
 source(here::here("R/theme_settings.R"))
 
+plural_element <- function(css_name) {
+  is_mult <- grepl(",|and|or", css_name)
+  is_class <- grepl("^\\.", css_name)
+  ifelse(is_class,
+    ifelse(is_mult, "classes", "class"),
+    ifelse(is_mult, "elements", "element")
+  )
+}
+
+element_description <- function(element) {
+  ifelse(
+    grepl("multiple", element),
+    "Modifies multiple CSS classes or elements.",
+    glue::glue("Modifies the `{element}` {plural_element(element)}.")
+    )
+}
+
 setup_theme_function <- function(
   f_name = "write_xaringan_theme",
   template = template_variables,
@@ -15,7 +32,7 @@ setup_theme_function <- function(
   x <-
     as.character(
       glue::glue_data(
-        tv, "#' @param {variable} {description}, defaults to {stringr::str_replace_all(default, '[{{}}]', '`')}")) %,%
+        tv, "#' @param {variable} {description}. Defaults to {stringr::str_replace_all(default, '[{{}}]', '`')}. {element_description(element)}")) %,%
     "#' @template extra_css" %,%
     "#' @param outfile Customized xaringan CSS output file name, default is \"xaringan-themer.css\"" %,%
     c(...) %,%

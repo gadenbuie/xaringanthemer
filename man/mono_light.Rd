@@ -11,12 +11,14 @@ mono_light(base_color = "#23395b", white_color = lighten_color(base_color,
   text_bold_color = base_color, text_slide_number_color = base_color,
   code_highlight_color = "rgba(255,255,0,0.5)",
   code_inline_color = base_color, code_inline_background_color = NA,
-  inverse_background_color = base_color, inverse_text_color = white_color,
-  inverse_text_shadow = FALSE, inverse_header_color = white_color,
+  code_inline_font_size = "1em", inverse_background_color = base_color,
+  inverse_text_color = white_color, inverse_text_shadow = FALSE,
+  inverse_header_color = white_color,
   title_slide_text_color = inverse_text_color,
   title_slide_background_color = inverse_background_color,
   title_slide_background_image = NA, title_slide_background_size = NA,
-  title_slide_background_position = NA,
+  title_slide_background_position = NA, footnote_color = NA,
+  footnote_font_size = "0.9em", footnote_position_bottom = "3em",
   left_column_subtle_color = apply_alpha(base_color, 0.6),
   left_column_selected_color = base_color,
   blockquote_left_color = apply_alpha(base_color, 0.5),
@@ -24,8 +26,7 @@ mono_light(base_color = "#23395b", white_color = lighten_color(base_color,
   table_row_even_background_color = lighten_color(base_color, 0.8),
   text_font_size = "20px", header_h1_font_size = "55px",
   header_h2_font_size = "45px", header_h3_font_size = "35px",
-  text_slide_number_font_size = "0.9em", code_inline_font_size = "1em",
-  code_font_size = "0.9em", text_font_google = NULL,
+  text_slide_number_font_size = "0.9em", text_font_google = NULL,
   text_font_family = "'Droid Serif'", text_font_weight = "normal",
   text_font_url = "https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic",
   text_font_family_fallback = "'Palatino Linotype', 'Book Antiqua', Palatino, 'Microsoft YaHei', 'Songti SC'",
@@ -33,106 +34,113 @@ mono_light(base_color = "#23395b", white_color = lighten_color(base_color,
   header_font_family = "'Yanone Kaffeesatz'", header_font_weight = "normal",
   header_font_url = "https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz",
   code_font_google = NULL, code_font_family = "'Source Code Pro'",
+  code_font_size = "0.9em",
   code_font_url = "https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700",
   code_font_family_fallback = "'Lucida Console', Monaco", extra_css = NULL,
   extra_fonts = NULL, outfile = "xaringan-themer.css")
 }
 \arguments{
-\item{base_color}{Monotone base color, works best with a strong color, defaults to #23395b}
+\item{base_color}{Monotone base color, works best with a strong color. Defaults to #23395b. Modifies multiple CSS classes or elements.}
 
-\item{white_color}{Brightest color used, default is a very light version of \code{base_color}, defaults to \code{lighten_color(base_color, 0.9)}}
+\item{white_color}{Brightest color used, default is a very light version of \code{base_color}. Defaults to \code{lighten_color(base_color, 0.9)}. Modifies multiple CSS classes or elements.}
 
-\item{black_color}{Darkest color used, default is a very dark, version of \code{base_color}, defaults to \code{darken_color(base_color, 0.3)}}
+\item{black_color}{Darkest color used, default is a very dark, version of \code{base_color}. Defaults to \code{darken_color(base_color, 0.3)}. Modifies multiple CSS classes or elements.}
 
-\item{text_color}{Text Color, defaults to \code{black_color}}
+\item{text_color}{Text Color. Defaults to \code{black_color}. Modifies the \code{body} element.}
 
-\item{header_color}{Header Color, defaults to \code{base_color}}
+\item{header_color}{Header Color. Defaults to \code{base_color}. Modifies the \code{h1, h2, h3} elements.}
 
-\item{background_color}{Slide Background Color, defaults to \code{white_color}}
+\item{background_color}{Slide Background Color. Defaults to \code{white_color}. Modifies the \code{.remark-slide-content} class.}
 
-\item{link_color}{Link Color, defaults to \code{base_color}}
+\item{link_color}{Link Color. Defaults to \code{base_color}. Modifies the \code{a, a > code} elements.}
 
-\item{text_bold_color}{Bold Text Color, defaults to \code{base_color}}
+\item{text_bold_color}{Bold Text Color. Defaults to \code{base_color}. Modifies the \code{strong} element.}
 
-\item{text_slide_number_color}{Slide Number Color, defaults to \code{base_color}}
+\item{text_slide_number_color}{Slide Number Color. Defaults to \code{base_color}. Modifies the \code{.remark-slide-number} class.}
 
-\item{code_highlight_color}{Code Line Highlight, defaults to rgba(255,255,0,0.5)}
+\item{code_highlight_color}{Code Line Highlight. Defaults to rgba(255,255,0,0.5). Modifies the \code{.remark-code-line-highlighted} class.}
 
-\item{code_inline_color}{Inline Code Color, defaults to \code{base_color}}
+\item{code_inline_color}{Inline Code Color. Defaults to \code{base_color}. Modifies the \code{.remark-inline-code} class.}
 
-\item{code_inline_background_color}{Inline Code Background Color, defaults to NA}
+\item{code_inline_background_color}{Inline Code Background Color. Defaults to NA. Modifies the \code{.remark-inline-code} class.}
 
-\item{inverse_background_color}{Inverse Background Color, defaults to \code{base_color}}
+\item{code_inline_font_size}{Inline Code Text Font Size. Defaults to 1em. Modifies the \code{.remark-inline-code} class.}
 
-\item{inverse_text_color}{Inverse Text Color, defaults to \code{white_color}}
+\item{inverse_background_color}{Inverse Background Color. Defaults to \code{base_color}. Modifies the \code{.inverse} class.}
 
-\item{inverse_text_shadow}{Enables Shadow on text of inverse slides, defaults to \code{FALSE}}
+\item{inverse_text_color}{Inverse Text Color. Defaults to \code{white_color}. Modifies the \code{.inverse} class.}
 
-\item{inverse_header_color}{Inverse Header Color, defaults to \code{white_color}}
+\item{inverse_text_shadow}{Enables Shadow on text of inverse slides. Defaults to \code{FALSE}. Modifies the \code{.inverse} class.}
 
-\item{title_slide_text_color}{Title Slide Text Color, defaults to \code{inverse_text_color}}
+\item{inverse_header_color}{Inverse Header Color. Defaults to \code{white_color}. Modifies the \code{.inverse h1, .inverse h2, .inverse h3} classes.}
 
-\item{title_slide_background_color}{Title Slide Background Color, defaults to \code{inverse_background_color}}
+\item{title_slide_text_color}{Title Slide Text Color. Defaults to \code{inverse_text_color}. Modifies the \code{.title-slide} class.}
 
-\item{title_slide_background_image}{Title Slide Background Image URL, defaults to NA}
+\item{title_slide_background_color}{Title Slide Background Color. Defaults to \code{inverse_background_color}. Modifies the \code{.title-slide} class.}
 
-\item{title_slide_background_size}{Title Slide Background Image Size, defaults to "cover" if background image is set, defaults to NA}
+\item{title_slide_background_image}{Title Slide Background Image URL. Defaults to NA. Modifies the \code{.title-slide} class.}
 
-\item{title_slide_background_position}{Title Slide Background Image Position, defaults to NA}
+\item{title_slide_background_size}{Title Slide Background Image Size, defaults to "cover" if background image is set. Defaults to NA. Modifies the \code{.title-slide} class.}
 
-\item{left_column_subtle_color}{Left Column Text (not last), defaults to \code{apply_alpha(base_color, 0.6)}}
+\item{title_slide_background_position}{Title Slide Background Image Position. Defaults to NA. Modifies the \code{.title-slide} class.}
 
-\item{left_column_selected_color}{Left Column Current Selection, defaults to \code{base_color}}
+\item{footnote_color}{Footnote text color (if \code{NA}, then it will be the same color as \code{text_color}\code{). Defaults to NA. Modifies the}.footnote` class.}
 
-\item{blockquote_left_color}{Blockquote Left Border Color, defaults to \code{apply_alpha(base_color, 0.5)}}
+\item{footnote_font_size}{Footnote font size. Defaults to 0.9em. Modifies the \code{.footnote} class.}
 
-\item{table_border_color}{Table top/bottom border, defaults to #666}
+\item{footnote_position_bottom}{Footnote location from bottom of screen. Defaults to 3em. Modifies the \code{.footnote} class.}
 
-\item{table_row_border_color}{Table row inner bottom border, defaults to #ddd}
+\item{left_column_subtle_color}{Left Column Text (not last). Defaults to \code{apply_alpha(base_color, 0.6)}. Modifies the \code{.left-column h2, .left-column h3} classes.}
 
-\item{table_row_even_background_color}{Table Even Row Background Color, defaults to \code{lighten_color(base_color, 0.8)}}
+\item{left_column_selected_color}{Left Column Current Selection. Defaults to \code{base_color}. Modifies the \code{.left-column h2:last-of-type, .left-column h3:last-child} classes.}
 
-\item{text_font_size}{Slide Body Text Font Size, defaults to 20px}
+\item{blockquote_left_color}{Blockquote Left Border Color. Defaults to \code{apply_alpha(base_color, 0.5)}. Modifies the \code{blockquote} element.}
 
-\item{header_h1_font_size}{h1 Header Text Font Size, defaults to 55px}
+\item{table_border_color}{Table top/bottom border. Defaults to #666. Modifies the \code{table: border-top, border-bottom} elements.}
 
-\item{header_h2_font_size}{h2 Header Text Font Size, defaults to 45px}
+\item{table_row_border_color}{Table row inner bottom border. Defaults to #ddd. Modifies the \code{table thead th: border-bottom} elements.}
 
-\item{header_h3_font_size}{h3 Header Text Font Size, defaults to 35px}
+\item{table_row_even_background_color}{Table Even Row Background Color. Defaults to \code{lighten_color(base_color, 0.8)}. Modifies the \code{thead, tfoot, tr:nth-child(even)} elements.}
 
-\item{text_slide_number_font_size}{Slide Number Text Font Size, defaults to 0.9em}
+\item{text_font_size}{Slide Body Text Font Size. Defaults to 20px. Modifies the \code{.remark-slide-content} class.}
 
-\item{code_inline_font_size}{Inline Code Text Font Size, defaults to 1em}
+\item{header_h1_font_size}{h1 Header Text Font Size. Defaults to 55px. Modifies the \code{.remark-slide-content h1} class.}
 
-\item{code_font_size}{Code Text Font Size, defaults to 0.9em}
+\item{header_h2_font_size}{h2 Header Text Font Size. Defaults to 45px. Modifies the \code{.remark-slide-content h2} class.}
 
-\item{text_font_google}{Use \code{google_font()} to specify body font, defaults to \code{NULL}}
+\item{header_h3_font_size}{h3 Header Text Font Size. Defaults to 35px. Modifies the \code{.remark-slide-content h3} class.}
 
-\item{text_font_family}{Body Text Font Family, defaults to 'Droid Serif'}
+\item{text_slide_number_font_size}{Slide Number Text Font Size. Defaults to 0.9em. Modifies the \code{.remark-slide-number} class.}
 
-\item{text_font_weight}{Body Text Font Weight, defaults to normal}
+\item{text_font_google}{Use \code{google_font()} to specify body font. Defaults to \code{NULL}. Modifies the \code{body} element.}
 
-\item{text_font_url}{Body Text Font URL(s), defaults to https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic}
+\item{text_font_family}{Body Text Font Family. Defaults to 'Droid Serif'. Modifies the \code{body} element.}
 
-\item{text_font_family_fallback}{Body Text Font Fallbacks, defaults to 'Palatino Linotype', 'Book Antiqua', Palatino, 'Microsoft YaHei', 'Songti SC'}
+\item{text_font_weight}{Body Text Font Weight. Defaults to normal. Modifies the \code{body} element.}
 
-\item{text_font_base}{Body Text Base Font (Total Failure Fallback), defaults to serif}
+\item{text_font_url}{Body Text Font URL(s). Defaults to https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic. Modifies the \code{@import url()} elements.}
 
-\item{header_font_google}{Use \code{google_font()} to specify header font, defaults to \code{NULL}}
+\item{text_font_family_fallback}{Body Text Font Fallbacks. Defaults to 'Palatino Linotype', 'Book Antiqua', Palatino, 'Microsoft YaHei', 'Songti SC'. Modifies the \code{body} element.}
 
-\item{header_font_family}{Header Font Family, defaults to 'Yanone Kaffeesatz'}
+\item{text_font_base}{Body Text Base Font (Total Failure Fallback). Defaults to serif. Modifies the \code{body} element.}
 
-\item{header_font_weight}{Header Font Weight, defaults to normal}
+\item{header_font_google}{Use \code{google_font()} to specify header font. Defaults to \code{NULL}. Modifies the \code{body} element.}
 
-\item{header_font_url}{Header Font URL, defaults to https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz}
+\item{header_font_family}{Header Font Family. Defaults to 'Yanone Kaffeesatz'. Modifies the \code{h1, h2, h3} elements.}
 
-\item{code_font_google}{Use \code{google_font()} to specify code font, defaults to \code{NULL}}
+\item{header_font_weight}{Header Font Weight. Defaults to normal. Modifies the \code{h1, h2, h3} elements.}
 
-\item{code_font_family}{Code Font Family, defaults to 'Source Code Pro'}
+\item{header_font_url}{Header Font URL. Defaults to https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz. Modifies the \code{@import url} elements.}
 
-\item{code_font_url}{Code Font URL, defaults to https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700}
+\item{code_font_google}{Use \code{google_font()} to specify code font. Defaults to \code{NULL}. Modifies the \code{body} element.}
 
-\item{code_font_family_fallback}{Code Font Fallback, defaults to 'Lucida Console', Monaco}
+\item{code_font_family}{Code Font Family. Defaults to 'Source Code Pro'. Modifies the \code{.remark-code, .remark-inline-code} classes.}
+
+\item{code_font_size}{Code Text Font Size. Defaults to 0.9em. Modifies the \code{.remark-inline} class.}
+
+\item{code_font_url}{Code Font URL. Defaults to https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700. Modifies the \code{@import url} elements.}
+
+\item{code_font_family_fallback}{Code Font Fallback. Defaults to 'Lucida Console', Monaco. Modifies the \code{.remark-code, .remark-inline-code} classes.}
 
 \item{extra_css}{A named list of CSS definitions each containing a named list
 of CSS property-value pairs, i.e.

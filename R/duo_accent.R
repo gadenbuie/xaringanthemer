@@ -1,55 +1,55 @@
-#' @param primary_color Duotone Primary Color, defaults to #006747
-#' @param secondary_color Duotone Secondary Color, defaults to #CFC493
-#' @param white_color Brightest color used, defaults to #FFFFFF
-#' @param black_color Darkest color used, defaults to #000000
-#' @param text_color Text Color, defaults to `black_color`
-#' @param header_color Header Color, defaults to `primary_color`
-#' @param background_color Slide Background Color, defaults to `white_color`
-#' @param link_color Link Color, defaults to `choose_dark_or_light(secondary_color, primary_color, secondary_color)`
-#' @param text_bold_color Bold Text Color, defaults to `choose_dark_or_light(secondary_color, primary_color, secondary_color)`
-#' @param text_slide_number_color Slide Number Color, defaults to `primary_color`
-#' @param code_highlight_color Code Line Highlight, defaults to rgba(255,255,0,0.5)
-#' @param code_inline_color Inline Code Color, defaults to `choose_dark_or_light(secondary_color, primary_color, secondary_color)`
-#' @param code_inline_background_color Inline Code Background Color, defaults to NA
-#' @param code_inline_font_size Inline Code Text Font Size, defaults to 1em
-#' @param inverse_background_color Inverse Background Color, defaults to `secondary_color`
-#' @param inverse_text_color Inverse Text Color, defaults to `choose_dark_or_light(secondary_color, black_color, white_color)`
-#' @param inverse_text_shadow Enables Shadow on text of inverse slides, defaults to `FALSE`
-#' @param inverse_header_color Inverse Header Color, defaults to `choose_dark_or_light(secondary_color, black_color, white_color)`
-#' @param title_slide_text_color Title Slide Text Color, defaults to `choose_dark_or_light(primary_color, black_color, white_color)`
-#' @param title_slide_background_color Title Slide Background Color, defaults to `primary_color`
-#' @param title_slide_background_image Title Slide Background Image URL, defaults to NA
-#' @param title_slide_background_size Title Slide Background Image Size, defaults to "cover" if background image is set, defaults to NA
-#' @param title_slide_background_position Title Slide Background Image Position, defaults to NA
-#' @param footnote_color Footnote text color (if \code{NA}, then it will be the same color as \code{text_color}`), defaults to NA
-#' @param footnote_font_size Footnote font size, defaults to 90%
-#' @param footnote_position_bottom Footnote location from bottom of screen, defaults to 3em
-#' @param left_column_subtle_color Left Column Text (not last), defaults to `apply_alpha(primary_color, 0.6)`
-#' @param left_column_selected_color Left Column Current Selection, defaults to `primary_color`
-#' @param blockquote_left_color Blockquote Left Border Color, defaults to `apply_alpha(secondary_color, 0.5)`
-#' @param table_border_color Table top/bottom border, defaults to #666
-#' @param table_row_border_color Table row inner bottom border, defaults to #ddd
-#' @param table_row_even_background_color Table Even Row Background Color, defaults to `lighten_color(secondary_color, 0.3)`
-#' @param text_font_size Slide Body Text Font Size, defaults to 20px
-#' @param header_h1_font_size h1 Header Text Font Size, defaults to 55px
-#' @param header_h2_font_size h2 Header Text Font Size, defaults to 45px
-#' @param header_h3_font_size h3 Header Text Font Size, defaults to 35px
-#' @param text_slide_number_font_size Slide Number Text Font Size, defaults to 0.9em
-#' @param text_font_google Use `google_font()` to specify body font, defaults to `NULL`
-#' @param text_font_family Body Text Font Family, defaults to 'Droid Serif'
-#' @param text_font_weight Body Text Font Weight, defaults to normal
-#' @param text_font_url Body Text Font URL(s), defaults to https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic
-#' @param text_font_family_fallback Body Text Font Fallbacks, defaults to 'Palatino Linotype', 'Book Antiqua', Palatino, 'Microsoft YaHei', 'Songti SC'
-#' @param text_font_base Body Text Base Font (Total Failure Fallback), defaults to serif
-#' @param header_font_google Use `google_font()` to specify header font, defaults to `NULL`
-#' @param header_font_family Header Font Family, defaults to 'Yanone Kaffeesatz'
-#' @param header_font_weight Header Font Weight, defaults to normal
-#' @param header_font_url Header Font URL, defaults to https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz
-#' @param code_font_google Use `google_font()` to specify code font, defaults to `NULL`
-#' @param code_font_family Code Font Family, defaults to 'Source Code Pro'
-#' @param code_font_size Code Text Font Size, defaults to 0.9em
-#' @param code_font_url Code Font URL, defaults to https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700
-#' @param code_font_family_fallback Code Font Fallback, defaults to 'Lucida Console', Monaco
+#' @param primary_color Duotone Primary Color. Defaults to #006747. Modifies multiple CSS classes or elements.
+#' @param secondary_color Duotone Secondary Color. Defaults to #CFC493. Modifies multiple CSS classes or elements.
+#' @param white_color Brightest color used. Defaults to #FFFFFF. Modifies multiple CSS classes or elements.
+#' @param black_color Darkest color used. Defaults to #000000. Modifies multiple CSS classes or elements.
+#' @param text_color Text Color. Defaults to `black_color`. Modifies the `body` element.
+#' @param header_color Header Color. Defaults to `primary_color`. Modifies the `h1, h2, h3` elements.
+#' @param background_color Slide Background Color. Defaults to `white_color`. Modifies the `.remark-slide-content` class.
+#' @param link_color Link Color. Defaults to `choose_dark_or_light(secondary_color, primary_color, secondary_color)`. Modifies the `a, a > code` elements.
+#' @param text_bold_color Bold Text Color. Defaults to `choose_dark_or_light(secondary_color, primary_color, secondary_color)`. Modifies the `strong` element.
+#' @param text_slide_number_color Slide Number Color. Defaults to `primary_color`. Modifies the `.remark-slide-number` class.
+#' @param code_highlight_color Code Line Highlight. Defaults to rgba(255,255,0,0.5). Modifies the `.remark-code-line-highlighted` class.
+#' @param code_inline_color Inline Code Color. Defaults to `choose_dark_or_light(secondary_color, primary_color, secondary_color)`. Modifies the `.remark-inline-code` class.
+#' @param code_inline_background_color Inline Code Background Color. Defaults to NA. Modifies the `.remark-inline-code` class.
+#' @param code_inline_font_size Inline Code Text Font Size. Defaults to 1em. Modifies the `.remark-inline-code` class.
+#' @param inverse_background_color Inverse Background Color. Defaults to `secondary_color`. Modifies the `.inverse` class.
+#' @param inverse_text_color Inverse Text Color. Defaults to `choose_dark_or_light(secondary_color, black_color, white_color)`. Modifies the `.inverse` class.
+#' @param inverse_text_shadow Enables Shadow on text of inverse slides. Defaults to `FALSE`. Modifies the `.inverse` class.
+#' @param inverse_header_color Inverse Header Color. Defaults to `choose_dark_or_light(secondary_color, black_color, white_color)`. Modifies the `.inverse h1, .inverse h2, .inverse h3` classes.
+#' @param title_slide_text_color Title Slide Text Color. Defaults to `choose_dark_or_light(primary_color, black_color, white_color)`. Modifies the `.title-slide` class.
+#' @param title_slide_background_color Title Slide Background Color. Defaults to `primary_color`. Modifies the `.title-slide` class.
+#' @param title_slide_background_image Title Slide Background Image URL. Defaults to NA. Modifies the `.title-slide` class.
+#' @param title_slide_background_size Title Slide Background Image Size, defaults to "cover" if background image is set. Defaults to NA. Modifies the `.title-slide` class.
+#' @param title_slide_background_position Title Slide Background Image Position. Defaults to NA. Modifies the `.title-slide` class.
+#' @param footnote_color Footnote text color (if \code{NA}, then it will be the same color as \code{text_color}`). Defaults to NA. Modifies the `.footnote` class.
+#' @param footnote_font_size Footnote font size. Defaults to 0.9em. Modifies the `.footnote` class.
+#' @param footnote_position_bottom Footnote location from bottom of screen. Defaults to 3em. Modifies the `.footnote` class.
+#' @param left_column_subtle_color Left Column Text (not last). Defaults to `apply_alpha(primary_color, 0.6)`. Modifies the `.left-column h2, .left-column h3` classes.
+#' @param left_column_selected_color Left Column Current Selection. Defaults to `primary_color`. Modifies the `.left-column h2:last-of-type, .left-column h3:last-child` classes.
+#' @param blockquote_left_color Blockquote Left Border Color. Defaults to `apply_alpha(secondary_color, 0.5)`. Modifies the `blockquote` element.
+#' @param table_border_color Table top/bottom border. Defaults to #666. Modifies the `table: border-top, border-bottom` elements.
+#' @param table_row_border_color Table row inner bottom border. Defaults to #ddd. Modifies the `table thead th: border-bottom` elements.
+#' @param table_row_even_background_color Table Even Row Background Color. Defaults to `lighten_color(secondary_color, 0.3)`. Modifies the `thead, tfoot, tr:nth-child(even)` elements.
+#' @param text_font_size Slide Body Text Font Size. Defaults to 20px. Modifies the `.remark-slide-content` class.
+#' @param header_h1_font_size h1 Header Text Font Size. Defaults to 55px. Modifies the `.remark-slide-content h1` class.
+#' @param header_h2_font_size h2 Header Text Font Size. Defaults to 45px. Modifies the `.remark-slide-content h2` class.
+#' @param header_h3_font_size h3 Header Text Font Size. Defaults to 35px. Modifies the `.remark-slide-content h3` class.
+#' @param text_slide_number_font_size Slide Number Text Font Size. Defaults to 0.9em. Modifies the `.remark-slide-number` class.
+#' @param text_font_google Use `google_font()` to specify body font. Defaults to `NULL`. Modifies the `body` element.
+#' @param text_font_family Body Text Font Family. Defaults to 'Droid Serif'. Modifies the `body` element.
+#' @param text_font_weight Body Text Font Weight. Defaults to normal. Modifies the `body` element.
+#' @param text_font_url Body Text Font URL(s). Defaults to https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic. Modifies the `@import url()` elements.
+#' @param text_font_family_fallback Body Text Font Fallbacks. Defaults to 'Palatino Linotype', 'Book Antiqua', Palatino, 'Microsoft YaHei', 'Songti SC'. Modifies the `body` element.
+#' @param text_font_base Body Text Base Font (Total Failure Fallback). Defaults to serif. Modifies the `body` element.
+#' @param header_font_google Use `google_font()` to specify header font. Defaults to `NULL`. Modifies the `body` element.
+#' @param header_font_family Header Font Family. Defaults to 'Yanone Kaffeesatz'. Modifies the `h1, h2, h3` elements.
+#' @param header_font_weight Header Font Weight. Defaults to normal. Modifies the `h1, h2, h3` elements.
+#' @param header_font_url Header Font URL. Defaults to https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz. Modifies the `@import url` elements.
+#' @param code_font_google Use `google_font()` to specify code font. Defaults to `NULL`. Modifies the `body` element.
+#' @param code_font_family Code Font Family. Defaults to 'Source Code Pro'. Modifies the `.remark-code, .remark-inline-code` classes.
+#' @param code_font_size Code Text Font Size. Defaults to 0.9em. Modifies the `.remark-inline` class.
+#' @param code_font_url Code Font URL. Defaults to https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700. Modifies the `@import url` elements.
+#' @param code_font_family_fallback Code Font Fallback. Defaults to 'Lucida Console', Monaco. Modifies the `.remark-code, .remark-inline-code` classes.
 #' @template extra_css
 #' @param outfile Customized xaringan CSS output file name, default is "xaringan-themer.css"
 #' @template duo_accent
@@ -80,7 +80,7 @@ duo_accent <- function(
   title_slide_background_size = NA,
   title_slide_background_position = NA,
   footnote_color = NA,
-  footnote_font_size = "90%",
+  footnote_font_size = "0.9em",
   footnote_position_bottom = "3em",
   left_column_subtle_color = apply_alpha(primary_color, 0.6),
   left_column_selected_color = primary_color,

@@ -20,9 +20,9 @@ template_variables <- tibble::tribble(
   , "title_slide_background_size", NA_character_, ".title-slide", "Title Slide Background Image Size, defaults to \"cover\" if background image is set"
   , "title_slide_background_position", NA_character_, ".title-slide", "Title Slide Background Image Position"
   , "footnote_color", NA_character_, ".footnote", "Footnote text color (if \\code{NA}, then it will be the same color as \\code{text_color}`)"
-  , "footnote_font_size", "90%", ".footnote", "Footnote font size"
+  , "footnote_font_size", "0.9em", ".footnote", "Footnote font size"
   , "footnote_position_bottom", "3em", ".footnote", "Footnote location from bottom of screen"
-  , "left_column_subtle_color", "#777", ".left-column", "Left Column Text (not last)"
+  , "left_column_subtle_color", "#777", ".left-column h2, .left-column h3", "Left Column Text (not last)"
   , "left_column_selected_color", "#000", ".left-column h2:last-of-type, .left-column h3:last-child", "Left Column Current Selection"
   , "blockquote_left_color", "lightgray", "blockquote", "Blockquote Left Border Color"
   , "table_border_color", "#666", "table: border-top, border-bottom", "Table top/bottom border"
@@ -156,7 +156,7 @@ template_mono_accent_inverse <- set_default(
 
 template_duo_light <- tibble::tribble(
   ~ variable, ~ default, ~ element, ~ description
-  , "primary_color", "#1F4257", "mutliple", "Duotone Secondary Color"
+  , "primary_color", "#1F4257", "multiple", "Duotone Secondary Color"
   , "secondary_color", "#F97B64", "multiple", "Duotone Primary Color"
   , "white_color", "{lighten_color(primary_color, 0.99)}", "multiple", "Brightest color used, default is a very light version of `primary_color`"
   , "black_color", "{darken_color(secondary_color, 0.9)}", "multiple", "Darkest color used, default is a very dark version of `secondary_color`"
@@ -181,7 +181,7 @@ template_duo_light <- set_default(
 
 template_duo <- tibble::tribble(
   ~ variable, ~ default, ~ element, ~ description
-  , "primary_color", "#1F4257", "mutliple", "Duotone Primary Color"
+  , "primary_color", "#1F4257", "multiple", "Duotone Primary Color"
   , "secondary_color", "#F97B64", "multiple", "Duotone Secondary Color"
 )
 template_duo <- do.call('rbind', list(template_duo, template_variables))
@@ -206,7 +206,7 @@ template_duo <- set_default(
 
 template_duo_accent <- tibble::tribble(
   ~ variable, ~ default, ~ element, ~ description
-  , "primary_color", "#006747", "mutliple", "Duotone Primary Color"
+  , "primary_color", "#006747", "multiple", "Duotone Primary Color"
   , "secondary_color", "#CFC493", "multiple", "Duotone Secondary Color"
   , "white_color", "#FFFFFF", "multiple", "Brightest color used"
   , "black_color", "#000000", "multiple", "Darkest color used"

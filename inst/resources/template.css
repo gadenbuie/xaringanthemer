@@ -49,7 +49,7 @@ a, a > code {
   text-decoration: none;
 }
 .footnote {
-  {{ifelse(!is.na(footnote_color), paste0("color: ", footnote_color, ";"), ""}}
+  {{ifelse(!is.na(footnote_color), paste0("color: ", footnote_color, ";"), "")}}
   position: absolute;
   bottom: {{footnote_position_bottom}};
   padding-right: 4em;
