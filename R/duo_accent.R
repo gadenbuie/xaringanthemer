@@ -11,6 +11,7 @@
 #' @param code_highlight_color Code Line Highlight, defaults to rgba(255,255,0,0.5)
 #' @param code_inline_color Inline Code Color, defaults to `choose_dark_or_light(secondary_color, primary_color, secondary_color)`
 #' @param code_inline_background_color Inline Code Background Color, defaults to NA
+#' @param code_inline_font_size Inline Code Text Font Size, defaults to 1em
 #' @param inverse_background_color Inverse Background Color, defaults to `secondary_color`
 #' @param inverse_text_color Inverse Text Color, defaults to `choose_dark_or_light(secondary_color, black_color, white_color)`
 #' @param inverse_text_shadow Enables Shadow on text of inverse slides, defaults to `FALSE`
@@ -20,6 +21,9 @@
 #' @param title_slide_background_image Title Slide Background Image URL, defaults to NA
 #' @param title_slide_background_size Title Slide Background Image Size, defaults to "cover" if background image is set, defaults to NA
 #' @param title_slide_background_position Title Slide Background Image Position, defaults to NA
+#' @param footnote_color Footnote text color (if \code{NA}, then it will be the same color as \code{text_color}`), defaults to NA
+#' @param footnote_font_size Footnote font size, defaults to 90%
+#' @param footnote_position_bottom Footnote location from bottom of screen, defaults to 3em
 #' @param left_column_subtle_color Left Column Text (not last), defaults to `apply_alpha(primary_color, 0.6)`
 #' @param left_column_selected_color Left Column Current Selection, defaults to `primary_color`
 #' @param blockquote_left_color Blockquote Left Border Color, defaults to `apply_alpha(secondary_color, 0.5)`
@@ -31,8 +35,6 @@
 #' @param header_h2_font_size h2 Header Text Font Size, defaults to 45px
 #' @param header_h3_font_size h3 Header Text Font Size, defaults to 35px
 #' @param text_slide_number_font_size Slide Number Text Font Size, defaults to 0.9em
-#' @param code_inline_font_size Inline Code Text Font Size, defaults to 1em
-#' @param code_font_size Code Text Font Size, defaults to 0.9em
 #' @param text_font_google Use `google_font()` to specify body font, defaults to `NULL`
 #' @param text_font_family Body Text Font Family, defaults to 'Droid Serif'
 #' @param text_font_weight Body Text Font Weight, defaults to normal
@@ -45,6 +47,7 @@
 #' @param header_font_url Header Font URL, defaults to https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz
 #' @param code_font_google Use `google_font()` to specify code font, defaults to `NULL`
 #' @param code_font_family Code Font Family, defaults to 'Source Code Pro'
+#' @param code_font_size Code Text Font Size, defaults to 0.9em
 #' @param code_font_url Code Font URL, defaults to https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700
 #' @param code_font_family_fallback Code Font Fallback, defaults to 'Lucida Console', Monaco
 #' @template extra_css
@@ -66,6 +69,7 @@ duo_accent <- function(
   code_highlight_color = "rgba(255,255,0,0.5)",
   code_inline_color = choose_dark_or_light(secondary_color, primary_color, secondary_color),
   code_inline_background_color = NA,
+  code_inline_font_size = "1em",
   inverse_background_color = secondary_color,
   inverse_text_color = choose_dark_or_light(secondary_color, black_color, white_color),
   inverse_text_shadow = FALSE,
@@ -75,6 +79,9 @@ duo_accent <- function(
   title_slide_background_image = NA,
   title_slide_background_size = NA,
   title_slide_background_position = NA,
+  footnote_color = NA,
+  footnote_font_size = "90%",
+  footnote_position_bottom = "3em",
   left_column_subtle_color = apply_alpha(primary_color, 0.6),
   left_column_selected_color = primary_color,
   blockquote_left_color = apply_alpha(secondary_color, 0.5),
@@ -86,8 +93,6 @@ duo_accent <- function(
   header_h2_font_size = "45px",
   header_h3_font_size = "35px",
   text_slide_number_font_size = "0.9em",
-  code_inline_font_size = "1em",
-  code_font_size = "0.9em",
   text_font_google = NULL,
   text_font_family = "'Droid Serif'",
   text_font_weight = "normal",
@@ -100,6 +105,7 @@ duo_accent <- function(
   header_font_url = "https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz",
   code_font_google = NULL,
   code_font_family = "'Source Code Pro'",
+  code_font_size = "0.9em",
   code_font_url = "https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700",
   code_font_family_fallback = "'Lucida Console', Monaco",
   extra_css = NULL,

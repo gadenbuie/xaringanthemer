@@ -49,10 +49,11 @@ a, a > code {
   text-decoration: none;
 }
 .footnote {
+  {{ifelse(!is.na(footnote_color), paste0("color: ", footnote_color, ";"), ""}}
   position: absolute;
-  bottom: 3em;
+  bottom: {{footnote_position_bottom}};
   padding-right: 4em;
-  font-size: 90%;
+  font-size: {{footnote_font_size}};
 }
 .remark-code-line-highlighted {
   background-color: {{code_highlight_color}};
