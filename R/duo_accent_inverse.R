@@ -21,7 +21,7 @@
 #' @param title_slide_background_image Title Slide Background Image URL. Defaults to NA. Modifies the `.title-slide` class.
 #' @param title_slide_background_size Title Slide Background Image Size, defaults to "cover" if background image is set. Defaults to NA. Modifies the `.title-slide` class.
 #' @param title_slide_background_position Title Slide Background Image Position. Defaults to NA. Modifies the `.title-slide` class.
-#' @param footnote_color Footnote text color (if \code{NA}, then it will be the same color as \code{text_color}`). Defaults to NA. Modifies the `.footnote` class.
+#' @param footnote_color Footnote text color (if `NA`, then it will be the same color as `text_color`). Defaults to NA. Modifies the `.footnote` class.
 #' @param footnote_font_size Footnote font size. Defaults to 0.9em. Modifies the `.footnote` class.
 #' @param footnote_position_bottom Footnote location from bottom of screen. Defaults to 3em. Modifies the `.footnote` class.
 #' @param left_column_subtle_color Left Column Text (not last). Defaults to `apply_alpha(primary_color, 0.6)`. Modifies the `.left-column h2, .left-column h3` classes.

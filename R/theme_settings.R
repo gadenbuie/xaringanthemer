@@ -19,7 +19,7 @@ template_variables <- tibble::tribble(
   , "title_slide_background_image", NA_character_, ".title-slide", "Title Slide Background Image URL"
   , "title_slide_background_size", NA_character_, ".title-slide", "Title Slide Background Image Size, defaults to \"cover\" if background image is set"
   , "title_slide_background_position", NA_character_, ".title-slide", "Title Slide Background Image Position"
-  , "footnote_color", NA_character_, ".footnote", "Footnote text color (if \\code{NA}, then it will be the same color as \\code{text_color}`)"
+  , "footnote_color", NA_character_, ".footnote", "Footnote text color (if `NA`, then it will be the same color as `text_color`)"
   , "footnote_font_size", "0.9em", ".footnote", "Footnote font size"
   , "footnote_position_bottom", "3em", ".footnote", "Footnote location from bottom of screen"
   , "left_column_subtle_color", "#777", ".left-column h2, .left-column h3", "Left Column Text (not last)"

@@ -84,7 +84,7 @@ mono_light(base_color = "#23395b", white_color = lighten_color(base_color,
 
 \item{title_slide_background_position}{Title Slide Background Image Position. Defaults to NA. Modifies the \code{.title-slide} class.}
 
-\item{footnote_color}{Footnote text color (if \code{NA}, then it will be the same color as \code{text_color}\code{). Defaults to NA. Modifies the}.footnote` class.}
+\item{footnote_color}{Footnote text color (if \code{NA}, then it will be the same color as \code{text_color}). Defaults to NA. Modifies the \code{.footnote} class.}
 
 \item{footnote_font_size}{Footnote font size. Defaults to 0.9em. Modifies the \code{.footnote} class.}
 
