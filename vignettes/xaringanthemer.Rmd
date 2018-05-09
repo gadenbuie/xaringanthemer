@@ -1,7 +1,7 @@
 ---
 title: "Xaringan CSS Theme Generator"
 author: "Garrick Aden-Buie"
-date: "`r Sys.Date()`"
+date: "2018-05-09"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Overview of xaringanthemer}
