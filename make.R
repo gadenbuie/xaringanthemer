@@ -1,3 +1,11 @@
+setwd(here::here("inst/scripts"))
+message("Building theme functions")
+source("generate_theme_functions.R")
+setwd(here::here())
+message("Writing documentation")
+devtools::document()
+
+
 setwd(here::here("vignettes"))
 message("Rendering vignettes/template-variables.Rmd for GitHub")
 rmarkdown::render("template-variables.Rmd", output_format = rmarkdown::github_document(), quiet = TRUE)
