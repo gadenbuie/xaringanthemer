@@ -28,6 +28,15 @@ for (var in f_args[grepl("font_google$", f_args)]) {
   }
 }
 
+# Handle background-image defaults
+if (!is.na(background_image)) {
+  if (is.na(background_size)) background_size <- ifelse(
+    is.na(background_position),
+    "cover",
+    "100%"
+  )
+}
+
 extra_font_imports <- if (is.null(extra_fonts)) "" else list2fonts(extra_fonts)
 
 tf <- system.file("resources", "template.css", package = "xaringanthemer")

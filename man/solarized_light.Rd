@@ -7,6 +7,8 @@
 solarized_light(text_color = "#657b83", header_color = "#dc322f",
   background_color = "#fdf6e3", link_color = "#b58900",
   text_bold_color = "#d33682", text_slide_number_color = "#93a1a1",
+  padding = "1em 4em 1em 4em", background_image = NA,
+  background_size = NA, background_position = NA,
   code_highlight_color = "#268bd240", code_inline_color = "#6c71c4",
   code_inline_background_color = NA, code_inline_font_size = "1em",
   inverse_background_color = "#002b36", inverse_text_color = "#fdf6e3",
@@ -48,6 +50,14 @@ solarized_light(text_color = "#657b83", header_color = "#dc322f",
 \item{text_bold_color}{Bold Text Color. Defaults to #d33682. Modifies the \code{strong} element.}
 
 \item{text_slide_number_color}{Slide Number Color. Defaults to #93a1a1. Modifies the \code{.remark-slide-number} class.}
+
+\item{padding}{Slide Padding in \code{top right [bottom left]} format. Defaults to 1em 4em 1em 4em. Modifies the \code{.remark-slide-content} class.}
+
+\item{background_image}{Background image applied to each \emph{and every} slide. Set \code{title_slide_background_image = "none"} to remove the background image from the title slide.. Defaults to NA. Modifies the \code{.remark-slide-content} class.}
+
+\item{background_size}{Background image size, requires \code{background_image} to be set. If \code{background_image} is set, \code{background_size} will default to \code{cover} so the backround fills the screen. If both \code{background_image} and \code{background_position} are set, will default to 100 percent.. Defaults to NA. Modifies the \code{.remark-slide-content} class.}
+
+\item{background_position}{Background image position, requires \code{background_image} to be set, and it is recommended to adjust \code{background_size}.. Defaults to NA. Modifies the \code{.remark-slide-content} class.}
 
 \item{code_highlight_color}{Code Line Highlight. Defaults to #268bd240. Modifies the \code{.remark-code-line-highlighted} class.}
 

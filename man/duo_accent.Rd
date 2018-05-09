@@ -11,6 +11,8 @@ duo_accent(primary_color = "#006747", secondary_color = "#CFC493",
   link_color = choose_dark_or_light(secondary_color, primary_color,
   secondary_color), text_bold_color = choose_dark_or_light(secondary_color,
   primary_color, secondary_color), text_slide_number_color = primary_color,
+  padding = "1em 4em 1em 4em", background_image = NA,
+  background_size = NA, background_position = NA,
   code_highlight_color = "rgba(255,255,0,0.5)",
   code_inline_color = choose_dark_or_light(secondary_color, primary_color,
   secondary_color), code_inline_background_color = NA,
@@ -63,6 +65,14 @@ duo_accent(primary_color = "#006747", secondary_color = "#CFC493",
 \item{text_bold_color}{Bold Text Color. Defaults to \code{choose_dark_or_light(secondary_color, primary_color, secondary_color)}. Modifies the \code{strong} element.}
 
 \item{text_slide_number_color}{Slide Number Color. Defaults to \code{primary_color}. Modifies the \code{.remark-slide-number} class.}
+
+\item{padding}{Slide Padding in \code{top right [bottom left]} format. Defaults to 1em 4em 1em 4em. Modifies the \code{.remark-slide-content} class.}
+
+\item{background_image}{Background image applied to each \emph{and every} slide. Set \code{title_slide_background_image = "none"} to remove the background image from the title slide.. Defaults to NA. Modifies the \code{.remark-slide-content} class.}
+
+\item{background_size}{Background image size, requires \code{background_image} to be set. If \code{background_image} is set, \code{background_size} will default to \code{cover} so the backround fills the screen. If both \code{background_image} and \code{background_position} are set, will default to 100 percent.. Defaults to NA. Modifies the \code{.remark-slide-content} class.}
+
+\item{background_position}{Background image position, requires \code{background_image} to be set, and it is recommended to adjust \code{background_size}.. Defaults to NA. Modifies the \code{.remark-slide-content} class.}
 
 \item{code_highlight_color}{Code Line Highlight. Defaults to rgba(255,255,0,0.5). Modifies the \code{.remark-code-line-highlighted} class.}
 

@@ -7,6 +7,10 @@
 #' @param link_color Link Color. Defaults to `base_color`. Modifies the `a, a > code` elements.
 #' @param text_bold_color Bold Text Color. Defaults to `base_color`. Modifies the `strong` element.
 #' @param text_slide_number_color Slide Number Color. Defaults to `base_color`. Modifies the `.remark-slide-number` class.
+#' @param padding Slide Padding in `top right [bottom left]` format. Defaults to 1em 4em 1em 4em. Modifies the `.remark-slide-content` class.
+#' @param background_image Background image applied to each *and every* slide. Set `title_slide_background_image = "none"` to remove the background image from the title slide.. Defaults to NA. Modifies the `.remark-slide-content` class.
+#' @param background_size Background image size, requires `background_image` to be set. If `background_image` is set, `background_size` will default to `cover` so the backround fills the screen. If both `background_image` and `background_position` are set, will default to 100 percent.. Defaults to NA. Modifies the `.remark-slide-content` class.
+#' @param background_position Background image position, requires `background_image` to be set, and it is recommended to adjust `background_size`.. Defaults to NA. Modifies the `.remark-slide-content` class.
 #' @param code_highlight_color Code Line Highlight. Defaults to rgba(255,255,0,0.5). Modifies the `.remark-code-line-highlighted` class.
 #' @param code_inline_color Inline Code Color. Defaults to `base_color`. Modifies the `.remark-inline-code` class.
 #' @param code_inline_background_color Inline Code Background Color. Defaults to NA. Modifies the `.remark-inline-code` class.
@@ -64,6 +68,10 @@ mono_dark <- function(
   link_color = base_color,
   text_bold_color = base_color,
   text_slide_number_color = base_color,
+  padding = "1em 4em 1em 4em",
+  background_image = NA,
+  background_size = NA,
+  background_position = NA,
   code_highlight_color = "rgba(255,255,0,0.5)",
   code_inline_color = base_color,
   code_inline_background_color = NA,

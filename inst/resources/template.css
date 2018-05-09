@@ -34,6 +34,10 @@ h1, h2, h3 {
 .remark-slide-content {
   background-color: {{background_color}};
   font-size: {{text_font_size}};
+  {{ifelse(!is.na(background_image), paste0("background-image: url(", background_image, ");"), "")}}
+  {{ifelse(!is.na(background_image) && !is.na(background_size), paste0("background-size: ", background_size, ";"), "")}}
+  {{ifelse(!is.na(background_image) && !is.na(background_position), paste0("background-position: ", background_position, ";"), "")}}
+  padding: {{padding}};
 }
 .remark-slide-content h1 {
     font-size: {{header_h1_font_size}};
