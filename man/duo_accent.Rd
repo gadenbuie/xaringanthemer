@@ -25,7 +25,7 @@ duo_accent(primary_color = "#006747", secondary_color = "#CFC493",
   footnote_font_size = "0.9em", footnote_position_bottom = "3em",
   left_column_subtle_color = apply_alpha(primary_color, 0.6),
   left_column_selected_color = primary_color,
-  blockquote_left_color = apply_alpha(secondary_color, 0.5),
+  blockquote_left_border_color = apply_alpha(secondary_color, 0.5),
   table_border_color = "#666", table_row_border_color = "#ddd",
   table_row_even_background_color = lighten_color(secondary_color, 0.3),
   text_font_size = "20px", header_h1_font_size = "55px",
@@ -100,7 +100,7 @@ duo_accent(primary_color = "#006747", secondary_color = "#CFC493",
 
 \item{left_column_selected_color}{Left Column Current Selection. Defaults to \code{primary_color}. Modifies the \code{.left-column h2:last-of-type, .left-column h3:last-child} classes.}
 
-\item{blockquote_left_color}{Blockquote Left Border Color. Defaults to \code{apply_alpha(secondary_color, 0.5)}. Modifies the \code{blockquote} element.}
+\item{blockquote_left_border_color}{Blockquote Left Border Color. Defaults to \code{apply_alpha(secondary_color, 0.5)}. Modifies the \code{blockquote} element.}
 
 \item{table_border_color}{Table top/bottom border. Defaults to #666. Modifies the \code{table: border-top, border-bottom} elements.}
 

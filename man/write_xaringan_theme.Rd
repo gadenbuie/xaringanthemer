@@ -17,7 +17,7 @@ write_xaringan_theme(text_color = "#000", header_color = "#000",
   title_slide_background_position = NA, footnote_color = NA,
   footnote_font_size = "0.9em", footnote_position_bottom = "3em",
   left_column_subtle_color = "#777", left_column_selected_color = "#000",
-  blockquote_left_color = "lightgray", table_border_color = "#666",
+  blockquote_left_border_color = "lightgray", table_border_color = "#666",
   table_row_border_color = "#ddd", table_row_even_background_color = "#eee",
   text_font_size = "20px", header_h1_font_size = "55px",
   header_h2_font_size = "45px", header_h3_font_size = "35px",
@@ -83,7 +83,7 @@ write_xaringan_theme(text_color = "#000", header_color = "#000",
 
 \item{left_column_selected_color}{Left Column Current Selection. Defaults to #000. Modifies the \code{.left-column h2:last-of-type, .left-column h3:last-child} classes.}
 
-\item{blockquote_left_color}{Blockquote Left Border Color. Defaults to lightgray. Modifies the \code{blockquote} element.}
+\item{blockquote_left_border_color}{Blockquote Left Border Color. Defaults to lightgray. Modifies the \code{blockquote} element.}
 
 \item{table_border_color}{Table top/bottom border. Defaults to #666. Modifies the \code{table: border-top, border-bottom} elements.}
 

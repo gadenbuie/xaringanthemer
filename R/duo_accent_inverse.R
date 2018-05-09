@@ -26,7 +26,7 @@
 #' @param footnote_position_bottom Footnote location from bottom of screen. Defaults to 3em. Modifies the `.footnote` class.
 #' @param left_column_subtle_color Left Column Text (not last). Defaults to `apply_alpha(primary_color, 0.6)`. Modifies the `.left-column h2, .left-column h3` classes.
 #' @param left_column_selected_color Left Column Current Selection. Defaults to `primary_color`. Modifies the `.left-column h2:last-of-type, .left-column h3:last-child` classes.
-#' @param blockquote_left_color Blockquote Left Border Color. Defaults to `apply_alpha(secondary_color, 0.5)`. Modifies the `blockquote` element.
+#' @param blockquote_left_border_color Blockquote Left Border Color. Defaults to `apply_alpha(secondary_color, 0.5)`. Modifies the `blockquote` element.
 #' @param table_border_color Table top/bottom border. Defaults to #666. Modifies the `table: border-top, border-bottom` elements.
 #' @param table_row_border_color Table row inner bottom border. Defaults to #ddd. Modifies the `table thead th: border-bottom` elements.
 #' @param table_row_even_background_color Table Even Row Background Color. Defaults to `darken_color(choose_dark_or_light(primary_color, secondary_color, primary_color), 0.3)`. Modifies the `thead, tfoot, tr:nth-child(even)` elements.
@@ -84,7 +84,7 @@ duo_accent_inverse <- function(
   footnote_position_bottom = "3em",
   left_column_subtle_color = apply_alpha(primary_color, 0.6),
   left_column_selected_color = primary_color,
-  blockquote_left_color = apply_alpha(secondary_color, 0.5),
+  blockquote_left_border_color = apply_alpha(secondary_color, 0.5),
   table_border_color = "#666",
   table_row_border_color = "#ddd",
   table_row_even_background_color = darken_color(choose_dark_or_light(primary_color, secondary_color, primary_color), 0.3),

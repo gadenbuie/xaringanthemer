@@ -24,7 +24,7 @@ template_variables <- tibble::tribble(
   , "footnote_position_bottom", "3em", ".footnote", "Footnote location from bottom of screen"
   , "left_column_subtle_color", "#777", ".left-column h2, .left-column h3", "Left Column Text (not last)"
   , "left_column_selected_color", "#000", ".left-column h2:last-of-type, .left-column h3:last-child", "Left Column Current Selection"
-  , "blockquote_left_color", "lightgray", "blockquote", "Blockquote Left Border Color"
+  , "blockquote_left_border_color", "lightgray", "blockquote", "Blockquote Left Border Color"
   , "table_border_color", "#666", "table: border-top, border-bottom", "Table top/bottom border"
   , "table_row_border_color", "#ddd", "table thead th: border-bottom", "Table row inner bottom border"
   , "table_row_even_background_color", "#eee", "thead, tfoot, tr:nth-child(even)", "Table Even Row Background Color"
@@ -79,7 +79,7 @@ template_mono_light <- set_default(
   inverse_header_color            = "{white_color}",
   left_column_subtle_color        = "{apply_alpha(base_color, 0.6)}",
   left_column_selected_color      = "{base_color}",
-  blockquote_left_color           = "{apply_alpha(base_color, 0.5)}",
+  blockquote_left_border_color    = "{apply_alpha(base_color, 0.5)}",
   table_row_even_background_color = "{lighten_color(base_color, 0.8)}")
 
 template_mono_dark <- tibble::tribble(
@@ -103,7 +103,7 @@ template_mono_dark <- set_default(
   inverse_header_color            = "{black_color}",
   left_column_subtle_color        = "{apply_alpha(base_color, 0.6)}",
   left_column_selected_color      = "{base_color}",
-  blockquote_left_color           = "{apply_alpha(base_color, 0.5)}",
+  blockquote_left_border_color    = "{apply_alpha(base_color, 0.5)}",
   table_row_even_background_color = "{darken_color(base_color, 0.7)}")
 
 template_mono_accent <- tibble::tribble(
@@ -127,7 +127,7 @@ template_mono_accent <- set_default(
   inverse_header_color            = "{white_color}",
   left_column_subtle_color        = "{apply_alpha(base_color, 0.6)}",
   left_column_selected_color      = "{base_color}",
-  blockquote_left_color           = "{apply_alpha(base_color, 0.5)}",
+  blockquote_left_border_color    = "{apply_alpha(base_color, 0.5)}",
   table_row_even_background_color = "{lighten_color(base_color, 0.7)}")
 
 template_mono_accent_inverse <- tibble::tribble(
@@ -151,7 +151,7 @@ template_mono_accent_inverse <- set_default(
   inverse_header_color            = "{black_color}",
   left_column_subtle_color        = "{apply_alpha(base_color, 0.6)}",
   left_column_selected_color      = "{base_color}",
-  blockquote_left_color           = "{apply_alpha(base_color, 0.5)}",
+  blockquote_left_border_color    = "{apply_alpha(base_color, 0.5)}",
   table_row_even_background_color = "{darken_color(base_color, 0.7)}")
 
 template_duo_light <- tibble::tribble(
@@ -176,7 +176,7 @@ template_duo_light <- set_default(
   inverse_header_color            = "{secondary_color}",
   left_column_subtle_color        = "{apply_alpha(secondary_color, 0.6)}",
   left_column_selected_color      = "{secondary_color}",
-  blockquote_left_color           = "{apply_alpha(secondary_color, 0.5)}",
+  blockquote_left_border_color    = "{apply_alpha(secondary_color, 0.5)}",
   table_row_even_background_color = "{lighten_color(secondary_color, 0.7)}")
 
 template_duo <- tibble::tribble(
@@ -201,7 +201,7 @@ template_duo <- set_default(
   title_slide_background_color    = "{primary_color}",
   left_column_subtle_color        = "{apply_alpha(secondary_color, 0.6)}",
   left_column_selected_color      = "{secondary_color}",
-  blockquote_left_color           = "{apply_alpha(secondary_color, 0.5)}",
+  blockquote_left_border_color    = "{apply_alpha(secondary_color, 0.5)}",
   table_row_even_background_color = "{lighten_color(primary_color, 0.3)}")
 
 template_duo_accent <- tibble::tribble(
@@ -228,7 +228,7 @@ template_duo_accent <- set_default(
   title_slide_text_color          = "{choose_dark_or_light(primary_color, black_color, white_color)}",
   left_column_subtle_color        = "{apply_alpha(primary_color, 0.6)}",
   left_column_selected_color      = "{primary_color}",
-  blockquote_left_color           = "{apply_alpha(secondary_color, 0.5)}",
+  blockquote_left_border_color    = "{apply_alpha(secondary_color, 0.5)}",
   table_row_even_background_color = "{lighten_color(secondary_color, 0.3)}")
 
 template_duo_accent_inverse <- set_default(
@@ -247,7 +247,7 @@ template_duo_accent_inverse <- set_default(
   title_slide_text_color          = "{choose_dark_or_light(primary_color, black_color, white_color)}",
   left_column_subtle_color        = "{apply_alpha(primary_color, 0.6)}",
   left_column_selected_color      = "{primary_color}",
-  blockquote_left_color           = "{apply_alpha(secondary_color, 0.5)}",
+  blockquote_left_border_color    = "{apply_alpha(secondary_color, 0.5)}",
   table_row_even_background_color = "{darken_color(choose_dark_or_light(primary_color, secondary_color, primary_color), 0.3)}")
 
 solarized <- list(
@@ -286,7 +286,7 @@ template_solarized_light <- set_default(
   title_slide_background_color    = "{inverse_background_color}",
   left_column_subtle_color        = solarized$base1,
   left_column_selected_color      = solarized$base01,
-  blockquote_left_color           = solarized$orange,
+  blockquote_left_border_color    = solarized$orange,
   table_border_color              = solarized$base0,
   table_row_border_color          = solarized$base0,
   table_row_even_background_color = solarized$base2
@@ -309,7 +309,7 @@ template_solarized_dark <- set_default(
   title_slide_background_color    = "{inverse_background_color}",
   left_column_subtle_color        = solarized$base01,
   left_column_selected_color      = solarized$base1,
-  blockquote_left_color           = solarized$orange,
+  blockquote_left_border_color    = solarized$orange,
   table_border_color              = solarized$base00,
   table_row_border_color          = solarized$base00,
   table_row_even_background_color = solarized$base02

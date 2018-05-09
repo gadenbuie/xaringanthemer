@@ -25,7 +25,7 @@
 #' @param footnote_position_bottom Footnote location from bottom of screen. Defaults to 3em. Modifies the `.footnote` class.
 #' @param left_column_subtle_color Left Column Text (not last). Defaults to `apply_alpha(base_color, 0.6)`. Modifies the `.left-column h2, .left-column h3` classes.
 #' @param left_column_selected_color Left Column Current Selection. Defaults to `base_color`. Modifies the `.left-column h2:last-of-type, .left-column h3:last-child` classes.
-#' @param blockquote_left_color Blockquote Left Border Color. Defaults to `apply_alpha(base_color, 0.5)`. Modifies the `blockquote` element.
+#' @param blockquote_left_border_color Blockquote Left Border Color. Defaults to `apply_alpha(base_color, 0.5)`. Modifies the `blockquote` element.
 #' @param table_border_color Table top/bottom border. Defaults to #666. Modifies the `table: border-top, border-bottom` elements.
 #' @param table_row_border_color Table row inner bottom border. Defaults to #ddd. Modifies the `table thead th: border-bottom` elements.
 #' @param table_row_even_background_color Table Even Row Background Color. Defaults to `lighten_color(base_color, 0.8)`. Modifies the `thead, tfoot, tr:nth-child(even)` elements.
@@ -82,7 +82,7 @@ mono_light <- function(
   footnote_position_bottom = "3em",
   left_column_subtle_color = apply_alpha(base_color, 0.6),
   left_column_selected_color = base_color,
-  blockquote_left_color = apply_alpha(base_color, 0.5),
+  blockquote_left_border_color = apply_alpha(base_color, 0.5),
   table_border_color = "#666",
   table_row_border_color = "#ddd",
   table_row_even_background_color = lighten_color(base_color, 0.8),

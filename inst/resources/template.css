@@ -128,7 +128,7 @@ img, video, iframe {
   max-width: 100%;
 }
 blockquote {
-  border-left: solid 5px {{blockquote_left_color}};
+  border-left: solid 5px {{blockquote_left_border_color}};
   padding-left: 1em;
 }
 table {

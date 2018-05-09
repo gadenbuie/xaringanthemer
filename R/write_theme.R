@@ -22,7 +22,7 @@
 #' @param footnote_position_bottom Footnote location from bottom of screen. Defaults to 3em. Modifies the `.footnote` class.
 #' @param left_column_subtle_color Left Column Text (not last). Defaults to #777. Modifies the `.left-column h2, .left-column h3` classes.
 #' @param left_column_selected_color Left Column Current Selection. Defaults to #000. Modifies the `.left-column h2:last-of-type, .left-column h3:last-child` classes.
-#' @param blockquote_left_color Blockquote Left Border Color. Defaults to lightgray. Modifies the `blockquote` element.
+#' @param blockquote_left_border_color Blockquote Left Border Color. Defaults to lightgray. Modifies the `blockquote` element.
 #' @param table_border_color Table top/bottom border. Defaults to #666. Modifies the `table: border-top, border-bottom` elements.
 #' @param table_row_border_color Table row inner bottom border. Defaults to #ddd. Modifies the `table thead th: border-bottom` elements.
 #' @param table_row_even_background_color Table Even Row Background Color. Defaults to #eee. Modifies the `thead, tfoot, tr:nth-child(even)` elements.
@@ -75,7 +75,7 @@ write_xaringan_theme <- function(
   footnote_position_bottom = "3em",
   left_column_subtle_color = "#777",
   left_column_selected_color = "#000",
-  blockquote_left_color = "lightgray",
+  blockquote_left_border_color = "lightgray",
   table_border_color = "#666",
   table_row_border_color = "#ddd",
   table_row_even_background_color = "#eee",
