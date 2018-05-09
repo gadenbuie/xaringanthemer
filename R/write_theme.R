@@ -139,7 +139,7 @@ write_xaringan_theme <- function(
   template <- readLines(tf, warn = FALSE)
   template <- paste(template, collapse = "\n")
   x <- glue::glue(template, .open = "{{", .close = "}}")
-  cat(x, file = outfile)
+  writeLines(x, con = outfile)
   if (!is.null(extra_css)) write_extra_css(extra_css, outfile)
   outfile
 }
