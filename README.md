@@ -8,7 +8,7 @@ style with **xaringanthemer** within your `slides.Rmd` file without
 (much)
 CSS.
 
-<img src="/Users/garrickaden-buie/Dropbox/R/xaringanthemer/vignettes/images/examples.gif" width="100%" />
+<img src="vignettes/images/examples.gif" width="100%" />
 
   - [Installation](#installation)
   - [Quick Intro](#quick-intro)
@@ -60,7 +60,7 @@ mono_light(
 ```
 ````
 
-<img src="/Users/garrickaden-buie/Dropbox/R/xaringanthemer/vignettes/images/example_mono_light_1c5253.png" width="100%" />
+<img src="vignettes/images/example_mono_light_1c5253.png" width="100%" />
 
 **xaringanthemer** is <kbd>Tab</kbd> friendly – [use autocomplete to
 explore](#theme-settings) the [template
@@ -70,7 +70,7 @@ themes\!
 
 <center>
 
-<img src="/Users/garrickaden-buie/Dropbox/R/xaringanthemer/vignettes/images/rmarkdown-template-screenshot.png" width="350px" />
+<img src="vignettes/images/rmarkdown-template-screenshot.png" width="350px" />
 
 </center>
 
@@ -93,7 +93,7 @@ color.
 mono_light(base_color = "#23395b")
 ```
 
-<img src="/Users/garrickaden-buie/Dropbox/R/xaringanthemer/vignettes/images/example_mono_light.png" width="100%" />
+<img src="vignettes/images/example_mono_light.png" width="100%" />
 
 #### `mono_dark()`
 
@@ -104,7 +104,7 @@ color.
 mono_dark(base_color = "#cbf7ed")
 ```
 
-<img src="/Users/garrickaden-buie/Dropbox/R/xaringanthemer/vignettes/images/example_mono_dark.png" width="100%" />
+<img src="vignettes/images/example_mono_dark.png" width="100%" />
 
 #### `mono_accent()`
 
@@ -116,7 +116,7 @@ etc.).
 mono_accent(base_color = "#43418A")
 ```
 
-<img src="/Users/garrickaden-buie/Dropbox/R/xaringanthemer/vignettes/images/example_mono_accent.png" width="100%" />
+<img src="vignettes/images/example_mono_accent.png" width="100%" />
 
 #### `mono_accent_inverse()`
 
@@ -128,7 +128,7 @@ etc.).
 mono_accent_inverse(base_color = "#3C989E")
 ```
 
-<img src="/Users/garrickaden-buie/Dropbox/R/xaringanthemer/vignettes/images/example_mono_accent_inverse.png" width="100%" />
+<img src="vignettes/images/example_mono_accent_inverse.png" width="100%" />
 
 ### Duotone
 
@@ -143,7 +143,7 @@ color.
 duo(primary_color = "#1F4257", secondary_color = "#F97B64")
 ```
 
-<img src="/Users/garrickaden-buie/Dropbox/R/xaringanthemer/vignettes/images/example_duo.png" width="100%" />
+<img src="vignettes/images/example_duo.png" width="100%" />
 
 #### `duo_accent()`
 
@@ -154,7 +154,7 @@ colors.
 duo_accent(primary_color = "#006747", secondary_color = "#CFC493")
 ```
 
-<img src="/Users/garrickaden-buie/Dropbox/R/xaringanthemer/vignettes/images/example_duo_accent.png" width="100%" />
+<img src="vignettes/images/example_duo_accent.png" width="100%" />
 
 #### `duo_accent_inverse()`
 
@@ -165,7 +165,7 @@ colors.
 duo_accent_inverse(primary_color = "#006747", secondary_color = "#CFC493")
 ```
 
-<img src="/Users/garrickaden-buie/Dropbox/R/xaringanthemer/vignettes/images/example_duo_accent_inverse.png" width="100%" />
+<img src="vignettes/images/example_duo_accent_inverse.png" width="100%" />
 
 ### Solarized
 
@@ -182,7 +182,7 @@ constrasted).
 solarized_light()
 ```
 
-<img src="/Users/garrickaden-buie/Dropbox/R/xaringanthemer/vignettes/images/example_solarized_light.png" width="100%" />
+<img src="vignettes/images/example_solarized_light.png" width="100%" />
 
 #### `solarized_dark()`
 
@@ -190,7 +190,7 @@ solarized_light()
 solarized_dark()
 ```
 
-<img src="/Users/garrickaden-buie/Dropbox/R/xaringanthemer/vignettes/images/example_solarized_dark.png" width="100%" />
+<img src="vignettes/images/example_solarized_dark.png" width="100%" />
 
 To do this, your YAML header should look more-or-less like this:
 
