@@ -295,8 +295,9 @@ the above example, we could color text red `.red[like this]` or write
 
 <!-- Need to set [adding-custom-css] -->
 
-Yihui picked out great fonts for the default **xaringan** theme, but
-sometimes you want something new and interesting.
+Yihui picked out great fonts for the [default xaringan
+theme](https://slides.yihui.name/xaringan/), but sometimes you want
+something new and interesting.
 
 **xaringanthemer** makes it easy to use [Google
 Fonts](https://fonts.google.com) in your presentations (well, as long as

@@ -1,0 +1,74 @@
+authors:
+  Garrick Aden-Buie:
+    href: https://www.garrickadenbuie.com
+template:
+  params:
+    bootswatch: yeti
+reference:
+- title: Writing CSS
+  desc: Functions that write CSS from inside a xaringan R markdown document.
+  contents:
+    - starts_with("write")
+- title: Theme Functions
+  desc: Color theme functions for xaringan slides.
+  contents:
+    - starts_with("mono")
+    - starts_with("duo")
+    - starts_with("solarized")
+- title: Helper functions
+  desc: Helpers for Google fonts and color adjustments.
+  contents:
+    - contains("color")
+    - apply_alpha
+    - choose_dark_or_light
+    - contains("google")
+navbar:
+  structure:
+    left:
+    - home
+    - intro
+    - themes
+    - fonts
+    - template-vars
+    - css-help
+    - reference
+    - tutorials
+    - news
+    right:
+    - github
+    - twitter
+  components:
+    home:
+      icon: fa-home fa-lg
+      href: index.html
+    reference:
+      text: Reference
+      href: reference/index.html
+    intro:
+      text: Get started
+      href: articles/xaringanthemer.html
+    themes:
+      text: Themes
+      href: articles/singles/themes.html
+    fonts:
+      text: Fonts
+      href: articles/singles/fonts.html
+    template-vars:
+      text: Template Variables
+      href: articles/template-variables.html
+    css-help:
+      text: CSS Help
+      href: articles/css-help.html
+    articles:
+      text: Articles
+      menu:
+      - text: xaringanthemer CSS Help
+        href: articles/css-help.html
+      - text: Template Variables
+        href: articles/template-variables.html
+    github:
+      icon: fa-github fa-lg
+      href: https://github.com/gadenbuie/xaringanthemer
+    twitter:
+      icon: fa-twitter fa-lg
+      href: https://twitter.com/grrrck

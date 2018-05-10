@@ -19,3 +19,8 @@ setwd(here::here())
 message("Rendering README.Rmd for GitHub")
 rmarkdown::render("README.Rmd", quiet = TRUE)
 unlink("README.html")
+
+pkgdown::build_site()
+message("Copying images to pkgdown docs/")
+file.copy(here::here("vignettes/images/"), here::here("docs/articles/"),
+          recursive = TRUE)

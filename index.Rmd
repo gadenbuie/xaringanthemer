@@ -1,0 +1,36 @@
+---
+output: github_document
+---
+
+<!-- index.md is generated from index.Rmd. Please edit that file -->
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  results = "asis",
+  echo = FALSE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+library(xaringanthemer)
+```
+# xaringanthemer
+
+
+```{r child="vignettes/rmdchunks/_tagline-gif.Rmd"}
+```
+
+## Installation
+
+```{r child="vignettes/rmdchunks/_installation.Rmd"}
+```
+
+## Usage
+
+[theme-functions]: #themes
+[theme-settings]: #theme-settings
+[template-variables]: vignettes/template-variables.md
+
+```{r child="vignettes/rmdchunks/_quick-intro.Rmd"}
+```
