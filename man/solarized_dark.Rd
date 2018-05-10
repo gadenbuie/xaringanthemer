@@ -162,5 +162,12 @@ A dark theme based around on the solarized color scheme.
 \url{http://ethanschoonover.com/solarized}
 }
 \seealso{
+Other themes: \code{\link{duo_accent_inverse}},
+  \code{\link{duo_accent}}, \code{\link{duo}},
+  \code{\link{mono_accent_inverse}},
+  \code{\link{mono_accent}}, \code{\link{mono_dark}},
+  \code{\link{mono_light}}, \code{\link{solarized_light}},
+  \code{\link{write_xaringan_theme}}
+
 Other Solarized themes: \code{\link{solarized_light}}
 }

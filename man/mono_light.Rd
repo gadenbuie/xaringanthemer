@@ -166,6 +166,14 @@ can be either a URL as a character string or a call to
 A light monotone theme based around a single color.
 }
 \seealso{
+Other themes: \code{\link{duo_accent_inverse}},
+  \code{\link{duo_accent}}, \code{\link{duo}},
+  \code{\link{mono_accent_inverse}},
+  \code{\link{mono_accent}}, \code{\link{mono_dark}},
+  \code{\link{solarized_dark}},
+  \code{\link{solarized_light}},
+  \code{\link{write_xaringan_theme}}
+
 Other Monotone themes: \code{\link{mono_accent_inverse}},
   \code{\link{mono_accent}}, \code{\link{mono_dark}}
 }

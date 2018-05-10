@@ -173,6 +173,13 @@ An default xaringan theme with a two colors used for color
   accents on select elements (headers, bold text, etc.).
 }
 \seealso{
+Other themes: \code{\link{duo_accent_inverse}},
+  \code{\link{duo}}, \code{\link{mono_accent_inverse}},
+  \code{\link{mono_accent}}, \code{\link{mono_dark}},
+  \code{\link{mono_light}}, \code{\link{solarized_dark}},
+  \code{\link{solarized_light}},
+  \code{\link{write_xaringan_theme}}
+
 Other Duotone themes: \code{\link{duo_accent_inverse}},
   \code{\link{duo}}
 }

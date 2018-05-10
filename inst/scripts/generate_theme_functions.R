@@ -35,6 +35,7 @@ setup_theme_function <- function(
         tv, "#' @param {variable} {description}. Defaults to {stringr::str_replace_all(default, '[{{}}]', '`')}. {element_description(element)}")) %,%
     "#' @template extra_css" %,%
     "#' @param outfile Customized xaringan CSS output file name, default is \"xaringan-themer.css\"" %,%
+    "#' @family themes" %,%
     c(...) %,%
     glue::glue("{f_name} <- function(") %,%
     as.character(glue::glue_data(

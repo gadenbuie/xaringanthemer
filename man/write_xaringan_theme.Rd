@@ -154,3 +154,11 @@ can be either a URL as a character string or a call to
 \description{
 Creates a customized Xaringan theme CSS file.
 }
+\seealso{
+Other themes: \code{\link{duo_accent_inverse}},
+  \code{\link{duo_accent}}, \code{\link{duo}},
+  \code{\link{mono_accent_inverse}},
+  \code{\link{mono_accent}}, \code{\link{mono_dark}},
+  \code{\link{mono_light}}, \code{\link{solarized_dark}},
+  \code{\link{solarized_light}}
+}

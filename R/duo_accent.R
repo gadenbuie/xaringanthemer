@@ -56,6 +56,7 @@
 #' @param code_font_family_fallback Code Font Fallback. Defaults to 'Lucida Console', Monaco. Modifies the `.remark-code, .remark-inline-code` classes.
 #' @template extra_css
 #' @param outfile Customized xaringan CSS output file name, default is "xaringan-themer.css"
+#' @family themes
 #' @template duo_accent
 #' @family Duotone themes
 #' @export
