@@ -11,8 +11,7 @@ xaringan_coolors_accent <- function(coolors_url, order = "12345", ...) {
 
   colors <- list(
     primary = colors[1],
-    secondary = colors[2],
-
+    secondary = colors[2]
   )
 
   return(colors)
