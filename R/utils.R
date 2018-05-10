@@ -27,6 +27,9 @@ darken_color <- function(color_hex, strength = 0.8) {
 }
 
 #' @title Add alpha to hex color
+#' @description Applies alpha (or opacity) to a color in hexadecimal form by
+#'   converting opacity in the [0, 1] range to hex in the [0, 255] range
+#'   and appending to the hex color.
 #' @inheritParams lighten_darken_color
 #' @param opacity Desired opacity of the output color
 #' @export
@@ -105,16 +108,18 @@ google_font <- function(family, ..., languages = NULL) {
 }
 
 #' @title List Valid Google Language Codes
+#' @description Gives a list of valid Language Codes for Google Fonts, or
+#'   validates that the language codes given are valid.
 #' @seealso [google_font()]
-#' @param x Vector of potential Google language codes
+#' @param language_codes Vector of potential Google language codes
 #' @export
 google_language_codes <- function(
-  x = c("latin", "latin-ext", "sinhala", "greek", "hebrew", "vietnamese",
-        "cyrillic", "cyrillic-ext", "devanagari", "arabic", "khmer",
-        "tamil", "greek-ext", "thai", "bengali", "gujarati", "oriya",
-        "malayalam", "gurmukhi", "kannada", "telugu", "myanmar")
+  language_codes = c("latin", "latin-ext", "sinhala", "greek", "hebrew",
+    "vietnamese", "cyrillic", "cyrillic-ext", "devanagari", "arabic", "khmer",
+    "tamil", "greek-ext", "thai", "bengali", "gujarati", "oriya",
+    "malayalam", "gurmukhi", "kannada", "telugu", "myanmar")
 ) {
-  unique(match.arg(x, several.ok = TRUE))
+  unique(match.arg(language_codes, several.ok = TRUE))
 }
 
 print.google_font <- function(x) {

@@ -4,13 +4,17 @@
 \alias{google_language_codes}
 \title{List Valid Google Language Codes}
 \usage{
-google_language_codes(x = c("latin", "latin-ext", "sinhala", "greek",
-  "hebrew", "vietnamese", "cyrillic", "cyrillic-ext", "devanagari", "arabic",
-  "khmer", "tamil", "greek-ext", "thai", "bengali", "gujarati", "oriya",
-  "malayalam", "gurmukhi", "kannada", "telugu", "myanmar"))
+google_language_codes(language_codes = c("latin", "latin-ext", "sinhala",
+  "greek", "hebrew", "vietnamese", "cyrillic", "cyrillic-ext", "devanagari",
+  "arabic", "khmer", "tamil", "greek-ext", "thai", "bengali", "gujarati",
+  "oriya", "malayalam", "gurmukhi", "kannada", "telugu", "myanmar"))
 }
 \arguments{
-\item{x}{Vector of potential Google language codes}
+\item{language_codes}{Vector of potential Google language codes}
+}
+\description{
+Gives a list of valid Language Codes for Google Fonts, or
+validates that the language codes given are valid.
 }
 \seealso{
 \code{\link[=google_font]{google_font()}}
