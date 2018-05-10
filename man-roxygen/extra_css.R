@@ -3,4 +3,4 @@
 #'   \code{list(".class-id" = list("css-property" = "value"))}
 #' @param extra_fonts A list of additional fonts to import, each list element
 #'   can be either a URL as a character string or a call to
-#'   \code{\link{google_fonts}()}
+#'   \code{\link{google_font}()}

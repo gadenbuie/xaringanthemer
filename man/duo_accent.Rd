@@ -164,7 +164,7 @@ of CSS property-value pairs, i.e.
 
 \item{extra_fonts}{A list of additional fonts to import, each list element
 can be either a URL as a character string or a call to
-\code{\link{google_fonts}()}}
+\code{\link{google_font}()}}
 
 \item{outfile}{Customized xaringan CSS output file name, default is "xaringan-themer.css"}
 }

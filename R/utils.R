@@ -28,7 +28,7 @@ darken_color <- function(color_hex, strength = 0.8) {
 
 #' @title Add alpha to hex color
 #' @description Applies alpha (or opacity) to a color in hexadecimal form by
-#'   converting opacity in the [0, 1] range to hex in the [0, 255] range
+#'   converting opacity in the `[0, 1]` range to hex in the `[0, 255]` range
 #'   and appending to the hex color.
 #' @inheritParams lighten_darken_color
 #' @param opacity Desired opacity of the output color
