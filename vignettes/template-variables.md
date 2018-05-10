@@ -1,7 +1,5 @@
 Template Variables
 ================
-Garrick Aden-Buie
-2018-05-08
 
 The following table shows the template variables, their default values
 in the standard `xaringan` theme, the primary element to which the

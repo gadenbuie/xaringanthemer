@@ -1,7 +1,5 @@
 ---
 title: "Template Variables"
-author: "Garrick Aden-Buie"
-date: "2018-05-08"
 output: 
   rmarkdown::html_vignette: default
 vignette: >

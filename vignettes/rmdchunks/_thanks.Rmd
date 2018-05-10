@@ -1,0 +1,12 @@
+***
+
+[xaringan]: https://github.com/yihui/xaringan
+[remarkjs]: https://github.com/gnab/remark
+
+**xaringanthemer** was built by [Garrick Aden-Buie](https://www.garrickadenbuie.com) ([&commat;grrrck](https://twitter.com/grrrck)).
+
+Big thank you to [Yihui Xie](https://yihui.name), especially for [xaringan].
+Also thanks to [Ole Petter Bang](http://gnab.org) for [remark.js][remarkjs].
+
+Feel free to [file an issue](https://github.com/gadenbuie/xaringanthemer/issues) 
+if you find a bug or have a theme suggestion -- or better yet, submit a pull request!

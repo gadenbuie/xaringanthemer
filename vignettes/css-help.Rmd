@@ -1,7 +1,5 @@
 ---
 title: "xaringanthemer CSS Help"
-author: "Garrick Aden-Buie"
-date: "2018-05-09"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{xaringanthemer CSS Help}

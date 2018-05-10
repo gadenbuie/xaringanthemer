@@ -1,0 +1,7 @@
+[xaringan]: https://github.com/yihui/xaringan
+
+Give your [xaringan] slides some style with **xaringanthemer** within your `slides.Rmd` file without (much) CSS.
+
+```{r} 
+knitr::include_graphics(here::here("vignettes/images/examples.gif"))
+```

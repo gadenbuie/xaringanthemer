@@ -3,3 +3,5 @@
 ^README\.Rmd$
 ^LICENSE\.md$
 ^make\.R$
+^vignettes/singles$
+^tests_$

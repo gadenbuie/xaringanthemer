@@ -5,9 +5,10 @@
 
 Give your [xaringan](https://github.com/yihui/xaringan) slides some
 style with **xaringanthemer** within your `slides.Rmd` file without
-(much) CSS.
+(much)
+CSS.
 
-![](vignettes/images/examples.gif)
+<img src="/Users/garrickaden-buie/Dropbox/R/xaringanthemer/vignettes/images/examples.gif" width="100%" />
 
   - [Installation](#installation)
   - [Quick Intro](#quick-intro)
@@ -29,6 +30,8 @@ devtools::install_github("gadenbuie/xaringanthemer")
 ```
 
 ## Quick Intro
+
+<!-- Set link to theme-settings, template-variables, theme functions -->
 
 First, add `css: xaringan-themer.css` to your xaringan slides YAML
 header under `xaringan::moonreader:`.
@@ -57,7 +60,7 @@ mono_light(
 ```
 ````
 
-![](vignettes/images/example_mono_light_1c5253.png)
+<img src="/Users/garrickaden-buie/Dropbox/R/xaringanthemer/vignettes/images/example_mono_light_1c5253.png" width="100%" />
 
 **xaringanthemer** is <kbd>Tab</kbd> friendly – [use autocomplete to
 explore](#theme-settings) the [template
@@ -67,7 +70,7 @@ themes\!
 
 <center>
 
-<img src="vignettes/images/rmarkdown-template-screenshot.png" width="350px">
+<img src="/Users/garrickaden-buie/Dropbox/R/xaringanthemer/vignettes/images/rmarkdown-template-screenshot.png" width="350px" />
 
 </center>
 
@@ -83,45 +86,49 @@ for your slides, based around a single color.
 
 #### `mono_light()`
 
-A light theme based around a single color.
+A light theme based around a single
+color.
 
 ``` r
 mono_light(base_color = "#23395b")
 ```
 
-![](vignettes/images/example_mono_light.png)
+<img src="/Users/garrickaden-buie/Dropbox/R/xaringanthemer/vignettes/images/example_mono_light.png" width="100%" />
 
 #### `mono_dark()`
 
-A dark theme based around a single color.
+A dark theme based around a single
+color.
 
 ``` r
 mono_dark(base_color = "#cbf7ed")
 ```
 
-![](vignettes/images/example_mono_dark.png)
+<img src="/Users/garrickaden-buie/Dropbox/R/xaringanthemer/vignettes/images/example_mono_dark.png" width="100%" />
 
 #### `mono_accent()`
 
 The default xaringan theme with a single color used for color accents on
-select elements (headers, bold text, etc.).
+select elements (headers, bold text,
+etc.).
 
 ``` r
 mono_accent(base_color = "#43418A")
 ```
 
-![](vignettes/images/example_mono_accent.png)
+<img src="/Users/garrickaden-buie/Dropbox/R/xaringanthemer/vignettes/images/example_mono_accent.png" width="100%" />
 
 #### `mono_accent_inverse()`
 
 An “inverted” default xaringan theme with a single color used for color
-accents on select elements (headers, bold text, etc.).
+accents on select elements (headers, bold text,
+etc.).
 
 ``` r
 mono_accent_inverse(base_color = "#3C989E")
 ```
 
-![](vignettes/images/example_mono_accent_inverse.png)
+<img src="/Users/garrickaden-buie/Dropbox/R/xaringanthemer/vignettes/images/example_mono_accent_inverse.png" width="100%" />
 
 ### Duotone
 
@@ -129,23 +136,25 @@ These themes build from two (ideally) complementary colors.
 
 #### `duo()`
 
-A two-colored theme based on a primary and secondary color.
+A two-colored theme based on a primary and secondary
+color.
 
 ``` r
 duo(primary_color = "#1F4257", secondary_color = "#F97B64")
 ```
 
-![](vignettes/images/example_duo.png)
+<img src="/Users/garrickaden-buie/Dropbox/R/xaringanthemer/vignettes/images/example_duo.png" width="100%" />
 
 #### `duo_accent()`
 
-The default Xaringan theme with two accent colors.
+The default Xaringan theme with two accent
+colors.
 
 ``` r
 duo_accent(primary_color = "#006747", secondary_color = "#CFC493")
 ```
 
-![](vignettes/images/example_duo_accent.png)
+<img src="/Users/garrickaden-buie/Dropbox/R/xaringanthemer/vignettes/images/example_duo_accent.png" width="100%" />
 
 #### `duo_accent_inverse()`
 
@@ -156,7 +165,7 @@ colors.
 duo_accent_inverse(primary_color = "#006747", secondary_color = "#CFC493")
 ```
 
-![](vignettes/images/example_duo_accent_inverse.png)
+<img src="/Users/garrickaden-buie/Dropbox/R/xaringanthemer/vignettes/images/example_duo_accent_inverse.png" width="100%" />
 
 ### Solarized
 
@@ -164,7 +173,8 @@ There are also two themes based around the [solarized color
 palette](http://ethanschoonover.com/solarized), `solarized_light()` and
 `solarized_dark()`. For both themes, it is advisted to change the syntax
 highlighting theme to `solarized-light` or `solarized-dark` (looks great
-paired or constrasted).
+paired or
+constrasted).
 
 #### `solarized_light()`
 
@@ -172,7 +182,7 @@ paired or constrasted).
 solarized_light()
 ```
 
-![](vignettes/images/example_solarized_light.png)
+<img src="/Users/garrickaden-buie/Dropbox/R/xaringanthemer/vignettes/images/example_solarized_light.png" width="100%" />
 
 #### `solarized_dark()`
 
@@ -180,7 +190,7 @@ solarized_light()
 solarized_dark()
 ```
 
-![](vignettes/images/example_solarized_dark.png)
+<img src="/Users/garrickaden-buie/Dropbox/R/xaringanthemer/vignettes/images/example_solarized_dark.png" width="100%" />
 
 To do this, your YAML header should look more-or-less like this:
 
@@ -282,6 +292,8 @@ the above example, we could color text red `.red[like this]` or write
 `.small[in smaller font size]`.
 
 ## Fonts
+
+<!-- Need to set [adding-custom-css] -->
 
 Yihui picked out great fonts for the default **xaringan** theme, but
 sometimes you want something new and interesting.

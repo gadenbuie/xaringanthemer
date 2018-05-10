@@ -1,0 +1,38 @@
+<!-- Set link to theme-settings, template-variables, theme functions -->
+
+First, add `css: xaringan-themer.css` to your xaringan slides YAML header under `xaringan::moonreader:`.
+
+```yaml
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: xaringan-themer.css
+```
+
+Then, in the knitr setup chunk, load **xaringanthemer** and try one of the [theme functions][theme-functions].
+
+````markdown
+```{r setup, include = FALSE}`r ""`
+options(htmltools.dir.version = FALSE)
+
+library(xaringanthemer)
+mono_light(
+  base_color = "#1c5253",
+  header_font_google = google_font("Josefin Sans"),
+  text_font_google   = google_font("Montserrat", "300", "300i"),
+  code_font_google   = google_font("Droid Mono")
+)
+```
+````
+
+`r knitr::include_graphics(here::here("vignettes/images/example_mono_light_1c5253.png"))`
+
+**xaringanthemer** is <kbd>Tab</kbd> friendly -- [use autocomplete to explore][theme-settings] the [template variables][template-variables] that you can adjust in each of the themes!
+
+<center>
+```{r out.width="350px"}
+knitr::include_graphics(here::here("vignettes/images/rmarkdown-template-screenshot.png"))
+```
+</center>
+
+You can also skip the above and just create a *Ninja Themed Presentation* from the New R Markdown Document menu in RStudio.

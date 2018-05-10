@@ -1,0 +1,44 @@
+<!-- Need to set [adding-custom-css] -->
+
+[google-fonts]: https://fonts.google.com
+
+Yihui picked out great fonts for the default **xaringan** theme, but sometimes you want something new and interesting.
+
+**xaringanthemer** makes it easy to use [Google Fonts][google-fonts] in your presentations (well, as long as you have an internet connection) or to fully specify your font files.
+
+To use [Google Fonts][google-fonts], set the `_font_google` theme arguments --
+```{r results='asis', echo=FALSE}
+cat(paste0("`", tvv[grepl("_font_google$", tvv)], "`", collapse = ", "))
+```
+--- using the `google_font()` helper.
+See `?google_font` for more info.
+
+```r
+mono_light(
+  header_font_google = google_font("Josefin Slab", "600"),
+  text_font_google   = google_font("Work Sans", "300", "300i"),
+  code_font_google   = google_font("IBM Plex Mono")
+)
+```
+
+If you set an `xxx_font_google` theme arguments, then `xxx_font_family`, `xxx_font_weight` and `xxx_font_url` are overwritten -- where `xxx` in `{header, text, code}`.
+Of course, you can manually set `header_font_url`, etc., and ignore the `header_font_google` argument.
+
+For example, suppose you want to use a ligature font for the code font, such as [Fira Code](https://github.com/yihui/xaringan/issues/83).
+Just set `code_font_family` and `code_font_url`!
+
+```r
+solarized_dark(
+  code_font_family = "Fira Code",
+  code_font_url = "https://cdn.rawgit.com/tonsky/FiraCode/1.204/distr/fira_code.css"
+)
+```
+
+If you need to import additional fonts for use in [custom CSS definitions][adding-custom-css], you can use the `extra_fonts` argument to pass a list of URLs or `google_font()`s.
+
+```r
+mono_light(
+  extra_fonts = list(google_font("Sofia")),
+  extra_css = list(".title-slide h2" = list("font-family" = "Sofia"))
+)
+```

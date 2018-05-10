@@ -1,7 +1,5 @@
 xaringanthemer CSS Help
 ================
-Garrick Aden-Buie
-2018-05-09
 
 Jump to: [Colors](#colors), [Sizes](#sizes), [Positioning](#positioning)
 
