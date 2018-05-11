@@ -9,12 +9,10 @@ output:
     css: xaringan-themer.css
 ```
 
-Then, in the knitr setup chunk, load **xaringanthemer** and try one of the [theme functions][theme-functions].
+Then, in a hidden chunk just after the knitr setup chunk, load **xaringanthemer** and try one of the [theme functions][theme-functions].
 
 ````markdown
-```{r setup, include = FALSE}`r ""`
-options(htmltools.dir.version = FALSE)
-
+```{r xaringan-themer, include = FALSE}`r ""`
 library(xaringanthemer)
 mono_light(
   base_color = "#1c5253",

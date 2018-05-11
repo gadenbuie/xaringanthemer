@@ -112,18 +112,16 @@
 <a class="sourceLine" id="cb2-2" data-line-number="2">  <span class="fu">xaringan:</span><span class="at">:moon_reader:</span></a>
 <a class="sourceLine" id="cb2-3" data-line-number="3">    <span class="fu">lib_dir:</span><span class="at"> libs</span></a>
 <a class="sourceLine" id="cb2-4" data-line-number="4">    <span class="fu">css:</span><span class="at"> xaringan-themer.css</span></a></code></pre></div>
-<p>Then, in the knitr setup chunk, load <strong>xaringanthemer</strong> and try one of the <a href="#themes">theme functions</a>.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb3-1" data-line-number="1">```{r setup, include = FALSE}</a>
-<a class="sourceLine" id="cb3-2" data-line-number="2">options(htmltools.dir.version = FALSE)</a>
-<a class="sourceLine" id="cb3-3" data-line-number="3"></a>
-<a class="sourceLine" id="cb3-4" data-line-number="4">library(xaringanthemer)</a>
-<a class="sourceLine" id="cb3-5" data-line-number="5">mono_light(</a>
-<a class="sourceLine" id="cb3-6" data-line-number="6">  base_color = "#1c5253",</a>
-<a class="sourceLine" id="cb3-7" data-line-number="7">  header_font_google = google_font("Josefin Sans"),</a>
-<a class="sourceLine" id="cb3-8" data-line-number="8">  text_font_google   = google_font("Montserrat", "300", "300i"),</a>
-<a class="sourceLine" id="cb3-9" data-line-number="9">  code_font_google   = google_font("Droid Mono")</a>
-<a class="sourceLine" id="cb3-10" data-line-number="10">)</a>
-<a class="sourceLine" id="cb3-11" data-line-number="11">```</a></code></pre></div>
+<p>Then, in a hidden chunk just after the knitr setup chunk, load <strong>xaringanthemer</strong> and try one of the <a href="#themes">theme functions</a>.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb3-1" data-line-number="1">```{r xaringan-themer, include = FALSE}</a>
+<a class="sourceLine" id="cb3-2" data-line-number="2">library(xaringanthemer)</a>
+<a class="sourceLine" id="cb3-3" data-line-number="3">mono_light(</a>
+<a class="sourceLine" id="cb3-4" data-line-number="4">  base_color = "#1c5253",</a>
+<a class="sourceLine" id="cb3-5" data-line-number="5">  header_font_google = google_font("Josefin Sans"),</a>
+<a class="sourceLine" id="cb3-6" data-line-number="6">  text_font_google   = google_font("Montserrat", "300", "300i"),</a>
+<a class="sourceLine" id="cb3-7" data-line-number="7">  code_font_google   = google_font("Droid Mono")</a>
+<a class="sourceLine" id="cb3-8" data-line-number="8">)</a>
+<a class="sourceLine" id="cb3-9" data-line-number="9">```</a></code></pre></div>
 <p><img src="articles/images/example_mono_light_1c5253.png" width="100%"></p>
 <p><strong>xaringanthemer</strong> is <kbd>Tab</kbd> friendly – <a href="#theme-settings">use autocomplete to explore</a> the <a href="vignettes/template-variables.html">template variables</a> that you can adjust in each of the themes!</p>
 <center>

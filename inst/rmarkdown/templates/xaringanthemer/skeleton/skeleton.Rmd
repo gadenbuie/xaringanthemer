@@ -15,6 +15,9 @@ output:
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
+```
+
+```{r xaringan-themer, include=FALSE}
 library(xaringanthemer)
 solarized_dark(
   code_font_family = "Fira Code",
