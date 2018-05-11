@@ -5,10 +5,9 @@
 
 Give your [xaringan](https://github.com/yihui/xaringan) slides some
 style with **xaringanthemer** within your `slides.Rmd` file without
-(much)
-CSS.
+(much) CSS.
 
-<img src="/Users/garrickaden-buie/Dropbox/R/xaringanthemer/vignettes/images/examples.gif" width="100%" />
+<img src="vignettes/images/examples.gif" width="100%" />
 
   - [Installation](#installation)
   - [Quick Intro](#quick-intro)
@@ -68,7 +67,7 @@ themes\!
 
 <center>
 
-<img src="/Users/garrickaden-buie/Dropbox/R/xaringanthemer/vignettes/images/rmarkdown-template-screenshot.png" width="350px" />
+<img src="vignettes/images/rmarkdown-template-screenshot.png" width="350px" />
 
 </center>
 

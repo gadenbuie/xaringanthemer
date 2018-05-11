@@ -35,7 +35,11 @@ if (exists('IS_README') && IS_README) {
 
 <center>
 ```{r out.width="350px"}
-knitr::include_graphics(here::here("vignettes/images/rmarkdown-template-screenshot.png"))
+if (exists('IS_README') && IS_README) {
+  knitr::include_graphics("vignettes/images/rmarkdown-template-screenshot.png") 
+} else {
+  knitr::include_graphics(here::here("vignettes/images/rmarkdown-template-screenshot.png"))
+}
 ```
 </center>
 
