@@ -167,11 +167,12 @@ paragraph text.
 If you’re reading this, you’re probably wondering how you make an
 element be *where you want it to be*.
 
-There are 3 items that **xaringanthemer** will help you position:
+There are 3 items that **xaringanthemer** can help you position:
 
-  - `background_position`
-  - `title_slide_background_position`
-  - `footnote_position_bottom`
+  - `background_position` (background image position)
+  - `title_slide_background_position` (title slide background image
+    position)
+  - `footnote_position_bottom` (footnote location from bottom of screen)
 
 ### Footnote Position
 

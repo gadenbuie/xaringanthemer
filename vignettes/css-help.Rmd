@@ -157,14 +157,17 @@ If we later decide to change the base font size, say to `"15px"`, the header tex
 
 ```{r echo=FALSE}
 tv_position <- grep("position", template_variables$variable, value = TRUE)
+tv_desc <- template_variables[template_variables$variable %in% tv_position,]$description
+tv_desc <- strsplit(tv_desc, ",")
+tv_desc <- purrr::map(tv_desc, ~ tolower(.[1]))
 ```
 
 If you're reading this, you're probably wondering how you make an element be *where you want it to be*.
 
-There are `r length(tv_position)` items that **xaringanthemer** will help you position:
+There are `r length(tv_position)` items that **xaringanthemer** can help you position:
 
 ```{r echo=FALSE, results='asis'}
-cat(paste0("- `", tv_position, "`"), sep = "\n")
+cat(paste0("- `", tv_position, "` (", tv_desc, ")"), sep = "\n")
 ```
 
 ### Footnote Position
