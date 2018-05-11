@@ -13,4 +13,7 @@ articles:
   themes: singles/themes.html
   template-variables: template-variables.html
   xaringanthemer: xaringanthemer.html
+urls:
+  reference: https://gadenbuie.github.com/xaringanthemer//reference
+  article: https://gadenbuie.github.com/xaringanthemer//articles
 

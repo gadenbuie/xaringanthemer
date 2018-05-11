@@ -24,3 +24,6 @@ pkgdown::build_site()
 message("Copying images to pkgdown docs/")
 file.copy(here::here("vignettes/images/"), here::here("docs/articles/"),
           recursive = TRUE)
+
+message("Building and Installing Package with Vignettes")
+devtools::install(build_vignettes = TRUE)

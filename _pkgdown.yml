@@ -1,6 +1,7 @@
 authors:
   Garrick Aden-Buie:
     href: https://www.garrickadenbuie.com
+url: https://gadenbuie.github.com/xaringanthemer/
 template:
   params:
     bootswatch: yeti
@@ -23,27 +24,10 @@ reference:
     - choose_dark_or_light
     - contains("google")
 navbar:
-  structure:
-    left:
-    - home
-    - intro
-    - themes
-    - fonts
-    - template-vars
-    - css-help
-    - reference
-    - tutorials
-    - news
-    right:
-    - github
-    - twitter
-  components:
+  left:
     home:
       icon: fa-home fa-lg
       href: index.html
-    reference:
-      text: Reference
-      href: reference/index.html
     intro:
       text: Get started
       href: articles/xaringanthemer.html
@@ -59,13 +43,17 @@ navbar:
     css-help:
       text: CSS Help
       href: articles/css-help.html
-    articles:
-      text: Articles
-      menu:
-      - text: xaringanthemer CSS Help
-        href: articles/css-help.html
-      - text: Template Variables
-        href: articles/template-variables.html
+    reference:
+      text: Reference
+      href: reference/index.html
+    #articles:
+    #  text: Articles
+    #  menu:
+    #  - text: xaringanthemer CSS Help
+    #    href: articles/css-help.html
+    #  - text: Template Variables
+    #    href: articles/template-variables.html
+  right:
     github:
       icon: fa-github fa-lg
       href: https://github.com/gadenbuie/xaringanthemer
