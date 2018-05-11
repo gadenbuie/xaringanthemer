@@ -1,5 +1,13 @@
 ### Monotone
 
+```{r include=FALSE}
+IS_README <- exists("IS_README") && IS_README
+include_graphic <- function(img_path, is_readme = IS_README) {
+  if (is_readme) knitr::include_graphics(img_path)
+  else knitr::include_graphics(here::here(img_path))
+}
+```
+
 Use these functions to automatically create a consistent color palette for your slides, based around a single color.
 
 #### `mono_light()`
@@ -20,7 +28,7 @@ demo_function_call <- function(f, n_params = 1) {
 demo_function_call(mono_light, 1)
 ```
 
-`r knitr::include_graphics(here::here("vignettes/images/example_mono_light.png"))`
+`r include_graphic("vignettes/images/example_mono_light.png")`
 
 #### `mono_dark()`
 
@@ -30,7 +38,7 @@ A dark theme based around a single color.
 demo_function_call(mono_dark, 1)
 ```
 
-`r knitr::include_graphics(here::here("vignettes/images/example_mono_dark.png"))`
+`r include_graphic("vignettes/images/example_mono_dark.png")`
 
 #### `mono_accent()`
 
@@ -40,7 +48,7 @@ The default xaringan theme with a single color used for color accents on select 
 demo_function_call(mono_accent, 1)
 ```
 
-`r knitr::include_graphics(here::here("vignettes/images/example_mono_accent.png"))`
+`r include_graphic("vignettes/images/example_mono_accent.png")`
 
 #### `mono_accent_inverse()`
 
@@ -50,7 +58,7 @@ An "inverted" default xaringan theme with a single color used for color accents 
 demo_function_call(mono_accent_inverse, 1)
 ```
 
-`r knitr::include_graphics(here::here("vignettes/images/example_mono_accent_inverse.png"))`
+`r include_graphic("vignettes/images/example_mono_accent_inverse.png")`
 
 
 ### Duotone
@@ -65,7 +73,7 @@ A two-colored theme based on a primary and secondary color.
 demo_function_call(duo, 2)
 ```
 
-`r knitr::include_graphics(here::here("vignettes/images/example_duo.png"))`
+`r include_graphic("vignettes/images/example_duo.png")`
 
 #### `duo_accent()`
 
@@ -75,7 +83,7 @@ The default Xaringan theme with two accent colors.
 demo_function_call(duo_accent, 2)
 ```
 
-`r knitr::include_graphics(here::here("vignettes/images/example_duo_accent.png"))`
+`r include_graphic("vignettes/images/example_duo_accent.png")`
 
 #### `duo_accent_inverse()`
 
@@ -85,7 +93,7 @@ An "inverted" default Xaringan theme with two accent colors.
 demo_function_call(duo_accent_inverse, 2)
 ```
 
-`r knitr::include_graphics(here::here("vignettes/images/example_duo_accent_inverse.png"))`
+`r include_graphic("vignettes/images/example_duo_accent_inverse.png")`
 
 ### Solarized
 
@@ -98,7 +106,7 @@ For both themes, it is advisted to change the syntax highlighting theme to `sola
 demo_function_call(solarized_light, 0)
 ```
 
-`r knitr::include_graphics(here::here("vignettes/images/example_solarized_light.png"))`
+`r include_graphic("vignettes/images/example_solarized_light.png")`
 
 #### `solarized_dark()`
 
@@ -106,7 +114,7 @@ demo_function_call(solarized_light, 0)
 demo_function_call(solarized_dark, 0)
 ```
 
-`r knitr::include_graphics(here::here("vignettes/images/example_solarized_dark.png"))`
+`r include_graphic("vignettes/images/example_solarized_dark.png")`
 
 
 To do this, your YAML header should look more-or-less like this:

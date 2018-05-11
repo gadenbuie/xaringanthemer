@@ -1,4 +1,4 @@
-**xaringanthemer** lives here on GitHub.
+**xaringanthemer** currently lives on GitHub.
 
 ```r
 # install.packages("devtools")

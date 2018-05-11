@@ -8,7 +8,7 @@ style with **xaringanthemer** within your `slides.Rmd` file without
 (much)
 CSS.
 
-<img src="vignettes/images/examples.gif" width="100%" />
+<img src="/Users/garrickaden-buie/Dropbox/R/xaringanthemer/vignettes/images/examples.gif" width="100%" />
 
   - [Installation](#installation)
   - [Quick Intro](#quick-intro)
@@ -22,7 +22,7 @@ CSS.
 
 ## Installation
 
-**xaringanthemer** lives here on GitHub.
+**xaringanthemer** currently lives on GitHub.
 
 ``` r
 # install.packages("devtools")
@@ -70,7 +70,7 @@ themes\!
 
 <center>
 
-<img src="vignettes/images/rmarkdown-template-screenshot.png" width="350px" />
+<img src="/Users/garrickaden-buie/Dropbox/R/xaringanthemer/vignettes/images/rmarkdown-template-screenshot.png" width="350px" />
 
 </center>
 
@@ -86,8 +86,7 @@ for your slides, based around a single color.
 
 #### `mono_light()`
 
-A light theme based around a single
-color.
+A light theme based around a single color.
 
 ``` r
 mono_light(base_color = "#23395b")
@@ -97,8 +96,7 @@ mono_light(base_color = "#23395b")
 
 #### `mono_dark()`
 
-A dark theme based around a single
-color.
+A dark theme based around a single color.
 
 ``` r
 mono_dark(base_color = "#cbf7ed")
@@ -109,8 +107,7 @@ mono_dark(base_color = "#cbf7ed")
 #### `mono_accent()`
 
 The default xaringan theme with a single color used for color accents on
-select elements (headers, bold text,
-etc.).
+select elements (headers, bold text, etc.).
 
 ``` r
 mono_accent(base_color = "#43418A")
@@ -136,8 +133,7 @@ These themes build from two (ideally) complementary colors.
 
 #### `duo()`
 
-A two-colored theme based on a primary and secondary
-color.
+A two-colored theme based on a primary and secondary color.
 
 ``` r
 duo(primary_color = "#1F4257", secondary_color = "#F97B64")
@@ -147,8 +143,7 @@ duo(primary_color = "#1F4257", secondary_color = "#F97B64")
 
 #### `duo_accent()`
 
-The default Xaringan theme with two accent
-colors.
+The default Xaringan theme with two accent colors.
 
 ``` r
 duo_accent(primary_color = "#006747", secondary_color = "#CFC493")
@@ -173,8 +168,7 @@ There are also two themes based around the [solarized color
 palette](http://ethanschoonover.com/solarized), `solarized_light()` and
 `solarized_dark()`. For both themes, it is advisted to change the syntax
 highlighting theme to `solarized-light` or `solarized-dark` (looks great
-paired or
-constrasted).
+paired or constrasted).
 
 #### `solarized_light()`
 

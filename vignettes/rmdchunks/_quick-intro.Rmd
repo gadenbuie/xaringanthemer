@@ -25,7 +25,13 @@ mono_light(
 ```
 ````
 
-`r knitr::include_graphics(here::here("vignettes/images/example_mono_light_1c5253.png"))`
+```{r echo=FALSE}
+if (exists('IS_README') && IS_README) {
+  knitr::include_graphics("vignettes/images/example_mono_light_1c5253.png") 
+} else {
+  knitr::include_graphics(here::here("vignettes/images/example_mono_light_1c5253.png"))
+}
+```
 
 **xaringanthemer** is <kbd>Tab</kbd> friendly -- [use autocomplete to explore][theme-settings] the [template variables][template-variables] that you can adjust in each of the themes!
 
