@@ -32,8 +32,8 @@ devtools::install_github("gadenbuie/xaringanthemer")
 
 <!-- Set link to theme-settings, template-variables, theme functions -->
 
-First, add `css: xaringan-themer.css` to your xaringan slides YAML
-header under `xaringan::moonreader:`.
+First, add the `xaringan-themer.css` file to the YAML header of your
+xaringan slides.
 
 ``` yaml
 output:
@@ -59,20 +59,27 @@ mono_light(
 
 <img src="vignettes/images/example_mono_light_1c5253.png" width="100%" />
 
+### Tab Completion
+
 **xaringanthemer** is <kbd>Tab</kbd> friendly – [use autocomplete to
 explore](#theme-settings) the [template
 variables](vignettes/template-variables.md) that you can adjust in each
 of the
 themes\!
 
+<img src="vignettes/images/example-rstudio-completion.gif" width="100%" />
+
+### R Markdown Template in RStudio
+
+You can also skip the above and just create a *Ninja Themed
+Presentation* from the New R Markdown Document menu in
+RStudio.
+
 <center>
 
 <img src="vignettes/images/rmarkdown-template-screenshot.png" width="350px" />
 
 </center>
-
-You can also skip the above and just create a *Ninja Themed
-Presentation* from the New R Markdown Document menu in RStudio.
 
 ## Themes
 

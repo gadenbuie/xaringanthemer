@@ -5,3 +5,6 @@
 ^make\.R$
 ^vignettes/singles$
 ^tests_$
+^_.+$
+^docs$
+^index\.Rmd$
