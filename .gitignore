@@ -3,4 +3,5 @@
 .RData
 .Ruserdata
 inst/doc
-tests_
+_tests
+_stuff
