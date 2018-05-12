@@ -118,7 +118,7 @@ https://yihui.name/knitr/demo/externalization/ -->
 <a class="sourceLine" id="cb1-2" data-line-number="2">  <span class="fu">xaringan:</span><span class="at">:moon_reader:</span></a>
 <a class="sourceLine" id="cb1-3" data-line-number="3">    <span class="fu">lib_dir:</span><span class="at"> libs</span></a>
 <a class="sourceLine" id="cb1-4" data-line-number="4">    <span class="fu">css:</span><span class="at"> xaringan-themer.css</span></a></code></pre></div>
-<p>Then, in a hidden chunk just after the knitr setup chunk, load <strong>xaringanthemer</strong> and try one of the <a href="reference/index.html">theme functions</a>.</p>
+<p>Then, in a hidden chunk just after the knitr setup chunk, load <strong>xaringanthemer</strong> and try one of the <a href="#themes">theme functions</a>.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb2-1" data-line-number="1">```{r xaringan-themer, include = FALSE}</a>
 <a class="sourceLine" id="cb2-2" data-line-number="2">library(xaringanthemer)</a>
 <a class="sourceLine" id="cb2-3" data-line-number="3">mono_light(</a>
@@ -129,7 +129,7 @@ https://yihui.name/knitr/demo/externalization/ -->
 <a class="sourceLine" id="cb2-8" data-line-number="8">)</a>
 <a class="sourceLine" id="cb2-9" data-line-number="9">```</a></code></pre></div>
 <p><img src="images/example_mono_light_1c5253.png" width="100%"></p>
-<p><strong>xaringanthemer</strong> is <kbd>Tab</kbd> friendly – <a href="#theme-settings">use autocomplete to explore</a> the <a href="articles/template-variables.html">template variables</a> that you can adjust in each of the themes!</p>
+<p><strong>xaringanthemer</strong> is <kbd>Tab</kbd> friendly – <a href="#theme-settings">use autocomplete to explore</a> the <a href="template-variables.html">template variables</a> that you can adjust in each of the themes!</p>
 <center>
 <img src="images/rmarkdown-template-screenshot.png" width="350px">
 </center>
@@ -237,7 +237,7 @@ https://yihui.name/knitr/demo/externalization/ -->
 <h2 class="hasAnchor">
 <a href="#theme-settings" class="anchor"></a>Theme Settings</h2>
 <p>The theme functions listed above are just wrappers around the central function of this package, <code><a href="../reference/write_xaringan_theme.html">write_xaringan_theme()</a></code>. If you want to start from the default <strong>xaringan</strong> theme and make a few modifications, start there.</p>
-<p>All of the theme template variables are repeated in each of the theme functions (instead of relying on <code>...</code>) so that you can use autocompletion to find and change the defaults for any theme function. To override the default value of any theme functions, set the appropriate argument in the theme function. A table of all template variables is included in <code><a href="../articles/template-variables.html">vignette("template-variables", "xaringanthemer")</a></code>.</p>
+<p>All of the theme template variables are repeated in each of the theme functions (instead of relying on <code>...</code>) so that you can use autocompletion to find and change the defaults for any theme function. To override the default value of any theme functions, set the appropriate argument in the theme function. A table of all template variables is included in <a href="template-variables.html"><code><a href="../articles/template-variables.html">vignette("template-variables", "xaringanthemer")</a></code></a>.</p>
 <p>As an example, try loading <code>xaringanthemer</code>, type out <code>duo_theme(</code> and then press <kbd>Tab</kbd> to see all of the theme options.</p>
 <p>All of the theme options are named so that you first think of the element you want to change, then the property of that element.</p>
 <p>Here are some of the <code>text_</code> theme options:</p>

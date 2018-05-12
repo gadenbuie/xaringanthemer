@@ -50,9 +50,9 @@ Jump to:
 
 ## Quick Intro
 
-[theme-functions]: reference/index.html
+[theme-functions]: #themes
 [theme-settings]: #theme-settings
-[template-variables]: articles/template-variables.html
+[template-variables]: template-variables.html
 
 ```{r child="rmdchunks/_quick-intro.Rmd"}
 ```
@@ -69,7 +69,7 @@ If you want to start from the default **xaringan** theme and make a few modifica
 
 All of the theme template variables are repeated in each of the theme functions (instead of relying on `...`) so that you can use autocompletion to find and change the defaults for any theme function.
 To override the default value of any theme functions, set the appropriate argument in the theme function.
-A table of all template variables is included in `vignette("template-variables", "xaringanthemer")`.
+A table of all template variables is included in [`vignette("template-variables", "xaringanthemer")`](template-variables.html).
 
 As an example, try loading `xaringanthemer`, type out `duo_theme(` and then press <kbd>Tab</kbd> to see all of the theme options.
 

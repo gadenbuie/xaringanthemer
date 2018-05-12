@@ -28,9 +28,9 @@ library(xaringanthemer)
 
 ## Usage
 
-[theme-functions]: #themes
-[theme-settings]: #theme-settings
-[template-variables]: vignettes/template-variables.md
+[theme-functions]: articles/singles/themes.html
+[theme-settings]: articles/xaringanthemer.html#theme-settings
+[template-variables]: articles/template-variables.html
 
 ```{r child="vignettes/rmdchunks/_quick-intro.Rmd"}
 ```
