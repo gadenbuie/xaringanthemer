@@ -72,8 +72,7 @@ choose_dark_or_light <- function(x, black = "#000", white = "#FFF") {
 #' @keywords internal
 call_write_xaringan_theme <- function() {
   paste0("write_xaringan_theme(",
-         paste(template_variables$variable, collapse = ", "),
-         ", extra_css, outfile",
+         paste(names(formals(write_xaringan_theme)), collapse = ", "),
          ")")
 }
 
