@@ -135,14 +135,14 @@ blockquote {
   border-left: solid 5px {{blockquote_left_border_color}};
   padding-left: 1em;
 }
-table {
+.remark-slide table {
   margin: auto;
   border-top: 1px solid {{table_border_color}};
   border-bottom: 1px solid {{table_border_color}};
 }
-table thead th { border-bottom: 1px solid {{table_row_border_color}}; }
+.remark-slide table thead th { border-bottom: 1px solid {{table_row_border_color}}; }
 th, td { padding: 5px; }
-thead, tfoot, tr:nth-child(even) { background: {{table_row_even_background_color}} }
+.remark-slide thead, .remark-slide tfoot, .remark-slide tr:nth-child(even) { background: {{table_row_even_background_color}} }
 table.dataTable tbody {
   background-color: {{background_color}};
   color: {{text_color}};
