@@ -1,6 +1,6 @@
-pandoc: 2.1.1
-pkgdown: 1.0.0.9000
-pkgdown_sha: 90867f97221e9bd1c7a997f870eff28eb1083411
+pandoc: 2.2.1
+pkgdown: 1.1.0
+pkgdown_sha: ~
 articles:
   css-help: css-help.html
   _fonts: rmdchunks/_fonts.html
