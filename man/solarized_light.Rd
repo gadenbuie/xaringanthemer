@@ -7,17 +7,18 @@
 solarized_light(text_color = "#657b83", header_color = "#dc322f",
   background_color = "#fdf6e3", link_color = "#b58900",
   text_bold_color = "#d33682", text_slide_number_color = "#93a1a1",
-  padding = "1em 4em 1em 4em", background_image = NA,
-  background_size = NA, background_position = NA,
+  padding = "1em 4em 1em 4em", background_image = NULL,
+  background_size = NULL, background_position = NULL,
   code_highlight_color = "#268bd240", code_inline_color = "#6c71c4",
-  code_inline_background_color = NA, code_inline_font_size = "1em",
+  code_inline_background_color = NULL, code_inline_font_size = "1em",
   inverse_background_color = "#002b36", inverse_text_color = "#fdf6e3",
   inverse_text_shadow = FALSE,
   inverse_header_color = inverse_text_color,
   title_slide_text_color = inverse_text_color,
   title_slide_background_color = inverse_background_color,
-  title_slide_background_image = NA, title_slide_background_size = NA,
-  title_slide_background_position = NA, footnote_color = NA,
+  title_slide_background_image = NULL,
+  title_slide_background_size = NULL,
+  title_slide_background_position = NULL, footnote_color = NULL,
   footnote_font_size = "0.9em", footnote_position_bottom = "3em",
   left_column_subtle_color = "#93a1a1",
   left_column_selected_color = "#586e75",
@@ -56,17 +57,17 @@ solarized_light(text_color = "#657b83", header_color = "#dc322f",
 
 \item{padding}{Slide Padding in \code{top right [bottom left]} format. Defaults to 1em 4em 1em 4em. Modifies the \code{.remark-slide-content} class.}
 
-\item{background_image}{Background image applied to each \emph{and every} slide. Set \code{title_slide_background_image = "none"} to remove the background image from the title slide.. Defaults to NA. Modifies the \code{.remark-slide-content} class.}
+\item{background_image}{Background image applied to each \emph{and every} slide. Set \code{title_slide_background_image = "none"} to remove the background image from the title slide.. Defaults to \code{NULL}. Modifies the \code{.remark-slide-content} class.}
 
-\item{background_size}{Background image size, requires \code{background_image} to be set. If \code{background_image} is set, \code{background_size} will default to \code{cover} so the backround fills the screen. If both \code{background_image} and \code{background_position} are set, will default to 100 percent.. Defaults to NA. Modifies the \code{.remark-slide-content} class.}
+\item{background_size}{Background image size, requires \code{background_image} to be set. If \code{background_image} is set, \code{background_size} will default to \code{cover} so the backround fills the screen. If both \code{background_image} and \code{background_position} are set, will default to 100 percent.. Defaults to \code{NULL}. Modifies the \code{.remark-slide-content} class.}
 
-\item{background_position}{Background image position, requires \code{background_image} to be set, and it is recommended to adjust \code{background_size}.. Defaults to NA. Modifies the \code{.remark-slide-content} class.}
+\item{background_position}{Background image position, requires \code{background_image} to be set, and it is recommended to adjust \code{background_size}.. Defaults to \code{NULL}. Modifies the \code{.remark-slide-content} class.}
 
 \item{code_highlight_color}{Code Line Highlight. Defaults to #268bd240. Modifies the \code{.remark-code-line-highlighted} class.}
 
 \item{code_inline_color}{Inline Code Color. Defaults to #6c71c4. Modifies the \code{.remark-inline-code} class.}
 
-\item{code_inline_background_color}{Inline Code Background Color. Defaults to NA. Modifies the \code{.remark-inline-code} class.}
+\item{code_inline_background_color}{Inline Code Background Color. Defaults to \code{NULL}. Modifies the \code{.remark-inline-code} class.}
 
 \item{code_inline_font_size}{Inline Code Text Font Size. Defaults to 1em. Modifies the \code{.remark-inline-code} class.}
 
@@ -82,13 +83,13 @@ solarized_light(text_color = "#657b83", header_color = "#dc322f",
 
 \item{title_slide_background_color}{Title Slide Background Color. Defaults to \code{inverse_background_color}. Modifies the \code{.title-slide} class.}
 
-\item{title_slide_background_image}{Title Slide Background Image URL. Defaults to NA. Modifies the \code{.title-slide} class.}
+\item{title_slide_background_image}{Title Slide Background Image URL. Defaults to \code{NULL}. Modifies the \code{.title-slide} class.}
 
-\item{title_slide_background_size}{Title Slide Background Image Size, defaults to "cover" if background image is set. Defaults to NA. Modifies the \code{.title-slide} class.}
+\item{title_slide_background_size}{Title Slide Background Image Size, defaults to "cover" if background image is set. Defaults to \code{NULL}. Modifies the \code{.title-slide} class.}
 
-\item{title_slide_background_position}{Title Slide Background Image Position. Defaults to NA. Modifies the \code{.title-slide} class.}
+\item{title_slide_background_position}{Title Slide Background Image Position. Defaults to \code{NULL}. Modifies the \code{.title-slide} class.}
 
-\item{footnote_color}{Footnote text color (if \code{NA}, then it will be the same color as \code{text_color}). Defaults to NA. Modifies the \code{.footnote} class.}
+\item{footnote_color}{Footnote text color (if \code{NA}, then it will be the same color as \code{text_color}). Defaults to \code{NULL}. Modifies the \code{.footnote} class.}
 
 \item{footnote_font_size}{Footnote font size. Defaults to 0.9em. Modifies the \code{.footnote} class.}
 

@@ -24,5 +24,6 @@ Imports:
     purrr,
     tibble,
     glue,
-    stringr
+    stringr,
+    whisker
 VignetteBuilder: knitr

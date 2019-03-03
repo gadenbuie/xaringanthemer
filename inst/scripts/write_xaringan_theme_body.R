@@ -28,21 +28,28 @@ for (var in f_args[grepl("font_google$", f_args)]) {
   }
 }
 
-# Handle background-image defaults
-if (!is.na(background_image)) {
-  if (is.na(background_size)) background_size <- ifelse(
-    is.na(background_position),
-    "cover",
-    "100%"
-  )
+extra_font_imports <- if (is.null(extra_fonts)) "" else list2fonts(extra_fonts)
+
+# convert NA arguments to NULL
+for (var in f_args) {
+  val <- eval(parse(text = var))
+  if (is.null(val)) next
+  is_na <- is.na(val)
+  if (is_na) assign(var, NULL)
 }
 
-extra_font_imports <- if (is.null(extra_fonts)) "" else list2fonts(extra_fonts)
+# prepare variables for template
+backround_size_fallback <- if (is.null(background_position)) "cover" else "100%"
+background_size <- background_image %??% (background_size %||% background_size_fallback)
+title_slide_background_size <- title_slide_background_size %||% (
+  title_slide_background_image %??% "cover"
+)
+table_row_even_background_color <- table_row_even_background_color %||% background_color
 
 tf <- system.file("resources", "template.css", package = "xaringanthemer")
 template <- readLines(tf, warn = FALSE)
 template <- paste(template, collapse = "\n")
-x <- glue::glue(template, .open = "{{", .close = "}}")
+x <- whisker::whisker.render(template)
 writeLines(x, con = outfile)
 if (!is.null(extra_css)) write_extra_css(extra_css, outfile)
 outfile

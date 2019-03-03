@@ -1,5 +1,7 @@
 `%||%` <- function(x, y) if (is.null(x)) y else x
 
+`%??%` <- function(x, y) if (!is.null(x)) y else NULL
+
 #' @title Generate lighter or darker version of a color
 #' @description Produces a linear blend of the color with white or black.
 #' @param color_hex A character string representing a hex color

@@ -2,15 +2,15 @@
 #' @param header_color Header Color. Defaults to #000. Modifies the `h1, h2, h3` elements.
 #' @param background_color Slide Background Color. Defaults to #FFF. Modifies the `.remark-slide-content` class.
 #' @param link_color Link Color. Defaults to rgb(249, 38, 114). Modifies the `a, a > code` elements.
-#' @param text_bold_color Bold Text Color. Defaults to NA. Modifies the `strong` element.
+#' @param text_bold_color Bold Text Color. Defaults to `NULL`. Modifies the `strong` element.
 #' @param text_slide_number_color Slide Number Color. Defaults to `inverse_background_color`. Modifies the `.remark-slide-number` class.
 #' @param padding Slide Padding in `top right [bottom left]` format. Defaults to 1em 4em 1em 4em. Modifies the `.remark-slide-content` class.
-#' @param background_image Background image applied to each *and every* slide. Set `title_slide_background_image = "none"` to remove the background image from the title slide.. Defaults to NA. Modifies the `.remark-slide-content` class.
-#' @param background_size Background image size, requires `background_image` to be set. If `background_image` is set, `background_size` will default to `cover` so the backround fills the screen. If both `background_image` and `background_position` are set, will default to 100 percent.. Defaults to NA. Modifies the `.remark-slide-content` class.
-#' @param background_position Background image position, requires `background_image` to be set, and it is recommended to adjust `background_size`.. Defaults to NA. Modifies the `.remark-slide-content` class.
+#' @param background_image Background image applied to each *and every* slide. Set `title_slide_background_image = "none"` to remove the background image from the title slide.. Defaults to `NULL`. Modifies the `.remark-slide-content` class.
+#' @param background_size Background image size, requires `background_image` to be set. If `background_image` is set, `background_size` will default to `cover` so the backround fills the screen. If both `background_image` and `background_position` are set, will default to 100 percent.. Defaults to `NULL`. Modifies the `.remark-slide-content` class.
+#' @param background_position Background image position, requires `background_image` to be set, and it is recommended to adjust `background_size`.. Defaults to `NULL`. Modifies the `.remark-slide-content` class.
 #' @param code_highlight_color Code Line Highlight. Defaults to rgba(255,255,0,0.5). Modifies the `.remark-code-line-highlighted` class.
 #' @param code_inline_color Inline Code Color. Defaults to #000. Modifies the `.remark-inline-code` class.
-#' @param code_inline_background_color Inline Code Background Color. Defaults to NA. Modifies the `.remark-inline-code` class.
+#' @param code_inline_background_color Inline Code Background Color. Defaults to `NULL`. Modifies the `.remark-inline-code` class.
 #' @param code_inline_font_size Inline Code Text Font Size. Defaults to 1em. Modifies the `.remark-inline-code` class.
 #' @param inverse_background_color Inverse Background Color. Defaults to #272822. Modifies the `.inverse` class.
 #' @param inverse_text_color Inverse Text Color. Defaults to #d6d6d6. Modifies the `.inverse` class.
@@ -18,10 +18,10 @@
 #' @param inverse_header_color Inverse Header Color. Defaults to #f3f3f3. Modifies the `.inverse h1, .inverse h2, .inverse h3` classes.
 #' @param title_slide_text_color Title Slide Text Color. Defaults to `inverse_text_color`. Modifies the `.title-slide` class.
 #' @param title_slide_background_color Title Slide Background Color. Defaults to `inverse_background_color`. Modifies the `.title-slide` class.
-#' @param title_slide_background_image Title Slide Background Image URL. Defaults to NA. Modifies the `.title-slide` class.
-#' @param title_slide_background_size Title Slide Background Image Size, defaults to "cover" if background image is set. Defaults to NA. Modifies the `.title-slide` class.
-#' @param title_slide_background_position Title Slide Background Image Position. Defaults to NA. Modifies the `.title-slide` class.
-#' @param footnote_color Footnote text color (if `NA`, then it will be the same color as `text_color`). Defaults to NA. Modifies the `.footnote` class.
+#' @param title_slide_background_image Title Slide Background Image URL. Defaults to `NULL`. Modifies the `.title-slide` class.
+#' @param title_slide_background_size Title Slide Background Image Size, defaults to "cover" if background image is set. Defaults to `NULL`. Modifies the `.title-slide` class.
+#' @param title_slide_background_position Title Slide Background Image Position. Defaults to `NULL`. Modifies the `.title-slide` class.
+#' @param footnote_color Footnote text color (if `NA`, then it will be the same color as `text_color`). Defaults to `NULL`. Modifies the `.footnote` class.
 #' @param footnote_font_size Footnote font size. Defaults to 0.9em. Modifies the `.footnote` class.
 #' @param footnote_position_bottom Footnote location from bottom of screen. Defaults to 3em. Modifies the `.footnote` class.
 #' @param left_column_subtle_color Left Column Text (not last). Defaults to #777. Modifies the `.left-column h2, .left-column h3` classes.
@@ -60,15 +60,15 @@ write_xaringan_theme <- function(
   header_color = "#000",
   background_color = "#FFF",
   link_color = "rgb(249, 38, 114)",
-  text_bold_color = NA,
+  text_bold_color = NULL,
   text_slide_number_color = inverse_background_color,
   padding = "1em 4em 1em 4em",
-  background_image = NA,
-  background_size = NA,
-  background_position = NA,
+  background_image = NULL,
+  background_size = NULL,
+  background_position = NULL,
   code_highlight_color = "rgba(255,255,0,0.5)",
   code_inline_color = "#000",
-  code_inline_background_color = NA,
+  code_inline_background_color = NULL,
   code_inline_font_size = "1em",
   inverse_background_color = "#272822",
   inverse_text_color = "#d6d6d6",
@@ -76,10 +76,10 @@ write_xaringan_theme <- function(
   inverse_header_color = "#f3f3f3",
   title_slide_text_color = inverse_text_color,
   title_slide_background_color = inverse_background_color,
-  title_slide_background_image = NA,
-  title_slide_background_size = NA,
-  title_slide_background_position = NA,
-  footnote_color = NA,
+  title_slide_background_image = NULL,
+  title_slide_background_size = NULL,
+  title_slide_background_position = NULL,
+  footnote_color = NULL,
   footnote_font_size = "0.9em",
   footnote_position_bottom = "3em",
   left_column_subtle_color = "#777",
@@ -142,21 +142,28 @@ write_xaringan_theme <- function(
     }
   }
   
-  # Handle background-image defaults
-  if (!is.na(background_image)) {
-    if (is.na(background_size)) background_size <- ifelse(
-      is.na(background_position),
-      "cover",
-      "100%"
-    )
+  extra_font_imports <- if (is.null(extra_fonts)) "" else list2fonts(extra_fonts)
+  
+  # convert NA arguments to NULL
+  for (var in f_args) {
+    val <- eval(parse(text = var))
+    if (is.null(val)) next
+    is_na <- is.na(val)
+    if (is_na) assign(var, NULL)
   }
   
-  extra_font_imports <- if (is.null(extra_fonts)) "" else list2fonts(extra_fonts)
+  # prepare variables for template
+  backround_size_fallback <- if (is.null(background_position)) "cover" else "100%"
+  background_size <- background_image %??% (background_size %||% background_size_fallback)
+  title_slide_background_size <- title_slide_background_size %||% (
+    title_slide_background_image %??% "cover"
+  )
+  table_row_even_background_color <- table_row_even_background_color %||% background_color
   
   tf <- system.file("resources", "template.css", package = "xaringanthemer")
   template <- readLines(tf, warn = FALSE)
   template <- paste(template, collapse = "\n")
-  x <- glue::glue(template, .open = "{{", .close = "}}")
+  x <- whisker::whisker.render(template)
   writeLines(x, con = outfile)
   if (!is.null(extra_css)) write_extra_css(extra_css, outfile)
   outfile

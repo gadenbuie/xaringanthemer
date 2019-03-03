@@ -19,10 +19,10 @@
 @import url({{text_font_url}});
 @import url({{header_font_url}});
 @import url({{code_font_url}});
-{{extra_font_imports}}
+{{#extra_font_imports}}{{extra_font_imports}}{{/extra_font_imports}}
 
 body {
-  font-family: {{paste(text_font_family, text_font_family_fallback, text_font_base, sep = ", ")}};
+  font-family: {{body_font_family}};
   font-weight: {{text_font_weight}};
   color: {{text_color}};
 }
@@ -34,9 +34,11 @@ h1, h2, h3 {
 .remark-slide-content {
   background-color: {{background_color}};
   font-size: {{text_font_size}};
-  {{ifelse(!is.na(background_image), paste0("background-image: url(", background_image, ");"), "")}}
-  {{ifelse(!is.na(background_image) && !is.na(background_size), paste0("background-size: ", background_size, ";"), "")}}
-  {{ifelse(!is.na(background_image) && !is.na(background_position), paste0("background-position: ", background_position, ";"), "")}}
+  {{#background_image}}
+  background-image: url({{background_image}});
+  {{#background_size}}background-size: {{background_size}};{{/background_size}}
+  {{#background_position}}background-position: {{background_position}};{{/background_position}}
+  {{/background_image}}
   padding: {{padding}};
 }
 .remark-slide-content h1 {
@@ -55,23 +57,27 @@ h1, h2, h3 {
   font-size: {{code_font_size}};
 }
 .remark-inline-code {
+  {{#code_inline_color}}color: {{code_inline_color}};{{/code_inline_color}}
+  {{#code_inline_background_color}}
+  background-color: {{code_inline_background_color}};
+  padding: 2px;
+  {{/code_inline_background_color}}
   font-size: {{code_inline_font_size}};
-  {{ifelse(!is.na(code_inline_color), paste0("color: ", code_inline_color, ";"), "")}}
-  {{ifelse(!is.na(code_inline_background_color), paste0("background-color: ", code_inline_background_color, ";"), "")}}
-  {{ifelse(!is.na(code_inline_background_color), "padding: 2px;", "")}}
 }
 .remark-slide-number {
   color: {{text_slide_number_color}};
   opacity: 1;
   font-size: {{text_slide_number_font_size}};
 }
-{{ifelse(!is.na(text_bold_color), paste0("strong{color:", text_bold_color,";}"), "")}}
+{{#text_bold_color}}
+strong { color: {{text_bold_color}}; }
+{{/text_bold_color}}
 a, a > code {
   color: {{link_color}};
   text-decoration: none;
 }
 .footnote {
-  {{ifelse(!is.na(footnote_color), paste0("color: ", footnote_color, ";"), "")}}
+  {{#footnote_color}}color: {{footnote_color}};{{/footnote_color}}
   position: absolute;
   bottom: {{footnote_position_bottom}};
   padding-right: 4em;
@@ -83,7 +89,7 @@ a, a > code {
 .inverse {
   background-color: {{inverse_background_color}};
   color: {{inverse_text_color}};
-  {{ifelse(inverse_text_shadow, "text-shadow: 0 0 20px #333;", "")}}
+  {{#inverse_text_shadow}}text-shadow: 0 0 20px #333;{{/inverse_text_shadow}}
 }
 .inverse h1, .inverse h2, .inverse h3 {
   color: {{inverse_header_color}};
@@ -93,9 +99,9 @@ a, a > code {
 }
 .title-slide {
   background-color: {{title_slide_background_color}};
-  {{ifelse(!is.na(title_slide_background_image), paste0("background-image: url(", title_slide_background_image, ");"), "")}}
-  {{ifelse(!is.na(title_slide_background_size), paste0("background-size: ", title_slide_background_size, ";"), ifelse(!is.na(title_slide_background_image), "background-size: cover;", ""))}}
-  {{ifelse(!is.na(title_slide_background_position), paste0("background-position: ", title_slide_background_position, ";"), "")}}
+  {{#title_slide_background_image}}background-image: url("{{title_slide_background_image}}");{{/title_slide_background_image}}
+  {{#title_slide_background_size}}background-size: {{title_slide_background_size}};{{/title_slide_background_size}}
+  {{#title_slide_background_position}}background-position: {{title_slide_background_position}};{{/title_slide_background_position}}
 }
 .title-slide .remark-slide-number {
   display: none;
@@ -140,9 +146,15 @@ blockquote {
   border-top: 1px solid {{table_border_color}};
   border-bottom: 1px solid {{table_border_color}};
 }
-.remark-slide table thead th { border-bottom: 1px solid {{table_row_border_color}}; }
-th, td { padding: 5px; }
-.remark-slide thead, .remark-slide tfoot, .remark-slide tr:nth-child(even) { background: {{table_row_even_background_color}} }
+.remark-slide table thead th {
+  border-bottom: 1px solid {{table_row_border_color}};
+}
+th, td {
+  padding: 5px;
+}
+.remark-slide thead, .remark-slide tfoot, .remark-slide tr:nth-child(even) {
+  background: {{table_row_even_background_color}}
+}
 table.dataTable tbody {
   background-color: {{background_color}};
   color: {{text_color}};
@@ -151,7 +163,7 @@ table.dataTable.display tbody tr.odd {
   background-color: {{background_color}};
 }
 table.dataTable.display tbody tr.even {
-  background-color: {{ifelse(!is.na(table_row_even_background_color), table_row_even_background_color, background_color)}};
+  background-color: {{table_row_even_background_color}}
 }
 table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
   background-color: rgba(255, 255, 255, 0.5);
