@@ -4,24 +4,28 @@
 \alias{duo_accent_inverse}
 \title{Duotone Accent Inverse Theme}
 \usage{
-duo_accent_inverse(primary_color = "#006747", secondary_color = "#CFC493",
-  white_color = "#FFFFFF", black_color = "#000000",
-  text_color = white_color, header_color = primary_color,
-  background_color = black_color,
+duo_accent_inverse(primary_color = "#006747",
+  secondary_color = "#CFC493", white_color = "#FFFFFF",
+  black_color = "#000000", text_color = white_color,
+  header_color = primary_color, background_color = black_color,
   link_color = choose_dark_or_light(secondary_color, secondary_color,
   primary_color), text_bold_color = choose_dark_or_light(secondary_color,
-  secondary_color, primary_color), text_slide_number_color = primary_color,
-  padding = "1em 4em 1em 4em", background_image = NA,
-  background_size = NA, background_position = NA,
+  secondary_color, primary_color),
+  text_slide_number_color = primary_color, padding = "1em 4em 1em 4em",
+  background_image = NA, background_size = NA,
+  background_position = NA,
   code_highlight_color = "rgba(255,255,0,0.5)",
-  code_inline_color = choose_dark_or_light(secondary_color, secondary_color,
-  primary_color), code_inline_background_color = NA,
-  code_inline_font_size = "1em", inverse_background_color = secondary_color,
+  code_inline_color = choose_dark_or_light(secondary_color,
+  secondary_color, primary_color), code_inline_background_color = NA,
+  code_inline_font_size = "1em",
+  inverse_background_color = secondary_color,
   inverse_text_color = choose_dark_or_light(secondary_color, black_color,
   white_color), inverse_text_shadow = FALSE,
-  inverse_header_color = choose_dark_or_light(secondary_color, black_color,
-  white_color), title_slide_text_color = choose_dark_or_light(primary_color,
-  black_color, white_color), title_slide_background_color = primary_color,
+  inverse_header_color = choose_dark_or_light(secondary_color,
+  black_color, white_color),
+  title_slide_text_color = choose_dark_or_light(primary_color,
+  black_color, white_color),
+  title_slide_background_color = primary_color,
   title_slide_background_image = NA, title_slide_background_size = NA,
   title_slide_background_position = NA, footnote_color = NA,
   footnote_font_size = "0.9em", footnote_position_bottom = "3em",
@@ -38,13 +42,15 @@ duo_accent_inverse(primary_color = "#006747", secondary_color = "#CFC493",
   text_font_url = "https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic",
   text_font_family_fallback = "'Palatino Linotype', 'Book Antiqua', Palatino, 'Microsoft YaHei', 'Songti SC'",
   text_font_base = "serif", header_font_google = NULL,
-  header_font_family = "'Yanone Kaffeesatz'", header_font_weight = "normal",
+  header_font_family = "'Yanone Kaffeesatz'",
+  header_font_weight = "normal",
   header_font_url = "https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz",
   code_font_google = NULL, code_font_family = "'Source Code Pro'",
   code_font_size = "0.9em",
   code_font_url = "https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700",
-  code_font_family_fallback = "'Lucida Console', Monaco", extra_css = NULL,
-  extra_fonts = NULL, outfile = "xaringan-themer.css")
+  code_font_family_fallback = "'Lucida Console', Monaco",
+  extra_css = NULL, extra_fonts = NULL,
+  outfile = "xaringan-themer.css")
 }
 \arguments{
 \item{primary_color}{Duotone Primary Color. Defaults to #006747. Modifies multiple CSS classes or elements.}
@@ -171,7 +177,7 @@ can be either a URL as a character string or a call to
 }
 \description{
 An "inverted" default xaringan theme with a two colors used
-  for color accents on select elements (headers, bold text, etc.).
+for color accents on select elements (headers, bold text, etc.).
 }
 \seealso{
 Other themes: \code{\link{duo_accent}}, \code{\link{duo}},
@@ -184,3 +190,5 @@ Other themes: \code{\link{duo_accent}}, \code{\link{duo}},
 Other Duotone themes: \code{\link{duo_accent}},
   \code{\link{duo}}
 }
+\concept{Duotone themes}
+\concept{themes}

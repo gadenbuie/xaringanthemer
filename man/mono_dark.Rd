@@ -4,8 +4,9 @@
 \alias{mono_dark}
 \title{Monotone Dark Theme}
 \usage{
-mono_dark(base_color = "#cbf7ed", white_color = lighten_color(base_color,
-  0.8), black_color = darken_color(base_color, 0.85),
+mono_dark(base_color = "#cbf7ed",
+  white_color = lighten_color(base_color, 0.8),
+  black_color = darken_color(base_color, 0.85),
   text_color = white_color, header_color = base_color,
   background_color = black_color, link_color = base_color,
   text_bold_color = base_color, text_slide_number_color = base_color,
@@ -33,13 +34,15 @@ mono_dark(base_color = "#cbf7ed", white_color = lighten_color(base_color,
   text_font_url = "https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic",
   text_font_family_fallback = "'Palatino Linotype', 'Book Antiqua', Palatino, 'Microsoft YaHei', 'Songti SC'",
   text_font_base = "serif", header_font_google = NULL,
-  header_font_family = "'Yanone Kaffeesatz'", header_font_weight = "normal",
+  header_font_family = "'Yanone Kaffeesatz'",
+  header_font_weight = "normal",
   header_font_url = "https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz",
   code_font_google = NULL, code_font_family = "'Source Code Pro'",
   code_font_size = "0.9em",
   code_font_url = "https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700",
-  code_font_family_fallback = "'Lucida Console', Monaco", extra_css = NULL,
-  extra_fonts = NULL, outfile = "xaringan-themer.css")
+  code_font_family_fallback = "'Lucida Console', Monaco",
+  extra_css = NULL, extra_fonts = NULL,
+  outfile = "xaringan-themer.css")
 }
 \arguments{
 \item{base_color}{Monotone Base Color, works best with a light color.. Defaults to #cbf7ed. Modifies multiple CSS classes or elements.}
@@ -177,3 +180,5 @@ Other themes: \code{\link{duo_accent_inverse}},
 Other Monotone themes: \code{\link{mono_accent_inverse}},
   \code{\link{mono_accent}}, \code{\link{mono_light}}
 }
+\concept{Monotone themes}
+\concept{themes}

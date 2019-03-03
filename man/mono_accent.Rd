@@ -9,7 +9,8 @@ mono_accent(base_color = "#43418A", white_color = "#FFFFFF",
   header_color = base_color, background_color = white_color,
   link_color = base_color, text_bold_color = base_color,
   text_slide_number_color = base_color, padding = "1em 4em 1em 4em",
-  background_image = NA, background_size = NA, background_position = NA,
+  background_image = NA, background_size = NA,
+  background_position = NA,
   code_highlight_color = "rgba(255,255,0,0.5)",
   code_inline_color = base_color, code_inline_background_color = NA,
   code_inline_font_size = "1em", inverse_background_color = base_color,
@@ -32,13 +33,15 @@ mono_accent(base_color = "#43418A", white_color = "#FFFFFF",
   text_font_url = "https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic",
   text_font_family_fallback = "'Palatino Linotype', 'Book Antiqua', Palatino, 'Microsoft YaHei', 'Songti SC'",
   text_font_base = "serif", header_font_google = NULL,
-  header_font_family = "'Yanone Kaffeesatz'", header_font_weight = "normal",
+  header_font_family = "'Yanone Kaffeesatz'",
+  header_font_weight = "normal",
   header_font_url = "https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz",
   code_font_google = NULL, code_font_family = "'Source Code Pro'",
   code_font_size = "0.9em",
   code_font_url = "https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700",
-  code_font_family_fallback = "'Lucida Console', Monaco", extra_css = NULL,
-  extra_fonts = NULL, outfile = "xaringan-themer.css")
+  code_font_family_fallback = "'Lucida Console', Monaco",
+  extra_css = NULL, extra_fonts = NULL,
+  outfile = "xaringan-themer.css")
 }
 \arguments{
 \item{base_color}{Monotone Base Color, works best with a strong color.. Defaults to #43418A. Modifies multiple CSS classes or elements.}
@@ -163,7 +166,7 @@ can be either a URL as a character string or a call to
 }
 \description{
 The default xaringan theme with a single color used for color
-  accents on select elements (headers, bold text, etc.).
+accents on select elements (headers, bold text, etc.).
 }
 \seealso{
 Other themes: \code{\link{duo_accent_inverse}},
@@ -177,3 +180,5 @@ Other themes: \code{\link{duo_accent_inverse}},
 Other Monotone themes: \code{\link{mono_accent_inverse}},
   \code{\link{mono_dark}}, \code{\link{mono_light}}
 }
+\concept{Monotone themes}
+\concept{themes}

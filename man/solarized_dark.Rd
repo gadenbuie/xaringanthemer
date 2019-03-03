@@ -12,7 +12,8 @@ solarized_dark(text_color = "#839496", header_color = "#dc322f",
   code_highlight_color = "#268bd240", code_inline_color = "#6c71c4",
   code_inline_background_color = NA, code_inline_font_size = "1em",
   inverse_background_color = "#fdf6e3", inverse_text_color = "#002b36",
-  inverse_text_shadow = FALSE, inverse_header_color = inverse_text_color,
+  inverse_text_shadow = FALSE,
+  inverse_header_color = inverse_text_color,
   title_slide_text_color = inverse_text_color,
   title_slide_background_color = inverse_background_color,
   title_slide_background_image = NA, title_slide_background_size = NA,
@@ -20,8 +21,8 @@ solarized_dark(text_color = "#839496", header_color = "#dc322f",
   footnote_font_size = "0.9em", footnote_position_bottom = "3em",
   left_column_subtle_color = "#586e75",
   left_column_selected_color = "#93a1a1",
-  blockquote_left_border_color = "#cb4b16", table_border_color = "#657b83",
-  table_row_border_color = "#657b83",
+  blockquote_left_border_color = "#cb4b16",
+  table_border_color = "#657b83", table_row_border_color = "#657b83",
   table_row_even_background_color = "#073642", text_font_size = "20px",
   header_h1_font_size = "55px", header_h2_font_size = "45px",
   header_h3_font_size = "35px", text_slide_number_font_size = "0.9em",
@@ -30,13 +31,15 @@ solarized_dark(text_color = "#839496", header_color = "#dc322f",
   text_font_url = "https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic",
   text_font_family_fallback = "'Palatino Linotype', 'Book Antiqua', Palatino, 'Microsoft YaHei', 'Songti SC'",
   text_font_base = "serif", header_font_google = NULL,
-  header_font_family = "'Yanone Kaffeesatz'", header_font_weight = "normal",
+  header_font_family = "'Yanone Kaffeesatz'",
+  header_font_weight = "normal",
   header_font_url = "https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz",
   code_font_google = NULL, code_font_family = "'Source Code Pro'",
   code_font_size = "0.9em",
   code_font_url = "https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700",
-  code_font_family_fallback = "'Lucida Console', Monaco", extra_css = NULL,
-  extra_fonts = NULL, outfile = "xaringan-themer.css")
+  code_font_family_fallback = "'Lucida Console', Monaco",
+  extra_css = NULL, extra_fonts = NULL,
+  outfile = "xaringan-themer.css")
 }
 \arguments{
 \item{text_color}{Text Color. Defaults to #839496. Modifies the \code{body} element.}
@@ -155,8 +158,8 @@ can be either a URL as a character string or a call to
 }
 \description{
 A dark theme based around on the solarized color scheme.
-  Works well with "\code{highlightStyle: solarized-dark}" or
-  "\code{highlighStyle: solarized-light}".
+Works well with "\code{highlightStyle: solarized-dark}" or
+"\code{highlighStyle: solarized-light}".
 }
 \references{
 \url{http://ethanschoonover.com/solarized}
@@ -171,3 +174,5 @@ Other themes: \code{\link{duo_accent_inverse}},
 
 Other Solarized themes: \code{\link{solarized_light}}
 }
+\concept{Solarized themes}
+\concept{themes}

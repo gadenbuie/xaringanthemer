@@ -5,9 +5,10 @@
 \title{List Valid Google Language Codes}
 \usage{
 google_language_codes(language_codes = c("latin", "latin-ext", "sinhala",
-  "greek", "hebrew", "vietnamese", "cyrillic", "cyrillic-ext", "devanagari",
-  "arabic", "khmer", "tamil", "greek-ext", "thai", "bengali", "gujarati",
-  "oriya", "malayalam", "gurmukhi", "kannada", "telugu", "myanmar"))
+  "greek", "hebrew", "vietnamese", "cyrillic", "cyrillic-ext",
+  "devanagari", "arabic", "khmer", "tamil", "greek-ext", "thai", "bengali",
+  "gujarati", "oriya", "malayalam", "gurmukhi", "kannada", "telugu",
+  "myanmar"))
 }
 \arguments{
 \item{language_codes}{Vector of potential Google language codes}

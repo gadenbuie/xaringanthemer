@@ -7,8 +7,8 @@
 \title{xaringanthemer: Xaringan CSS Theme Generator}
 \description{
 Create and edit your xaringan CSS files from within your R
-R Markdown slide source. More technically, this package actually creates
-valid remarkjs CSS themes that are easily used by xarangan.
+    R Markdown slide source. More technically, this package actually creates
+    valid remarkjs CSS themes that are easily used by xarangan.
 }
 \seealso{
 Useful links:
