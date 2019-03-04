@@ -153,6 +153,7 @@ write_xaringan_theme <- function(
   }
   
   # prepare variables for template
+  body_font_family <- paste(c(text_font_family, text_font_family_fallback, text_font_base), collapse = ', ')
   backround_size_fallback <- if (is.null(background_position)) "cover" else "100%"
   background_size <- background_image %??% (background_size %||% background_size_fallback)
   title_slide_background_size <- title_slide_background_size %||% (

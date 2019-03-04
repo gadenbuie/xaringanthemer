@@ -34,9 +34,6 @@ h1, h2, h3 {
 .remark-slide-content {
   background-color: #1F4257;
   font-size: 20px;
-  
-  
-  
   padding: 1em 4em 1em 4em;
 }
 .remark-slide-content h1 {
@@ -55,17 +52,15 @@ h1, h2, h3 {
   font-size: 0.9em;
 }
 .remark-inline-code {
-  font-size: 1em;
   color: #F97B64;
-  
-  
+  font-size: 1em;
 }
 .remark-slide-number {
   color: #FEFDFD;
   opacity: 1;
   font-size: 0.9em;
 }
-strong{color:#F97B64;}
+strong { color: #F97B64; }
 a, a > code {
   color: #F97B64;
   text-decoration: none;
@@ -140,9 +135,15 @@ blockquote {
   border-top: 1px solid #666;
   border-bottom: 1px solid #666;
 }
-.remark-slide table thead th { border-bottom: 1px solid #ddd; }
-th, td { padding: 5px; }
-.remark-slide thead, .remark-slide tfoot, .remark-slide tr:nth-child(even) { background: #627A89 }
+.remark-slide table thead th {
+  border-bottom: 1px solid #ddd;
+}
+th, td {
+  padding: 5px;
+}
+.remark-slide thead, .remark-slide tfoot, .remark-slide tr:nth-child(even) {
+  background: #627A89;
+}
 table.dataTable tbody {
   background-color: #1F4257;
   color: #FEFDFD;
