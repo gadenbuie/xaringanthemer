@@ -1,6 +1,6 @@
 context("test-themes")
 
-test_theme_file <- function(theme = "duo") {
+test_theme_file <- function(theme = "duo", theme_file = paste0(theme, ".css"), ...) {
   theme_fun <- switch(
     theme,
     "duo" = duo,
@@ -16,9 +16,8 @@ test_theme_file <- function(theme = "duo") {
   )
 
   tmpfile <- tempfile()
-  theme_file <- paste0(theme, ".css")
 
-  theme_fun(outfile = tmpfile)
+  theme_fun(outfile = tmpfile, ...)
   theme_css <- readLines(tmpfile)
   # Mask package version in test files
   theme_css <- sub("( \\*  Version: )[\\d.-]+", "\\1a.b.c.d.eeee", theme_css, perl = TRUE)
@@ -36,3 +35,8 @@ test_that("mono_light()", test_theme_file("mono_light"))
 test_that("solarized_dark()", test_theme_file("solarized_dark"))
 test_that("solarized_light()", test_theme_file("solarized_light"))
 
+test_that("header_background_enable = TRUE", {
+  test_theme_file("duo", "duo-header_bg.css", header_background_enable = TRUE)
+  test_theme_file("mono_light", "mono_light-header_bg.css", header_background_enable = TRUE)
+  test_theme_file("solarized_dark", "solarized_dark-header_bg.css", header_background_enable = TRUE)
+})

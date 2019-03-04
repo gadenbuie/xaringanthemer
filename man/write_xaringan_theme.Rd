@@ -8,7 +8,7 @@ write_xaringan_theme(text_color = "#000", header_color = "#000",
   background_color = "#FFF", link_color = "rgb(249, 38, 114)",
   text_bold_color = NULL,
   text_slide_number_color = inverse_background_color,
-  padding = "1em 4em 1em 4em", background_image = NULL,
+  padding = "1rem 4rem 1rem 4rem", background_image = NULL,
   background_size = NULL, background_position = NULL,
   code_highlight_color = "rgba(255,255,0,0.5)",
   code_inline_color = "#000", code_inline_background_color = NULL,
@@ -27,7 +27,13 @@ write_xaringan_theme(text_color = "#000", header_color = "#000",
   table_border_color = "#666", table_row_border_color = "#ddd",
   table_row_even_background_color = "#eee", text_font_size = "20px",
   header_h1_font_size = "55px", header_h2_font_size = "45px",
-  header_h3_font_size = "35px", text_slide_number_font_size = "0.9em",
+  header_h3_font_size = "35px", header_background_enable = FALSE,
+  header_background_color = header_color,
+  header_background_text_color = background_color,
+  header_background_padding = "2rem 4rem 1.5rem 4rem",
+  header_background_content_padding_top = "7rem",
+  header_background_ignore_classes = c("normal", "inverse", "title",
+  "middle", "bottom"), text_slide_number_font_size = "0.9em",
   text_font_google = NULL, text_font_family = "'Droid Serif'",
   text_font_weight = "normal",
   text_font_url = "https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic",
@@ -56,7 +62,7 @@ write_xaringan_theme(text_color = "#000", header_color = "#000",
 
 \item{text_slide_number_color}{Slide Number Color. Defaults to \code{inverse_background_color}. Modifies the \code{.remark-slide-number} class.}
 
-\item{padding}{Slide Padding in \code{top right [bottom left]} format. Defaults to 1em 4em 1em 4em. Modifies the \code{.remark-slide-content} class.}
+\item{padding}{Slide Padding in \code{top right [bottom left]} format. Defaults to 1rem 4rem 1rem 4rem. Modifies the \code{.remark-slide-content} class.}
 
 \item{background_image}{Background image applied to each \emph{and every} slide. Set \code{title_slide_background_image = "none"} to remove the background image from the title slide.. Defaults to \code{NULL}. Modifies the \code{.remark-slide-content} class.}
 
@@ -115,6 +121,18 @@ write_xaringan_theme(text_color = "#000", header_color = "#000",
 \item{header_h2_font_size}{h2 Header Text Font Size. Defaults to 45px. Modifies the \code{.remark-slide-content h2} class.}
 
 \item{header_h3_font_size}{h3 Header Text Font Size. Defaults to 35px. Modifies the \code{.remark-slide-content h3} class.}
+
+\item{header_background_enable}{Enable Header Background Under First h1 Slide Element. Defaults to \code{FALSE}. Modifies the `` element.}
+
+\item{header_background_color}{Background Color for h1 Header with Background. Defaults to \code{header_color}. Modifies the \code{.remark-slide-content h1} class.}
+
+\item{header_background_text_color}{Text Color for h1 Header with Background. Defaults to \code{background_color}. Modifies the \code{.remark-slide-content h1} class.}
+
+\item{header_background_padding}{Padding for h1 Header with Background. Defaults to 2rem 4rem 1.5rem 4rem. Modifies the \code{.remark-slide-content h1} class.}
+
+\item{header_background_content_padding_top}{Top Padding for Content in Slide with Header with Background. Defaults to 7rem. Modifies the \code{.remark-slide-content} class.}
+
+\item{header_background_ignore_classes}{Slide Classes Where Header with Background will not be Applied. Defaults to \code{c('normal', 'inverse', 'title', 'middle', 'bottom')}. Modifies the \code{.remark-slide-content} class.}
 
 \item{text_slide_number_font_size}{Slide Number Text Font Size. Defaults to 0.9em. Modifies the \code{.remark-slide-number} class.}
 

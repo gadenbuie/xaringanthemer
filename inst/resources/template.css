@@ -177,6 +177,25 @@ table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
   color: {{text_color}} !important;
 }
 
+{{#header_background}}
+/* Slide Header Background for h1 elements */
+.remark-slide-content{{#ignore}}:not({{class}}){{/ignore}} > h1 {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: {{background_color}};
+  color: {{text_color}};
+  padding: {{padding}};
+  margin-top: 0;
+  box-sizing: border-box;
+}
+.remark-slide-content{{#ignore}}:not({{class}}){{/ignore}} {
+  padding-top: {{content_padding_top}};
+}
+
+{{/header_background}}
 @page { margin: 0; }
 @media print {
   .remark-slide-scaler {

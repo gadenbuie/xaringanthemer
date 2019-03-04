@@ -4,7 +4,7 @@
 #' @param link_color Link Color. Defaults to rgb(249, 38, 114). Modifies the `a, a > code` elements.
 #' @param text_bold_color Bold Text Color. Defaults to `NULL`. Modifies the `strong` element.
 #' @param text_slide_number_color Slide Number Color. Defaults to `inverse_background_color`. Modifies the `.remark-slide-number` class.
-#' @param padding Slide Padding in `top right [bottom left]` format. Defaults to 1em 4em 1em 4em. Modifies the `.remark-slide-content` class.
+#' @param padding Slide Padding in `top right [bottom left]` format. Defaults to 1rem 4rem 1rem 4rem. Modifies the `.remark-slide-content` class.
 #' @param background_image Background image applied to each *and every* slide. Set `title_slide_background_image = "none"` to remove the background image from the title slide.. Defaults to `NULL`. Modifies the `.remark-slide-content` class.
 #' @param background_size Background image size, requires `background_image` to be set. If `background_image` is set, `background_size` will default to `cover` so the backround fills the screen. If both `background_image` and `background_position` are set, will default to 100 percent.. Defaults to `NULL`. Modifies the `.remark-slide-content` class.
 #' @param background_position Background image position, requires `background_image` to be set, and it is recommended to adjust `background_size`.. Defaults to `NULL`. Modifies the `.remark-slide-content` class.
@@ -34,6 +34,12 @@
 #' @param header_h1_font_size h1 Header Text Font Size. Defaults to 55px. Modifies the `.remark-slide-content h1` class.
 #' @param header_h2_font_size h2 Header Text Font Size. Defaults to 45px. Modifies the `.remark-slide-content h2` class.
 #' @param header_h3_font_size h3 Header Text Font Size. Defaults to 35px. Modifies the `.remark-slide-content h3` class.
+#' @param header_background_enable Enable Header Background Under First h1 Slide Element. Defaults to `FALSE`. Modifies the `` element.
+#' @param header_background_color Background Color for h1 Header with Background. Defaults to `header_color`. Modifies the `.remark-slide-content h1` class.
+#' @param header_background_text_color Text Color for h1 Header with Background. Defaults to `background_color`. Modifies the `.remark-slide-content h1` class.
+#' @param header_background_padding Padding for h1 Header with Background. Defaults to 2rem 4rem 1.5rem 4rem. Modifies the `.remark-slide-content h1` class.
+#' @param header_background_content_padding_top Top Padding for Content in Slide with Header with Background. Defaults to 7rem. Modifies the `.remark-slide-content` class.
+#' @param header_background_ignore_classes Slide Classes Where Header with Background will not be Applied. Defaults to `c('normal', 'inverse', 'title', 'middle', 'bottom')`. Modifies the `.remark-slide-content` class.
 #' @param text_slide_number_font_size Slide Number Text Font Size. Defaults to 0.9em. Modifies the `.remark-slide-number` class.
 #' @param text_font_google Use `google_font()` to specify body font. Defaults to `NULL`. Modifies the `body` element.
 #' @param text_font_family Body Text Font Family. Defaults to 'Droid Serif'. Modifies the `body` element.
@@ -62,7 +68,7 @@ write_xaringan_theme <- function(
   link_color = "rgb(249, 38, 114)",
   text_bold_color = NULL,
   text_slide_number_color = inverse_background_color,
-  padding = "1em 4em 1em 4em",
+  padding = "1rem 4rem 1rem 4rem",
   background_image = NULL,
   background_size = NULL,
   background_position = NULL,
@@ -92,6 +98,12 @@ write_xaringan_theme <- function(
   header_h1_font_size = "55px",
   header_h2_font_size = "45px",
   header_h3_font_size = "35px",
+  header_background_enable = FALSE,
+  header_background_color = header_color,
+  header_background_text_color = background_color,
+  header_background_padding = "2rem 4rem 1.5rem 4rem",
+  header_background_content_padding_top = "7rem",
+  header_background_ignore_classes = c('normal', 'inverse', 'title', 'middle', 'bottom'),
   text_slide_number_font_size = "0.9em",
   text_font_google = NULL,
   text_font_family = "'Droid Serif'",
@@ -148,7 +160,8 @@ write_xaringan_theme <- function(
   for (var in f_args) {
     val <- eval(parse(text = var))
     if (is.null(val)) next
-    is_na <- is.na(val)
+    val <- val[!is.na(val)]
+    is_na <- length(val) == 0
     if (is_na) assign(var, NULL)
   }
   
@@ -162,6 +175,25 @@ write_xaringan_theme <- function(
   table_row_even_background_color <- table_row_even_background_color %||% background_color
   
   xaringanthemer_version <- utils::packageVersion("xaringanthemer")
+  
+  # prepare header background object
+  header_background <- if (header_background_enable) {
+    needs_leading_dot <- !grepl("^\\.", header_background_ignore_classes)
+    header_background_ignore_classes[needs_leading_dot] <- paste0(
+      ".", header_background_ignore_classes[needs_leading_dot]
+    )
+    header_background_ignore_classes <- purrr::map(
+      header_background_ignore_classes,
+      ~ list(class = .)
+    )
+    list(
+      background_color = header_background_color,
+      text_color = header_background_text_color,
+      padding = header_background_padding,
+      content_padding_top = header_background_content_padding_top,
+      ignore = header_background_ignore_classes
+    )
+  }
   
   tf <- system.file("resources", "template.css", package = "xaringanthemer")
   template <- readLines(tf, warn = FALSE)
