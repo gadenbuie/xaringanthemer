@@ -22,7 +22,10 @@ setup_theme_function <- function(
   template = template_variables,
   ...,
   file = "",
-  body = NULL
+  body = c(
+    "  # DO NOT EDIT - Generated from inst/scripts/generate_theme_functions.R",
+    "  eval(parse(text = call_write_xaringan_theme()))"
+  )
 ) {
   if (file == "clip" && !requireNamespace("clipr", quietly = TRUE)) file <- ""
   tv <- template
@@ -79,10 +82,6 @@ setup_theme_function(
   "#' @template mono_light",
   "#' @family Monotone themes",
   "#' @export",
-  body = c(
-    "  # DO NOT EDIT - Generated from inst/scripts/generate_theme_functions.R",
-    "  eval(parse(text = call_write_xaringan_theme()))"
-  ),
   file = here::here("R/mono_light.R")
 )
 
@@ -93,10 +92,6 @@ setup_theme_function(
   "#' @template mono_dark",
   "#' @family Monotone themes",
   "#' @export",
-  body = c(
-    "  # DO NOT EDIT - Generated from inst/scripts/generate_theme_functions.R",
-    "  eval(parse(text = call_write_xaringan_theme()))"
-  ),
   file = here::here("R/mono_dark.R")
 )
 
@@ -107,10 +102,6 @@ setup_theme_function(
   "#' @template mono_accent",
   "#' @family Monotone themes",
   "#' @export",
-  body = c(
-    "  # DO NOT EDIT - Generated from inst/scripts/generate_theme_functions.R",
-    "  eval(parse(text = call_write_xaringan_theme()))"
-  ),
   file = here::here("R/mono_accent.R")
 )
 
@@ -121,10 +112,6 @@ setup_theme_function(
   "#' @template mono_accent_inverse",
   "#' @family Monotone themes",
   "#' @export",
-  body = c(
-    "  # DO NOT EDIT - Generated from inst/scripts/generate_theme_functions.R",
-    "  eval(parse(text = call_write_xaringan_theme()))"
-  ),
   file = here::here("R/mono_accent_inverse.R")
 )
 
@@ -135,10 +122,6 @@ setup_theme_function(
   "#' @template duo",
   "#' @family Duotone themes",
   "#' @export",
-  body = c(
-    "  # DO NOT EDIT - Generated from inst/scripts/generate_theme_functions.R",
-    "  eval(parse(text = call_write_xaringan_theme()))"
-  ),
   file = here::here("R/duo.R")
 )
 
@@ -149,10 +132,6 @@ setup_theme_function(
   "#' @template duo_accent",
   "#' @family Duotone themes",
   "#' @export",
-  body = c(
-    "  # DO NOT EDIT - Generated from inst/scripts/generate_theme_functions.R",
-    "  eval(parse(text = call_write_xaringan_theme()))"
-  ),
   file = here::here("R/duo_accent.R")
 )
 
@@ -163,10 +142,6 @@ setup_theme_function(
   "#' @template duo_accent_inverse",
   "#' @family Duotone themes",
   "#' @export",
-  body = c(
-    "  # DO NOT EDIT - Generated from inst/scripts/generate_theme_functions.R",
-    "  eval(parse(text = call_write_xaringan_theme()))"
-  ),
   file = here::here("R/duo_accent_inverse.R")
 )
 
@@ -177,10 +152,6 @@ setup_theme_function(
   "#' @template solarized_light",
   "#' @family Solarized themes",
   "#' @export",
-  body = c(
-    "  # DO NOT EDIT - Generated from inst/scripts/generate_theme_functions.R",
-    "  eval(parse(text = call_write_xaringan_theme()))"
-  ),
   file = here::here("R/solarized_light.R")
 )
 
@@ -191,9 +162,5 @@ setup_theme_function(
   "#' @template solarized_dark",
   "#' @family Solarized themes",
   "#' @export",
-  body = c(
-    "  # DO NOT EDIT - Generated from inst/scripts/generate_theme_functions.R",
-    "  eval(parse(text = call_write_xaringan_theme()))"
-  ),
   file = here::here("R/solarized_dark.R")
 )
