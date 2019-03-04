@@ -161,6 +161,8 @@ write_xaringan_theme <- function(
   )
   table_row_even_background_color <- table_row_even_background_color %||% background_color
   
+  xaringanthemer_version <- utils::packageVersion("xaringanthemer")
+  
   tf <- system.file("resources", "template.css", package = "xaringanthemer")
   template <- readLines(tf, warn = FALSE)
   template <- paste(template, collapse = "\n")

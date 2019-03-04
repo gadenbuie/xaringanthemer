@@ -15,6 +15,8 @@
  *    - xaringan wiki: https://github.com/yihui/xaringan/wiki
  *    - remarkjs wiki: https://github.com/gnab/remark/wiki
  *
+{{#xaringanthemer_version}} *  Version: {{xaringanthemer_version}}{{/xaringanthemer_version}}
+ *
  * ------------------------------------------------------- */
 @import url({{text_font_url}});
 @import url({{header_font_url}});

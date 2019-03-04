@@ -1,29 +1,36 @@
-Package: xaringanthemer
 Type: Package
+Package: xaringanthemer
 Title: Xaringan CSS Theme Generator
 Version: 0.2.0.9000
 Date: 2018-04-16
-Authors@R: person("Garrick", "Aden-Buie", email = "g.adenbuie@gmail.com", role = c("aut", "cre"))
-Description: Create and edit your xaringan CSS files from within your R
-    R Markdown slide source. More technically, this package actually creates
-    valid remarkjs CSS themes that are easily used by xarangan.
+Authors@R: 
+    person(given = "Garrick",
+           family = "Aden-Buie",
+           role = c("aut", "cre"),
+           email = "garrick@adenbuie.com")
+Description: Create and edit your xaringan CSS files from within
+    your R R Markdown slide source. More technically, this package
+    actually creates valid remarkjs CSS themes that are easily used by
+    xarangan.
 License: MIT + file LICENSE
 URL: https://github.com/gadenbuie/xaringanthemer
 BugReports: https://github.com/gadenbuie/xaringanthemer/issues
-Encoding: UTF-8
-LazyData: true
-RoxygenNote: 6.1.1
-Roxygen: list(markdown = TRUE)
+Imports: 
+    glue,
+    purrr,
+    stringr,
+    tibble,
+    utils,
+    whisker
 Suggests: 
-    testthat,
-    xaringan,
     here,
     knitr,
-    rmarkdown
-Imports: 
-    purrr,
-    tibble,
-    glue,
-    stringr,
-    whisker
-VignetteBuilder: knitr
+    rmarkdown,
+    testthat,
+    xaringan
+VignetteBuilder: 
+    knitr
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 6.1.1

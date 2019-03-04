@@ -6,9 +6,10 @@
 \alias{xaringanthemer-package}
 \title{xaringanthemer: Xaringan CSS Theme Generator}
 \description{
-Create and edit your xaringan CSS files from within your R
-    R Markdown slide source. More technically, this package actually creates
-    valid remarkjs CSS themes that are easily used by xarangan.
+Create and edit your xaringan CSS files from within
+    your R R Markdown slide source. More technically, this package
+    actually creates valid remarkjs CSS themes that are easily used by
+    xarangan.
 }
 \seealso{
 Useful links:
@@ -19,7 +20,7 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Garrick Aden-Buie \email{g.adenbuie@gmail.com}
+\strong{Maintainer}: Garrick Aden-Buie \email{garrick@adenbuie.com}
 
 }
 \keyword{internal}

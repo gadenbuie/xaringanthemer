@@ -19,7 +19,10 @@ test_theme_file <- function(theme = "duo") {
   theme_file <- paste0(theme, ".css")
 
   theme_fun(outfile = tmpfile)
-  theme_css <- paste(readLines(tmpfile), collapse = "\n")
+  theme_css <- readLines(tmpfile)
+  # Mask package version in test files
+  theme_css <- sub("( \\*  Version: )[\\d.-]+", "\\1a.b.c.d.eeee", theme_css, perl = TRUE)
+  theme_css <- paste(theme_css, collapse = "\n")
   expect_known_output(cat(theme_css), test_path("css", theme_file))
 }
 
