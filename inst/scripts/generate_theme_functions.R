@@ -24,26 +24,33 @@ setup_theme_function <- function(
   file = "",
   body = NULL
 ) {
-  `%,%` <- function(x, y) c(x, y)
   if (file == "clip" && !requireNamespace("clipr", quietly = TRUE)) file <- ""
   tv <- template
   null_default <- purrr::map_lgl(tv$default, is.null)
   tv[null_default, 'default'] <- "{NULL}"
-  x <-
+  x <- c(
     as.character(
       glue::glue_data(
-        tv, "#' @param {variable} {description}. Defaults to {stringr::str_replace_all(default, '[{{}}]', '`')}. {element_description(element)}")) %,%
-    "#' @template extra_css" %,%
-    "#' @param outfile Customized xaringan CSS output file name, default is \"xaringan-themer.css\"" %,%
-    "#' @family themes" %,%
-    c(...) %,%
-    glue::glue("{f_name} <- function(") %,%
-    as.character(glue::glue_data(
-      tv, "  {variable} = {ifelse(!stringr::str_detect(default, '^[{].+[}]$'), paste0('\"', default, '\"'), stringr::str_replace_all(default, '[{}]', ''))},")) %,%
-    "  extra_css = NULL," %,%
-    "  extra_fonts = NULL," %,%
-    "  outfile = \"xaringan-themer.css\"" %,%
+        tv,
+        "#' @param {variable} {description}. ",
+        "Defaults to {stringr::str_replace_all(default, '[{{}}]', '`')}. ",
+        "{element_description(element)}")
+    ),
+    "#' @template extra_css",
+    "#' @param outfile Customized xaringan CSS output file name, default is \"xaringan-themer.css\"",
+    "#' @family themes",
+    ...,
+    glue::glue("{f_name} <- function("),
+    as.character(
+      glue::glue_data(
+        tv,
+        "  {variable} = {ifelse(!stringr::str_detect(default, '^[{].+[}]$'), paste0('\"', default, '\"'), stringr::str_replace_all(default, '[{}]', ''))},")
+    ),
+    "  extra_css = NULL,",
+    "  extra_fonts = NULL,",
+    "  outfile = \"xaringan-themer.css\"",
     ") {"
+  )
   if (!is.null(body)) x <- c(x, body, "}")
   if (file == "clip") {
     clipr::write_clip(x)
