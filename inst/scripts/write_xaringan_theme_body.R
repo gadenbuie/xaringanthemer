@@ -51,23 +51,22 @@ table_row_even_background_color <- table_row_even_background_color %||% backgrou
 xaringanthemer_version <- utils::packageVersion("xaringanthemer")
 
 # prepare header background object
-header_background <- if (header_background_enable) {
-  needs_leading_dot <- !grepl("^\\.", header_background_ignore_classes)
-  header_background_ignore_classes[needs_leading_dot] <- paste0(
-    ".", header_background_ignore_classes[needs_leading_dot]
-  )
-  header_background_ignore_classes <- purrr::map(
-    header_background_ignore_classes,
-    ~ list(class = .)
-  )
-  list(
-    background_color = header_background_color,
-    text_color = header_background_text_color,
-    padding = header_background_padding,
-    content_padding_top = header_background_content_padding_top,
-    ignore = header_background_ignore_classes
-  )
-}
+needs_leading_dot <- !grepl("^\\.", header_background_ignore_classes)
+header_background_ignore_classes[needs_leading_dot] <- paste0(
+  ".", header_background_ignore_classes[needs_leading_dot]
+)
+header_background_ignore_classes <- purrr::map(
+  header_background_ignore_classes,
+  ~ list(class = .)
+)
+header_background <-   list(
+  auto = header_background_auto,
+  background_color = header_background_color,
+  text_color = header_background_text_color,
+  padding = header_background_padding,
+  content_padding_top = header_background_content_padding_top,
+  ignore = header_background_ignore_classes
+)
 
 tf <- system.file("resources", "template.css", package = "xaringanthemer")
 template <- readLines(tf, warn = FALSE)

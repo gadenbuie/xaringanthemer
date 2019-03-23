@@ -36,7 +36,7 @@
 #' @param header_h1_font_size h1 Header Text Font Size. Defaults to 55px. Modifies the `.remark-slide-content h1` class.
 #' @param header_h2_font_size h2 Header Text Font Size. Defaults to 45px. Modifies the `.remark-slide-content h2` class.
 #' @param header_h3_font_size h3 Header Text Font Size. Defaults to 35px. Modifies the `.remark-slide-content h3` class.
-#' @param header_background_enable Enable Header Background Under First h1 Slide Element. Defaults to `FALSE`. Modifies the `` element.
+#' @param header_background_auto Add background under slide title automatically for h1 header elements. If not enabled, use `class: header_background` to enable.. Defaults to `FALSE`. 
 #' @param header_background_color Background Color for h1 Header with Background. Defaults to `header_color`. Modifies the `.remark-slide-content h1` class.
 #' @param header_background_text_color Text Color for h1 Header with Background. Defaults to `background_color`. Modifies the `.remark-slide-content h1` class.
 #' @param header_background_padding Padding for h1 Header with Background. Defaults to 2rem 4rem 1.5rem 4rem. Modifies the `.remark-slide-content h1` class.
@@ -103,7 +103,7 @@ duo <- function(
   header_h1_font_size = "55px",
   header_h2_font_size = "45px",
   header_h3_font_size = "35px",
-  header_background_enable = FALSE,
+  header_background_auto = FALSE,
   header_background_color = header_color,
   header_background_text_color = background_color,
   header_background_padding = "2rem 4rem 1.5rem 4rem",

@@ -35,8 +35,8 @@ test_that("mono_light()", test_theme_file("mono_light"))
 test_that("solarized_dark()", test_theme_file("solarized_dark"))
 test_that("solarized_light()", test_theme_file("solarized_light"))
 
-test_that("header_background_enable = TRUE", {
-  test_theme_file("duo", "duo-header_bg.css", header_background_enable = TRUE)
-  test_theme_file("mono_light", "mono_light-header_bg.css", header_background_enable = TRUE)
-  test_theme_file("solarized_dark", "solarized_dark-header_bg.css", header_background_enable = TRUE)
+test_that("header_background_auto = TRUE", {
+  test_theme_file("duo", "duo-header_bg.css", header_background_auto = TRUE)
+  test_theme_file("mono_light", "mono_light-header_bg.css", header_background_auto = TRUE)
+  test_theme_file("solarized_dark", "solarized_dark-header_bg.css", header_background_auto = TRUE)
 })

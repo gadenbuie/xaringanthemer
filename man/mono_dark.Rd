@@ -30,7 +30,7 @@ mono_dark(base_color = "#cbf7ed",
   table_row_even_background_color = darken_color(base_color, 0.7),
   text_font_size = "20px", header_h1_font_size = "55px",
   header_h2_font_size = "45px", header_h3_font_size = "35px",
-  header_background_enable = FALSE,
+  header_background_auto = FALSE,
   header_background_color = header_color,
   header_background_text_color = background_color,
   header_background_padding = "2rem 4rem 1.5rem 4rem",
@@ -131,7 +131,7 @@ mono_dark(base_color = "#cbf7ed",
 
 \item{header_h3_font_size}{h3 Header Text Font Size. Defaults to 35px. Modifies the \code{.remark-slide-content h3} class.}
 
-\item{header_background_enable}{Enable Header Background Under First h1 Slide Element. Defaults to \code{FALSE}. Modifies the `` element.}
+\item{header_background_auto}{Add background under slide title automatically for h1 header elements. If not enabled, use \code{class: header_background} to enable.. Defaults to \code{FALSE}.}
 
 \item{header_background_color}{Background Color for h1 Header with Background. Defaults to \code{header_color}. Modifies the \code{.remark-slide-content h1} class.}
 

@@ -36,7 +36,7 @@ template_variables <- tibble::tribble(
   , "header_h1_font_size", "55px", ".remark-slide-content h1", "h1 Header Text Font Size"
   , "header_h2_font_size", "45px", ".remark-slide-content h2", "h2 Header Text Font Size"
   , "header_h3_font_size", "35px", ".remark-slide-content h3", "h3 Header Text Font Size"
-  , "header_background_enable", "{FALSE}", "", "Enable Header Background Under First h1 Slide Element"
+  , "header_background_auto", "{FALSE}", "", "Add background under slide title automatically for h1 header elements. If not enabled, use `class: header_background` to enable."
   , "header_background_color", "{header_color}", ".remark-slide-content h1", "Background Color for h1 Header with Background"
   , "header_background_text_color", "{background_color}", ".remark-slide-content h1", "Text Color for h1 Header with Background"
   , "header_background_padding", "2rem 4rem 1.5rem 4rem", ".remark-slide-content h1", "Padding for h1 Header with Background"
@@ -348,3 +348,4 @@ element_description <- function(element) {
     out,
     glue::glue("Modifies the `{element}` {plural_element(element)}.")
   )
+}

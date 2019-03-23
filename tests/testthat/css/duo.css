@@ -166,6 +166,23 @@ table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
   color: #FEFDFD !important;
 }
 
+/* Slide Header Background for h1 elements */
+.remark-slide-content.header_background > h1 {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #F97B64;
+  color: #1F4257;
+  padding: 2rem 4rem 1.5rem 4rem;
+  margin-top: 0;
+  box-sizing: border-box;
+}
+.remark-slide-content.header_background {
+  padding-top: 7rem;
+}
+
 @page { margin: 0; }
 @media print {
   .remark-slide-scaler {
