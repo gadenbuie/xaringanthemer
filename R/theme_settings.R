@@ -324,3 +324,27 @@ template_solarized_dark <- set_default(
   table_row_border_color          = solarized$base00,
   table_row_even_background_color = solarized$base02
 )
+
+
+# Theme Generating Helpers ----------------------------------------------
+
+
+plural_element <- function(css_name) {
+  is_mult <- grepl(",|and|or", css_name)
+  is_class <- grepl("^\\.", css_name)
+  ifelse(is_class,
+         ifelse(is_mult, "classes", "class"),
+         ifelse(is_mult, "elements", "element")
+  )
+}
+
+element_description <- function(element) {
+  out <- rep("", length(element))
+  multiple <- grepl("multiple", element)
+  out[multiple] <- "Modifies multiple CSS classes or elements."
+
+  ifelse(
+    multiple | is.na(element) | element == "",
+    out,
+    glue::glue("Modifies the `{element}` {plural_element(element)}.")
+  )

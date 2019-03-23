@@ -1,21 +1,5 @@
 source(here::here("R/theme_settings.R"))
-
-plural_element <- function(css_name) {
-  is_mult <- grepl(",|and|or", css_name)
-  is_class <- grepl("^\\.", css_name)
-  ifelse(is_class,
-    ifelse(is_mult, "classes", "class"),
-    ifelse(is_mult, "elements", "element")
-  )
-}
-
-element_description <- function(element) {
-  ifelse(
-    grepl("multiple", element),
-    "Modifies multiple CSS classes or elements.",
-    glue::glue("Modifies the `{element}` {plural_element(element)}.")
-    )
-}
+# R/theme_settings.R contains element_description() and plural_elements()
 
 setup_theme_function <- function(
   f_name = "write_xaringan_theme",
