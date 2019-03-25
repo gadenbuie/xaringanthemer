@@ -18,7 +18,7 @@ several places in a theme
 
 ``` r
 firebrick <- "#CD2626"
-write_xaringan_theme(
+style_xaringan(
   header_color = firebrick,
   link_color = firebrick
 )
@@ -27,7 +27,7 @@ write_xaringan_theme(
 or we can directly give the character string
 
 ``` r
-write_xaringan_theme(
+style_xaringan(
   header_color = "#CD2626",
   link_color = "#CD2626"
 )
@@ -236,7 +236,7 @@ on the right side of your slide, you’ll need to create a special css
 class:
 
 ``` r
-write_xaringan_theme(
+style_xaringan(
   extra_css = list(
     ".box-right" = list(
       "height" = "300px",

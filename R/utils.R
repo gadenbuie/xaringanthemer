@@ -75,9 +75,9 @@ is_light_color <- function(x) {
 }
 
 #' @keywords internal
-call_write_xaringan_theme <- function() {
-  paste0("write_xaringan_theme(",
-         paste(names(formals(write_xaringan_theme)), collapse = ", "),
+call_style_xaringan <- function() {
+  paste0("style_xaringan(",
+         paste(names(formals(style_xaringan)), collapse = ", "),
          ")")
 }
 

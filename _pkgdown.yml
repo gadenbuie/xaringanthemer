@@ -9,16 +9,25 @@ reference:
 - title: Writing CSS
   desc: Functions that write CSS from inside a xaringan R markdown document.
   contents:
-    - starts_with("write")
+    - style_xaringan
+    - style_extra_css
 - title: Theme Functions
-  desc: Color theme functions for xaringan slides.
+  desc: |
+    Parameterized styles for xaringan slides using one (mono)
+    or two (duo) base colors. Bonus: slide styles base on the
+    solarized color palette.
   contents:
-    - starts_with("mono")
-    - starts_with("duo")
-    - starts_with("solarized")
+    - starts_with("style_mono")
+    - starts_with("style_duo")
+    - starts_with("style_solarized")
+- title: ggplot2 Themes
+  desc: Plot themes for ggplot2 to match xaringan slide styles.
+  contents:
+    - starts_with("theme_xaringan")
 - title: Helper functions
   desc: Helpers for Google fonts and color adjustments.
   contents:
+    - get_xaringanthemer_value
     - contains("color")
     - apply_alpha
     - choose_dark_or_light

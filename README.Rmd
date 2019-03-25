@@ -59,7 +59,7 @@ gsub("    -", "-", sub("^-.+?\n", "", x))
 
 ## Theme Settings
 
-The theme functions listed above are just wrappers around the central function of this package, `write_xaringan_theme()`.
+The theme functions listed above are just wrappers around the central function of this package, `style_xaringan()`.
 If you want to start from the default **xaringan** theme and make a few modifications, start there.
 
 All of the [theme template variables][template-variables] are repeated in each of the theme functions (instead of relying on `...`) so that you can use autocompletion to find and change the defaults for any theme function.
@@ -102,11 +102,11 @@ extra_css <- list(
 )
 ```
 
-If you would rather keep your additional css definitions in a separate file, you can call `write_extra_css()` separately.
+If you would rather keep your additional css definitions in a separate file, you can call `style_extra_css()` separately.
 Just be sure to include your new CSS file in the list of applied files in your YAML header.
 
 ```r
-write_extra_css(css = extra_css, outfile = "custom.css")
+style_extra_css(css = extra_css, outfile = "custom.css")
 ```
 
 ```{r results='asis', echo=FALSE}

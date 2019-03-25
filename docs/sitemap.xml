@@ -10,13 +10,7 @@
     <loc>https://gadenbuie.github.com/xaringanthemer//reference/choose_dark_or_light.html</loc>
   </url>
   <url>
-    <loc>https://gadenbuie.github.com/xaringanthemer//reference/duo.html</loc>
-  </url>
-  <url>
-    <loc>https://gadenbuie.github.com/xaringanthemer//reference/duo_accent.html</loc>
-  </url>
-  <url>
-    <loc>https://gadenbuie.github.com/xaringanthemer//reference/duo_accent_inverse.html</loc>
+    <loc>https://gadenbuie.github.com/xaringanthemer//reference/get_xaringanthemer_value.html</loc>
   </url>
   <url>
     <loc>https://gadenbuie.github.com/xaringanthemer//reference/google_font.html</loc>
@@ -28,28 +22,52 @@
     <loc>https://gadenbuie.github.com/xaringanthemer//reference/lighten_darken_color.html</loc>
   </url>
   <url>
-    <loc>https://gadenbuie.github.com/xaringanthemer//reference/mono_accent.html</loc>
+    <loc>https://gadenbuie.github.com/xaringanthemer//reference/style_duo.html</loc>
   </url>
   <url>
-    <loc>https://gadenbuie.github.com/xaringanthemer//reference/mono_accent_inverse.html</loc>
+    <loc>https://gadenbuie.github.com/xaringanthemer//reference/style_duo_accent.html</loc>
   </url>
   <url>
-    <loc>https://gadenbuie.github.com/xaringanthemer//reference/mono_dark.html</loc>
+    <loc>https://gadenbuie.github.com/xaringanthemer//reference/style_duo_accent_inverse.html</loc>
   </url>
   <url>
-    <loc>https://gadenbuie.github.com/xaringanthemer//reference/mono_light.html</loc>
+    <loc>https://gadenbuie.github.com/xaringanthemer//reference/style_extra_css.html</loc>
   </url>
   <url>
-    <loc>https://gadenbuie.github.com/xaringanthemer//reference/solarized_dark.html</loc>
+    <loc>https://gadenbuie.github.com/xaringanthemer//reference/style_mono_accent.html</loc>
   </url>
   <url>
-    <loc>https://gadenbuie.github.com/xaringanthemer//reference/solarized_light.html</loc>
+    <loc>https://gadenbuie.github.com/xaringanthemer//reference/style_mono_accent_inverse.html</loc>
   </url>
   <url>
-    <loc>https://gadenbuie.github.com/xaringanthemer//reference/write_extra_css.html</loc>
+    <loc>https://gadenbuie.github.com/xaringanthemer//reference/style_mono_dark.html</loc>
   </url>
   <url>
-    <loc>https://gadenbuie.github.com/xaringanthemer//reference/write_xaringan_theme.html</loc>
+    <loc>https://gadenbuie.github.com/xaringanthemer//reference/style_mono_light.html</loc>
+  </url>
+  <url>
+    <loc>https://gadenbuie.github.com/xaringanthemer//reference/style_solarized_dark.html</loc>
+  </url>
+  <url>
+    <loc>https://gadenbuie.github.com/xaringanthemer//reference/style_solarized_light.html</loc>
+  </url>
+  <url>
+    <loc>https://gadenbuie.github.com/xaringanthemer//reference/style_xaringan.html</loc>
+  </url>
+  <url>
+    <loc>https://gadenbuie.github.com/xaringanthemer//reference/theme_xaringan.html</loc>
+  </url>
+  <url>
+    <loc>https://gadenbuie.github.com/xaringanthemer//reference/theme_xaringan_base.html</loc>
+  </url>
+  <url>
+    <loc>https://gadenbuie.github.com/xaringanthemer//reference/theme_xaringan_inverse.html</loc>
+  </url>
+  <url>
+    <loc>https://gadenbuie.github.com/xaringanthemer//reference/theme_xaringan_set_defaults.html</loc>
+  </url>
+  <url>
+    <loc>https://gadenbuie.github.com/xaringanthemer//reference/xaringanthemer-deprecated.html</loc>
   </url>
   <url>
     <loc>https://gadenbuie.github.com/xaringanthemer//reference/xaringanthemer-package.html</loc>

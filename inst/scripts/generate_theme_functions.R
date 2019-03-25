@@ -2,13 +2,13 @@ source(here::here("R/theme_settings.R"))
 # R/theme_settings.R contains element_description() and plural_elements()
 
 setup_theme_function <- function(
-  f_name = "write_xaringan_theme",
+  f_name = "style_xaringan",
   template = template_variables,
   ...,
   file = "",
   body = c(
     "  # DO NOT EDIT - Generated from inst/scripts/generate_theme_functions.R",
-    "  eval(parse(text = call_write_xaringan_theme()))"
+    "  eval(parse(text = call_style_xaringan()))"
   )
 ) {
   if (file == "clip" && !requireNamespace("clipr", quietly = TRUE)) file <- ""
@@ -51,100 +51,100 @@ setup_theme_function <- function(
 
 # ---- Write Xaringan Theme Function ----
 setup_theme_function(
-  "write_xaringan_theme",
+  "style_xaringan",
   template_variables,
-  "#' @template write_xaringan_theme",
+  "#' @template style_xaringan",
   "#' @export",
-  body = paste0("  ", readLines(here::here("inst/scripts/write_xaringan_theme_body.R"))),
-  file = here::here("R/write_theme.R")
+  body = paste0("  ", readLines(here::here("inst/scripts/style_xaringan_body.R"))),
+  file = here::here("R/style_xaringan.R")
 )
 
 # ---- Monotone Light ----
 setup_theme_function(
-  "mono_light",
+  "style_mono_light",
   template_mono_light,
-  "#' @template mono_light",
+  "#' @template style_mono_light",
   "#' @family Monotone themes",
   "#' @export",
-  file = here::here("R/mono_light.R")
+  file = here::here("R/style_mono_light.R")
 )
 
 # ---- Monotone Dark ----
 setup_theme_function(
-  "mono_dark",
+  "style_mono_dark",
   template_mono_dark,
-  "#' @template mono_dark",
+  "#' @template style_mono_dark",
   "#' @family Monotone themes",
   "#' @export",
-  file = here::here("R/mono_dark.R")
+  file = here::here("R/style_mono_dark.R")
 )
 
 # ---- Monotone Accent ----
 setup_theme_function(
-  "mono_accent",
+  "style_mono_accent",
   template_mono_accent,
-  "#' @template mono_accent",
+  "#' @template style_mono_accent",
   "#' @family Monotone themes",
   "#' @export",
-  file = here::here("R/mono_accent.R")
+  file = here::here("R/style_mono_accent.R")
 )
 
 # ---- Monotone Accent Inverse ----
 setup_theme_function(
-  "mono_accent_inverse",
+  "style_mono_accent_inverse",
   template_mono_accent_inverse,
-  "#' @template mono_accent_inverse",
+  "#' @template style_mono_accent_inverse",
   "#' @family Monotone themes",
   "#' @export",
-  file = here::here("R/mono_accent_inverse.R")
+  file = here::here("R/style_mono_accent_inverse.R")
 )
 
 # ---- Duotone ----
 setup_theme_function(
-  "duo",
+  "style_duo",
   template_duo,
-  "#' @template duo",
+  "#' @template style_duo",
   "#' @family Duotone themes",
   "#' @export",
-  file = here::here("R/duo.R")
+  file = here::here("R/style_duo.R")
 )
 
 # ---- Duotone Accent ----
 setup_theme_function(
-  "duo_accent",
+  "style_duo_accent",
   template_duo_accent,
-  "#' @template duo_accent",
+  "#' @template style_duo_accent",
   "#' @family Duotone themes",
   "#' @export",
-  file = here::here("R/duo_accent.R")
+  file = here::here("R/style_duo_accent.R")
 )
 
 # ---- Duotone Accent Inverse ----
 setup_theme_function(
-  "duo_accent_inverse",
+  "style_duo_accent_inverse",
   template_duo_accent_inverse,
-  "#' @template duo_accent_inverse",
+  "#' @template style_duo_accent_inverse",
   "#' @family Duotone themes",
   "#' @export",
-  file = here::here("R/duo_accent_inverse.R")
+  file = here::here("R/style_duo_accent_inverse.R")
 )
 
 # ---- Solarized Light ----
 setup_theme_function(
-  "solarized_light",
+  "style_solarized_light",
   template_solarized_light,
-  "#' @template solarized_light",
+  "#' @template style_solarized_light",
   "#' @family Solarized themes",
   "#' @export",
-  file = here::here("R/solarized_light.R")
+  file = here::here("R/style_solarized_light.R")
 )
 
 # ---- Solarized Dark ----
 setup_theme_function(
-  "solarized_dark",
+  "style_solarized_dark",
   template_solarized_dark,
-  "#' @template solarized_dark",
+  "#' @template style_solarized_dark",
   "#' @family Solarized themes",
   "#' @export",
-  file = here::here("R/solarized_dark.R")
+  file = here::here("R/style_solarized_dark.R")
 )
