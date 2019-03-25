@@ -16,6 +16,7 @@ License: MIT + file LICENSE
 URL: https://github.com/gadenbuie/xaringanthemer
 BugReports: https://github.com/gadenbuie/xaringanthemer/issues
 Imports: 
+    colorspace,
     glue,
     purrr,
     stringr,
@@ -23,9 +24,12 @@ Imports:
     utils,
     whisker
 Suggests: 
+    ggplot2,
     here,
     knitr,
     rmarkdown,
+    showtext,
+    sysfonts,
     testthat,
     xaringan
 VignetteBuilder: 

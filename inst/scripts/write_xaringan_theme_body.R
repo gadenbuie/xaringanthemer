@@ -48,6 +48,8 @@ title_slide_background_size <- title_slide_background_size %||% (
 )
 table_row_even_background_color <- table_row_even_background_color %||% background_color
 
+lapply(names(formals()), function(n) assign(n, get(n), envir = test_env))
+
 xaringanthemer_version <- utils::packageVersion("xaringanthemer")
 
 # prepare header background object
