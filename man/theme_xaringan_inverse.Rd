@@ -47,6 +47,9 @@ defaults to 11.}
 or defaults to 14.}
 }}
 }
+\value{
+A ggplot2 theme
+}
 \description{
 A \link{ggplot2} xaringanthemer plot theme to seamlessly match the "inverse"
 \link{xaringan} slide colors and styles as styled by \link{xaringanthemer}.

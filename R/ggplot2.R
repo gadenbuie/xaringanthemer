@@ -26,6 +26,7 @@
 #'     theme_xaringan()
 #' }
 #'
+#' @return A ggplot2 theme
 #' @family xaringanthemer ggplot2 themes
 #' @export
 theme_xaringan <- function(
@@ -75,6 +76,7 @@ theme_xaringan <- function(
 #'     theme_xaringan()
 #' }
 #'
+#' @return A ggplot2 theme
 #' @family xaringanthemer ggplot2 themes
 #' @export
 theme_xaringan_inverse <- function(
@@ -164,6 +166,7 @@ theme_xaringan_inverse <- function(
 #'            caption = "{xaringanthemer}")
 #' }
 #'
+#' @return A ggplot2 theme
 #' @family xaringanthemer ggplot2 themes
 #' @export
 theme_xaringan_base <- function(
@@ -243,6 +246,7 @@ theme_xaringan_base <- function(
 #'
 #' @family xaringanthemer ggplot2 themes
 #' @inheritParams theme_xaringan
+#' @return Invisibly returns a list of the current ggplot2 geom defaults
 #' @export
 theme_xaringan_set_defaults <- function(
   text_color = NULL,
@@ -313,6 +317,7 @@ theme_xaringan_set_defaults <- function(
 
 #' @describeIn theme_xaringan_set_defaults Restore previous or standard [ggplot2] _geom_ defaults.
 #' @inheritParams theme_xaringan
+#' @return Invisibly returns a list of the current ggplot2 geom defaults
 #' @export
 xaringan_theme_restore_defaults <- function() {
   requires_package("ggplot2")

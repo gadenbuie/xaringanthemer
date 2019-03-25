@@ -47,6 +47,9 @@ defaults to 11.}
 or defaults to 14.}
 }}
 }
+\value{
+A ggplot2 theme
+}
 \description{
 Creates \link{ggplot2} themes to match the xaringanthemer theme used in the
 \link{xaringan} slides that seamlessly matches the "normal" slide colors and

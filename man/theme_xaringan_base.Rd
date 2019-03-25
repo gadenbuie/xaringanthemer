@@ -49,6 +49,9 @@ defaults to 11.}
 \item{title_font_size}{Base text font size, inherits from \code{title_font_size},
 or defaults to 14.}
 }
+\value{
+A ggplot2 theme
+}
 \description{
 Provides a base plot theme for \link{ggplot2} to match the \link{xaringan} slide theme
 created by \link{xaringanthemer}. The theme is designed to create a general plot

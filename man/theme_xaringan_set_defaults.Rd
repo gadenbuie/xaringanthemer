@@ -23,6 +23,11 @@ xaringan_theme_restore_defaults()
 \item{accent_secondary_color}{Color for secondary accents, inherits from
 \code{text_bold_color}}
 }
+\value{
+Invisibly returns a list of the current ggplot2 geom defaults
+
+Invisibly returns a list of the current ggplot2 geom defaults
+}
 \description{
 Set \link{ggplot2} \emph{geom} defaults to match \code{\link[=theme_xaringan]{theme_xaringan()}} with
 \code{theme_xaringan_set_defaults()} and restore the standard or previously-set
