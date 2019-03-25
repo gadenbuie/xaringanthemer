@@ -4,10 +4,10 @@
 \alias{choose_dark_or_light}
 \title{Choose dark or light color}
 \usage{
-choose_dark_or_light(x, black = "#000", white = "#FFF")
+choose_dark_or_light(x, black = "#000000", white = "#FFFFFF")
 }
 \arguments{
-\item{x}{The background color}
+\item{x}{The background color (hex)}
 
 \item{black}{Text or foreground color, e.g. "#222" or
 \code{substitute(darken_color(x, 0.8))}, if black text provides the best contrast.}

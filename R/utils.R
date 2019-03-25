@@ -52,23 +52,26 @@ adjust_value_color <- function(color_hex, strength = 0.5) {
 #' best contrast. Follows W3C Recommendations.
 #'
 #' @references <https://stackoverflow.com/a/3943023/2022615>
-#' @param x The background color
+#' @param x The background color (hex)
 #' @param black Text or foreground color, e.g. "#222" or
 #' `substitute(darken_color(x, 0.8))`, if black text provides the best contrast.
 #' @param white Text or foreground color or expression, e.g. "#EEE" or
 #' `substitute(lighten_color(x, 0.8))`, if white text provides the best contrast.
 #' @export
-choose_dark_or_light <- function(x, black = "#000", white = "#FFF") {
-  # x = color_hex
-  # black <- substitute(black)
-  # white <- substitute(white)
+choose_dark_or_light <- function(x, black = "#000000", white = "#FFFFFF") {
+  if (is_light_color(x)) eval(black) else eval(white)
+}
+
+is_light_color <- function(x) {
+  # this function returns TRUE if the given color
+  # is light-colored and requires dark text
   color_rgb <- col2rgb(x)[, 1]
   # from https://stackoverflow.com/a/3943023/2022615
   color_rgb <- color_rgb / 255
   color_rgb[color_rgb <= 0.03928] <- color_rgb[color_rgb <= 0.03928]/12.92
   color_rgb[color_rgb > 0.03928] <- ((color_rgb[color_rgb > 0.03928] + 0.055)/1.055)^2.4
   lum <- t(c(0.2126, 0.7152, 0.0722)) %*% color_rgb
-  if (lum[1, 1] > 0.179) eval(black) else eval(white)
+  lum[1, 1] > 0.179
 }
 
 #' @keywords internal
