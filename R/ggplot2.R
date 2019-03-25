@@ -17,7 +17,7 @@
 #' @examples
 #' if (requireNamespace("ggplot2", quietly = TRUE)) {
 #'   # Set xaringanthemer theme but save to tempfile
-#'   duo_accent(outfile = tempfile())
+#'   style_duo_accent(outfile = tempfile())
 #'
 #'   library(ggplot2)
 #'   ggplot(iris) +
@@ -67,7 +67,7 @@ theme_xaringan <- function(
 #' @examples
 #' if (requireNamespace("ggplot2", quietly = TRUE)) {
 #'   # Set xaringanthemer theme but save to tempfile
-#'   duo_accent(outfile = tempfile())
+#'   style_duo_accent(outfile = tempfile())
 #'
 #'   library(ggplot2)
 #'   ggplot(iris) +
@@ -395,7 +395,11 @@ register_font <- function(
       "Roboto", "Source Code Pro", "Yanone Kaffeesatz"
     )
     if (identical(google, TRUE) || is_default_font) {
-      sysfonts::font_add_google(family, ...)
+      tryCatch(
+        sysfonts::font_add_google(family, ...),
+        error = function(e) warning(e$message),
+        warning = function(w) warning(w$message)
+      )
     } else {
       warning(paste(
         "Please manually register fonts not served by Google Fonts.",

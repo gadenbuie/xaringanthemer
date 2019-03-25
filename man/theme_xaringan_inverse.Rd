@@ -57,7 +57,7 @@ A \link{ggplot2} xaringanthemer plot theme to seamlessly match the "inverse"
 \examples{
 if (requireNamespace("ggplot2", quietly = TRUE)) {
   # Set xaringanthemer theme but save to tempfile
-  duo_accent(outfile = tempfile())
+  style_duo_accent(outfile = tempfile())
 
   library(ggplot2)
   ggplot(iris) +
