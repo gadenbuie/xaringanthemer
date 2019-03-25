@@ -7,9 +7,9 @@ template_variables <- tibble::tribble(
   , "text_bold_color", NULL, "strong", "Bold Text Color"
   , "text_slide_number_color", "{inverse_background_color}", ".remark-slide-number", "Slide Number Color"
   , "padding", "1rem 4rem 1rem 4rem", ".remark-slide-content", "Slide Padding in `top right [bottom left]` format"
-  , "background_image", NULL, ".remark-slide-content", "Background image applied to each *and every* slide. Set `title_slide_background_image = \"none\"` to remove the background image from the title slide."
-  , "background_size", NULL, ".remark-slide-content", "Background image size, requires `background_image` to be set. If `background_image` is set, `background_size` will default to `cover` so the backround fills the screen. If both `background_image` and `background_position` are set, will default to 100 percent."
-  , "background_position", NULL, ".remark-slide-content", "Background image position, requires `background_image` to be set, and it is recommended to adjust `background_size`."
+  , "background_image", NULL, ".remark-slide-content", "Background image applied to each *and every* slide. Set `title_slide_background_image = \"none\"` to remove the background image from the title slide"
+  , "background_size", NULL, ".remark-slide-content", "Background image size, requires `background_image` to be set. If `background_image` is set, `background_size` will default to `cover` so the backround fills the screen. If both `background_image` and `background_position` are set, will default to 100 percent"
+  , "background_position", NULL, ".remark-slide-content", "Background image position, requires `background_image` to be set, and it is recommended to adjust `background_size`"
   , "code_highlight_color", "rgba(255,255,0,0.5)", ".remark-code-line-highlighted", "Code Line Highlight"
   , "code_inline_color", "#000", ".remark-inline-code", "Inline Code Color"
   , "code_inline_background_color", NULL, ".remark-inline-code", "Inline Code Background Color"
@@ -36,7 +36,7 @@ template_variables <- tibble::tribble(
   , "header_h1_font_size", "55px", ".remark-slide-content h1", "h1 Header Text Font Size"
   , "header_h2_font_size", "45px", ".remark-slide-content h2", "h2 Header Text Font Size"
   , "header_h3_font_size", "35px", ".remark-slide-content h3", "h3 Header Text Font Size"
-  , "header_background_auto", "{FALSE}", "", "Add background under slide title automatically for h1 header elements. If not enabled, use `class: header_background` to enable."
+  , "header_background_auto", "{FALSE}", "", "Add background under slide title automatically for h1 header elements. If not enabled, use `class: header_background` to enable"
   , "header_background_color", "{header_color}", ".remark-slide-content h1", "Background Color for h1 Header with Background"
   , "header_background_text_color", "{background_color}", ".remark-slide-content h1", "Text Color for h1 Header with Background"
   , "header_background_padding", "2rem 4rem 1.5rem 4rem", ".remark-slide-content h1", "Padding for h1 Header with Background"
@@ -118,7 +118,7 @@ template_mono_dark <- set_default(
 
 template_mono_accent <- tibble::tribble(
   ~ variable, ~ default, ~ element, ~ description
-  , "base_color", "#43418A", "multiple", "Monotone Base Color, works best with a strong color."
+  , "base_color", "#43418A", "multiple", "Monotone Base Color, works best with a strong color"
   , "white_color", "#FFFFFF", "multiple", "Brightest color used"
   , "black_color", "#272822", "multiple", "Darkest color used"
 )
@@ -142,7 +142,7 @@ template_mono_accent <- set_default(
 
 template_mono_accent_inverse <- tibble::tribble(
   ~ variable, ~ default, ~ element, ~ description
-  , "base_color", "#3C989E", "multiple", "Monotone Base Color, works best with a light color."
+  , "base_color", "#3C989E", "multiple", "Monotone Base Color, works best with a light color"
   , "white_color", "#FFFFFF", "multiple", "Brightest color used, default is a very light version of `base_color`"
   , "black_color", "{darken_color(base_color, 0.9)}", "multiple", "Darkest color used, default is a very dark, version of `base_color`"
 )

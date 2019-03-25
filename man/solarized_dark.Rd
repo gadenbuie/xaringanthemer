@@ -63,11 +63,11 @@ solarized_dark(text_color = "#839496", header_color = "#dc322f",
 
 \item{padding}{Slide Padding in \code{top right [bottom left]} format. Defaults to 1rem 4rem 1rem 4rem. Modifies the \code{.remark-slide-content} class.}
 
-\item{background_image}{Background image applied to each \emph{and every} slide. Set \code{title_slide_background_image = "none"} to remove the background image from the title slide.. Defaults to \code{NULL}. Modifies the \code{.remark-slide-content} class.}
+\item{background_image}{Background image applied to each \emph{and every} slide. Set \code{title_slide_background_image = "none"} to remove the background image from the title slide. Defaults to \code{NULL}. Modifies the \code{.remark-slide-content} class.}
 
-\item{background_size}{Background image size, requires \code{background_image} to be set. If \code{background_image} is set, \code{background_size} will default to \code{cover} so the backround fills the screen. If both \code{background_image} and \code{background_position} are set, will default to 100 percent.. Defaults to \code{NULL}. Modifies the \code{.remark-slide-content} class.}
+\item{background_size}{Background image size, requires \code{background_image} to be set. If \code{background_image} is set, \code{background_size} will default to \code{cover} so the backround fills the screen. If both \code{background_image} and \code{background_position} are set, will default to 100 percent. Defaults to \code{NULL}. Modifies the \code{.remark-slide-content} class.}
 
-\item{background_position}{Background image position, requires \code{background_image} to be set, and it is recommended to adjust \code{background_size}.. Defaults to \code{NULL}. Modifies the \code{.remark-slide-content} class.}
+\item{background_position}{Background image position, requires \code{background_image} to be set, and it is recommended to adjust \code{background_size}. Defaults to \code{NULL}. Modifies the \code{.remark-slide-content} class.}
 
 \item{code_highlight_color}{Code Line Highlight. Defaults to #268bd240. Modifies the \code{.remark-code-line-highlighted} class.}
 
@@ -121,7 +121,7 @@ solarized_dark(text_color = "#839496", header_color = "#dc322f",
 
 \item{header_h3_font_size}{h3 Header Text Font Size. Defaults to 35px. Modifies the \code{.remark-slide-content h3} class.}
 
-\item{header_background_auto}{Add background under slide title automatically for h1 header elements. If not enabled, use \code{class: header_background} to enable.. Defaults to \code{FALSE}.}
+\item{header_background_auto}{Add background under slide title automatically for h1 header elements. If not enabled, use \code{class: header_background} to enable. Defaults to \code{FALSE}.}
 
 \item{header_background_color}{Background Color for h1 Header with Background. Defaults to \code{header_color}. Modifies the \code{.remark-slide-content h1} class.}
 

@@ -9,9 +9,9 @@
 #' @param text_bold_color Bold Text Color. Defaults to `choose_dark_or_light(secondary_color, primary_color, secondary_color)`. Modifies the `strong` element.
 #' @param text_slide_number_color Slide Number Color. Defaults to `primary_color`. Modifies the `.remark-slide-number` class.
 #' @param padding Slide Padding in `top right [bottom left]` format. Defaults to 1rem 4rem 1rem 4rem. Modifies the `.remark-slide-content` class.
-#' @param background_image Background image applied to each *and every* slide. Set `title_slide_background_image = "none"` to remove the background image from the title slide.. Defaults to `NULL`. Modifies the `.remark-slide-content` class.
-#' @param background_size Background image size, requires `background_image` to be set. If `background_image` is set, `background_size` will default to `cover` so the backround fills the screen. If both `background_image` and `background_position` are set, will default to 100 percent.. Defaults to `NULL`. Modifies the `.remark-slide-content` class.
-#' @param background_position Background image position, requires `background_image` to be set, and it is recommended to adjust `background_size`.. Defaults to `NULL`. Modifies the `.remark-slide-content` class.
+#' @param background_image Background image applied to each *and every* slide. Set `title_slide_background_image = "none"` to remove the background image from the title slide. Defaults to `NULL`. Modifies the `.remark-slide-content` class.
+#' @param background_size Background image size, requires `background_image` to be set. If `background_image` is set, `background_size` will default to `cover` so the backround fills the screen. If both `background_image` and `background_position` are set, will default to 100 percent. Defaults to `NULL`. Modifies the `.remark-slide-content` class.
+#' @param background_position Background image position, requires `background_image` to be set, and it is recommended to adjust `background_size`. Defaults to `NULL`. Modifies the `.remark-slide-content` class.
 #' @param code_highlight_color Code Line Highlight. Defaults to rgba(255,255,0,0.5). Modifies the `.remark-code-line-highlighted` class.
 #' @param code_inline_color Inline Code Color. Defaults to `choose_dark_or_light(secondary_color, primary_color, secondary_color)`. Modifies the `.remark-inline-code` class.
 #' @param code_inline_background_color Inline Code Background Color. Defaults to `NULL`. Modifies the `.remark-inline-code` class.
@@ -38,7 +38,7 @@
 #' @param header_h1_font_size h1 Header Text Font Size. Defaults to 55px. Modifies the `.remark-slide-content h1` class.
 #' @param header_h2_font_size h2 Header Text Font Size. Defaults to 45px. Modifies the `.remark-slide-content h2` class.
 #' @param header_h3_font_size h3 Header Text Font Size. Defaults to 35px. Modifies the `.remark-slide-content h3` class.
-#' @param header_background_auto Add background under slide title automatically for h1 header elements. If not enabled, use `class: header_background` to enable.. Defaults to `FALSE`. 
+#' @param header_background_auto Add background under slide title automatically for h1 header elements. If not enabled, use `class: header_background` to enable. Defaults to `FALSE`. 
 #' @param header_background_color Background Color for h1 Header with Background. Defaults to `header_color`. Modifies the `.remark-slide-content h1` class.
 #' @param header_background_text_color Text Color for h1 Header with Background. Defaults to `background_color`. Modifies the `.remark-slide-content h1` class.
 #' @param header_background_padding Padding for h1 Header with Background. Defaults to 2rem 4rem 1.5rem 4rem. Modifies the `.remark-slide-content h1` class.
