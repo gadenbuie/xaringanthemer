@@ -435,35 +435,79 @@ requires_xaringanthemer_env <- function() {
 #' A helper function to retrieve the value of style settings as set by a
 #' xaringanthemer style function, for use in plotting and other circumstances.
 #'
+#' @section Style Settings:
+#' Style settings used by xaringanthemer include:
+#'
+#' - `background_color`
+#' - `background_image`
+#' - `background_position`
+#' - `background_size`
+#' - `blockquote_left_border_color`
+#' - `code_font_family`
+#' - `code_font_family_fallback`
+#' - `code_font_google`
+#' - `code_font_size`
+#' - `code_font_url`
+#' - `code_highlight_color`
+#' - `code_inline_background_color`
+#' - `code_inline_color`
+#' - `code_inline_font_size`
+#' - `extra_css`
+#' - `extra_fonts`
+#' - `footnote_color`
+#' - `footnote_font_size`
+#' - `footnote_position_bottom`
+#' - `header_background_auto`
+#' - `header_background_color`
+#' - `header_background_content_padding_top`
+#' - `header_background_ignore_classes`
+#' - `header_background_padding`
+#' - `header_background_text_color`
+#' - `header_color`
+#' - `header_font_family`
+#' - `header_font_google`
+#' - `header_font_url`
+#' - `header_font_weight`
+#' - `header_h1_font_size`
+#' - `header_h2_font_size`
+#' - `header_h3_font_size`
+#' - `inverse_background_color`
+#' - `inverse_header_color`
+#' - `inverse_text_color`
+#' - `inverse_text_shadow`
+#' - `left_column_selected_color`
+#' - `left_column_subtle_color`
+#' - `link_color`
+#' - `padding`
+#' - `table_border_color`
+#' - `table_row_border_color`
+#' - `table_row_even_background_color`
+#' - `text_bold_color`
+#' - `text_color`
+#' - `text_font_base`
+#' - `text_font_family`
+#' - `text_font_family_fallback`
+#' - `text_font_google`
+#' - `text_font_size`
+#' - `text_font_url`
+#' - `text_font_weight`
+#' - `text_slide_number_color`
+#' - `text_slide_number_font_size`
+#' - `title_slide_background_color`
+#' - `title_slide_background_image`
+#' - `title_slide_background_position`
+#' - `title_slide_background_size`
+#' - `title_slide_text_color`
+#'
 #' @param setting A xaringanthemer style setting
 #' @export
-get_xaringanthemer_value <- function(
-  setting = c(
-    "header_background_content_padding_top", "table_row_border_color",
-    "text_bold_color", "code_highlight_color", "footnote_color",
-    "text_slide_number_color", "table_row_even_background_color",
-    "title_slide_text_color", "background_color", "extra_fonts",
-    "header_background_ignore_classes", "header_font_weight", "title_slide_background_image",
-    "background_size", "header_h2_font_size", "code_inline_font_size",
-    "text_font_google", "header_h1_font_size", "header_background_padding",
-    "header_font_family", "code_font_url", "text_font_url", "footnote_position_bottom",
-    "title_slide_background_position", "code_inline_color", "link_color",
-    "left_column_selected_color", "header_background_text_color",
-    "inverse_text_color", "text_color", "code_inline_background_color",
-    "extra_css", "outfile", "footnote_font_size", "header_h3_font_size",
-    "text_font_base", "code_font_google", "code_font_size", "title_slide_background_size",
-    "text_font_size", "padding", "text_font_family", "code_font_family",
-    "text_font_family_fallback", "blockquote_left_border_color",
-    "left_column_subtle_color", "table_border_color", "inverse_background_color",
-    "header_color", "inverse_header_color", "title_slide_background_color",
-    "header_background_color", "text_font_weight",
-    "background_image", "header_font_google", "text_slide_number_font_size",
-    "inverse_text_shadow", "code_font_family_fallback", "header_font_url",
-    "background_position", "header_background_auto")
-) {
+theme_xaringan_get_value <- function(setting) {
   requires_xaringanthemer_env()
-  setting <- match.arg(setting)
-  xaringanthemer_env[[setting]]
+  if (length(setting) > 1) {
+    xaringanthemer_env[setting]
+  } else {
+    xaringanthemer_env[[setting]]
+  }
 }
 
 web_to_point <- function(x, px_per_em = 16, scale = 1) {

@@ -27,7 +27,7 @@ reference:
 - title: Helper functions
   desc: Helpers for Google fonts and color adjustments.
   contents:
-    - get_xaringanthemer_value
+    - theme_xaringan_get_value
     - contains("color")
     - apply_alpha
     - choose_dark_or_light
