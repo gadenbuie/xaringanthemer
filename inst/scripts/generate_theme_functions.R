@@ -20,7 +20,7 @@ setup_theme_function <- function(
       glue::glue_data(
         tv,
         "#' @param {variable} {description}. ",
-        "Defaults to {stringr::str_replace_all(default, '[{{}}]', '`')}. ",
+        "Defaults to {gsub('[{{}}]', '`', default)}. ",
         "{element_description(element)}")
     ),
     "#' @template extra_css",
@@ -31,7 +31,7 @@ setup_theme_function <- function(
     as.character(
       glue::glue_data(
         tv,
-        "  {variable} = {ifelse(!stringr::str_detect(default, '^[{].+[}]$'), paste0('\"', default, '\"'), stringr::str_replace_all(default, '[{}]', ''))},")
+        "  {variable} = {ifelse(!grepl('^[{].+[}]$', default), paste0('\"', default, '\"'), gsub('[{}]', '', default))},")
     ),
     "  extra_css = NULL,",
     "  extra_fonts = NULL,",

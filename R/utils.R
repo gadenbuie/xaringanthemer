@@ -104,7 +104,7 @@ google_font <- function(family, ..., languages = NULL) {
     weights = weights,
     languages = languages,
     url = paste0(
-      base, stringr::str_replace_all(family, " ", "+"),
+      base, gsub(" ", "+", family),
       if (!is.null(weights)) paste0(":", weights),
       if (!is.null(languages)) paste0("&subset=", languages)
     )
@@ -136,9 +136,9 @@ print.google_font <- function(x) {
 }
 
 quote_elements_w_spaces <- function(x) {
-  x <- stringr::str_split(x, ", ?")[[1]]
-  has_space <- stringr::str_detect(x, "\\w \\w")
-  not_quoted <- stringr::str_detect(x, "^\\w.+\\w$")
+  x <- strsplit(x, ", ?")[[1]]
+  has_space <- grepl("\\w \\w", x)
+  not_quoted <- grepl("^\\w.+\\w$", x)
   x[has_space & not_quoted] <- paste0("'", x[has_space & not_quoted], "'")
   paste(x, collapse = ", ")
 }

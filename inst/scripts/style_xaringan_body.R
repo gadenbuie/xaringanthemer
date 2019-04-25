@@ -13,7 +13,7 @@ for (var in f_args[grepl("font_google$", f_args)]) {
   if (!inherits(gf, "google_font")) stop(
     "`", var, "` must be set using `google_font()`."
   )
-  group <- stringr::str_split(var, "_")[[1]][1]
+  group <- strsplit(var, "_")[[1]][1]
   if (group == "text") {
     text_font_family <- gf$family
     text_font_weight <- gf$weights %||% "normal"

@@ -5,7 +5,7 @@
 xaringan_coolors_accent <- function(coolors_url, order = "12345", ...) {
   stopifnot(length(coolors_url) == 1)
   colors <- coolors2colors(coolors_url)
-  order <- stringr::str_split(order, "")[1]
+  order <- strplit(order, "")[1]
   order <- unlist(purrr::map(order, as.integer))
   colors <- colors[order]
 
@@ -18,8 +18,8 @@ xaringan_coolors_accent <- function(coolors_url, order = "12345", ...) {
 }
 
 coolors2colors <- function(url) {
-  colors <- stringr::str_extract(url, "([a-f0-9]{6}-?){5}")
-  colors <- stringr::str_split(colors, "-")
+  colors <- sub(".*(([a-f0-9]{6}-?){5}).*", "\\1", url)
+  colors <- strsplit(colors, "-")
   colors <- purrr::map(colors, ~ paste0("#", .))
   if (length(colors) == 1) colors[[1]]
   else colors
