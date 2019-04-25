@@ -349,6 +349,157 @@ safely_set_geom <- function(geom, new) {
   warning = function(w) invisible())
 }
 
+
+# Color Scales ------------------------------------------------------------
+
+#' Xaringan Themer ggplot2 Scales
+#'
+#' Color and fill scales for discrete and continuous values, created using the
+#' primary accent color of the xaringanthemer styles.
+#'
+#' @param ... Arguments passed on to the appropriate scale function, one of
+#'   [colorspace::scale_color_discrete_sequential],
+#'   [colorspace::scale_color_continuous_sequential],
+#'   [colorspace::scale_fill_discrete_sequential], or
+#'   [colorspace::scale_fill_continuous_sequential].
+#' @param color A color value, in hex, to override the default color. Otherwise,
+#'   the primary color of the resulting scale is chosen from the xaringanthemer
+#'   slide styles.
+#' @param inverse If `color` is not supplied and `inverse = TRUE`, a primary
+#'   color is chosen to work well with the inverse slide styles, namely the
+#'   value of `inverse_header_color`
+#' @param direction Direction of the discrete scale. Use values less than 0 to
+#'   reverse the direction, e.g. `direction = -1`.
+#' @inheritParams colorspace::scale_color_continuous_sequential
+#' @param aes_type The type of aesthetic to which the scale is being applied.
+#'   One of "color", "colour", or "fill".
+#' @name scale_xaringan
+NULL
+
+#' @rdname scale_xaringan
+#' @export
+scale_xaringan_discrete <- function(
+  aes_type = c("color", "colour", "fill"),
+  ...,
+  color = NULL,
+  direction = 1,
+  inverse = FALSE
+) {
+  aes_type <- match.arg(aes_type)
+  color <- hex2HCL(get_theme_accent_color(color, inverse))
+
+  if (direction >= 0) {
+    if (aes_type %in% c("color", "colour")) {
+      colorspace::scale_color_discrete_sequential(
+        c1 = color[1, "C"], l1 = color[1, "L"], h1 = color[1, "H"], ...)
+    } else {
+      colorspace::scale_fill_discrete_sequential(
+        c1 = color[1, "C"], l1 = color[1, "L"], h1 = color[1, "H"], ...)
+    }
+  } else {
+    if (aes_type %in% c("color", "colour")) {
+      colorspace::scale_color_discrete_sequential(
+        c2 = color[1, "C"], l2 = color[1, "L"], h2 = color[1, "H"], ...)
+    } else {
+      colorspace::scale_fill_discrete_sequential(
+        c2 = color[1, "C"], l2 = color[1, "L"], h2 = color[1, "H"], ...)
+    }
+  }
+}
+
+#' @rdname scale_xaringan
+#' @export
+scale_xaringan_fill_discrete <- function(
+  ..., color = NULL, direction = 1, inverse = FALSE
+) {
+  scale_xaringan_discrete(
+    "fill", ..., color = color, direction = direction, inverse = inverse
+  )
+}
+
+#' @rdname scale_xaringan
+#' @export
+scale_xaringan_color_discrete <- function(
+  ..., color = NULL, direction = 1, inverse = FALSE
+) {
+  scale_xaringan_discrete(
+    "color", ..., color = color, direction = direction, inverse = inverse
+  )
+}
+
+#' @rdname scale_xaringan
+#' @export
+scale_xaringan_colour_discrete <- scale_xaringan_color_discrete
+
+#' @rdname scale_xaringan
+#' @export
+scale_xaringan_continuous <- function(
+  aes_type = c("color", "colour", "fill"),
+  ..., color = NULL, begin = 0, end = 1, inverse = FALSE
+) {
+  aes_type <- match.arg(aes_type)
+  color <- hex2HCL(get_theme_accent_color(color, inverse))
+
+  scale_fn <- switch(
+    aes_type,
+    colour = , color = colorspace::scale_color_continuous_sequential,
+    fill = colorspace::scale_fill_continuous_sequential
+  )
+
+  scale_fn(
+    c1 = color[1, "C"],
+    l1 = color[1, "L"],
+    h1 = color[1, "H"],
+    begin = begin, end = end,
+    ...
+  )
+}
+
+#' @rdname scale_xaringan
+#' @export
+scale_xaringan_fill_continuous <- function(
+  ..., color = NULL, direction = 1, inverse = FALSE
+) {
+  scale_xaringan_continuous(
+    "fill", ..., color = color, direction = direction, inverse = inverse
+  )
+}
+
+#' @rdname scale_xaringan
+#' @export
+scale_xaringan_color_continuous <- function(
+  ..., color = NULL, direction = 1, inverse = FALSE
+) {
+  scale_xaringan_continuous(
+    "color", ..., color = color, direction = direction, inverse = inverse
+  )
+}
+
+#' @rdname scale_xaringan
+#' @export
+scale_xaringan_colour_continuous <- scale_xaringan_color_continuous
+
+get_theme_accent_color <- function(color = NULL, inverse = FALSE) {
+  color <-
+    if (!inverse) {
+      color %||%
+        xaringanthemer_env[["header_color"]] %||%
+        xaringanthemer_env[["text_color"]]
+    } else {
+      color %||% xaringanthemer_env[["inverse_header_color"]]
+    }
+
+  if (is.null(color)) {
+    stop(
+      call. = FALSE,
+      "No color provided and no default available. ",
+      "Have you forgotten to use a style function to set the xaringan theme?"
+    )
+  }
+
+  color
+}
+
 blend_colors <- function(x, y, alpha = 0.5) {
   x <- colorspace::hex2RGB(x)
   y <- colorspace::hex2RGB(y)
@@ -357,6 +508,13 @@ blend_colors <- function(x, y, alpha = 0.5) {
 }
 
 color_blender <- function(x, y) function(alpha = 0.5) blend_colors(x, y, alpha)
+
+hex2HCL <- function(x) {
+  colorspace::coords(as(colorspace::hex2RGB(x), "polarLUV"))
+}
+
+
+# Fonts -------------------------------------------------------------------
 
 get_theme_font <- function(element = c("text", "header", "code")) {
   element <- match.arg(element)
