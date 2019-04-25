@@ -4,6 +4,8 @@
 
 xaringanthemer_env <- new.env(parent = emptyenv())
 
+# I looked up these ggplot geom aesthetic defaults manually via e.g.
+# ggplot2::geom_line()$geom$default_aes
 xaringanthemer_env$std_ggplot_defaults <- list(
   "line"       = list(color  = "black"),
   "vline"      = list(color  = "black"),
