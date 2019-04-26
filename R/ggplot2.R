@@ -354,8 +354,8 @@ safely_set_geom <- function(geom, new) {
 
 #' Xaringan Themer ggplot2 Scales
 #'
-#' Color and fill scales for discrete and continuous values, created using the
-#' primary accent color of the xaringanthemer styles.
+#' Color and fill single-color scales for discrete and continuous values,
+#' created using the primary accent color of the xaringanthemer styles.
 #'
 #' @param ... Arguments passed on to the appropriate scale function, one of
 #'   [colorspace::scale_color_discrete_sequential],
@@ -388,23 +388,21 @@ scale_xaringan_discrete <- function(
   aes_type <- match.arg(aes_type)
   color <- hex2HCL(get_theme_accent_color(color, inverse))
 
-  if (direction >= 0) {
-    if (aes_type %in% c("color", "colour")) {
-      colorspace::scale_color_discrete_sequential(
-        c1 = color[1, "C"], l1 = color[1, "L"], h1 = color[1, "H"], ...)
+  pal <- function(n) {
+    if (direction >= 0) {
+      colorspace::sequential_hcl(
+        n = n, c1 = color[1, "C"], l1 = color[1, "L"], h1 = color[1, "H"],
+        ...
+      )
     } else {
-      colorspace::scale_fill_discrete_sequential(
-        c1 = color[1, "C"], l1 = color[1, "L"], h1 = color[1, "H"], ...)
-    }
-  } else {
-    if (aes_type %in% c("color", "colour")) {
-      colorspace::scale_color_discrete_sequential(
-        c2 = color[1, "C"], l2 = color[1, "L"], h2 = color[1, "H"], ...)
-    } else {
-      colorspace::scale_fill_discrete_sequential(
-        c2 = color[1, "C"], l2 = color[1, "L"], h2 = color[1, "H"], ...)
+      colorspace::sequential_hcl(
+        n = n, c2 = color[1, "C"], l2 = color[1, "L"], h2 = color[1, "H"],
+        ...
+      )
     }
   }
+
+  ggplot2::discrete_scale(aes_type, "manual", pal, ...)
 }
 
 #' @rdname scale_xaringan
@@ -458,20 +456,20 @@ scale_xaringan_continuous <- function(
 #' @rdname scale_xaringan
 #' @export
 scale_xaringan_fill_continuous <- function(
-  ..., color = NULL, direction = 1, inverse = FALSE
+  ..., color = NULL, begin = 0, end = 1, inverse = FALSE
 ) {
   scale_xaringan_continuous(
-    "fill", ..., color = color, direction = direction, inverse = inverse
+    "fill", ..., color = color, begin = begin, end = end, inverse = inverse
   )
 }
 
 #' @rdname scale_xaringan
 #' @export
 scale_xaringan_color_continuous <- function(
-  ..., color = NULL, direction = 1, inverse = FALSE
+  ..., color = NULL, begin = 0, end = 1, inverse = FALSE
 ) {
   scale_xaringan_continuous(
-    "color", ..., color = color, direction = direction, inverse = inverse
+    "color", ..., color = color, begin = begin, end = end, inverse = inverse
   )
 }
 
