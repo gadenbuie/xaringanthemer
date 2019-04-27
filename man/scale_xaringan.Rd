@@ -27,14 +27,14 @@ scale_xaringan_colour_discrete(..., color = NULL, direction = 1,
 scale_xaringan_continuous(aes_type = c("color", "colour", "fill"), ...,
   color = NULL, begin = 0, end = 1, inverse = FALSE)
 
-scale_xaringan_fill_continuous(..., color = NULL, direction = 1,
+scale_xaringan_fill_continuous(..., color = NULL, begin = 0, end = 1,
   inverse = FALSE)
 
-scale_xaringan_color_continuous(..., color = NULL, direction = 1,
-  inverse = FALSE)
+scale_xaringan_color_continuous(..., color = NULL, begin = 0,
+  end = 1, inverse = FALSE)
 
-scale_xaringan_colour_continuous(..., color = NULL, direction = 1,
-  inverse = FALSE)
+scale_xaringan_colour_continuous(..., color = NULL, begin = 0,
+  end = 1, inverse = FALSE)
 }
 \arguments{
 \item{aes_type}{The type of aesthetic to which the scale is being applied.
@@ -60,8 +60,11 @@ value of \code{inverse_header_color}}
 \item{begin}{Number in the range of \code{[0, 1]} indicating to which point in the color scale the smallest data value should be mapped.}
 
 \item{end}{Number in the range of \code{[0, 1]} indicating to which point in the color scale the largest data value should be mapped.}
+
+\item{...}{Additional arguments passed to \code{\link[ggplot2:continuous_scale]{ggplot2::continuous_scale()}} or
+\code{\link[=ggplot2:discrete_scale]{ggplot2:discrete_scale()}}.}
 }
 \description{
-Color and fill scales for discrete and continuous values, created using the
-primary accent color of the xaringanthemer styles.
+Color and fill single-color scales for discrete and continuous values,
+created using the primary accent color of the xaringanthemer styles.
 }

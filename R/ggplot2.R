@@ -230,6 +230,7 @@ theme_xaringan_base <- function(
     axis.title = ggplot2::element_text(size = title_font_size * 0.8),
     axis.ticks = ggplot2::element_line(color = blend(0.8)),
     axis.text  = ggplot2::element_text(color = blend(0.4)),
+    legend.key = element_rect(fill="transparent", colour=NA),
     plot.caption = ggplot2::element_text(
       size  = text_font_size * 0.8,
       color = blend(0.3))
@@ -371,6 +372,8 @@ safely_set_geom <- function(geom, new) {
 #' @param direction Direction of the discrete scale. Use values less than 0 to
 #'   reverse the direction, e.g. `direction = -1`.
 #' @inheritParams colorspace::scale_color_continuous_sequential
+#' @param ... Additional arguments passed to [ggplot2::continuous_scale()] or
+#'   [ggplot2:discrete_scale()].
 #' @param aes_type The type of aesthetic to which the scale is being applied.
 #'   One of "color", "colour", or "fill".
 #' @name scale_xaringan
@@ -389,17 +392,11 @@ scale_xaringan_discrete <- function(
   color <- hex2HCL(get_theme_accent_color(color, inverse))
 
   pal <- function(n) {
-    if (direction >= 0) {
-      colorspace::sequential_hcl(
-        n = n, c1 = color[1, "C"], l1 = color[1, "L"], h1 = color[1, "H"],
-        ...
-      )
-    } else {
-      colorspace::sequential_hcl(
-        n = n, c2 = color[1, "C"], l2 = color[1, "L"], h2 = color[1, "H"],
-        ...
-      )
-    }
+    colors <- colorspace::sequential_hcl(
+      n = n,
+      c1 = color[1, "C"], l1 = color[1, "L"], h1 = color[1, "H"],
+      rev = direction >= 1
+    )
   }
 
   ggplot2::discrete_scale(aes_type, "manual", pal, ...)
@@ -438,17 +435,20 @@ scale_xaringan_continuous <- function(
   aes_type <- match.arg(aes_type)
   color <- hex2HCL(get_theme_accent_color(color, inverse))
 
-  scale_fn <- switch(
-    aes_type,
-    colour = , color = colorspace::scale_color_continuous_sequential,
-    fill = colorspace::scale_fill_continuous_sequential
+  colors <- colorspace::sequential_hcl(
+    n = 12, c1 = color[1, "C"], l1 = color[1, "L"], h1 = color[1, "H"],
+    rev = TRUE
   )
 
-  scale_fn(
-    c1 = color[1, "C"],
-    l1 = color[1, "L"],
-    h1 = color[1, "H"],
-    begin = begin, end = end,
+  rescaler <- function(x, ...) {
+    scales::rescale(x, to = c(begin, end), from = range(x, na.rm = TRUE))
+  }
+
+  ggplot2::continuous_scale(
+    aes_type, "continuous_sequential",
+    palette = scales::gradient_n_pal(colors, values = NULL),
+    rescaler = rescaler,
+    oob = scales::censor,
     ...
   )
 }
