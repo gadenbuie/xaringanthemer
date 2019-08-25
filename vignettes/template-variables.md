@@ -16,8 +16,7 @@ Note that themes, like `mono_accent()`, have additional parameters, but
 with any theme function you can override the theme by directly setting
 the arguments below when calling the theme function. For example, to use
 `mono_accent()` with a different slide background color, you can call
-`mono_accent(background_color =
-"#abc123")`.
+`mono_accent(background_color = "#abc123")`.
 
 | variable                                | default                                                                         | element                                                  | description                                                                                                                                                                                                                                                        |
 | :-------------------------------------- | :------------------------------------------------------------------------------ | :------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

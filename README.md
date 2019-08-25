@@ -64,16 +64,14 @@ style_mono_light(
 **xaringanthemer** is <kbd>Tab</kbd> friendly – [use autocomplete to
 explore](#theme-settings) the [template
 variables](vignettes/template-variables.md) that you can adjust in each
-of the
-themes\!
+of the themes\!
 
 <img src="vignettes/images/example-rstudio-completion.gif" width="100%" />
 
 ### R Markdown Template in RStudio
 
 You can also skip the above and just create a *Ninja Themed
-Presentation* from the New R Markdown Document menu in
-RStudio.
+Presentation* from the New R Markdown Document menu in RStudio.
 
 <center>
 
@@ -122,8 +120,7 @@ style_mono_accent(base_color = "#43418A")
 #### `style_mono_accent_inverse()`
 
 An “inverted” default xaringan theme with a single color used for color
-accents on select elements (headers, bold text,
-etc.).
+accents on select elements (headers, bold text, etc.).
 
 ``` r
 style_mono_accent_inverse(base_color = "#3C989E")
@@ -157,8 +154,7 @@ style_duo_accent(primary_color = "#006747", secondary_color = "#CFC493")
 
 #### `style_duo_accent_inverse()`
 
-An “inverted” default Xaringan theme with two accent
-colors.
+An “inverted” default Xaringan theme with two accent colors.
 
 ``` r
 style_duo_accent_inverse(primary_color = "#006747", secondary_color = "#CFC493")
