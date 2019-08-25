@@ -67,7 +67,6 @@ if (requireNamespace("ggplot2", quietly = TRUE)) {
     geom_point() +
     theme_xaringan()
 }
-
 }
 \seealso{
 Other xaringanthemer ggplot2 themes: \code{\link{theme_xaringan_base}},

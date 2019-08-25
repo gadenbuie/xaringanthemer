@@ -14,14 +14,15 @@ setup_theme_function <- function(
   if (file == "clip" && !requireNamespace("clipr", quietly = TRUE)) file <- ""
   tv <- template
   null_default <- purrr::map_lgl(tv$default, is.null)
-  tv[null_default, 'default'] <- "{NULL}"
+  tv[null_default, "default"] <- "{NULL}"
   x <- c(
     as.character(
       glue::glue_data(
         tv,
         "#' @param {variable} {description}. ",
         "Defaults to {gsub('[{{}}]', '`', default)}. ",
-        "{element_description(element)}")
+        "{element_description(element)}"
+      )
     ),
     "#' @template extra_css",
     "#' @param outfile Customized xaringan CSS output file name, default is \"xaringan-themer.css\"",
@@ -31,7 +32,8 @@ setup_theme_function <- function(
     as.character(
       glue::glue_data(
         tv,
-        "  {variable} = {ifelse(!grepl('^[{].+[}]$', default), paste0('\"', default, '\"'), gsub('[{}]', '', default))},")
+        "  {variable} = {ifelse(!grepl('^[{].+[}]$', default), paste0('\"', default, '\"'), gsub('[{}]', '', default))},"
+      )
     ),
     "  extra_css = NULL,",
     "  extra_fonts = NULL,",

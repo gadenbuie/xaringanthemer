@@ -28,15 +28,14 @@ named list of class identifiers, for example
 \examples{
 style_extra_css(
   outfile = stdout(),
-  css =  list(
-    ".red"   = list(color = "red"),
+  css = list(
+    ".red" = list(color = "red"),
     ".small" = list("font-size" = "90\%"),
     ".full-width" = list(
       display = "flex",
-      width   = "100\%",
-      flex    = "1 1 auto"
+      width = "100\%",
+      flex = "1 1 auto"
     )
   )
 )
-
 }

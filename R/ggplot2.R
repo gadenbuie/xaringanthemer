@@ -29,7 +29,6 @@
 #'     geom_point() +
 #'     theme_xaringan()
 #' }
-#'
 #' @return A ggplot2 theme
 #' @family xaringanthemer ggplot2 themes
 #' @export
@@ -48,10 +47,13 @@ theme_xaringan <- function(
   accent_color <- accent_color %||% xaringanthemer_env$header_color
   accent_secondary_color <- accent_secondary_color %||% xaringanthemer_env$text_bold_color %||% accent_color
 
-  theme_xaringan_base(text_color, background_color,
-                      accent_color = accent_color,
-                      accent_secondary_color = accent_secondary_color,
-                      ...)
+  theme_xaringan_base(
+    text_color,
+    background_color,
+    accent_color = accent_color,
+    accent_secondary_color = accent_secondary_color,
+    ...
+  )
 }
 
 #' An Inverse Plot Theme for ggplot2 by xaringanthemer
@@ -83,7 +85,6 @@ theme_xaringan <- function(
 #'     geom_point() +
 #'     theme_xaringan()
 #' }
-#'
 #' @return A ggplot2 theme
 #' @family xaringanthemer ggplot2 themes
 #' @export
@@ -102,10 +103,13 @@ theme_xaringan_inverse <- function(
   accent_color <- accent_color %||% xaringanthemer_env$inverse_header_color
   accent_secondary_color <- accent_secondary_color %||% accent_color
 
-  theme_xaringan_base(text_color, background_color,
-                      accent_color = accent_color,
-                      accent_secondary_color = accent_secondary_color,
-                      ...)
+  theme_xaringan_base(
+    text_color,
+    background_color,
+    accent_color = accent_color,
+    accent_secondary_color = accent_secondary_color,
+    ...
+  )
 }
 
 #' The ggplot2 xaringanthemer base plot theme
@@ -168,7 +172,7 @@ theme_xaringan_inverse <- function(
 #'       caption = "{xaringanthemer}"
 #'     )
 #'
-#'    ggplot(iris) +
+#'   ggplot(iris) +
 #'     aes(Petal.Length, Petal.Width) +
 #'     geom_point() +
 #'     theme_xaringan_base(
@@ -183,7 +187,6 @@ theme_xaringan_inverse <- function(
 #'       caption = "{xaringanthemer}"
 #'     )
 #' }
-#'
 #' @return A ggplot2 theme
 #' @family xaringanthemer ggplot2 themes
 #' @export
@@ -208,10 +211,14 @@ theme_xaringan_base <- function(
 
   text_font <- if (!is.null(text_font)) {
     register_font(text_font, identical(text_font_use_google, TRUE))
-  } else get_theme_font("text")
+  } else {
+    get_theme_font("text")
+  }
   title_font <- if (!is.null(title_font)) {
     register_font(title_font, identical(title_font_use_google, TRUE))
-  } else get_theme_font("header")
+  } else {
+    get_theme_font("header")
+  }
 
   text_font %||% "sans"
   title_font %||% "sans"
@@ -226,32 +233,39 @@ theme_xaringan_base <- function(
     line = ggplot2::element_line(color = blend(0.2)),
     rect = ggplot2::element_rect(fill = background_color),
     text = ggplot2::element_text(
-      color  = blend(0.1),
+      color = blend(0.1),
       family = text_font,
-      size   = text_font_size),
+      size = text_font_size
+    ),
     title = ggplot2::element_text(
-      color  = accent_color,
+      color = accent_color,
       family = title_font,
-      size   = title_font_size),
-    plot.background  = ggplot2::element_rect(
-      fill  = background_color,
-      color = background_color),
+      size = title_font_size
+    ),
+    plot.background = ggplot2::element_rect(
+      fill = background_color,
+      color = background_color
+    ),
     panel.background = ggplot2::element_rect(
-      fill  = background_color,
-      color = background_color),
+      fill = background_color,
+      color = background_color
+    ),
     panel.grid.major = ggplot2::element_line(
       color = blend(0.8),
-      inherit.blank = TRUE),
+      inherit.blank = TRUE
+    ),
     panel.grid.minor = ggplot2::element_line(
       color = blend(0.9),
-      inherit.blank = TRUE),
+      inherit.blank = TRUE
+    ),
     axis.title = ggplot2::element_text(size = title_font_size * 0.8),
     axis.ticks = ggplot2::element_line(color = blend(0.8)),
-    axis.text  = ggplot2::element_text(color = blend(0.4)),
-    legend.key = element_rect(fill="transparent", colour=NA),
+    axis.text = ggplot2::element_text(color = blend(0.4)),
+    legend.key = element_rect(fill = "transparent", colour = NA),
     plot.caption = ggplot2::element_text(
-      size  = text_font_size * 0.8,
-      color = blend(0.3))
+      size = text_font_size * 0.8,
+      color = blend(0.3)
+    )
   )
 }
 
@@ -346,7 +360,9 @@ xaringan_theme_restore_defaults <- function() {
   requires_package("ggplot2")
   requires_xaringanthemer_env()
 
-  if (is.null(xaringanthemer_env$old_ggplot_defaults)) return(invisible())
+  if (is.null(xaringanthemer_env$old_ggplot_defaults)) {
+    return(invisible())
+  }
 
 
   old_default <- xaringanthemer_env$old_ggplot_defaults
@@ -365,11 +381,13 @@ xaringan_theme_restore_defaults <- function() {
 }
 
 safely_set_geom <- function(geom, new) {
-  tryCatch({
-    ggplot2::update_geom_defaults(geom, new)
-  },
-  error = function(e) invisible(),
-  warning = function(w) invisible())
+  tryCatch(
+    {
+      ggplot2::update_geom_defaults(geom, new)
+    },
+    error = function(e) invisible(),
+    warning = function(w) invisible()
+  )
 }
 
 
@@ -420,7 +438,9 @@ scale_xaringan_discrete <- function(
   pal <- function(n) {
     colors <- colorspace::sequential_hcl(
       n = n,
-      c1 = color[1, "C"], l1 = color[1, "L"], h1 = color[1, "H"],
+      c1 = color[1, "C"],
+      l1 = color[1, "L"],
+      h1 = color[1, "H"],
       rev = direction >= 1
     )
   }
@@ -431,20 +451,34 @@ scale_xaringan_discrete <- function(
 #' @rdname scale_xaringan
 #' @export
 scale_xaringan_fill_discrete <- function(
-  ..., color = NULL, direction = 1, inverse = FALSE
+  ...,
+  color = NULL,
+  direction = 1,
+  inverse = FALSE
 ) {
   scale_xaringan_discrete(
-    "fill", ..., color = color, direction = direction, inverse = inverse
+    "fill",
+    ...,
+    color = color,
+    direction = direction,
+    inverse = inverse
   )
 }
 
 #' @rdname scale_xaringan
 #' @export
 scale_xaringan_color_discrete <- function(
-  ..., color = NULL, direction = 1, inverse = FALSE
+  ...,
+  color = NULL,
+  direction = 1,
+  inverse = FALSE
 ) {
   scale_xaringan_discrete(
-    "color", ..., color = color, direction = direction, inverse = inverse
+    "color",
+    ...,
+    color = color,
+    direction = direction,
+    inverse = inverse
   )
 }
 
@@ -456,13 +490,20 @@ scale_xaringan_colour_discrete <- scale_xaringan_color_discrete
 #' @export
 scale_xaringan_continuous <- function(
   aes_type = c("color", "colour", "fill"),
-  ..., color = NULL, begin = 0, end = 1, inverse = FALSE
+  ...,
+  color = NULL,
+  begin = 0,
+  end = 1,
+  inverse = FALSE
 ) {
   aes_type <- match.arg(aes_type)
   color <- hex2HCL(get_theme_accent_color(color, inverse))
 
   colors <- colorspace::sequential_hcl(
-    n = 12, c1 = color[1, "C"], l1 = color[1, "L"], h1 = color[1, "H"],
+    n = 12,
+    c1 = color[1, "C"],
+    l1 = color[1, "L"],
+    h1 = color[1, "H"],
     rev = TRUE
   )
 
@@ -471,7 +512,8 @@ scale_xaringan_continuous <- function(
   }
 
   ggplot2::continuous_scale(
-    aes_type, "continuous_sequential",
+    aes_type,
+    "continuous_sequential",
     palette = scales::gradient_n_pal(colors, values = NULL),
     rescaler = rescaler,
     oob = scales::censor,
@@ -482,20 +524,38 @@ scale_xaringan_continuous <- function(
 #' @rdname scale_xaringan
 #' @export
 scale_xaringan_fill_continuous <- function(
-  ..., color = NULL, begin = 0, end = 1, inverse = FALSE
+  ...,
+  color = NULL,
+  begin = 0,
+  end = 1,
+  inverse = FALSE
 ) {
   scale_xaringan_continuous(
-    "fill", ..., color = color, begin = begin, end = end, inverse = inverse
+    "fill",
+    ...,
+    color = color,
+    begin = begin,
+    end = end,
+    inverse = inverse
   )
 }
 
 #' @rdname scale_xaringan
 #' @export
 scale_xaringan_color_continuous <- function(
-  ..., color = NULL, begin = 0, end = 1, inverse = FALSE
+  ...,
+  color = NULL,
+  begin = 0,
+  end = 1,
+  inverse = FALSE
 ) {
   scale_xaringan_continuous(
-    "color", ..., color = color, begin = begin, end = end, inverse = inverse
+    "color",
+    ...,
+    color = color,
+    begin = begin,
+    end = end,
+    inverse = inverse
   )
 }
 
@@ -545,7 +605,7 @@ get_theme_font <- function(element = c("text", "header", "code")) {
 
   element_family <- paste0(element, "_font_family")
   element_google <- paste0(element, "_font_google")
-  element_url    <- paste0(element, "_font_url")
+  element_url <- paste0(element, "_font_url")
 
   family <- xaringanthemer_env[[element_family]]
   is_google_font <- !is.null(xaringanthemer_env[[element_google]]) ||
@@ -560,13 +620,17 @@ register_font <- function(
   fn = sys.calls()[[max(1, length(sys.calls()) - 1)]][[1]],
   ...
 ) {
-  if (is.null(family)) return(NULL)
+  if (is.null(family)) {
+    return(NULL)
+  }
   family <- gsub("['\"]", "", family)
 
   if (!identical(xaringanthemer_env$showtext_auto, TRUE)) {
     if (requires_package(pkg = "showtext", fn, required = FALSE)) {
       showtext::showtext_auto()
-    } else return(family)
+    } else {
+      return(family)
+    }
     xaringanthemer_env$showtext_auto <- TRUE
   }
 
@@ -574,7 +638,9 @@ register_font <- function(
     return(family)
   } else if (!family %in% sysfonts::font_families()) {
     is_default_font <- family %in% c(
-      "Roboto", "Source Code Pro", "Yanone Kaffeesatz"
+      "Roboto",
+      "Source Code Pro",
+      "Yanone Kaffeesatz"
     )
     if (identical(google, TRUE) || is_default_font) {
       tryCatch(
@@ -585,7 +651,8 @@ register_font <- function(
     } else {
       warning(paste(
         "Please manually register fonts not served by Google Fonts.",
-        "See `sysfonts::font_add()` for more information."))
+        "See `sysfonts::font_add()` for more information."
+      ))
     }
   }
   family
@@ -595,7 +662,9 @@ requires_package <- function(pkg = "ggplot2", fn = "", required = TRUE) {
   raise <- if (required) stop else warning
   if (!requireNamespace(pkg, quietly = TRUE)) {
     msg <- paste0(
-      "`", pkg, "` is ",
+      "`",
+      pkg,
+      "` is ",
       if (required) "required " else "suggested ",
       if (fn != "") paste0("by ", fn, "() ")[1],
       "but is not installed."
@@ -693,7 +762,9 @@ theme_xaringan_get_value <- function(setting) {
 }
 
 web_to_point <- function(x, px_per_em = 16, scale = 1) {
-  if (is.null(x)) return(NULL)
+  if (is.null(x)) {
+    return(NULL)
+  }
   if (grepl("pt$", x)) {
     return(as.numeric(sub("pt$", "", x)))
   } else if (grepl("px$", x)) {

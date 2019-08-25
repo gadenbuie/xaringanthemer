@@ -2,12 +2,15 @@ context("test-list2css.R")
 
 test_that("list2css converts lists to css", {
   css <- list(
-    '.remark-slide' = list(
+    ".remark-slide" = list(
       "color" = "#FFF",
       "font-size" = "30px"
     )
   )
-  expected <- '.remark-slide {\n  color: #FFF;\n  font-size: 30px;\n}'
+  expected <- ".remark-slide {
+  color: #FFF;
+  font-size: 30px;
+}"
   expect_equal(list2css(css), expected)
 
   css[[".new-class"]] <- list("background-color" = "#000")
@@ -29,7 +32,7 @@ test_that("list2css errors if css list has unnamed elements", {
       "color" = "#FFF",
       "font-size" = "30px"
     ),
-    '.test' = list(color = 'red')
+    ".test" = list(color = "red")
   )
   expect_error(list2css(css))
 })
@@ -40,7 +43,7 @@ test_that("list2css errors if css list has unnamed properties", {
       color = "#FFF",
       "font-size" = "30px"
     ),
-    '.test' = list('red')
+    ".test" = list("red")
   )
   expect_error(list2css(css))
 
@@ -49,7 +52,7 @@ test_that("list2css errors if css list has unnamed properties", {
       "#FFF",
       "font-size" = "30px"
     ),
-    '.test' = list('red')
+    ".test" = list("red")
   )
   expect_error(list2css(css))
 })
@@ -60,7 +63,7 @@ test_that("list2css errors if not list within list", {
       list(color = "red"),
       "font-size" = "30px"
     ),
-    '.test' = list('red')
+    ".test" = list("red")
   )
   expect_error(list2css(css))
 })

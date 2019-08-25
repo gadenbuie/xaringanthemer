@@ -36,12 +36,12 @@ darken_color <- function(color_hex, strength = 0.8) {
 #' @param opacity Desired opacity of the output color
 #' @export
 apply_alpha <- function(color_hex, opacity = 0.5) {
-  paste0(color_hex, as.hexmode(round(255*opacity, 0)))
+  paste0(color_hex, as.hexmode(round(255 * opacity, 0)))
 }
 
 adjust_value_color <- function(color_hex, strength = 0.5) {
   color_hsv <- rgb2hsv(col2rgb(color_hex))[, 1]
-  color_hsv['v'] <- strength
+  color_hsv["v"] <- strength
   hsv(color_hsv[1], color_hsv[2], color_hsv[3])
 }
 
@@ -68,17 +68,19 @@ is_light_color <- function(x) {
   color_rgb <- col2rgb(x)[, 1]
   # from https://stackoverflow.com/a/3943023/2022615
   color_rgb <- color_rgb / 255
-  color_rgb[color_rgb <= 0.03928] <- color_rgb[color_rgb <= 0.03928]/12.92
-  color_rgb[color_rgb > 0.03928] <- ((color_rgb[color_rgb > 0.03928] + 0.055)/1.055)^2.4
+  color_rgb[color_rgb <= 0.03928] <- color_rgb[color_rgb <= 0.03928] / 12.92
+  color_rgb[color_rgb > 0.03928] <- ((color_rgb[color_rgb > 0.03928] + 0.055) / 1.055)^2.4
   lum <- t(c(0.2126, 0.7152, 0.0722)) %*% color_rgb
   lum[1, 1] > 0.179
 }
 
 #' @keywords internal
 call_style_xaringan <- function() {
-  paste0("style_xaringan(",
-         paste(names(formals(style_xaringan)), collapse = ", "),
-         ")")
+  paste0(
+    "style_xaringan(",
+    paste(names(formals(style_xaringan)), collapse = ", "),
+    ")"
+  )
 }
 
 #' Specify Google Font
@@ -96,19 +98,23 @@ call_style_xaringan <- function() {
 #'   [google_language_codes()].
 #' @export
 google_font <- function(family, ..., languages = NULL) {
-  base = "https://fonts.googleapis.com/css?family="
+  base <- "https://fonts.googleapis.com/css?family="
   weights <- if (length(list(...))) paste(c(...), collapse = ",")
   languages <- if (!is.null(languages)) paste(google_language_codes(languages), collapse = ",")
-  structure(list(
-    family = family,
-    weights = weights,
-    languages = languages,
-    url = paste0(
-      base, gsub(" ", "+", family),
-      if (!is.null(weights)) paste0(":", weights),
-      if (!is.null(languages)) paste0("&subset=", languages)
-    )
-  ), class = "google_font")
+  structure(
+    list(
+      family = family,
+      weights = weights,
+      languages = languages,
+      url = paste0(
+        base,
+        gsub(" ", "+", family),
+        if (!is.null(weights)) paste0(":", weights),
+        if (!is.null(languages)) paste0("&subset=", languages)
+      )
+    ),
+    class = "google_font"
+  )
 }
 
 #' @title List Valid Google Language Codes
@@ -118,20 +124,41 @@ google_font <- function(family, ..., languages = NULL) {
 #' @param language_codes Vector of potential Google language codes
 #' @export
 google_language_codes <- function(
-  language_codes = c("latin", "latin-ext", "sinhala", "greek", "hebrew",
-    "vietnamese", "cyrillic", "cyrillic-ext", "devanagari", "arabic", "khmer",
-    "tamil", "greek-ext", "thai", "bengali", "gujarati", "oriya",
-    "malayalam", "gurmukhi", "kannada", "telugu", "myanmar")
-) {
+  language_codes = c(
+    "latin",
+    "latin-ext",
+    "sinhala",
+    "greek",
+    "hebrew",
+    "vietnamese",
+    "cyrillic",
+    "cyrillic-ext",
+    "devanagari",
+    "arabic",
+    "khmer",
+    "tamil",
+    "greek-ext",
+    "thai",
+    "bengali",
+    "gujarati",
+    "oriya",
+    "malayalam",
+    "gurmukhi",
+    "kannada",
+    "telugu",
+    "myanmar"
+  )) {
   unique(match.arg(language_codes, several.ok = TRUE))
 }
 
 print.google_font <- function(x) {
   cat(
-    "Family: ", x$family,
+    "Family: ",
+    x$family,
     if (!is.null(x$weights)) paste("\nWeights:", x$weights),
     if (!is.null(x$languages)) paste("\nLangs:  ", x$languages),
-    "\nURL:    ", x$url
+    "\nURL:    ",
+    x$url
   )
 }
 

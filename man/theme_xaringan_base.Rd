@@ -81,7 +81,7 @@ if (requireNamespace("ggplot2", quietly = TRUE)) {
       caption = "{xaringanthemer}"
     )
 
-   ggplot(iris) +
+  ggplot(iris) +
     aes(Petal.Length, Petal.Width) +
     geom_point() +
     theme_xaringan_base(
@@ -96,7 +96,6 @@ if (requireNamespace("ggplot2", quietly = TRUE)) {
       caption = "{xaringanthemer}"
     )
 }
-
 }
 \seealso{
 Other xaringanthemer ggplot2 themes: \code{\link{theme_xaringan_inverse}},
