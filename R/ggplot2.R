@@ -1,6 +1,10 @@
 
 #' A Plot Theme for ggplot2 by xaringanthemer
 #'
+#' @description
+#'
+#' **Lifecycle:** [Experimental](https://www.tidyverse.org/lifecycle/#experimental).
+#'
 #' Creates [ggplot2] themes to match the xaringanthemer theme used in the
 #' [xaringan] slides that seamlessly matches the "normal" slide colors and
 #' styles.
@@ -52,6 +56,10 @@ theme_xaringan <- function(
 
 #' An Inverse Plot Theme for ggplot2 by xaringanthemer
 #'
+#' @description
+#'
+#' **Lifecycle:** [Experimental](https://www.tidyverse.org/lifecycle/#experimental).
+#'
 #' A [ggplot2] xaringanthemer plot theme to seamlessly match the "inverse"
 #' [xaringan] slide colors and styles as styled by [xaringanthemer].
 #'
@@ -102,6 +110,10 @@ theme_xaringan_inverse <- function(
 
 #' The ggplot2 xaringanthemer base plot theme
 #'
+#' @description
+#'
+#' **Lifecycle:** [Experimental](https://www.tidyverse.org/lifecycle/#experimental).
+#'
 #' Provides a base plot theme for [ggplot2] to match the [xaringan] slide theme
 #' created by [xaringanthemer]. The theme is designed to create a general plot
 #' style from two colors, a `background_color` and a `text_color` (or foreground
@@ -148,10 +160,13 @@ theme_xaringan_inverse <- function(
 #'       text_color = "#e1e5f2",
 #'       background_color = "#021c25",
 #'       accent_color = "#1f7a8c",
-#'       set_ggplot_defaults = TRUE) +
-#'       labs(title = "Basic Iris Plot",
-#'            subtitle = "+ theme_xaringan_base()",
-#'            caption = "{xaringanthemer}")
+#'       set_ggplot_defaults = TRUE
+#'     ) +
+#'     labs(
+#'       title = "Basic Iris Plot",
+#'       subtitle = "+ theme_xaringan_base()",
+#'       caption = "{xaringanthemer}"
+#'     )
 #'
 #'    ggplot(iris) +
 #'     aes(Petal.Length, Petal.Width) +
@@ -160,10 +175,13 @@ theme_xaringan_inverse <- function(
 #'       text_color = "#021c25",
 #'       background_color = "#e1e5f2",
 #'       accent_color = "#1f7a8c",
-#'       set_ggplot_defaults = TRUE) +
-#'       labs(title = "Basic Iris Plot",
-#'            subtitle = "+ theme_xaringan_base()",
-#'            caption = "{xaringanthemer}")
+#'       set_ggplot_defaults = TRUE
+#'     ) +
+#'     labs(
+#'       title = "Basic Iris Plot",
+#'       subtitle = "+ theme_xaringan_base()",
+#'       caption = "{xaringanthemer}"
+#'     )
 #' }
 #'
 #' @return A ggplot2 theme
@@ -238,6 +256,10 @@ theme_xaringan_base <- function(
 }
 
 #' Set and Restore ggplot2 geom Defaults
+#'
+#' @description
+#'
+#' **Lifecycle:** [Experimental](https://www.tidyverse.org/lifecycle/#experimental).
 #'
 #' Set [ggplot2] _geom_ defaults to match [theme_xaringan()] with
 #' `theme_xaringan_set_defaults()` and restore the standard or previously-set
@@ -354,6 +376,10 @@ safely_set_geom <- function(geom, new) {
 # Color Scales ------------------------------------------------------------
 
 #' Xaringan Themer ggplot2 Scales
+#'
+#' @description
+#'
+#' **Lifecycle:** [Experimental](https://www.tidyverse.org/lifecycle/#experimental).
 #'
 #' Color and fill single-color scales for discrete and continuous values,
 #' created using the primary accent color of the xaringanthemer styles.

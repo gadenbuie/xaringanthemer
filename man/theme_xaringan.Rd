@@ -51,6 +51,8 @@ or defaults to 14.}
 A ggplot2 theme
 }
 \description{
+\strong{Lifecycle:} \href{https://www.tidyverse.org/lifecycle/#experimental}{Experimental}.
+
 Creates \link{ggplot2} themes to match the xaringanthemer theme used in the
 \link{xaringan} slides that seamlessly matches the "normal" slide colors and
 styles.

@@ -65,6 +65,8 @@ value of \code{inverse_header_color}}
 \code{\link[=ggplot2:discrete_scale]{ggplot2:discrete_scale()}}.}
 }
 \description{
+\strong{Lifecycle:} \href{https://www.tidyverse.org/lifecycle/#experimental}{Experimental}.
+
 Color and fill single-color scales for discrete and continuous values,
 created using the primary accent color of the xaringanthemer styles.
 }

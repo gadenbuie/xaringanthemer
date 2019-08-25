@@ -53,6 +53,8 @@ or defaults to 14.}
 A ggplot2 theme
 }
 \description{
+\strong{Lifecycle:} \href{https://www.tidyverse.org/lifecycle/#experimental}{Experimental}.
+
 Provides a base plot theme for \link{ggplot2} to match the \link{xaringan} slide theme
 created by \link{xaringanthemer}. The theme is designed to create a general plot
 style from two colors, a \code{background_color} and a \code{text_color} (or foreground
@@ -71,10 +73,13 @@ if (requireNamespace("ggplot2", quietly = TRUE)) {
       text_color = "#e1e5f2",
       background_color = "#021c25",
       accent_color = "#1f7a8c",
-      set_ggplot_defaults = TRUE) +
-      labs(title = "Basic Iris Plot",
-           subtitle = "+ theme_xaringan_base()",
-           caption = "{xaringanthemer}")
+      set_ggplot_defaults = TRUE
+    ) +
+    labs(
+      title = "Basic Iris Plot",
+      subtitle = "+ theme_xaringan_base()",
+      caption = "{xaringanthemer}"
+    )
 
    ggplot(iris) +
     aes(Petal.Length, Petal.Width) +
@@ -83,10 +88,13 @@ if (requireNamespace("ggplot2", quietly = TRUE)) {
       text_color = "#021c25",
       background_color = "#e1e5f2",
       accent_color = "#1f7a8c",
-      set_ggplot_defaults = TRUE) +
-      labs(title = "Basic Iris Plot",
-           subtitle = "+ theme_xaringan_base()",
-           caption = "{xaringanthemer}")
+      set_ggplot_defaults = TRUE
+    ) +
+    labs(
+      title = "Basic Iris Plot",
+      subtitle = "+ theme_xaringan_base()",
+      caption = "{xaringanthemer}"
+    )
 }
 
 }
