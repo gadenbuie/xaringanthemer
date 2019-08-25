@@ -155,6 +155,7 @@ style_xaringan <- function(
   }
   
   extra_font_imports <- if (is.null(extra_fonts)) "" else list2fonts(extra_fonts)
+  extra_font_imports <- paste(extra_font_imports, collapse = "\n")
   
   # convert NA arguments to NULL
   for (var in f_args) {
