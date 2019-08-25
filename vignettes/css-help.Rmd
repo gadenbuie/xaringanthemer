@@ -28,7 +28,7 @@ For example, we can create an R variable with a specific color that is used in s
 
 ```r
 firebrick <- "#CD2626"
-write_xaringan_theme(
+style_xaringan(
   header_color = firebrick,
   link_color = firebrick
 )
@@ -37,7 +37,7 @@ write_xaringan_theme(
 or we can directly give the character string
 
 ```r
-write_xaringan_theme(
+style_xaringan(
   header_color = "#CD2626",
   link_color = "#CD2626"
 )
@@ -219,7 +219,7 @@ If you want something to appear in a specific position on your slide, you'll nee
 For example, lets say you want a 300px by 300px box to appear on the right side of your slide, you'll need to create a special css class:
 
 ```r
-write_xaringan_theme(
+style_xaringan(
   extra_css = list(
     ".box-right" = list(
       "height" = "300px",

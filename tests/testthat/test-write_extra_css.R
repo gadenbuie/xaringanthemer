@@ -3,7 +3,6 @@ import <- function(x) paste0("@import url(", x, ");")
 # test_that("list2fonts()", {})
 
 describe("list2fonts()", {
-
   lato_url <- "https://fonts.googleapis.com/css?family=Lato"
   worksans_url <- "https://fonts.googleapis.com/css?family=Work+Sans"
 

@@ -14,7 +14,7 @@ cat(paste0("`", tvv[grepl("_font_google$", tvv)], "`", collapse = ", "))
 See `?google_font` for more info.
 
 ```r
-mono_light(
+style_mono_light(
   header_font_google = google_font("Josefin Slab", "600"),
   text_font_google   = google_font("Work Sans", "300", "300i"),
   code_font_google   = google_font("IBM Plex Mono")
@@ -28,7 +28,7 @@ For example, suppose you want to use a ligature font for the code font, such as 
 Just set `code_font_family` and `code_font_url`!
 
 ```r
-solarized_dark(
+style_solarized_dark(
   code_font_family = "Fira Code",
   code_font_url = "https://cdn.rawgit.com/tonsky/FiraCode/1.204/distr/fira_code.css"
 )
@@ -37,7 +37,7 @@ solarized_dark(
 If you need to import additional fonts for use in [custom CSS definitions][adding-custom-css], you can use the `extra_fonts` argument to pass a list of URLs or `google_font()`s.
 
 ```r
-mono_light(
+style_mono_light(
   extra_fonts = list(google_font("Sofia")),
   extra_css = list(".title-slide h2" = list("font-family" = "Sofia"))
 )

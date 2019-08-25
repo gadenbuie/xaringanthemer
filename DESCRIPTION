@@ -1,7 +1,7 @@
 Type: Package
 Package: xaringanthemer
 Title: Xaringan CSS Theme Generator
-Version: 0.2.0.9000
+Version: 0.2.0.9100
 Date: 2018-04-16
 Authors@R: 
     person(given = "Garrick",
@@ -16,16 +16,19 @@ License: MIT + file LICENSE
 URL: https://github.com/gadenbuie/xaringanthemer
 BugReports: https://github.com/gadenbuie/xaringanthemer/issues
 Imports: 
+    colorspace,
     glue,
     purrr,
-    stringr,
     tibble,
     utils,
     whisker
 Suggests: 
+    ggplot2,
     here,
     knitr,
     rmarkdown,
+    showtext,
+    sysfonts,
     testthat (>= 2.1.0),
     xaringan
 VignetteBuilder: 

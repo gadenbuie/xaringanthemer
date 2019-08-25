@@ -48,7 +48,7 @@ Then, in a hidden chunk just after the knitr setup chunk, load
 ```` markdown
 ```{r xaringan-themer, include = FALSE}
 library(xaringanthemer)
-mono_light(
+style_mono_light(
   base_color = "#1c5253",
   header_font_google = google_font("Josefin Sans"),
   text_font_google   = google_font("Montserrat", "300", "300i"),
@@ -64,16 +64,14 @@ mono_light(
 **xaringanthemer** is <kbd>Tab</kbd> friendly – [use autocomplete to
 explore](#theme-settings) the [template
 variables](vignettes/template-variables.md) that you can adjust in each
-of the
-themes\!
+of the themes\!
 
 <img src="vignettes/images/example-rstudio-completion.gif" width="100%" />
 
 ### R Markdown Template in RStudio
 
 You can also skip the above and just create a *Ninja Themed
-Presentation* from the New R Markdown Document menu in
-RStudio.
+Presentation* from the New R Markdown Document menu in RStudio.
 
 <center>
 
@@ -88,45 +86,44 @@ RStudio.
 Use these functions to automatically create a consistent color palette
 for your slides, based around a single color.
 
-#### `mono_light()`
+#### `style_mono_light()`
 
 A light theme based around a single color.
 
 ``` r
-mono_light(base_color = "#23395b")
+style_mono_light(base_color = "#23395b")
 ```
 
 <img src="vignettes/images/example_mono_light.png" width="100%" />
 
-#### `mono_dark()`
+#### `style_mono_dark()`
 
 A dark theme based around a single color.
 
 ``` r
-mono_dark(base_color = "#cbf7ed")
+style_mono_dark(base_color = "#cbf7ed")
 ```
 
 <img src="vignettes/images/example_mono_dark.png" width="100%" />
 
-#### `mono_accent()`
+#### `style_mono_accent()`
 
 The default xaringan theme with a single color used for color accents on
 select elements (headers, bold text, etc.).
 
 ``` r
-mono_accent(base_color = "#43418A")
+style_mono_accent(base_color = "#43418A")
 ```
 
 <img src="vignettes/images/example_mono_accent.png" width="100%" />
 
-#### `mono_accent_inverse()`
+#### `style_mono_accent_inverse()`
 
 An “inverted” default xaringan theme with a single color used for color
-accents on select elements (headers, bold text,
-etc.).
+accents on select elements (headers, bold text, etc.).
 
 ``` r
-mono_accent_inverse(base_color = "#3C989E")
+style_mono_accent_inverse(base_color = "#3C989E")
 ```
 
 <img src="vignettes/images/example_mono_accent_inverse.png" width="100%" />
@@ -135,33 +132,32 @@ mono_accent_inverse(base_color = "#3C989E")
 
 These themes build from two (ideally) complementary colors.
 
-#### `duo()`
+#### `style_duo()`
 
 A two-colored theme based on a primary and secondary color.
 
 ``` r
-duo(primary_color = "#1F4257", secondary_color = "#F97B64")
+style_duo(primary_color = "#1F4257", secondary_color = "#F97B64")
 ```
 
 <img src="vignettes/images/example_duo.png" width="100%" />
 
-#### `duo_accent()`
+#### `style_duo_accent()`
 
 The default Xaringan theme with two accent colors.
 
 ``` r
-duo_accent(primary_color = "#006747", secondary_color = "#CFC493")
+style_duo_accent(primary_color = "#006747", secondary_color = "#CFC493")
 ```
 
 <img src="vignettes/images/example_duo_accent.png" width="100%" />
 
-#### `duo_accent_inverse()`
+#### `style_duo_accent_inverse()`
 
-An “inverted” default Xaringan theme with two accent
-colors.
+An “inverted” default Xaringan theme with two accent colors.
 
 ``` r
-duo_accent_inverse(primary_color = "#006747", secondary_color = "#CFC493")
+style_duo_accent_inverse(primary_color = "#006747", secondary_color = "#CFC493")
 ```
 
 <img src="vignettes/images/example_duo_accent_inverse.png" width="100%" />
@@ -169,23 +165,24 @@ duo_accent_inverse(primary_color = "#006747", secondary_color = "#CFC493")
 ### Solarized
 
 There are also two themes based around the [solarized color
-palette](http://ethanschoonover.com/solarized), `solarized_light()` and
-`solarized_dark()`. For both themes, it is advisted to change the syntax
-highlighting theme to `solarized-light` or `solarized-dark` (looks great
-paired or constrasted).
+palette](http://ethanschoonover.com/solarized),
+`style_solarized_light()` and `style_solarized_dark()`. For both themes,
+it is advisted to change the syntax highlighting theme to
+`solarized-light` or `solarized-dark` (looks great paired or
+constrasted).
 
-#### `solarized_light()`
+#### `style_solarized_light()`
 
 ``` r
-solarized_light()
+style_solarized_light()
 ```
 
 <img src="vignettes/images/example_solarized_light.png" width="100%" />
 
-#### `solarized_dark()`
+#### `style_solarized_dark()`
 
 ``` r
-solarized_dark()
+style_solarized_dark()
 ```
 
 <img src="vignettes/images/example_solarized_dark.png" width="100%" />
@@ -206,8 +203,8 @@ output:
 ## Theme Settings
 
 The theme functions listed above are just wrappers around the central
-function of this package, `write_xaringan_theme()`. If you want to start
-from the default **xaringan** theme and make a few modifications, start
+function of this package, `style_xaringan()`. If you want to start from
+the default **xaringan** theme and make a few modifications, start
 there.
 
 All of the [theme template variables](vignettes/template-variables.md)
@@ -261,12 +258,12 @@ extra_css <- list(
 ```
 
 If you would rather keep your additional css definitions in a separate
-file, you can call `write_extra_css()` separately. Just be sure to
+file, you can call `style_extra_css()` separately. Just be sure to
 include your new CSS file in the list of applied files in your YAML
 header.
 
 ``` r
-write_extra_css(css = extra_css, outfile = "custom.css")
+style_extra_css(css = extra_css, outfile = "custom.css")
 ```
 
 ``` css
@@ -307,7 +304,7 @@ theme arguments – `text_font_google`, `header_font_google`,
 `?google_font` for more info.
 
 ``` r
-mono_light(
+style_mono_light(
   header_font_google = google_font("Josefin Slab", "600"),
   text_font_google   = google_font("Work Sans", "300", "300i"),
   code_font_google   = google_font("IBM Plex Mono")
@@ -324,7 +321,7 @@ such as [Fira Code](https://github.com/yihui/xaringan/issues/83). Just
 set `code_font_family` and `code_font_url`\!
 
 ``` r
-solarized_dark(
+style_solarized_dark(
   code_font_family = "Fira Code",
   code_font_url = "https://cdn.rawgit.com/tonsky/FiraCode/1.204/distr/fira_code.css"
 )
@@ -335,7 +332,7 @@ definitions](#adding-custom-css), you can use the `extra_fonts` argument
 to pass a list of URLs or `google_font()`s.
 
 ``` r
-mono_light(
+style_mono_light(
   extra_fonts = list(google_font("Sofia")),
   extra_css = list(".title-slide h2" = list("font-family" = "Sofia"))
 )
