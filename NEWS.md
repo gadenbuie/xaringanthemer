@@ -22,3 +22,11 @@
   class to a slide. (thanks, @Btibert3, #10)
   
 * The underlying template now uses the `whisker` package.
+
+## Bugfixes and Improvements
+
+* Better handling of multiple `extra_fonts`, including improved error messages.
+  (Thanks @pat-s, #19).
+  
+* `style_extra_css()` (previously `write_extra_css()`) gained an `append`
+  argument so that it can append to or overwrite an existing file (thanks @pat-s, #17).
