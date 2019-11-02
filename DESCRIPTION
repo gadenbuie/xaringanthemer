@@ -18,6 +18,7 @@ BugReports: https://github.com/gadenbuie/xaringanthemer/issues
 Imports: 
     colorspace,
     glue,
+    methods,
     purrr,
     tibble,
     utils,
@@ -27,6 +28,7 @@ Suggests:
     here,
     knitr,
     rmarkdown,
+    scales,
     showtext,
     sysfonts,
     testthat (>= 2.1.0),

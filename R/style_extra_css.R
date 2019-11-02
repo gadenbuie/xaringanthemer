@@ -73,7 +73,7 @@ list2css <- function(css) {
     }
   }
   child_unnamed <- purrr::map_lgl(purrr::map(css, ~ {
-    is.null(names(.)) || names(.) == ""
+    is.null(names(.)) || any(names(.) == "")
   }), ~ any(.))
   if (any(child_unnamed)) {
     has_unnamed <- names(css)[child_unnamed]

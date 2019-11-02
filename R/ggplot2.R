@@ -261,7 +261,7 @@ theme_xaringan_base <- function(
     axis.title = ggplot2::element_text(size = title_font_size * 0.8),
     axis.ticks = ggplot2::element_line(color = blend(0.8)),
     axis.text = ggplot2::element_text(color = blend(0.4)),
-    legend.key = element_rect(fill = "transparent", colour = NA),
+    legend.key = ggplot2::element_rect(fill = "transparent", colour = NA),
     plot.caption = ggplot2::element_text(
       size = text_font_size * 0.8,
       color = blend(0.3)
@@ -338,7 +338,7 @@ theme_xaringan_set_defaults <- function(
     "sf"         = list(color  = text_color)
   )
 
-  geom_names <- setNames(nm = names(xaringan_theme_defaults))
+  geom_names <- purrr::set_names(names(xaringan_theme_defaults))
 
   previous_defaults <- lapply(
     geom_names,
@@ -371,7 +371,7 @@ xaringan_theme_restore_defaults <- function() {
 
   restore_default <- utils::modifyList(xaringanthemer_env$std_ggplot_defaults, old_default)
 
-  geom_names <- setNames(nm = names(restore_default))
+  geom_names <- purrr::set_names(names(restore_default))
   previous_defaults <- lapply(
     geom_names,
     function(geom) safely_set_geom(geom, restore_default[[geom]])
@@ -432,6 +432,8 @@ scale_xaringan_discrete <- function(
   direction = 1,
   inverse = FALSE
 ) {
+  requires_package("ggplot2", "scale_xaringan_discrete")
+
   aes_type <- match.arg(aes_type)
   color <- hex2HCL(get_theme_accent_color(color, inverse))
 
@@ -496,6 +498,8 @@ scale_xaringan_continuous <- function(
   end = 1,
   inverse = FALSE
 ) {
+  requires_package("ggplot2", "scale_xaringan_continuous")
+  requires_package("scales", "scale_xaringan_continuous")
   aes_type <- match.arg(aes_type)
   color <- hex2HCL(get_theme_accent_color(color, inverse))
 
@@ -594,7 +598,7 @@ blend_colors <- function(x, y, alpha = 0.5) {
 color_blender <- function(x, y) function(alpha = 0.5) blend_colors(x, y, alpha)
 
 hex2HCL <- function(x) {
-  colorspace::coords(as(colorspace::hex2RGB(x), "polarLUV"))
+  colorspace::coords(methods::as(colorspace::hex2RGB(x), "polarLUV"))
 }
 
 
