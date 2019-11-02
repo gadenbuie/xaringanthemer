@@ -2,14 +2,14 @@
 % Please edit documentation in R/ggplot2.R
 \name{theme_xaringan_set_defaults}
 \alias{theme_xaringan_set_defaults}
-\alias{xaringan_theme_restore_defaults}
+\alias{theme_xaringan_restore_defaults}
 \title{Set and Restore ggplot2 geom Defaults}
 \usage{
 theme_xaringan_set_defaults(text_color = NULL, background_color = NULL,
   accent_color = text_color, accent_secondary_color = accent_color,
-  text_family = NULL)
+  text_font = NULL)
 
-xaringan_theme_restore_defaults()
+theme_xaringan_restore_defaults()
 }
 \arguments{
 \item{text_color}{Color for text and foreground, inherits from \code{text_color}}
@@ -22,6 +22,10 @@ xaringan_theme_restore_defaults()
 
 \item{accent_secondary_color}{Color for secondary accents, inherits from
 \code{text_bold_color}}
+
+\item{text_font}{Font to use for text elements, passed to
+\code{\link[sysfonts:font_add_google]{sysfonts::font_add_google()}}, if available and \code{text_font_use_google} is
+\code{TRUE}. Inherits from \code{text_font_family}.}
 }
 \value{
 Invisibly returns a list of the current ggplot2 geom defaults
@@ -31,7 +35,7 @@ Invisibly returns a list of the current ggplot2 geom defaults
 \description{
 \strong{Lifecycle:} \href{https://www.tidyverse.org/lifecycle/#experimental}{Experimental}.
 
-Set \link{ggplot2} \emph{geom} defaults to match \code{\link[=theme_xaringan]{theme_xaringan()}} with
+Set \pkg{ggplot2} \emph{geom} defaults to match \code{\link[=theme_xaringan]{theme_xaringan()}} with
 \code{theme_xaringan_set_defaults()} and restore the standard or previously-set
 defaults with \code{theme_xaringan_restore_defaults()}. By default,
 \code{theme_xaringan_set_defaults()} is run with \code{\link[=theme_xaringan]{theme_xaringan()}} or
@@ -39,7 +43,8 @@ defaults with \code{theme_xaringan_restore_defaults()}. By default,
 }
 \section{Functions}{
 \itemize{
-\item \code{xaringan_theme_restore_defaults}: Restore previous or standard \link{ggplot2} \emph{geom} defaults.
+\item \code{theme_xaringan_restore_defaults}: Restore previous or standard
+\pkg{ggplot2} \emph{geom} defaults.
 }}
 
 \seealso{

@@ -5,8 +5,8 @@
 #'
 #' **Lifecycle:** [Experimental](https://www.tidyverse.org/lifecycle/#experimental).
 #'
-#' Creates [ggplot2] themes to match the xaringanthemer theme used in the
-#' [xaringan] slides that seamlessly matches the "normal" slide colors and
+#' Creates \pkg{ggplot2} themes to match the xaringanthemer theme used in the
+#' \pkg{xaringan} slides that seamlessly matches the "normal" slide colors and
 #' styles.
 #'
 #' @param text_color Color for text and foreground, inherits from `text_color`
@@ -62,8 +62,8 @@ theme_xaringan <- function(
 #'
 #' **Lifecycle:** [Experimental](https://www.tidyverse.org/lifecycle/#experimental).
 #'
-#' A [ggplot2] xaringanthemer plot theme to seamlessly match the "inverse"
-#' [xaringan] slide colors and styles as styled by [xaringanthemer].
+#' A \pkg{ggplot2} xaringanthemer plot theme to seamlessly match the "inverse"
+#' \pkg{xaringan} slide colors and styles as styled by [xaringanthemer].
 #'
 #' @param text_color Color for text and foreground, inherits from `text_color`
 #' @param background_color Color for background, inherits from
@@ -118,7 +118,7 @@ theme_xaringan_inverse <- function(
 #'
 #' **Lifecycle:** [Experimental](https://www.tidyverse.org/lifecycle/#experimental).
 #'
-#' Provides a base plot theme for [ggplot2] to match the [xaringan] slide theme
+#' Provides a base plot theme for \pkg{ggplot2} to match the \pkg{xaringan} slide theme
 #' created by [xaringanthemer]. The theme is designed to create a general plot
 #' style from two colors, a `background_color` and a `text_color` (or foreground
 #' color). Also accepts an `accent_color` and an `accent_secondary_color` that are
@@ -131,11 +131,11 @@ theme_xaringan_inverse <- function(
 #' @param accent_color Color for titles and accents, inherits from
 #'   `header_color` or `text_color`. Used for the `title` base setting in
 #'   [ggplot2::theme()], and additionally for setting the `color` or `fill` of
-#'   [ggplot2] geom defaults.
+#'   \pkg{ggplot2} geom defaults.
 #' @param accent_secondary_color Color for secondary accents, inherits from
-#'   `text_bold_color` or `accent_color`. Used only when setting [ggplot2] geom
+#'   `text_bold_color` or `accent_color`. Used only when setting \pkg{ggplot2} geom
 #'   defaults.
-#' @param set_ggplot_defaults Should defaults be set for [ggplot2] _geoms_?
+#' @param set_ggplot_defaults Should defaults be set for \pkg{ggplot2} _geoms_?
 #'   Defaults to TRUE. To restore ggplot's defaults, or the previously set geom
 #'   defaults, see [theme_xaringan_restore_defaults()].
 #' @param text_font Font to use for text elements, passed to
@@ -275,7 +275,7 @@ theme_xaringan_base <- function(
 #'
 #' **Lifecycle:** [Experimental](https://www.tidyverse.org/lifecycle/#experimental).
 #'
-#' Set [ggplot2] _geom_ defaults to match [theme_xaringan()] with
+#' Set \pkg{ggplot2} _geom_ defaults to match [theme_xaringan()] with
 #' `theme_xaringan_set_defaults()` and restore the standard or previously-set
 #' defaults with `theme_xaringan_restore_defaults()`. By default,
 #' `theme_xaringan_set_defaults()` is run with [theme_xaringan()] or
@@ -283,6 +283,7 @@ theme_xaringan_base <- function(
 #'
 #' @family xaringanthemer ggplot2 themes
 #' @inheritParams theme_xaringan
+#' @inheritParams theme_xaringan_base
 #' @return Invisibly returns a list of the current ggplot2 geom defaults
 #' @export
 theme_xaringan_set_defaults <- function(
@@ -290,7 +291,7 @@ theme_xaringan_set_defaults <- function(
   background_color = NULL,
   accent_color = text_color,
   accent_secondary_color = accent_color,
-  text_family = NULL
+  text_font = NULL
 ) {
   requires_package("ggplot2")
 
@@ -329,9 +330,9 @@ theme_xaringan_set_defaults <- function(
                         color  = accent_secondary_color),
     "spoke"      = list(color  = text_color),
     "label"      = list(color  = text_color,
-                        family = text_family %||% get_theme_font("text")),
+                        family = text_font %||% get_theme_font("text")),
     "text"       = list(color  = text_color,
-                        family = text_family %||% get_theme_font("text")),
+                        family = text_font %||% get_theme_font("text")),
     "rect"       = list(fill   = text_color),
     "tile"       = list(fill   = text_color),
     "violin"     = list(fill   = text_color),
@@ -352,11 +353,11 @@ theme_xaringan_set_defaults <- function(
   invisible(previous_defaults)
 }
 
-#' @describeIn theme_xaringan_set_defaults Restore previous or standard [ggplot2] _geom_ defaults.
-#' @inheritParams theme_xaringan
+#' @describeIn theme_xaringan_set_defaults Restore previous or standard
+#'   \pkg{ggplot2} _geom_ defaults.
 #' @return Invisibly returns a list of the current ggplot2 geom defaults
 #' @export
-xaringan_theme_restore_defaults <- function() {
+theme_xaringan_restore_defaults <- function() {
   requires_package("ggplot2")
   requires_xaringanthemer_env()
 
@@ -402,11 +403,12 @@ safely_set_geom <- function(geom, new) {
 #' Color and fill single-color scales for discrete and continuous values,
 #' created using the primary accent color of the xaringanthemer styles.
 #'
-#' @param ... Arguments passed on to the appropriate scale function, one of
-#'   [colorspace::scale_color_discrete_sequential],
+#' @param ... Arguments passed on to either the \pkg{colorspace} scale
+#'   functions — one of [colorspace::scale_color_discrete_sequential],
 #'   [colorspace::scale_color_continuous_sequential],
 #'   [colorspace::scale_fill_discrete_sequential], or
-#'   [colorspace::scale_fill_continuous_sequential].
+#'   [colorspace::scale_fill_continuous_sequential] — or to
+#'   [ggplot2::continuous_scale] or [ggplot2::discrete_scale].
 #' @param color A color value, in hex, to override the default color. Otherwise,
 #'   the primary color of the resulting scale is chosen from the xaringanthemer
 #'   slide styles.
@@ -416,8 +418,6 @@ safely_set_geom <- function(geom, new) {
 #' @param direction Direction of the discrete scale. Use values less than 0 to
 #'   reverse the direction, e.g. `direction = -1`.
 #' @inheritParams colorspace::scale_color_continuous_sequential
-#' @param ... Additional arguments passed to [ggplot2::continuous_scale()] or
-#'   [ggplot2:discrete_scale()].
 #' @param aes_type The type of aesthetic to which the scale is being applied.
 #'   One of "color", "colour", or "fill".
 #' @name scale_xaringan

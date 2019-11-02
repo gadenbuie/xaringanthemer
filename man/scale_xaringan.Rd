@@ -40,11 +40,12 @@ scale_xaringan_colour_continuous(..., color = NULL, begin = 0,
 \item{aes_type}{The type of aesthetic to which the scale is being applied.
 One of "color", "colour", or "fill".}
 
-\item{...}{Arguments passed on to the appropriate scale function, one of
-\link[colorspace:scale_color_discrete_sequential]{colorspace::scale_color_discrete_sequential},
+\item{...}{Arguments passed on to either the \pkg{colorspace} scale
+functions — one of \link[colorspace:scale_color_discrete_sequential]{colorspace::scale_color_discrete_sequential},
 \link[colorspace:scale_color_continuous_sequential]{colorspace::scale_color_continuous_sequential},
 \link[colorspace:scale_fill_discrete_sequential]{colorspace::scale_fill_discrete_sequential}, or
-\link[colorspace:scale_fill_continuous_sequential]{colorspace::scale_fill_continuous_sequential}.}
+\link[colorspace:scale_fill_continuous_sequential]{colorspace::scale_fill_continuous_sequential} — or to
+\link[ggplot2:continuous_scale]{ggplot2::continuous_scale} or \link[ggplot2:discrete_scale]{ggplot2::discrete_scale}.}
 
 \item{color}{A color value, in hex, to override the default color. Otherwise,
 the primary color of the resulting scale is chosen from the xaringanthemer
@@ -60,9 +61,6 @@ value of \code{inverse_header_color}}
 \item{begin}{Number in the range of \code{[0, 1]} indicating to which point in the color scale the smallest data value should be mapped.}
 
 \item{end}{Number in the range of \code{[0, 1]} indicating to which point in the color scale the largest data value should be mapped.}
-
-\item{...}{Additional arguments passed to \code{\link[ggplot2:continuous_scale]{ggplot2::continuous_scale()}} or
-\code{\link[=ggplot2:discrete_scale]{ggplot2:discrete_scale()}}.}
 }
 \description{
 \strong{Lifecycle:} \href{https://www.tidyverse.org/lifecycle/#experimental}{Experimental}.

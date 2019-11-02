@@ -26,11 +26,11 @@ theme_xaringan(text_color = NULL, background_color = NULL,
   \item{accent_color}{Color for titles and accents, inherits from
 \code{header_color} or \code{text_color}. Used for the \code{title} base setting in
 \code{\link[ggplot2:theme]{ggplot2::theme()}}, and additionally for setting the \code{color} or \code{fill} of
-\link{ggplot2} geom defaults.}
+\pkg{ggplot2} geom defaults.}
   \item{accent_secondary_color}{Color for secondary accents, inherits from
-\code{text_bold_color} or \code{accent_color}. Used only when setting \link{ggplot2} geom
+\code{text_bold_color} or \code{accent_color}. Used only when setting \pkg{ggplot2} geom
 defaults.}
-  \item{set_ggplot_defaults}{Should defaults be set for \link{ggplot2} \emph{geoms}?
+  \item{set_ggplot_defaults}{Should defaults be set for \pkg{ggplot2} \emph{geoms}?
 Defaults to TRUE. To restore ggplot's defaults, or the previously set geom
 defaults, see \code{\link[=theme_xaringan_restore_defaults]{theme_xaringan_restore_defaults()}}.}
   \item{text_font}{Font to use for text elements, passed to
@@ -53,8 +53,8 @@ A ggplot2 theme
 \description{
 \strong{Lifecycle:} \href{https://www.tidyverse.org/lifecycle/#experimental}{Experimental}.
 
-Creates \link{ggplot2} themes to match the xaringanthemer theme used in the
-\link{xaringan} slides that seamlessly matches the "normal" slide colors and
+Creates \pkg{ggplot2} themes to match the xaringanthemer theme used in the
+\pkg{xaringan} slides that seamlessly matches the "normal" slide colors and
 styles.
 }
 \examples{
