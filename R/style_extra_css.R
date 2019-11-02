@@ -12,6 +12,8 @@
 #' @param css A named list of CSS definitions each containing a named list
 #'   of CSS property-value pairs, i.e.
 #'   `list(".class-id" = list("css-property" = "value"))`
+#' @param append If `TRUE` output will be appended to `outfile`; otherwise,
+#'   it will overwrite the contents of `outfile`.
 #'
 #' @examples
 #' style_extra_css(
@@ -28,7 +30,7 @@
 #' )
 #' @inheritParams style_xaringan
 #' @export
-style_extra_css <- function(css, outfile = "xaringan-themer.css") {
+style_extra_css <- function(css, outfile = "xaringan-themer.css", append = TRUE) {
   cat(
     "\n\n/* Extra CSS */",
     list2css(css),
