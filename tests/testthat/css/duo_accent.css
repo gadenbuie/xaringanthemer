@@ -23,76 +23,102 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700);
 
 
+:root {
+  /* Fonts */
+  --body-font-family: 'Droid Serif', 'Palatino Linotype', 'Book Antiqua', Palatino, 'Microsoft YaHei', 'Songti SC', serif;
+  --header-font-family: 'Yanone Kaffeesatz';
+  --code-font-family: 'Source Code Pro';
+  --text-font-size: 20px;
+  --code-font-size: 0.9em;
+  --code-inline-font-size: 1em;
+  --header-h1-font-size: 55px;
+  --header-h2-font-size: 45px;
+  --header-h3-font-size: 35px;
+
+  /* Colors */
+  --text-color: #000000;
+  --header-color: #006747;
+  --background-color: #FFFFFF;
+  --link-color: #006747;
+  --text-bold-color: #006747;
+  --code-highlight-color: rgba(255,255,0,0.5);
+  --inverse-text-color: #000000;
+  --inverse-background-color: #CFC493;
+  --inverse-header-color: #000000;
+  --title-slide-background-color: #006747;
+  --title-slide-text-color: #FFFFFF;
+}
+
+html {
+  font-size: var(--text-font-size);
+}
+
 body {
-  font-family: 'Droid Serif', 'Palatino Linotype', 'Book Antiqua', Palatino, 'Microsoft YaHei', 'Songti SC', serif;
+  font-family: var(--body-font-family);
   font-weight: normal;
-  color: #000000;
+  color: var(--text-color);
 }
 h1, h2, h3 {
-  font-family: 'Yanone Kaffeesatz';
+  font-family: var(--header-font-family);
   font-weight: normal;
-  color: #006747;
+  color: var(--header-color);
 }
 .remark-slide-content {
-  background-color: #FFFFFF;
-  font-size: 20px;
+  background-color: var(--background-color);
+  font-size: var(--text-font-size);
   padding: 1rem 4rem 1rem 4rem;
 }
 .remark-slide-content h1 {
-    font-size: 55px;
+  font-size: var(--header-h1-font-size);
 }
 .remark-slide-content h2 {
-    font-size: 45px;
+  font-size: var(--header-h2-font-size);
 }
 .remark-slide-content h3 {
-    font-size: 35px;
+  font-size: var(--header-h3-font-size);
 }
 .remark-code, .remark-inline-code {
-  font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;
+  font-family: var(--code-font-family), 'Lucida Console', Monaco, monospace;
 }
 .remark-code {
-  font-size: 0.9em;
+  font-size: var(--code-font-size);
 }
 .remark-inline-code {
+  font-size: var(--code-inline-font-size);
   color: #006747;
-  font-size: 1em;
 }
 .remark-slide-number {
   color: #006747;
   opacity: 1;
   font-size: 0.9em;
 }
-strong { color: #006747; }
+strong { color: var(--text-bold-color); }
 a, a > code {
-  color: #006747;
+  color: var(--link-color);
   text-decoration: none;
 }
 .footnote {
-  
   position: absolute;
   bottom: 3em;
   padding-right: 4em;
   font-size: 0.9em;
 }
 .remark-code-line-highlighted {
-  background-color: rgba(255,255,0,0.5);
+  background-color: var(--code-highlight-color);
 }
 .inverse {
-  background-color: #CFC493;
-  color: #000000;
+  background-color: var(--inverse-background-color);
+  color: var(--inverse-text-color);
   
 }
 .inverse h1, .inverse h2, .inverse h3 {
-  color: #000000;
+  color: var(--inverse-header-color);
 }
 .title-slide, .title-slide h1, .title-slide h2, .title-slide h3 {
-  color: #FFFFFF;
+  color: var(--title-slide-text-color);
 }
 .title-slide {
-  background-color: #006747;
-  
-  
-  
+  background-color: var(--title-slide-background-color);
 }
 .title-slide .remark-slide-number {
   display: none;
@@ -147,11 +173,11 @@ th, td {
   background: #DDD5B3;
 }
 table.dataTable tbody {
-  background-color: #FFFFFF;
-  color: #000000;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 table.dataTable.display tbody tr.odd {
-  background-color: #FFFFFF;
+  background-color: var(--background-color);
 }
 table.dataTable.display tbody tr.even {
   background-color: #DDD5B3;
@@ -160,10 +186,10 @@ table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
   background-color: rgba(255, 255, 255, 0.5);
 }
 .dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_processing, .dataTables_wrapper .dataTables_paginate {
-  color: #000000;
+  color: var(--text-color);
 }
 .dataTables_wrapper .dataTables_paginate .paginate_button {
-  color: #000000 !important;
+  color: var(--text-color) !important;
 }
 
 /* Slide Header Background for h1 elements */
@@ -173,8 +199,8 @@ table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
   top: 0;
   left: 0;
   width: 100%;
-  background: #006747;
-  color: #FFFFFF;
+  background: var(--background-color);
+  color: var(--text-color);
   padding: 2rem 4rem 1.5rem 4rem;
   margin-top: 0;
   box-sizing: border-box;
