@@ -4,60 +4,78 @@
 \alias{style_duo_accent}
 \title{Duotone Accent Theme}
 \usage{
-style_duo_accent(primary_color = "#006747",
-  secondary_color = "#CFC493", white_color = "#FFFFFF",
-  black_color = "#000000", text_color = black_color,
-  header_color = primary_color, background_color = white_color,
-  link_color = choose_dark_or_light(secondary_color, primary_color,
-  secondary_color),
+style_duo_accent(
+  primary_color = "#006747",
+  secondary_color = "#CFC493",
+  white_color = "#FFFFFF",
+  black_color = "#000000",
+  text_color = black_color,
+  header_color = primary_color,
+  background_color = white_color,
+  link_color = choose_dark_or_light(secondary_color, primary_color, secondary_color),
   text_bold_color = choose_dark_or_light(secondary_color, primary_color,
-  secondary_color), text_slide_number_color = primary_color,
-  padding = "1rem 4rem 1rem 4rem", background_image = NULL,
-  background_size = NULL, background_position = NULL,
+    secondary_color),
+  text_slide_number_color = primary_color,
+  padding = "1rem 4rem 1rem 4rem",
+  background_image = NULL,
+  background_size = NULL,
+  background_position = NULL,
   code_highlight_color = "rgba(255,255,0,0.5)",
-  code_inline_color = choose_dark_or_light(secondary_color,
-  primary_color, secondary_color), code_inline_background_color = NULL,
+  code_inline_color = choose_dark_or_light(secondary_color, primary_color,
+    secondary_color),
+  code_inline_background_color = NULL,
   code_inline_font_size = "1em",
   inverse_background_color = secondary_color,
-  inverse_text_color = choose_dark_or_light(secondary_color, black_color,
-  white_color), inverse_text_shadow = FALSE,
-  inverse_header_color = choose_dark_or_light(secondary_color,
-  black_color, white_color),
-  title_slide_text_color = choose_dark_or_light(primary_color,
-  black_color, white_color),
+  inverse_text_color = choose_dark_or_light(secondary_color, black_color, white_color),
+  inverse_text_shadow = FALSE,
+  inverse_header_color = choose_dark_or_light(secondary_color, black_color, white_color),
+  title_slide_text_color = choose_dark_or_light(primary_color, black_color, white_color),
   title_slide_background_color = primary_color,
   title_slide_background_image = NULL,
   title_slide_background_size = NULL,
-  title_slide_background_position = NULL, footnote_color = NULL,
-  footnote_font_size = "0.9em", footnote_position_bottom = "3em",
+  title_slide_background_position = NULL,
+  footnote_color = NULL,
+  footnote_font_size = "0.9em",
+  footnote_position_bottom = "3em",
   left_column_subtle_color = apply_alpha(primary_color, 0.6),
   left_column_selected_color = primary_color,
   blockquote_left_border_color = apply_alpha(secondary_color, 0.5),
-  table_border_color = "#666", table_row_border_color = "#ddd",
+  table_border_color = "#666",
+  table_row_border_color = "#ddd",
   table_row_even_background_color = lighten_color(secondary_color, 0.3),
-  text_font_size = "20px", header_h1_font_size = "55px",
-  header_h2_font_size = "45px", header_h3_font_size = "35px",
+  text_font_size = "20px",
+  header_h1_font_size = "55px",
+  header_h2_font_size = "45px",
+  header_h3_font_size = "35px",
   header_background_auto = FALSE,
   header_background_color = header_color,
   header_background_text_color = background_color,
   header_background_padding = "2rem 4rem 1.5rem 4rem",
   header_background_content_padding_top = "7rem",
-  header_background_ignore_classes = c("normal", "inverse", "title",
-  "middle", "bottom"), text_slide_number_font_size = "0.9em",
-  text_font_google = NULL, text_font_family = "'Droid Serif'",
+  header_background_ignore_classes = c("normal", "inverse", "title", "middle", "bottom"),
+  text_slide_number_font_size = "0.9em",
+  text_font_google = NULL,
+  text_font_family = "'Droid Serif'",
   text_font_weight = "normal",
-  text_font_url = "https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic",
-  text_font_family_fallback = "'Palatino Linotype', 'Book Antiqua', Palatino, 'Microsoft YaHei', 'Songti SC'",
-  text_font_base = "serif", header_font_google = NULL,
+ 
+    text_font_url = "https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic",
+ 
+    text_font_family_fallback = "'Palatino Linotype', 'Book Antiqua', Palatino, 'Microsoft YaHei', 'Songti SC'",
+  text_font_base = "serif",
+  header_font_google = NULL,
   header_font_family = "'Yanone Kaffeesatz'",
   header_font_weight = "normal",
   header_font_url = "https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz",
-  code_font_google = NULL, code_font_family = "'Source Code Pro'",
+  code_font_google = NULL,
+  code_font_family = "'Source Code Pro'",
   code_font_size = "0.9em",
   code_font_url = "https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700",
   code_font_family_fallback = "'Lucida Console', Monaco",
-  extra_css = NULL, extra_fonts = NULL,
-  outfile = "xaringan-themer.css")
+  colors = NULL,
+  extra_css = NULL,
+  extra_fonts = NULL,
+  outfile = "xaringan-themer.css"
+)
 }
 \arguments{
 \item{primary_color}{Duotone Primary Color. Defaults to #006747. Modifies multiple CSS classes or elements.}
@@ -70,17 +88,17 @@ style_duo_accent(primary_color = "#006747",
 
 \item{text_color}{Text Color. Defaults to \code{black_color}. Modifies the \code{body} element.}
 
-\item{header_color}{Header Color. Defaults to \code{primary_color}. Modifies the \code{h1, h2, h3} elements.}
+\item{header_color}{Header Color. Defaults to \code{primary_color}. Modifies the \verb{h1, h2, h3} elements.}
 
 \item{background_color}{Slide Background Color. Defaults to \code{white_color}. Modifies the \code{.remark-slide-content} class.}
 
-\item{link_color}{Link Color. Defaults to \code{choose_dark_or_light(secondary_color, primary_color, secondary_color)}. Modifies the \code{a, a > code} elements.}
+\item{link_color}{Link Color. Defaults to \code{choose_dark_or_light(secondary_color, primary_color, secondary_color)}. Modifies the \verb{a, a > code} elements.}
 
 \item{text_bold_color}{Bold Text Color. Defaults to \code{choose_dark_or_light(secondary_color, primary_color, secondary_color)}. Modifies the \code{strong} element.}
 
 \item{text_slide_number_color}{Slide Number Color. Defaults to \code{primary_color}. Modifies the \code{.remark-slide-number} class.}
 
-\item{padding}{Slide Padding in \code{top right [bottom left]} format. Defaults to 1rem 4rem 1rem 4rem. Modifies the \code{.remark-slide-content} class.}
+\item{padding}{Slide Padding in \verb{top right [bottom left]} format. Defaults to 1rem 4rem 1rem 4rem. Modifies the \code{.remark-slide-content} class.}
 
 \item{background_image}{Background image applied to each \emph{and every} slide. Set \code{title_slide_background_image = "none"} to remove the background image from the title slide. Defaults to \code{NULL}. Modifies the \code{.remark-slide-content} class.}
 
@@ -102,7 +120,7 @@ style_duo_accent(primary_color = "#006747",
 
 \item{inverse_text_shadow}{Enables Shadow on text of inverse slides. Defaults to \code{FALSE}. Modifies the \code{.inverse} class.}
 
-\item{inverse_header_color}{Inverse Header Color. Defaults to \code{choose_dark_or_light(secondary_color, black_color, white_color)}. Modifies the \code{.inverse h1, .inverse h2, .inverse h3} classes.}
+\item{inverse_header_color}{Inverse Header Color. Defaults to \code{choose_dark_or_light(secondary_color, black_color, white_color)}. Modifies the \verb{.inverse h1, .inverse h2, .inverse h3} classes.}
 
 \item{title_slide_text_color}{Title Slide Text Color. Defaults to \code{choose_dark_or_light(primary_color, black_color, white_color)}. Modifies the \code{.title-slide} class.}
 
@@ -120,33 +138,33 @@ style_duo_accent(primary_color = "#006747",
 
 \item{footnote_position_bottom}{Footnote location from bottom of screen. Defaults to 3em. Modifies the \code{.footnote} class.}
 
-\item{left_column_subtle_color}{Left Column Text (not last). Defaults to \code{apply_alpha(primary_color, 0.6)}. Modifies the \code{.left-column h2, .left-column h3} classes.}
+\item{left_column_subtle_color}{Left Column Text (not last). Defaults to \code{apply_alpha(primary_color, 0.6)}. Modifies the \verb{.left-column h2, .left-column h3} classes.}
 
-\item{left_column_selected_color}{Left Column Current Selection. Defaults to \code{primary_color}. Modifies the \code{.left-column h2:last-of-type, .left-column h3:last-child} classes.}
+\item{left_column_selected_color}{Left Column Current Selection. Defaults to \code{primary_color}. Modifies the \verb{.left-column h2:last-of-type, .left-column h3:last-child} classes.}
 
 \item{blockquote_left_border_color}{Blockquote Left Border Color. Defaults to \code{apply_alpha(secondary_color, 0.5)}. Modifies the \code{blockquote} element.}
 
-\item{table_border_color}{Table top/bottom border. Defaults to #666. Modifies the \code{table: border-top, border-bottom} elements.}
+\item{table_border_color}{Table top/bottom border. Defaults to #666. Modifies the \verb{table: border-top, border-bottom} elements.}
 
-\item{table_row_border_color}{Table row inner bottom border. Defaults to #ddd. Modifies the \code{table thead th: border-bottom} elements.}
+\item{table_row_border_color}{Table row inner bottom border. Defaults to #ddd. Modifies the \verb{table thead th: border-bottom} elements.}
 
-\item{table_row_even_background_color}{Table Even Row Background Color. Defaults to \code{lighten_color(secondary_color, 0.3)}. Modifies the \code{thead, tfoot, tr:nth-child(even)} elements.}
+\item{table_row_even_background_color}{Table Even Row Background Color. Defaults to \code{lighten_color(secondary_color, 0.3)}. Modifies the \verb{thead, tfoot, tr:nth-child(even)} elements.}
 
 \item{text_font_size}{Slide Body Text Font Size. Defaults to 20px. Modifies the \code{.remark-slide-content} class.}
 
-\item{header_h1_font_size}{h1 Header Text Font Size. Defaults to 55px. Modifies the \code{.remark-slide-content h1} class.}
+\item{header_h1_font_size}{h1 Header Text Font Size. Defaults to 55px. Modifies the \verb{.remark-slide-content h1} class.}
 
-\item{header_h2_font_size}{h2 Header Text Font Size. Defaults to 45px. Modifies the \code{.remark-slide-content h2} class.}
+\item{header_h2_font_size}{h2 Header Text Font Size. Defaults to 45px. Modifies the \verb{.remark-slide-content h2} class.}
 
-\item{header_h3_font_size}{h3 Header Text Font Size. Defaults to 35px. Modifies the \code{.remark-slide-content h3} class.}
+\item{header_h3_font_size}{h3 Header Text Font Size. Defaults to 35px. Modifies the \verb{.remark-slide-content h3} class.}
 
 \item{header_background_auto}{Add background under slide title automatically for h1 header elements. If not enabled, use \code{class: header_background} to enable. Defaults to \code{FALSE}.}
 
-\item{header_background_color}{Background Color for h1 Header with Background. Defaults to \code{header_color}. Modifies the \code{.remark-slide-content h1} class.}
+\item{header_background_color}{Background Color for h1 Header with Background. Defaults to \code{header_color}. Modifies the \verb{.remark-slide-content h1} class.}
 
-\item{header_background_text_color}{Text Color for h1 Header with Background. Defaults to \code{background_color}. Modifies the \code{.remark-slide-content h1} class.}
+\item{header_background_text_color}{Text Color for h1 Header with Background. Defaults to \code{background_color}. Modifies the \verb{.remark-slide-content h1} class.}
 
-\item{header_background_padding}{Padding for h1 Header with Background. Defaults to 2rem 4rem 1.5rem 4rem. Modifies the \code{.remark-slide-content h1} class.}
+\item{header_background_padding}{Padding for h1 Header with Background. Defaults to 2rem 4rem 1.5rem 4rem. Modifies the \verb{.remark-slide-content h1} class.}
 
 \item{header_background_content_padding_top}{Top Padding for Content in Slide with Header with Background. Defaults to 7rem. Modifies the \code{.remark-slide-content} class.}
 
@@ -160,7 +178,7 @@ style_duo_accent(primary_color = "#006747",
 
 \item{text_font_weight}{Body Text Font Weight. Defaults to normal. Modifies the \code{body} element.}
 
-\item{text_font_url}{Body Text Font URL(s). Defaults to https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic. Modifies the \code{@import url()} elements.}
+\item{text_font_url}{Body Text Font URL(s). Defaults to https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic. Modifies the \verb{@import url()} elements.}
 
 \item{text_font_family_fallback}{Body Text Font Fallbacks. Defaults to 'Palatino Linotype', 'Book Antiqua', Palatino, 'Microsoft YaHei', 'Songti SC'. Modifies the \code{body} element.}
 
@@ -168,21 +186,28 @@ style_duo_accent(primary_color = "#006747",
 
 \item{header_font_google}{Use \code{google_font()} to specify header font. Defaults to \code{NULL}. Modifies the \code{body} element.}
 
-\item{header_font_family}{Header Font Family. Defaults to 'Yanone Kaffeesatz'. Modifies the \code{h1, h2, h3} elements.}
+\item{header_font_family}{Header Font Family. Defaults to 'Yanone Kaffeesatz'. Modifies the \verb{h1, h2, h3} elements.}
 
-\item{header_font_weight}{Header Font Weight. Defaults to normal. Modifies the \code{h1, h2, h3} elements.}
+\item{header_font_weight}{Header Font Weight. Defaults to normal. Modifies the \verb{h1, h2, h3} elements.}
 
-\item{header_font_url}{Header Font URL. Defaults to https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz. Modifies the \code{@import url} elements.}
+\item{header_font_url}{Header Font URL. Defaults to https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz. Modifies the \verb{@import url} elements.}
 
 \item{code_font_google}{Use \code{google_font()} to specify code font. Defaults to \code{NULL}. Modifies the \code{body} element.}
 
-\item{code_font_family}{Code Font Family. Defaults to 'Source Code Pro'. Modifies the \code{.remark-code, .remark-inline-code} classes.}
+\item{code_font_family}{Code Font Family. Defaults to 'Source Code Pro'. Modifies the \verb{.remark-code, .remark-inline-code} classes.}
 
 \item{code_font_size}{Code Text Font Size. Defaults to 0.9em. Modifies the \code{.remark-inline} class.}
 
-\item{code_font_url}{Code Font URL. Defaults to https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700. Modifies the \code{@import url} elements.}
+\item{code_font_url}{Code Font URL. Defaults to https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700. Modifies the \verb{@import url} elements.}
 
-\item{code_font_family_fallback}{Code Font Fallback. Defaults to 'Lucida Console', Monaco. Modifies the \code{.remark-code, .remark-inline-code} classes.}
+\item{code_font_family_fallback}{Code Font Fallback. Defaults to 'Lucida Console', Monaco. Modifies the \verb{.remark-code, .remark-inline-code} classes.}
+
+\item{colors}{A named vector of custom colors. The names of the colors
+become CSS variables and classes that can be used within your slides.
+For example, \code{colors = c(blue = "#bad4ed")} adds a CSS variable
+\code{--blue}, a \code{.blue} CSS class that applies the color to the text or
+foreground color, and a \code{.bg-blue} CSS class that applies the color
+to the background.}
 
 \item{extra_css}{A named list of CSS definitions each containing a named list
 of CSS property-value pairs, i.e.
@@ -199,18 +224,20 @@ An default xaringan theme with a two colors used for color
 accents on select elements (headers, bold text, etc.).
 }
 \seealso{
-Other themes: \code{\link{style_duo_accent_inverse}},
-  \code{\link{style_duo}},
-  \code{\link{style_mono_accent_inverse}},
-  \code{\link{style_mono_accent}},
-  \code{\link{style_mono_dark}},
-  \code{\link{style_mono_light}},
-  \code{\link{style_solarized_dark}},
-  \code{\link{style_solarized_light}},
-  \code{\link{style_xaringan}}
+Other themes: 
+\code{\link{style_duo_accent_inverse}()},
+\code{\link{style_duo}()},
+\code{\link{style_mono_accent_inverse}()},
+\code{\link{style_mono_accent}()},
+\code{\link{style_mono_dark}()},
+\code{\link{style_mono_light}()},
+\code{\link{style_solarized_dark}()},
+\code{\link{style_solarized_light}()},
+\code{\link{style_xaringan}()}
 
-Other Duotone themes: \code{\link{style_duo_accent_inverse}},
-  \code{\link{style_duo}}
+Other Duotone themes: 
+\code{\link{style_duo_accent_inverse}()},
+\code{\link{style_duo}()}
 }
 \concept{Duotone themes}
 \concept{themes}

@@ -13,6 +13,6 @@ apply_alpha(color_hex, opacity = 0.5)
 }
 \description{
 Applies alpha (or opacity) to a color in hexadecimal form by
-converting opacity in the \code{[0, 1]} range to hex in the \code{[0, 255]} range
+converting opacity in the \verb{[0, 1]} range to hex in the \verb{[0, 255]} range
 and appending to the hex color.
 }

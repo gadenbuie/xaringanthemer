@@ -48,7 +48,10 @@
   --inverse-background-color: {{inverse_background_color}};
   --inverse-header-color: {{inverse_header_color}};
   --title-slide-background-color: {{title_slide_background_color}};
-  --title-slide-text-color: {{title_slide_text_color}};
+  --title-slide-text-color: {{title_slide_text_color}};{{#colors}}
+  --{{color_name}}: {{value}};
+  {{/colors}}
+
 }
 
 html {
@@ -236,3 +239,12 @@ table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
     left: 0 !important;
   }
 }
+
+{{#colors}}
+.{{color_name}} {
+  color: var(--{{color_name}});
+}
+.bg-{{color_name}} {
+  background-color: var(--{{color_name}});
+}
+{{/colors}}

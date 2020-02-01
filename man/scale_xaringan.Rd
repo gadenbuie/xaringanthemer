@@ -12,29 +12,62 @@
 \alias{scale_xaringan_colour_continuous}
 \title{Xaringan Themer ggplot2 Scales}
 \usage{
-scale_xaringan_discrete(aes_type = c("color", "colour", "fill"), ...,
-  color = NULL, direction = 1, inverse = FALSE)
+scale_xaringan_discrete(
+  aes_type = c("color", "colour", "fill"),
+  ...,
+  color = NULL,
+  direction = 1,
+  inverse = FALSE
+)
 
-scale_xaringan_fill_discrete(..., color = NULL, direction = 1,
-  inverse = FALSE)
+scale_xaringan_fill_discrete(..., color = NULL, direction = 1, inverse = FALSE)
 
-scale_xaringan_color_discrete(..., color = NULL, direction = 1,
-  inverse = FALSE)
+scale_xaringan_color_discrete(
+  ...,
+  color = NULL,
+  direction = 1,
+  inverse = FALSE
+)
 
-scale_xaringan_colour_discrete(..., color = NULL, direction = 1,
-  inverse = FALSE)
+scale_xaringan_colour_discrete(
+  ...,
+  color = NULL,
+  direction = 1,
+  inverse = FALSE
+)
 
-scale_xaringan_continuous(aes_type = c("color", "colour", "fill"), ...,
-  color = NULL, begin = 0, end = 1, inverse = FALSE)
+scale_xaringan_continuous(
+  aes_type = c("color", "colour", "fill"),
+  ...,
+  color = NULL,
+  begin = 0,
+  end = 1,
+  inverse = FALSE
+)
 
-scale_xaringan_fill_continuous(..., color = NULL, begin = 0, end = 1,
-  inverse = FALSE)
+scale_xaringan_fill_continuous(
+  ...,
+  color = NULL,
+  begin = 0,
+  end = 1,
+  inverse = FALSE
+)
 
-scale_xaringan_color_continuous(..., color = NULL, begin = 0,
-  end = 1, inverse = FALSE)
+scale_xaringan_color_continuous(
+  ...,
+  color = NULL,
+  begin = 0,
+  end = 1,
+  inverse = FALSE
+)
 
-scale_xaringan_colour_continuous(..., color = NULL, begin = 0,
-  end = 1, inverse = FALSE)
+scale_xaringan_colour_continuous(
+  ...,
+  color = NULL,
+  begin = 0,
+  end = 1,
+  inverse = FALSE
+)
 }
 \arguments{
 \item{aes_type}{The type of aesthetic to which the scale is being applied.

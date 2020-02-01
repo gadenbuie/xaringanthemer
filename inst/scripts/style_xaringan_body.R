@@ -68,6 +68,8 @@ header_background <- list(
   ignore = header_background_ignore_classes
 )
 
+colors <- prepare_colors(colors)
+
 tf <- system.file("resources", "template.css", package = "xaringanthemer")
 template <- readLines(tf, warn = FALSE)
 template <- paste(template, collapse = "\n")

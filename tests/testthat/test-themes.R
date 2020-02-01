@@ -12,6 +12,7 @@ test_theme_file <- function(theme = "duo", theme_file = paste0(theme, ".css"), .
     "mono_light" = style_mono_light,
     "solarized_dark" = style_solarized_dark,
     "solarized_light" = style_solarized_light,
+    "xaringan" = style_xaringan,
     stop("Unknown theme")
   )
 
@@ -39,4 +40,8 @@ test_that("header_background_auto = TRUE", {
   test_theme_file("duo", "duo-header_bg.css", header_background_auto = TRUE)
   test_theme_file("mono_light", "mono_light-header_bg.css", header_background_auto = TRUE)
   test_theme_file("solarized_dark", "solarized_dark-header_bg.css", header_background_auto = TRUE)
+})
+
+test_that("style colors are added to themes", {
+  test_theme_file("xaringan", colors = c('light-blue' = "#bad4ed"))
 })

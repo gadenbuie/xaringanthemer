@@ -4,12 +4,20 @@
 \alias{theme_xaringan_base}
 \title{The ggplot2 xaringanthemer base plot theme}
 \usage{
-theme_xaringan_base(text_color, background_color, ...,
-  set_ggplot_defaults = TRUE, accent_color = NULL,
-  accent_secondary_color = NULL, text_font = NULL,
-  text_font_use_google = NULL, text_font_size = NULL,
-  title_font = NULL, title_font_use_google = NULL,
-  title_font_size = NULL)
+theme_xaringan_base(
+  text_color,
+  background_color,
+  ...,
+  set_ggplot_defaults = TRUE,
+  accent_color = NULL,
+  accent_secondary_color = NULL,
+  text_font = NULL,
+  text_font_use_google = NULL,
+  text_font_size = NULL,
+  title_font = NULL,
+  title_font_use_google = NULL,
+  title_font_size = NULL
+)
 }
 \arguments{
 \item{text_color}{Color for text and foreground}
@@ -98,8 +106,9 @@ if (requireNamespace("ggplot2", quietly = TRUE)) {
 }
 }
 \seealso{
-Other xaringanthemer ggplot2 themes: \code{\link{theme_xaringan_inverse}},
-  \code{\link{theme_xaringan_set_defaults}},
-  \code{\link{theme_xaringan}}
+Other xaringanthemer ggplot2 themes: 
+\code{\link{theme_xaringan_inverse}()},
+\code{\link{theme_xaringan_set_defaults}()},
+\code{\link{theme_xaringan}()}
 }
 \concept{xaringanthemer ggplot2 themes}

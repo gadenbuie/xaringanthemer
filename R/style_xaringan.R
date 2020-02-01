@@ -56,6 +56,12 @@
 #' @param code_font_size Code Text Font Size. Defaults to 0.9em. Modifies the `.remark-inline` class.
 #' @param code_font_url Code Font URL. Defaults to https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700. Modifies the `@import url` elements.
 #' @param code_font_family_fallback Code Font Fallback. Defaults to 'Lucida Console', Monaco. Modifies the `.remark-code, .remark-inline-code` classes.
+#' @param colors A named vector of custom colors. The names of the colors
+#'   become CSS variables and classes that can be used within your slides.
+#'   For example, `colors = c(blue = "#bad4ed")` adds a CSS variable
+#'   `--blue`, a `.blue` CSS class that applies the color to the text or
+#'   foreground color, and a `.bg-blue` CSS class that applies the color
+#'   to the background.
 #' @template extra_css
 #' @param outfile Customized xaringan CSS output file name, default is "xaringan-themer.css"
 #' @family themes
@@ -120,10 +126,12 @@ style_xaringan <- function(
   code_font_size = "0.9em",
   code_font_url = "https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700",
   code_font_family_fallback = "'Lucida Console', Monaco",
+  colors = NULL,
   extra_css = NULL,
   extra_fonts = NULL,
   outfile = "xaringan-themer.css"
 ) {
+  # DO NOT EDIT - Generated from inst/scripts/generate_theme_functions.R
   # Make sure font names are wrapped in quotes if they have spaces
   f_args <- names(formals(sys.function()))
   for (var in f_args[grepl("font_family$", f_args)]) {
@@ -193,6 +201,8 @@ style_xaringan <- function(
     content_padding_top = header_background_content_padding_top,
     ignore = header_background_ignore_classes
   )
+  
+  colors <- prepare_colors(colors)
   
   tf <- system.file("resources", "template.css", package = "xaringanthemer")
   template <- readLines(tf, warn = FALSE)

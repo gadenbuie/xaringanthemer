@@ -5,9 +5,13 @@
 \alias{theme_xaringan_restore_defaults}
 \title{Set and Restore ggplot2 geom Defaults}
 \usage{
-theme_xaringan_set_defaults(text_color = NULL, background_color = NULL,
-  accent_color = text_color, accent_secondary_color = accent_color,
-  text_font = NULL)
+theme_xaringan_set_defaults(
+  text_color = NULL,
+  background_color = NULL,
+  accent_color = text_color,
+  accent_secondary_color = accent_color,
+  text_font = NULL
+)
 
 theme_xaringan_restore_defaults()
 }
@@ -48,8 +52,9 @@ defaults with \code{theme_xaringan_restore_defaults()}. By default,
 }}
 
 \seealso{
-Other xaringanthemer ggplot2 themes: \code{\link{theme_xaringan_base}},
-  \code{\link{theme_xaringan_inverse}},
-  \code{\link{theme_xaringan}}
+Other xaringanthemer ggplot2 themes: 
+\code{\link{theme_xaringan_base}()},
+\code{\link{theme_xaringan_inverse}()},
+\code{\link{theme_xaringan}()}
 }
 \concept{xaringanthemer ggplot2 themes}

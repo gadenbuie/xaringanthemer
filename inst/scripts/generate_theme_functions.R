@@ -6,12 +6,13 @@ setup_theme_function <- function(
   template = template_variables,
   ...,
   file = "",
-  body = c(
-    "  # DO NOT EDIT - Generated from inst/scripts/generate_theme_functions.R",
-    "  eval(parse(text = call_style_xaringan()))"
-  )
+  body = "  eval(parse(text = call_style_xaringan()))"
 ) {
   if (file == "clip" && !requireNamespace("clipr", quietly = TRUE)) file <- ""
+  body <- c(
+    "  # DO NOT EDIT - Generated from inst/scripts/generate_theme_functions.R",
+    body
+  )
   tv <- template
   null_default <- purrr::map_lgl(tv$default, is.null)
   tv[null_default, "default"] <- "{NULL}"
@@ -24,6 +25,12 @@ setup_theme_function <- function(
         "{element_description(element)}"
       )
     ),
+    "#' @param colors A named vector of custom colors. The names of the colors",
+    "#'   become CSS variables and classes that can be used within your slides.",
+    "#'   For example, `colors = c(blue = \"#bad4ed\")` adds a CSS variable",
+    "#'   `--blue`, a `.blue` CSS class that applies the color to the text or",
+    "#'   foreground color, and a `.bg-blue` CSS class that applies the color",
+    "#'   to the background.",
     "#' @template extra_css",
     "#' @param outfile Customized xaringan CSS output file name, default is \"xaringan-themer.css\"",
     "#' @family themes",
@@ -35,6 +42,7 @@ setup_theme_function <- function(
         "  {variable} = {ifelse(!grepl('^[{].+[}]$', default), paste0('\"', default, '\"'), gsub('[{}]', '', default))},"
       )
     ),
+    "  colors = NULL,",
     "  extra_css = NULL,",
     "  extra_fonts = NULL,",
     "  outfile = \"xaringan-themer.css\"",

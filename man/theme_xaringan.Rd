@@ -4,8 +4,13 @@
 \alias{theme_xaringan}
 \title{A Plot Theme for ggplot2 by xaringanthemer}
 \usage{
-theme_xaringan(text_color = NULL, background_color = NULL,
-  accent_color = NULL, accent_secondary_color = NULL, ...)
+theme_xaringan(
+  text_color = NULL,
+  background_color = NULL,
+  accent_color = NULL,
+  accent_secondary_color = NULL,
+  ...
+)
 }
 \arguments{
 \item{text_color}{Color for text and foreground, inherits from \code{text_color}}
@@ -19,33 +24,25 @@ theme_xaringan(text_color = NULL, background_color = NULL,
 \item{accent_secondary_color}{Color for secondary accents, inherits from
 \code{text_bold_color}}
 
-\item{...}{Arguments passed on to \code{theme_xaringan_base}
-\describe{
-  \item{text_color}{Color for text and foreground}
-  \item{background_color}{Color for background}
-  \item{accent_color}{Color for titles and accents, inherits from
-\code{header_color} or \code{text_color}. Used for the \code{title} base setting in
-\code{\link[ggplot2:theme]{ggplot2::theme()}}, and additionally for setting the \code{color} or \code{fill} of
-\pkg{ggplot2} geom defaults.}
-  \item{accent_secondary_color}{Color for secondary accents, inherits from
-\code{text_bold_color} or \code{accent_color}. Used only when setting \pkg{ggplot2} geom
-defaults.}
-  \item{set_ggplot_defaults}{Should defaults be set for \pkg{ggplot2} \emph{geoms}?
+\item{...}{
+  Arguments passed on to \code{\link[=theme_xaringan_base]{theme_xaringan_base}}
+  \describe{
+    \item{\code{set_ggplot_defaults}}{Should defaults be set for \pkg{ggplot2} \emph{geoms}?
 Defaults to TRUE. To restore ggplot's defaults, or the previously set geom
 defaults, see \code{\link[=theme_xaringan_restore_defaults]{theme_xaringan_restore_defaults()}}.}
-  \item{text_font}{Font to use for text elements, passed to
+    \item{\code{text_font}}{Font to use for text elements, passed to
 \code{\link[sysfonts:font_add_google]{sysfonts::font_add_google()}}, if available and \code{text_font_use_google} is
 \code{TRUE}. Inherits from \code{text_font_family}.}
-  \item{text_font_use_google}{Is \code{text_font} available on \href{https://fonts.google.com}{Google Fonts}?}
-  \item{text_font_size}{Base text font size, inherits from \code{text_font_size}, or
+    \item{\code{text_font_use_google}}{Is \code{text_font} available on \href{https://fonts.google.com}{Google Fonts}?}
+    \item{\code{text_font_size}}{Base text font size, inherits from \code{text_font_size}, or
 defaults to 11.}
-  \item{title_font}{Font to use for title elements, passed to
+    \item{\code{title_font}}{Font to use for title elements, passed to
 \code{\link[sysfonts:font_add_google]{sysfonts::font_add_google()}}, if available and \code{title_font_use_google} is
 \code{TRUE}. Inherits from \code{title_font_family}.}
-  \item{title_font_use_google}{Is \code{title_font} available on \href{https://fonts.google.com}{Google Fonts}?}
-  \item{title_font_size}{Base text font size, inherits from \code{title_font_size},
+    \item{\code{title_font_use_google}}{Is \code{title_font} available on \href{https://fonts.google.com}{Google Fonts}?}
+    \item{\code{title_font_size}}{Base text font size, inherits from \code{title_font_size},
 or defaults to 14.}
-}}
+  }}
 }
 \value{
 A ggplot2 theme
@@ -70,8 +67,9 @@ if (requireNamespace("ggplot2", quietly = TRUE)) {
 }
 }
 \seealso{
-Other xaringanthemer ggplot2 themes: \code{\link{theme_xaringan_base}},
-  \code{\link{theme_xaringan_inverse}},
-  \code{\link{theme_xaringan_set_defaults}}
+Other xaringanthemer ggplot2 themes: 
+\code{\link{theme_xaringan_base}()},
+\code{\link{theme_xaringan_inverse}()},
+\code{\link{theme_xaringan_set_defaults}()}
 }
 \concept{xaringanthemer ggplot2 themes}
