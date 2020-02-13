@@ -609,11 +609,15 @@ get_theme_font <- function(element = c("text", "header", "code")) {
 
   element_family <- paste0(element, "_font_family")
   element_google <- paste0(element, "_font_google")
+  element_is_google <- paste0(element, "_font_is_google")
   element_url <- paste0(element, "_font_url")
 
   family <- xaringanthemer_env[[element_family]]
-  is_google_font <- !is.null(xaringanthemer_env[[element_google]]) ||
-    grepl("fonts.google", xaringanthemer_env[[element_url]], fixed = TRUE)
+  is_google_font <- xaringanthemer_env[[element_is_google]]
+  if (is.null(is_google_font)) {
+    is_google_font <- !is.null(xaringanthemer_env[[element_google]]) ||
+      grepl("fonts.google", xaringanthemer_env[[element_url]], fixed = TRUE)
+  }
 
   register_font(family, google = is_google_font, fn = sys.calls()[[max(1, length(sys.calls()) - 1)]])
 }
@@ -681,9 +685,9 @@ requires_package <- function(pkg = "ggplot2", fn = "", required = TRUE) {
 
 requires_xaringanthemer_env <- function() {
   if (!exists("xaringanthemer_env") || is.null(xaringanthemer_env$header_color)) {
-    stop("Please call a xaringanthemer theme function first.")
+      stop("Please call a xaringanthemer theme function first.")
+    }
   }
-}
 
 #' Get the Value of xaringanthemer Style Setting
 #'

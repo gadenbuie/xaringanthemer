@@ -25,9 +25,14 @@
 
 :root {
   /* Fonts */
-  --body-font-family: {{body_font_family}};
+  --text-font-family: {{text_font_family}};
+  --text-font-is-google: {{text_font_is_google}};
+  --text-font-family-fallback: {{text_font_family_fallback}};
+  --text-font-base: {{text_font_base}};
   --header-font-family: {{header_font_family}};
+  --header-font-is-google: {{header_font_is_google}};
   --code-font-family: {{code_font_family}};
+  --code-font-is-google: {{code_font_is_google}};
   --text-font-size: {{text_font_size}};
   --code-font-size: {{code_font_size}};
   --code-inline-font-size: {{code_inline_font_size}};
@@ -59,7 +64,7 @@ html {
 }
 
 body {
-  font-family: var(--body-font-family);
+  font-family: var(--text-font-family), var(--text-font-family-fallback), var(--text-font-base);
   font-weight: {{text_font_weight}};
   color: var(--text-color);
 }

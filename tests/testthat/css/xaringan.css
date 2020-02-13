@@ -18,16 +18,21 @@
  *  Version: a.b.c.d.eeee
  *
  * ------------------------------------------------------- */
-@import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+@import url(https://fonts.googleapis.com/css?family=Noto+Serif);
 @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
 @import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700);
 
 
 :root {
   /* Fonts */
-  --body-font-family: 'Droid Serif', 'Palatino Linotype', 'Book Antiqua', Palatino, 'Microsoft YaHei', 'Songti SC', serif;
+  --text-font-family: 'Noto Serif';
+  --text-font-is-google: 1;
+  --text-font-family-fallback: 'Palatino Linotype', 'Book Antiqua', Palatino, 'Microsoft YaHei', 'Songti SC';
+  --text-font-base: serif;
   --header-font-family: 'Yanone Kaffeesatz';
+  --header-font-is-google: 0;
   --code-font-family: 'Source Code Pro';
+  --code-font-is-google: 0;
   --text-font-size: 20px;
   --code-font-size: 0.9em;
   --code-inline-font-size: 1em;
@@ -55,8 +60,8 @@ html {
 }
 
 body {
-  font-family: var(--body-font-family);
-  font-weight: normal;
+  font-family: var(--text-font-family), var(--text-font-family-fallback), var(--text-font-base);
+  font-weight: ;
   color: var(--text-color);
 }
 h1, h2, h3 {

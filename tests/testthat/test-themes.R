@@ -18,7 +18,7 @@ test_theme_file <- function(theme = "duo", theme_file = paste0(theme, ".css"), .
 
   tmpfile <- tempfile()
 
-  theme_fun(outfile = tmpfile, ...)
+  theme_fun(outfile = tmpfile, ..., text_font_google = google_font("Noto Serif"))
   theme_css <- readLines(tmpfile)
   # Mask package version in test files
   theme_css <- sub("( \\*  Version: )[\\d.-]+", "\\1a.b.c.d.eeee", theme_css, perl = TRUE)

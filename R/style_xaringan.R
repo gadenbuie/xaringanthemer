@@ -136,6 +136,8 @@ style_xaringan <- function(
   f_args <- names(formals(sys.function()))
   for (var in f_args[grepl("font_family$", f_args)]) {
     eval(parse(text = paste0(var, "<-quote_elements_w_spaces(", var, ")")))
+    # set an is_google flag default of FALSE that is possibly overwritten later
+    eval(parse(text = paste0(sub("font_family$", "font_is_google", var), "<-0")))
   }
   
   # Use font_..._google args to overwrite font args
@@ -147,15 +149,16 @@ style_xaringan <- function(
     }
     group <- strsplit(var, "_")[[1]][1]
     if (group == "text") {
-      text_font_family <- gf$family
+      text_font_family <- quote_elements_w_spaces(gf$family)
       text_font_weight <- gf$weights %||% "normal"
       text_font_weight <- substr(text_font_weight, 1, regexpr(",", text_font_weight)[1] - 1)
       text_font_url <- gf$url
     } else {
       for (thing in c("family", "url")) {
-        eval(parse(text = paste0(group, "_font_", thing, " <- gf$", thing )))
+        eval(parse(text = paste0(group, "_font_", thing, " <- gf$", quote_elements_w_spaces(thing))))
       }
     }
+    eval(parse(text = paste0(group, "_font_is_google <- 1")))
   }
   
   extra_font_imports <- if (is.null(extra_fonts)) "" else list2fonts(extra_fonts)
