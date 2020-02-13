@@ -4,10 +4,17 @@
 \alias{theme_xaringan_get_value}
 \title{Get the Value of xaringanthemer Style Setting}
 \usage{
-theme_xaringan_get_value(setting)
+theme_xaringan_get_value(setting, css_file = NULL)
 }
 \arguments{
 \item{setting}{A xaringanthemer style setting}
+
+\item{css_file}{Path to a \pkg{xaringanthemer} CSS file, from which the
+theme variables and values will be inferred. In general, if you use the
+\pkg{xaringathemer} defaults, you will not need to set this. This feature
+lets you create a \pkg{ggplot2} theme for your \pkg{xaringan} slides, even
+if you have only saved your theme CSS file and you aren't creating your
+CSS theme with \pkg{xaringanthemer} in your slides' source file.}
 }
 \description{
 A helper function to retrieve the value of style settings as set by a

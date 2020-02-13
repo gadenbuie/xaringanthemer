@@ -16,6 +16,12 @@
 #'   `header_color`
 #' @param accent_secondary_color Color for secondary accents, inherits from
 #'   `text_bold_color`
+#' @param css_file Path to a \pkg{xaringanthemer} CSS file, from which the
+#'   theme variables and values will be inferred. In general, if you use the
+#'   \pkg{xaringathemer} defaults, you will not need to set this. This feature
+#'   lets you create a \pkg{ggplot2} theme for your \pkg{xaringan} slides, even
+#'   if you have only saved your theme CSS file and you aren't creating your
+#'   CSS theme with \pkg{xaringanthemer} in your slides' source file.
 #' @inheritDotParams theme_xaringan_base
 #'
 #' @examples
@@ -37,9 +43,10 @@ theme_xaringan <- function(
   background_color = NULL,
   accent_color = NULL,
   accent_secondary_color = NULL,
+  css_file = NULL,
   ...
 ) {
-  requires_xaringanthemer_env()
+  requires_xaringanthemer_env(css_file = css_file, try_css = TRUE)
   requires_package(fn = "xaringan_theme")
 
   background_color <- background_color %||% xaringanthemer_env$background_color
@@ -72,6 +79,7 @@ theme_xaringan <- function(
 #'   `header_color`
 #' @param accent_secondary_color Color for secondary accents, inherits from
 #'   `text_bold_color`
+#' @inheritParams theme_xaringan
 #' @inheritDotParams theme_xaringan_base
 #'
 #' @examples
@@ -634,12 +642,15 @@ register_font <- function(
   family <- gsub("['\"]", "", family)
 
   if (!identical(xaringanthemer_env$showtext_auto, TRUE)) {
-    if (requires_package(pkg = "showtext", fn, required = FALSE)) {
-      showtext::showtext_auto()
-    } else {
+    if (!requires_package(pkg = "showtext", fn, required = FALSE)) {
       return(family)
     }
+    showtext::showtext_auto()
     xaringanthemer_env$showtext_auto <- TRUE
+  }
+
+  if (family %in% theme_xaringan_get_value("registered_font_families") %||% "") {
+    return(family)
   }
 
   if (!requires_package(pkg = "sysfonts", fn, required = FALSE)) {
@@ -650,19 +661,34 @@ register_font <- function(
       "Source Code Pro",
       "Yanone Kaffeesatz"
     )
-    if (identical(google, TRUE) || is_default_font) {
+    font_found <- family %in% sysfonts::font_families()
+    is_google_font <- identical(google, TRUE) || is_default_font
+    if (is_google_font) {
       tryCatch(
-        sysfonts::font_add_google(family, ...),
-        error = function(e) warning(e$message),
-        warning = function(w) warning(w$message)
+        {
+          sysfonts::font_add_google(family, ...)
+          font_found <- TRUE
+        },
+        error = function(e) {},
+        warning = function(w) {}
       )
-    } else {
-      warning(paste(
-        "Please manually register fonts not served by Google Fonts.",
-        "See `sysfonts::font_add()` for more information."
-      ))
+    }
+    if (!font_found) { # warn user if font still not found
+      msg <- if (is_google_font) glue::glue(
+        "Font '{family}' not found in Google Fonts. ",
+        "Please manually register the font using `sysfonts::font_add()`."
+      ) else {
+        glue::glue(
+          "Font '{family}' must be manually registered using `sysfonts::font_add()`."
+        )
+      }
+      warning(msg, call. = FALSE)
     }
   }
+  xaringanthemer_env[["registered_font_families"]] <- c(
+    xaringanthemer_env[["registered_font_families"]],
+    family
+  )
   family
 }
 
@@ -683,11 +709,20 @@ requires_package <- function(pkg = "ggplot2", fn = "", required = TRUE) {
   invisible(TRUE)
 }
 
-requires_xaringanthemer_env <- function() {
-  if (!exists("xaringanthemer_env") || is.null(xaringanthemer_env$header_color)) {
+requires_xaringanthemer_env <- function(css_file = NULL, try_css = TRUE) {
+  reload <- !is.null(css_file) && isTRUE(try_css)
+  if (reload || !exists("xaringanthemer_env") || is.null(xaringanthemer_env$header_color)) {
+    if (try_css) {
+      css_vars <- read_css_vars(css_file)
+      for (css_var in names(css_vars)) {
+        xaringanthemer_env[[css_var]] <- css_vars[[css_var]]
+      }
+      return(requires_xaringanthemer_env(try_css = FALSE))
+    } else {
       stop("Please call a xaringanthemer theme function first.")
     }
   }
+}
 
 #' Get the Value of xaringanthemer Style Setting
 #'
@@ -759,9 +794,10 @@ requires_xaringanthemer_env <- function() {
 #' - `title_slide_text_color`
 #'
 #' @param setting A xaringanthemer style setting
+#' @inheritParams theme_xaringan
 #' @export
-theme_xaringan_get_value <- function(setting) {
-  requires_xaringanthemer_env()
+theme_xaringan_get_value <- function(setting, css_file = NULL) {
+  requires_xaringanthemer_env(css_file = css_file)
   if (length(setting) > 1) {
     xaringanthemer_env[setting]
   } else {
