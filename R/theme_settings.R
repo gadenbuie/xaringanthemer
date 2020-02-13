@@ -1,3 +1,4 @@
+#nocov start
 template_variables <- tibble::tribble(
   ~ variable, ~ default, ~ element, ~ description
   , "text_color", "#000", "body", "Text Color"
@@ -349,3 +350,4 @@ element_description <- function(element) {
     glue::glue("Modifies the `{element}` {plural_element(element)}.")
   )
 }
+#nocov end
