@@ -48,7 +48,7 @@ style_mono_accent_inverse(
   header_background_auto = FALSE,
   header_background_color = header_color,
   header_background_text_color = background_color,
-  header_background_padding = "2rem 4rem 1.5rem 4rem",
+  header_background_padding = NULL,
   header_background_content_padding_top = "7rem",
   header_background_ignore_classes = c("normal", "inverse", "title", "middle", "bottom"),
   text_slide_number_font_size = "0.9rem",
@@ -162,7 +162,7 @@ style_mono_accent_inverse(
 
 \item{header_background_text_color}{Text Color for h1 Header with Background. Defaults to \code{background_color}. Modifies the \verb{.remark-slide-content h1} class.}
 
-\item{header_background_padding}{Padding for h1 Header with Background. Defaults to 2rem 4rem 1.5rem 4rem. Modifies the \verb{.remark-slide-content h1} class.}
+\item{header_background_padding}{Padding for h1 Header with Background. Defaults to \code{NULL}. Modifies the \verb{.remark-slide-content h1} class.}
 
 \item{header_background_content_padding_top}{Top Padding for Content in Slide with Header with Background. Defaults to 7rem. Modifies the \code{.remark-slide-content} class.}
 

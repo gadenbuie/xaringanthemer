@@ -41,7 +41,7 @@
 #' @param header_background_auto Add background under slide title automatically for h1 header elements. If not enabled, use `class: header_background` to enable. Defaults to `FALSE`. 
 #' @param header_background_color Background Color for h1 Header with Background. Defaults to `header_color`. Modifies the `.remark-slide-content h1` class.
 #' @param header_background_text_color Text Color for h1 Header with Background. Defaults to `background_color`. Modifies the `.remark-slide-content h1` class.
-#' @param header_background_padding Padding for h1 Header with Background. Defaults to 2rem 4rem 1.5rem 4rem. Modifies the `.remark-slide-content h1` class.
+#' @param header_background_padding Padding for h1 Header with Background. Defaults to `NULL`. Modifies the `.remark-slide-content h1` class.
 #' @param header_background_content_padding_top Top Padding for Content in Slide with Header with Background. Defaults to 7rem. Modifies the `.remark-slide-content` class.
 #' @param header_background_ignore_classes Slide Classes Where Header with Background will not be Applied. Defaults to `c('normal', 'inverse', 'title', 'middle', 'bottom')`. Modifies the `.remark-slide-content` class.
 #' @param text_slide_number_font_size Slide Number Text Font Size. Defaults to 0.9rem. Modifies the `.remark-slide-number` class.
@@ -116,7 +116,7 @@ style_mono_accent <- function(
   header_background_auto = FALSE,
   header_background_color = header_color,
   header_background_text_color = background_color,
-  header_background_padding = "2rem 4rem 1.5rem 4rem",
+  header_background_padding = NULL,
   header_background_content_padding_top = "7rem",
   header_background_ignore_classes = c('normal', 'inverse', 'title', 'middle', 'bottom'),
   text_slide_number_font_size = "0.9rem",

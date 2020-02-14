@@ -33,12 +33,13 @@
   --header-font-is-google: 0;
   --code-font-family: 'Source Code Pro';
   --code-font-is-google: 0;
-  --text-font-size: 20px;
-  --code-font-size: 0.9em;
-  --code-inline-font-size: 1em;
-  --header-h1-font-size: 55px;
-  --header-h2-font-size: 45px;
-  --header-h3-font-size: 35px;
+  --base-font-size: 20px;
+  --text-font-size: 1rem;
+  --code-font-size: 0.9rem;
+  --code-inline-font-size: 1rem;
+  --header-h1-font-size: 2.75rem;
+  --header-h2-font-size: 2.25rem;
+  --header-h3-font-size: 1.75rem;
 
   /* Colors */
   --text-color: #FFFFFF;
@@ -52,10 +53,12 @@
   --inverse-header-color: #050F0F;
   --title-slide-background-color: #3C989E;
   --title-slide-text-color: #050F0F;
+  --header-background-color: #3C989E;
+  --header-background-text-color: #050F0F;
 }
 
 html {
-  font-size: var(--text-font-size);
+  font-size: var(--base-font-size);
 }
 
 body {
@@ -70,7 +73,8 @@ h1, h2, h3 {
 }
 .remark-slide-content {
   background-color: var(--background-color);
-  padding: 1rem 4rem 1rem 4rem;
+  font-size: 1rem;
+  padding: 16px 64px 16px 64px;
 }
 .remark-slide-content h1 {
   font-size: var(--header-h1-font-size);
@@ -94,7 +98,7 @@ h1, h2, h3 {
 .remark-slide-number {
   color: #3C989E;
   opacity: 1;
-  font-size: 0.9em;
+  font-size: 0.9rem;
 }
 strong { color: var(--text-bold-color); }
 a, a > code {
@@ -103,9 +107,9 @@ a, a > code {
 }
 .footnote {
   position: absolute;
-  bottom: 3em;
+  bottom: 60px;
   padding-right: 4em;
-  font-size: 0.9em;
+  font-size: 0.9rem;
 }
 .remark-code-line-highlighted {
   background-color: var(--code-highlight-color);
@@ -203,9 +207,9 @@ table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
   top: 0;
   left: 0;
   width: 100%;
-  background: var(--background-color);
-  color: var(--text-color);
-  padding: 2rem 4rem 1.5rem 4rem;
+  background: var(--header-background-color);
+  color: var(--header-background-text-color);
+  padding: 2rem 64px 1.5rem 64px;
   margin-top: 0;
   box-sizing: border-box;
 }

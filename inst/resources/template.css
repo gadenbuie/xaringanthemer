@@ -54,7 +54,9 @@
   --inverse-background-color: {{inverse_background_color}};
   --inverse-header-color: {{inverse_header_color}};
   --title-slide-background-color: {{title_slide_background_color}};
-  --title-slide-text-color: {{title_slide_text_color}};{{#colors}}
+  --title-slide-text-color: {{title_slide_text_color}};
+  --header-background-color: {{header_background_color}};
+  --header-background-text-color: {{header_background_text_color}};{{#colors}}
   --{{color_name}}: {{value}};
   {{/colors}}
 
@@ -223,8 +225,8 @@ table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
   top: 0;
   left: 0;
   width: 100%;
-  background: var(--background-color);
-  color: var(--text-color);
+  background: var(--header-background-color);
+  color: var(--header-background-text-color);
   padding: {{padding}};
   margin-top: 0;
   box-sizing: border-box;

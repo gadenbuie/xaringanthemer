@@ -76,6 +76,12 @@ header_background_ignore_classes <- purrr::map(
   header_background_ignore_classes,
   ~ list(class = .)
 )
+if (is.null(header_background_padding)) {
+  slide_padding <- css_get_padding(padding)
+  header_background_padding <- paste(
+    "2rem", slide_padding$right, "1.5rem", slide_padding$left
+  )
+}
 header_background <- list(
   auto = header_background_auto,
   background_color = header_background_color,

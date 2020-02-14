@@ -55,3 +55,17 @@ css_get_root <- function(file) {
   }
   values
 }
+
+css_get_padding <- function(x) {
+  stopifnot(length(x) == 1)
+  x <- trimws(x)
+  x <- as.list(strsplit(x, " ")[[1]])
+  stopifnot(length(x) %in% c(1, 2, 4))
+  names(x) <- c("top", "right", "bottom", "left")[seq_along(x)]
+  list(
+    top = x$top,
+    right = x$right %||% x$top,
+    bottom = x$bottom %||% x$top,
+    left = x$left %||% x$right %||% x$top
+  )
+}

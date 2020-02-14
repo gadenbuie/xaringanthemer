@@ -7,12 +7,15 @@ test_that("read theme settings from css variables", {
     inverse_background_color = "#23395b",
     inverse_text_color = "#E9EBEE",
     inverse_header_color = "#E9EBEE",
-    text_font_size = "20px",
-    header_h3_font_size = "35px",
+    base_font_size = "20px",
+    text_font_size = "1rem",
+    header_h3_font_size = "1.75rem",
     text_font_family = "'Noto Serif'",
     text_font_is_google = TRUE,
     header_font_family = "'Yanone Kaffeesatz'",
     header_font_is_google = FALSE,
+    header_background_color = "#23395b",
+    header_background_text_color = "#E9EBEE",
     code_font_family = "'Source Code Pro'",
     code_font_is_google = FALSE
   )
@@ -89,4 +92,35 @@ test_that("css_get_root() returns null if no :root exists", {
   ), tmpfile)
   expect_null(css_get_root(tmpfile))
   unlink(tmpfile)
+})
+
+describe("css_get_padding()", {
+  it("processes 1 element padding", {
+    p <- css_get_padding("1em")
+    expect_equal(p$top,    "1em")
+    expect_equal(p$right,  "1em")
+    expect_equal(p$bottom, "1em")
+    expect_equal(p$left,   "1em")
+  })
+  it("processes 2 element padding", {
+    p <- css_get_padding("1em 2em")
+    expect_equal(p$top,    "1em")
+    expect_equal(p$right,  "2em")
+    expect_equal(p$bottom, "1em")
+    expect_equal(p$left,   "2em")
+  })
+  it("processes 4 element padding", {
+    p <- css_get_padding("1em 2em 3em 4em")
+    expect_equal(p$top,    "1em")
+    expect_equal(p$right,  "2em")
+    expect_equal(p$bottom, "3em")
+    expect_equal(p$left,   "4em")
+  })
+  it("throws an error if padding is a vector", {
+    expect_error(css_get_padding(c("1em", "2em")))
+  })
+  it("throws an error if result is not 1, 2, 4 element", {
+    expect_error(css_get_padding("1em 2em 3em"))
+    expect_error(css_get_padding("1em 2em 3em 4em 5em"))
+  })
 })
