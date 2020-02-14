@@ -14,14 +14,14 @@ style_mono_dark(
   link_color = base_color,
   text_bold_color = base_color,
   text_slide_number_color = base_color,
-  padding = "1rem 4rem 1rem 4rem",
+  padding = "16px 64px 16px 64px",
   background_image = NULL,
   background_size = NULL,
   background_position = NULL,
   code_highlight_color = "rgba(255,255,0,0.5)",
   code_inline_color = base_color,
   code_inline_background_color = NULL,
-  code_inline_font_size = "1em",
+  code_inline_font_size = "1rem",
   inverse_background_color = base_color,
   inverse_text_color = black_color,
   inverse_text_shadow = FALSE,
@@ -32,25 +32,26 @@ style_mono_dark(
   title_slide_background_size = NULL,
   title_slide_background_position = NULL,
   footnote_color = NULL,
-  footnote_font_size = "0.9em",
-  footnote_position_bottom = "3em",
+  footnote_font_size = "0.9rem",
+  footnote_position_bottom = "60px",
   left_column_subtle_color = apply_alpha(base_color, 0.6),
   left_column_selected_color = base_color,
   blockquote_left_border_color = apply_alpha(base_color, 0.5),
   table_border_color = "#666",
   table_row_border_color = "#ddd",
   table_row_even_background_color = darken_color(base_color, 0.7),
-  text_font_size = "20px",
-  header_h1_font_size = "55px",
-  header_h2_font_size = "45px",
-  header_h3_font_size = "35px",
+  base_font_size = "20px",
+  text_font_size = "1rem",
+  header_h1_font_size = "2.75rem",
+  header_h2_font_size = "2.25rem",
+  header_h3_font_size = "1.75rem",
   header_background_auto = FALSE,
   header_background_color = header_color,
   header_background_text_color = background_color,
   header_background_padding = "2rem 4rem 1.5rem 4rem",
   header_background_content_padding_top = "7rem",
   header_background_ignore_classes = c("normal", "inverse", "title", "middle", "bottom"),
-  text_slide_number_font_size = "0.9em",
+  text_slide_number_font_size = "0.9rem",
   text_font_google = NULL,
   text_font_family = "'Droid Serif'",
   text_font_weight = "normal",
@@ -65,7 +66,7 @@ style_mono_dark(
   header_font_url = "https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz",
   code_font_google = NULL,
   code_font_family = "'Source Code Pro'",
-  code_font_size = "0.9em",
+  code_font_size = "0.9rem",
   code_font_url = "https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700",
   code_font_family_fallback = "'Lucida Console', Monaco",
   colors = NULL,
@@ -93,7 +94,7 @@ style_mono_dark(
 
 \item{text_slide_number_color}{Slide Number Color. Defaults to \code{base_color}. Modifies the \code{.remark-slide-number} class.}
 
-\item{padding}{Slide Padding in \verb{top right [bottom left]} format. Defaults to 1rem 4rem 1rem 4rem. Modifies the \code{.remark-slide-content} class.}
+\item{padding}{Slide Padding in \verb{top right [bottom left]} format. Defaults to 16px 64px 16px 64px. Modifies the \code{.remark-slide-content} class.}
 
 \item{background_image}{Background image applied to each \emph{and every} slide. Set \code{title_slide_background_image = "none"} to remove the background image from the title slide. Defaults to \code{NULL}. Modifies the \code{.remark-slide-content} class.}
 
@@ -107,7 +108,7 @@ style_mono_dark(
 
 \item{code_inline_background_color}{Inline Code Background Color. Defaults to \code{NULL}. Modifies the \code{.remark-inline-code} class.}
 
-\item{code_inline_font_size}{Inline Code Text Font Size. Defaults to 1em. Modifies the \code{.remark-inline-code} class.}
+\item{code_inline_font_size}{Inline Code Text Font Size. Defaults to 1rem. Modifies the \code{.remark-inline-code} class.}
 
 \item{inverse_background_color}{Inverse Background Color. Defaults to \code{base_color}. Modifies the \code{.inverse} class.}
 
@@ -129,9 +130,9 @@ style_mono_dark(
 
 \item{footnote_color}{Footnote text color (if \code{NA}, then it will be the same color as \code{text_color}). Defaults to \code{NULL}. Modifies the \code{.footnote} class.}
 
-\item{footnote_font_size}{Footnote font size. Defaults to 0.9em. Modifies the \code{.footnote} class.}
+\item{footnote_font_size}{Footnote font size. Defaults to 0.9rem. Modifies the \code{.footnote} class.}
 
-\item{footnote_position_bottom}{Footnote location from bottom of screen. Defaults to 3em. Modifies the \code{.footnote} class.}
+\item{footnote_position_bottom}{Footnote location from bottom of screen. Defaults to 60px. Modifies the \code{.footnote} class.}
 
 \item{left_column_subtle_color}{Left Column Text (not last). Defaults to \code{apply_alpha(base_color, 0.6)}. Modifies the \verb{.left-column h2, .left-column h3} classes.}
 
@@ -145,13 +146,15 @@ style_mono_dark(
 
 \item{table_row_even_background_color}{Table Even Row Background Color. Defaults to \code{darken_color(base_color, 0.7)}. Modifies the \verb{thead, tfoot, tr:nth-child(even)} elements.}
 
-\item{text_font_size}{Slide Body Text Font Size. Defaults to 20px. Modifies the \code{.remark-slide-content} class.}
+\item{base_font_size}{Base Font Size for All Slide Elements (must be \code{px}). Defaults to 20px. Modifies the \code{html} element.}
 
-\item{header_h1_font_size}{h1 Header Text Font Size. Defaults to 55px. Modifies the \verb{.remark-slide-content h1} class.}
+\item{text_font_size}{Slide Body Text Font Size. Defaults to 1rem. Modifies the \code{.remark-slide-content} class.}
 
-\item{header_h2_font_size}{h2 Header Text Font Size. Defaults to 45px. Modifies the \verb{.remark-slide-content h2} class.}
+\item{header_h1_font_size}{h1 Header Text Font Size. Defaults to 2.75rem. Modifies the \verb{.remark-slide-content h1} class.}
 
-\item{header_h3_font_size}{h3 Header Text Font Size. Defaults to 35px. Modifies the \verb{.remark-slide-content h3} class.}
+\item{header_h2_font_size}{h2 Header Text Font Size. Defaults to 2.25rem. Modifies the \verb{.remark-slide-content h2} class.}
+
+\item{header_h3_font_size}{h3 Header Text Font Size. Defaults to 1.75rem. Modifies the \verb{.remark-slide-content h3} class.}
 
 \item{header_background_auto}{Add background under slide title automatically for h1 header elements. If not enabled, use \code{class: header_background} to enable. Defaults to \code{FALSE}.}
 
@@ -165,7 +168,7 @@ style_mono_dark(
 
 \item{header_background_ignore_classes}{Slide Classes Where Header with Background will not be Applied. Defaults to \code{c('normal', 'inverse', 'title', 'middle', 'bottom')}. Modifies the \code{.remark-slide-content} class.}
 
-\item{text_slide_number_font_size}{Slide Number Text Font Size. Defaults to 0.9em. Modifies the \code{.remark-slide-number} class.}
+\item{text_slide_number_font_size}{Slide Number Text Font Size. Defaults to 0.9rem. Modifies the \code{.remark-slide-number} class.}
 
 \item{text_font_google}{Use \code{google_font()} to specify body font. Defaults to \code{NULL}. Modifies the \code{body} element.}
 
@@ -191,7 +194,7 @@ style_mono_dark(
 
 \item{code_font_family}{Code Font Family. Defaults to 'Source Code Pro'. Modifies the \verb{.remark-code, .remark-inline-code} classes.}
 
-\item{code_font_size}{Code Text Font Size. Defaults to 0.9em. Modifies the \code{.remark-inline} class.}
+\item{code_font_size}{Code Text Font Size. Defaults to 0.9rem. Modifies the \code{.remark-inline} class.}
 
 \item{code_font_url}{Code Font URL. Defaults to https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700. Modifies the \verb{@import url} elements.}
 

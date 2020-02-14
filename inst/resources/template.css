@@ -33,6 +33,7 @@
   --header-font-is-google: {{header_font_is_google}};
   --code-font-family: {{code_font_family}};
   --code-font-is-google: {{code_font_is_google}};
+  --base-font-size: {{base_font_size}};
   --text-font-size: {{text_font_size}};
   --code-font-size: {{code_font_size}};
   --code-inline-font-size: {{code_inline_font_size}};
@@ -60,7 +61,7 @@
 }
 
 html {
-  font-size: var(--text-font-size);
+  font-size: var(--base-font-size);
 }
 
 body {
@@ -75,7 +76,7 @@ h1, h2, h3 {
 }
 .remark-slide-content {
   background-color: var(--background-color);
-  font-size: var(--text-font-size);{{#background_image}}
+  font-size: {{text_font_size}};{{#background_image}}
   background-image: url({{background_image}});{{#background_size}}
   background-size: {{background_size}};{{/background_size}}{{#background_position}}
   background-position: {{background_position}};{{/background_position}}{{/background_image}}

@@ -6,6 +6,20 @@ for (var in f_args[grepl("font_family$", f_args)]) {
   eval(parse(text = paste0(sub("font_family$", "font_is_google", var), "<-0")))
 }
 
+# Warn if base_font_size isn't absolute
+css_abs_units <- c("cm", "mm", "Q", "in", "pc", "pt", "px")
+if (!grepl(paste(tolower(css_abs_units), collapse = "|"), tolower(base_font_size))) {
+  warning(
+    glue::glue(
+      "Base font size '{base_font_size}' is not in absolute units. ",
+      "For best results, specify the `base_font_size` using absolute CSS units: ",
+      "{paste(css_abs_units, collapse = ', ')}"
+    ),
+    call. = FALSE,
+    immediate. = TRUE
+  )
+}
+
 # Use font_..._google args to overwrite font args
 for (var in f_args[grepl("font_google$", f_args)]) {
   gf <- eval(parse(text = var))

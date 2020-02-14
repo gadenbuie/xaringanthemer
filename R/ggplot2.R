@@ -816,19 +816,33 @@ theme_xaringan_get_value <- function(setting, css_file = NULL) {
   }
 }
 
-web_to_point <- function(x, px_per_em = 16, scale = 1) {
+web_to_point <- function(x, px_per_em = NULL, scale = 1) {
   if (is.null(x)) {
     return(NULL)
   }
+  px_per_em <- px_per_em %||% get_base_font_size()
   if (grepl("pt$", x)) {
     return(as.numeric(sub("pt$", "", x)))
   } else if (grepl("px$", x)) {
     x <- as.numeric(sub("px$", "", x))
     return(x * 0.75)
-  } else if (grepl("em$", x)) {
-    x <- as.numeric(sub("em$", "", x))
+  } else if (grepl("r?em$", x)) {
+    x <- as.numeric(sub("r?em$", "", x))
     return(x * px_per_em * 0.75)
   } else {
     return()
+  }
+}
+
+get_base_font_size <- function() {
+  base_size <- xaringanthemer_env[["base_font_size"]]
+  if (is.null(base_size)) {
+    base_size <- xaringanthemer_env[["text_font_size"]]
+  }
+  if (!grepl("px", base_size)) {
+    # assume 16px base font size
+    16
+  } else {
+    as.numeric(sub("px", "", base_size))
   }
 }
