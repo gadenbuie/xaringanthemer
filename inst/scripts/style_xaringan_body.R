@@ -1,7 +1,10 @@
 # Make sure font names are wrapped in quotes if they have spaces
 f_args <- names(formals(sys.function()))
 for (var in f_args[grepl("font_family$", f_args)]) {
-  eval(parse(text = paste0(var, "<-quote_elements_w_spaces(", var, ")")))
+  var_value <- get(var, inherits = FALSE)
+  if (!is.null(var_value)) {
+    eval(parse(text = paste0(var, "<-quote_elements_w_spaces(", var, ")")))
+  }
   # set an is_google flag default of FALSE that is possibly overwritten later
   eval(parse(text = paste0(sub("font_family$", "font_is_google", var), "<-0")))
 }
@@ -35,7 +38,7 @@ for (var in f_args[grepl("font_google$", f_args)]) {
     text_font_url <- gf$url
   } else {
     for (thing in c("family", "url")) {
-      eval(parse(text = paste0(group, "_font_", thing, " <- gf$", quote_elements_w_spaces(thing))))
+      eval(parse(text = paste0(group, "_font_", thing, " <- quote_elements_w_spaces(gf$", thing, ")")))
     }
   }
   eval(parse(text = paste0(group, "_font_is_google <- 1")))

@@ -52,22 +52,21 @@ style_mono_accent(
   header_background_content_padding_top = "7rem",
   header_background_ignore_classes = c("normal", "inverse", "title", "middle", "bottom"),
   text_slide_number_font_size = "0.9rem",
-  text_font_google = NULL,
-  text_font_family = "'Droid Serif'",
+  text_font_google = google_font("Noto Sans", "400", "400i", "700", "700i"),
+  text_font_family = NULL,
   text_font_weight = "normal",
- 
-    text_font_url = "https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic",
+  text_font_url = NULL,
  
     text_font_family_fallback = "'Palatino Linotype', 'Book Antiqua', Palatino, 'Microsoft YaHei', 'Songti SC'",
   text_font_base = "serif",
-  header_font_google = NULL,
-  header_font_family = "'Yanone Kaffeesatz'",
+  header_font_google = google_font("Cabin", "600", "600i"),
+  header_font_family = NULL,
   header_font_weight = "normal",
-  header_font_url = "https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz",
-  code_font_google = NULL,
-  code_font_family = "'Source Code Pro'",
+  header_font_url = NULL,
+  code_font_google = google_font("Source Code Pro", "400", "700"),
+  code_font_family = NULL,
   code_font_size = "0.9rem",
-  code_font_url = "https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700",
+  code_font_url = NULL,
   code_font_family_fallback = "'Lucida Console', Monaco",
   colors = NULL,
   extra_css = NULL,
@@ -170,33 +169,33 @@ style_mono_accent(
 
 \item{text_slide_number_font_size}{Slide Number Text Font Size. Defaults to 0.9rem. Modifies the \code{.remark-slide-number} class.}
 
-\item{text_font_google}{Use \code{google_font()} to specify body font. Defaults to \code{NULL}. Modifies the \code{body} element.}
+\item{text_font_google}{Use \code{google_font()} to specify body font. Defaults to \code{google_font("Noto Sans", "400", "400i", "700", "700i")}. Modifies the \code{body} element.}
 
-\item{text_font_family}{Body Text Font Family. Defaults to 'Droid Serif'. Modifies the \code{body} element.}
+\item{text_font_family}{Body Text Font Family (xaringan default is \code{'Droid Serif'}). Defaults to \code{NULL}. Modifies the \code{body} element.}
 
 \item{text_font_weight}{Body Text Font Weight. Defaults to normal. Modifies the \code{body} element.}
 
-\item{text_font_url}{Body Text Font URL(s). Defaults to https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic. Modifies the \verb{@import url()} elements.}
+\item{text_font_url}{Body Text Font URL(s). Defaults to \code{NULL}. Modifies the \verb{@import url()} elements.}
 
 \item{text_font_family_fallback}{Body Text Font Fallbacks. Defaults to 'Palatino Linotype', 'Book Antiqua', Palatino, 'Microsoft YaHei', 'Songti SC'. Modifies the \code{body} element.}
 
 \item{text_font_base}{Body Text Base Font (Total Failure Fallback). Defaults to serif. Modifies the \code{body} element.}
 
-\item{header_font_google}{Use \code{google_font()} to specify header font. Defaults to \code{NULL}. Modifies the \code{body} element.}
+\item{header_font_google}{Use \code{google_font()} to specify header font. Defaults to \code{google_font("Cabin", "600", "600i")}. Modifies the \code{body} element.}
 
-\item{header_font_family}{Header Font Family. Defaults to 'Yanone Kaffeesatz'. Modifies the \verb{h1, h2, h3} elements.}
+\item{header_font_family}{Header Font Family (xaringan default is \code{'Yanone Kaffeesatz'}). Defaults to \code{NULL}. Modifies the \verb{h1, h2, h3} elements.}
 
 \item{header_font_weight}{Header Font Weight. Defaults to normal. Modifies the \verb{h1, h2, h3} elements.}
 
-\item{header_font_url}{Header Font URL. Defaults to https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz. Modifies the \verb{@import url} elements.}
+\item{header_font_url}{Header Font URL. Defaults to \code{NULL}. Modifies the \verb{@import url} elements.}
 
-\item{code_font_google}{Use \code{google_font()} to specify code font. Defaults to \code{NULL}. Modifies the \code{body} element.}
+\item{code_font_google}{Use \code{google_font()} to specify code font. Defaults to \code{google_font("Source Code Pro", "400", "700")}. Modifies the \code{body} element.}
 
-\item{code_font_family}{Code Font Family. Defaults to 'Source Code Pro'. Modifies the \verb{.remark-code, .remark-inline-code} classes.}
+\item{code_font_family}{Code Font Family. Defaults to \code{NULL}. Modifies the \verb{.remark-code, .remark-inline-code} classes.}
 
 \item{code_font_size}{Code Text Font Size. Defaults to 0.9rem. Modifies the \code{.remark-inline} class.}
 
-\item{code_font_url}{Code Font URL. Defaults to https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700. Modifies the \verb{@import url} elements.}
+\item{code_font_url}{Code Font URL. Defaults to \code{NULL}. Modifies the \verb{@import url} elements.}
 
 \item{code_font_family_fallback}{Code Font Fallback. Defaults to 'Lucida Console', Monaco. Modifies the \verb{.remark-code, .remark-inline-code} classes.}
 

@@ -12,12 +12,12 @@ test_that("read theme settings from css variables", {
     header_h3_font_size = "1.75rem",
     text_font_family = "'Noto Serif'",
     text_font_is_google = TRUE,
-    header_font_family = "'Yanone Kaffeesatz'",
-    header_font_is_google = FALSE,
+    header_font_family = "Cabin",
+    header_font_is_google = TRUE,
     header_background_color = "#23395b",
     header_background_text_color = "#E9EBEE",
     code_font_family = "'Source Code Pro'",
-    code_font_is_google = FALSE
+    code_font_is_google = TRUE
   )
 
   css_vars <- read_css_vars(testthat::test_path("css/mono_light.css"))
