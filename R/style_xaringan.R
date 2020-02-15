@@ -173,9 +173,8 @@ style_xaringan <- function(
       text_font_weight <- substr(text_font_weight, 1, regexpr(",", text_font_weight)[1] - 1)
       text_font_url <- gf$url
     } else {
-      for (thing in c("family", "url")) {
-        eval(parse(text = paste0(group, "_font_", thing, " <- quote_elements_w_spaces(gf$", thing, ")")))
-      }
+      eval(parse(text = paste0(group, "_font_family <- quote_elements_w_spaces(gf$family)")))
+      eval(parse(text = paste0(group, "_font_url <- gf$url")))
     }
     eval(parse(text = paste0(group, "_font_is_google <- 1")))
   }
