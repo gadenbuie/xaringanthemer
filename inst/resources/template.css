@@ -18,10 +18,10 @@
 {{#xaringanthemer_version}} *  Version: {{xaringanthemer_version}}{{/xaringanthemer_version}}
  *
  * ------------------------------------------------------- */
-@import url({{text_font_url}});
-@import url({{header_font_url}});
-@import url({{code_font_url}});
-{{#extra_font_imports}}{{extra_font_imports}}{{/extra_font_imports}}
+@import url({{{text_font_url}}});
+@import url({{{header_font_url}}});
+@import url({{{code_font_url}}});
+{{#extra_font_imports}}{{{extra_font_imports}}}{{/extra_font_imports}}
 
 :root {
   /* Fonts */
@@ -79,7 +79,7 @@ h1, h2, h3 {
 .remark-slide-content {
   background-color: var(--background-color);
   font-size: {{text_font_size}};{{#background_image}}
-  background-image: url({{background_image}});{{#background_size}}
+  background-image: url({{{background_image}}});{{#background_size}}
   background-size: {{background_size}};{{/background_size}}{{#background_position}}
   background-position: {{background_position}};{{/background_position}}{{/background_image}}
   padding: {{padding}};
@@ -140,7 +140,7 @@ a, a > code {
 }
 .title-slide {
   background-color: var(--title-slide-background-color);{{#title_slide_background_image}}
-  background-image: url("{{title_slide_background_image}}");{{/title_slide_background_image}}{{#title_slide_background_size}}
+  background-image: url("{{{title_slide_background_image}}}");{{/title_slide_background_image}}{{#title_slide_background_size}}
   background-size: {{title_slide_background_size}};{{/title_slide_background_size}}{{#title_slide_background_position}}
   background-position: {{title_slide_background_position}};{{/title_slide_background_position}}
 }

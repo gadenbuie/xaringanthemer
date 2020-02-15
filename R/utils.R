@@ -110,7 +110,8 @@ google_font <- function(family, ..., languages = NULL) {
         base,
         gsub(" ", "+", family),
         if (!is.null(weights)) paste0(":", weights),
-        if (!is.null(languages)) paste0("&subset=", languages)
+        if (!is.null(languages)) paste0("&subset=", languages),
+        "&display=swap"
       )
     ),
     class = "google_font"
