@@ -657,7 +657,7 @@ register_font <- function(
     return(family)
   } else if (family == "Droid Serif") {
     dstmp <- tempfile("droid-serif", fileext = "ttf")
-    download.file(
+    utils::download.file(
       "https://github.com/google/fonts/raw/feb15862e0c66ec0e7531ca4c3ef2607071ea700/apache/droidserif/DroidSerif-Regular.ttf",
       dstmp,
       quiet = TRUE
