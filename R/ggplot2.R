@@ -673,7 +673,7 @@ register_font <- function(
       "Yanone Kaffeesatz"
     )
     font_found <- family %in% sysfonts::font_families()
-    is_google_font <- identical(google, TRUE) || is_default_font
+    is_google_font <- identical(google, TRUE) || (missing(google) && is_default_font)
     if (is_google_font) {
       tryCatch(
         {
