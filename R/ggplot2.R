@@ -101,9 +101,10 @@ theme_xaringan_inverse <- function(
   background_color = NULL,
   accent_color = NULL,
   accent_secondary_color = NULL,
+  css_file = NULL,
   ...
 ) {
-  requires_xaringanthemer_env()
+  requires_xaringanthemer_env(css_file = css_file, try_css = TRUE)
   requires_package(fn = "xaringan_theme")
 
   background_color <- background_color %||% xaringanthemer_env$inverse_background_color

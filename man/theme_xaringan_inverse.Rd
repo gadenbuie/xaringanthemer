@@ -9,6 +9,7 @@ theme_xaringan_inverse(
   background_color = NULL,
   accent_color = NULL,
   accent_secondary_color = NULL,
+  css_file = NULL,
   ...
 )
 }
@@ -23,6 +24,13 @@ theme_xaringan_inverse(
 
 \item{accent_secondary_color}{Color for secondary accents, inherits from
 \code{text_bold_color}}
+
+\item{css_file}{Path to a \pkg{xaringanthemer} CSS file, from which the
+theme variables and values will be inferred. In general, if you use the
+\pkg{xaringathemer} defaults, you will not need to set this. This feature
+lets you create a \pkg{ggplot2} theme for your \pkg{xaringan} slides, even
+if you have only saved your theme CSS file and you aren't creating your
+CSS theme with \pkg{xaringanthemer} in your slides' source file.}
 
 \item{...}{
   Arguments passed on to \code{\link[=theme_xaringan_base]{theme_xaringan_base}}
