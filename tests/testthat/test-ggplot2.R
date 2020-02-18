@@ -309,7 +309,7 @@ describe("web_to_point()", {
   })
 })
 
-describe("scale_xaringan_colour_continuous()", {
+describe("get_theme_accent_color()", {
   it("errors if no color or default available", {
     expect_error(
       with_clean_session(function() {
