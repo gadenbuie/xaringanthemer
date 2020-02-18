@@ -25,15 +25,7 @@ setup_theme_function <- function(
         "{element_description(element)}"
       )
     ),
-    "#' @param colors A named vector of custom colors. The names of the colors",
-    "#'   become CSS variables and classes that can be used within your slides.",
-    "#'   For example, `colors = c(blue = \"#bad4ed\")` adds a CSS variable",
-    "#'   `--blue`, a `.blue` CSS class that applies the color to the text or",
-    "#'   foreground color, and a `.bg-blue` CSS class that applies the color",
-    "#'   to the background.",
-    "#' @template extra_css",
-    "#' @param outfile Customized xaringan CSS output file name, default is \"xaringan-themer.css\"",
-    "#' @family themes",
+    "#' @template theme_params",
     ...,
     glue::glue("{f_name} <- function("),
     as.character(

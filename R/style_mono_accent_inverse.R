@@ -60,15 +60,7 @@
 #' @param code_font_size Code Text Font Size. Defaults to 0.9rem. Modifies the `.remark-inline` class.
 #' @param code_font_url Code Font URL. Defaults to https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700&display=swap. Modifies the `@import url` elements.
 #' @param code_font_family_fallback Code Font Fallback. Defaults to 'Lucida Console', Monaco. Modifies the `.remark-code, .remark-inline-code` classes.
-#' @param colors A named vector of custom colors. The names of the colors
-#'   become CSS variables and classes that can be used within your slides.
-#'   For example, `colors = c(blue = "#bad4ed")` adds a CSS variable
-#'   `--blue`, a `.blue` CSS class that applies the color to the text or
-#'   foreground color, and a `.bg-blue` CSS class that applies the color
-#'   to the background.
-#' @template extra_css
-#' @param outfile Customized xaringan CSS output file name, default is "xaringan-themer.css"
-#' @family themes
+#' @template theme_params
 #' @template style_mono_accent_inverse
 #' @family Monotone themes
 #' @export
