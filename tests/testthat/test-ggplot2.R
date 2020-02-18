@@ -318,3 +318,84 @@ describe("get_theme_accent_color()", {
     )
   })
 })
+
+describe("scale_xaringan_*", {
+  scales <- with_clean_session(function() {
+    xaringanthemer::style_xaringan(
+      background_color = "#00FF00",
+      inverse_background_color = "#FF00FF",
+      header_color = "#FF0000",
+      inverse_header_color = "#0000FF",
+      outfile = NULL
+    )
+    list(
+      discrete = list(
+        fill = xaringanthemer::scale_xaringan_fill_discrete(),
+        fill_inverse = xaringanthemer::scale_xaringan_fill_discrete(inverse = TRUE),
+        fill_reverse = xaringanthemer::scale_xaringan_fill_discrete(direction = -1),
+        color = xaringanthemer::scale_xaringan_color_discrete(),
+        color_inverse = xaringanthemer::scale_xaringan_color_discrete(inverse = TRUE),
+        color_reverse = xaringanthemer::scale_xaringan_color_discrete(direction = -1),
+        colour = xaringanthemer::scale_xaringan_colour_discrete(),
+        colour_inverse = xaringanthemer::scale_xaringan_colour_discrete(inverse = TRUE),
+        colour_reverse = xaringanthemer::scale_xaringan_colour_discrete(direction = -1)
+      ),
+      continuous = list(
+        fill = xaringanthemer::scale_xaringan_fill_continuous(),
+        fill_inverse = xaringanthemer::scale_xaringan_fill_continuous(inverse = TRUE),
+        fill_reverse = xaringanthemer::scale_xaringan_fill_continuous(begin = 1, end = 0),
+        color = xaringanthemer::scale_xaringan_color_continuous(),
+        color_inverse = xaringanthemer::scale_xaringan_color_continuous(inverse = TRUE),
+        color_reverse = xaringanthemer::scale_xaringan_color_continuous(begin = 1, end = 0),
+        colour = xaringanthemer::scale_xaringan_colour_continuous(),
+        colour_inverse = xaringanthemer::scale_xaringan_colour_continuous(inverse = TRUE),
+        colour_reverse = xaringanthemer::scale_xaringan_colour_continuous(begin = 1, end = 0)
+      )
+    )
+  })
+
+  it("discrete scales create ScaleDiscrete ggproto objects", {
+    for (s in scales$discrete) {
+      expect_s3_class(s, "ScaleDiscrete")
+      expect_s3_class(s, "ggproto")
+    }
+  })
+
+  it("discrete scales use accent color as starting point", {
+    expect_equal(scales$discrete$fill$palette(n = 1), "#FF0000")
+    expect_equal(scales$discrete$color$palette(n = 1), "#FF0000")
+    expect_equal(scales$discrete$colour$palette(n = 1), "#FF0000")
+    expect_equal(scales$discrete$fill_reverse$palette(n = 1), "#FF0000")
+    expect_equal(scales$discrete$color_reverse$palette(n = 1), "#FF0000")
+    expect_equal(scales$discrete$colour_reverse$palette(n = 1), "#FF0000")
+  })
+
+  it("discrete scales use inverse accent color as starting point", {
+    expect_equal(scales$discrete$fill_inverse$palette(n = 1), "#0000FF")
+    expect_equal(scales$discrete$color_inverse$palette(n = 1), "#0000FF")
+    expect_equal(scales$discrete$colour_inverse$palette(n = 1), "#0000FF")
+  })
+
+  it("continuous scales create ScaleContinuous ggproto objects", {
+    for (s in scales$continuous) {
+      expect_s3_class(s, "ScaleContinuous")
+      expect_s3_class(s, "ggproto")
+    }
+  })
+
+  it("continuous scales use accent color as starting point", {
+    expect_equal(scales$continuous$fill$palette(x = 1), "#FF0000")
+    expect_equal(scales$continuous$color$palette(x = 1), "#FF0000")
+    expect_equal(scales$continuous$colour$palette(x = 1), "#FF0000")
+    expect_equal(scales$continuous$fill_reverse$palette(x = 1), "#FF0000")
+    expect_equal(scales$continuous$color_reverse$palette(x = 1), "#FF0000")
+    expect_equal(scales$continuous$colour_reverse$palette(x = 1), "#FF0000")
+  })
+
+  it("continuous scales use inverse accent color as starting point", {
+    expect_equal(scales$continuous$fill_inverse$palette(x = 1), "#0000FF")
+    expect_equal(scales$continuous$color_inverse$palette(x = 1), "#0000FF")
+    expect_equal(scales$continuous$colour_inverse$palette(x = 1), "#0000FF")
+  })
+
+})
