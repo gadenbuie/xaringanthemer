@@ -24,3 +24,18 @@ describe("prepare_colors()", {
     expect_equal(prepared[[1]]$value, colors[[1]])
   })
 })
+
+
+describe("full_length_hex()", {
+  it("makes 3-length hex to 6-length", {
+    expect_equal(full_length_hex("#123"), "#112233")
+  })
+
+  it("keeps length 6 hex", {
+    expect_equal(full_length_hex("#123456"), "#123456")
+  })
+
+  it("errors if not a hex color", {
+    expect_error(full_length_hex("123abc"))
+  })
+})

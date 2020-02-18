@@ -213,6 +213,9 @@ theme_xaringan_base <- function(
   title_font_use_google = NULL,
   title_font_size = NULL
 ) {
+  text_color <- full_length_hex(text_color)
+  background_color <- full_length_hex(background_color)
+
   blend <- color_blender(text_color, background_color)
 
   text_font_size <- text_font_size %||% web_to_point(xaringanthemer_env$text_font_size, scale = 1.25) %||% 11
@@ -235,6 +238,8 @@ theme_xaringan_base <- function(
   if (set_ggplot_defaults) {
     accent_color <- accent_color %||% xaringanthemer_env$header_color %||% text_color
     accent_secondary_color <- accent_secondary_color %||% xaringanthemer_env$text_bold_color %||% accent_color
+    accent_color <- full_length_hex(accent_color)
+    accent_secondary_color <- full_length_hex(accent_secondary_color)
     theme_xaringan_set_defaults(text_color, background_color, accent_color, accent_secondary_color)
   }
 
@@ -307,45 +312,45 @@ theme_xaringan_set_defaults <- function(
   blend <- color_blender(text_color, background_color)
 
   xaringan_theme_defaults <- list(
-    "line"       = list(color  = text_color),
-    "vline"      = list(color  = accent_secondary_color),
-    "hline"      = list(color  = accent_secondary_color),
-    "abline"     = list(color  = accent_secondary_color),
-    "segment"    = list(color  = text_color),
-    "bar"        = list(fill   = accent_color),
-    "col"        = list(fill   = accent_color),
-    "boxplot"    = list(color  = text_color),
-    "contour"    = list(color  = text_color),
-    "density"    = list(color  = text_color,
-                        fill   = text_color,
-                        alpha  = 0.1),
-    "dotplot"    = list(color  = accent_color),
-    "errorbarh"  = list(color  = text_color),
-    "crossbar"   = list(color  = text_color),
-    "errorbar"   = list(color  = text_color),
-    "linerange"  = list(color  = text_color),
-    "pointrange" = list(color  = text_color),
-    "map"        = list(color  = text_color),
-    "path"       = list(color  = text_color),
-    "line"       = list(color  = text_color),
-    "step"       = list(color  = text_color),
-    "point"      = list(color  = accent_color),
-    "polygon"    = list(color  = accent_color,
-                        fill   = accent_color),
-    "quantile"   = list(color  = text_color),
-    "rug"        = list(color  = blend(0.5)),
-    "segment"    = list(color  = text_color),
-    "smooth"     = list(fill   = blend(0.75),
-                        color  = accent_secondary_color),
-    "spoke"      = list(color  = text_color),
-    "label"      = list(color  = text_color,
-                        family = text_font %||% get_theme_font("text")),
-    "text"       = list(color  = text_color,
-                        family = text_font %||% get_theme_font("text")),
-    "rect"       = list(fill   = text_color),
-    "tile"       = list(fill   = text_color),
-    "violin"     = list(fill   = text_color),
-    "sf"         = list(color  = text_color)
+    "line"       = list(color = text_color),
+    "vline"      = list(color = accent_secondary_color),
+    "hline"      = list(color = accent_secondary_color),
+    "abline"     = list(color = accent_secondary_color),
+    "segment"    = list(color = text_color),
+    "bar"        = list(fill  = accent_color),
+    "col"        = list(fill  = accent_color),
+    "boxplot"    = list(color = text_color),
+    "contour"    = list(color = text_color),
+    "density"    = list(color = text_color,
+                        fill  = text_color,
+                        alpha = 0.1),
+    "dotplot"    = list(color = accent_color),
+    "errorbarh"  = list(color = text_color),
+    "crossbar"   = list(color = text_color),
+    "errorbar"   = list(color = text_color),
+    "linerange"  = list(color = text_color),
+    "pointrange" = list(color = text_color),
+    "map"        = list(color = text_color),
+    "path"       = list(color = text_color),
+    "line"       = list(color = text_color),
+    "step"       = list(color = text_color),
+    "point"      = list(color = accent_color),
+    "polygon"    = list(color = accent_color,
+                        fill  = accent_color),
+    "quantile"   = list(color = text_color),
+    "rug"        = list(color = blend(0.5)),
+    "segment"    = list(color = text_color),
+    "smooth"     = list(fill  = blend(0.75),
+                        color = accent_secondary_color),
+    "spoke"      = list(color = text_color),
+    "label"      = list(color = text_color,
+                        family= text_font %||% get_theme_font("text")),
+    "text"       = list(color = text_color,
+                        family= text_font %||% get_theme_font("text")),
+    "rect"       = list(fill  = text_color),
+    "tile"       = list(fill  = text_color),
+    "violin"     = list(fill  = text_color),
+    "sf"         = list(color = text_color)
   )
 
   geom_names <- purrr::set_names(names(xaringan_theme_defaults))

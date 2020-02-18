@@ -21,3 +21,18 @@ prepare_colors <- function(colors = NULL) {
 
   whisker::iteratelist(colors, "color_name")
 }
+
+full_length_hex <- function(x) {
+  if (!grepl("^#", x)) {
+    stop(paste0('"', x, '" is not a hexadecimal color'))
+  }
+  x <- sub("^#", "", x)
+  if (nchar(x) == 3) {
+    x <- strsplit(x, character(0))[[1]]
+    x <- rep(x, each = 2)
+    x <- paste(x, collapse = "")
+  } else if (nchar(x) != 6) {
+    stop(paste0('"', x, '" is not a hexadecimal color'))
+  }
+  paste0("#", x)
+}
