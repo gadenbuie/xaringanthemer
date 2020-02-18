@@ -27,8 +27,8 @@
   /* Fonts */
   --text-font-family: 'Noto Serif';
   --text-font-is-google: 1;
-  --text-font-family-fallback: 'Palatino Linotype', 'Book Antiqua', Palatino, 'Microsoft YaHei', 'Songti SC';
-  --text-font-base: serif;
+  --text-font-family-fallback: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial;
+  --text-font-base: sans-serif;
   --header-font-family: Cabin;
   --header-font-is-google: 1;
   --code-font-family: 'Source Code Pro';
@@ -89,7 +89,7 @@ h1, h2, h3 {
   font-size: var(--header-h3-font-size);
 }
 .remark-code, .remark-inline-code {
-  font-family: var(--code-font-family), 'Lucida Console', Monaco, monospace;
+  font-family: var(--code-font-family), Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
 }
 .remark-code {
   font-size: var(--code-font-size);

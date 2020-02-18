@@ -55,8 +55,8 @@ style_solarized_light(
  
     text_font_url = "https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&display=swap",
  
-    text_font_family_fallback = "'Palatino Linotype', 'Book Antiqua', Palatino, 'Microsoft YaHei', 'Songti SC'",
-  text_font_base = "serif",
+    text_font_family_fallback = "-apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial",
+  text_font_base = "sans-serif",
   header_font_google = NULL,
   header_font_family = "Cabin",
   header_font_weight = "600",
@@ -67,7 +67,7 @@ style_solarized_light(
   code_font_size = "0.9rem",
  
     code_font_url = "https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700&display=swap",
-  code_font_family_fallback = "'Lucida Console', Monaco",
+  code_font_family_fallback = "Menlo, Consolas, Monaco, Liberation Mono, Lucida Console",
   colors = NULL,
   extra_css = NULL,
   extra_fonts = NULL,
@@ -171,9 +171,9 @@ style_solarized_light(
 
 \item{text_font_url}{Body Text Font URL(s). Defaults to https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&display=swap. Modifies the \verb{@import url()} elements.}
 
-\item{text_font_family_fallback}{Body Text Font Fallbacks. Defaults to 'Palatino Linotype', 'Book Antiqua', Palatino, 'Microsoft YaHei', 'Songti SC'. Modifies the \code{body} element.}
+\item{text_font_family_fallback}{Body Text Font Fallbacks. Defaults to -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial. Modifies the \code{body} element.}
 
-\item{text_font_base}{Body Text Base Font (Total Failure Fallback). Defaults to serif. Modifies the \code{body} element.}
+\item{text_font_base}{Body Text Base Font (Total Failure Fallback). Defaults to sans-serif. Modifies the \code{body} element.}
 
 \item{header_font_google}{Use \code{google_font()} to specify header font. Defaults to \code{NULL}. Modifies the \code{body} element.}
 
@@ -191,7 +191,7 @@ style_solarized_light(
 
 \item{code_font_url}{Code Font URL. Defaults to https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700&display=swap. Modifies the \verb{@import url} elements.}
 
-\item{code_font_family_fallback}{Code Font Fallback. Defaults to 'Lucida Console', Monaco. Modifies the \verb{.remark-code, .remark-inline-code} classes.}
+\item{code_font_family_fallback}{Code Font Fallback. Defaults to Menlo, Consolas, Monaco, Liberation Mono, Lucida Console. Modifies the \verb{.remark-code, .remark-inline-code} classes.}
 
 \item{colors}{A named vector of custom colors. The names of the colors
 become CSS variables and classes that can be used within your slides.

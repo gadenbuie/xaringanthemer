@@ -49,8 +49,8 @@ template_variables <- tibble::tribble(
   , "text_font_family", "Noto Sans", "body", "Body Text Font Family (xaringan default is `'Droid Serif'`)"
   , "text_font_weight", "normal", "body", "Body Text Font Weight"
   , "text_font_url", "https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&display=swap", "@import url()", "Body Text Font URL(s)"
-  , "text_font_family_fallback", "'Palatino Linotype', 'Book Antiqua', Palatino, 'Microsoft YaHei', 'Songti SC'", "body", "Body Text Font Fallbacks"
-  , "text_font_base", "serif", "body", "Body Text Base Font (Total Failure Fallback)"
+  , "text_font_family_fallback", "-apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial", "body", "Body Text Font Fallbacks"
+  , "text_font_base", "sans-serif", "body", "Body Text Base Font (Total Failure Fallback)"
   , "header_font_google", NULL, "body", "Use `google_font()` to specify header font"
   , "header_font_family", "Cabin", "h1, h2, h3", "Header Font Family (xaringan default is `'Yanone Kaffeesatz'`)"
   , "header_font_weight", "600", "h1, h2, h3", "Header Font Weight"
@@ -59,7 +59,7 @@ template_variables <- tibble::tribble(
   , "code_font_family", "Source Code Pro", ".remark-code, .remark-inline-code", "Code Font Family"
   , "code_font_size", "0.9rem", ".remark-inline", "Code Text Font Size"
   , "code_font_url", "https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700&display=swap", "@import url", "Code Font URL"
-  , "code_font_family_fallback", "'Lucida Console', Monaco", ".remark-code, .remark-inline-code", "Code Font Fallback"
+  , "code_font_family_fallback", "Menlo, Consolas, Monaco, Liberation Mono, Lucida Console", ".remark-code, .remark-inline-code", "Code Font Fallback"
 )
 
 set_default <- function(tv, ...) {
