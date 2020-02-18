@@ -24,6 +24,7 @@ Imports:
     utils,
     whisker
 Suggests: 
+    callr,
     ggplot2,
     here,
     knitr,
@@ -32,8 +33,7 @@ Suggests:
     showtext,
     sysfonts,
     testthat (>= 2.1.0),
-    xaringan,
-    vdiffr
+    xaringan
 VignetteBuilder: 
     knitr
 Encoding: UTF-8

@@ -43,6 +43,26 @@ for (var in f_args[grepl("font_google$", f_args)]) {
   eval(parse(text = paste0(group, "_font_is_google <- 1")))
 }
 
+is_default <- function(type, suffix, reference = style_xaringan) {
+  var <- paste0(type, "_", suffix)
+  default_value <- formals(reference)[[var]]
+  if (suffix == "font_family") {
+    default_value <- quote_elements_w_spaces(default_value)
+  }
+
+  get(var, envir = parent.frame(2), inherits = FALSE) == default_value
+}
+
+# the defaults are google fonts
+for (var in c("text", "header", "code")) {
+  suffixes <- c("font_family", "font_weight", "font_url")
+  if (var == "code") suffixes <- setdiff(suffixes, "font_weight")
+  var_is_google <- all(vapply(suffixes, is_default, logical(1), type = var))
+  if (var_is_google) {
+    eval(parse(text = paste0(var, "_font_is_google <- 1")))
+  }
+}
+
 extra_font_imports <- if (is.null(extra_fonts)) "" else list2fonts(extra_fonts)
 extra_font_imports <- paste(extra_font_imports, collapse = "\n")
 

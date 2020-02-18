@@ -69,7 +69,7 @@ body {
 }
 h1, h2, h3 {
   font-family: var(--header-font-family);
-  font-weight: normal;
+  font-weight: 600;
   color: var(--header-color);
 }
 .remark-slide-content {
