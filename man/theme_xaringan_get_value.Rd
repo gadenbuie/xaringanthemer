@@ -32,6 +32,7 @@ Style settings used by xaringanthemer include:
 \item \code{code_font_family}
 \item \code{code_font_family_fallback}
 \item \code{code_font_google}
+\item \code{code_font_is_google}
 \item \code{code_font_size}
 \item \code{code_font_url}
 \item \code{code_highlight_color}
@@ -52,6 +53,7 @@ Style settings used by xaringanthemer include:
 \item \code{header_color}
 \item \code{header_font_family}
 \item \code{header_font_google}
+\item \code{hedaer_font_is_google}
 \item \code{header_font_url}
 \item \code{header_font_weight}
 \item \code{header_h1_font_size}
@@ -74,6 +76,7 @@ Style settings used by xaringanthemer include:
 \item \code{text_font_family}
 \item \code{text_font_family_fallback}
 \item \code{text_font_google}
+\item \code{text_font_is_google}
 \item \code{text_font_size}
 \item \code{text_font_url}
 \item \code{text_font_weight}

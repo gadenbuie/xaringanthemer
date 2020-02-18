@@ -757,6 +757,7 @@ requires_xaringanthemer_env <- function(css_file = NULL, try_css = TRUE) {
 #' - `code_font_family`
 #' - `code_font_family_fallback`
 #' - `code_font_google`
+#' - `code_font_is_google`
 #' - `code_font_size`
 #' - `code_font_url`
 #' - `code_highlight_color`
@@ -777,6 +778,7 @@ requires_xaringanthemer_env <- function(css_file = NULL, try_css = TRUE) {
 #' - `header_color`
 #' - `header_font_family`
 #' - `header_font_google`
+#' - `hedaer_font_is_google`
 #' - `header_font_url`
 #' - `header_font_weight`
 #' - `header_h1_font_size`
@@ -799,6 +801,7 @@ requires_xaringanthemer_env <- function(css_file = NULL, try_css = TRUE) {
 #' - `text_font_family`
 #' - `text_font_family_fallback`
 #' - `text_font_google`
+#' - `text_font_is_google`
 #' - `text_font_size`
 #' - `text_font_url`
 #' - `text_font_weight`
@@ -816,13 +819,17 @@ requires_xaringanthemer_env <- function(css_file = NULL, try_css = TRUE) {
 theme_xaringan_get_value <- function(setting, css_file = NULL) {
   requires_xaringanthemer_env(css_file = css_file)
   if (length(setting) > 1) {
-    xaringanthemer_env[setting]
-  } else {
-    xaringanthemer_env[[setting]]
+    ret <- list()
+    for (var in setting) {
+      ret[[var]] <- xaringanthemer_env[[var]]
+    }
+    return(ret)
   }
+
+  xaringanthemer_env[[setting]]
 }
 
-web_to_point <- function(x, px_per_em = NULL, scale = 1) {
+web_to_point <- function(x, px_per_em = NULL, scale = 0.75) {
   if (is.null(x)) {
     return(NULL)
   }
@@ -831,20 +838,19 @@ web_to_point <- function(x, px_per_em = NULL, scale = 1) {
     return(as.numeric(sub("pt$", "", x)))
   } else if (grepl("px$", x)) {
     x <- as.numeric(sub("px$", "", x))
-    return(x * 0.75)
+    return(x * scale)
   } else if (grepl("r?em$", x)) {
     x <- as.numeric(sub("r?em$", "", x))
-    return(x * px_per_em * 0.75)
+    return(x * px_per_em * scale)
   } else {
     return()
   }
 }
 
 get_base_font_size <- function() {
-  base_size <- xaringanthemer_env[["base_font_size"]]
-  if (is.null(base_size)) {
-    base_size <- xaringanthemer_env[["text_font_size"]]
-  }
+  base_size <- xaringanthemer_env[["base_font_size"]] %||%
+    xaringanthemer_env[["text_font_size"]]
+
   if (!grepl("px", base_size)) {
     # assume 16px base font size
     16

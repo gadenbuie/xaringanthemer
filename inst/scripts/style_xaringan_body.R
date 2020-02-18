@@ -84,7 +84,15 @@ title_slide_background_size <- title_slide_background_size %||% (
 )
 table_row_even_background_color <- table_row_even_background_color %||% background_color
 
-lapply(names(formals()), function(n) assign(n, get(n), envir = xaringanthemer_env))
+# stash theme settings in package env
+lapply(f_args, function(n) assign(n, get(n), envir = xaringanthemer_env))
+for (font_is_google in paste0(c("text", "code", "header"), "_font_is_google")) {
+  assign(
+    font_is_google,
+    get(font_is_google, inherits = FALSE) == 1,
+    envir = xaringanthemer_env
+  )
+}
 
 xaringanthemer_version <- utils::packageVersion("xaringanthemer")
 
