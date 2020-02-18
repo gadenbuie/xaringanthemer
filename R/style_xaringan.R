@@ -255,7 +255,12 @@ style_xaringan <- function(
   template <- readLines(tf, warn = FALSE)
   template <- paste(template, collapse = "\n")
   x <- whisker::whisker.render(template)
+  if (!is.null(extra_css)) {
+    x <- c(x, style_extra_css(extra_css, outfile = NULL))
+  }
+  if (is.null(outfile)) {
+    return(x)
+  }
   writeLines(x, con = outfile)
-  if (!is.null(extra_css)) style_extra_css(extra_css, outfile)
-  outfile
+  invisible(outfile)
 }

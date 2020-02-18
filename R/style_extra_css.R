@@ -31,9 +31,10 @@
 #' @inheritParams style_xaringan
 #' @export
 style_extra_css <- function(css, outfile = "xaringan-themer.css", append = TRUE) {
+  x <- paste("\n\n/* Extra CSS */", list2css(css), sep = "\n")
+  if (is.null(outfile)) return(x)
   cat(
-    "\n\n/* Extra CSS */",
-    list2css(css),
+    x,
     file = outfile,
     append = TRUE,
     sep = "\n"
