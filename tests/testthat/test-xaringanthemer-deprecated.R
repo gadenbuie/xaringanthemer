@@ -1,0 +1,13 @@
+test_that("deprecation warnings", {
+  expect_warning(write_xaringan_theme(outfile = NULL))
+  expect_warning(write_extra_css(list(.test = list(prop = 'value')), outfile = NULL))
+  expect_warning(mono_light(outfile = NULL))
+  expect_warning(mono_dark(outfile = NULL))
+  expect_warning(mono_accent(outfile = NULL))
+  expect_warning(mono_accent_inverse(outfile = NULL))
+  expect_warning(duo(outfile = NULL))
+  expect_warning(duo_accent(outfile = NULL))
+  expect_warning(duo_accent_inverse(outfile = NULL))
+  expect_warning(solarized_light(outfile = NULL))
+  expect_warning(solarized_dark(outfile = NULL))
+})

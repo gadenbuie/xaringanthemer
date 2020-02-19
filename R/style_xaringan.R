@@ -35,7 +35,7 @@
 #' @param header_h1_font_size h1 Header Text Font Size. Defaults to 2.75rem. Modifies the `.remark-slide-content h1` class.
 #' @param header_h2_font_size h2 Header Text Font Size. Defaults to 2.25rem. Modifies the `.remark-slide-content h2` class.
 #' @param header_h3_font_size h3 Header Text Font Size. Defaults to 1.75rem. Modifies the `.remark-slide-content h3` class.
-#' @param header_background_auto Add background under slide title automatically for h1 header elements. If not enabled, use `class: header_background` to enable. Defaults to `FALSE`. 
+#' @param header_background_auto Add background under slide title automatically for h1 header elements. If not enabled, use `class: header_background` to enable. Defaults to `FALSE`.
 #' @param header_background_color Background Color for h1 Header with Background. Defaults to `header_color`. Modifies the `.remark-slide-content h1` class.
 #' @param header_background_text_color Text Color for h1 Header with Background. Defaults to `background_color`. Modifies the `.remark-slide-content h1` class.
 #' @param header_background_padding Padding for h1 Header with Background. Defaults to `NULL`. Modifies the `.remark-slide-content h1` class.
@@ -136,7 +136,7 @@ style_xaringan <- function(
     # set an is_google flag default of FALSE that is possibly overwritten later
     eval(parse(text = paste0(sub("font_family$", "font_is_google", var), "<-0")))
   }
-  
+
   # Warn if base_font_size isn't absolute
   css_abs_units <- c("cm", "mm", "Q", "in", "pc", "pt", "px")
   if (!grepl(paste(tolower(css_abs_units), collapse = "|"), tolower(base_font_size))) {
@@ -150,7 +150,7 @@ style_xaringan <- function(
       immediate. = TRUE
     )
   }
-  
+
   # Use font_..._google args to overwrite font args
   for (var in f_args[grepl("font_google$", f_args)]) {
     gf <- eval(parse(text = var))
@@ -170,17 +170,17 @@ style_xaringan <- function(
     }
     eval(parse(text = paste0(group, "_font_is_google <- 1")))
   }
-  
+
   is_default <- function(type, suffix, reference = style_xaringan) {
     var <- paste0(type, "_", suffix)
     default_value <- formals(reference)[[var]]
     if (suffix == "font_family") {
       default_value <- quote_elements_w_spaces(default_value)
     }
-  
+
     get(var, envir = parent.frame(2), inherits = FALSE) == default_value
   }
-  
+
   # the defaults are google fonts
   for (var in c("text", "header", "code")) {
     suffixes <- c("font_family", "font_weight", "font_url")
@@ -190,10 +190,10 @@ style_xaringan <- function(
       eval(parse(text = paste0(var, "_font_is_google <- 1")))
     }
   }
-  
+
   extra_font_imports <- if (is.null(extra_fonts)) "" else list2fonts(extra_fonts)
   extra_font_imports <- paste(extra_font_imports, collapse = "\n")
-  
+
   # convert NA arguments to NULL
   for (var in f_args) {
     val <- eval(parse(text = var))
@@ -202,7 +202,7 @@ style_xaringan <- function(
     is_na <- length(val) == 0
     if (is_na) assign(var, NULL)
   }
-  
+
   # prepare variables for template
   body_font_family <- paste(c(text_font_family, text_font_family_fallback, text_font_base), collapse = ", ")
   background_size_fallback <- if (is.null(background_position)) "cover" else "100%"
@@ -211,7 +211,7 @@ style_xaringan <- function(
     title_slide_background_image %??% "cover"
   )
   table_row_even_background_color <- table_row_even_background_color %||% background_color
-  
+
   # stash theme settings in package env
   lapply(f_args, function(n) assign(n, get(n), envir = xaringanthemer_env))
   for (font_is_google in paste0(c("text", "code", "header"), "_font_is_google")) {
@@ -221,9 +221,9 @@ style_xaringan <- function(
       envir = xaringanthemer_env
     )
   }
-  
+
   xaringanthemer_version <- utils::packageVersion("xaringanthemer")
-  
+
   # prepare header background object
   needs_leading_dot <- !grepl("^\\.", header_background_ignore_classes)
   header_background_ignore_classes[needs_leading_dot] <- paste0(
@@ -248,9 +248,9 @@ style_xaringan <- function(
     content_padding_top = header_background_content_padding_top,
     ignore = header_background_ignore_classes
   )
-  
+
   colors <- prepare_colors(colors)
-  
+
   tf <- system.file("resources", "template.css", package = "xaringanthemer")
   template <- readLines(tf, warn = FALSE)
   template <- paste(template, collapse = "\n")

@@ -24,7 +24,7 @@ write_xaringan_theme <- function(...) {
 #' @rdname xaringanthemer-deprecated
 write_extra_css <- function(...) {
   .Deprecated(msg = "write_extra_css() was renamed. Please use `style_extra_css()` instead.")
-  style_xaringan(...)
+  style_extra_css(...)
 }
 
 
