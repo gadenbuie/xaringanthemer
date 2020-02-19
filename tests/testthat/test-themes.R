@@ -34,6 +34,11 @@ test_that("style_mono_dark()", test_theme_file("mono_dark"))
 test_that("style_mono_light()", test_theme_file("mono_light"))
 test_that("style_solarized_dark()", test_theme_file("solarized_dark"))
 test_that("style_solarized_light()", test_theme_file("solarized_light"))
+test_that("google fonts in theme", test_theme_file(
+  "google_fonts",
+  header_font_google = google_font("IBM Plex Serif", "700"),
+  code_font_google = google_font("IBM Plex Mono")
+))
 
 test_that("header_background_auto = TRUE", {
   test_theme_file("duo", "duo-header_bg.css", header_background_auto = TRUE)
