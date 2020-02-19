@@ -13,7 +13,7 @@ describe("prepare_colors()", {
 
   it("requires valid CSS names", {
     expect_error(prepare_colors(c("light blue" = "#88f")))
-    expect_error(preapre_colors(c("light/blue" = "#88f")))
+    expect_error(prepare_colors(c("light/blue" = "#88f")))
   })
 
   it("returns list with color_name and value for each color", {
@@ -37,5 +37,7 @@ describe("full_length_hex()", {
 
   it("errors if not a hex color", {
     expect_error(full_length_hex("123abc"))
+    expect_error(full_length_hex("#1234567"))
+    expect_error(full_length_hex("#00000Z"))
   })
 })

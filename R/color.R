@@ -23,7 +23,7 @@ prepare_colors <- function(colors = NULL) {
 }
 
 full_length_hex <- function(x) {
-  if (!grepl("^#", x)) {
+  if (!grepl("^#", x) || grepl("[^#0-9a-fA-F]", x)) {
     stop(paste0('"', x, '" is not a hexadecimal color'))
   }
   x <- sub("^#", "", x)
