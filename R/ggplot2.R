@@ -373,7 +373,7 @@ theme_xaringan_set_defaults <- function(
 #' @export
 theme_xaringan_restore_defaults <- function() {
   requires_package("ggplot2")
-  requires_xaringanthemer_env()
+  requires_xaringanthemer_env(try_css = FALSE, requires_theme = FALSE)
 
   if (is.null(xaringanthemer_env$old_ggplot_defaults)) {
     return(invisible())
@@ -726,9 +726,15 @@ requires_package <- function(pkg = "ggplot2", fn = "", required = TRUE) {
   invisible(TRUE)
 }
 
-requires_xaringanthemer_env <- function(css_file = NULL, try_css = TRUE) {
+requires_xaringanthemer_env <- function(
+  css_file = NULL,
+  try_css = TRUE,
+  requires_theme = TRUE
+) {
   reload <- !is.null(css_file) && isTRUE(try_css)
-  if (reload || !exists("xaringanthemer_env") || is.null(xaringanthemer_env$header_color)) {
+  pkg_env_exists <- exists("xaringanthemer_env")
+  missing_theme <- requires_theme && pkg_env_exists && is.null(xaringanthemer_env$header_color)
+  if (reload || !pkg_env_exists || missing_theme) {
     if (try_css) {
       css_vars <- read_css_vars(css_file)
       for (css_var in names(css_vars)) {
