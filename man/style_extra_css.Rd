@@ -4,7 +4,12 @@
 \alias{style_extra_css}
 \title{Add Extra CSS Styles}
 \usage{
-style_extra_css(css, outfile = "xaringan-themer.css", append = TRUE)
+style_extra_css(
+  css,
+  outfile = "xaringan-themer.css",
+  append = TRUE,
+  heading = "Extra CSS"
+)
 }
 \arguments{
 \item{css}{A named list of CSS definitions each containing a named list
@@ -15,6 +20,8 @@ of CSS property-value pairs, i.e.
 
 \item{append}{If \code{TRUE} output will be appended to \code{outfile}; otherwise,
 it will overwrite the contents of \code{outfile}.}
+
+\item{heading}{Heading added above extra CSS. Use \code{NULL} to disable.}
 }
 \description{
 Adds css elements to target \code{outfile}, typically a xaringanthemer css file.
