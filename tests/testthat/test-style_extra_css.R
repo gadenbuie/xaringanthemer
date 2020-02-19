@@ -140,4 +140,24 @@ describe("list2css()", {
     )
     expect_error(list2css(css))
   })
+
+  it("errors if css contains unnamed elements", {
+    expect_error(list2css(list(list(color = "#bad"))))
+    expect_error(
+      list2css(list(.a = list(color = "#bad"), list(`background-color` = "#bad"))),
+      "elements.+must be named.+2 is"
+    )
+    expect_error(
+      list2css(list(.a = list(color = "#bad"), list(`background-color` = "#bad"), list(`border-color` = "#bad"))),
+      "elements.+must be named.+2, 3 are"
+    )
+    expect_error(
+      list2css(list(body = list("#bad"))),
+      "elements.+must be named.+body.+has"
+    )
+    expect_error(
+      list2css(list(body = list("#bad"), thing = list("#bad"))),
+      "elements.+must be named.+body, thing.+have"
+    )
+  })
 })
