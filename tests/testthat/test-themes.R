@@ -12,8 +12,7 @@ test_theme_file <- function(theme = "duo", theme_file = paste0(theme, ".css"), .
     "mono_light" = style_mono_light,
     "solarized_dark" = style_solarized_dark,
     "solarized_light" = style_solarized_light,
-    "xaringan" = style_xaringan,
-    stop("Unknown theme")
+    style_xaringan
   )
 
   tmpfile <- tempfile()
@@ -46,11 +45,12 @@ test_that("style colors are added to themes", {
   test_theme_file("xaringan", colors = c('light-blue' = "#bad4ed"))
 })
 
-test_that("setting individual font overrides google font", {
+test_that("setting google font overrides individual font", {
   theme_vars <- with_clean_session(function() {
     xf <- xaringanthemer::style_xaringan(
       text_font_family = "Damogran",
-      header_font_family = "Magrathea"
+      header_font_family = "Magrathea",
+      code_font_google = xaringanthemer::google_font("IBM Plex Mono")
     )
     xaringanthemer:::read_css_vars(xf)
   })
@@ -59,6 +59,8 @@ test_that("setting individual font overrides google font", {
   expect_false(theme_vars$text_font_is_google)
   expect_equal(theme_vars$header_font_family, "Magrathea")
   expect_false(theme_vars$header_font_is_google)
+  expect_equal(theme_vars$code_font_family, "'IBM Plex Mono'")
+  expect_true(theme_vars$code_font_is_google)
 })
 
 test_that("default fonts are correctly identified as google font", {
