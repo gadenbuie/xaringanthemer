@@ -43,7 +43,7 @@ style_duo_accent_inverse(
   table_border_color = "#666",
   table_row_border_color = "#ddd",
   table_row_even_background_color = darken_color(choose_dark_or_light(primary_color,
-    secondary_color, primary_color), 0.3),
+    secondary_color, primary_color), 0.2),
   base_font_size = "20px",
   text_font_size = "1rem",
   header_h1_font_size = "2.75rem",
@@ -152,7 +152,7 @@ style_duo_accent_inverse(
 
 \item{table_row_border_color}{Table row inner bottom border. Defaults to #ddd. Modifies the \verb{table thead th: border-bottom} elements.}
 
-\item{table_row_even_background_color}{Table Even Row Background Color. Defaults to \code{darken_color(choose_dark_or_light(primary_color, secondary_color, primary_color), 0.3)}. Modifies the \verb{thead, tfoot, tr:nth-child(even)} elements.}
+\item{table_row_even_background_color}{Table Even Row Background Color. Defaults to \code{darken_color(choose_dark_or_light(primary_color, secondary_color, primary_color), 0.2)}. Modifies the \verb{thead, tfoot, tr:nth-child(even)} elements.}
 
 \item{base_font_size}{Base Font Size for All Slide Elements (must be \code{px}). Defaults to 20px. Modifies the \code{html} element.}
 

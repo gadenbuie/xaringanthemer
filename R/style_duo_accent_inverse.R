@@ -33,7 +33,7 @@
 #' @param blockquote_left_border_color Blockquote Left Border Color. Defaults to `apply_alpha(secondary_color, 0.5)`. Modifies the `blockquote` element.
 #' @param table_border_color Table top/bottom border. Defaults to #666. Modifies the `table: border-top, border-bottom` elements.
 #' @param table_row_border_color Table row inner bottom border. Defaults to #ddd. Modifies the `table thead th: border-bottom` elements.
-#' @param table_row_even_background_color Table Even Row Background Color. Defaults to `darken_color(choose_dark_or_light(primary_color, secondary_color, primary_color), 0.3)`. Modifies the `thead, tfoot, tr:nth-child(even)` elements.
+#' @param table_row_even_background_color Table Even Row Background Color. Defaults to `darken_color(choose_dark_or_light(primary_color, secondary_color, primary_color), 0.2)`. Modifies the `thead, tfoot, tr:nth-child(even)` elements.
 #' @param base_font_size Base Font Size for All Slide Elements (must be `px`). Defaults to 20px. Modifies the `html` element.
 #' @param text_font_size Slide Body Text Font Size. Defaults to 1rem. Modifies the `.remark-slide-content` class.
 #' @param header_h1_font_size h1 Header Text Font Size. Defaults to 2.75rem. Modifies the `.remark-slide-content h1` class.
@@ -101,7 +101,7 @@ style_duo_accent_inverse <- function(
   blockquote_left_border_color = apply_alpha(secondary_color, 0.5),
   table_border_color = "#666",
   table_row_border_color = "#ddd",
-  table_row_even_background_color = darken_color(choose_dark_or_light(primary_color, secondary_color, primary_color), 0.3),
+  table_row_even_background_color = darken_color(choose_dark_or_light(primary_color, secondary_color, primary_color), 0.2),
   base_font_size = "20px",
   text_font_size = "1rem",
   header_h1_font_size = "2.75rem",
