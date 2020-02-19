@@ -2,7 +2,8 @@
 #' @description Produces a linear blend of the color with white or black.
 #' @param color_hex A character string representing a hex color
 #' @param strength The "strength" of the blend with white or black,
-#'   0 low to 1 high.
+#'   where 0 is entirely the original color and 1 is entirely white
+#'   (`lighten_color()`) or black (`darken_color()`).
 #' @name lighten_darken_color
 NULL
 
