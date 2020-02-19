@@ -180,6 +180,58 @@ describe("theme_xaringan_inverse()", {
   })
 })
 
+describe("theme_xaringan_base()", {
+  it("accepts a regular text_font or title_font", {
+    theme <- with_clean_session(function() {
+      xaringanthemer::theme_xaringan_base(
+        text_color = "#000",
+        accent_color = "#1a2b3c",
+        background_color = "#FFF",
+        text_font = "sans", title_font = "serif",
+        text_font_use_google = FALSE, title_font_use_google = FALSE
+      )
+    })
+    expect_equal(theme$title$colour, "#1a2b3c")
+    expect_equal(theme$title$family, "serif")
+    expect_equal(theme$plot.background$colour, "#FFFFFF")
+    expect_equal(theme$text$colour, "#1A1A1A")
+    expect_equal(theme$text$family, "sans")
+  })
+})
+
+test_that("theme_xaringan_restore_defaults() restores defaults", {
+  res <- with_clean_session(function() {
+    res <- list()
+
+    res$original <- list(
+      colour = ggplot2::geom_line()$geom$default_aes$colour,
+      fill = ggplot2::geom_bar()$geom$default_aes$fill
+    )
+
+    old_defaults <- xaringanthemer::theme_xaringan_set_defaults(
+      text_color = "#0088ff",
+      background_color = "#88ff00",
+      accent_color = "#FF8800"
+    )
+
+    res$after_set <- list(
+      line_colour = ggplot2::geom_line()$geom$default_aes$colour,
+      bar_fill = ggplot2::geom_bar()$geom$default_aes$fill
+    )
+
+    xaringanthemer::theme_xaringan_restore_defaults()
+
+    res$after_restore <- list(
+      line_colour = ggplot2::geom_line()$geom$default_aes$colour,
+      bar_fill = ggplot2::geom_bar()$geom$default_aes$fill
+    )
+    res
+  })
+  expect_equal(res$after_set$line_colour, "#0088ff")
+  expect_equal(res$after_set$bar_fill, "#FF8800")
+  expect_equal(res$after_restore$line_colour, res$original$colour)
+  expect_equal(res$after_restore$bar_fill, res$original$fil)
+})
 
 describe("theme_xaringan_get_value()", {
 
