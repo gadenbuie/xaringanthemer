@@ -14,6 +14,7 @@
 #'   `list(".class-id" = list("css-property" = "value"))`
 #' @param append If `TRUE` output will be appended to `outfile`; otherwise,
 #'   it will overwrite the contents of `outfile`.
+#' @param heading Heading added above extra CSS. Use `NULL` to disable.
 #'
 #' @examples
 #' style_extra_css(
@@ -30,15 +31,26 @@
 #' )
 #' @inheritParams style_xaringan
 #' @export
-style_extra_css <- function(css, outfile = "xaringan-themer.css", append = TRUE) {
-  x <- paste("\n\n/* Extra CSS */", list2css(css), sep = "\n")
+style_extra_css <- function(
+  css,
+  outfile = "xaringan-themer.css",
+  append = TRUE,
+  heading = "Extra CSS"
+) {
+  has_heading <- !is.null(heading)
+  x <- paste0(
+    if (has_heading) paste0("/* ", heading, " */\n"),
+    list2css(css)
+  )
+  if (append) x <- paste0(if (has_heading) "\n\n" else "\n", x)
   if (is.null(outfile)) return(x)
   cat(
     x,
     file = outfile,
-    append = TRUE,
+    append = append,
     sep = "\n"
   )
+  invisible(x)
 }
 
 #' @inheritParams style_extra_css
