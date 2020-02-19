@@ -1,5 +1,8 @@
 # test_that()
 
+
+# style_extra_css() -------------------------------------------------------
+
 describe("style_extra_css", {
   css <- list(body = list(color = "#123"))
 
@@ -71,6 +74,9 @@ describe("style_extra_css", {
     )
   })
 })
+
+
+# list2css() --------------------------------------------------------------
 
 describe("list2css()", {
   it("converts lists to css", {
@@ -158,6 +164,60 @@ describe("list2css()", {
     expect_error(
       list2css(list(body = list("#bad"), thing = list("#bad"))),
       "elements.+must be named.+body, thing.+have"
+    )
+  })
+})
+
+
+# list2fonts() ------------------------------------------------------------
+
+import <- function(x) paste0("@import url(", x, ");")
+
+describe("list2fonts()", {
+  lato_url <- "https://fonts.googleapis.com/css?family=Lato&display=swap"
+  worksans_url <- "https://fonts.googleapis.com/css?family=Work+Sans&display=swap"
+
+  it("handles a list or c() of font urls", {
+    expect_equal(
+      list2fonts(list(lato_url, worksans_url)),
+      import(c(lato_url, worksans_url))
+    )
+    expect_equal(list2fonts(c(lato_url, lato_url)), rep(import(lato_url), 2))
+  })
+
+  it("handles single character font name", {
+    expect_equal(list2fonts(lato_url), import(lato_url))
+  })
+
+  it("handles list of google fonts", {
+    expect_equal(
+      list2fonts(list(google_font("Lato"), google_font("Work Sans"))),
+      import(c(lato_url, worksans_url))
+    )
+  })
+
+  it("handles mix of google_font() and bare string", {
+    expect_equal(
+      list2fonts(list(google_font("Lato"), worksans_url)),
+      import(c(lato_url, worksans_url))
+    )
+  })
+
+  it("handles bare google_font()", {
+    expect_equal(
+      list2fonts(google_font("Lato")),
+      import(lato_url)
+    )
+  })
+
+  it("throws an error when c() used to combine string and google_font()", {
+    expect_error(
+      list2fonts(c(lato_url, google_font("Lato"), google_font("Work Sans"))),
+      "Multiple fonts"
+    )
+    expect_error(
+      list2fonts(c(google_font("Lato"), google_font("Work Sans"))),
+      "Multiple fonts"
     )
   })
 })
