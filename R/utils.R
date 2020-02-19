@@ -74,6 +74,23 @@ is_light_color <- function(x) {
   lum[1, 1] > 0.179
 }
 
+requires_package <- function(pkg = "ggplot2", fn = "", required = TRUE) {
+  raise <- if (required) stop else warning
+  if (!requireNamespace(pkg, quietly = TRUE)) {
+    msg <- paste0(
+      "`",
+      pkg,
+      "` is ",
+      if (required) "required " else "suggested ",
+      if (fn != "") paste0("by ", fn, "() ")[1],
+      "but is not installed."
+    )
+    raise(msg, call. = FALSE)
+    return(invisible(FALSE))
+  }
+  invisible(TRUE)
+}
+
 #' @keywords internal
 call_style_xaringan <- function() {
   paste0(

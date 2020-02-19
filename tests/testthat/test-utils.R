@@ -4,3 +4,10 @@ test_that("printing google_font works", {
     "google-font-print.txt"
   )
 })
+
+test_that("requires_package()", {
+  expect_true(requires_package("purrr"))
+  expect_error(requires_package("notapackage", "myFunction"), "myFunction")
+  expect_warning(requires_package("notapackage", required = FALSE))
+  expect_false(requires_package("notapackage", required = FALSE))
+})

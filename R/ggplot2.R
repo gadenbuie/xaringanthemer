@@ -709,23 +709,6 @@ register_font <- function(
   family
 }
 
-requires_package <- function(pkg = "ggplot2", fn = "", required = TRUE) {
-  raise <- if (required) stop else warning
-  if (!requireNamespace(pkg, quietly = TRUE)) {
-    msg <- paste0(
-      "`",
-      pkg,
-      "` is ",
-      if (required) "required " else "suggested ",
-      if (fn != "") paste0("by ", fn, "() ")[1],
-      "but is not installed."
-    )
-    raise(msg, call. = FALSE)
-    invisible(FALSE)
-  }
-  invisible(TRUE)
-}
-
 requires_xaringanthemer_env <- function(
   css_file = NULL,
   try_css = TRUE,
