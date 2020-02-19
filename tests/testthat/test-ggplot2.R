@@ -203,6 +203,8 @@ test_that("theme_xaringan_restore_defaults() restores defaults", {
   res <- with_clean_session(function() {
     res <- list()
 
+    res$nothing <- list(xaringanthemer::theme_xaringan_restore_defaults())
+
     res$original <- list(
       colour = ggplot2::geom_line()$geom$default_aes$colour,
       fill = ggplot2::geom_bar()$geom$default_aes$fill
@@ -227,6 +229,7 @@ test_that("theme_xaringan_restore_defaults() restores defaults", {
     )
     res
   })
+  expect_equal(res$nothing, list(NULL))
   expect_equal(res$after_set$line_colour, "#0088ff")
   expect_equal(res$after_set$bar_fill, "#FF8800")
   expect_equal(res$after_restore$line_colour, res$original$colour)
@@ -450,4 +453,37 @@ describe("scale_xaringan_*", {
     expect_equal(scales$continuous$colour_inverse$palette(x = 1), "#0000FF")
   })
 
+  it("continuous scales rescale low to high when begin = 0, end = 1", {
+    expect_equal(scales$continuous$fill$rescaler(1:3), 0:2 / 2)
+    expect_equal(scales$continuous$color$rescaler(1:3), 0:2 / 2)
+    expect_equal(scales$continuous$colour$rescaler(1:3), 0:2 / 2)
+  })
+
+  it("continuous scales rescale high to low when begin = 1, end = 0", {
+    expect_equal(scales$continuous$fill_reverse$rescaler(1:3), 2:0 / 2)
+    expect_equal(scales$continuous$color_reverse$rescaler(1:3), 2:0 / 2)
+    expect_equal(scales$continuous$colour_reverse$rescaler(1:3), 2:0 / 2)
+  })
+
+})
+
+test_that("register_font() returns the name of the font family if font pkgs are missing", {
+  family_showtext_missing <- with_mock(
+    requires_package = function(pkg, ...) pkg != "showtext",
+    with_clean_session(function() {
+      xaringanthemer::style_xaringan(outfile = NULL)
+      xaringanthemer:::get_theme_font()
+    })
+  )
+
+  expect_equal(family_showtext_missing, formals(style_xaringan)$text_font_family)
+
+  family_sysfonts_missing <- with_mock(
+    requires_package = function(pkg, ...) pkg != "sysfonts",
+    with_clean_session(function() {
+      xaringanthemer::style_xaringan(outfile = NULL)
+      xaringanthemer:::get_theme_font()
+    })
+  )
+  expect_equal(family_sysfonts_missing, formals(style_xaringan)$text_font_family)
 })
