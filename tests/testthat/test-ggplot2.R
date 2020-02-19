@@ -468,22 +468,16 @@ describe("scale_xaringan_*", {
 })
 
 test_that("register_font() returns the name of the font family if font pkgs are missing", {
-  family_showtext_missing <- with_mock(
-    requires_package = function(pkg, ...) pkg != "showtext",
-    with_clean_session(function() {
-      xaringanthemer::style_xaringan(outfile = NULL)
-      xaringanthemer:::get_theme_font()
-    })
+  family_showtext_missing <- testthat::with_mock(
+    `xaringanthemer:::requires_package` = function(pkg, ...) pkg != "showtext",
+    register_font(formals(style_xaringan)$text_font_family, google = TRUE)
   )
 
   expect_equal(family_showtext_missing, formals(style_xaringan)$text_font_family)
 
-  family_sysfonts_missing <- with_mock(
-    requires_package = function(pkg, ...) pkg != "sysfonts",
-    with_clean_session(function() {
-      xaringanthemer::style_xaringan(outfile = NULL)
-      xaringanthemer:::get_theme_font()
-    })
+  family_sysfonts_missing <- testthat::with_mock(
+    `xaringanthemer:::requires_package` = function(pkg, ...) pkg != "sysfonts",
+    register_font(formals(style_xaringan)$text_font_family, google = TRUE)
   )
   expect_equal(family_sysfonts_missing, formals(style_xaringan)$text_font_family)
 })
