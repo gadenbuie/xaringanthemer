@@ -166,6 +166,18 @@ describe("list2css()", {
       "elements.+must be named.+body, thing.+have"
     )
   })
+
+  it("is okay for multiple entries with the same name", {
+    expect_equal(
+      list2css(list("a" = list(color = "red"), a = list(color = "blue"))),
+      c("a {\n  color: red;\n}", "a {\n  color: blue;\n}")
+    )
+
+    expect_equal(
+      list2css(list("a" = list(color = "red", color = "blue"))),
+      c("a {\n  color: red;\n  color: blue;\n}")
+    )
+  })
 })
 
 

@@ -100,19 +100,20 @@ list2css <- function(css) {
     stop(msg, call. = FALSE)
   }
 
-  purrr::map_chr(names(css), function(el) {
+  x <- purrr::imap_chr(css, function(rules, selector) {
     paste(
       sep = "\n",
-      el %.% " {",
+      selector %.% " {",
       paste(
-        purrr::map_chr(names(css[[el]]), function(prop) {
-          "  " %.% prop %.% ": " %.% css[[el]][[prop]] %.% ";"
+        purrr::imap_chr(rules, function(value, prop) {
+          "  " %.% prop %.% ": " %.% value %.% ";"
         }),
         collapse = "\n"
       ),
       "}"
     )
   })
+  unname(x)
 }
 
 list2fonts <- function(fonts) {
