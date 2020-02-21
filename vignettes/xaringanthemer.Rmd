@@ -54,12 +54,12 @@ Jump to:
 [theme-settings]: #theme-settings
 [template-variables]: template-variables.html
 
-```{r child="rmdchunks/_quick-intro.Rmd"}
+```{r child="../man/fragments/_quick-intro.Rmd"}
 ```
 
 ## Themes
 
-```{r child="rmdchunks/_themes.Rmd"}
+```{r child="../man/fragments/_themes.Rmd"}
 ```
 
 ## Theme Settings
@@ -140,8 +140,8 @@ Using the above example, we could color text red `.red[like this]` or write `.sm
 
 [adding-custom-css]: #adding-custom-css
 
-```{r child="rmdchunks/_fonts.Rmd"}
+```{r child="../man/fragments/_fonts.Rmd"}
 ```
 
-```{r child="rmdchunks/_thanks.Rmd"}
+```{r child="../man/fragments/_thanks.Rmd"}
 ```

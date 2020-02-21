@@ -23,36 +23,19 @@ style_mono_light(
 ```
 ````
 
-```{r echo=FALSE}
-if (exists('IS_README') && IS_README) {
-  knitr::include_graphics("vignettes/images/example_mono_light_1c5253.png") 
-} else {
-  knitr::include_graphics(here::here("vignettes/images/example_mono_light_1c5253.png"))
-}
-```
+<img src="https://raw.githubusercontent.com/gadenbuie/xaringanthemer/assets/example_mono_light_1c5253.png" alt="Example title and normal slides using a green xaringanthemer theme" />
 
 ### Tab Completion
 
 **xaringanthemer** is <kbd>Tab</kbd> friendly -- [use autocomplete to explore][theme-settings] the [template variables][template-variables] that you can adjust in each of the themes!
 
-```{r}
-if (exists('IS_README') && IS_README) {
-  knitr::include_graphics("vignettes/images/example-rstudio-completion.gif") 
-} else {
-  knitr::include_graphics(here::here("vignettes/images/example-rstudio-completion.gif"))
-}
-```
+
+<img src="https://raw.githubusercontent.com/gadenbuie/xaringanthemer/assets/example-rstudio-completion.gif" alt="Demonstration of argument auto-completion with RStudio" />
 
 ### R Markdown Template in RStudio
 
 You can also skip the above and just create a *Ninja Themed Presentation* from the New R Markdown Document menu in RStudio.
 
 <center>
-```{r out.width="350px"}
-if (exists('IS_README') && IS_README) {
-  knitr::include_graphics("vignettes/images/rmarkdown-template-screenshot.png") 
-} else {
-  knitr::include_graphics(here::here("vignettes/images/rmarkdown-template-screenshot.png"))
-}
-```
+<img src="https://raw.githubusercontent.com/gadenbuie/xaringanthemer/assets/rmarkdown-template-screenshot.png" alt="The 'New R Markdown Document' menu in RStudio" />
 </center>

@@ -23,18 +23,25 @@ reference:
     - starts_with("style_mono")
     - starts_with("style_duo")
     - starts_with("style_solarized")
-- title: ggplot2 Themes
-  desc: Plot themes for ggplot2 to match xaringan slide styles.
+- title: Google Fonts
+  desc: Helper functions for using Google Fonts in your slide styles.
   contents:
-    - starts_with("theme_xaringan")
+    - starts_with("google_")
+- title: ggplot2 Themes
+  desc: Plot themes for ggplot2 to match your xaringanthemer slide styles.
+  contents:
+    - theme_xaringan
+    - theme_xaringan_inverse
+    - theme_xaringan_base
+    - theme_xaringan_set_defaults
+    - starts_with("scale_xaringan")
 - title: Helper functions
   desc: Helpers for Google fonts and color adjustments.
   contents:
     - theme_xaringan_get_value
-    - contains("color")
+    - ends_with("color")
     - apply_alpha
     - choose_dark_or_light
-    - contains("google")
 navbar:
   left:
     home:
@@ -43,6 +50,9 @@ navbar:
     intro:
       text: Get started
       href: articles/xaringanthemer.html
+    reference:
+      text: Reference
+      href: reference/index.html
     themes:
       text: Themes
       href: articles/singles/themes.html
@@ -55,9 +65,6 @@ navbar:
     css-help:
       text: CSS Help
       href: articles/css-help.html
-    reference:
-      text: Reference
-      href: reference/index.html
   right:
     github:
       icon: fa-github fa-lg

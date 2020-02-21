@@ -7,7 +7,7 @@ Give your [xaringan](https://github.com/yihui/xaringan) slides some
 style with **xaringanthemer** within your `slides.Rmd` file without
 (much) CSS.
 
-<img src="vignettes/images/examples.gif" width="100%" />
+<img src="https://raw.githubusercontent.com/gadenbuie/xaringanthemer/assets/examples.gif" alt="Animation previewing many xaringanthemer themes" />
 
   - [Installation](#installation)
   - [Quick Intro](#quick-intro)
@@ -57,7 +57,7 @@ style_mono_light(
 ```
 ````
 
-<img src="vignettes/images/example_mono_light_1c5253.png" width="100%" />
+<img src="https://raw.githubusercontent.com/gadenbuie/xaringanthemer/assets/example_mono_light_1c5253.png" alt="Example title and normal slides using a green xaringanthemer theme" />
 
 ### Tab Completion
 
@@ -66,7 +66,7 @@ explore](#theme-settings) the [template
 variables](vignettes/template-variables.md) that you can adjust in each
 of the themes\!
 
-<img src="vignettes/images/example-rstudio-completion.gif" width="100%" />
+<img src="https://raw.githubusercontent.com/gadenbuie/xaringanthemer/assets/example-rstudio-completion.gif" alt="Demonstration of argument auto-completion with RStudio" />
 
 ### R Markdown Template in RStudio
 
@@ -75,7 +75,7 @@ Presentation* from the New R Markdown Document menu in RStudio.
 
 <center>
 
-<img src="vignettes/images/rmarkdown-template-screenshot.png" width="350px" />
+<img src="https://raw.githubusercontent.com/gadenbuie/xaringanthemer/assets/rmarkdown-template-screenshot.png" alt="The 'New R Markdown Document' menu in RStudio" />
 
 </center>
 
@@ -94,7 +94,7 @@ A light theme based around a single color.
 style_mono_light(base_color = "#23395b")
 ```
 
-<img src="vignettes/images/example_mono_light.png" width="100%" />
+![](https://raw.githubusercontent.com/gadenbuie/xaringanthemer/assets/example_mono_light.png)
 
 #### `style_mono_dark()`
 
@@ -104,7 +104,7 @@ A dark theme based around a single color.
 style_mono_dark(base_color = "#cbf7ed")
 ```
 
-<img src="vignettes/images/example_mono_dark.png" width="100%" />
+![](https://raw.githubusercontent.com/gadenbuie/xaringanthemer/assets/example_mono_dark.png)
 
 #### `style_mono_accent()`
 
@@ -115,7 +115,7 @@ select elements (headers, bold text, etc.).
 style_mono_accent(base_color = "#43418A")
 ```
 
-<img src="vignettes/images/example_mono_accent.png" width="100%" />
+![](https://raw.githubusercontent.com/gadenbuie/xaringanthemer/assets/example_mono_accent.png)
 
 #### `style_mono_accent_inverse()`
 
@@ -126,7 +126,7 @@ accents on select elements (headers, bold text, etc.).
 style_mono_accent_inverse(base_color = "#3C989E")
 ```
 
-<img src="vignettes/images/example_mono_accent_inverse.png" width="100%" />
+![](https://raw.githubusercontent.com/gadenbuie/xaringanthemer/assets/example_mono_accent_inverse.png)
 
 ### Duotone
 
@@ -140,7 +140,7 @@ A two-colored theme based on a primary and secondary color.
 style_duo(primary_color = "#1F4257", secondary_color = "#F97B64")
 ```
 
-<img src="vignettes/images/example_duo.png" width="100%" />
+![](https://raw.githubusercontent.com/gadenbuie/xaringanthemer/assets/example_duo.png)
 
 #### `style_duo_accent()`
 
@@ -150,7 +150,7 @@ The default Xaringan theme with two accent colors.
 style_duo_accent(primary_color = "#006747", secondary_color = "#CFC493")
 ```
 
-<img src="vignettes/images/example_duo_accent.png" width="100%" />
+![](https://raw.githubusercontent.com/gadenbuie/xaringanthemer/assets/example_duo_accent.png)
 
 #### `style_duo_accent_inverse()`
 
@@ -160,7 +160,7 @@ An “inverted” default Xaringan theme with two accent colors.
 style_duo_accent_inverse(primary_color = "#006747", secondary_color = "#CFC493")
 ```
 
-<img src="vignettes/images/example_duo_accent_inverse.png" width="100%" />
+![](https://raw.githubusercontent.com/gadenbuie/xaringanthemer/assets/example_duo_accent_inverse.png)
 
 ### Solarized
 
@@ -177,7 +177,7 @@ constrasted).
 style_solarized_light()
 ```
 
-<img src="vignettes/images/example_solarized_light.png" width="100%" />
+![](https://raw.githubusercontent.com/gadenbuie/xaringanthemer/assets/example_solarized_light.png)
 
 #### `style_solarized_dark()`
 
@@ -185,7 +185,7 @@ style_solarized_light()
 style_solarized_dark()
 ```
 
-<img src="vignettes/images/example_solarized_dark.png" width="100%" />
+![](https://raw.githubusercontent.com/gadenbuie/xaringanthemer/assets/example_solarized_dark.png)
 
 To do this, your YAML header should look more-or-less like this:
 

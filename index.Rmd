@@ -15,15 +15,16 @@ knitr::opts_chunk$set(
 )
 library(xaringanthemer)
 ```
+
 # xaringanthemer
 
 
-```{r child="vignettes/rmdchunks/_tagline-gif.Rmd"}
+```{r child="man/fragments/_tagline-gif.Rmd"}
 ```
 
 ## Installation
 
-```{r child="vignettes/rmdchunks/_installation.Rmd"}
+```{r child="man/fragments/_installation.Rmd"}
 ```
 
 ## Usage
@@ -32,5 +33,5 @@ library(xaringanthemer)
 [theme-settings]: articles/xaringanthemer.html#theme-settings
 [template-variables]: articles/template-variables.html
 
-```{r child="vignettes/rmdchunks/_quick-intro.Rmd"}
+```{r child="man/fragments/_quick-intro.Rmd"}
 ```

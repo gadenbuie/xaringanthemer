@@ -29,7 +29,9 @@ For example, to use `mono_accent()` with a different slide background color, you
 source("../R/theme_settings.R")
 template_variables$variable <- glue::glue_data(template_variables, "`{variable}`")
 template_variables$default <- gsub("[{}]", "", template_variables$default)
-template_variables$default <- glue::glue_data(template_variables, "`{default}`")
+template_variables <- template_variables[, c(
+  "variable", "description", "element", "default"
+)]
 knitr::kable(template_variables)
 ```
 

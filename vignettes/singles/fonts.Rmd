@@ -9,5 +9,5 @@ source(here::here("R/theme_settings.R"))
 tvv <- template_variables$variable
 ```
 
-```{r child="../rmdchunks/_fonts.Rmd"}
+```{r child="../../man/fragments/_fonts.Rmd"}
 ```

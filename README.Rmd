@@ -16,10 +16,11 @@ knitr::opts_chunk$set(
 IS_README <- TRUE
 library(xaringanthemer)
 ```
+
 # xaringanthemer
 
 
-```{r child="vignettes/rmdchunks/_tagline-gif.Rmd"}
+```{r child="man/fragments/_tagline-gif.Rmd"}
 ```
 
 ```{r toc, results='asis', echo=FALSE, message=FALSE, eval=FALSE}
@@ -40,7 +41,7 @@ gsub("    -", "-", sub("^-.+?\n", "", x))
 
 ## Installation
 
-```{r child="vignettes/rmdchunks/_installation.Rmd"}
+```{r child="man/fragments/_installation.Rmd"}
 ```
 
 ## Quick Intro
@@ -49,12 +50,12 @@ gsub("    -", "-", sub("^-.+?\n", "", x))
 [theme-settings]: #theme-settings
 [template-variables]: vignettes/template-variables.md
 
-```{r child="vignettes/rmdchunks/_quick-intro.Rmd"}
+```{r child="man/fragments/_quick-intro.Rmd"}
 ```
 
 ## Themes
 
-```{r child="vignettes/rmdchunks/_themes.Rmd"}
+```{r child="man/fragments/_themes.Rmd"}
 ```
 
 ## Theme Settings
@@ -135,10 +136,10 @@ Using the above example, we could color text red `.red[like this]` or write `.sm
 
 [adding-custom-css]: #adding-custom-css
 
-```{r child="vignettes/rmdchunks/_fonts.Rmd"}
+```{r child="man/fragments/_fonts.Rmd"}
 ```
 
-```{r child="vignettes/rmdchunks/_thanks.Rmd"}
+```{r child="man/fragments/_thanks.Rmd"}
 ```
 
 ```{r include=FALSE}
