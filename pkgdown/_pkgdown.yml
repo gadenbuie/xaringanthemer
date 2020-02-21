@@ -14,7 +14,7 @@ reference:
   contents:
     - style_xaringan
     - style_extra_css
-- title: Theme Functions
+- title: xaringan Themes
   desc: |
     Parameterized styles for xaringan slides using one (mono)
     or two (duo) base colors. Bonus: slide styles base on the
