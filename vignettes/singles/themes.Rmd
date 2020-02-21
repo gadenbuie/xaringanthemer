@@ -7,5 +7,5 @@ library(xaringanthemer)
 knitr::opts_chunk$set(results = "asis", echo=FALSE)
 ```
 
-```{r child="../man/fragments/_themes.Rmd"}
+```{r child="../../man/fragments/_themes.Rmd"}
 ```

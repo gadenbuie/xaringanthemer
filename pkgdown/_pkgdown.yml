@@ -55,10 +55,10 @@ navbar:
       href: reference/index.html
     themes:
       text: Themes
-      href: articles/themes.html
+      href: articles/singles/themes.html
     fonts:
       text: Fonts
-      href: articles/fonts.html
+      href: articles/singles/fonts.html
     template-vars:
       text: Template Variables
       href: articles/template-variables.html
