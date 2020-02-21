@@ -72,38 +72,49 @@ color). Also accepts an \code{accent_color} and an \code{accent_secondary_color}
 xaringanthemer for a plot theme that matches the slide style.
 }
 \examples{
+# Requires ggplot2
 has_ggplot2 <- requireNamespace("ggplot2", quietly = TRUE)
-if (interactive() && has_ggplot2) {
+
+if (has_ggplot2) {
   library(ggplot2)
-  ggplot(iris) +
+
+  plot1 <- ggplot(iris) +
     aes(Petal.Length, Petal.Width) +
     geom_point() +
     theme_xaringan_base(
-      text_color = "#e1e5f2",
-      background_color = "#021c25",
-      accent_color = "#1f7a8c",
+      text_color = "#602f6b",       # imperial
+      background_color = "#fcfafc", # warm gray
+      accent_color = "#317873",     # myrtle green
+      title_font = "sans",
+      text_font = "serif",
       set_ggplot_defaults = TRUE
     ) +
     labs(
       title = "Basic Iris Plot",
       subtitle = "+ theme_xaringan_base()",
-      caption = "{xaringanthemer}"
+      caption = "xaringanthemer"
     )
 
-  ggplot(iris) +
-    aes(Petal.Length, Petal.Width) +
-    geom_point() +
+  print(plot1)
+
+  plot2 <- ggplot(iris) +
+    aes(Sepal.Width) +
+    geom_histogram(binwidth = 0.1) +
     theme_xaringan_base(
-      text_color = "#021c25",
-      background_color = "#e1e5f2",
-      accent_color = "#1f7a8c",
+      text_color = "#a8a9c8",       # light purple
+      background_color = "#303163", # deep slate purple
+      accent_color = "#ffff99",     # canary yellow
+      title_font = "sans",
+      text_font = "serif",
       set_ggplot_defaults = TRUE
     ) +
     labs(
       title = "Basic Iris Plot",
       subtitle = "+ theme_xaringan_base()",
-      caption = "{xaringanthemer}"
+      caption = "xaringanthemer"
     )
+
+  print(plot2)
 }
 }
 \seealso{

@@ -62,16 +62,31 @@ A \pkg{ggplot2} xaringanthemer plot theme to seamlessly match the "inverse"
 \pkg{xaringan} slide colors and styles as styled by \link{xaringanthemer}.
 }
 \examples{
+# Requires ggplot2
 has_ggplot2 <- requireNamespace("ggplot2", quietly = TRUE)
-if (interactive() && has_ggplot2) {
-  # Set xaringanthemer theme but save to tempfile
-  style_duo_accent(outfile = tempfile())
+
+if (has_ggplot2) {
+  # Because this is an example, we'll save the CSS to a temp file
+  path_to_css_file <- tempfile(fileext = ".css")
+
+  # Create the xaringan theme: dark blue background with teal green accents
+  style_duo(
+    primary_color = "#002b36",
+    secondary_color = "#31b09e",
+    # Using basic fonts for this example, but the plot theme will
+    # automatically use your theme font if you use Google fonts
+    text_font_family = "sans",
+    header_font_family = "serif",
+    outfile = path_to_css_file
+  )
 
   library(ggplot2)
   ggplot(iris) +
     aes(Petal.Length, Petal.Width) +
     geom_point() +
-    theme_xaringan()
+    ggtitle("Yet another Iris plot") +
+    # themed to match the inverse slides: teal background with dark blue text
+    theme_xaringan_inverse()
 }
 }
 \seealso{

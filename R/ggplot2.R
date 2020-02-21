@@ -25,15 +25,29 @@
 #' @inheritDotParams theme_xaringan_base
 #'
 #' @examples
+#' # Requires ggplot2
 #' has_ggplot2 <- requireNamespace("ggplot2", quietly = TRUE)
-#' if (interactive() && has_ggplot2) {
-#'   # Set xaringanthemer theme but save to tempfile
-#'   style_duo_accent(outfile = tempfile())
+#'
+#' if (has_ggplot2) {
+#'   # Because this is an example, we'll save the CSS to a temp file
+#'   path_to_css_file <- tempfile(fileext = ".css")
+#'
+#'   # Create the xaringan theme: dark blue background with teal green accents
+#'   style_duo(
+#'     primary_color = "#002b36",
+#'     secondary_color = "#31b09e",
+#'     # Using basic fonts for this example, but the plot theme will
+#'     # automatically use your theme font if you use Google fonts
+#'     text_font_family = "sans",
+#'     header_font_family = "serif",
+#'     outfile = path_to_css_file
+#'   )
 #'
 #'   library(ggplot2)
 #'   ggplot(iris) +
 #'     aes(Petal.Length, Petal.Width) +
 #'     geom_point() +
+#'     ggtitle("Yet another Iris plot") +
 #'     theme_xaringan()
 #' }
 #' @return A ggplot2 theme
@@ -84,16 +98,31 @@ theme_xaringan <- function(
 #' @inheritDotParams theme_xaringan_base
 #'
 #' @examples
+#' # Requires ggplot2
 #' has_ggplot2 <- requireNamespace("ggplot2", quietly = TRUE)
-#' if (interactive() && has_ggplot2) {
-#'   # Set xaringanthemer theme but save to tempfile
-#'   style_duo_accent(outfile = tempfile())
+#'
+#' if (has_ggplot2) {
+#'   # Because this is an example, we'll save the CSS to a temp file
+#'   path_to_css_file <- tempfile(fileext = ".css")
+#'
+#'   # Create the xaringan theme: dark blue background with teal green accents
+#'   style_duo(
+#'     primary_color = "#002b36",
+#'     secondary_color = "#31b09e",
+#'     # Using basic fonts for this example, but the plot theme will
+#'     # automatically use your theme font if you use Google fonts
+#'     text_font_family = "sans",
+#'     header_font_family = "serif",
+#'     outfile = path_to_css_file
+#'   )
 #'
 #'   library(ggplot2)
 #'   ggplot(iris) +
 #'     aes(Petal.Length, Petal.Width) +
 #'     geom_point() +
-#'     theme_xaringan()
+#'     ggtitle("Yet another Iris plot") +
+#'     # themed to match the inverse slides: teal background with dark blue text
+#'     theme_xaringan_inverse()
 #' }
 #' @return A ggplot2 theme
 #' @family xaringanthemer ggplot2 themes
@@ -166,38 +195,49 @@ theme_xaringan_inverse <- function(
 #' @param ... Ignored
 #'
 #' @examples
+#' # Requires ggplot2
 #' has_ggplot2 <- requireNamespace("ggplot2", quietly = TRUE)
-#' if (interactive() && has_ggplot2) {
+#'
+#' if (has_ggplot2) {
 #'   library(ggplot2)
-#'   ggplot(iris) +
+#'
+#'   plot1 <- ggplot(iris) +
 #'     aes(Petal.Length, Petal.Width) +
 #'     geom_point() +
 #'     theme_xaringan_base(
-#'       text_color = "#e1e5f2",
-#'       background_color = "#021c25",
-#'       accent_color = "#1f7a8c",
+#'       text_color = "#602f6b",       # imperial
+#'       background_color = "#fcfafc", # warm gray
+#'       accent_color = "#317873",     # myrtle green
+#'       title_font = "sans",
+#'       text_font = "serif",
 #'       set_ggplot_defaults = TRUE
 #'     ) +
 #'     labs(
 #'       title = "Basic Iris Plot",
 #'       subtitle = "+ theme_xaringan_base()",
-#'       caption = "{xaringanthemer}"
+#'       caption = "xaringanthemer"
 #'     )
 #'
-#'   ggplot(iris) +
-#'     aes(Petal.Length, Petal.Width) +
-#'     geom_point() +
+#'   print(plot1)
+#'
+#'   plot2 <- ggplot(iris) +
+#'     aes(Sepal.Width) +
+#'     geom_histogram(binwidth = 0.1) +
 #'     theme_xaringan_base(
-#'       text_color = "#021c25",
-#'       background_color = "#e1e5f2",
-#'       accent_color = "#1f7a8c",
+#'       text_color = "#a8a9c8",       # light purple
+#'       background_color = "#303163", # deep slate purple
+#'       accent_color = "#ffff99",     # canary yellow
+#'       title_font = "sans",
+#'       text_font = "serif",
 #'       set_ggplot_defaults = TRUE
 #'     ) +
 #'     labs(
 #'       title = "Basic Iris Plot",
 #'       subtitle = "+ theme_xaringan_base()",
-#'       caption = "{xaringanthemer}"
+#'       caption = "xaringanthemer"
 #'     )
+#'
+#'   print(plot2)
 #' }
 #' @return A ggplot2 theme
 #' @family xaringanthemer ggplot2 themes
