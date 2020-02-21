@@ -1,4 +1,10 @@
-**xaringanthemer** currently lives on GitHub.
+You can install **xaringanthemer** from CRAN
+
+```r
+install.packages("xaringanthemer")
+```
+
+or you can install the development version of xaringanthemer from [GitHub](https://github.com/gadenbuie/xaringanthemer).
 
 ```r
 # install.packages("devtools")
