@@ -1,10 +1,13 @@
 authors:
   Garrick Aden-Buie:
     href: https://www.garrickadenbuie.com
-url: https://gadenbuie.github.com/xaringanthemer/
-template:
-  params:
-    bootswatch: yeti
+url: https://pkg.garrickadenbuie.com/xaringanthemer/
+development:
+  mode: auto
+home:
+  description: |
+    Give your xaringan slides some style with xaringanthemer.
+    Easy slide and plot themes for xaringan slides.
 reference:
 - title: Writing CSS
   desc: Functions that write CSS from inside a xaringan R markdown document.
@@ -55,13 +58,6 @@ navbar:
     reference:
       text: Reference
       href: reference/index.html
-    #articles:
-    #  text: Articles
-    #  menu:
-    #  - text: xaringanthemer CSS Help
-    #    href: articles/css-help.html
-    #  - text: Template Variables
-    #    href: articles/template-variables.html
   right:
     github:
       icon: fa-github fa-lg
