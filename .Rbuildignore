@@ -13,3 +13,5 @@
 ^appveyor\.yml$
 ^\.travis\.yml$
 ^pkgdown$
+^vignettes/fonts\.Rmd$
+^vignettes/themes\.Rmd$

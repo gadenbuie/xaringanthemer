@@ -17,7 +17,7 @@ reference:
 - title: xaringan Themes
   desc: |
     Parameterized styles for xaringan slides using one (mono)
-    or two (duo) base colors. Bonus: slide styles base on the
+    or two (duo) base colors. Bonus: slide styles based on the
     solarized color palette.
   contents:
     - starts_with("style_mono")
@@ -55,10 +55,10 @@ navbar:
       href: reference/index.html
     themes:
       text: Themes
-      href: articles/singles/themes.html
+      href: articles/themes.html
     fonts:
       text: Fonts
-      href: articles/singles/fonts.html
+      href: articles/fonts.html
     template-vars:
       text: Template Variables
       href: articles/template-variables.html
