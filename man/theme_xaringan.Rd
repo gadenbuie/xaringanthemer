@@ -63,7 +63,8 @@ Creates \pkg{ggplot2} themes to match the xaringanthemer theme used in the
 styles.
 }
 \examples{
-if (requireNamespace("ggplot2", quietly = TRUE)) {
+has_ggplot2 <- requireNamespace("ggplot2", quietly = TRUE)
+if (interactive() && has_ggplot2) {
   # Set xaringanthemer theme but save to tempfile
   style_duo_accent(outfile = tempfile())
 

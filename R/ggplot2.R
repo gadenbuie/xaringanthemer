@@ -25,7 +25,8 @@
 #' @inheritDotParams theme_xaringan_base
 #'
 #' @examples
-#' if (requireNamespace("ggplot2", quietly = TRUE)) {
+#' has_ggplot2 <- requireNamespace("ggplot2", quietly = TRUE)
+#' if (interactive() && has_ggplot2) {
 #'   # Set xaringanthemer theme but save to tempfile
 #'   style_duo_accent(outfile = tempfile())
 #'
@@ -83,7 +84,8 @@ theme_xaringan <- function(
 #' @inheritDotParams theme_xaringan_base
 #'
 #' @examples
-#' if (requireNamespace("ggplot2", quietly = TRUE)) {
+#' has_ggplot2 <- requireNamespace("ggplot2", quietly = TRUE)
+#' if (interactive() && has_ggplot2) {
 #'   # Set xaringanthemer theme but save to tempfile
 #'   style_duo_accent(outfile = tempfile())
 #'
@@ -164,7 +166,8 @@ theme_xaringan_inverse <- function(
 #' @param ... Ignored
 #'
 #' @examples
-#' if (requireNamespace("ggplot2", quietly = TRUE)) {
+#' has_ggplot2 <- requireNamespace("ggplot2", quietly = TRUE)
+#' if (interactive() && has_ggplot2) {
 #'   library(ggplot2)
 #'   ggplot(iris) +
 #'     aes(Petal.Length, Petal.Width) +

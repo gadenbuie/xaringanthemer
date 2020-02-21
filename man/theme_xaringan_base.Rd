@@ -72,7 +72,8 @@ color). Also accepts an \code{accent_color} and an \code{accent_secondary_color}
 xaringanthemer for a plot theme that matches the slide style.
 }
 \examples{
-if (requireNamespace("ggplot2", quietly = TRUE)) {
+has_ggplot2 <- requireNamespace("ggplot2", quietly = TRUE)
+if (interactive() && has_ggplot2) {
   library(ggplot2)
   ggplot(iris) +
     aes(Petal.Length, Petal.Width) +
