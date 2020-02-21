@@ -10,3 +10,5 @@
 ^index\.Rmd$
 ^man-roxygen$
 ^tic\.R$
+^appveyor\.yml$
+^\.travis\.yml$
