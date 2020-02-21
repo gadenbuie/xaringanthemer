@@ -3,17 +3,17 @@
 
 matrix:
   include:
-    - os: osx
-      r: release
-    - os: osx
-      r: oldrel
-    - os: linux
-      r: devel
     - os: linux
       r: release
       env:
       - BUILD_PKGDOWN=true
+    - os: osx
+      r: release
     - os: linux
+      r: devel
+    - os: linux
+      r: oldrel
+    - os: osx
       r: oldrel
 
 # meta -------------------------------------------------------------------------
