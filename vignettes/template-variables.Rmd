@@ -26,7 +26,7 @@ Note that themes, like `mono_accent()`, have additional parameters, but with any
 For example, to use `mono_accent()` with a different slide background color, you can call `mono_accent(background_color = "#abc123")`.
 
 ```{r table, results = "asis", echo=FALSE}
-source("../R/theme_settings.R")
+template_variables <- xaringanthemer:::template_variables
 template_variables$variable <- glue::glue_data(template_variables, "`{variable}`")
 template_variables$default <- gsub("[{}]", "", template_variables$default)
 template_variables <- template_variables[, c(

@@ -78,8 +78,7 @@ All of the theme options are named so that you first think of the element you wa
 Here are some of the `text_` theme options:
 
 ```{r, results='asis', echo=FALSE}
-source(here::here("R/theme_settings.R"))
-tvv <- template_variables$variable
+tvv <- xaringanthemer:::template_variables$variable
 cat(paste0("- `", tvv[grepl("^text_", tvv)][1:5], "`"), sep = "\n")
 cat("- *and more ...*")
 ```

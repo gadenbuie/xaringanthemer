@@ -5,8 +5,7 @@ title: Fonts
 [adding-custom-css]: xaringanthemer.html#adding-custom-css
 
 ```{r, results='asis', echo=FALSE}
-source(here::here("R/theme_settings.R"))
-tvv <- template_variables$variable
+tvv <- xaringanthemer:::template_variables$variable
 ```
 
 ```{r child="../../man/fragments/_fonts.Rmd"}
