@@ -206,7 +206,7 @@ theme_xaringan_inverse <- function(
 #'     geom_point() +
 #'     theme_xaringan_base(
 #'       text_color = "#602f6b",       # imperial
-#'       background_color = "#fcfafc", # warm gray
+#'       background_color = "#f8f8f8", # light gray
 #'       accent_color = "#317873",     # myrtle green
 #'       title_font = "sans",
 #'       text_font = "serif",
