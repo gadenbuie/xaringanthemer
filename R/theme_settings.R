@@ -140,7 +140,7 @@ template_mono_accent <- set_default(
   left_column_subtle_color        = "{apply_alpha(base_color, 0.6)}",
   left_column_selected_color      = "{base_color}",
   blockquote_left_border_color    = "{apply_alpha(base_color, 0.5)}",
-  table_row_even_background_color = "{lighten_color(base_color, 0.7)}")
+  table_row_even_background_color = "{lighten_color(base_color, 0.8)}")
 
 template_mono_accent_inverse <- tibble::tribble(
   ~ variable, ~ default, ~ element, ~ description
@@ -164,7 +164,7 @@ template_mono_accent_inverse <- set_default(
   left_column_subtle_color        = "{apply_alpha(base_color, 0.6)}",
   left_column_selected_color      = "{base_color}",
   blockquote_left_border_color    = "{apply_alpha(base_color, 0.5)}",
-  table_row_even_background_color = "{darken_color(base_color, 0.7)}")
+  table_row_even_background_color = "{darken_color(base_color, 0.8)}")
 
 template_duo_light <- tibble::tribble(
   ~ variable, ~ default, ~ element, ~ description
@@ -214,7 +214,7 @@ template_duo <- set_default(
   left_column_subtle_color        = "{apply_alpha(secondary_color, 0.6)}",
   left_column_selected_color      = "{secondary_color}",
   blockquote_left_border_color    = "{apply_alpha(secondary_color, 0.5)}",
-  table_row_even_background_color = "{lighten_color(primary_color, 0.1)}")
+  table_row_even_background_color = "{lighten_color(primary_color, 0.9)}")
 
 template_duo_accent <- tibble::tribble(
   ~ variable, ~ default, ~ element, ~ description
@@ -241,7 +241,7 @@ template_duo_accent <- set_default(
   left_column_subtle_color        = "{apply_alpha(primary_color, 0.6)}",
   left_column_selected_color      = "{primary_color}",
   blockquote_left_border_color    = "{apply_alpha(secondary_color, 0.5)}",
-  table_row_even_background_color = "{lighten_color(secondary_color, 0.2)}")
+  table_row_even_background_color = "{lighten_color(secondary_color, 0.8)}")
 
 template_duo_accent_inverse <- set_default(
   template_duo_accent,
