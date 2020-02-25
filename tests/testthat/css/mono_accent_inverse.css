@@ -180,7 +180,7 @@ th, td {
   padding: 5px;
 }
 .remark-slide thead, .remark-slide tfoot, .remark-slide tr:nth-child(even) {
-  background: #122D2F;
+  background: #0B1E1F;
 }
 table.dataTable tbody {
   background-color: var(--background-color);
@@ -190,7 +190,7 @@ table.dataTable.display tbody tr.odd {
   background-color: var(--background-color);
 }
 table.dataTable.display tbody tr.even {
-  background-color: #122D2F;
+  background-color: #0B1E1F;
 }
 table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
   background-color: rgba(255, 255, 255, 0.5);
