@@ -24,7 +24,7 @@ style_duo_accent_inverse(
   code_inline_color = choose_dark_or_light(secondary_color, secondary_color,
     primary_color),
   code_inline_background_color = NULL,
-  code_inline_font_size = "1rem",
+  code_inline_font_size = "1em",
   inverse_background_color = secondary_color,
   inverse_text_color = choose_dark_or_light(secondary_color, black_color, white_color),
   inverse_text_shadow = FALSE,
@@ -35,7 +35,7 @@ style_duo_accent_inverse(
   title_slide_background_size = NULL,
   title_slide_background_position = NULL,
   footnote_color = NULL,
-  footnote_font_size = "0.9rem",
+  footnote_font_size = "0.9em",
   footnote_position_bottom = "60px",
   left_column_subtle_color = apply_alpha(primary_color, 0.6),
   left_column_selected_color = primary_color,
@@ -55,7 +55,7 @@ style_duo_accent_inverse(
   header_background_padding = NULL,
   header_background_content_padding_top = "7rem",
   header_background_ignore_classes = c("normal", "inverse", "title", "middle", "bottom"),
-  text_slide_number_font_size = "0.9rem",
+  text_slide_number_font_size = "0.9em",
   text_font_google = NULL,
   text_font_family = "Noto Sans",
   text_font_weight = "normal",
@@ -116,7 +116,7 @@ style_duo_accent_inverse(
 
 \item{code_inline_background_color}{Inline Code Background Color. Defaults to \code{NULL}. Modifies the \code{.remark-inline-code} class.}
 
-\item{code_inline_font_size}{Inline Code Text Font Size. Defaults to 1rem. Modifies the \code{.remark-inline-code} class.}
+\item{code_inline_font_size}{Inline Code Text Font Size. Defaults to 1em. Modifies the \code{.remark-inline-code} class.}
 
 \item{inverse_background_color}{Inverse Background Color. Defaults to \code{secondary_color}. Modifies the \code{.inverse} class.}
 
@@ -138,7 +138,7 @@ style_duo_accent_inverse(
 
 \item{footnote_color}{Footnote text color (if \code{NA}, then it will be the same color as \code{text_color}). Defaults to \code{NULL}. Modifies the \code{.footnote} class.}
 
-\item{footnote_font_size}{Footnote font size. Defaults to 0.9rem. Modifies the \code{.footnote} class.}
+\item{footnote_font_size}{Footnote font size. Defaults to 0.9em. Modifies the \code{.footnote} class.}
 
 \item{footnote_position_bottom}{Footnote location from bottom of screen. Defaults to 60px. Modifies the \code{.footnote} class.}
 
@@ -176,7 +176,7 @@ style_duo_accent_inverse(
 
 \item{header_background_ignore_classes}{Slide Classes Where Header with Background will not be Applied. Defaults to \code{c('normal', 'inverse', 'title', 'middle', 'bottom')}. Modifies the \code{.remark-slide-content} class.}
 
-\item{text_slide_number_font_size}{Slide Number Text Font Size. Defaults to 0.9rem. Modifies the \code{.remark-slide-number} class.}
+\item{text_slide_number_font_size}{Slide Number Text Font Size. Defaults to 0.9em. Modifies the \code{.remark-slide-number} class.}
 
 \item{text_font_google}{Use \code{google_font()} to specify body font. Defaults to \code{NULL}. Modifies the \code{body} element.}
 

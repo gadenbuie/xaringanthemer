@@ -14,7 +14,7 @@
 #' @param code_highlight_color Code Line Highlight. Defaults to rgba(255,255,0,0.5). Modifies the `.remark-code-line-highlighted` class.
 #' @param code_inline_color Inline Code Color. Defaults to `base_color`. Modifies the `.remark-inline-code` class.
 #' @param code_inline_background_color Inline Code Background Color. Defaults to `NULL`. Modifies the `.remark-inline-code` class.
-#' @param code_inline_font_size Inline Code Text Font Size. Defaults to 1rem. Modifies the `.remark-inline-code` class.
+#' @param code_inline_font_size Inline Code Text Font Size. Defaults to 1em. Modifies the `.remark-inline-code` class.
 #' @param inverse_background_color Inverse Background Color. Defaults to `base_color`. Modifies the `.inverse` class.
 #' @param inverse_text_color Inverse Text Color. Defaults to `white_color`. Modifies the `.inverse` class.
 #' @param inverse_text_shadow Enables Shadow on text of inverse slides. Defaults to `FALSE`. Modifies the `.inverse` class.
@@ -25,7 +25,7 @@
 #' @param title_slide_background_size Title Slide Background Image Size, defaults to "cover" if background image is set. Defaults to `NULL`. Modifies the `.title-slide` class.
 #' @param title_slide_background_position Title Slide Background Image Position. Defaults to `NULL`. Modifies the `.title-slide` class.
 #' @param footnote_color Footnote text color (if `NA`, then it will be the same color as `text_color`). Defaults to `NULL`. Modifies the `.footnote` class.
-#' @param footnote_font_size Footnote font size. Defaults to 0.9rem. Modifies the `.footnote` class.
+#' @param footnote_font_size Footnote font size. Defaults to 0.9em. Modifies the `.footnote` class.
 #' @param footnote_position_bottom Footnote location from bottom of screen. Defaults to 60px. Modifies the `.footnote` class.
 #' @param left_column_subtle_color Left Column Text (not last). Defaults to `apply_alpha(base_color, 0.6)`. Modifies the `.left-column h2, .left-column h3` classes.
 #' @param left_column_selected_color Left Column Current Selection. Defaults to `base_color`. Modifies the `.left-column h2:last-of-type, .left-column h3:last-child` classes.
@@ -44,7 +44,7 @@
 #' @param header_background_padding Padding for h1 Header with Background. Defaults to `NULL`. Modifies the `.remark-slide-content h1` class.
 #' @param header_background_content_padding_top Top Padding for Content in Slide with Header with Background. Defaults to 7rem. Modifies the `.remark-slide-content` class.
 #' @param header_background_ignore_classes Slide Classes Where Header with Background will not be Applied. Defaults to `c('normal', 'inverse', 'title', 'middle', 'bottom')`. Modifies the `.remark-slide-content` class.
-#' @param text_slide_number_font_size Slide Number Text Font Size. Defaults to 0.9rem. Modifies the `.remark-slide-number` class.
+#' @param text_slide_number_font_size Slide Number Text Font Size. Defaults to 0.9em. Modifies the `.remark-slide-number` class.
 #' @param text_font_google Use `google_font()` to specify body font. Defaults to `NULL`. Modifies the `body` element.
 #' @param text_font_family Body Text Font Family (xaringan default is `'Droid Serif'`). Defaults to Noto Sans. Modifies the `body` element.
 #' @param text_font_weight Body Text Font Weight. Defaults to normal. Modifies the `body` element.
@@ -81,7 +81,7 @@ style_mono_accent <- function(
   code_highlight_color = "rgba(255,255,0,0.5)",
   code_inline_color = base_color,
   code_inline_background_color = NULL,
-  code_inline_font_size = "1rem",
+  code_inline_font_size = "1em",
   inverse_background_color = base_color,
   inverse_text_color = white_color,
   inverse_text_shadow = FALSE,
@@ -92,7 +92,7 @@ style_mono_accent <- function(
   title_slide_background_size = NULL,
   title_slide_background_position = NULL,
   footnote_color = NULL,
-  footnote_font_size = "0.9rem",
+  footnote_font_size = "0.9em",
   footnote_position_bottom = "60px",
   left_column_subtle_color = apply_alpha(base_color, 0.6),
   left_column_selected_color = base_color,
@@ -111,7 +111,7 @@ style_mono_accent <- function(
   header_background_padding = NULL,
   header_background_content_padding_top = "7rem",
   header_background_ignore_classes = c('normal', 'inverse', 'title', 'middle', 'bottom'),
-  text_slide_number_font_size = "0.9rem",
+  text_slide_number_font_size = "0.9em",
   text_font_google = NULL,
   text_font_family = "Noto Sans",
   text_font_weight = "normal",
