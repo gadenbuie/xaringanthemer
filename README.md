@@ -9,13 +9,14 @@
 status](https://www.r-pkg.org/badges/version/xaringanthemer)](https://CRAN.R-project.org/package=xaringanthemer)
 [![Lifecycle:
 stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://www.tidyverse.org/lifecycle/#stable)
-[![travis](https://travis-ci.org/gadenbuie/xaringanthemer.svg?branch=master)](https://travis-ci.org/gadenbuie/xaringanthemer)
+[![travis](https://travis-ci.com/gadenbuie/xaringanthemer.svg?branch=master)](https://travis-ci.com/gadenbuie/xaringanthemer)
 [![Codecov](https://img.shields.io/codecov/c/github/gadenbuie/xaringanthemer)](https://codecov.io/github/gadenbuie/xaringanthemer)
 <!-- badges: end -->
 
 Give your [xaringan](https://github.com/yihui/xaringan) slides some
 style with **xaringanthemer** within your `slides.Rmd` file without
-(much) CSS.
+(much)
+CSS.
 
 <img src="https://raw.githubusercontent.com/gadenbuie/xaringanthemer/assets/examples.gif" alt="Animation previewing many xaringanthemer themes" />
 
@@ -81,14 +82,16 @@ style_mono_light(
 **xaringanthemer** is <kbd>Tab</kbd> friendly – [use autocomplete to
 explore](#theme-settings) the [template
 variables](vignettes/template-variables.md) that you can adjust in each
-of the themes\!
+of the
+themes\!
 
 <img src="https://raw.githubusercontent.com/gadenbuie/xaringanthemer/assets/example-rstudio-completion.gif" alt="Demonstration of argument auto-completion with RStudio" />
 
 ### R Markdown Template in RStudio
 
 You can also skip the above and just create a *Ninja Themed
-Presentation* from the New R Markdown Document menu in RStudio.
+Presentation* from the New R Markdown Document menu in
+RStudio.
 
 <center>
 
@@ -105,7 +108,8 @@ for your slides, based around a single color.
 
 #### `style_mono_light()`
 
-A light theme based around a single color.
+A light theme based around a single
+color.
 
 ``` r
 style_mono_light(base_color = "#23395b")
@@ -115,7 +119,8 @@ style_mono_light(base_color = "#23395b")
 
 #### `style_mono_dark()`
 
-A dark theme based around a single color.
+A dark theme based around a single
+color.
 
 ``` r
 style_mono_dark(base_color = "#cbf7ed")
@@ -126,7 +131,8 @@ style_mono_dark(base_color = "#cbf7ed")
 #### `style_mono_accent()`
 
 The default xaringan theme with a single color used for color accents on
-select elements (headers, bold text, etc.).
+select elements (headers, bold text,
+etc.).
 
 ``` r
 style_mono_accent(base_color = "#43418A")
@@ -137,7 +143,8 @@ style_mono_accent(base_color = "#43418A")
 #### `style_mono_accent_inverse()`
 
 An “inverted” default xaringan theme with a single color used for color
-accents on select elements (headers, bold text, etc.).
+accents on select elements (headers, bold text,
+etc.).
 
 ``` r
 style_mono_accent_inverse(base_color = "#3C989E")
@@ -151,7 +158,8 @@ These themes build from two (ideally) complementary colors.
 
 #### `style_duo()`
 
-A two-colored theme based on a primary and secondary color.
+A two-colored theme based on a primary and secondary
+color.
 
 ``` r
 style_duo(primary_color = "#1F4257", secondary_color = "#F97B64")
@@ -161,7 +169,8 @@ style_duo(primary_color = "#1F4257", secondary_color = "#F97B64")
 
 #### `style_duo_accent()`
 
-The default Xaringan theme with two accent colors.
+The default Xaringan theme with two accent
+colors.
 
 ``` r
 style_duo_accent(primary_color = "#006747", secondary_color = "#CFC493")
@@ -171,7 +180,8 @@ style_duo_accent(primary_color = "#006747", secondary_color = "#CFC493")
 
 #### `style_duo_accent_inverse()`
 
-An “inverted” default Xaringan theme with two accent colors.
+An “inverted” default Xaringan theme with two accent
+colors.
 
 ``` r
 style_duo_accent_inverse(primary_color = "#006747", secondary_color = "#CFC493")
