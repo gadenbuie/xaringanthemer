@@ -676,13 +676,13 @@ get_theme_font <- function(element = c("text", "header", "code")) {
       grepl("fonts.google", xaringanthemer_env[[element_url]], fixed = TRUE)
   }
 
-  register_font(family, google = is_google_font, fn = sys.calls()[[max(1, length(sys.calls()) - 1)]])
+  register_font(family, google = is_google_font, fn = sys.calls()[[max(1, sys.nframe() - 1)]][[1]])
 }
 
 register_font <- function(
   family,
   google = TRUE,
-  fn = sys.calls()[[max(1, length(sys.calls()) - 1)]][[1]],
+  fn = sys.calls()[[max(1, sys.nframe() - 1)]][[1]],
   ...
 ) {
   if (is.null(family)) {
