@@ -38,7 +38,7 @@
   
 
 <meta property="og:title" content="A Plot Theme for ggplot2 by xaringanthemer — theme_xaringan" />
-<meta property="og:description" content="Lifecycle: Experimental.
+<meta property="og:description" content="Lifecycle: Maturing
 Creates ggplot2 themes to match the xaringanthemer theme used in the
 xaringan slides that seamlessly matches the &quot;normal&quot; slide colors and
 styles." />
@@ -144,7 +144,7 @@ styles." />
     </div>
 
     <div class="ref-description">
-    <p><strong>Lifecycle:</strong> <a href='https://www.tidyverse.org/lifecycle/#experimental'>Experimental</a>.</p>
+    <p><strong>Lifecycle:</strong> <a href='https://www.tidyverse.org/lifecycle/#maturing'>Maturing</a></p>
 <p>Creates <span class="pkg">ggplot2</span> themes to match the xaringanthemer theme used in the
 <span class="pkg">xaringan</span> slides that seamlessly matches the "normal" slide colors and
 styles.</p>
@@ -156,7 +156,14 @@ styles.</p>
   <span class='kw'>accent_color</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
   <span class='kw'>accent_secondary_color</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
   <span class='kw'>css_file</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='no'>...</span>
+  <span class='kw'>set_ggplot_defaults</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>,
+  <span class='kw'>text_font</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>text_font_use_google</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>text_font_size</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>title_font</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>title_font_use_google</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>title_font_size</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>use_showtext</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>
 )</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
@@ -191,25 +198,47 @@ if you have only saved your theme CSS file and you aren't creating your
 CSS theme with <span class="pkg">xaringanthemer</span> in your slides' source file.</p></td>
     </tr>
     <tr>
-      <th>...</th>
-      <td><p>Arguments passed on to <code><a href='theme_xaringan_base.html'>theme_xaringan_base</a></code></p><dl class='dl-horizontal'>
-    <dt><code>set_ggplot_defaults</code></dt><dd><p>Should defaults be set for <span class="pkg">ggplot2</span> <em>geoms</em>?
+      <th>set_ggplot_defaults</th>
+      <td><p>Should defaults be set for <span class="pkg">ggplot2</span> <em>geoms</em>?
 Defaults to TRUE. To restore ggplot's defaults, or the previously set geom
-defaults, see <code><a href='theme_xaringan_set_defaults.html'>theme_xaringan_restore_defaults()</a></code>.</p></dd>
-    <dt><code>text_font</code></dt><dd><p>Font to use for text elements, passed to
+defaults, see <code><a href='theme_xaringan_set_defaults.html'>theme_xaringan_restore_defaults()</a></code>.</p></td>
+    </tr>
+    <tr>
+      <th>text_font</th>
+      <td><p>Font to use for text elements, passed to
 <code><a href='https://rdrr.io/pkg/sysfonts/man/font_add_google.html'>sysfonts::font_add_google()</a></code>, if available and <code>text_font_use_google</code> is
-<code>TRUE</code>. Inherits from <code>text_font_family</code>.</p></dd>
-    <dt><code>text_font_use_google</code></dt><dd><p>Is <code>text_font</code> available on <a href='https://fonts.google.com'>Google Fonts</a>?</p></dd>
-    <dt><code>text_font_size</code></dt><dd><p>Base text font size, inherits from <code>text_font_size</code>, or
-defaults to 11.</p></dd>
-    <dt><code>title_font</code></dt><dd><p>Font to use for title elements, passed to
+<code>TRUE</code>. Inherits from <code>text_font_family</code>.</p></td>
+    </tr>
+    <tr>
+      <th>text_font_use_google</th>
+      <td><p>Is <code>text_font</code> available on <a href='https://fonts.google.com'>Google Fonts</a>?</p></td>
+    </tr>
+    <tr>
+      <th>text_font_size</th>
+      <td><p>Base text font size, inherits from <code>text_font_size</code>, or
+defaults to 11.</p></td>
+    </tr>
+    <tr>
+      <th>title_font</th>
+      <td><p>Font to use for title elements, passed to
 <code><a href='https://rdrr.io/pkg/sysfonts/man/font_add_google.html'>sysfonts::font_add_google()</a></code>, if available and <code>title_font_use_google</code> is
-<code>TRUE</code>. Inherits from <code>title_font_family</code>.</p></dd>
-    <dt><code>title_font_use_google</code></dt><dd><p>Is <code>title_font</code> available on <a href='https://fonts.google.com'>Google Fonts</a>?</p></dd>
-    <dt><code>title_font_size</code></dt><dd><p>Base text font size, inherits from <code>title_font_size</code>,
-or defaults to 14.</p></dd>
-  
-</dl></td>
+<code>TRUE</code>. Inherits from <code>title_font_family</code>.</p></td>
+    </tr>
+    <tr>
+      <th>title_font_use_google</th>
+      <td><p>Is <code>title_font</code> available on <a href='https://fonts.google.com'>Google Fonts</a>?</p></td>
+    </tr>
+    <tr>
+      <th>title_font_size</th>
+      <td><p>Base text font size, inherits from <code>title_font_size</code>,
+or defaults to 14.</p></td>
+    </tr>
+    <tr>
+      <th>use_showtext</th>
+      <td><p>If <code>TRUE</code> (default) the <span class="pkg">showtext</span> package will be
+used to register Google fonts. Set to <code>FALSE</code> to disable this feature
+entirely, which may result in errors during plotting if the fonts used are
+not available locally.</p></td>
     </tr>
     </table>
 

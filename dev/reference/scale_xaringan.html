@@ -38,7 +38,7 @@
   
 
 <meta property="og:title" content="Xaringan Themer ggplot2 Scales — scale_xaringan" />
-<meta property="og:description" content="Lifecycle: Experimental.
+<meta property="og:description" content="Lifecycle: Maturing
 Color and fill single-color scales for discrete and continuous values,
 created using the primary accent color of the xaringanthemer styles." />
 <meta name="twitter:card" content="summary" />
@@ -143,7 +143,7 @@ created using the primary accent color of the xaringanthemer styles." />
     </div>
 
     <div class="ref-description">
-    <p><strong>Lifecycle:</strong> <a href='https://www.tidyverse.org/lifecycle/#experimental'>Experimental</a>.</p>
+    <p><strong>Lifecycle:</strong> <a href='https://www.tidyverse.org/lifecycle/#maturing'>Maturing</a></p>
 <p>Color and fill single-color scales for discrete and continuous values,
 created using the primary accent color of the xaringanthemer styles.</p>
     </div>
@@ -216,10 +216,10 @@ One of "color", "colour", or "fill".</p></td>
     <tr>
       <th>...</th>
       <td><p>Arguments passed on to either the <span class="pkg">colorspace</span> scale
-functions — one of <a href='https://rdrr.io/pkg/colorspace/man/scale_colour_discrete_sequential.html'>colorspace::scale_color_discrete_sequential</a>,
-<a href='https://rdrr.io/pkg/colorspace/man/scale_colour_continuous_sequential.html'>colorspace::scale_color_continuous_sequential</a>,
-<a href='https://rdrr.io/pkg/colorspace/man/scale_colour_discrete_sequential.html'>colorspace::scale_fill_discrete_sequential</a>, or
-<a href='https://rdrr.io/pkg/colorspace/man/scale_colour_continuous_sequential.html'>colorspace::scale_fill_continuous_sequential</a> — or to
+functions — one of <a href='http://colorspace.R-Forge.R-project.org//reference/scale_colour_discrete_sequential.html'>colorspace::scale_color_discrete_sequential</a>,
+<a href='http://colorspace.R-Forge.R-project.org//reference/scale_colour_continuous_sequential.html'>colorspace::scale_color_continuous_sequential</a>,
+<a href='http://colorspace.R-Forge.R-project.org//reference/scale_colour_discrete_sequential.html'>colorspace::scale_fill_discrete_sequential</a>, or
+<a href='http://colorspace.R-Forge.R-project.org//reference/scale_colour_continuous_sequential.html'>colorspace::scale_fill_continuous_sequential</a> — or to
 <a href='https://ggplot2.tidyverse.org/reference/continuous_scale.html'>ggplot2::continuous_scale</a> or <a href='https://ggplot2.tidyverse.org/reference/discrete_scale.html'>ggplot2::discrete_scale</a>.</p></td>
     </tr>
     <tr>
@@ -250,11 +250,59 @@ value of <code>inverse_header_color</code></p></td>
     </table>
 
 
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='co'># Requires ggplot2</span>
+<span class='no'>has_ggplot2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/ns-load.html'>requireNamespace</a></span>(<span class='st'>"ggplot2"</span>, <span class='kw'>quietly</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)
+
+<span class='kw'>if</span> (<span class='no'>has_ggplot2</span>) {
+  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>ggplot2</span>)
+  <span class='co'># Saving the theme to a temp file because this is an example</span>
+  <span class='no'>path_to_css_file</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/tempfile.html'>tempfile</a></span>(<span class='kw'>fileext</span> <span class='kw'>=</span> <span class='st'>".css"</span>)
+
+  <span class='co'># Create the xaringan theme: dark blue background with teal green accents</span>
+  <span class='fu'><a href='style_duo.html'>style_duo</a></span>(
+    <span class='kw'>primary_color</span> <span class='kw'>=</span> <span class='st'>"#002b36"</span>,
+    <span class='kw'>secondary_color</span> <span class='kw'>=</span> <span class='st'>"#31b09e"</span>,
+    <span class='co'># Using basic fonts for this example, but the plot theme will</span>
+    <span class='co'># automatically use your theme font if you use Google fonts</span>
+    <span class='kw'>text_font_family</span> <span class='kw'>=</span> <span class='st'>"sans"</span>,
+    <span class='kw'>header_font_family</span> <span class='kw'>=</span> <span class='st'>"serif"</span>,
+    <span class='kw'>outfile</span> <span class='kw'>=</span> <span class='no'>path_to_css_file</span>
+  )
+
+  <span class='co'># Here's some very basic example data</span>
+  <span class='no'>ex</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span>(
+    <span class='kw'>name</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"Couple"</span>, <span class='st'>"Few"</span>, <span class='st'>"Lots"</span>, <span class='st'>"Many"</span>),
+    <span class='kw'>n</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>2</span>, <span class='fl'>3</span>, <span class='fl'>5</span>, <span class='fl'>7</span>)
+  )
+
+  <span class='co'># Fill color scales demo</span>
+  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span>(<span class='no'>ex</span>) +
+    <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span>(<span class='no'>name</span>, <span class='no'>n</span>, <span class='kw'>fill</span> <span class='kw'>=</span> <span class='no'>n</span>) +
+    <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_bar.html'>geom_col</a></span>() +
+    <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>ggtitle</a></span>(<span class='st'>"Matching fill scales"</span>) +
+    <span class='co'># themed to match the slides: dark blue background with teal text</span>
+    <span class='fu'><a href='theme_xaringan.html'>theme_xaringan</a></span>() +
+    <span class='co'># Fill color matches teal text</span>
+    <span class='fu'>scale_xaringan_fill_continuous</span>()
+
+  <span class='co'># Color scales demo</span>
+  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span>(<span class='no'>ex</span>) +
+    <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span>(<span class='no'>name</span>, <span class='kw'>y</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>color</span> <span class='kw'>=</span> <span class='no'>name</span>) +
+    <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span>(<span class='kw'>size</span> <span class='kw'>=</span> <span class='fl'>10</span>) +
+    <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>ggtitle</a></span>(<span class='st'>"Matching color scales"</span>) +
+    <span class='co'># themed to match the slides: dark blue background with teal text</span>
+    <span class='fu'><a href='theme_xaringan.html'>theme_xaringan</a></span>() +
+    <span class='co'># Fill color matches teal text</span>
+    <span class='fu'>scale_xaringan_color_discrete</span>(<span class='kw'>direction</span> <span class='kw'>=</span> -<span class='fl'>1</span>)
+}</div><div class='img'><img src='scale_xaringan-1.png' alt='' width='700' height='433' /></div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
+      <li><a href="#examples">Examples</a></li>
     </ul>
 
   </div>

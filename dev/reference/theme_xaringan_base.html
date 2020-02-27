@@ -38,7 +38,7 @@
   
 
 <meta property="og:title" content="The ggplot2 xaringanthemer base plot theme — theme_xaringan_base" />
-<meta property="og:description" content="Lifecycle: Experimental.
+<meta property="og:description" content="Lifecycle: Maturing
 Provides a base plot theme for ggplot2 to match the xaringan slide theme
 created by xaringanthemer. The theme is designed to create a general plot
 style from two colors, a background_color and a text_color (or foreground
@@ -148,7 +148,7 @@ xaringanthemer for a plot theme that matches the slide style." />
     </div>
 
     <div class="ref-description">
-    <p><strong>Lifecycle:</strong> <a href='https://www.tidyverse.org/lifecycle/#experimental'>Experimental</a>.</p>
+    <p><strong>Lifecycle:</strong> <a href='https://www.tidyverse.org/lifecycle/#maturing'>Maturing</a></p>
 <p>Provides a base plot theme for <span class="pkg">ggplot2</span> to match the <span class="pkg">xaringan</span> slide theme
 created by <a href='xaringanthemer-package.html'>xaringanthemer</a>. The theme is designed to create a general plot
 style from two colors, a <code>background_color</code> and a <code>text_color</code> (or foreground
@@ -170,7 +170,8 @@ xaringanthemer for a plot theme that matches the slide style.</p>
   <span class='kw'>text_font_size</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
   <span class='kw'>title_font</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
   <span class='kw'>title_font_use_google</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>title_font_size</span> <span class='kw'>=</span> <span class='kw'>NULL</span>
+  <span class='kw'>title_font_size</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>use_showtext</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>
 )</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
@@ -236,6 +237,13 @@ defaults to 11.</p></td>
       <th>title_font_size</th>
       <td><p>Base text font size, inherits from <code>title_font_size</code>,
 or defaults to 14.</p></td>
+    </tr>
+    <tr>
+      <th>use_showtext</th>
+      <td><p>If <code>TRUE</code> (default) the <span class="pkg">showtext</span> package will be
+used to register Google fonts. Set to <code>FALSE</code> to disable this feature
+entirely, which may result in errors during plotting if the fonts used are
+not available locally.</p></td>
     </tr>
     </table>
 
