@@ -67,7 +67,7 @@ not available locally.}
 A ggplot2 theme
 }
 \description{
-\strong{Lifecycle:} \href{https://www.tidyverse.org/lifecycle/#experimental}{Experimental}.
+\strong{Lifecycle:} \href{https://www.tidyverse.org/lifecycle/#maturing}{Maturing}
 
 Provides a base plot theme for \pkg{ggplot2} to match the \pkg{xaringan} slide theme
 created by \link{xaringanthemer}. The theme is designed to create a general plot

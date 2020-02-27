@@ -70,7 +70,7 @@ not available locally.}
 A ggplot2 theme
 }
 \description{
-\strong{Lifecycle:} \href{https://www.tidyverse.org/lifecycle/#experimental}{Experimental}.
+\strong{Lifecycle:} \href{https://www.tidyverse.org/lifecycle/#maturing}{Maturing}
 
 A \pkg{ggplot2} xaringanthemer plot theme to seamlessly match the "inverse"
 \pkg{xaringan} slide colors and styles as styled by \link{xaringanthemer}.

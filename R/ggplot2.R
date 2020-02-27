@@ -3,7 +3,7 @@
 #'
 #' @description
 #'
-#' **Lifecycle:** [Experimental](https://www.tidyverse.org/lifecycle/#experimental).
+#' **Lifecycle:** [Maturing](https://www.tidyverse.org/lifecycle/#maturing)
 #'
 #' Creates \pkg{ggplot2} themes to match the xaringanthemer theme used in the
 #' \pkg{xaringan} slides that seamlessly matches the "normal" slide colors and
@@ -96,7 +96,7 @@ theme_xaringan <- function(
 #'
 #' @description
 #'
-#' **Lifecycle:** [Experimental](https://www.tidyverse.org/lifecycle/#experimental).
+#' **Lifecycle:** [Maturing](https://www.tidyverse.org/lifecycle/#maturing)
 #'
 #' A \pkg{ggplot2} xaringanthemer plot theme to seamlessly match the "inverse"
 #' \pkg{xaringan} slide colors and styles as styled by [xaringanthemer].
@@ -184,7 +184,7 @@ theme_xaringan_inverse <- function(
 #'
 #' @description
 #'
-#' **Lifecycle:** [Experimental](https://www.tidyverse.org/lifecycle/#experimental).
+#' **Lifecycle:** [Maturing](https://www.tidyverse.org/lifecycle/#maturing)
 #'
 #' Provides a base plot theme for \pkg{ggplot2} to match the \pkg{xaringan} slide theme
 #' created by [xaringanthemer]. The theme is designed to create a general plot
@@ -363,7 +363,7 @@ theme_xaringan_base <- function(
 #'
 #' @description
 #'
-#' **Lifecycle:** [Experimental](https://www.tidyverse.org/lifecycle/#experimental).
+#' **Lifecycle:** [Maturing](https://www.tidyverse.org/lifecycle/#maturing)
 #'
 #' Set \pkg{ggplot2} _geom_ defaults to match [theme_xaringan()] with
 #' `theme_xaringan_set_defaults()` and restore the standard or previously-set
@@ -488,7 +488,7 @@ safely_set_geom <- function(geom, new) {
 #'
 #' @description
 #'
-#' **Lifecycle:** [Experimental](https://www.tidyverse.org/lifecycle/#experimental).
+#' **Lifecycle:** [Maturing](https://www.tidyverse.org/lifecycle/#maturing)
 #'
 #' Color and fill single-color scales for discrete and continuous values,
 #' created using the primary accent color of the xaringanthemer styles.

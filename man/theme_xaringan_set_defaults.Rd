@@ -37,7 +37,7 @@ Invisibly returns a list of the current ggplot2 geom defaults
 Invisibly returns a list of the current ggplot2 geom defaults
 }
 \description{
-\strong{Lifecycle:} \href{https://www.tidyverse.org/lifecycle/#experimental}{Experimental}.
+\strong{Lifecycle:} \href{https://www.tidyverse.org/lifecycle/#maturing}{Maturing}
 
 Set \pkg{ggplot2} \emph{geom} defaults to match \code{\link[=theme_xaringan]{theme_xaringan()}} with
 \code{theme_xaringan_set_defaults()} and restore the standard or previously-set
