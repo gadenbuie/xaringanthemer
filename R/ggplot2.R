@@ -192,6 +192,10 @@ theme_xaringan_inverse <- function(
 #'   Fonts](https://fonts.google.com)?
 #' @param title_font_size Base text font size, inherits from `title_font_size`,
 #'   or defaults to 14.
+#' @param use_showtext If `TRUE` (default) the \pkg{showtext} package will be
+#'   used to register Google fonts. Set to `FALSE` to disable this feature
+#'   entirely, which may result in errors during plotting if the fonts used are
+#'   not available locally.
 #' @param ... Ignored
 #'
 #' @examples
@@ -254,7 +258,8 @@ theme_xaringan_base <- function(
   text_font_size = NULL,
   title_font = NULL,
   title_font_use_google = NULL,
-  title_font_size = NULL
+  title_font_size = NULL,
+  use_showtext = TRUE
 ) {
   text_color <- full_length_hex(text_color)
   background_color <- full_length_hex(background_color)
@@ -265,12 +270,12 @@ theme_xaringan_base <- function(
   title_font_size <- title_font_size %||% web_to_point(xaringanthemer_env$header_h3_font_size, scale = 0.8) %||% 14
 
   text_font <- if (!is.null(text_font)) {
-    register_font(text_font, identical(text_font_use_google, TRUE))
+    register_font(text_font, identical(text_font_use_google, TRUE) && use_showtext)
   } else {
     get_theme_font("text")
   }
   title_font <- if (!is.null(title_font)) {
-    register_font(title_font, identical(title_font_use_google, TRUE))
+    register_font(title_font, identical(title_font_use_google, TRUE) && use_showtext)
   } else {
     get_theme_font("header")
   }
@@ -661,7 +666,7 @@ hex2HCL <- function(x) {
 
 # Fonts -------------------------------------------------------------------
 
-get_theme_font <- function(element = c("text", "header", "code")) {
+get_theme_font <- function(element = c("text", "header", "code"), use_showtext = TRUE) {
   element <- match.arg(element)
 
   element_family <- paste0(element, "_font_family")
@@ -676,16 +681,22 @@ get_theme_font <- function(element = c("text", "header", "code")) {
       grepl("fonts.google", xaringanthemer_env[[element_url]], fixed = TRUE)
   }
 
-  register_font(family, google = is_google_font, fn = sys.calls()[[max(1, sys.nframe() - 1)]][[1]])
+  register_font(
+    family,
+    google = is_google_font,
+    fn = sys.calls()[[max(1, sys.nframe() - 1)]][[1]],
+    use_showtext = use_showtext
+  )
 }
 
 register_font <- function(
   family,
   google = TRUE,
   fn = sys.calls()[[max(1, sys.nframe() - 1)]][[1]],
-  ...
+  ...,
+  use_showtext = TRUE
 ) {
-  if (is.null(family)) {
+  if (is.null(family) || !use_showtext) {
     return(NULL)
   }
   family <- gsub("['\"]", "", family)

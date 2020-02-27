@@ -50,6 +50,10 @@ defaults to 11.}
     \item{\code{title_font_use_google}}{Is \code{title_font} available on \href{https://fonts.google.com}{Google Fonts}?}
     \item{\code{title_font_size}}{Base text font size, inherits from \code{title_font_size},
 or defaults to 14.}
+    \item{\code{use_showtext}}{If \code{TRUE} (default) the \pkg{showtext} package will be
+used to register Google fonts. Set to \code{FALSE} to disable this feature
+entirely, which may result in errors during plotting if the fonts used are
+not available locally.}
   }}
 }
 \value{

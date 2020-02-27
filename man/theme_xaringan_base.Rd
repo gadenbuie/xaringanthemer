@@ -16,7 +16,8 @@ theme_xaringan_base(
   text_font_size = NULL,
   title_font = NULL,
   title_font_use_google = NULL,
-  title_font_size = NULL
+  title_font_size = NULL,
+  use_showtext = TRUE
 )
 }
 \arguments{
@@ -56,6 +57,11 @@ defaults to 11.}
 
 \item{title_font_size}{Base text font size, inherits from \code{title_font_size},
 or defaults to 14.}
+
+\item{use_showtext}{If \code{TRUE} (default) the \pkg{showtext} package will be
+used to register Google fonts. Set to \code{FALSE} to disable this feature
+entirely, which may result in errors during plotting if the fonts used are
+not available locally.}
 }
 \value{
 A ggplot2 theme
