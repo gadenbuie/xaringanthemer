@@ -115,3 +115,7 @@ quote_elements_w_spaces <- function(x) {
   x[has_space & not_quoted] <- paste0("'", x[has_space & not_quoted], "'")
   paste(x, collapse = ", ")
 }
+
+str_wrap <- function(...) {
+  paste(strwrap(paste0(...)), collapse = "\n")
+}

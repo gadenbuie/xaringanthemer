@@ -742,7 +742,9 @@ register_font <- function(
           "Font '{family}' must be manually registered using `sysfonts::font_add()`."
         )
       }
-      warning(msg, call. = FALSE)
+      warning(str_wrap(msg), call. = FALSE)
+    } else {
+      verify_fig_showtext(fn)
     }
   }
   xaringanthemer_env[["registered_font_families"]] <- c(
@@ -750,6 +752,19 @@ register_font <- function(
     family
   )
   family
+}
+
+verify_fig_showtext <- function(fn = "theme_xaringan_base") {
+  if (is.null(knitr::current_input())) return()
+  # Try to set fig.showtext automatically
+  if (isTRUE(knitr::opts_current$get("fig.showtext"))) {
+    return()
+  }
+  stop(str_wrap(
+    "To use ", fn, "() with knitr, you need to set the chunk option ",
+    "`fig.showtext = TRUE` for this chunk. Or you can set this option ",
+    "globally with `knitr::opts_chunk$set(fig.showtext = TRUE)`."
+  ))
 }
 
 requires_xaringanthemer_env <- function(
