@@ -163,7 +163,7 @@ describe("list2css()", {
     )
     expect_error(
       list2css(list(body = list("#bad"), thing = list("#bad"))),
-      "elements.+must be named.+body, thing.+have"
+      "elements.+must be named.+body.+thing.+have"
     )
   })
 

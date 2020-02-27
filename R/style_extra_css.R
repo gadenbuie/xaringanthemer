@@ -62,27 +62,27 @@ list2css <- function(css) {
     stop("All elements in `css` list must be named", call. = FALSE)
   }
   if (purrr::vec_depth(css) != 3) {
-    stop(
+    stop(str_wrap(
       "`css` list must be a named list within a named list, e.g.:\n",
       '  list(".class-id" = list("css-property" = "value"))'
-    )
+    ))
   }
   if (any(names(css) == "")) {
     not_named <- which(names(css) == "")
     if (length(not_named) > 1) {
-      stop(
+      stop(str_wrap(
         call. = FALSE,
         "All elements in `css` list must be named. Items ",
         paste(not_named, collapse = ", "),
         " are unnamed."
-      )
+      ))
     } else {
-      stop(
+      stop(str_wrap(
         call. = FALSE,
         "All elements in `css` list must be named. Item ",
         not_named,
         " is not named."
-      )
+      ))
     }
   }
   child_unnamed <- purrr::map_lgl(purrr::map(css, ~ {
@@ -97,7 +97,7 @@ list2css <- function(css) {
       if (length(has_unnamed) > 1) "have" else "has",
       "unnamed property or properties."
     )
-    stop(msg, call. = FALSE)
+    stop(str_wrap(msg), call. = FALSE)
   }
 
   x <- purrr::imap_chr(css, function(rules, selector) {
