@@ -107,10 +107,27 @@ has_ggplot2 <- requireNamespace("ggplot2", quietly = TRUE)
 
 if (has_ggplot2) {
   library(ggplot2)
+  # Saving the theme to a temp file because this is an example
+  path_to_css_file <- tempfile(fileext = ".css")
+
+  # Create the xaringan theme: dark blue background with teal green accents
+  style_duo(
+    primary_color = "#002b36",
+    secondary_color = "#31b09e",
+    # Using basic fonts for this example, but the plot theme will
+    # automatically use your theme font if you use Google fonts
+    text_font_family = "sans",
+    header_font_family = "serif",
+    outfile = path_to_css_file
+  )
+
+  # Here's some very basic example data
   ex <- data.frame(
     name = c("Couple", "Few", "Lots", "Many"),
     n = c(2, 3, 5, 7)
   )
+
+  # Fill color scales demo
   ggplot(ex) +
     aes(name, n, fill = n) +
     geom_col() +
@@ -120,6 +137,7 @@ if (has_ggplot2) {
     # Fill color matches teal text
     scale_xaringan_fill_continuous()
 
+  # Color scales demo
   ggplot(ex) +
     aes(name, y = 1, color = name) +
     geom_point(size = 10) +
