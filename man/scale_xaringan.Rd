@@ -96,8 +96,38 @@ value of \code{inverse_header_color}}
 \item{end}{Number in the range of \code{[0, 1]} indicating to which point in the color scale the largest data value should be mapped.}
 }
 \description{
-\strong{Lifecycle:} \href{https://www.tidyverse.org/lifecycle/#experimental}{Experimental}.
+\strong{Lifecycle:} \href{https://www.tidyverse.org/lifecycle/#maturing}{Maturing}
 
 Color and fill single-color scales for discrete and continuous values,
 created using the primary accent color of the xaringanthemer styles.
+}
+\examples{
+# Requires ggplot2
+has_ggplot2 <- requireNamespace("ggplot2", quietly = TRUE)
+
+if (has_ggplot2) {
+  library(ggplot2)
+  ex <- data.frame(
+    name = c("Couple", "Few", "Lots", "Many"),
+    n = c(2, 3, 5, 7)
+  )
+  ggplot(ex) +
+    aes(name, n, fill = n) +
+    geom_col() +
+    ggtitle("Matching fill scales") +
+    # themed to match the slides: dark blue background with teal text
+    theme_xaringan() +
+    # Fill color matches teal text
+    scale_xaringan_fill_continuous()
+
+  ggplot(ex) +
+    aes(name, y = 1, color = name) +
+    geom_point(size = 10) +
+    ggtitle("Matching color scales") +
+    # themed to match the slides: dark blue background with teal text
+    theme_xaringan() +
+    # Fill color matches teal text
+    scale_xaringan_color_discrete(direction = -1)
+}
+
 }

@@ -510,6 +510,37 @@ safely_set_geom <- function(geom, new) {
 #' @inheritParams colorspace::scale_color_continuous_sequential
 #' @param aes_type The type of aesthetic to which the scale is being applied.
 #'   One of "color", "colour", or "fill".
+#'
+#'
+#' @examples
+#' # Requires ggplot2
+#' has_ggplot2 <- requireNamespace("ggplot2", quietly = TRUE)
+#'
+#' if (has_ggplot2) {
+#'   library(ggplot2)
+#'   ex <- data.frame(
+#'     name = c("Couple", "Few", "Lots", "Many"),
+#'     n = c(2, 3, 5, 7)
+#'   )
+#'   ggplot(ex) +
+#'     aes(name, n, fill = n) +
+#'     geom_col() +
+#'     ggtitle("Matching fill scales") +
+#'     # themed to match the slides: dark blue background with teal text
+#'     theme_xaringan() +
+#'     # Fill color matches teal text
+#'     scale_xaringan_fill_continuous()
+#'
+#'   ggplot(ex) +
+#'     aes(name, y = 1, color = name) +
+#'     geom_point(size = 10) +
+#'     ggtitle("Matching color scales") +
+#'     # themed to match the slides: dark blue background with teal text
+#'     theme_xaringan() +
+#'     # Fill color matches teal text
+#'     scale_xaringan_color_discrete(direction = -1)
+#' }
+#'
 #' @name scale_xaringan
 NULL
 
