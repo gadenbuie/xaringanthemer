@@ -10,7 +10,14 @@ theme_xaringan(
   accent_color = NULL,
   accent_secondary_color = NULL,
   css_file = NULL,
-  ...
+  set_ggplot_defaults = TRUE,
+  text_font = NULL,
+  text_font_use_google = NULL,
+  text_font_size = NULL,
+  title_font = NULL,
+  title_font_use_google = NULL,
+  title_font_size = NULL,
+  use_showtext = TRUE
 )
 }
 \arguments{
@@ -32,29 +39,32 @@ lets you create a \pkg{ggplot2} theme for your \pkg{xaringan} slides, even
 if you have only saved your theme CSS file and you aren't creating your
 CSS theme with \pkg{xaringanthemer} in your slides' source file.}
 
-\item{...}{
-  Arguments passed on to \code{\link[=theme_xaringan_base]{theme_xaringan_base}}
-  \describe{
-    \item{\code{set_ggplot_defaults}}{Should defaults be set for \pkg{ggplot2} \emph{geoms}?
+\item{set_ggplot_defaults}{Should defaults be set for \pkg{ggplot2} \emph{geoms}?
 Defaults to TRUE. To restore ggplot's defaults, or the previously set geom
 defaults, see \code{\link[=theme_xaringan_restore_defaults]{theme_xaringan_restore_defaults()}}.}
-    \item{\code{text_font}}{Font to use for text elements, passed to
+
+\item{text_font}{Font to use for text elements, passed to
 \code{\link[sysfonts:font_add_google]{sysfonts::font_add_google()}}, if available and \code{text_font_use_google} is
 \code{TRUE}. Inherits from \code{text_font_family}.}
-    \item{\code{text_font_use_google}}{Is \code{text_font} available on \href{https://fonts.google.com}{Google Fonts}?}
-    \item{\code{text_font_size}}{Base text font size, inherits from \code{text_font_size}, or
+
+\item{text_font_use_google}{Is \code{text_font} available on \href{https://fonts.google.com}{Google Fonts}?}
+
+\item{text_font_size}{Base text font size, inherits from \code{text_font_size}, or
 defaults to 11.}
-    \item{\code{title_font}}{Font to use for title elements, passed to
+
+\item{title_font}{Font to use for title elements, passed to
 \code{\link[sysfonts:font_add_google]{sysfonts::font_add_google()}}, if available and \code{title_font_use_google} is
 \code{TRUE}. Inherits from \code{title_font_family}.}
-    \item{\code{title_font_use_google}}{Is \code{title_font} available on \href{https://fonts.google.com}{Google Fonts}?}
-    \item{\code{title_font_size}}{Base text font size, inherits from \code{title_font_size},
+
+\item{title_font_use_google}{Is \code{title_font} available on \href{https://fonts.google.com}{Google Fonts}?}
+
+\item{title_font_size}{Base text font size, inherits from \code{title_font_size},
 or defaults to 14.}
-    \item{\code{use_showtext}}{If \code{TRUE} (default) the \pkg{showtext} package will be
+
+\item{use_showtext}{If \code{TRUE} (default) the \pkg{showtext} package will be
 used to register Google fonts. Set to \code{FALSE} to disable this feature
 entirely, which may result in errors during plotting if the fonts used are
 not available locally.}
-  }}
 }
 \value{
 A ggplot2 theme

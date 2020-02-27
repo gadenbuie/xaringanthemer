@@ -22,7 +22,7 @@
 #'   lets you create a \pkg{ggplot2} theme for your \pkg{xaringan} slides, even
 #'   if you have only saved your theme CSS file and you aren't creating your
 #'   CSS theme with \pkg{xaringanthemer} in your slides' source file.
-#' @inheritDotParams theme_xaringan_base
+#' @inheritParams theme_xaringan_base
 #'
 #' @examples
 #' # Requires ggplot2
@@ -59,7 +59,14 @@ theme_xaringan <- function(
   accent_color = NULL,
   accent_secondary_color = NULL,
   css_file = NULL,
-  ...
+  set_ggplot_defaults = TRUE,
+  text_font = NULL,
+  text_font_use_google = NULL,
+  text_font_size = NULL,
+  title_font = NULL,
+  title_font_use_google = NULL,
+  title_font_size = NULL,
+  use_showtext = TRUE
 ) {
   requires_xaringanthemer_env(css_file = css_file, try_css = TRUE)
   requires_package(fn = "xaringan_theme")
@@ -74,7 +81,14 @@ theme_xaringan <- function(
     background_color,
     accent_color = accent_color,
     accent_secondary_color = accent_secondary_color,
-    ...
+    set_ggplot_defaults = set_ggplot_defaults,
+    text_font = text_font,
+    text_font_use_google = text_font_use_google,
+    text_font_size = text_font_size,
+    title_font = title_font,
+    title_font_use_google = title_font_use_google,
+    title_font_size = title_font_size,
+    use_showtext = use_showtext
   )
 }
 
@@ -95,7 +109,7 @@ theme_xaringan <- function(
 #' @param accent_secondary_color Color for secondary accents, inherits from
 #'   `text_bold_color`
 #' @inheritParams theme_xaringan
-#' @inheritDotParams theme_xaringan_base
+#' @inheritParams theme_xaringan_base
 #'
 #' @examples
 #' # Requires ggplot2
@@ -133,7 +147,14 @@ theme_xaringan_inverse <- function(
   accent_color = NULL,
   accent_secondary_color = NULL,
   css_file = NULL,
-  ...
+  set_ggplot_defaults = TRUE,
+  text_font = NULL,
+  text_font_use_google = NULL,
+  text_font_size = NULL,
+  title_font = NULL,
+  title_font_use_google = NULL,
+  title_font_size = NULL,
+  use_showtext = TRUE
 ) {
   requires_xaringanthemer_env(css_file = css_file, try_css = TRUE)
   requires_package(fn = "xaringan_theme")
@@ -148,7 +169,14 @@ theme_xaringan_inverse <- function(
     background_color,
     accent_color = accent_color,
     accent_secondary_color = accent_secondary_color,
-    ...
+    set_ggplot_defaults = set_ggplot_defaults,
+    text_font = text_font,
+    text_font_use_google = text_font_use_google,
+    text_font_size = text_font_size,
+    title_font = title_font,
+    title_font_use_google = title_font_use_google,
+    title_font_size = title_font_size,
+    use_showtext = use_showtext
   )
 }
 
