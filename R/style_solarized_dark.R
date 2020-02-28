@@ -1,62 +1,148 @@
-#' @param text_color Text Color. Defaults to #839496. Modifies the `body` element.
-#' @param header_color Header Color. Defaults to #dc322f. Modifies the `h1, h2, h3` elements.
-#' @param background_color Slide Background Color. Defaults to #002b36. Modifies the `.remark-slide-content` class.
-#' @param link_color Link Color. Defaults to #b58900. Modifies the `a, a > code` elements.
-#' @param text_bold_color Bold Text Color. Defaults to #d33682. Modifies the `strong` element.
-#' @param text_slide_number_color Slide Number Color. Defaults to #586e75. Modifies the `.remark-slide-number` class.
-#' @param padding Slide Padding in `top right [bottom left]` format. Defaults to 16px 64px 16px 64px. Modifies the `.remark-slide-content` class.
-#' @param background_image Background image applied to each *and every* slide. Set `title_slide_background_image = "none"` to remove the background image from the title slide. Defaults to `NULL`. Modifies the `.remark-slide-content` class.
-#' @param background_size Background image size, requires `background_image` to be set. If `background_image` is set, `background_size` will default to `cover` so the backround fills the screen. If both `background_image` and `background_position` are set, will default to 100 percent. Defaults to `NULL`. Modifies the `.remark-slide-content` class.
-#' @param background_position Background image position, requires `background_image` to be set, and it is recommended to adjust `background_size`. Defaults to `NULL`. Modifies the `.remark-slide-content` class.
-#' @param code_highlight_color Code Line Highlight. Defaults to #268bd240. Modifies the `.remark-code-line-highlighted` class.
-#' @param code_inline_color Inline Code Color. Defaults to #6c71c4. Modifies the `.remark-inline-code` class.
-#' @param code_inline_background_color Inline Code Background Color. Defaults to `NULL`. Modifies the `.remark-inline-code` class.
-#' @param code_inline_font_size Inline Code Text Font Size. Defaults to 1em. Modifies the `.remark-inline-code` class.
-#' @param inverse_background_color Inverse Background Color. Defaults to #fdf6e3. Modifies the `.inverse` class.
-#' @param inverse_text_color Inverse Text Color. Defaults to #002b36. Modifies the `.inverse` class.
-#' @param inverse_text_shadow Enables Shadow on text of inverse slides. Defaults to `FALSE`. Modifies the `.inverse` class.
-#' @param inverse_header_color Inverse Header Color. Defaults to `inverse_text_color`. Modifies the `.inverse h1, .inverse h2, .inverse h3` classes.
-#' @param title_slide_text_color Title Slide Text Color. Defaults to `inverse_text_color`. Modifies the `.title-slide` class.
-#' @param title_slide_background_color Title Slide Background Color. Defaults to `inverse_background_color`. Modifies the `.title-slide` class.
-#' @param title_slide_background_image Title Slide Background Image URL. Defaults to `NULL`. Modifies the `.title-slide` class.
-#' @param title_slide_background_size Title Slide Background Image Size, defaults to "cover" if background image is set. Defaults to `NULL`. Modifies the `.title-slide` class.
-#' @param title_slide_background_position Title Slide Background Image Position. Defaults to `NULL`. Modifies the `.title-slide` class.
-#' @param footnote_color Footnote text color (if `NA`, then it will be the same color as `text_color`). Defaults to `NULL`. Modifies the `.footnote` class.
-#' @param footnote_font_size Footnote font size. Defaults to 0.9em. Modifies the `.footnote` class.
-#' @param footnote_position_bottom Footnote location from bottom of screen. Defaults to 60px. Modifies the `.footnote` class.
-#' @param left_column_subtle_color Left Column Text (not last). Defaults to #586e75. Modifies the `.left-column h2, .left-column h3` classes.
-#' @param left_column_selected_color Left Column Current Selection. Defaults to #93a1a1. Modifies the `.left-column h2:last-of-type, .left-column h3:last-child` classes.
-#' @param blockquote_left_border_color Blockquote Left Border Color. Defaults to #cb4b16. Modifies the `blockquote` element.
-#' @param table_border_color Table top/bottom border. Defaults to #657b83. Modifies the `table: border-top, border-bottom` elements.
-#' @param table_row_border_color Table row inner bottom border. Defaults to #657b83. Modifies the `table thead th: border-bottom` elements.
-#' @param table_row_even_background_color Table Even Row Background Color. Defaults to #073642. Modifies the `thead, tfoot, tr:nth-child(even)` elements.
-#' @param base_font_size Base Font Size for All Slide Elements (must be `px`). Defaults to 20px. Modifies the `html` element.
-#' @param text_font_size Slide Body Text Font Size. Defaults to 1rem. Modifies the `.remark-slide-content` class.
-#' @param header_h1_font_size h1 Header Text Font Size. Defaults to 2.75rem. Modifies the `.remark-slide-content h1` class.
-#' @param header_h2_font_size h2 Header Text Font Size. Defaults to 2.25rem. Modifies the `.remark-slide-content h2` class.
-#' @param header_h3_font_size h3 Header Text Font Size. Defaults to 1.75rem. Modifies the `.remark-slide-content h3` class.
-#' @param header_background_auto Add background under slide title automatically for h1 header elements. If not enabled, use `class: header_background` to enable. Defaults to `FALSE`. 
-#' @param header_background_color Background Color for h1 Header with Background. Defaults to `header_color`. Modifies the `.remark-slide-content h1` class.
-#' @param header_background_text_color Text Color for h1 Header with Background. Defaults to `background_color`. Modifies the `.remark-slide-content h1` class.
-#' @param header_background_padding Padding for h1 Header with Background. Defaults to `NULL`. Modifies the `.remark-slide-content h1` class.
-#' @param header_background_content_padding_top Top Padding for Content in Slide with Header with Background. Defaults to 7rem. Modifies the `.remark-slide-content` class.
-#' @param header_background_ignore_classes Slide Classes Where Header with Background will not be Applied. Defaults to `c('normal', 'inverse', 'title', 'middle', 'bottom')`. Modifies the `.remark-slide-content` class.
-#' @param text_slide_number_font_size Slide Number Text Font Size. Defaults to 0.9em. Modifies the `.remark-slide-number` class.
-#' @param text_font_google Use `google_font()` to specify body font. Defaults to `NULL`. Modifies the `body` element.
-#' @param text_font_family Body Text Font Family (xaringan default is `'Droid Serif'`). Defaults to Noto Sans. Modifies the `body` element.
-#' @param text_font_weight Body Text Font Weight. Defaults to normal. Modifies the `body` element.
-#' @param text_font_url Body Text Font URL(s). Defaults to https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&display=swap. Modifies the `@import url()` elements.
-#' @param text_font_family_fallback Body Text Font Fallbacks. Defaults to -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial. Modifies the `body` element.
-#' @param text_font_base Body Text Base Font (Total Failure Fallback). Defaults to sans-serif. Modifies the `body` element.
-#' @param header_font_google Use `google_font()` to specify header font. Defaults to `NULL`. Modifies the `body` element.
-#' @param header_font_family Header Font Family (xaringan default is `'Yanone Kaffeesatz'`). Defaults to Cabin. Modifies the `h1, h2, h3` elements.
-#' @param header_font_weight Header Font Weight. Defaults to 600. Modifies the `h1, h2, h3` elements.
-#' @param header_font_url Header Font URL. Defaults to https://fonts.googleapis.com/css?family=Cabin:600,600i&display=swap. Modifies the `@import url` elements.
-#' @param code_font_google Use `google_font()` to specify code font. Defaults to `NULL`. Modifies the `body` element.
-#' @param code_font_family Code Font Family. Defaults to Source Code Pro. Modifies the `.remark-code, .remark-inline-code` classes.
-#' @param code_font_size Code Text Font Size. Defaults to 0.9rem. Modifies the `.remark-inline` class.
-#' @param code_font_url Code Font URL. Defaults to https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700&display=swap. Modifies the `@import url` elements.
-#' @param code_font_family_fallback Code Font Fallback. Defaults to Menlo, Consolas, Monaco, Liberation Mono, Lucida Console. Modifies the `.remark-code, .remark-inline-code` classes.
+# Generated by inst/scripts/generate_theme_functions.R: do not edit by hand
+
+#' @param text_color Text Color. Defaults to #839496. Modifies the `body`
+#'   element.
+#' @param header_color Header Color. Defaults to #dc322f. Modifies the
+#'   `h1, h2, h3` elements.
+#' @param background_color Slide Background Color. Defaults to #002b36.
+#'   Modifies the `.remark-slide-content` class.
+#' @param link_color Link Color. Defaults to #b58900. Modifies the
+#'   `a, a > code` elements.
+#' @param text_bold_color Bold Text Color. Defaults to #d33682. Modifies the
+#'   `strong` element.
+#' @param text_slide_number_color Slide Number Color. Defaults to #586e75.
+#'   Modifies the `.remark-slide-number` class.
+#' @param padding Slide Padding in `top right [bottom left]` format. Defaults
+#'   to 16px 64px 16px 64px. Modifies the `.remark-slide-content` class.
+#' @param background_image Background image applied to each *and every* slide.
+#'   Set `title_slide_background_image = "none"` to remove the background image
+#'   from the title slide. Defaults to `NULL`. Modifies the
+#'   `.remark-slide-content` class.
+#' @param background_size Background image size, requires `background_image` to
+#'   be set. If `background_image` is set, `background_size` will default to
+#'   `cover` so the backround fills the screen. If both `background_image` and
+#'   `background_position` are set, will default to 100 percent. Defaults to
+#'   `NULL`. Modifies the `.remark-slide-content` class.
+#' @param background_position Background image position, requires
+#'   `background_image` to be set, and it is recommended to adjust
+#'   `background_size`. Defaults to `NULL`. Modifies the
+#'   `.remark-slide-content` class.
+#' @param code_highlight_color Code Line Highlight. Defaults to #268bd240.
+#'   Modifies the `.remark-code-line-highlighted` class.
+#' @param code_inline_color Inline Code Color. Defaults to #6c71c4. Modifies
+#'   the `.remark-inline-code` class.
+#' @param code_inline_background_color Inline Code Background Color. Defaults
+#'   to `NULL`. Modifies the `.remark-inline-code` class.
+#' @param code_inline_font_size Inline Code Text Font Size. Defaults to 1em.
+#'   Modifies the `.remark-inline-code` class.
+#' @param inverse_background_color Inverse Background Color. Defaults to
+#'   #fdf6e3. Modifies the `.inverse` class.
+#' @param inverse_text_color Inverse Text Color. Defaults to #002b36. Modifies
+#'   the `.inverse` class.
+#' @param inverse_text_shadow Enables Shadow on text of inverse slides.
+#'   Defaults to `FALSE`. Modifies the `.inverse` class.
+#' @param inverse_header_color Inverse Header Color. Defaults to
+#'   `inverse_text_color`. Modifies the `.inverse h1, .inverse h2, .inverse h3`
+#'   classes.
+#' @param title_slide_text_color Title Slide Text Color. Defaults to
+#'   `inverse_text_color`. Modifies the `.title-slide` class.
+#' @param title_slide_background_color Title Slide Background Color. Defaults
+#'   to `inverse_background_color`. Modifies the `.title-slide` class.
+#' @param title_slide_background_image Title Slide Background Image URL.
+#'   Defaults to `NULL`. Modifies the `.title-slide` class.
+#' @param title_slide_background_size Title Slide Background Image Size,
+#'   defaults to "cover" if background image is set. Defaults to `NULL`.
+#'   Modifies the `.title-slide` class.
+#' @param title_slide_background_position Title Slide Background Image
+#'   Position. Defaults to `NULL`. Modifies the `.title-slide` class.
+#' @param footnote_color Footnote text color (if `NA`, then it will be the same
+#'   color as `text_color`). Defaults to `NULL`. Modifies the `.footnote`
+#'   class.
+#' @param footnote_font_size Footnote font size. Defaults to 0.9em. Modifies
+#'   the `.footnote` class.
+#' @param footnote_position_bottom Footnote location from bottom of screen.
+#'   Defaults to 60px. Modifies the `.footnote` class.
+#' @param left_column_subtle_color Left Column Text (not last). Defaults to
+#'   #586e75. Modifies the `.left-column h2, .left-column h3` classes.
+#' @param left_column_selected_color Left Column Current Selection. Defaults to
+#'   #93a1a1. Modifies the
+#'   `.left-column h2:last-of-type, .left-column h3:last-child` classes.
+#' @param blockquote_left_border_color Blockquote Left Border Color. Defaults
+#'   to #cb4b16. Modifies the `blockquote` element.
+#' @param table_border_color Table top/bottom border. Defaults to #657b83.
+#'   Modifies the `table: border-top, border-bottom` elements.
+#' @param table_row_border_color Table row inner bottom border. Defaults to
+#'   #657b83. Modifies the `table thead th: border-bottom` elements.
+#' @param table_row_even_background_color Table Even Row Background Color.
+#'   Defaults to #073642. Modifies the `thead, tfoot, tr:nth-child(even)`
+#'   elements.
+#' @param base_font_size Base Font Size for All Slide Elements (must be `px`).
+#'   Defaults to 20px. Modifies the `html` element.
+#' @param text_font_size Slide Body Text Font Size. Defaults to 1rem. Modifies
+#'   the `.remark-slide-content` class.
+#' @param header_h1_font_size h1 Header Text Font Size. Defaults to 2.75rem.
+#'   Modifies the `.remark-slide-content h1` class.
+#' @param header_h2_font_size h2 Header Text Font Size. Defaults to 2.25rem.
+#'   Modifies the `.remark-slide-content h2` class.
+#' @param header_h3_font_size h3 Header Text Font Size. Defaults to 1.75rem.
+#'   Modifies the `.remark-slide-content h3` class.
+#' @param header_background_auto Add background under slide title automatically
+#'   for h1 header elements. If not enabled, use `class: header_background` to
+#'   enable. Defaults to `FALSE`.
+#' @param header_background_color Background Color for h1 Header with
+#'   Background. Defaults to `header_color`. Modifies the
+#'   `.remark-slide-content h1` class.
+#' @param header_background_text_color Text Color for h1 Header with
+#'   Background. Defaults to `background_color`. Modifies the
+#'   `.remark-slide-content h1` class.
+#' @param header_background_padding Padding for h1 Header with Background.
+#'   Defaults to `NULL`. Modifies the `.remark-slide-content h1` class.
+#' @param header_background_content_padding_top Top Padding for Content in
+#'   Slide with Header with Background. Defaults to 7rem. Modifies the
+#'   `.remark-slide-content` class.
+#' @param header_background_ignore_classes Slide Classes Where Header with
+#'   Background will not be Applied. Defaults to
+#'   `c('normal', 'inverse', 'title', 'middle', 'bottom')`. Modifies the
+#'   `.remark-slide-content` class.
+#' @param text_slide_number_font_size Slide Number Text Font Size. Defaults to
+#'   0.9em. Modifies the `.remark-slide-number` class.
+#' @param text_font_google Use `google_font()` to specify body font. Defaults
+#'   to `NULL`. Modifies the `body` element.
+#' @param text_font_family Body Text Font Family (xaringan default is
+#'   `'Droid Serif'`). Defaults to Noto Sans. Modifies the `body` element.
+#' @param text_font_weight Body Text Font Weight. Defaults to normal. Modifies
+#'   the `body` element.
+#' @param text_font_url Body Text Font URL(s). Defaults to
+#'   https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&display=swap.
+#'   Modifies the `@import url()` elements.
+#' @param text_font_family_fallback Body Text Font Fallbacks. Defaults to
+#'   -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue,
+#'   helvetica, Ubuntu, roboto, noto, segoe ui, arial. Modifies the `body`
+#'   element.
+#' @param text_font_base Body Text Base Font (Total Failure Fallback). Defaults
+#'   to sans-serif. Modifies the `body` element.
+#' @param header_font_google Use `google_font()` to specify header font.
+#'   Defaults to `NULL`. Modifies the `body` element.
+#' @param header_font_family Header Font Family (xaringan default is
+#'   `'Yanone Kaffeesatz'`). Defaults to Cabin. Modifies the `h1, h2, h3`
+#'   elements.
+#' @param header_font_weight Header Font Weight. Defaults to 600. Modifies the
+#'   `h1, h2, h3` elements.
+#' @param header_font_url Header Font URL. Defaults to
+#'   https://fonts.googleapis.com/css?family=Cabin:600,600i&display=swap.
+#'   Modifies the `@import url` elements.
+#' @param code_font_google Use `google_font()` to specify code font. Defaults
+#'   to `NULL`. Modifies the `body` element.
+#' @param code_font_family Code Font Family. Defaults to Source Code Pro.
+#'   Modifies the `.remark-code, .remark-inline-code` classes.
+#' @param code_font_size Code Text Font Size. Defaults to 0.9rem. Modifies the
+#'   `.remark-inline` class.
+#' @param code_font_url Code Font URL. Defaults to
+#'   https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700&display=swap.
+#'   Modifies the `@import url` elements.
+#' @param code_font_family_fallback Code Font Fallback. Defaults to Menlo,
+#'   Consolas, Monaco, Liberation Mono, Lucida Console. Modifies the
+#'   `.remark-code, .remark-inline-code` classes.
 #' @template theme_params
 #' @template style_solarized_dark
 #' @family Solarized themes
