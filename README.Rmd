@@ -42,8 +42,9 @@ gsub("    -", "-", sub("^-.+?\n", "", x))
     - [Duotone](#duotone)
     - [Solarized](#solarized)
 - [Theme Settings](#theme-settings)
-- [Adding Custom CSS](#adding-custom-css)
+- [Colors](#colors)
 - [Fonts](#fonts)
+- [Adding Custom CSS](#adding-custom-css)
 
 ## Installation
 
@@ -66,16 +67,16 @@ gsub("    -", "-", sub("^-.+?\n", "", x))
 
 ## Theme Settings
 
-The theme functions listed above are just wrappers around the central function of this package, `style_xaringan()`.
+The theme functions listed above are wrappers around the central function of this package, `style_xaringan()`.
 If you want to start from the default **xaringan** theme and make a few modifications, start there.
 
 All of the [theme template variables][template-variables] are repeated in each of the theme functions (instead of relying on `...`) so that you can use autocompletion to find and change the defaults for any theme function.
 To override the default value of any theme functions, set the appropriate argument in the theme function.
 A table of all template variables is included in [`vignette("template-variables", "xaringanthemer")`][template-variables].
 
-As an example, try loading `xaringanthemer`, type out `duo_theme(` and then press <kbd>Tab</kbd> to see all of the theme options.
+As an example, try typing out `style_duo_accent(` and then press <kbd>Tab</kbd> to see all of the theme options.
 
-All of the theme options are named so that you first think of the element you want to change, then the property of that element.
+The arguments of each theme function are named so that you can first think of the element you want to change, then the property of that element.
 
 Here are some of the `text_` theme options:
 
@@ -92,6 +93,18 @@ And here are the title slide theme options:
 cat(paste0("- `", tvv[grepl("^title_slide_", tvv)], "`"), sep = "\n")
 ```
 
+## Fonts
+
+[adding-custom-css]: #adding-custom-css
+
+```{r child="man/fragments/_fonts.Rmd"}
+```
+
+## Colors
+
+```{r child="man/fragments/_colors.Rmd"}
+```
+
 ## Adding Custom CSS
 
 You can also add custom CSS classes using the `extra_css` argument in the theme functions.
@@ -99,7 +112,6 @@ This argument takes a named list of CSS definitions each containing a named list
 
 ```r
 extra_css <- list(
-  ".red"   = list(color = "red"),
   ".small" = list("font-size" = "90%"),
   ".full-width" = list(
     display = "flex",
@@ -118,7 +130,6 @@ style_extra_css(css = extra_css, outfile = "custom.css")
 
 ```{r results='asis', echo=FALSE}
 extra_css <- list(
-  ".red"   = list(color = "red"),
   ".small" = list("font-size" = "90%"),
   ".full-width" = list(
     display = "flex",
@@ -136,14 +147,8 @@ cat(
 ```
 
 This is most helpful when wanting to define helper classes to work with the [remark.js][remarkjs] `.class[]` syntax.
-Using the above example, we could color text red `.red[like this]` or write `.small[in smaller font size]`.
+Using the above example, we could add slide text `.small[in smaller font size]`.
 
-## Fonts
-
-[adding-custom-css]: #adding-custom-css
-
-```{r child="man/fragments/_fonts.Rmd"}
-```
 
 ```{r child="man/fragments/_thanks.Rmd"}
 ```

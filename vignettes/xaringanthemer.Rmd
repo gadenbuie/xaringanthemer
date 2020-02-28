@@ -89,6 +89,18 @@ And here are the title slide theme options:
 cat(paste0("- `", tvv[grepl("^title_slide_", tvv)], "`"), sep = "\n")
 ```
 
+## Fonts
+
+[adding-custom-css]: #adding-custom-css
+
+```{r child="../man/fragments/_fonts.Rmd"}
+```
+
+## Colors
+
+```{r child="../man/fragments/_colors.Rmd"}
+```
+
 ## Adding Custom CSS
 
 You can also add custom CSS classes using the `extra_css` argument in the theme functions.
@@ -96,7 +108,6 @@ This argument takes a named list of CSS definitions each containing a named list
 
 ```r
 extra_css <- list(
-  ".red"   = list(color = "red"),
   ".small" = list("font-size" = "90%"),
   ".full-width" = list(
     display = "flex",
@@ -115,7 +126,6 @@ style_extra_css(css = extra_css, outfile = "custom.css")
 
 ```{r results='asis', echo=FALSE}
 extra_css <- list(
-  ".red"   = list(color = "red"),
   ".small" = list("font-size" = "90%"),
   ".full-width" = list(
     display = "flex",
@@ -133,14 +143,7 @@ cat(
 ```
 
 This is most helpful when wanting to define helper classes to work with the [remark.js][remarkjs] `.class[]` syntax.
-Using the above example, we could color text red `.red[like this]` or write `.small[in smaller font size]`.
-
-## Fonts
-
-[adding-custom-css]: #adding-custom-css
-
-```{r child="../man/fragments/_fonts.Rmd"}
-```
+Using the above example, we could add slide text `.small[in smaller font size]`.
 
 ```{r child="../man/fragments/_thanks.Rmd"}
 ```

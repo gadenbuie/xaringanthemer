@@ -26,8 +26,9 @@ style with **xaringanthemer** within your `slides.Rmd` file without
       - [Duotone](#duotone)
       - [Solarized](#solarized)
   - [Theme Settings](#theme-settings)
-  - [Adding Custom CSS](#adding-custom-css)
+  - [Colors](#colors)
   - [Fonts](#fonts)
+  - [Adding Custom CSS](#adding-custom-css)
 
 ## Installation
 
@@ -219,7 +220,7 @@ output:
 
 ## Theme Settings
 
-The theme functions listed above are just wrappers around the central
+The theme functions listed above are wrappers around the central
 function of this package, `style_xaringan()`. If you want to start from
 the default **xaringan** theme and make a few modifications, start
 there.
@@ -233,11 +234,12 @@ table of all template variables is included in
 [`vignette("template-variables",
 "xaringanthemer")`](vignettes/template-variables.md).
 
-As an example, try loading `xaringanthemer`, type out `duo_theme(` and
-then press <kbd>Tab</kbd> to see all of the theme options.
+As an example, try typing out `style_duo_accent(` and then press
+<kbd>Tab</kbd> to see all of the theme options.
 
-All of the theme options are named so that you first think of the
-element you want to change, then the property of that element.
+The arguments of each theme function are named so that you can first
+think of the element you want to change, then the property of that
+element.
 
 Here are some of the `text_` theme options:
 
@@ -255,53 +257,6 @@ And here are the title slide theme options:
   - `title_slide_background_image`
   - `title_slide_background_size`
   - `title_slide_background_position`
-
-## Adding Custom CSS
-
-You can also add custom CSS classes using the `extra_css` argument in
-the theme functions. This argument takes a named list of CSS definitions
-each containing a named list of CSS property-value pairs.
-
-``` r
-extra_css <- list(
-  ".red"   = list(color = "red"),
-  ".small" = list("font-size" = "90%"),
-  ".full-width" = list(
-    display = "flex",
-    width   = "100%",
-    flex    = "1 1 auto"
-  )
-)
-```
-
-If you would rather keep your additional css definitions in a separate
-file, you can call `style_extra_css()` separately. Just be sure to
-include your new CSS file in the list of applied files in your YAML
-header.
-
-``` r
-style_extra_css(css = extra_css, outfile = "custom.css")
-```
-
-``` css
-/* Extra CSS */
-.red {
-  color: red;
-}
-.small {
-  font-size: 90%;
-}
-.full-width {
-  display: flex;
-  width: 100%;
-  flex: 1 1 auto;
-}
-```
-
-This is most helpful when wanting to define helper classes to work with
-the [remark.js](https://github.com/gnab/remark) `.class[]` syntax. Using
-the above example, we could color text red `.red[like this]` or write
-`.small[in smaller font size]`.
 
 ## Fonts
 
@@ -354,6 +309,95 @@ style_mono_light(
   extra_css = list(".title-slide h2" = list("font-family" = "Sofia"))
 )
 ```
+
+## Colors
+
+When designing your xaringan theme, you may have additional colors in
+your desired color palette beyond those used in the accent colors of the
+mono and duotone styles.
+
+The `style*()` functions in xaringanthemer include a `colors` argument
+that lets you quickly define a additional colors to use in your slides.
+This argument takes a vector of named colors
+
+``` r
+colors = c(
+  red = "#f34213",
+  purple = "#3e2f5b",
+  orange = "#ff8811",
+  green = "#136f63",
+  white = "#FFFFFF",
+)
+```
+
+and creates CSS classes from the color name that set the text color —
+e.g. `.red` — or that set the background color — e.g. `.bg-red`. If you
+use custom CSS in your slides, the color name is also stored in a CSS
+variable — e.g. `var(--red)`.
+
+So slide text like this
+
+``` markdown
+This **.red[simple]** .white.bg-purple[demo] 
+_.orange[shows]_ the colors .green[in action].
+```
+
+will be rendered in HTML as
+
+<blockquote>
+
+This <strong><span style="color: #f34213">simple</span></strong>
+<span style="color:#FFFFFF;background-color:#3e2f5b;">demo</span>
+<em style="color:#ff8811">shows</em> the colors
+<span style="color:#136f63">in action</span>.
+
+</blockquote>
+
+Note that the color names in `colors` need to be valid CSS names, so
+`"purple-light"` will work, but `"purple light"` will not.
+
+## Adding Custom CSS
+
+You can also add custom CSS classes using the `extra_css` argument in
+the theme functions. This argument takes a named list of CSS definitions
+each containing a named list of CSS property-value pairs.
+
+``` r
+extra_css <- list(
+  ".small" = list("font-size" = "90%"),
+  ".full-width" = list(
+    display = "flex",
+    width   = "100%",
+    flex    = "1 1 auto"
+  )
+)
+```
+
+If you would rather keep your additional css definitions in a separate
+file, you can call `style_extra_css()` separately. Just be sure to
+include your new CSS file in the list of applied files in your YAML
+header.
+
+``` r
+style_extra_css(css = extra_css, outfile = "custom.css")
+```
+
+``` css
+/* Extra CSS */
+.small {
+  font-size: 90%;
+}
+.full-width {
+  display: flex;
+  width: 100%;
+  flex: 1 1 auto;
+}
+```
+
+This is most helpful when wanting to define helper classes to work with
+the [remark.js](https://github.com/gnab/remark) `.class[]` syntax. Using
+the above example, we could add slide text `.small[in smaller font
+size]`.
 
 -----
 
