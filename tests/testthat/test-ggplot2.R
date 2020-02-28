@@ -87,6 +87,21 @@ describe("theme_xaringan()", {
     expect_equal(theme$plot.background$colour, "#000022")
     expect_equal(theme$plot.background$fill, "#000022")
   })
+
+  it("throws error for non-hex color functions", {
+    expect_error(
+      with_clean_session(function() {
+        xaringanthemer::style_xaringan(
+          text_color = "rgb(0, 0, 0)",
+          outfile = NULL
+        )
+        xaringanthemer::theme_xaringan(
+          text_font_use_google = FALSE,
+          title_font_use_google = FALSE
+        )
+      })
+    )
+  })
 })
 
 describe("theme_xaringan_inverse()", {

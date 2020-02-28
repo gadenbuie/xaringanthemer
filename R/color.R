@@ -96,8 +96,17 @@ prepare_colors <- function(colors = NULL) {
 }
 
 full_length_hex <- function(x) {
+  varname <- substitute(x)
+  stop_not_hex <- function() {
+    stop(str_wrap(
+      "`", deparse(varname), "` is not a hexadecimal color: ", x, ". ",
+      "If you used valid CSS colors in your xaringan theme, please convert ",
+      "these colors to hexadecimal form, as this is the format required by ",
+      "ggplot2."
+    ), call. = FALSE)
+  }
   if (!grepl("^#", x) || grepl("[^#0-9a-fA-F]", x)) {
-    stop(paste0('"', x, '" is not a hexadecimal color'))
+    stop_not_hex()
   }
   x <- sub("^#", "", x)
   if (nchar(x) == 3) {
@@ -105,7 +114,7 @@ full_length_hex <- function(x) {
     x <- rep(x, each = 2)
     x <- paste(x, collapse = "")
   } else if (nchar(x) != 6) {
-    stop(paste0('"', x, '" is not a hexadecimal color'))
+    stop_not_hex()
   }
   paste0("#", x)
 }
