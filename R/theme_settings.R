@@ -343,7 +343,7 @@ plural_element <- function(css_name) {
 element_description <- function(element) {
   out <- rep("", length(element))
   multiple <- grepl("multiple", element)
-  out[multiple] <- "Modifies multiple CSS classes or elements."
+  out[multiple] <- "Used in multiple CSS rules."
 
   ifelse(
     multiple | is.na(element) | element == "",
