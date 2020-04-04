@@ -262,18 +262,41 @@ And here are the title slide theme options:
 
 <!-- Need to set [adding-custom-css] -->
 
-Yihui picked out great fonts for the [default xaringan
-theme](https://slides.yihui.name/xaringan/), but sometimes you want
-something new and interesting.
+### Default Fonts
+
+**xaringanthemer** by default uses a different set of default fonts for
+heading and body fonts. The new defaults use
+[Cabin](https://fonts.google.com/specimen/Cabin) for headings and [Noto
+Sans](https://fonts.google.com/specimen/Noto+Sans) for body text. These
+fonts are easier to read on screens and at a distance during
+presentations, and they support a wide variety of languages and weights.
+Another reason for the change is that the xaringan (remarkjs) default
+body font, *Droid Serif*, is no longer officially included in Google
+Fonts.
+
+If you would like to use the fonts from the [default xaringan
+theme](https://slides.yihui.name/xaringan/), you can use the following
+arguments in your style function.
+
+``` r
+style_xaringan(
+  text_font_family = "Droid Serif",
+  text_font_url = "https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic",
+  header_font_google = google_font("Yanone Kaffeesatz")
+)
+```
+
+### Custom and *Google Font* Fonts
 
 **xaringanthemer** makes it easy to use [Google
-Fonts](https://fonts.google.com) in your presentations (well, as long as
-you have an internet connection) or to fully specify your font files.
+Fonts](https://fonts.google.com) in your presentations (provided you
+have an internet connection during the presentation) or to fully specify
+your font files.
 
-To use [Google Fonts](https://fonts.google.com), set the `_font_google`
-theme arguments – `text_font_google`, `header_font_google`,
-`code_font_google` — using the `google_font()` helper. See
-`?google_font` for more info.
+To use [Google Fonts](https://fonts.google.com), set the
+`<type>_font_google` theme arguments – `text_font_google`,
+`header_font_google`, `code_font_google` — using the `google_font()`
+helper. The help documentation in `?google_font` provides more info.
 
 ``` r
 style_mono_light(
@@ -283,30 +306,49 @@ style_mono_light(
 )
 ```
 
-If you set an `xxx_font_google` theme arguments, then `xxx_font_family`,
-`xxx_font_weight` and `xxx_font_url` are overwritten – where `xxx` in
-`{header, text, code}`. Of course, you can manually set
-`header_font_url`, etc., and ignore the `header_font_google` argument.
+If you set an `<type>_font_google` theme arguments, then
+`<type>_font_family`, `<type>_font_weight` and `<type>_font_url` are
+overwritten – where `<type>` is one of `header`, `text`, or `code`.
 
-For example, suppose you want to use a ligature font for the code font,
-such as [Fira Code](https://github.com/yihui/xaringan/issues/83). Just
-set `code_font_family` and `code_font_url`\!
+To use a font hosted outside of Google fonts, you need to provide both
+`<type>_font_family` and `<type>_font_url`. For example, suppose you
+want to use a code font with ligatures for your code chunks, such as
+[Fira Code](https://github.com/tonsky/FiraCode), which would be declared
+with `code_font_family`. The [browser
+usage](https://github.com/tonsky/FiraCode#browser-support) section of
+the Fira Code README provides a CSS URL to be used with an `@import`
+statement that you can use with the `code_font_url` argument.
 
 ``` r
 style_solarized_dark(
   code_font_family = "Fira Code",
-  code_font_url = "https://cdn.rawgit.com/tonsky/FiraCode/1.204/distr/fira_code.css"
+  code_font_url = "https://cdn.jsdelivr.net/gh/tonsky/FiraCode@2/distr/fira_code.css"
 )
 ```
 
-If you need to import additional fonts for use in [custom CSS
-definitions](#adding-custom-css), you can use the `extra_fonts` argument
-to pass a list of URLs or `google_font()`s.
+Remember that you need to supply either `<type>_google_font` using the
+`google_font()` helper *or both* `<type>_font_family` and
+`<type>_font_url`.
+
+### Using Additional Fonts
+
+If you want to use additional fonts for use in [custom CSS
+definitions](#adding-custom-css), use the `extra_fonts` argument to pass
+a list of URLs or `google_font()`s. Notice that you will need to add
+custom CSS (for example, via `extra_css`) to use the fonts imported in
+`extra_fonts`.
 
 ``` r
 style_mono_light(
-  extra_fonts = list(google_font("Sofia")),
-  extra_css = list(".title-slide h2" = list("font-family" = "Sofia"))
+  extra_fonts = list(
+    google_font("Sofia"),
+    # Young Serif by uplaod.fr
+    "https://cdn.jsdelivr.net/gh/uplaod/YoungSerif/fonts/webfonts/fontface.css",
+  ),
+  extra_css = list(
+    ".title-slide h2" = list("font-family" = "Sofia"),
+    blockquote = list("font-family" = "youngserifregular")
+  )
 )
 ```
 

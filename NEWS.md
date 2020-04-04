@@ -23,6 +23,15 @@
   
 * The underlying template now uses the `whisker` package.
 
+* xaringanthemer now uses a different set of default fonts for heading and body
+  fonts. The new defaults use [Cabin](https://fonts.google.com/specimen/Cabin)
+  for headings and [Noto Sans](https://fonts.google.com/specimen/Noto+Sans) for
+  body text. These fonts are easier to read on screens and at a distance during
+  presentations, and they support a wide variety of languages and weights. 
+  Another reason for the change is that the xaringan (remarkjs) default body 
+  font, _Droid Serif_, is no longer officially included in Google Fonts.
+
+
 ## Bugfixes and Improvements
 
 * Better handling of multiple `extra_fonts`, including improved error messages.

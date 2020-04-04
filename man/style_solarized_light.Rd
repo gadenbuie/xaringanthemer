@@ -286,11 +286,14 @@ to the background.}
 
 \item{extra_css}{A named list of CSS definitions each containing a named list
 of CSS property-value pairs, i.e.
-\code{list(".class-id" = list("css-property" = "value"))}}
+\code{list(".class-id" = list("css-property" = "value"))}.}
 
 \item{extra_fonts}{A list of additional fonts to import, each list element
 can be either a URL as a character string or a call to
-\code{\link{google_font}()}}
+\code{\link{google_font}()}. To use a font imported in \code{extra_fonts}, you
+will need to write custom CSS rules that apply the font to an element or
+class with the \code{font-family} property. See the \strong{Fonts} section of
+\code{vignette("xaringanthemer")} for an example.}
 
 \item{outfile}{Customized xaringan CSS output file name, default is "xaringan-themer.css"}
 }
