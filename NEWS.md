@@ -30,3 +30,6 @@
   
 * `style_extra_css()` (previously `write_extra_css()`) gained an `append`
   argument so that it can append to or overwrite an existing file (thanks @pat-s, #17).
+
+* The underlying tibble holding the theme template variables was updated to 
+  work with `tibble 3.0.0` (thanks @techisdead, @SymbolixAU, #32).
