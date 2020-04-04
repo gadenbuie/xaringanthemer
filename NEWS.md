@@ -30,6 +30,14 @@
   presentations, and they support a wide variety of languages and weights. 
   Another reason for the change is that the xaringan (remarkjs) default body 
   font, _Droid Serif_, is no longer officially included in Google Fonts.
+  
+* Additional colors can be provided in the `colors` argument, which takes a
+  named vector of colors. The names become both CSS classes and CSS variables
+  that can be used throughout your slide styles. For example,
+  `colors = c(red = "#d34213")` creates a `.red` CSS class for red foreground 
+  text, a `.bg-red` CSS class for a red background, and a `--red` CSS variable
+  that can be referenced as `var(--red)` in any `_color` argument of your style
+  function.
 
 
 ## Bugfixes and Improvements

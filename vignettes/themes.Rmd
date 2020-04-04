@@ -9,3 +9,9 @@ knitr::opts_chunk$set(results = "asis", echo=FALSE)
 
 ```{r child="../man/fragments/_themes.Rmd"}
 ```
+
+
+## Colors
+
+```{r child="../man/fragments/_colors.Rmd"}
+```

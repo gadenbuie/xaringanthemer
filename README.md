@@ -113,6 +113,10 @@ the final portion of the style function name. For example,
 Note that the colors used below are for demonstration only, the point of
 the `style_` functions is for you to choose your own color palette\!
 
+If you color palette uses more than two colors, you can add additional
+colors with the `colors` argument. See the [Colors](#colors) section for
+more information.
+
 ### Monotone
 
 Use these functions to automatically create a consistent color palette
