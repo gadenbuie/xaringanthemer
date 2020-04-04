@@ -292,32 +292,58 @@ Easy slide and plot themes for xaringan slides.
 <h2 class="hasAnchor">
 <a href="#fonts" class="anchor"></a>Fonts</h2>
 <!-- Need to set [adding-custom-css] -->
-<p>Yihui picked out great fonts for the <a href="https://slides.yihui.name/xaringan/">default xaringan theme</a>, but sometimes you want something new and interesting.</p>
-<p><strong>xaringanthemer</strong> makes it easy to use <a href="https://fonts.google.com">Google Fonts</a> in your presentations (well, as long as you have an internet connection) or to fully specify your font files.</p>
-<p>To use <a href="https://fonts.google.com">Google Fonts</a>, set the <code>_font_google</code> theme arguments â <code>text_font_google</code>, <code>header_font_google</code>, <code>code_font_google</code> â using the <code><a href="reference/google_font.html">google_font()</a></code> helper. See <code><a href="reference/google_font.html">?google_font</a></code> for more info.</p>
-<div class="sourceCode" id="cb15"><pre class="r"><span class="fu"><a href="reference/style_mono_light.html">style_mono_light</a></span>(
+<div id="default-fonts" class="section level3">
+<h3 class="hasAnchor">
+<a href="#default-fonts" class="anchor"></a>Default Fonts</h3>
+<p><strong>xaringanthemer</strong> by default uses a different set of default fonts for heading and body fonts. The new defaults use <a href="https://fonts.google.com/specimen/Cabin">Cabin</a> for headings and <a href="https://fonts.google.com/specimen/Noto+Sans">Noto Sans</a> for body text. These fonts are easier to read on screens and at a distance during presentations, and they support a wide variety of languages and weights. Another reason for the change is that the xaringan (remarkjs) default body font, <em>Droid Serif</em>, is no longer officially included in Google Fonts.</p>
+<p>If you would like to use the fonts from the <a href="https://slides.yihui.name/xaringan/">default xaringan theme</a>, you can use the following arguments in your style function.</p>
+<div class="sourceCode" id="cb15"><pre class="r"><span class="fu"><a href="reference/style_xaringan.html">style_xaringan</a></span>(
+  <span class="kw">text_font_family</span> <span class="kw">=</span> <span class="st">"Droid Serif"</span>,
+  <span class="kw">text_font_url</span> <span class="kw">=</span> <span class="st">"https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic"</span>,
+  <span class="kw">header_font_google</span> <span class="kw">=</span> <span class="fu"><a href="reference/google_font.html">google_font</a></span>(<span class="st">"Yanone Kaffeesatz"</span>)
+)</pre></div>
+</div>
+<div id="custom-and-google-font-fonts" class="section level3">
+<h3 class="hasAnchor">
+<a href="#custom-and-google-font-fonts" class="anchor"></a>Custom and <em>Google Font</em> Fonts</h3>
+<p><strong>xaringanthemer</strong> makes it easy to use <a href="https://fonts.google.com">Google Fonts</a> in your presentations (provided you have an internet connection during the presentation) or to fully specify your font files.</p>
+<p>To use <a href="https://fonts.google.com">Google Fonts</a>, set the <code>&lt;type&gt;_font_google</code> theme arguments â <code>text_font_google</code>, <code>header_font_google</code>, <code>code_font_google</code> â using the <code><a href="reference/google_font.html">google_font()</a></code> helper. The help documentation in <code><a href="reference/google_font.html">?google_font</a></code> provides more info.</p>
+<div class="sourceCode" id="cb16"><pre class="r"><span class="fu"><a href="reference/style_mono_light.html">style_mono_light</a></span>(
   <span class="kw">header_font_google</span> <span class="kw">=</span> <span class="fu"><a href="reference/google_font.html">google_font</a></span>(<span class="st">"Josefin Slab"</span>, <span class="st">"600"</span>),
   <span class="kw">text_font_google</span>   <span class="kw">=</span> <span class="fu"><a href="reference/google_font.html">google_font</a></span>(<span class="st">"Work Sans"</span>, <span class="st">"300"</span>, <span class="st">"300i"</span>),
   <span class="kw">code_font_google</span>   <span class="kw">=</span> <span class="fu"><a href="reference/google_font.html">google_font</a></span>(<span class="st">"IBM Plex Mono"</span>)
 )</pre></div>
-<p>If you set an <code>xxx_font_google</code> theme arguments, then <code>xxx_font_family</code>, <code>xxx_font_weight</code> and <code>xxx_font_url</code> are overwritten â where <code>xxx</code> in <code>{header, text, code}</code>. Of course, you can manually set <code>header_font_url</code>, etc., and ignore the <code>header_font_google</code> argument.</p>
-<p>For example, suppose you want to use a ligature font for the code font, such as <a href="https://github.com/yihui/xaringan/issues/83">Fira Code</a>. Just set <code>code_font_family</code> and <code>code_font_url</code>!</p>
-<div class="sourceCode" id="cb16"><pre class="r"><span class="fu"><a href="reference/style_solarized_dark.html">style_solarized_dark</a></span>(
+<p>If you set an <code>&lt;type&gt;_font_google</code> theme arguments, then <code>&lt;type&gt;_font_family</code>, <code>&lt;type&gt;_font_weight</code> and <code>&lt;type&gt;_font_url</code> are overwritten â where <code>&lt;type&gt;</code> is one of <code>header</code>, <code>text</code>, or <code>code</code>.</p>
+<p>To use a font hosted outside of Google fonts, you need to provide both <code>&lt;type&gt;_font_family</code> and <code>&lt;type&gt;_font_url</code>. For example, suppose you want to use a code font with ligatures for your code chunks, such as <a href="https://github.com/tonsky/FiraCode">Fira Code</a>, which would be declared with <code>code_font_family</code>. The <a href="https://github.com/tonsky/FiraCode#browser-support">browser usage</a> section of the Fira Code README provides a CSS URL to be used with an <code>@import</code> statement that you can use with the <code>code_font_url</code> argument.</p>
+<div class="sourceCode" id="cb17"><pre class="r"><span class="fu"><a href="reference/style_solarized_dark.html">style_solarized_dark</a></span>(
   <span class="kw">code_font_family</span> <span class="kw">=</span> <span class="st">"Fira Code"</span>,
-  <span class="kw">code_font_url</span> <span class="kw">=</span> <span class="st">"https://cdn.rawgit.com/tonsky/FiraCode/1.204/distr/fira_code.css"</span>
+  <span class="kw">code_font_url</span> <span class="kw">=</span> <span class="st">"https://cdn.jsdelivr.net/gh/tonsky/FiraCode@2/distr/fira_code.css"</span>
 )</pre></div>
-<p>If you need to import additional fonts for use in <a href="#adding-custom-css">custom CSS definitions</a>, you can use the <code>extra_fonts</code> argument to pass a list of URLs or <code><a href="reference/google_font.html">google_font()</a></code>s.</p>
-<div class="sourceCode" id="cb17"><pre class="r"><span class="fu"><a href="reference/style_mono_light.html">style_mono_light</a></span>(
-  <span class="kw">extra_fonts</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span>(<span class="fu"><a href="reference/google_font.html">google_font</a></span>(<span class="st">"Sofia"</span>)),
-  <span class="kw">extra_css</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span>(<span class="st">".title-slide h2"</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span>(<span class="st">"font-family"</span> <span class="kw">=</span> <span class="st">"Sofia"</span>))
+<p>Remember that you need to supply either <code>&lt;type&gt;_google_font</code> using the <code><a href="reference/google_font.html">google_font()</a></code> helper <em>or both</em> <code>&lt;type&gt;_font_family</code> and <code>&lt;type&gt;_font_url</code>.</p>
+</div>
+<div id="using-additional-fonts" class="section level3">
+<h3 class="hasAnchor">
+<a href="#using-additional-fonts" class="anchor"></a>Using Additional Fonts</h3>
+<p>If you want to use additional fonts for use in <a href="#adding-custom-css">custom CSS definitions</a>, use the <code>extra_fonts</code> argument to pass a list of URLs or <code><a href="reference/google_font.html">google_font()</a></code>s. Notice that you will need to add custom CSS (for example, via <code>extra_css</code>) to use the fonts imported in <code>extra_fonts</code>.</p>
+<div class="sourceCode" id="cb18"><pre class="r"><span class="fu"><a href="reference/style_mono_light.html">style_mono_light</a></span>(
+  <span class="kw">extra_fonts</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span>(
+    <span class="fu"><a href="reference/google_font.html">google_font</a></span>(<span class="st">"Sofia"</span>),
+    <span class="co"># Young Serif by uplaod.fr</span>
+    <span class="st">"https://cdn.jsdelivr.net/gh/uplaod/YoungSerif/fonts/webfonts/fontface.css"</span>,
+  ),
+  <span class="kw">extra_css</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span>(
+    <span class="st">".title-slide h2"</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span>(<span class="st">"font-family"</span> <span class="kw">=</span> <span class="st">"Sofia"</span>),
+    <span class="kw">blockquote</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span>(<span class="st">"font-family"</span> <span class="kw">=</span> <span class="st">"youngserifregular"</span>)
+  )
 )</pre></div>
+</div>
 </div>
 <div id="colors" class="section level2">
 <h2 class="hasAnchor">
 <a href="#colors" class="anchor"></a>Colors</h2>
 <p>When designing your xaringan theme, you may have additional colors in your desired color palette beyond those used in the accent colors of the mono and duotone styles.</p>
 <p>The <code>style*()</code> functions in xaringanthemer include a <code>colors</code> argument that lets you quickly define a additional colors to use in your slides. This argument takes a vector of named colors</p>
-<div class="sourceCode" id="cb18"><pre class="r"><span class="no">colors</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(
+<div class="sourceCode" id="cb19"><pre class="r"><span class="no">colors</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(
   <span class="kw">red</span> <span class="kw">=</span> <span class="st">"#f34213"</span>,
   <span class="kw">purple</span> <span class="kw">=</span> <span class="st">"#3e2f5b"</span>,
   <span class="kw">orange</span> <span class="kw">=</span> <span class="st">"#ff8811"</span>,
@@ -326,8 +352,8 @@ Easy slide and plot themes for xaringan slides.
 )</pre></div>
 <p>and creates CSS classes from the color name that set the text color â e.g.Â <code>.red</code> â or that set the background color â e.g.Â <code>.bg-red</code>. If you use custom CSS in your slides, the color name is also stored in a CSS variable â e.g.Â <code><a href="https://rdrr.io/r/stats/cor.html">var(--red)</a></code>.</p>
 <p>So slide text like this</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb19-1" data-line-number="1">This **.red[simple]** .white.bg-purple[demo] </a>
-<a class="sourceLine" id="cb19-2" data-line-number="2">_.orange[shows]_ the colors .green[in action].</a></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb20-1" data-line-number="1">This **.red[simple]** .white.bg-purple[demo] </a>
+<a class="sourceLine" id="cb20-2" data-line-number="2">_.orange[shows]_ the colors .green[in action].</a></code></pre></div>
 <p>will be rendered in HTML as</p>
 <blockquote>
 <p>This <strong><span style="color: #f34213">simple</span></strong> <span style="color:#FFFFFF;background-color:#3e2f5b;">demo</span> <em style="color:#ff8811">shows</em> the colors <span style="color:#136f63">in action</span>.</p>
@@ -338,7 +364,7 @@ Easy slide and plot themes for xaringan slides.
 <h2 class="hasAnchor">
 <a href="#adding-custom-css" class="anchor"></a>Adding Custom CSS</h2>
 <p>You can also add custom CSS classes using the <code>extra_css</code> argument in the theme functions. This argument takes a named list of CSS definitions each containing a named list of CSS property-value pairs.</p>
-<div class="sourceCode" id="cb20"><pre class="r"><span class="no">extra_css</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span>(
+<div class="sourceCode" id="cb21"><pre class="r"><span class="no">extra_css</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span>(
   <span class="st">".small"</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span>(<span class="st">"font-size"</span> <span class="kw">=</span> <span class="st">"90%"</span>),
   <span class="st">".full-width"</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span>(
     <span class="kw">display</span> <span class="kw">=</span> <span class="st">"flex"</span>,
@@ -347,16 +373,16 @@ Easy slide and plot themes for xaringan slides.
   )
 )</pre></div>
 <p>If you would rather keep your additional css definitions in a separate file, you can call <code><a href="reference/style_extra_css.html">style_extra_css()</a></code> separately. Just be sure to include your new CSS file in the list of applied files in your YAML header.</p>
-<div class="sourceCode" id="cb21"><pre class="r"><span class="fu"><a href="reference/style_extra_css.html">style_extra_css</a></span>(<span class="kw">css</span> <span class="kw">=</span> <span class="no">extra_css</span>, <span class="kw">outfile</span> <span class="kw">=</span> <span class="st">"custom.css"</span>)</pre></div>
-<div class="sourceCode" id="cb22"><pre class="sourceCode css"><code class="sourceCode css"><a class="sourceLine" id="cb22-1" data-line-number="1"><span class="co">/* Extra CSS */</span></a>
-<a class="sourceLine" id="cb22-2" data-line-number="2"><span class="fu">.small</span> {</a>
-<a class="sourceLine" id="cb22-3" data-line-number="3">  <span class="kw">font-size</span>: <span class="dv">90%</span>;</a>
-<a class="sourceLine" id="cb22-4" data-line-number="4">}</a>
-<a class="sourceLine" id="cb22-5" data-line-number="5"><span class="fu">.full-width</span> {</a>
-<a class="sourceLine" id="cb22-6" data-line-number="6">  <span class="kw">display</span>: flex;</a>
-<a class="sourceLine" id="cb22-7" data-line-number="7">  <span class="kw">width</span>: <span class="dv">100%</span>;</a>
-<a class="sourceLine" id="cb22-8" data-line-number="8">  <span class="kw">flex</span>: <span class="dv">1</span> <span class="dv">1</span> <span class="dv">auto</span>;</a>
-<a class="sourceLine" id="cb22-9" data-line-number="9">}</a></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="r"><span class="fu"><a href="reference/style_extra_css.html">style_extra_css</a></span>(<span class="kw">css</span> <span class="kw">=</span> <span class="no">extra_css</span>, <span class="kw">outfile</span> <span class="kw">=</span> <span class="st">"custom.css"</span>)</pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode css"><code class="sourceCode css"><a class="sourceLine" id="cb23-1" data-line-number="1"><span class="co">/* Extra CSS */</span></a>
+<a class="sourceLine" id="cb23-2" data-line-number="2"><span class="fu">.small</span> {</a>
+<a class="sourceLine" id="cb23-3" data-line-number="3">  <span class="kw">font-size</span>: <span class="dv">90%</span>;</a>
+<a class="sourceLine" id="cb23-4" data-line-number="4">}</a>
+<a class="sourceLine" id="cb23-5" data-line-number="5"><span class="fu">.full-width</span> {</a>
+<a class="sourceLine" id="cb23-6" data-line-number="6">  <span class="kw">display</span>: flex;</a>
+<a class="sourceLine" id="cb23-7" data-line-number="7">  <span class="kw">width</span>: <span class="dv">100%</span>;</a>
+<a class="sourceLine" id="cb23-8" data-line-number="8">  <span class="kw">flex</span>: <span class="dv">1</span> <span class="dv">1</span> <span class="dv">auto</span>;</a>
+<a class="sourceLine" id="cb23-9" data-line-number="9">}</a></code></pre></div>
 <p>This is most helpful when wanting to define helper classes to work with the <a href="https://github.com/gnab/remark">remark.js</a> <code>.class[]</code> syntax. Using the above example, we could add slide text <code>.small[in smaller font size]</code>.</p>
 <hr>
 <p><strong>xaringanthemer</strong> was built by <a href="https://www.garrickadenbuie.com">Garrick Aden-Buie</a> (<a href="https://twitter.com/grrrck">@grrrck</a>).</p>

@@ -570,13 +570,16 @@ to the background.</p></td>
       <th>extra_css</th>
       <td><p>A named list of CSS definitions each containing a named list
 of CSS property-value pairs, i.e.
-<code><a href='https://rdrr.io/r/base/list.html'>list(".class-id" = list("css-property" = "value"))</a></code></p></td>
+<code><a href='https://rdrr.io/r/base/list.html'>list(".class-id" = list("css-property" = "value"))</a></code>.</p></td>
     </tr>
     <tr>
       <th>extra_fonts</th>
       <td><p>A list of additional fonts to import, each list element
 can be either a URL as a character string or a call to
-<code><a href='google_font.html'>google_font</a>()</code></p></td>
+<code><a href='google_font.html'>google_font</a>()</code>. To use a font imported in <code>extra_fonts</code>, you
+will need to write custom CSS rules that apply the font to an element or
+class with the <code>font-family</code> property. See the <strong>Fonts</strong> section of
+<code><a href='../articles/xaringanthemer.html'>vignette("xaringanthemer")</a></code> for an example.</p></td>
     </tr>
     <tr>
       <th>outfile</th>
