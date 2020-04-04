@@ -107,10 +107,11 @@
 
     
     
-<p>The following table shows the template variables, their default values in the standard <code>xaringan</code> theme, the primary element to which the property is applied, and a brief description of the template variable.</p>
+<p>The following table shows the template variables, their default values in the standard <code>xaringanthemer</code> theme, the primary element to which the property is applied, and a brief description of the template variable.</p>
 <p>For example, <code>background_color</code> by default sets the <code>background-color</code> CSS property of the <code>.remark-slide-content</code> class to <code>#FFF</code>.</p>
 <p>Use this table to find the template variable you would like to modify. You can also use this table to find the CSS class or element associated with a particular template item.</p>
-<p>Note that themes, like <code><a href="../reference/xaringanthemer-deprecated.html">mono_accent()</a></code>, have additional parameters, but with any theme function you can override the theme by directly setting the arguments below when calling the theme function. For example, to use <code><a href="../reference/xaringanthemer-deprecated.html">mono_accent()</a></code> with a different slide background color, you can call <code><a href="../reference/xaringanthemer-deprecated.html">mono_accent(background_color = "#abc123")</a></code>.</p>
+<p>Note that some theme functions, like <code><a href="../reference/style_mono_accent.html">style_mono_accent()</a></code>, have additional parameters and a specific set of default values unique to the theme. However, with any theme function you can override the theme’s defaults by directly setting any of the arguments listed below when calling the theme function.</p>
+<p>To be concrete, <code><a href="../reference/style_mono_accent.html">style_mono_accent()</a></code> has three additional arguments: <code>base_color</code> (the accent color), <code>white_color</code>, and <code>black_color</code>. In this theme, the background slide color defaults to <code>white_color</code>, but you can choose a different slide background color by setting <code>background_color</code>, for example <code>background_color = "#EAEAEA"</code>.</p>
 <table class="table">
 <thead><tr class="header">
 <th align="left">variable</th>
