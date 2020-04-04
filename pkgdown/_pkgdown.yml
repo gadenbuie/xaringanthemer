@@ -59,9 +59,6 @@ navbar:
     template-vars:
       text: Template Variables
       href: articles/template-variables.html
-    css-help:
-      text: CSS Help
-      href: articles/css-help.html
   right:
     news:
       icon: fa fa-newspaper-o fa-lg
