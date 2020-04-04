@@ -99,6 +99,20 @@ Presentation* from the New R Markdown Document menu in RStudio.
 
 ## Themes
 
+**xaringanthemer** includes a number of functions that provide themed
+**xaringan** styles. All of the styling functions start with the
+`style_` prefix.
+
+The goal of each style function is to quickly set up a coordinated color
+palette for your slides based on one or two starter colors. Styles based
+on one color start with `style_mono_` and styles based on two colors
+start with `style_duo_`. How the starter colors are used is described in
+the final portion of the style function name. For example,
+`style_mono_accent()` uses a single color as an accent color.
+
+Note that the colors used below are for demonstration only, the point of
+the `style_` functions is for you to choose your own color palette\!
+
 ### Monotone
 
 Use these functions to automatically create a consistent color palette
