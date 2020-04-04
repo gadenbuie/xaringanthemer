@@ -1,7 +1,7 @@
 #nocov start
 template_variables <- tibble::tribble(
   ~ variable, ~ default, ~ element, ~ description, ~ css_variable
-  , "text_color", "#000", "body", "Text Color", "--primary"
+  , "text_color", "#000", "body", "Text Color", "--text_color"
   , "header_color", "#000", "h1, h2, h3", "Header Color", "--header-color"
   , "background_color", "#FFF", ".remark-slide-content", "Slide Background Color", "--background-color"
   , "link_color", "rgb(249, 38, 114)", "a, a > code", "Link Color", "--link-color"
@@ -339,5 +339,6 @@ usethis::use_data(
   template_duo_accent_inverse,
   template_solarized_light,
   template_solarized_dark,
-  internal = TRUE
+  internal = TRUE,
+  overwrite = TRUE
 )

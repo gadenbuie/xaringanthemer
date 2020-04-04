@@ -23,6 +23,13 @@
   
 * The underlying template now uses the `whisker` package.
 
+* xaringanthemer styles now use CSS variables throughout. Most of the settings 
+  used in defining a style are stored in CSS variables. The variable names are
+  documented in their corresponding arguments. For example, the color selected
+  for `background_color` is stored in the variable `--background-color`. These
+  variables can be used in custom CSS rules or in other arguments in any style
+  functions, for example as `var(--background-color)`.
+
 * xaringanthemer now uses a different set of default fonts for heading and body
   fonts. The new defaults use [Cabin](https://fonts.google.com/specimen/Cabin)
   for headings and [Noto Sans](https://fonts.google.com/specimen/Noto+Sans) for

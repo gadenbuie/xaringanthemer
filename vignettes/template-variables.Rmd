@@ -48,8 +48,11 @@ template_variables <- xaringanthemer:::template_variables
 template_variables$variable <- glue::glue_data(template_variables, "`{variable}`")
 template_variables$default <- gsub("[{}]", "", template_variables$default)
 template_variables <- template_variables[, c(
-  "variable", "description", "element", "default"
+  "variable", "description", "element", "default", "css_variable"
 )]
-knitr::kable(template_variables)
+knitr::kable(
+  template_variables,
+  col.names = c("Variable", "Description", "Element", "Default", "CSS Variable")
+)
 ```
 
