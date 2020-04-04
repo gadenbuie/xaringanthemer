@@ -15,3 +15,4 @@
 ^pkgdown$
 ^vignettes/fonts\.Rmd$
 ^vignettes/themes\.Rmd$
+^data-raw$

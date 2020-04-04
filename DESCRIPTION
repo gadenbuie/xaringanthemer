@@ -14,6 +14,8 @@ Description: Create and edit your xaringan CSS files from within
 License: MIT + file LICENSE
 URL: https://github.com/gadenbuie/xaringanthemer
 BugReports: https://github.com/gadenbuie/xaringanthemer/issues
+Depends:
+    R (>= 2.10)
 Imports: 
     colorspace,
     glue,

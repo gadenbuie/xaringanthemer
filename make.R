@@ -1,7 +1,6 @@
-setwd(here::here("inst/scripts"))
+callr::rscript("data-raw/theme_template_variables.R")
 message("Building theme functions")
-source("generate_theme_functions.R")
-setwd(here::here())
+callr::rscript("generate_theme_functions.R", wd = here::here("inst/scripts"))
 message("Writing documentation")
 devtools::document()
 

@@ -81,7 +81,7 @@ The arguments of each theme function are named so that you can first think of th
 Here are some of the `text_` theme options:
 
 ```{r, results='asis', echo=FALSE}
-source(here::here("R/theme_settings.R"))
+load(here::here("R", "sysdata.rda"))
 tvv <- template_variables$variable
 cat(paste0("- `", tvv[grepl("^text_", tvv)][1:5], "`"), sep = "\n")
 cat("- *and more ...*")

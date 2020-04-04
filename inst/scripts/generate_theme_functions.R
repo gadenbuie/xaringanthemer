@@ -1,4 +1,5 @@
-source(here::here("R/theme_settings.R"))
+source(here::here("R/utils_theme-gen.R"))
+load(here::here("R/sysdata.rda"))
 # R/theme_settings.R contains element_description() and plural_elements()
 
 setup_theme_function <- function(
