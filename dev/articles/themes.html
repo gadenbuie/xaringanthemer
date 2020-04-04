@@ -110,6 +110,7 @@
 <p><strong>xaringanthemer</strong> includes a number of functions that provide themed <strong>xaringan</strong> styles. All of the styling functions start with the <code>style_</code> prefix.</p>
 <p>The goal of each style function is to quickly set up a coordinated color palette for your slides based on one or two starter colors. Styles based on one color start with <code>style_mono_</code> and styles based on two colors start with <code>style_duo_</code>. How the starter colors are used is described in the final portion of the style function name. For example, <code><a href="../reference/style_mono_accent.html">style_mono_accent()</a></code> uses a single color as an accent color.</p>
 <p>Note that the colors used below are for demonstration only, the point of the <code>style_</code> functions is for you to choose your own color palette!</p>
+<p>If you color palette uses more than two colors, you can add additional colors with the <code>colors</code> argument. See the <a href="#colors">Colors</a> section for more information.</p>
 <div id="monotone" class="section level3">
 <h3 class="hasAnchor">
 <a href="#monotone" class="anchor"></a>Monotone</h3>
@@ -204,11 +205,35 @@
 <a class="sourceLine" id="cb10-8" data-line-number="8">      <span class="fu">countIncrementalSlides:</span><span class="at"> false</span></a></code></pre></div>
 </div>
 </div>
+<div id="colors" class="section level2">
+<h2 class="hasAnchor">
+<a href="#colors" class="anchor"></a>Colors</h2>
+<p>When designing your xaringan theme, you may have additional colors in your desired color palette beyond those used in the accent colors of the mono and duotone styles.</p>
+<p>The <code>style*()</code> functions in xaringanthemer include a <code>colors</code> argument that lets you quickly define a additional colors to use in your slides. This argument takes a vector of named colors</p>
+<div class="sourceCode" id="cb11"><html><body><pre class="r"><span class="no">colors</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(
+  <span class="kw">red</span> <span class="kw">=</span> <span class="st">"#f34213"</span>,
+  <span class="kw">purple</span> <span class="kw">=</span> <span class="st">"#3e2f5b"</span>,
+  <span class="kw">orange</span> <span class="kw">=</span> <span class="st">"#ff8811"</span>,
+  <span class="kw">green</span> <span class="kw">=</span> <span class="st">"#136f63"</span>,
+  <span class="kw">white</span> <span class="kw">=</span> <span class="st">"#FFFFFF"</span>,
+)</pre></body></html></div>
+<p>and creates CSS classes from the color name that set the text color — e.g. <code>.red</code> — or that set the background color — e.g. <code>.bg-red</code>. If you use custom CSS in your slides, the color name is also stored in a CSS variable — e.g. <code><a href="https://rdrr.io/r/stats/cor.html">var(--red)</a></code>.</p>
+<p>So slide text like this</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb12-1" data-line-number="1">This **.red[simple]** .white.bg-purple[demo] </a>
+<a class="sourceLine" id="cb12-2" data-line-number="2">_.orange[shows]_ the colors .green[in action].</a></code></pre></div>
+<p>will be rendered in HTML as</p>
+<blockquote>
+This <strong><span style="color: #f34213">simple</span></strong> <span style="color:#FFFFFF;background-color:#3e2f5b;">demo</span> <em style="color:#ff8811">shows</em> the colors <span style="color:#136f63">in action</span>.
+</blockquote>
+<p>Note that the color names in <code>colors</code> need to be valid CSS names, so <code>"purple-light"</code> will work, but <code>"purple light"</code> will not.</p>
+</div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
 
-      </div>
+        <nav id="toc" data-toggle="toc"><h2 data-toc-skip>Contents</h2>
+    </nav>
+</div>
 
 </div>
 
