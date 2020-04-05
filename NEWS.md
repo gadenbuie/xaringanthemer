@@ -2,10 +2,10 @@
 
 * Adds `theme_xaringan()`, a ggplot2 theme that automatically uses the colors
   and font styles of your xaringanthemer style. Also adds 
-  `scale_xaringan_color()` and `scale_xaringan_fill()` functions that use the
-  primary colors for the color or fill aesthetics. These theme functions
-  currently do not work when knitr caching is enabled and require that the
-  xaringanthemer style functions are called within your xaringan slides Rmd file.
+  `scale_xaringan_discrete()` and `scale_xaringan_continuous()` functions that 
+  use your slides' primary colors for the color or fill aesthetics. These theme
+  functions can recover the primary colors used in a xaringanthemer (>= 0.3.0)
+  CSS file even if you don't call the style function directly in your slides.
 
 * Renamed all xaringanthemer functions that create CSS styles to use the
   prefix "`style_`". For example, `mono_light()` is now `style_mono_light()`.
