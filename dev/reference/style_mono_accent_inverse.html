@@ -228,18 +228,24 @@ for color accents on select elements (headers, bold text, etc.).</p>
     <tr>
       <th>base_color</th>
       <td><p>Monotone Base Color, works best with a light color.
-Defaults to #3C989E. Used in multiple CSS rules.</p></td>
+Defaults to #3C989E. Used in multiple CSS rules. The value of this
+variable is also stored as a CSS variable that can be referenced with
+<code><a href='https://rdrr.io/r/stats/cor.html'>var(--base)</a></code> in any argument of a style function or in custom CSS.</p></td>
     </tr>
     <tr>
       <th>white_color</th>
       <td><p>Brightest color used, default is a very light version of
-<code>base_color</code>. Defaults to #FFFFFF. Used in multiple CSS rules.</p></td>
+<code>base_color</code>. Defaults to #FFFFFF. Used in multiple CSS rules. The value
+of this variable is also stored as a CSS variable that can be referenced
+with <code><a href='https://rdrr.io/r/stats/cor.html'>var(--white)</a></code> in any argument of a style function or in custom CSS.</p></td>
     </tr>
     <tr>
       <th>black_color</th>
       <td><p>Darkest color used, default is a very dark, version of
 <code>base_color</code>. Defaults to <code><a href='lighten_darken_color.html'>darken_color(base_color, 0.9)</a></code>. Used in
-multiple CSS rules.</p></td>
+multiple CSS rules. The value of this variable is also stored as a CSS
+variable that can be referenced with <code><a href='https://rdrr.io/r/stats/cor.html'>var(--black)</a></code> in any argument of a
+style function or in custom CSS.</p></td>
     </tr>
     <tr>
       <th>text_color</th>
