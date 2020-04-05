@@ -9,15 +9,26 @@
 #'   `base_color`. Defaults to `darken_color(base_color, 0.3)`. Used in
 #'   multiple CSS rules.
 #' @param text_color Text Color. Defaults to `black_color`. Modifies the `body`
-#'   element.
+#'   element. The value of this variable is also stored as a CSS variable that
+#'   can be referenced with `var(--text_color)` in any argument of a style
+#'   function or in custom CSS.
 #' @param header_color Header Color. Defaults to `base_color`. Modifies the
-#'   `h1, h2, h3` elements.
+#'   `h1, h2, h3` elements. The value of this variable is also stored as a CSS
+#'   variable that can be referenced with `var(--header-color)` in any argument
+#'   of a style function or in custom CSS.
 #' @param background_color Slide Background Color. Defaults to `white_color`.
-#'   Modifies the `.remark-slide-content` class.
+#'   Modifies the `.remark-slide-content` class. The value of this variable is
+#'   also stored as a CSS variable that can be referenced with
+#'   `var(--background-color)` in any argument of a style function or in custom
+#'   CSS.
 #' @param link_color Link Color. Defaults to `base_color`. Modifies the
-#'   `a, a > code` elements.
+#'   `a, a > code` elements. The value of this variable is also stored as a CSS
+#'   variable that can be referenced with `var(--link-color)` in any argument
+#'   of a style function or in custom CSS.
 #' @param text_bold_color Bold Text Color. Defaults to `base_color`. Modifies
-#'   the `strong` element.
+#'   the `strong` element. The value of this variable is also stored as a CSS
+#'   variable that can be referenced with `var(--text-bold-color)` in any
+#'   argument of a style function or in custom CSS.
 #' @param text_slide_number_color Slide Number Color. Defaults to `base_color`.
 #'   Modifies the `.remark-slide-number` class.
 #' @param padding Slide Padding in `top right [bottom left]` format. Defaults
@@ -37,24 +48,44 @@
 #'   `.remark-slide-content` class.
 #' @param code_highlight_color Code Line Highlight. Defaults to
 #'   rgba(255,255,0,0.5). Modifies the `.remark-code-line-highlighted` class.
+#'   The value of this variable is also stored as a CSS variable that can be
+#'   referenced with `var(--code-highlight-color)` in any argument of a style
+#'   function or in custom CSS.
 #' @param code_inline_color Inline Code Color. Defaults to `base_color`.
 #'   Modifies the `.remark-inline-code` class.
 #' @param code_inline_background_color Inline Code Background Color. Defaults
 #'   to `NULL`. Modifies the `.remark-inline-code` class.
 #' @param code_inline_font_size Inline Code Text Font Size. Defaults to 1em.
-#'   Modifies the `.remark-inline-code` class.
+#'   Modifies the `.remark-inline-code` class. The value of this variable is
+#'   also stored as a CSS variable that can be referenced with
+#'   `var(--code-inline-font-size)` in any argument of a style function or in
+#'   custom CSS.
 #' @param inverse_background_color Inverse Background Color. Defaults to
-#'   `base_color`. Modifies the `.inverse` class.
+#'   `base_color`. Modifies the `.inverse` class. The value of this variable is
+#'   also stored as a CSS variable that can be referenced with
+#'   `var(--inverse-background-color)` in any argument of a style function or
+#'   in custom CSS.
 #' @param inverse_text_color Inverse Text Color. Defaults to `white_color`.
-#'   Modifies the `.inverse` class.
+#'   Modifies the `.inverse` class. The value of this variable is also stored
+#'   as a CSS variable that can be referenced with `var(--inverse-text-color)`
+#'   in any argument of a style function or in custom CSS.
 #' @param inverse_text_shadow Enables Shadow on text of inverse slides.
 #'   Defaults to `FALSE`. Modifies the `.inverse` class.
 #' @param inverse_header_color Inverse Header Color. Defaults to `white_color`.
-#'   Modifies the `.inverse h1, .inverse h2, .inverse h3` classes.
+#'   Modifies the `.inverse h1, .inverse h2, .inverse h3` classes. The value of
+#'   this variable is also stored as a CSS variable that can be referenced with
+#'   `var(--inverse-header-color)` in any argument of a style function or in
+#'   custom CSS.
 #' @param title_slide_text_color Title Slide Text Color. Defaults to
-#'   `inverse_text_color`. Modifies the `.title-slide` class.
+#'   `inverse_text_color`. Modifies the `.title-slide` class. The value of this
+#'   variable is also stored as a CSS variable that can be referenced with
+#'   `var(--title-slide-text-color)` in any argument of a style function or in
+#'   custom CSS.
 #' @param title_slide_background_color Title Slide Background Color. Defaults
-#'   to `inverse_background_color`. Modifies the `.title-slide` class.
+#'   to `inverse_background_color`. Modifies the `.title-slide` class. The
+#'   value of this variable is also stored as a CSS variable that can be
+#'   referenced with `var(--title-slide-background-color)` in any argument of a
+#'   style function or in custom CSS.
 #' @param title_slide_background_image Title Slide Background Image URL.
 #'   Defaults to `NULL`. Modifies the `.title-slide` class.
 #' @param title_slide_background_size Title Slide Background Image Size,
@@ -85,24 +116,45 @@
 #'   Defaults to `lighten_color(base_color, 0.8)`. Modifies the
 #'   `thead, tfoot, tr:nth-child(even)` elements.
 #' @param base_font_size Base Font Size for All Slide Elements (must be `px`).
-#'   Defaults to 20px. Modifies the `html` element.
+#'   Defaults to 20px. Modifies the `html` element. The value of this variable
+#'   is also stored as a CSS variable that can be referenced with
+#'   `var(--base-font-size)` in any argument of a style function or in custom
+#'   CSS.
 #' @param text_font_size Slide Body Text Font Size. Defaults to 1rem. Modifies
-#'   the `.remark-slide-content` class.
+#'   the `.remark-slide-content` class. The value of this variable is also
+#'   stored as a CSS variable that can be referenced with
+#'   `var(--text-font-size)` in any argument of a style function or in custom
+#'   CSS.
 #' @param header_h1_font_size h1 Header Text Font Size. Defaults to 2.75rem.
-#'   Modifies the `.remark-slide-content h1` class.
+#'   Modifies the `.remark-slide-content h1` class. The value of this variable
+#'   is also stored as a CSS variable that can be referenced with
+#'   `var(--header-h1-font-size)` in any argument of a style function or in
+#'   custom CSS.
 #' @param header_h2_font_size h2 Header Text Font Size. Defaults to 2.25rem.
-#'   Modifies the `.remark-slide-content h2` class.
+#'   Modifies the `.remark-slide-content h2` class. The value of this variable
+#'   is also stored as a CSS variable that can be referenced with
+#'   `var(--header-h2-font-size)` in any argument of a style function or in
+#'   custom CSS.
 #' @param header_h3_font_size h3 Header Text Font Size. Defaults to 1.75rem.
-#'   Modifies the `.remark-slide-content h3` class.
+#'   Modifies the `.remark-slide-content h3` class. The value of this variable
+#'   is also stored as a CSS variable that can be referenced with
+#'   `var(--header-h3-font-size)` in any argument of a style function or in
+#'   custom CSS.
 #' @param header_background_auto Add background under slide title automatically
 #'   for h1 header elements. If not enabled, use `class: header_background` to
 #'   enable. Defaults to `FALSE`.
 #' @param header_background_color Background Color for h1 Header with
 #'   Background. Defaults to `header_color`. Modifies the
-#'   `.remark-slide-content h1` class.
+#'   `.remark-slide-content h1` class. The value of this variable is also
+#'   stored as a CSS variable that can be referenced with
+#'   `var(--header-background-color)` in any argument of a style function or in
+#'   custom CSS.
 #' @param header_background_text_color Text Color for h1 Header with
 #'   Background. Defaults to `background_color`. Modifies the
-#'   `.remark-slide-content h1` class.
+#'   `.remark-slide-content h1` class. The value of this variable is also
+#'   stored as a CSS variable that can be referenced with
+#'   `var(--header-background-text-color)` in any argument of a style function
+#'   or in custom CSS.
 #' @param header_background_padding Padding for h1 Header with Background.
 #'   Defaults to `NULL`. Modifies the `.remark-slide-content h1` class.
 #' @param header_background_content_padding_top Top Padding for Content in
@@ -117,7 +169,10 @@
 #' @param text_font_google Use `google_font()` to specify body font. Defaults
 #'   to `NULL`. Modifies the `body` element.
 #' @param text_font_family Body Text Font Family (xaringan default is
-#'   `'Droid Serif'`). Defaults to Noto Sans. Modifies the `body` element.
+#'   `'Droid Serif'`). Defaults to Noto Sans. Modifies the `body` element. The
+#'   value of this variable is also stored as a CSS variable that can be
+#'   referenced with `var(--text-font-family)` in any argument of a style
+#'   function or in custom CSS.
 #' @param text_font_weight Body Text Font Weight. Defaults to normal. Modifies
 #'   the `body` element.
 #' @param text_font_url Body Text Font URL(s). Defaults to
@@ -126,14 +181,21 @@
 #' @param text_font_family_fallback Body Text Font Fallbacks. Defaults to
 #'   -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue,
 #'   helvetica, Ubuntu, roboto, noto, segoe ui, arial. Modifies the `body`
-#'   element.
+#'   element. The value of this variable is also stored as a CSS variable that
+#'   can be referenced with `var(--text-font-family-fallback)` in any argument
+#'   of a style function or in custom CSS.
 #' @param text_font_base Body Text Base Font (Total Failure Fallback). Defaults
-#'   to sans-serif. Modifies the `body` element.
+#'   to sans-serif. Modifies the `body` element. The value of this variable is
+#'   also stored as a CSS variable that can be referenced with
+#'   `var(--text-font-base)` in any argument of a style function or in custom
+#'   CSS.
 #' @param header_font_google Use `google_font()` to specify header font.
 #'   Defaults to `NULL`. Modifies the `body` element.
 #' @param header_font_family Header Font Family (xaringan default is
 #'   `'Yanone Kaffeesatz'`). Defaults to Cabin. Modifies the `h1, h2, h3`
-#'   elements.
+#'   elements. The value of this variable is also stored as a CSS variable that
+#'   can be referenced with `var(--header-font-family)` in any argument of a
+#'   style function or in custom CSS.
 #' @param header_font_weight Header Font Weight. Defaults to 600. Modifies the
 #'   `h1, h2, h3` elements.
 #' @param header_font_url Header Font URL. Defaults to
@@ -142,9 +204,14 @@
 #' @param code_font_google Use `google_font()` to specify code font. Defaults
 #'   to `NULL`. Modifies the `body` element.
 #' @param code_font_family Code Font Family. Defaults to Source Code Pro.
-#'   Modifies the `.remark-code, .remark-inline-code` classes.
+#'   Modifies the `.remark-code, .remark-inline-code` classes. The value of
+#'   this variable is also stored as a CSS variable that can be referenced with
+#'   `var(--code-font-family)` in any argument of a style function or in custom
+#'   CSS.
 #' @param code_font_size Code Text Font Size. Defaults to 0.9rem. Modifies the
-#'   `.remark-inline` class.
+#'   `.remark-inline` class. The value of this variable is also stored as a CSS
+#'   variable that can be referenced with `var(--code-font-size)` in any
+#'   argument of a style function or in custom CSS.
 #' @param code_font_url Code Font URL. Defaults to
 #'   https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700&display=swap.
 #'   Modifies the `@import url` elements.

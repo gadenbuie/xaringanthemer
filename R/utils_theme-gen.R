@@ -23,11 +23,15 @@ element_description <- function(element) {
 }
 
 describe_css_variable <- function(css_variable = NULL) {
-  if (is.null(css_variable) || is.na(css_variable)) return("")
-  glue::glue(
-    " The value of this variable is also stored as a CSS variable that can be ",
-    "referenced with `var({css_variable})` in any argument of a style ",
-    "function or in custom CSS."
+  if (is.null(css_variable)) return("")
+  ifelse(
+    is.na(css_variable),
+    "",
+    glue::glue(
+      " The value of this variable is also stored as a CSS variable that can be ",
+      "referenced with `var({css_variable})` in any argument of a style ",
+      "function or in custom CSS."
+    )
   )
 }
 

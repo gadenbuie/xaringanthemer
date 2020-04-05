@@ -86,19 +86,30 @@ multiple CSS rules.}
 
 \item{text_color}{Text Color. Defaults to
 \code{choose_dark_or_light(primary_color, darken_color(primary_color, 0.9), lighten_color(secondary_color, 0.99))}.
-Modifies the \code{body} element.}
+Modifies the \code{body} element. The value of this variable is also stored as
+a CSS variable that can be referenced with \code{var(--text_color)} in any
+argument of a style function or in custom CSS.}
 
 \item{header_color}{Header Color. Defaults to \code{secondary_color}. Modifies
-the \verb{h1, h2, h3} elements.}
+the \verb{h1, h2, h3} elements. The value of this variable is also stored as a
+CSS variable that can be referenced with \code{var(--header-color)} in any
+argument of a style function or in custom CSS.}
 
 \item{background_color}{Slide Background Color. Defaults to \code{primary_color}.
-Modifies the \code{.remark-slide-content} class.}
+Modifies the \code{.remark-slide-content} class. The value of this variable is
+also stored as a CSS variable that can be referenced with
+\code{var(--background-color)} in any argument of a style function or in custom
+CSS.}
 
 \item{link_color}{Link Color. Defaults to \code{secondary_color}. Modifies the
-\verb{a, a > code} elements.}
+\verb{a, a > code} elements. The value of this variable is also stored as a CSS
+variable that can be referenced with \code{var(--link-color)} in any argument
+of a style function or in custom CSS.}
 
 \item{text_bold_color}{Bold Text Color. Defaults to \code{secondary_color}.
-Modifies the \code{strong} element.}
+Modifies the \code{strong} element. The value of this variable is also stored
+as a CSS variable that can be referenced with \code{var(--text-bold-color)} in
+any argument of a style function or in custom CSS.}
 
 \item{text_slide_number_color}{Slide Number Color. Defaults to \code{text_color}.
 Modifies the \code{.remark-slide-number} class.}
@@ -123,7 +134,10 @@ be set. If \code{background_image} is set, \code{background_size} will default t
 \code{.remark-slide-content} class.}
 
 \item{code_highlight_color}{Code Line Highlight. Defaults to
-rgba(255,255,0,0.5). Modifies the \code{.remark-code-line-highlighted} class.}
+rgba(255,255,0,0.5). Modifies the \code{.remark-code-line-highlighted} class.
+The value of this variable is also stored as a CSS variable that can be
+referenced with \code{var(--code-highlight-color)} in any argument of a style
+function or in custom CSS.}
 
 \item{code_inline_color}{Inline Code Color. Defaults to \code{secondary_color}.
 Modifies the \code{.remark-inline-code} class.}
@@ -132,26 +146,42 @@ Modifies the \code{.remark-inline-code} class.}
 to \code{NULL}. Modifies the \code{.remark-inline-code} class.}
 
 \item{code_inline_font_size}{Inline Code Text Font Size. Defaults to 1em.
-Modifies the \code{.remark-inline-code} class.}
+Modifies the \code{.remark-inline-code} class. The value of this variable is
+also stored as a CSS variable that can be referenced with
+\code{var(--code-inline-font-size)} in any argument of a style function or in
+custom CSS.}
 
 \item{inverse_background_color}{Inverse Background Color. Defaults to
-\code{secondary_color}. Modifies the \code{.inverse} class.}
+\code{secondary_color}. Modifies the \code{.inverse} class. The value of this
+variable is also stored as a CSS variable that can be referenced with
+\code{var(--inverse-background-color)} in any argument of a style function or
+in custom CSS.}
 
 \item{inverse_text_color}{Inverse Text Color. Defaults to \code{primary_color}.
-Modifies the \code{.inverse} class.}
+Modifies the \code{.inverse} class. The value of this variable is also stored
+as a CSS variable that can be referenced with \code{var(--inverse-text-color)}
+in any argument of a style function or in custom CSS.}
 
 \item{inverse_text_shadow}{Enables Shadow on text of inverse slides.
 Defaults to \code{FALSE}. Modifies the \code{.inverse} class.}
 
 \item{inverse_header_color}{Inverse Header Color. Defaults to
 \code{primary_color}. Modifies the \verb{.inverse h1, .inverse h2, .inverse h3}
-classes.}
+classes. The value of this variable is also stored as a CSS variable that
+can be referenced with \code{var(--inverse-header-color)} in any argument of a
+style function or in custom CSS.}
 
 \item{title_slide_text_color}{Title Slide Text Color. Defaults to
-\code{secondary_color}. Modifies the \code{.title-slide} class.}
+\code{secondary_color}. Modifies the \code{.title-slide} class. The value of this
+variable is also stored as a CSS variable that can be referenced with
+\code{var(--title-slide-text-color)} in any argument of a style function or in
+custom CSS.}
 
 \item{title_slide_background_color}{Title Slide Background Color. Defaults
-to \code{primary_color}. Modifies the \code{.title-slide} class.}
+to \code{primary_color}. Modifies the \code{.title-slide} class. The value of this
+variable is also stored as a CSS variable that can be referenced with
+\code{var(--title-slide-background-color)} in any argument of a style function
+or in custom CSS.}
 
 \item{title_slide_background_image}{Title Slide Background Image URL.
 Defaults to \code{NULL}. Modifies the \code{.title-slide} class.}
@@ -195,19 +225,34 @@ Defaults to \code{lighten_color(primary_color, 0.9)}. Modifies the
 \verb{thead, tfoot, tr:nth-child(even)} elements.}
 
 \item{base_font_size}{Base Font Size for All Slide Elements (must be \code{px}).
-Defaults to 20px. Modifies the \code{html} element.}
+Defaults to 20px. Modifies the \code{html} element. The value of this variable
+is also stored as a CSS variable that can be referenced with
+\code{var(--base-font-size)} in any argument of a style function or in custom
+CSS.}
 
 \item{text_font_size}{Slide Body Text Font Size. Defaults to 1rem. Modifies
-the \code{.remark-slide-content} class.}
+the \code{.remark-slide-content} class. The value of this variable is also
+stored as a CSS variable that can be referenced with
+\code{var(--text-font-size)} in any argument of a style function or in custom
+CSS.}
 
 \item{header_h1_font_size}{h1 Header Text Font Size. Defaults to 2.75rem.
-Modifies the \verb{.remark-slide-content h1} class.}
+Modifies the \verb{.remark-slide-content h1} class. The value of this variable
+is also stored as a CSS variable that can be referenced with
+\code{var(--header-h1-font-size)} in any argument of a style function or in
+custom CSS.}
 
 \item{header_h2_font_size}{h2 Header Text Font Size. Defaults to 2.25rem.
-Modifies the \verb{.remark-slide-content h2} class.}
+Modifies the \verb{.remark-slide-content h2} class. The value of this variable
+is also stored as a CSS variable that can be referenced with
+\code{var(--header-h2-font-size)} in any argument of a style function or in
+custom CSS.}
 
 \item{header_h3_font_size}{h3 Header Text Font Size. Defaults to 1.75rem.
-Modifies the \verb{.remark-slide-content h3} class.}
+Modifies the \verb{.remark-slide-content h3} class. The value of this variable
+is also stored as a CSS variable that can be referenced with
+\code{var(--header-h3-font-size)} in any argument of a style function or in
+custom CSS.}
 
 \item{header_background_auto}{Add background under slide title automatically
 for h1 header elements. If not enabled, use \code{class: header_background} to
@@ -215,11 +260,17 @@ enable. Defaults to \code{FALSE}.}
 
 \item{header_background_color}{Background Color for h1 Header with
 Background. Defaults to \code{header_color}. Modifies the
-\verb{.remark-slide-content h1} class.}
+\verb{.remark-slide-content h1} class. The value of this variable is also
+stored as a CSS variable that can be referenced with
+\code{var(--header-background-color)} in any argument of a style function or in
+custom CSS.}
 
 \item{header_background_text_color}{Text Color for h1 Header with
 Background. Defaults to \code{background_color}. Modifies the
-\verb{.remark-slide-content h1} class.}
+\verb{.remark-slide-content h1} class. The value of this variable is also
+stored as a CSS variable that can be referenced with
+\code{var(--header-background-text-color)} in any argument of a style function
+or in custom CSS.}
 
 \item{header_background_padding}{Padding for h1 Header with Background.
 Defaults to \code{NULL}. Modifies the \verb{.remark-slide-content h1} class.}
@@ -240,7 +291,10 @@ Background will not be Applied. Defaults to
 to \code{NULL}. Modifies the \code{body} element.}
 
 \item{text_font_family}{Body Text Font Family (xaringan default is
-\code{'Droid Serif'}). Defaults to Noto Sans. Modifies the \code{body} element.}
+\code{'Droid Serif'}). Defaults to Noto Sans. Modifies the \code{body} element. The
+value of this variable is also stored as a CSS variable that can be
+referenced with \code{var(--text-font-family)} in any argument of a style
+function or in custom CSS.}
 
 \item{text_font_weight}{Body Text Font Weight. Defaults to normal. Modifies
 the \code{body} element.}
@@ -252,17 +306,24 @@ Modifies the \verb{@import url()} elements.}
 \item{text_font_family_fallback}{Body Text Font Fallbacks. Defaults to
 -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue,
 helvetica, Ubuntu, roboto, noto, segoe ui, arial. Modifies the \code{body}
-element.}
+element. The value of this variable is also stored as a CSS variable that
+can be referenced with \code{var(--text-font-family-fallback)} in any argument
+of a style function or in custom CSS.}
 
 \item{text_font_base}{Body Text Base Font (Total Failure Fallback). Defaults
-to sans-serif. Modifies the \code{body} element.}
+to sans-serif. Modifies the \code{body} element. The value of this variable is
+also stored as a CSS variable that can be referenced with
+\code{var(--text-font-base)} in any argument of a style function or in custom
+CSS.}
 
 \item{header_font_google}{Use \code{google_font()} to specify header font.
 Defaults to \code{NULL}. Modifies the \code{body} element.}
 
 \item{header_font_family}{Header Font Family (xaringan default is
 \code{'Yanone Kaffeesatz'}). Defaults to Cabin. Modifies the \verb{h1, h2, h3}
-elements.}
+elements. The value of this variable is also stored as a CSS variable that
+can be referenced with \code{var(--header-font-family)} in any argument of a
+style function or in custom CSS.}
 
 \item{header_font_weight}{Header Font Weight. Defaults to 600. Modifies the
 \verb{h1, h2, h3} elements.}
@@ -275,10 +336,15 @@ Modifies the \verb{@import url} elements.}
 to \code{NULL}. Modifies the \code{body} element.}
 
 \item{code_font_family}{Code Font Family. Defaults to Source Code Pro.
-Modifies the \verb{.remark-code, .remark-inline-code} classes.}
+Modifies the \verb{.remark-code, .remark-inline-code} classes. The value of
+this variable is also stored as a CSS variable that can be referenced with
+\code{var(--code-font-family)} in any argument of a style function or in custom
+CSS.}
 
 \item{code_font_size}{Code Text Font Size. Defaults to 0.9rem. Modifies the
-\code{.remark-inline} class.}
+\code{.remark-inline} class. The value of this variable is also stored as a CSS
+variable that can be referenced with \code{var(--code-font-size)} in any
+argument of a style function or in custom CSS.}
 
 \item{code_font_url}{Code Font URL. Defaults to
 https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700&display=swap.

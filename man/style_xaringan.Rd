@@ -102,38 +102,26 @@ variable that can be referenced with \code{var(--text-bold-color)} in any
 argument of a style function or in custom CSS.}
 
 \item{text_slide_number_color}{Slide Number Color. Defaults to
-\code{inverse_background_color}. Modifies the \code{.remark-slide-number} class. The
-value of this variable is also stored as a CSS variable that can be
-referenced with \code{var(NA)} in any argument of a style function or in custom
-CSS.}
+\code{inverse_background_color}. Modifies the \code{.remark-slide-number} class.}
 
 \item{padding}{Slide Padding in \verb{top right [bottom left]} format. Defaults
-to 16px 64px 16px 64px. Modifies the \code{.remark-slide-content} class. The
-value of this variable is also stored as a CSS variable that can be
-referenced with \code{var(NA)} in any argument of a style function or in custom
-CSS.}
+to 16px 64px 16px 64px. Modifies the \code{.remark-slide-content} class.}
 
 \item{background_image}{Background image applied to each \emph{and every} slide.
 Set \code{title_slide_background_image = "none"} to remove the background image
 from the title slide. Defaults to \code{NULL}. Modifies the
-\code{.remark-slide-content} class. The value of this variable is also stored
-as a CSS variable that can be referenced with \code{var(NA)} in any argument of
-a style function or in custom CSS.}
+\code{.remark-slide-content} class.}
 
 \item{background_size}{Background image size, requires \code{background_image} to
 be set. If \code{background_image} is set, \code{background_size} will default to
 \code{cover} so the backround fills the screen. If both \code{background_image} and
 \code{background_position} are set, will default to 100 percent. Defaults to
-\code{NULL}. Modifies the \code{.remark-slide-content} class. The value of this
-variable is also stored as a CSS variable that can be referenced with
-\code{var(NA)} in any argument of a style function or in custom CSS.}
+\code{NULL}. Modifies the \code{.remark-slide-content} class.}
 
 \item{background_position}{Background image position, requires
 \code{background_image} to be set, and it is recommended to adjust
 \code{background_size}. Defaults to \code{NULL}. Modifies the
-\code{.remark-slide-content} class. The value of this variable is also stored
-as a CSS variable that can be referenced with \code{var(NA)} in any argument of
-a style function or in custom CSS.}
+\code{.remark-slide-content} class.}
 
 \item{code_highlight_color}{Code Line Highlight. Defaults to
 rgba(255,255,0,0.5). Modifies the \code{.remark-code-line-highlighted} class.
@@ -142,14 +130,10 @@ referenced with \code{var(--code-highlight-color)} in any argument of a style
 function or in custom CSS.}
 
 \item{code_inline_color}{Inline Code Color. Defaults to #000. Modifies the
-\code{.remark-inline-code} class. The value of this variable is also stored as
-a CSS variable that can be referenced with \code{var(NA)} in any argument of a
-style function or in custom CSS.}
+\code{.remark-inline-code} class.}
 
 \item{code_inline_background_color}{Inline Code Background Color. Defaults
-to \code{NULL}. Modifies the \code{.remark-inline-code} class. The value of this
-variable is also stored as a CSS variable that can be referenced with
-\code{var(NA)} in any argument of a style function or in custom CSS.}
+to \code{NULL}. Modifies the \code{.remark-inline-code} class.}
 
 \item{code_inline_font_size}{Inline Code Text Font Size. Defaults to 1em.
 Modifies the \code{.remark-inline-code} class. The value of this variable is
@@ -169,9 +153,7 @@ variable that can be referenced with \code{var(--inverse-text-color)} in any
 argument of a style function or in custom CSS.}
 
 \item{inverse_text_shadow}{Enables Shadow on text of inverse slides.
-Defaults to \code{FALSE}. Modifies the \code{.inverse} class. The value of this
-variable is also stored as a CSS variable that can be referenced with
-\code{var(NA)} in any argument of a style function or in custom CSS.}
+Defaults to \code{FALSE}. Modifies the \code{.inverse} class.}
 
 \item{inverse_header_color}{Inverse Header Color. Defaults to #f3f3f3.
 Modifies the \verb{.inverse h1, .inverse h2, .inverse h3} classes. The value of
@@ -192,69 +174,44 @@ referenced with \code{var(--title-slide-background-color)} in any argument of a
 style function or in custom CSS.}
 
 \item{title_slide_background_image}{Title Slide Background Image URL.
-Defaults to \code{NULL}. Modifies the \code{.title-slide} class. The value of this
-variable is also stored as a CSS variable that can be referenced with
-\code{var(NA)} in any argument of a style function or in custom CSS.}
+Defaults to \code{NULL}. Modifies the \code{.title-slide} class.}
 
 \item{title_slide_background_size}{Title Slide Background Image Size,
 defaults to "cover" if background image is set. Defaults to \code{NULL}.
-Modifies the \code{.title-slide} class. The value of this variable is also
-stored as a CSS variable that can be referenced with \code{var(NA)} in any
-argument of a style function or in custom CSS.}
+Modifies the \code{.title-slide} class.}
 
 \item{title_slide_background_position}{Title Slide Background Image
-Position. Defaults to \code{NULL}. Modifies the \code{.title-slide} class. The value
-of this variable is also stored as a CSS variable that can be referenced
-with \code{var(NA)} in any argument of a style function or in custom CSS.}
+Position. Defaults to \code{NULL}. Modifies the \code{.title-slide} class.}
 
 \item{footnote_color}{Footnote text color (if \code{NA}, then it will be the same
 color as \code{text_color}). Defaults to \code{NULL}. Modifies the \code{.footnote}
-class. The value of this variable is also stored as a CSS variable that
-can be referenced with \code{var(NA)} in any argument of a style function or in
-custom CSS.}
+class.}
 
 \item{footnote_font_size}{Footnote font size. Defaults to 0.9em. Modifies
-the \code{.footnote} class. The value of this variable is also stored as a CSS
-variable that can be referenced with \code{var(NA)} in any argument of a style
-function or in custom CSS.}
+the \code{.footnote} class.}
 
 \item{footnote_position_bottom}{Footnote location from bottom of screen.
-Defaults to 60px. Modifies the \code{.footnote} class. The value of this
-variable is also stored as a CSS variable that can be referenced with
-\code{var(NA)} in any argument of a style function or in custom CSS.}
+Defaults to 60px. Modifies the \code{.footnote} class.}
 
 \item{left_column_subtle_color}{Left Column Text (not last). Defaults to
-#777. Modifies the \verb{.left-column h2, .left-column h3} classes. The value
-of this variable is also stored as a CSS variable that can be referenced
-with \code{var(NA)} in any argument of a style function or in custom CSS.}
+#777. Modifies the \verb{.left-column h2, .left-column h3} classes.}
 
 \item{left_column_selected_color}{Left Column Current Selection. Defaults to
 #000. Modifies the
-\verb{.left-column h2:last-of-type, .left-column h3:last-child} classes. The
-value of this variable is also stored as a CSS variable that can be
-referenced with \code{var(NA)} in any argument of a style function or in custom
-CSS.}
+\verb{.left-column h2:last-of-type, .left-column h3:last-child} classes.}
 
 \item{blockquote_left_border_color}{Blockquote Left Border Color. Defaults
-to lightgray. Modifies the \code{blockquote} element. The value of this
-variable is also stored as a CSS variable that can be referenced with
-\code{var(NA)} in any argument of a style function or in custom CSS.}
+to lightgray. Modifies the \code{blockquote} element.}
 
 \item{table_border_color}{Table top/bottom border. Defaults to #666.
-Modifies the \verb{table: border-top, border-bottom} elements. The value of
-this variable is also stored as a CSS variable that can be referenced with
-\code{var(NA)} in any argument of a style function or in custom CSS.}
+Modifies the \verb{table: border-top, border-bottom} elements.}
 
 \item{table_row_border_color}{Table row inner bottom border. Defaults to
-#ddd. Modifies the \verb{table thead th: border-bottom} elements. The value of
-this variable is also stored as a CSS variable that can be referenced with
-\code{var(NA)} in any argument of a style function or in custom CSS.}
+#ddd. Modifies the \verb{table thead th: border-bottom} elements.}
 
 \item{table_row_even_background_color}{Table Even Row Background Color.
 Defaults to #eee. Modifies the \verb{thead, tfoot, tr:nth-child(even)}
-elements. The value of this variable is also stored as a CSS variable that
-can be referenced with \code{var(NA)} in any argument of a style function or in
-custom CSS.}
+elements.}
 
 \item{base_font_size}{Base Font Size for All Slide Elements (must be \code{px}).
 Defaults to 20px. Modifies the \code{html} element. The value of this variable
@@ -288,9 +245,7 @@ custom CSS.}
 
 \item{header_background_auto}{Add background under slide title automatically
 for h1 header elements. If not enabled, use \code{class: header_background} to
-enable. Defaults to \code{FALSE}.  The value of this variable is also stored as
-a CSS variable that can be referenced with \code{var(NA)} in any argument of a
-style function or in custom CSS.}
+enable. Defaults to \code{FALSE}.}
 
 \item{header_background_color}{Background Color for h1 Header with
 Background. Defaults to \code{header_color}. Modifies the
@@ -307,33 +262,22 @@ stored as a CSS variable that can be referenced with
 or in custom CSS.}
 
 \item{header_background_padding}{Padding for h1 Header with Background.
-Defaults to \code{NULL}. Modifies the \verb{.remark-slide-content h1} class. The
-value of this variable is also stored as a CSS variable that can be
-referenced with \code{var(NA)} in any argument of a style function or in custom
-CSS.}
+Defaults to \code{NULL}. Modifies the \verb{.remark-slide-content h1} class.}
 
 \item{header_background_content_padding_top}{Top Padding for Content in
 Slide with Header with Background. Defaults to 7rem. Modifies the
-\code{.remark-slide-content} class. The value of this variable is also stored
-as a CSS variable that can be referenced with \code{var(NA)} in any argument of
-a style function or in custom CSS.}
+\code{.remark-slide-content} class.}
 
 \item{header_background_ignore_classes}{Slide Classes Where Header with
 Background will not be Applied. Defaults to
 \code{c('normal', 'inverse', 'title', 'middle', 'bottom')}. Modifies the
-\code{.remark-slide-content} class. The value of this variable is also stored
-as a CSS variable that can be referenced with \code{var(NA)} in any argument of
-a style function or in custom CSS.}
+\code{.remark-slide-content} class.}
 
 \item{text_slide_number_font_size}{Slide Number Text Font Size. Defaults to
-0.9em. Modifies the \code{.remark-slide-number} class. The value of this
-variable is also stored as a CSS variable that can be referenced with
-\code{var(NA)} in any argument of a style function or in custom CSS.}
+0.9em. Modifies the \code{.remark-slide-number} class.}
 
 \item{text_font_google}{Use \code{google_font()} to specify body font. Defaults
-to \code{NULL}. Modifies the \code{body} element. The value of this variable is also
-stored as a CSS variable that can be referenced with \code{var(NA)} in any
-argument of a style function or in custom CSS.}
+to \code{NULL}. Modifies the \code{body} element.}
 
 \item{text_font_family}{Body Text Font Family (xaringan default is
 \code{'Droid Serif'}). Defaults to Noto Sans. Modifies the \code{body} element. The
@@ -342,15 +286,11 @@ referenced with \code{var(--text-font-family)} in any argument of a style
 function or in custom CSS.}
 
 \item{text_font_weight}{Body Text Font Weight. Defaults to normal. Modifies
-the \code{body} element. The value of this variable is also stored as a CSS
-variable that can be referenced with \code{var(NA)} in any argument of a style
-function or in custom CSS.}
+the \code{body} element.}
 
 \item{text_font_url}{Body Text Font URL(s). Defaults to
 https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&display=swap.
-Modifies the \verb{@import url()} elements. The value of this variable is also
-stored as a CSS variable that can be referenced with \code{var(NA)} in any
-argument of a style function or in custom CSS.}
+Modifies the \verb{@import url()} elements.}
 
 \item{text_font_family_fallback}{Body Text Font Fallbacks. Defaults to
 -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue,
@@ -366,9 +306,7 @@ also stored as a CSS variable that can be referenced with
 CSS.}
 
 \item{header_font_google}{Use \code{google_font()} to specify header font.
-Defaults to \code{NULL}. Modifies the \code{body} element. The value of this
-variable is also stored as a CSS variable that can be referenced with
-\code{var(NA)} in any argument of a style function or in custom CSS.}
+Defaults to \code{NULL}. Modifies the \code{body} element.}
 
 \item{header_font_family}{Header Font Family (xaringan default is
 \code{'Yanone Kaffeesatz'}). Defaults to Cabin. Modifies the \verb{h1, h2, h3}
@@ -377,20 +315,14 @@ can be referenced with \code{var(--header-font-family)} in any argument of a
 style function or in custom CSS.}
 
 \item{header_font_weight}{Header Font Weight. Defaults to 600. Modifies the
-\verb{h1, h2, h3} elements. The value of this variable is also stored as a CSS
-variable that can be referenced with \code{var(NA)} in any argument of a style
-function or in custom CSS.}
+\verb{h1, h2, h3} elements.}
 
 \item{header_font_url}{Header Font URL. Defaults to
 https://fonts.googleapis.com/css?family=Cabin:600,600i&display=swap.
-Modifies the \verb{@import url} elements. The value of this variable is also
-stored as a CSS variable that can be referenced with \code{var(NA)} in any
-argument of a style function or in custom CSS.}
+Modifies the \verb{@import url} elements.}
 
 \item{code_font_google}{Use \code{google_font()} to specify code font. Defaults
-to \code{NULL}. Modifies the \code{body} element. The value of this variable is also
-stored as a CSS variable that can be referenced with \code{var(NA)} in any
-argument of a style function or in custom CSS.}
+to \code{NULL}. Modifies the \code{body} element.}
 
 \item{code_font_family}{Code Font Family. Defaults to Source Code Pro.
 Modifies the \verb{.remark-code, .remark-inline-code} classes. The value of
@@ -405,15 +337,11 @@ argument of a style function or in custom CSS.}
 
 \item{code_font_url}{Code Font URL. Defaults to
 https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700&display=swap.
-Modifies the \verb{@import url} elements. The value of this variable is also
-stored as a CSS variable that can be referenced with \code{var(NA)} in any
-argument of a style function or in custom CSS.}
+Modifies the \verb{@import url} elements.}
 
 \item{code_font_family_fallback}{Code Font Fallback. Defaults to Menlo,
 Consolas, Monaco, Liberation Mono, Lucida Console. Modifies the
-\verb{.remark-code, .remark-inline-code} classes. The value of this variable is
-also stored as a CSS variable that can be referenced with \code{var(NA)} in any
-argument of a style function or in custom CSS.}
+\verb{.remark-code, .remark-inline-code} classes.}
 
 \item{colors}{A named vector of custom colors. The names of the colors
 become CSS variables and classes that can be used within your slides.
