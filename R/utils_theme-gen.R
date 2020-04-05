@@ -35,4 +35,13 @@ describe_css_variable <- function(css_variable = NULL) {
   )
 }
 
+describe_css_property <- function(css_property = NULL) {
+  if (is.null(css_property)) return("")
+  ifelse(
+    is.na(css_property),
+    "",
+    glue::glue(" Accepts CSS {css_property} property values.")
+  )
+}
+
 # nocov end

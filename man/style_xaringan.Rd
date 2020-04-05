@@ -105,7 +105,10 @@ argument of a style function or in custom CSS.}
 \code{inverse_background_color}. Modifies the \code{.remark-slide-number} class.}
 
 \item{padding}{Slide Padding in \verb{top right [bottom left]} format. Defaults
-to 16px 64px 16px 64px. Modifies the \code{.remark-slide-content} class.}
+to 16px 64px 16px 64px. Modifies the \code{.remark-slide-content} class.
+Accepts CSS
+\href{https://developer.mozilla.org/en-US/docs/Web/CSS/padding}{padding}
+property values.}
 
 \item{background_image}{Background image applied to each \emph{and every} slide.
 Set \code{title_slide_background_image = "none"} to remove the background image
@@ -116,12 +119,16 @@ from the title slide. Defaults to \code{NULL}. Modifies the
 be set. If \code{background_image} is set, \code{background_size} will default to
 \code{cover} so the backround fills the screen. If both \code{background_image} and
 \code{background_position} are set, will default to 100 percent. Defaults to
-\code{NULL}. Modifies the \code{.remark-slide-content} class.}
+\code{NULL}. Modifies the \code{.remark-slide-content} class. Accepts CSS
+\href{https://developer.mozilla.org/en-US/docs/Web/CSS/background-size}{background-size}
+property values.}
 
 \item{background_position}{Background image position, requires
 \code{background_image} to be set, and it is recommended to adjust
 \code{background_size}. Defaults to \code{NULL}. Modifies the
-\code{.remark-slide-content} class.}
+\code{.remark-slide-content} class. Accepts CSS
+\href{https://developer.mozilla.org/en-US/docs/Web/CSS/background-position}{background-position}
+property values.}
 
 \item{code_highlight_color}{Code Line Highlight. Defaults to
 rgba(255,255,0,0.5). Modifies the \code{.remark-code-line-highlighted} class.
@@ -136,10 +143,11 @@ function or in custom CSS.}
 to \code{NULL}. Modifies the \code{.remark-inline-code} class.}
 
 \item{code_inline_font_size}{Inline Code Text Font Size. Defaults to 1em.
-Modifies the \code{.remark-inline-code} class. The value of this variable is
-also stored as a CSS variable that can be referenced with
-\code{var(--code-inline-font-size)} in any argument of a style function or in
-custom CSS.}
+Modifies the \code{.remark-inline-code} class. Accepts CSS
+\href{https://developer.mozilla.org/en-US/docs/Web/CSS/font-size}{font-size}
+property values. The value of this variable is also stored as a CSS
+variable that can be referenced with \code{var(--code-inline-font-size)} in any
+argument of a style function or in custom CSS.}
 
 \item{inverse_background_color}{Inverse Background Color. Defaults to
 #272822. Modifies the \code{.inverse} class. The value of this variable is also
@@ -178,20 +186,29 @@ Defaults to \code{NULL}. Modifies the \code{.title-slide} class.}
 
 \item{title_slide_background_size}{Title Slide Background Image Size,
 defaults to "cover" if background image is set. Defaults to \code{NULL}.
-Modifies the \code{.title-slide} class.}
+Modifies the \code{.title-slide} class. Accepts CSS
+\href{https://developer.mozilla.org/en-US/docs/Web/CSS/background-size}{background-size}
+property values.}
 
 \item{title_slide_background_position}{Title Slide Background Image
-Position. Defaults to \code{NULL}. Modifies the \code{.title-slide} class.}
+Position. Defaults to \code{NULL}. Modifies the \code{.title-slide} class. Accepts
+CSS
+\href{https://developer.mozilla.org/en-US/docs/Web/CSS/background-position}{background-position}
+property values.}
 
 \item{footnote_color}{Footnote text color (if \code{NA}, then it will be the same
 color as \code{text_color}). Defaults to \code{NULL}. Modifies the \code{.footnote}
 class.}
 
 \item{footnote_font_size}{Footnote font size. Defaults to 0.9em. Modifies
-the \code{.footnote} class.}
+the \code{.footnote} class. Accepts CSS
+\href{https://developer.mozilla.org/en-US/docs/Web/CSS/font-size}{font-size}
+property values.}
 
 \item{footnote_position_bottom}{Footnote location from bottom of screen.
-Defaults to 60px. Modifies the \code{.footnote} class.}
+Defaults to 60px. Modifies the \code{.footnote} class. Accepts CSS
+\href{https://developer.mozilla.org/en-US/docs/Web/CSS/position_value}{position}
+property values.}
 
 \item{left_column_subtle_color}{Left Column Text (not last). Defaults to
 #777. Modifies the \verb{.left-column h2, .left-column h3} classes.}
@@ -220,28 +237,32 @@ is also stored as a CSS variable that can be referenced with
 CSS.}
 
 \item{text_font_size}{Slide Body Text Font Size. Defaults to 1rem. Modifies
-the \code{.remark-slide-content} class. The value of this variable is also
-stored as a CSS variable that can be referenced with
-\code{var(--text-font-size)} in any argument of a style function or in custom
-CSS.}
+the \code{.remark-slide-content} class. Accepts CSS
+\href{https://developer.mozilla.org/en-US/docs/Web/CSS/font-size}{font-size}
+property values. The value of this variable is also stored as a CSS
+variable that can be referenced with \code{var(--text-font-size)} in any
+argument of a style function or in custom CSS.}
 
 \item{header_h1_font_size}{h1 Header Text Font Size. Defaults to 2.75rem.
-Modifies the \verb{.remark-slide-content h1} class. The value of this variable
-is also stored as a CSS variable that can be referenced with
-\code{var(--header-h1-font-size)} in any argument of a style function or in
-custom CSS.}
+Modifies the \verb{.remark-slide-content h1} class. Accepts CSS
+\href{https://developer.mozilla.org/en-US/docs/Web/CSS/font-size}{font-size}
+property values. The value of this variable is also stored as a CSS
+variable that can be referenced with \code{var(--header-h1-font-size)} in any
+argument of a style function or in custom CSS.}
 
 \item{header_h2_font_size}{h2 Header Text Font Size. Defaults to 2.25rem.
-Modifies the \verb{.remark-slide-content h2} class. The value of this variable
-is also stored as a CSS variable that can be referenced with
-\code{var(--header-h2-font-size)} in any argument of a style function or in
-custom CSS.}
+Modifies the \verb{.remark-slide-content h2} class. Accepts CSS
+\href{https://developer.mozilla.org/en-US/docs/Web/CSS/font-size}{font-size}
+property values. The value of this variable is also stored as a CSS
+variable that can be referenced with \code{var(--header-h2-font-size)} in any
+argument of a style function or in custom CSS.}
 
 \item{header_h3_font_size}{h3 Header Text Font Size. Defaults to 1.75rem.
-Modifies the \verb{.remark-slide-content h3} class. The value of this variable
-is also stored as a CSS variable that can be referenced with
-\code{var(--header-h3-font-size)} in any argument of a style function or in
-custom CSS.}
+Modifies the \verb{.remark-slide-content h3} class. Accepts CSS
+\href{https://developer.mozilla.org/en-US/docs/Web/CSS/font-size}{font-size}
+property values. The value of this variable is also stored as a CSS
+variable that can be referenced with \code{var(--header-h3-font-size)} in any
+argument of a style function or in custom CSS.}
 
 \item{header_background_auto}{Add background under slide title automatically
 for h1 header elements. If not enabled, use \code{class: header_background} to
@@ -262,7 +283,9 @@ stored as a CSS variable that can be referenced with
 or in custom CSS.}
 
 \item{header_background_padding}{Padding for h1 Header with Background.
-Defaults to \code{NULL}. Modifies the \verb{.remark-slide-content h1} class.}
+Defaults to \code{NULL}. Modifies the \verb{.remark-slide-content h1} class. Accepts
+CSS \href{https://developer.mozilla.org/en-US/docs/Web/CSS/padding}{padding}
+property values.}
 
 \item{header_background_content_padding_top}{Top Padding for Content in
 Slide with Header with Background. Defaults to 7rem. Modifies the
@@ -274,7 +297,9 @@ Background will not be Applied. Defaults to
 \code{.remark-slide-content} class.}
 
 \item{text_slide_number_font_size}{Slide Number Text Font Size. Defaults to
-0.9em. Modifies the \code{.remark-slide-number} class.}
+0.9em. Modifies the \code{.remark-slide-number} class. Accepts CSS
+\href{https://developer.mozilla.org/en-US/docs/Web/CSS/font-size}{font-size}
+property values.}
 
 \item{text_font_google}{Use \code{google_font()} to specify body font. Defaults
 to \code{NULL}. Modifies the \code{body} element.}
@@ -286,7 +311,9 @@ referenced with \code{var(--text-font-family)} in any argument of a style
 function or in custom CSS.}
 
 \item{text_font_weight}{Body Text Font Weight. Defaults to normal. Modifies
-the \code{body} element.}
+the \code{body} element. Accepts CSS
+\href{https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight}{font-weight}
+property values.}
 
 \item{text_font_url}{Body Text Font URL(s). Defaults to
 https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&display=swap.
@@ -315,7 +342,9 @@ can be referenced with \code{var(--header-font-family)} in any argument of a
 style function or in custom CSS.}
 
 \item{header_font_weight}{Header Font Weight. Defaults to 600. Modifies the
-\verb{h1, h2, h3} elements.}
+\verb{h1, h2, h3} elements. Accepts CSS
+\href{https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight}{font-weight}
+property values.}
 
 \item{header_font_url}{Header Font URL. Defaults to
 https://fonts.googleapis.com/css?family=Cabin:600,600i&display=swap.
@@ -331,7 +360,9 @@ this variable is also stored as a CSS variable that can be referenced with
 CSS.}
 
 \item{code_font_size}{Code Text Font Size. Defaults to 0.9rem. Modifies the
-\code{.remark-inline} class. The value of this variable is also stored as a CSS
+\code{.remark-inline} class. Accepts CSS
+\href{https://developer.mozilla.org/en-US/docs/Web/CSS/font-size}{font-size}
+property values. The value of this variable is also stored as a CSS
 variable that can be referenced with \code{var(--code-font-size)} in any
 argument of a style function or in custom CSS.}
 

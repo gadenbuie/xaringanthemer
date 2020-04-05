@@ -26,6 +26,7 @@ setup_theme_function <- function(
         "#' @param {variable} {description}. ",
         "Defaults to {gsub('[{{}}]', '`', default)}. ",
         "{element_description(element)}",
+        "{describe_css_property(css_property)}",
         "{describe_css_variable(css_variable)}"
       )
     ),

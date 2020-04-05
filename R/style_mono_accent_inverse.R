@@ -38,6 +38,9 @@
 #'   Modifies the `.remark-slide-number` class.
 #' @param padding Slide Padding in `top right [bottom left]` format. Defaults
 #'   to 16px 64px 16px 64px. Modifies the `.remark-slide-content` class.
+#'   Accepts CSS
+#'   [padding](https://developer.mozilla.org/en-US/docs/Web/CSS/padding)
+#'   property values.
 #' @param background_image Background image applied to each *and every* slide.
 #'   Set `title_slide_background_image = "none"` to remove the background image
 #'   from the title slide. Defaults to `NULL`. Modifies the
@@ -46,11 +49,15 @@
 #'   be set. If `background_image` is set, `background_size` will default to
 #'   `cover` so the backround fills the screen. If both `background_image` and
 #'   `background_position` are set, will default to 100 percent. Defaults to
-#'   `NULL`. Modifies the `.remark-slide-content` class.
+#'   `NULL`. Modifies the `.remark-slide-content` class. Accepts CSS
+#'   [background-size](https://developer.mozilla.org/en-US/docs/Web/CSS/background-size)
+#'   property values.
 #' @param background_position Background image position, requires
 #'   `background_image` to be set, and it is recommended to adjust
 #'   `background_size`. Defaults to `NULL`. Modifies the
-#'   `.remark-slide-content` class.
+#'   `.remark-slide-content` class. Accepts CSS
+#'   [background-position](https://developer.mozilla.org/en-US/docs/Web/CSS/background-position)
+#'   property values.
 #' @param code_highlight_color Code Line Highlight. Defaults to
 #'   rgba(255,255,0,0.5). Modifies the `.remark-code-line-highlighted` class.
 #'   The value of this variable is also stored as a CSS variable that can be
@@ -61,10 +68,11 @@
 #' @param code_inline_background_color Inline Code Background Color. Defaults
 #'   to `NULL`. Modifies the `.remark-inline-code` class.
 #' @param code_inline_font_size Inline Code Text Font Size. Defaults to 1em.
-#'   Modifies the `.remark-inline-code` class. The value of this variable is
-#'   also stored as a CSS variable that can be referenced with
-#'   `var(--code-inline-font-size)` in any argument of a style function or in
-#'   custom CSS.
+#'   Modifies the `.remark-inline-code` class. Accepts CSS
+#'   [font-size](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size)
+#'   property values. The value of this variable is also stored as a CSS
+#'   variable that can be referenced with `var(--code-inline-font-size)` in any
+#'   argument of a style function or in custom CSS.
 #' @param inverse_background_color Inverse Background Color. Defaults to
 #'   `base_color`. Modifies the `.inverse` class. The value of this variable is
 #'   also stored as a CSS variable that can be referenced with
@@ -95,16 +103,25 @@
 #'   Defaults to `NULL`. Modifies the `.title-slide` class.
 #' @param title_slide_background_size Title Slide Background Image Size,
 #'   defaults to "cover" if background image is set. Defaults to `NULL`.
-#'   Modifies the `.title-slide` class.
+#'   Modifies the `.title-slide` class. Accepts CSS
+#'   [background-size](https://developer.mozilla.org/en-US/docs/Web/CSS/background-size)
+#'   property values.
 #' @param title_slide_background_position Title Slide Background Image
-#'   Position. Defaults to `NULL`. Modifies the `.title-slide` class.
+#'   Position. Defaults to `NULL`. Modifies the `.title-slide` class. Accepts
+#'   CSS
+#'   [background-position](https://developer.mozilla.org/en-US/docs/Web/CSS/background-position)
+#'   property values.
 #' @param footnote_color Footnote text color (if `NA`, then it will be the same
 #'   color as `text_color`). Defaults to `NULL`. Modifies the `.footnote`
 #'   class.
 #' @param footnote_font_size Footnote font size. Defaults to 0.9em. Modifies
-#'   the `.footnote` class.
+#'   the `.footnote` class. Accepts CSS
+#'   [font-size](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size)
+#'   property values.
 #' @param footnote_position_bottom Footnote location from bottom of screen.
-#'   Defaults to 60px. Modifies the `.footnote` class.
+#'   Defaults to 60px. Modifies the `.footnote` class. Accepts CSS
+#'   [position](https://developer.mozilla.org/en-US/docs/Web/CSS/position_value)
+#'   property values.
 #' @param left_column_subtle_color Left Column Text (not last). Defaults to
 #'   `apply_alpha(base_color, 0.6)`. Modifies the
 #'   `.left-column h2, .left-column h3` classes.
@@ -126,25 +143,29 @@
 #'   `var(--base-font-size)` in any argument of a style function or in custom
 #'   CSS.
 #' @param text_font_size Slide Body Text Font Size. Defaults to 1rem. Modifies
-#'   the `.remark-slide-content` class. The value of this variable is also
-#'   stored as a CSS variable that can be referenced with
-#'   `var(--text-font-size)` in any argument of a style function or in custom
-#'   CSS.
+#'   the `.remark-slide-content` class. Accepts CSS
+#'   [font-size](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size)
+#'   property values. The value of this variable is also stored as a CSS
+#'   variable that can be referenced with `var(--text-font-size)` in any
+#'   argument of a style function or in custom CSS.
 #' @param header_h1_font_size h1 Header Text Font Size. Defaults to 2.75rem.
-#'   Modifies the `.remark-slide-content h1` class. The value of this variable
-#'   is also stored as a CSS variable that can be referenced with
-#'   `var(--header-h1-font-size)` in any argument of a style function or in
-#'   custom CSS.
+#'   Modifies the `.remark-slide-content h1` class. Accepts CSS
+#'   [font-size](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size)
+#'   property values. The value of this variable is also stored as a CSS
+#'   variable that can be referenced with `var(--header-h1-font-size)` in any
+#'   argument of a style function or in custom CSS.
 #' @param header_h2_font_size h2 Header Text Font Size. Defaults to 2.25rem.
-#'   Modifies the `.remark-slide-content h2` class. The value of this variable
-#'   is also stored as a CSS variable that can be referenced with
-#'   `var(--header-h2-font-size)` in any argument of a style function or in
-#'   custom CSS.
+#'   Modifies the `.remark-slide-content h2` class. Accepts CSS
+#'   [font-size](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size)
+#'   property values. The value of this variable is also stored as a CSS
+#'   variable that can be referenced with `var(--header-h2-font-size)` in any
+#'   argument of a style function or in custom CSS.
 #' @param header_h3_font_size h3 Header Text Font Size. Defaults to 1.75rem.
-#'   Modifies the `.remark-slide-content h3` class. The value of this variable
-#'   is also stored as a CSS variable that can be referenced with
-#'   `var(--header-h3-font-size)` in any argument of a style function or in
-#'   custom CSS.
+#'   Modifies the `.remark-slide-content h3` class. Accepts CSS
+#'   [font-size](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size)
+#'   property values. The value of this variable is also stored as a CSS
+#'   variable that can be referenced with `var(--header-h3-font-size)` in any
+#'   argument of a style function or in custom CSS.
 #' @param header_background_auto Add background under slide title automatically
 #'   for h1 header elements. If not enabled, use `class: header_background` to
 #'   enable. Defaults to `FALSE`.
@@ -161,7 +182,9 @@
 #'   `var(--header-background-text-color)` in any argument of a style function
 #'   or in custom CSS.
 #' @param header_background_padding Padding for h1 Header with Background.
-#'   Defaults to `NULL`. Modifies the `.remark-slide-content h1` class.
+#'   Defaults to `NULL`. Modifies the `.remark-slide-content h1` class. Accepts
+#'   CSS [padding](https://developer.mozilla.org/en-US/docs/Web/CSS/padding)
+#'   property values.
 #' @param header_background_content_padding_top Top Padding for Content in
 #'   Slide with Header with Background. Defaults to 7rem. Modifies the
 #'   `.remark-slide-content` class.
@@ -170,7 +193,9 @@
 #'   `c('normal', 'inverse', 'title', 'middle', 'bottom')`. Modifies the
 #'   `.remark-slide-content` class.
 #' @param text_slide_number_font_size Slide Number Text Font Size. Defaults to
-#'   0.9em. Modifies the `.remark-slide-number` class.
+#'   0.9em. Modifies the `.remark-slide-number` class. Accepts CSS
+#'   [font-size](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size)
+#'   property values.
 #' @param text_font_google Use `google_font()` to specify body font. Defaults
 #'   to `NULL`. Modifies the `body` element.
 #' @param text_font_family Body Text Font Family (xaringan default is
@@ -179,7 +204,9 @@
 #'   referenced with `var(--text-font-family)` in any argument of a style
 #'   function or in custom CSS.
 #' @param text_font_weight Body Text Font Weight. Defaults to normal. Modifies
-#'   the `body` element.
+#'   the `body` element. Accepts CSS
+#'   [font-weight](https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight)
+#'   property values.
 #' @param text_font_url Body Text Font URL(s). Defaults to
 #'   https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&display=swap.
 #'   Modifies the `@import url()` elements.
@@ -202,7 +229,9 @@
 #'   can be referenced with `var(--header-font-family)` in any argument of a
 #'   style function or in custom CSS.
 #' @param header_font_weight Header Font Weight. Defaults to 600. Modifies the
-#'   `h1, h2, h3` elements.
+#'   `h1, h2, h3` elements. Accepts CSS
+#'   [font-weight](https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight)
+#'   property values.
 #' @param header_font_url Header Font URL. Defaults to
 #'   https://fonts.googleapis.com/css?family=Cabin:600,600i&display=swap.
 #'   Modifies the `@import url` elements.
@@ -214,7 +243,9 @@
 #'   `var(--code-font-family)` in any argument of a style function or in custom
 #'   CSS.
 #' @param code_font_size Code Text Font Size. Defaults to 0.9rem. Modifies the
-#'   `.remark-inline` class. The value of this variable is also stored as a CSS
+#'   `.remark-inline` class. Accepts CSS
+#'   [font-size](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size)
+#'   property values. The value of this variable is also stored as a CSS
 #'   variable that can be referenced with `var(--code-font-size)` in any
 #'   argument of a style function or in custom CSS.
 #' @param code_font_url Code Font URL. Defaults to

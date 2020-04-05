@@ -62,13 +62,42 @@ template_variables <- tibble::tribble(
   , "code_font_family_fallback", "Menlo, Consolas, Monaco, Liberation Mono, Lucida Console", ".remark-code, .remark-inline-code", "Code Font Fallback", NA_character_
 )
 
-set_default <- function(tv, ...) {
+set_default <- function(tv, ..., set_var = "default") {
   vars <- c(...)
   for (var in names(vars)) {
-    tv[tv$variable == var, 'default'] <- vars[var]
+    tv[tv$variable == var, set_var] <- vars[var]
   }
   tv
 }
+
+template_variables$css_property <- NA_character_
+mdn_font_size <- "[font-size](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size)"
+mdn_font_weight <- "[font-weight](https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight)"
+mdn_background_size <- "[background-size](https://developer.mozilla.org/en-US/docs/Web/CSS/background-size)"
+mdn_background_position <- "[background-position](https://developer.mozilla.org/en-US/docs/Web/CSS/background-position)"
+mdn_padding <- "[padding](https://developer.mozilla.org/en-US/docs/Web/CSS/padding)"
+
+template_variables <- set_default(
+  template_variables,
+  set_var = "css_property",
+  padding = mdn_padding,
+  background_size = mdn_background_size,
+  background_position = mdn_background_position,
+  code_inline_font_size = mdn_font_size,
+  title_slide_background_position = mdn_background_position,
+  title_slide_background_size = mdn_background_size,
+  footnote_font_size = mdn_font_size,
+  footnote_position_bottom = "[position](https://developer.mozilla.org/en-US/docs/Web/CSS/position_value)",
+  text_font_size = mdn_font_size,
+  header_h1_font_size = mdn_font_size,
+  header_h2_font_size = mdn_font_size,
+  header_h3_font_size = mdn_font_size,
+  header_background_padding = mdn_padding,
+  text_slide_number_font_size = mdn_font_size,
+  text_font_weight = mdn_font_weight,
+  header_font_weight = mdn_font_weight,
+  code_font_size = mdn_font_size
+)
 
 template_mono_light <- tibble::tribble(
   ~ variable, ~ default, ~ element, ~ description, ~ css_variable
