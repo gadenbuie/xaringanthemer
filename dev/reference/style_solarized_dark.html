@@ -637,6 +637,15 @@ class with the <code>font-family</code> property. See the <strong>Fonts</strong>
     </tr>
     </table>
 
+    <h2 class="hasAnchor" id="usage"><a class="anchor" href="#usage"></a>Usage</h2>
+
+    <p>To use the styles created by this theme function, make sure
+that you use <code>xaringan-themer.css</code> as your CSS file in your slides' YAML
+header. If you change the name of the output file using the <code>outfile</code>
+argument, use that name instead of the default file name.<div class="yaml"></p><pre>output:
+xaringan::moon_reader:
+  css: xaringan-themer.css`
+</pre><p></div></p>
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p><a href='http://ethanschoonover.com/solarized'>http://ethanschoonover.com/solarized</a></p>
@@ -655,6 +664,17 @@ class with the <code>font-family</code> property. See the <strong>Fonts</strong>
 <p>Other Solarized themes: 
 <code><a href='style_solarized_light.html'>style_solarized_light</a>()</code></p></div>
 
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='co'># Create a xaringan style in a temporary file</span>
+<span class='no'>xaringan_themer_css</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/tempfile.html'>tempfile</a></span>(<span class='st'>"xaringan-themer-"</span>, <span class='kw'>fileext</span> <span class='kw'>=</span> <span class='st'>".css"</span>)
+
+<span class='fu'>style_solarized_dark</span>(
+  <span class='kw'>outfile</span> <span class='kw'>=</span> <span class='no'>xaringan_themer_css</span> <span class='co'># omit in your slides to write the</span>
+                                <span class='co'># styles to xaringan-themer.css</span>
+)
+
+<span class='co'># View the CSS:</span>
+<span class='co'># file.edit(xaringan_themer_css)</span></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
