@@ -71,10 +71,10 @@ set_default <- function(tv, ...) {
 }
 
 template_mono_light <- tibble::tribble(
-  ~ variable, ~ default, ~ element, ~ description
-  , "base_color", "#23395b", "multiple", "Monotone base color, works best with a strong color"
-  , "white_color", "{lighten_color(base_color, 0.9)}", "multiple", "Brightest color used, default is a very light version of `base_color`"
-  , "black_color", "{darken_color(base_color, 0.3)}", "multiple", "Darkest color used, default is a very dark, version of `base_color`"
+  ~ variable, ~ default, ~ element, ~ description, ~ css_variable
+  , "base_color", "#23395b", "multiple", "Monotone base color, works best with a strong color", "--base"
+  , "white_color", "{lighten_color(base_color, 0.9)}", "multiple", "Brightest color used, default is a very light version of `base_color`", "--white"
+  , "black_color", "{darken_color(base_color, 0.3)}", "multiple", "Darkest color used, default is a very dark, version of `base_color`", "--black"
 )
 template_mono_light <- dplyr::bind_rows(template_mono_light, template_variables)
 template_mono_light <- set_default(
@@ -95,10 +95,10 @@ template_mono_light <- set_default(
   table_row_even_background_color = "{lighten_color(base_color, 0.8)}")
 
 template_mono_dark <- tibble::tribble(
-  ~ variable, ~ default, ~ element, ~ description
-  , "base_color", "#cbf7ed", "multiple", "Monotone Base Color, works best with a light color."
-  , "white_color", "{lighten_color(base_color, 0.8)}", "multiple", "Brightest color used, default is a very light version of `base_color`"
-  , "black_color", "{darken_color(base_color, 0.85)}", "multiple", "Darkest color used, default is a very dark, version of `base_color`"
+  ~ variable, ~ default, ~ element, ~ description, ~ css_variable
+  , "base_color", "#cbf7ed", "multiple", "Monotone Base Color, works best with a light color.", "--base"
+  , "white_color", "{lighten_color(base_color, 0.8)}", "multiple", "Brightest color used, default is a very light version of `base_color`", "--white"
+  , "black_color", "{darken_color(base_color, 0.85)}", "multiple", "Darkest color used, default is a very dark, version of `base_color`", "--black"
 )
 template_mono_dark <- dplyr::bind_rows(template_mono_dark, template_variables)
 template_mono_dark <- set_default(
@@ -119,10 +119,10 @@ template_mono_dark <- set_default(
   table_row_even_background_color = "{darken_color(base_color, 0.7)}")
 
 template_mono_accent <- tibble::tribble(
-  ~ variable, ~ default, ~ element, ~ description
-  , "base_color", "#43418A", "multiple", "Monotone Base Color, works best with a strong color"
-  , "white_color", "#FFFFFF", "multiple", "Brightest color used"
-  , "black_color", "#272822", "multiple", "Darkest color used"
+  ~ variable, ~ default, ~ element, ~ description, ~ css_variable
+  , "base_color", "#43418A", "multiple", "Monotone Base Color, works best with a strong color", "--base"
+  , "white_color", "#FFFFFF", "multiple", "Brightest color used", "--white"
+  , "black_color", "#272822", "multiple", "Darkest color used", "--black"
 )
 template_mono_accent <- dplyr::bind_rows(template_mono_accent, template_variables)
 template_mono_accent <- set_default(
@@ -143,10 +143,10 @@ template_mono_accent <- set_default(
   table_row_even_background_color = "{lighten_color(base_color, 0.8)}")
 
 template_mono_accent_inverse <- tibble::tribble(
-  ~ variable, ~ default, ~ element, ~ description
-  , "base_color", "#3C989E", "multiple", "Monotone Base Color, works best with a light color"
-  , "white_color", "#FFFFFF", "multiple", "Brightest color used, default is a very light version of `base_color`"
-  , "black_color", "{darken_color(base_color, 0.9)}", "multiple", "Darkest color used, default is a very dark, version of `base_color`"
+  ~ variable, ~ default, ~ element, ~ description, ~ css_variable
+  , "base_color", "#3C989E", "multiple", "Monotone Base Color, works best with a light color", "--base"
+  , "white_color", "#FFFFFF", "multiple", "Brightest color used, default is a very light version of `base_color`", "--white"
+  , "black_color", "{darken_color(base_color, 0.9)}", "multiple", "Darkest color used, default is a very dark, version of `base_color`", "--black"
 )
 template_mono_accent_inverse <- dplyr::bind_rows(template_mono_accent_inverse, template_variables)
 template_mono_accent_inverse <- set_default(
@@ -167,11 +167,11 @@ template_mono_accent_inverse <- set_default(
   table_row_even_background_color = "{darken_color(base_color, 0.8)}")
 
 template_duo_light <- tibble::tribble(
-  ~ variable, ~ default, ~ element, ~ description
-  , "primary_color", "#1F4257", "multiple", "Duotone Secondary Color"
-  , "secondary_color", "#F97B64", "multiple", "Duotone Primary Color"
-  , "white_color", "{lighten_color(primary_color, 0.99)}", "multiple", "Brightest color used, default is a very light version of `primary_color`"
-  , "black_color", "{darken_color(secondary_color, 0.9)}", "multiple", "Darkest color used, default is a very dark version of `secondary_color`"
+  ~ variable, ~ default, ~ element, ~ description, ~ css_variable
+  , "primary_color", "#1F4257", "multiple", "Duotone Secondary Color", "--primary"
+  , "secondary_color", "#F97B64", "multiple", "Duotone Primary Color", "--secondary"
+  , "white_color", "{lighten_color(primary_color, 0.99)}", "multiple", "Brightest color used, default is a very light version of `primary_color`", "--white"
+  , "black_color", "{darken_color(secondary_color, 0.9)}", "multiple", "Darkest color used, default is a very dark version of `secondary_color`", "--black"
 )
 template_duo_light <- dplyr::bind_rows(template_duo_light, template_variables)
 template_duo_light <- set_default(
@@ -192,9 +192,9 @@ template_duo_light <- set_default(
   table_row_even_background_color = "{lighten_color(secondary_color, 0.9)}")
 
 template_duo <- tibble::tribble(
-  ~ variable, ~ default, ~ element, ~ description
-  , "primary_color", "#1F4257", "multiple", "Duotone Primary Color"
-  , "secondary_color", "#F97B64", "multiple", "Duotone Secondary Color"
+  ~ variable, ~ default, ~ element, ~ description, ~ css_variable
+  , "primary_color", "#1F4257", "multiple", "Duotone Primary Color", "--primary"
+  , "secondary_color", "#F97B64", "multiple", "Duotone Secondary Color", "--secondary"
 )
 template_duo <- dplyr::bind_rows(template_duo, template_variables)
 template_duo <- set_default(
@@ -217,11 +217,11 @@ template_duo <- set_default(
   table_row_even_background_color = "{lighten_color(primary_color, 0.9)}")
 
 template_duo_accent <- tibble::tribble(
-  ~ variable, ~ default, ~ element, ~ description
-  , "primary_color", "#006747", "multiple", "Duotone Primary Color"
-  , "secondary_color", "#CFC493", "multiple", "Duotone Secondary Color"
-  , "white_color", "#FFFFFF", "multiple", "Brightest color used"
-  , "black_color", "#000000", "multiple", "Darkest color used"
+  ~ variable, ~ default, ~ element, ~ description, ~ css_variable
+  , "primary_color", "#006747", "multiple", "Duotone Primary Color", "--primary"
+  , "secondary_color", "#CFC493", "multiple", "Duotone Secondary Color", "--secondary"
+  , "white_color", "#FFFFFF", "multiple", "Brightest color used", "--white"
+  , "black_color", "#000000", "multiple", "Darkest color used", "--black"
 )
 template_duo_accent <- dplyr::bind_rows(template_duo_accent, template_variables)
 template_duo_accent <- set_default(

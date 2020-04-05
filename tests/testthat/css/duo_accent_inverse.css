@@ -55,6 +55,10 @@
   --title-slide-text-color: #FFFFFF;
   --header-background-color: #006747;
   --header-background-text-color: #000000;
+  --primary: #006747;
+  --secondary: #CFC493;
+  --white: #FFFFFF;
+  --black: #000000;
 }
 
 html {
@@ -230,3 +234,27 @@ table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
   }
 }
 
+.primary {
+  color: var(--primary);
+}
+.bg-primary {
+  background-color: var(--primary);
+}
+.secondary {
+  color: var(--secondary);
+}
+.bg-secondary {
+  background-color: var(--secondary);
+}
+.white {
+  color: var(--white);
+}
+.bg-white {
+  background-color: var(--white);
+}
+.black {
+  color: var(--black);
+}
+.bg-black {
+  background-color: var(--black);
+}

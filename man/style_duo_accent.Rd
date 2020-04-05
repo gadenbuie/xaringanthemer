@@ -82,16 +82,24 @@ style_duo_accent(
 }
 \arguments{
 \item{primary_color}{Duotone Primary Color. Defaults to #006747. Used in
-multiple CSS rules.}
+multiple CSS rules. The value of this variable is also stored as a CSS
+variable that can be referenced with \code{var(--primary)} in any argument of a
+style function or in custom CSS.}
 
 \item{secondary_color}{Duotone Secondary Color. Defaults to #CFC493. Used in
-multiple CSS rules.}
+multiple CSS rules. The value of this variable is also stored as a CSS
+variable that can be referenced with \code{var(--secondary)} in any argument of
+a style function or in custom CSS.}
 
 \item{white_color}{Brightest color used. Defaults to #FFFFFF. Used in
-multiple CSS rules.}
+multiple CSS rules. The value of this variable is also stored as a CSS
+variable that can be referenced with \code{var(--white)} in any argument of a
+style function or in custom CSS.}
 
 \item{black_color}{Darkest color used. Defaults to #000000. Used in multiple
-CSS rules.}
+CSS rules. The value of this variable is also stored as a CSS variable
+that can be referenced with \code{var(--black)} in any argument of a style
+function or in custom CSS.}
 
 \item{text_color}{Text Color. Defaults to \code{black_color}. Modifies the \code{body}
 element. The value of this variable is also stored as a CSS variable that

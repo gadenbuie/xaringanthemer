@@ -55,6 +55,9 @@
   --title-slide-text-color: #FFFFFF;
   --header-background-color: #43418A;
   --header-background-text-color: #FFFFFF;
+  --base: #43418A;
+  --white: #FFFFFF;
+  --black: #272822;
 }
 
 html {
@@ -230,3 +233,21 @@ table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
   }
 }
 
+.base {
+  color: var(--base);
+}
+.bg-base {
+  background-color: var(--base);
+}
+.white {
+  color: var(--white);
+}
+.bg-white {
+  background-color: var(--white);
+}
+.black {
+  color: var(--black);
+}
+.bg-black {
+  background-color: var(--black);
+}

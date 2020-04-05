@@ -4,12 +4,14 @@
 \name{xaringanthemer-package}
 \alias{xaringanthemer}
 \alias{xaringanthemer-package}
-\title{xaringanthemer: Xaringan CSS Theme Generator}
+\title{xaringanthemer: Custom 'Xaringan' CSS Themes}
 \description{
-Create and edit your xaringan CSS files from within
-    your R R Markdown slide source. More technically, this package
-    actually creates valid remarkjs CSS themes that are easily used by
-    xarangan.
+Create beautifully color-cordinated and customized
+    themes for your 'xaringan' slides, without writing any CSS. Complete
+    your slide theme with 'ggplot2' themes that match the font and colors
+    used in your slides.  Customized styles can be created directly in
+    your slides' 'R Markdown' source file or in a separate external
+    script.
 }
 \seealso{
 Useful links:
@@ -20,7 +22,7 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Garrick Aden-Buie \email{garrick@adenbuie.com}
+\strong{Maintainer}: Garrick Aden-Buie \email{garrick@adenbuie.com} (\href{https://orcid.org/0000-0002-7111-0077}{ORCID})
 
 }
 \keyword{internal}

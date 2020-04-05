@@ -79,10 +79,14 @@ style_duo(
 }
 \arguments{
 \item{primary_color}{Duotone Primary Color. Defaults to #1F4257. Used in
-multiple CSS rules.}
+multiple CSS rules. The value of this variable is also stored as a CSS
+variable that can be referenced with \code{var(--primary)} in any argument of a
+style function or in custom CSS.}
 
 \item{secondary_color}{Duotone Secondary Color. Defaults to #F97B64. Used in
-multiple CSS rules.}
+multiple CSS rules. The value of this variable is also stored as a CSS
+variable that can be referenced with \code{var(--secondary)} in any argument of
+a style function or in custom CSS.}
 
 \item{text_color}{Text Color. Defaults to
 \code{choose_dark_or_light(primary_color, darken_color(primary_color, 0.9), lighten_color(secondary_color, 0.99))}.

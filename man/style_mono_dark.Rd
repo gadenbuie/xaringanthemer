@@ -79,15 +79,21 @@ style_mono_dark(
 }
 \arguments{
 \item{base_color}{Monotone Base Color, works best with a light color..
-Defaults to #cbf7ed. Used in multiple CSS rules.}
+Defaults to #cbf7ed. Used in multiple CSS rules. The value of this
+variable is also stored as a CSS variable that can be referenced with
+\code{var(--base)} in any argument of a style function or in custom CSS.}
 
 \item{white_color}{Brightest color used, default is a very light version of
 \code{base_color}. Defaults to \code{lighten_color(base_color, 0.8)}. Used in
-multiple CSS rules.}
+multiple CSS rules. The value of this variable is also stored as a CSS
+variable that can be referenced with \code{var(--white)} in any argument of a
+style function or in custom CSS.}
 
 \item{black_color}{Darkest color used, default is a very dark, version of
 \code{base_color}. Defaults to \code{darken_color(base_color, 0.85)}. Used in
-multiple CSS rules.}
+multiple CSS rules. The value of this variable is also stored as a CSS
+variable that can be referenced with \code{var(--black)} in any argument of a
+style function or in custom CSS.}
 
 \item{text_color}{Text Color. Defaults to \code{white_color}. Modifies the \code{body}
 element. The value of this variable is also stored as a CSS variable that

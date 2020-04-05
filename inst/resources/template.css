@@ -41,9 +41,7 @@
   --header-h2-font-size: {{header_h2_font_size}};
   --header-h3-font-size: {{header_h3_font_size}};
 
-  /* Colors */{{#primary}}
-  --primary: {{primary}};{{/primary}}{{#secondary}}
-  --secondary: {{secondary}};{{/secondary}}
+  /* Colors */
   --text-color: {{text_color}};
   --header-color: {{header_color}};
   --background-color: {{background_color}};
@@ -57,9 +55,7 @@
   --title-slide-text-color: {{title_slide_text_color}};
   --header-background-color: {{header_background_color}};
   --header-background-text-color: {{header_background_text_color}};{{#colors}}
-  --{{color_name}}: {{value}};
-  {{/colors}}
-
+  --{{color_name}}: {{value}};{{/colors}}
 }
 
 html {

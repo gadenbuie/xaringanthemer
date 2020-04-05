@@ -7,11 +7,14 @@ setup_theme_function <- function(
   template = template_variables,
   ...,
   file = "",
-  body = "  eval(parse(text = call_style_xaringan()))"
+  body = "  eval(parse(text = call_style_xaringan()))",
+  theme_colors = NULL
 ) {
   if (file == "clip" && !requireNamespace("clipr", quietly = TRUE)) file <- ""
+  f_body_theme_colors <- include_theme_colors(theme_colors)
   f_body <- c(
     "  # DO NOT EDIT - Generated from inst/scripts/generate_theme_functions.R",
+    f_body_theme_colors,
     body
   )
   tv <- template
@@ -85,6 +88,13 @@ pack_inline_code <- function(x) {
   paste(x, collapse = "")
 }
 
+include_theme_colors <- function(theme_colors = NULL) {
+  if (is.null(theme_colors)) return(NULL)
+  x <- glue::glue('{names(theme_colors)} = {theme_colors}')
+  x <- paste(x, collapse = ", ")
+  glue::glue("  colors <- c({x}, colors)")
+}
+
 # ---- Write Xaringan Theme Function ----
 setup_theme_function(
   "style_xaringan",
@@ -102,7 +112,8 @@ setup_theme_function(
   "#' @template style_mono_light",
   "#' @family Monotone themes",
   "#' @export",
-  file = here::here("R/style_mono_light.R")
+  file = here::here("R/style_mono_light.R"),
+  theme_colors = c(base = "base_color", white = "white_color", black = "black_color")
 )
 
 # ---- Monotone Dark ----
@@ -112,7 +123,8 @@ setup_theme_function(
   "#' @template style_mono_dark",
   "#' @family Monotone themes",
   "#' @export",
-  file = here::here("R/style_mono_dark.R")
+  file = here::here("R/style_mono_dark.R"),
+  theme_colors = c(base = "base_color", white = "white_color", black = "black_color")
 )
 
 # ---- Monotone Accent ----
@@ -122,7 +134,8 @@ setup_theme_function(
   "#' @template style_mono_accent",
   "#' @family Monotone themes",
   "#' @export",
-  file = here::here("R/style_mono_accent.R")
+  file = here::here("R/style_mono_accent.R"),
+  theme_colors = c(base = "base_color", white = "white_color", black = "black_color")
 )
 
 # ---- Monotone Accent Inverse ----
@@ -132,7 +145,8 @@ setup_theme_function(
   "#' @template style_mono_accent_inverse",
   "#' @family Monotone themes",
   "#' @export",
-  file = here::here("R/style_mono_accent_inverse.R")
+  file = here::here("R/style_mono_accent_inverse.R"),
+  theme_colors = c(base = "base_color", white = "white_color", black = "black_color")
 )
 
 # ---- Duotone ----
@@ -142,7 +156,8 @@ setup_theme_function(
   "#' @template style_duo",
   "#' @family Duotone themes",
   "#' @export",
-  file = here::here("R/style_duo.R")
+  file = here::here("R/style_duo.R"),
+  theme_colors = c(primary = "primary_color", secondary = "secondary_color")
 )
 
 # ---- Duotone Accent ----
@@ -152,7 +167,9 @@ setup_theme_function(
   "#' @template style_duo_accent",
   "#' @family Duotone themes",
   "#' @export",
-  file = here::here("R/style_duo_accent.R")
+  file = here::here("R/style_duo_accent.R"),
+  theme_colors = c(primary = "primary_color", secondary = "secondary_color",
+                   white = "white_color", black = "black_color")
 )
 
 # ---- Duotone Accent Inverse ----
@@ -162,7 +179,9 @@ setup_theme_function(
   "#' @template style_duo_accent_inverse",
   "#' @family Duotone themes",
   "#' @export",
-  file = here::here("R/style_duo_accent_inverse.R")
+  file = here::here("R/style_duo_accent_inverse.R"),
+  theme_colors = c(primary = "primary_color", secondary = "secondary_color",
+                   white = "white_color", black = "black_color")
 )
 
 # ---- Solarized Light ----
