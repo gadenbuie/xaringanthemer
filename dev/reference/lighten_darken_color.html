@@ -164,6 +164,15 @@ where 0 is entirely the original color and 1 is entirely white
     </table>
 
 
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='no'>blue</span> <span class='kw'>&lt;-</span> <span class='st'>"#0e6ba8"</span>
+<span class='no'>blue_light</span> <span class='kw'>&lt;-</span> <span class='fu'>lighten_color</span>(<span class='no'>blue</span>, <span class='kw'>strength</span> <span class='kw'>=</span> <span class='fl'>0.33</span>)
+<span class='no'>blue_dark</span> <span class='kw'>&lt;-</span> <span class='fu'>darken_color</span>(<span class='no'>blue</span>, <span class='kw'>strength</span> <span class='kw'>=</span> <span class='fl'>0.33</span>)
+
+<span class='kw'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/ns-load.html'>requireNamespace</a></span>(<span class='st'>"scales"</span>, <span class='kw'>quietly</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)) {
+  <span class='kw pkg'>scales</span><span class='kw ns'>::</span><span class='fu'><a href='https://scales.r-lib.org//reference/show_col.html'>show_col</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='no'>blue_light</span>, <span class='no'>blue</span>, <span class='no'>blue_dark</span>))
+}</div><div class='img'><img src='lighten_darken_color-1.png' alt='' width='700' height='433' /></div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

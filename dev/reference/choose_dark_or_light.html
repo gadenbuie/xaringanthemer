@@ -173,6 +173,16 @@ best contrast. Follows W3C Recommendations.</p>
 
     <p><a href='https://stackoverflow.com/a/3943023/2022615'>https://stackoverflow.com/a/3943023/2022615</a></p>
 
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='no'>light_green</span> <span class='kw'>&lt;-</span> <span class='st'>"#c4d6b0"</span>
+<span class='no'>contrast_green</span> <span class='kw'>&lt;-</span> <span class='fu'>choose_dark_or_light</span>(<span class='no'>light_green</span>)
+<span class='no'>dark_purple</span> <span class='kw'>&lt;-</span> <span class='st'>"#381d2a"</span>
+<span class='no'>contrast_purple</span> <span class='kw'>&lt;-</span> <span class='fu'>choose_dark_or_light</span>(<span class='no'>dark_purple</span>)
+
+<span class='kw'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/ns-load.html'>requireNamespace</a></span>(<span class='st'>"scales"</span>, <span class='kw'>quietly</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)) {
+  <span class='kw pkg'>scales</span><span class='kw ns'>::</span><span class='fu'><a href='https://scales.r-lib.org//reference/show_col.html'>show_col</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='no'>light_green</span>, <span class='no'>contrast_green</span>, <span class='no'>dark_purple</span>, <span class='no'>contrast_purple</span>))
+}</div><div class='img'><img src='choose_dark_or_light-1.png' alt='' width='700' height='433' /></div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
