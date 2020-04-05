@@ -16,3 +16,4 @@
 ^vignettes/fonts\.Rmd$
 ^vignettes/themes\.Rmd$
 ^data-raw$
+^.history$
