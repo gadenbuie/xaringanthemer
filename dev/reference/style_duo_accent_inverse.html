@@ -249,29 +249,40 @@ CSS rules.</p></td>
     <tr>
       <th>text_color</th>
       <td><p>Text Color. Defaults to <code>white_color</code>. Modifies the <code>body</code>
-element.</p></td>
+element. The value of this variable is also stored as a CSS variable that
+can be referenced with <code><a href='https://rdrr.io/r/stats/cor.html'>var(--text_color)</a></code> in any argument of a style
+function or in custom CSS.</p></td>
     </tr>
     <tr>
       <th>header_color</th>
       <td><p>Header Color. Defaults to <code>primary_color</code>. Modifies the
-<code>h1, h2, h3</code> elements.</p></td>
+<code>h1, h2, h3</code> elements. The value of this variable is also stored as a CSS
+variable that can be referenced with <code><a href='https://rdrr.io/r/stats/cor.html'>var(--header-color)</a></code> in any argument
+of a style function or in custom CSS.</p></td>
     </tr>
     <tr>
       <th>background_color</th>
       <td><p>Slide Background Color. Defaults to <code>black_color</code>.
-Modifies the <code>.remark-slide-content</code> class.</p></td>
+Modifies the <code>.remark-slide-content</code> class. The value of this variable is
+also stored as a CSS variable that can be referenced with
+<code><a href='https://rdrr.io/r/stats/cor.html'>var(--background-color)</a></code> in any argument of a style function or in custom
+CSS.</p></td>
     </tr>
     <tr>
       <th>link_color</th>
       <td><p>Link Color. Defaults to
 <code><a href='choose_dark_or_light.html'>choose_dark_or_light(secondary_color, secondary_color, primary_color)</a></code>.
-Modifies the <code>a, a &gt; code</code> elements.</p></td>
+Modifies the <code>a, a &gt; code</code> elements. The value of this variable is also
+stored as a CSS variable that can be referenced with <code><a href='https://rdrr.io/r/stats/cor.html'>var(--link-color)</a></code>
+in any argument of a style function or in custom CSS.</p></td>
     </tr>
     <tr>
       <th>text_bold_color</th>
       <td><p>Bold Text Color. Defaults to
 <code><a href='choose_dark_or_light.html'>choose_dark_or_light(secondary_color, secondary_color, primary_color)</a></code>.
-Modifies the <code>strong</code> element.</p></td>
+Modifies the <code>strong</code> element. The value of this variable is also stored
+as a CSS variable that can be referenced with <code><a href='https://rdrr.io/r/stats/cor.html'>var(--text-bold-color)</a></code> in
+any argument of a style function or in custom CSS.</p></td>
     </tr>
     <tr>
       <th>text_slide_number_color</th>
@@ -308,7 +319,10 @@ be set. If <code>background_image</code> is set, <code>background_size</code> wi
     <tr>
       <th>code_highlight_color</th>
       <td><p>Code Line Highlight. Defaults to
-rgba(255,255,0,0.5). Modifies the <code>.remark-code-line-highlighted</code> class.</p></td>
+rgba(255,255,0,0.5). Modifies the <code>.remark-code-line-highlighted</code> class.
+The value of this variable is also stored as a CSS variable that can be
+referenced with <code><a href='https://rdrr.io/r/stats/cor.html'>var(--code-highlight-color)</a></code> in any argument of a style
+function or in custom CSS.</p></td>
     </tr>
     <tr>
       <th>code_inline_color</th>
@@ -324,18 +338,26 @@ to <code>NULL</code>. Modifies the <code>.remark-inline-code</code> class.</p></
     <tr>
       <th>code_inline_font_size</th>
       <td><p>Inline Code Text Font Size. Defaults to 1em.
-Modifies the <code>.remark-inline-code</code> class.</p></td>
+Modifies the <code>.remark-inline-code</code> class. The value of this variable is
+also stored as a CSS variable that can be referenced with
+<code><a href='https://rdrr.io/r/stats/cor.html'>var(--code-inline-font-size)</a></code> in any argument of a style function or in
+custom CSS.</p></td>
     </tr>
     <tr>
       <th>inverse_background_color</th>
       <td><p>Inverse Background Color. Defaults to
-<code>secondary_color</code>. Modifies the <code>.inverse</code> class.</p></td>
+<code>secondary_color</code>. Modifies the <code>.inverse</code> class. The value of this
+variable is also stored as a CSS variable that can be referenced with
+<code><a href='https://rdrr.io/r/stats/cor.html'>var(--inverse-background-color)</a></code> in any argument of a style function or
+in custom CSS.</p></td>
     </tr>
     <tr>
       <th>inverse_text_color</th>
       <td><p>Inverse Text Color. Defaults to
 <code><a href='choose_dark_or_light.html'>choose_dark_or_light(secondary_color, black_color, white_color)</a></code>.
-Modifies the <code>.inverse</code> class.</p></td>
+Modifies the <code>.inverse</code> class. The value of this variable is also stored
+as a CSS variable that can be referenced with <code><a href='https://rdrr.io/r/stats/cor.html'>var(--inverse-text-color)</a></code>
+in any argument of a style function or in custom CSS.</p></td>
     </tr>
     <tr>
       <th>inverse_text_shadow</th>
@@ -346,18 +368,26 @@ Defaults to <code>FALSE</code>. Modifies the <code>.inverse</code> class.</p></t
       <th>inverse_header_color</th>
       <td><p>Inverse Header Color. Defaults to
 <code><a href='choose_dark_or_light.html'>choose_dark_or_light(secondary_color, black_color, white_color)</a></code>.
-Modifies the <code>.inverse h1, .inverse h2, .inverse h3</code> classes.</p></td>
+Modifies the <code>.inverse h1, .inverse h2, .inverse h3</code> classes. The value of
+this variable is also stored as a CSS variable that can be referenced with
+<code><a href='https://rdrr.io/r/stats/cor.html'>var(--inverse-header-color)</a></code> in any argument of a style function or in
+custom CSS.</p></td>
     </tr>
     <tr>
       <th>title_slide_text_color</th>
       <td><p>Title Slide Text Color. Defaults to
 <code><a href='choose_dark_or_light.html'>choose_dark_or_light(primary_color, black_color, white_color)</a></code>. Modifies
-the <code>.title-slide</code> class.</p></td>
+the <code>.title-slide</code> class. The value of this variable is also stored as a
+CSS variable that can be referenced with <code><a href='https://rdrr.io/r/stats/cor.html'>var(--title-slide-text-color)</a></code>
+in any argument of a style function or in custom CSS.</p></td>
     </tr>
     <tr>
       <th>title_slide_background_color</th>
       <td><p>Title Slide Background Color. Defaults
-to <code>primary_color</code>. Modifies the <code>.title-slide</code> class.</p></td>
+to <code>primary_color</code>. Modifies the <code>.title-slide</code> class. The value of this
+variable is also stored as a CSS variable that can be referenced with
+<code><a href='https://rdrr.io/r/stats/cor.html'>var(--title-slide-background-color)</a></code> in any argument of a style function
+or in custom CSS.</p></td>
     </tr>
     <tr>
       <th>title_slide_background_image</th>
@@ -428,27 +458,42 @@ Modifies the <code>thead, tfoot, tr:nth-child(even)</code> elements.</p></td>
     <tr>
       <th>base_font_size</th>
       <td><p>Base Font Size for All Slide Elements (must be <code>px</code>).
-Defaults to 20px. Modifies the <code>html</code> element.</p></td>
+Defaults to 20px. Modifies the <code>html</code> element. The value of this variable
+is also stored as a CSS variable that can be referenced with
+<code><a href='https://rdrr.io/r/stats/cor.html'>var(--base-font-size)</a></code> in any argument of a style function or in custom
+CSS.</p></td>
     </tr>
     <tr>
       <th>text_font_size</th>
       <td><p>Slide Body Text Font Size. Defaults to 1rem. Modifies
-the <code>.remark-slide-content</code> class.</p></td>
+the <code>.remark-slide-content</code> class. The value of this variable is also
+stored as a CSS variable that can be referenced with
+<code><a href='https://rdrr.io/r/stats/cor.html'>var(--text-font-size)</a></code> in any argument of a style function or in custom
+CSS.</p></td>
     </tr>
     <tr>
       <th>header_h1_font_size</th>
       <td><p>h1 Header Text Font Size. Defaults to 2.75rem.
-Modifies the <code>.remark-slide-content h1</code> class.</p></td>
+Modifies the <code>.remark-slide-content h1</code> class. The value of this variable
+is also stored as a CSS variable that can be referenced with
+<code><a href='https://rdrr.io/r/stats/cor.html'>var(--header-h1-font-size)</a></code> in any argument of a style function or in
+custom CSS.</p></td>
     </tr>
     <tr>
       <th>header_h2_font_size</th>
       <td><p>h2 Header Text Font Size. Defaults to 2.25rem.
-Modifies the <code>.remark-slide-content h2</code> class.</p></td>
+Modifies the <code>.remark-slide-content h2</code> class. The value of this variable
+is also stored as a CSS variable that can be referenced with
+<code><a href='https://rdrr.io/r/stats/cor.html'>var(--header-h2-font-size)</a></code> in any argument of a style function or in
+custom CSS.</p></td>
     </tr>
     <tr>
       <th>header_h3_font_size</th>
       <td><p>h3 Header Text Font Size. Defaults to 1.75rem.
-Modifies the <code>.remark-slide-content h3</code> class.</p></td>
+Modifies the <code>.remark-slide-content h3</code> class. The value of this variable
+is also stored as a CSS variable that can be referenced with
+<code><a href='https://rdrr.io/r/stats/cor.html'>var(--header-h3-font-size)</a></code> in any argument of a style function or in
+custom CSS.</p></td>
     </tr>
     <tr>
       <th>header_background_auto</th>
@@ -460,13 +505,19 @@ enable. Defaults to <code>FALSE</code>.</p></td>
       <th>header_background_color</th>
       <td><p>Background Color for h1 Header with
 Background. Defaults to <code>header_color</code>. Modifies the
-<code>.remark-slide-content h1</code> class.</p></td>
+<code>.remark-slide-content h1</code> class. The value of this variable is also
+stored as a CSS variable that can be referenced with
+<code><a href='https://rdrr.io/r/stats/cor.html'>var(--header-background-color)</a></code> in any argument of a style function or in
+custom CSS.</p></td>
     </tr>
     <tr>
       <th>header_background_text_color</th>
       <td><p>Text Color for h1 Header with
 Background. Defaults to <code>background_color</code>. Modifies the
-<code>.remark-slide-content h1</code> class.</p></td>
+<code>.remark-slide-content h1</code> class. The value of this variable is also
+stored as a CSS variable that can be referenced with
+<code><a href='https://rdrr.io/r/stats/cor.html'>var(--header-background-text-color)</a></code> in any argument of a style function
+or in custom CSS.</p></td>
     </tr>
     <tr>
       <th>header_background_padding</th>
@@ -499,7 +550,10 @@ to <code>NULL</code>. Modifies the <code>body</code> element.</p></td>
     <tr>
       <th>text_font_family</th>
       <td><p>Body Text Font Family (xaringan default is
-<code>'Droid Serif'</code>). Defaults to Noto Sans. Modifies the <code>body</code> element.</p></td>
+<code>'Droid Serif'</code>). Defaults to Noto Sans. Modifies the <code>body</code> element. The
+value of this variable is also stored as a CSS variable that can be
+referenced with <code><a href='https://rdrr.io/r/stats/cor.html'>var(--text-font-family)</a></code> in any argument of a style
+function or in custom CSS.</p></td>
     </tr>
     <tr>
       <th>text_font_weight</th>
@@ -517,12 +571,17 @@ Modifies the <code>@import url()</code> elements.</p></td>
       <td><p>Body Text Font Fallbacks. Defaults to
 -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue,
 helvetica, Ubuntu, roboto, noto, segoe ui, arial. Modifies the <code>body</code>
-element.</p></td>
+element. The value of this variable is also stored as a CSS variable that
+can be referenced with <code><a href='https://rdrr.io/r/stats/cor.html'>var(--text-font-family-fallback)</a></code> in any argument
+of a style function or in custom CSS.</p></td>
     </tr>
     <tr>
       <th>text_font_base</th>
       <td><p>Body Text Base Font (Total Failure Fallback). Defaults
-to sans-serif. Modifies the <code>body</code> element.</p></td>
+to sans-serif. Modifies the <code>body</code> element. The value of this variable is
+also stored as a CSS variable that can be referenced with
+<code><a href='https://rdrr.io/r/stats/cor.html'>var(--text-font-base)</a></code> in any argument of a style function or in custom
+CSS.</p></td>
     </tr>
     <tr>
       <th>header_font_google</th>
@@ -533,7 +592,9 @@ Defaults to <code>NULL</code>. Modifies the <code>body</code> element.</p></td>
       <th>header_font_family</th>
       <td><p>Header Font Family (xaringan default is
 <code>'Yanone Kaffeesatz'</code>). Defaults to Cabin. Modifies the <code>h1, h2, h3</code>
-elements.</p></td>
+elements. The value of this variable is also stored as a CSS variable that
+can be referenced with <code><a href='https://rdrr.io/r/stats/cor.html'>var(--header-font-family)</a></code> in any argument of a
+style function or in custom CSS.</p></td>
     </tr>
     <tr>
       <th>header_font_weight</th>
@@ -554,12 +615,17 @@ to <code>NULL</code>. Modifies the <code>body</code> element.</p></td>
     <tr>
       <th>code_font_family</th>
       <td><p>Code Font Family. Defaults to Source Code Pro.
-Modifies the <code>.remark-code, .remark-inline-code</code> classes.</p></td>
+Modifies the <code>.remark-code, .remark-inline-code</code> classes. The value of
+this variable is also stored as a CSS variable that can be referenced with
+<code><a href='https://rdrr.io/r/stats/cor.html'>var(--code-font-family)</a></code> in any argument of a style function or in custom
+CSS.</p></td>
     </tr>
     <tr>
       <th>code_font_size</th>
       <td><p>Code Text Font Size. Defaults to 0.9rem. Modifies the
-<code>.remark-inline</code> class.</p></td>
+<code>.remark-inline</code> class. The value of this variable is also stored as a CSS
+variable that can be referenced with <code><a href='https://rdrr.io/r/stats/cor.html'>var(--code-font-size)</a></code> in any
+argument of a style function or in custom CSS.</p></td>
     </tr>
     <tr>
       <th>code_font_url</th>
