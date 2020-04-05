@@ -1,16 +1,18 @@
 Type: Package
 Package: xaringanthemer
-Title: Xaringan CSS Theme Generator
+Title: Custom 'Xaringan' CSS Themes
 Version: 0.2.0.9100
 Authors@R: 
     person(given = "Garrick",
            family = "Aden-Buie",
            role = c("aut", "cre"),
            email = "garrick@adenbuie.com")
-Description: Create and edit your xaringan CSS files from within
-    your R R Markdown slide source. More technically, this package
-    actually creates valid remarkjs CSS themes that are easily used by
-    xarangan.
+Description: Create beautifully color-cordinated and customized
+    themes for your 'xaringan' slides, without writing any CSS. Complete
+    your slide theme with 'ggplot2' themes that match the font and colors
+    used in your slides.  Customized styles can be created directly in
+    your slides' 'R Markdown' source file or in a separate external
+    script.
 License: MIT + file LICENSE
 URL: https://github.com/gadenbuie/xaringanthemer
 BugReports: https://github.com/gadenbuie/xaringanthemer/issues
