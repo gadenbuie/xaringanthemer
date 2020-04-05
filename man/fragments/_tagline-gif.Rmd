@@ -1,0 +1,5 @@
+[xaringan]: https://github.com/yihui/xaringan
+
+Give your [xaringan] slides some style with **xaringanthemer** within your `slides.Rmd` file without (much) CSS.
+
+<img src="https://raw.githubusercontent.com/gadenbuie/xaringanthemer/assets/examples.gif" alt="Animation previewing many xaringanthemer themes" />

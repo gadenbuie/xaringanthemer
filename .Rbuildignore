@@ -8,3 +8,12 @@
 ^_.+$
 ^docs$
 ^index\.Rmd$
+^man-roxygen$
+^tic\.R$
+^appveyor\.yml$
+^\.travis\.yml$
+^pkgdown$
+^vignettes/fonts\.Rmd$
+^vignettes/themes\.Rmd$
+^data-raw$
+^.history$

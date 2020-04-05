@@ -19,9 +19,10 @@ options(htmltools.dir.version = FALSE)
 
 ```{r xaringan-themer, include=FALSE}
 library(xaringanthemer)
-solarized_dark(
-  code_font_family = "Fira Code",
-  code_font_url    = "https://cdn.rawgit.com/tonsky/FiraCode/1.204/distr/fira_code.css"
+style_duo_accent(
+  primary_color = "#1381B0",
+  secondary_color = "#FF961C",
+  inverse_header_color = "#FFFFFF"
 )
 ```
 

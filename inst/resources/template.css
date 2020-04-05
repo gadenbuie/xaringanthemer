@@ -11,91 +11,140 @@
  *
  *  Need help? Try:
  *    - vignette(package = "xaringanthemer")
- *    - ?xaringanthemer::write_xaringan_theme
+ *    - ?xaringanthemer::style_xaringan
  *    - xaringan wiki: https://github.com/yihui/xaringan/wiki
  *    - remarkjs wiki: https://github.com/gnab/remark/wiki
  *
+{{#xaringanthemer_version}} *  Version: {{xaringanthemer_version}}{{/xaringanthemer_version}}
+ *
  * ------------------------------------------------------- */
-@import url({{text_font_url}});
-@import url({{header_font_url}});
-@import url({{code_font_url}});
-{{extra_font_imports}}
+@import url({{{text_font_url}}});
+@import url({{{header_font_url}}});
+@import url({{{code_font_url}}});
+{{#extra_font_imports}}{{{extra_font_imports}}}{{/extra_font_imports}}
+
+:root {
+  /* Fonts */
+  --text-font-family: {{text_font_family}};
+  --text-font-is-google: {{text_font_is_google}};
+  --text-font-family-fallback: {{text_font_family_fallback}};
+  --text-font-base: {{text_font_base}};
+  --header-font-family: {{header_font_family}};
+  --header-font-is-google: {{header_font_is_google}};
+  --code-font-family: {{code_font_family}};
+  --code-font-is-google: {{code_font_is_google}};
+  --base-font-size: {{base_font_size}};
+  --text-font-size: {{text_font_size}};
+  --code-font-size: {{code_font_size}};
+  --code-inline-font-size: {{code_inline_font_size}};
+  --header-h1-font-size: {{header_h1_font_size}};
+  --header-h2-font-size: {{header_h2_font_size}};
+  --header-h3-font-size: {{header_h3_font_size}};
+
+  /* Colors */{{#primary}}
+  --primary: {{primary}};{{/primary}}{{#secondary}}
+  --secondary: {{secondary}};{{/secondary}}
+  --text-color: {{text_color}};
+  --header-color: {{header_color}};
+  --background-color: {{background_color}};
+  --link-color: {{link_color}};{{#text_bold_color}}
+  --text-bold-color: {{text_bold_color}};{{/text_bold_color}}
+  --code-highlight-color: {{code_highlight_color}};
+  --inverse-text-color: {{inverse_text_color}};
+  --inverse-background-color: {{inverse_background_color}};
+  --inverse-header-color: {{inverse_header_color}};
+  --title-slide-background-color: {{title_slide_background_color}};
+  --title-slide-text-color: {{title_slide_text_color}};
+  --header-background-color: {{header_background_color}};
+  --header-background-text-color: {{header_background_text_color}};{{#colors}}
+  --{{color_name}}: {{value}};
+  {{/colors}}
+
+}
+
+html {
+  font-size: var(--base-font-size);
+}
 
 body {
-  font-family: {{paste(text_font_family, text_font_family_fallback, text_font_base, sep = ", ")}};
+  font-family: var(--text-font-family), var(--text-font-family-fallback), var(--text-font-base);
   font-weight: {{text_font_weight}};
-  color: {{text_color}};
+  color: var(--text-color);
 }
 h1, h2, h3 {
-  font-family: {{header_font_family}};
+  font-family: var(--header-font-family);
   font-weight: {{header_font_weight}};
-  color: {{header_color}};
+  color: var(--header-color);
 }
 .remark-slide-content {
-  background-color: {{background_color}};
-  font-size: {{text_font_size}};
-  {{ifelse(!is.na(background_image), paste0("background-image: url(", background_image, ");"), "")}}
-  {{ifelse(!is.na(background_image) && !is.na(background_size), paste0("background-size: ", background_size, ";"), "")}}
-  {{ifelse(!is.na(background_image) && !is.na(background_position), paste0("background-position: ", background_position, ";"), "")}}
+  background-color: var(--background-color);
+  font-size: {{text_font_size}};{{#background_image}}
+  background-image: url({{{background_image}}});{{#background_size}}
+  background-size: {{background_size}};{{/background_size}}{{#background_position}}
+  background-position: {{background_position}};{{/background_position}}{{/background_image}}
   padding: {{padding}};
+  width: 100%;
+  height: 100%;
 }
 .remark-slide-content h1 {
-    font-size: {{header_h1_font_size}};
+  font-size: var(--header-h1-font-size);
 }
 .remark-slide-content h2 {
-    font-size: {{header_h2_font_size}};
+  font-size: var(--header-h2-font-size);
 }
 .remark-slide-content h3 {
-    font-size: {{header_h3_font_size}};
+  font-size: var(--header-h3-font-size);
 }
 .remark-code, .remark-inline-code {
-  font-family: {{code_font_family}}, {{code_font_family_fallback}}, monospace;
+  font-family: var(--code-font-family), {{code_font_family_fallback}}, monospace;
 }
 .remark-code {
-  font-size: {{code_font_size}};
+  font-size: var(--code-font-size);
 }
 .remark-inline-code {
-  font-size: {{code_inline_font_size}};
-  {{ifelse(!is.na(code_inline_color), paste0("color: ", code_inline_color, ";"), "")}}
-  {{ifelse(!is.na(code_inline_background_color), paste0("background-color: ", code_inline_background_color, ";"), "")}}
-  {{ifelse(!is.na(code_inline_background_color), "padding: 2px;", "")}}
+  font-size: var(--code-inline-font-size);{{#code_inline_color}}
+  color: {{code_inline_color}};{{/code_inline_color}}{{#code_inline_background_color}}
+  background-color: {{code_inline_background_color}};
+  padding: 2px;{{/code_inline_background_color}}
 }
 .remark-slide-number {
   color: {{text_slide_number_color}};
   opacity: 1;
   font-size: {{text_slide_number_font_size}};
 }
-{{ifelse(!is.na(text_bold_color), paste0("strong{color:", text_bold_color,";}"), "")}}
+{{#text_bold_color}}
+strong { color: var(--text-bold-color); }
+{{/text_bold_color}}
 a, a > code {
-  color: {{link_color}};
+  color: var(--link-color);
   text-decoration: none;
 }
 .footnote {
-  {{ifelse(!is.na(footnote_color), paste0("color: ", footnote_color, ";"), "")}}
-  position: absolute;
+  position: absolute;{{#footnote_color}}
+  color: {{footnote_color}};{{/footnote_color}}
   bottom: {{footnote_position_bottom}};
   padding-right: 4em;
   font-size: {{footnote_font_size}};
 }
 .remark-code-line-highlighted {
-  background-color: {{code_highlight_color}};
+  background-color: var(--code-highlight-color);
 }
 .inverse {
-  background-color: {{inverse_background_color}};
-  color: {{inverse_text_color}};
-  {{ifelse(inverse_text_shadow, "text-shadow: 0 0 20px #333;", "")}}
+  background-color: var(--inverse-background-color);
+  color: var(--inverse-text-color);
+  {{#inverse_text_shadow}}text-shadow: 0 0 20px #333;{{/inverse_text_shadow}}
 }
 .inverse h1, .inverse h2, .inverse h3 {
-  color: {{inverse_header_color}};
+  color: var(--inverse-header-color);
 }
 .title-slide, .title-slide h1, .title-slide h2, .title-slide h3 {
-  color: {{title_slide_text_color}};
+  color: var(--title-slide-text-color);
 }
 .title-slide {
-  background-color: {{title_slide_background_color}};
-  {{ifelse(!is.na(title_slide_background_image), paste0("background-image: url(", title_slide_background_image, ");"), "")}}
-  {{ifelse(!is.na(title_slide_background_size), paste0("background-size: ", title_slide_background_size, ";"), ifelse(!is.na(title_slide_background_image), "background-size: cover;", ""))}}
-  {{ifelse(!is.na(title_slide_background_position), paste0("background-position: ", title_slide_background_position, ";"), "")}}
+  background-color: var(--title-slide-background-color);{{#title_slide_background_image}}
+  background-image: url("{{{title_slide_background_image}}}");{{/title_slide_background_image}}{{#title_slide_background_size}}
+  background-size: {{title_slide_background_size}};{{/title_slide_background_size}}{{#title_slide_background_position}}
+  background-position: {{title_slide_background_position}};{{/title_slide_background_position}}
 }
 .title-slide .remark-slide-number {
   display: none;
@@ -140,29 +189,56 @@ blockquote {
   border-top: 1px solid {{table_border_color}};
   border-bottom: 1px solid {{table_border_color}};
 }
-.remark-slide table thead th { border-bottom: 1px solid {{table_row_border_color}}; }
-th, td { padding: 5px; }
-.remark-slide thead, .remark-slide tfoot, .remark-slide tr:nth-child(even) { background: {{table_row_even_background_color}} }
+.remark-slide table thead th {
+  border-bottom: 1px solid {{table_row_border_color}};
+}
+th, td {
+  padding: 5px;
+}
+.remark-slide thead, .remark-slide tfoot, .remark-slide tr:nth-child(even) {
+  background: {{table_row_even_background_color}};
+}
 table.dataTable tbody {
-  background-color: {{background_color}};
-  color: {{text_color}};
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 table.dataTable.display tbody tr.odd {
-  background-color: {{background_color}};
+  background-color: var(--background-color);
 }
 table.dataTable.display tbody tr.even {
-  background-color: {{ifelse(!is.na(table_row_even_background_color), table_row_even_background_color, background_color)}};
+  background-color: {{table_row_even_background_color}};
 }
 table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
   background-color: rgba(255, 255, 255, 0.5);
 }
 .dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_processing, .dataTables_wrapper .dataTables_paginate {
-  color: {{text_color}};
+  color: var(--text-color);
 }
 .dataTables_wrapper .dataTables_paginate .paginate_button {
-  color: {{text_color}} !important;
+  color: var(--text-color) !important;
 }
 
+{{#header_background}}
+/* Slide Header Background for h1 elements */
+.remark-slide-content.header_background > h1{{#auto}},
+.remark-slide-content{{#ignore}}:not({{class}}){{/ignore}} > h1{{/auto}} {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--header-background-color);
+  color: var(--header-background-text-color);
+  padding: {{padding}};
+  margin-top: 0;
+  box-sizing: border-box;
+}
+.remark-slide-content.header_background{{#auto}},
+.remark-slide-content{{#ignore}}:not({{class}}){{/ignore}}{{/auto}} {
+  padding-top: {{content_padding_top}};
+}
+
+{{/header_background}}
 @page { margin: 0; }
 @media print {
   .remark-slide-scaler {
@@ -173,3 +249,12 @@ table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
     left: 0 !important;
   }
 }
+
+{{#colors}}
+.{{color_name}} {
+  color: var(--{{color_name}});
+}
+.bg-{{color_name}} {
+  background-color: var(--{{color_name}});
+}
+{{/colors}}

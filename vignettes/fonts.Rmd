@@ -1,0 +1,12 @@
+---
+title: Fonts
+---
+
+[adding-custom-css]: xaringanthemer.html#adding-custom-css
+
+```{r, results='asis', echo=FALSE}
+tvv <- xaringanthemer:::template_variables$variable
+```
+
+```{r child="../man/fragments/_fonts.Rmd"}
+```

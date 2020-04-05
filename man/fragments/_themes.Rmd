@@ -1,0 +1,150 @@
+**xaringanthemer** includes a number of functions that provide
+themed **xaringan** styles.
+All of the styling functions start with the `style_` prefix.
+
+The goal of each style function is to 
+quickly set up a coordinated color palette for your slides
+based on one or two starter colors.
+Styles based on one color start with `style_mono_`
+and styles based on two colors start with `style_duo_`.
+How the starter colors are used is described 
+in the final portion of the style function name.
+For example, `style_mono_accent()` uses a single color as an accent color.
+
+Note that the colors used below are for demonstration only,
+the point of the `style_` functions is for you to choose your own color palette!
+
+If you color palette uses more than two colors,
+you can add additional colors with the `colors` argument.
+See the [Colors](#colors) section for more information.
+
+### Monotone
+
+```{r include=FALSE}
+IS_README <- exists("IS_README") && IS_README
+include_graphic <- function(img_path) {
+  glue::glue("![](https://raw.githubusercontent.com/gadenbuie/xaringanthemer/assets/{img_path})")
+}
+```
+
+Use these functions to automatically create a consistent color palette for your slides, based around a single color.
+
+#### `style_mono_light()`
+
+A light theme based around a single color.
+
+```{r style_mono_light}
+demo_function_call <- function(f, n_params = 1) {
+  cat(sep = "",
+    "```r\n",
+    paste(substitute(f)), "(",
+    if (n_params > 0) paste(collapse = ", ",
+      sapply(1:n_params, function(i) {
+        paste0(names(formals(f))[i], ' = "', formals(f)[[i]], '"')})),
+    ")\n```"
+    )
+}
+demo_function_call(style_mono_light, 1)
+```
+
+`r include_graphic("example_mono_light.png")`
+
+#### `style_mono_dark()`
+
+A dark theme based around a single color.
+
+```{r style_mono_dark}
+demo_function_call(style_mono_dark, 1)
+```
+
+`r include_graphic("example_mono_dark.png")`
+
+#### `style_mono_accent()`
+
+The default xaringan theme with a single color used for color accents on select elements (headers, bold text, etc.).
+
+```{r style_mono_accent}
+demo_function_call(style_mono_accent, 1)
+```
+
+`r include_graphic("example_mono_accent.png")`
+
+#### `style_mono_accent_inverse()`
+
+An "inverted" default xaringan theme with a single color used for color accents on select elements (headers, bold text, etc.).
+
+```{r style_mono_accent_inverse}
+demo_function_call(style_mono_accent_inverse, 1)
+```
+
+`r include_graphic("example_mono_accent_inverse.png")`
+
+
+### Duotone
+
+These themes build from two (ideally) complementary colors.
+
+#### `style_duo()`
+
+A two-colored theme based on a primary and secondary color.
+
+```{r style_duo}
+demo_function_call(style_duo, 2)
+```
+
+`r include_graphic("example_duo.png")`
+
+#### `style_duo_accent()`
+
+The default Xaringan theme with two accent colors.
+
+```{r style_duo_accent}
+demo_function_call(style_duo_accent, 2)
+```
+
+`r include_graphic("example_duo_accent.png")`
+
+#### `style_duo_accent_inverse()`
+
+An "inverted" default Xaringan theme with two accent colors.
+
+```{r style_duo_accent_inverse}
+demo_function_call(style_duo_accent_inverse, 2)
+```
+
+`r include_graphic("example_duo_accent_inverse.png")`
+
+### Solarized
+
+There are also two themes based around the [solarized color palette](http://ethanschoonover.com/solarized), `style_solarized_light()` and `style_solarized_dark()`.
+For both themes, it is advisted to change the syntax highlighting theme to `solarized-light` or `solarized-dark` (looks great paired or constrasted).
+
+#### `style_solarized_light()`
+
+```{r style_solarized_light}
+demo_function_call(style_solarized_light, 0)
+```
+
+`r include_graphic("example_solarized_light.png")`
+
+#### `style_solarized_dark()`
+
+```{r style_solarized_dark}
+demo_function_call(style_solarized_dark, 0)
+```
+
+`r include_graphic("example_solarized_dark.png")`
+
+
+To do this, your YAML header should look more-or-less like this:
+
+```yaml
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: ["xaringan-themer.css"]
+    nature:
+      highlightStyle: solarized-dark
+      highlightLines: true
+      countIncrementalSlides: false
+```

@@ -1,0 +1,47 @@
+When designing your xaringan theme,
+you may have additional colors in your desired color palette
+beyond those used in the accent colors of the mono and duotone styles.
+
+The `style*()` functions in xaringanthemer
+include a `colors` argument that lets you 
+quickly define a additional colors to use in your slides.
+This argument takes a vector of named colors
+
+```r
+colors = c(
+  red = "#f34213",
+  purple = "#3e2f5b",
+  orange = "#ff8811",
+  green = "#136f63",
+  white = "#FFFFFF",
+)
+```
+
+and creates CSS classes from the color name 
+that set the text color — e.g. `.red` —
+or that set the background color — e.g. `.bg-red`.
+If you use custom CSS in your slides,
+the color name is also stored in a CSS variable —
+e.g. `var(--red)`.
+
+So slide text like this
+
+```markdown
+This **.red[simple]** .white.bg-purple[demo] 
+_.orange[shows]_ the colors .green[in action].
+```
+
+will be rendered in HTML as
+
+<blockquote>
+This <strong><span style="color: #f34213">simple</span></strong>
+<span style="color:#FFFFFF;background-color:#3e2f5b;">demo</span>
+<em style="color:#ff8811">shows</em>
+the colors
+<span style="color:#136f63">in action</span>.
+</blockquote>
+
+Note that the color names in `colors`
+need to be valid CSS names,
+so `"purple-light"` will work,
+but `"purple light"` will not.

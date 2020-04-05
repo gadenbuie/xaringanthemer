@@ -1,0 +1,41 @@
+<!-- Set link to theme-settings, template-variables, theme functions -->
+
+First, add the `xaringan-themer.css` file to the YAML header of your xaringan slides.
+
+```yaml
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: xaringan-themer.css
+```
+
+Then, in a hidden chunk just after the knitr setup chunk, load **xaringanthemer** and try one of the [theme functions][theme-functions].
+
+````markdown
+```{r xaringan-themer, include = FALSE}`r ""`
+library(xaringanthemer)
+style_mono_light(
+  base_color = "#1c5253",
+  header_font_google = google_font("Josefin Sans"),
+  text_font_google   = google_font("Montserrat", "300", "300i"),
+  code_font_google   = google_font("Droid Mono")
+)
+```
+````
+
+<img src="https://raw.githubusercontent.com/gadenbuie/xaringanthemer/assets/example_mono_light_1c5253.png" alt="Example title and normal slides using a green xaringanthemer theme" />
+
+### Tab Completion
+
+**xaringanthemer** is <kbd>Tab</kbd> friendly -- [use autocomplete to explore][theme-settings] the [template variables][template-variables] that you can adjust in each of the themes!
+
+
+<img src="https://raw.githubusercontent.com/gadenbuie/xaringanthemer/assets/example-rstudio-completion.gif" alt="Demonstration of argument auto-completion with RStudio" />
+
+### R Markdown Template in RStudio
+
+You can also skip the above and just create a *Ninja Themed Presentation* from the New R Markdown Document menu in RStudio.
+
+<center>
+<img src="https://raw.githubusercontent.com/gadenbuie/xaringanthemer/assets/rmarkdown-template-screenshot.png" alt="The 'New R Markdown Document' menu in RStudio" />
+</center>

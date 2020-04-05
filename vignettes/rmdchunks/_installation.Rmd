@@ -1,6 +1,0 @@
-**xaringanthemer** currently lives on GitHub.
-
-```r
-# install.packages("devtools")
-devtools::install_github("gadenbuie/xaringanthemer")
-```

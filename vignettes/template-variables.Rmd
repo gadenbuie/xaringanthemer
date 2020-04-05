@@ -15,21 +15,46 @@ knitr::opts_chunk$set(
 )
 ```
 
-The following table shows the template variables, their default values in the standard `xaringan` theme, the primary element to which the property is applied, and a brief description of the template variable. 
+The following table shows the template variables,
+their default values in the standard `xaringanthemer` theme,
+the primary element to which the property is applied,
+and a brief description of the template variable.
 
 For example, `background_color` by default sets the `background-color` CSS property of the `.remark-slide-content` class to `#FFF`.
 
 Use this table to find the template variable you would like to modify.
 You can also use this table to find the CSS class or element associated with a particular template item.
 
-Note that themes, like `mono_accent()`, have additional parameters, but with any theme function you can override the theme by directly setting the arguments below when calling the theme function.
-For example, to use `mono_accent()` with a different slide background color, you can call `mono_accent(background_color = "#abc123")`.
+Note that some theme functions,
+like `style_mono_accent()`,
+have additional parameters 
+and a specific set of default values unique to the theme.
+However, with any theme function 
+you can override the theme's defaults 
+by directly setting any of the arguments listed below
+when calling the theme function.
+
+To be concrete, 
+`style_mono_accent()` has three additional arguments:
+`base_color` (the accent color), `white_color`, and `black_color`.
+In this theme,
+the background slide color defaults to `white_color`,
+but you can choose a different slide background color
+by setting `background_color`, 
+for example `background_color = "#EAEAEA"`.
 
 ```{r table, results = "asis", echo=FALSE}
-source("../R/theme_settings.R")
-template_variables$variable <- glue::glue_data(template_variables, "`{variable}`")
-template_variables$default <- gsub("[{}]", "", template_variables$default)
-template_variables$default <- glue::glue_data(template_variables, "`{default}`")
-knitr::kable(template_variables)
+tv <- xaringanthemer:::template_variables
+tv$variable <- glue::glue_data(tv, "`{variable}`")
+tv[!is.na(tv$css_variable), "css_variable"] <- glue::glue("`{tv$css_variable[!is.na(tv$css_variable)]}`")
+tv[is.na(tv$css_variable), "css_variable"] <- ""
+tv$default <- gsub("[{}]", "", tv$default)
+tv <- tv[, c(
+  "variable", "description", "element", "default", "css_variable"
+)]
+knitr::kable(
+  tv,
+  col.names = c("Variable", "Description", "Element", "Default", "CSS Variable")
+)
 ```
 

@@ -1,0 +1,29 @@
+# tic documentation: https://docs.ropensci.org/tic/dev/
+
+# Download script file from GitHub
+init:
+  ps: |
+    $ErrorActionPreference = "Stop"
+    Invoke-WebRequest http://raw.github.com/krlmlr/r-appveyor/master/scripts/appveyor-tool.ps1 -OutFile "..\appveyor-tool.ps1"
+    Import-Module '..\appveyor-tool.ps1'
+
+install:
+  - ps: Bootstrap
+  - cmd: Rscript -e "writeLines('options(repos = \'https://cloud.r-project.org\')', '~/.Rprofile')"
+  - cmd: Rscript -e "getOption('repos')"
+  - cmd: Rscript -e "if (!requireNamespace('remotes')) install.packages('remotes', type = 'binary')"
+  - cmd: Rscript -e "if (getRversion() < '3.2' && !requireNamespace('curl')) install.packages('curl', type = 'binary')"
+  - cmd: Rscript -e "options(pkgType = 'binary'); remotes::install_github('ropensci/tic', upgrade = 'always'); print(tic::dsl_load()); tic::prepare_all_stages()"
+
+before_build: Rscript -e "tic::before_install()"
+build_script: Rscript -e "tic::install()"
+after_build: Rscript -e "tic::after_install()"
+before_test: Rscript -e "tic::before_script()"
+test_script: Rscript -e "tic::script()"
+on_success: Rscript -e "try(tic::after_success(), silent = TRUE)"
+on_failure: Rscript -e "tic::after_failure()"
+before_deploy: Rscript -e "tic::before_deploy()"
+deploy_script: Rscript -e "tic::deploy()"
+after_deploy: Rscript -e "tic::after_deploy()"
+on_finish: Rscript -e "tic::after_script()"
+# Custom user code -------------------------------------------------------------
