@@ -90,3 +90,15 @@ Style settings used by xaringanthemer include:
 }
 }
 
+\examples{
+# Create a xaringanthemer style in a temporary file for this example
+xaringan_themer_css <- tempfile("xaringan-themer", fileext = ".css")
+
+style_solarized_light(outfile = xaringan_themer_css)
+
+theme_xaringan_get_value("text_color")
+theme_xaringan_get_value("background_color")
+theme_xaringan_get_value("header_color")
+theme_xaringan_get_value("text_bold_color")
+
+}

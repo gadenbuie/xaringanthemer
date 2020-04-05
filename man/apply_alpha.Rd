@@ -16,3 +16,12 @@ Applies alpha (or opacity) to a color in hexadecimal form by
 converting opacity in the \verb{[0, 1]} range to hex in the \verb{[0, 255]} range
 and appending to the hex color.
 }
+\examples{
+blue <- "#0e6ba8"
+blue_transparent <- apply_alpha(blue)
+
+if (requireNamespace("scales", quietly = TRUE)) {
+  scales::show_col(c(blue, blue_transparent))
+}
+
+}

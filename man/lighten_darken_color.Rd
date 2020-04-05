@@ -20,3 +20,13 @@ where 0 is entirely the original color and 1 is entirely white
 \description{
 Produces a linear blend of the color with white or black.
 }
+\examples{
+blue <- "#0e6ba8"
+blue_light <- lighten_color(blue, strength = 0.33)
+blue_dark <- darken_color(blue, strength = 0.33)
+
+if (requireNamespace("scales", quietly = TRUE)) {
+  scales::show_col(c(blue_light, blue, blue_dark))
+}
+
+}

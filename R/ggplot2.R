@@ -950,6 +950,17 @@ requires_xaringanthemer_env <- function(
 #'
 #' @param setting A xaringanthemer style setting
 #' @inheritParams theme_xaringan
+#' @examples
+#' # Create a xaringanthemer style in a temporary file for this example
+#' xaringan_themer_css <- tempfile("xaringan-themer", fileext = ".css")
+#'
+#' style_solarized_light(outfile = xaringan_themer_css)
+#'
+#' theme_xaringan_get_value("text_color")
+#' theme_xaringan_get_value("background_color")
+#' theme_xaringan_get_value("header_color")
+#' theme_xaringan_get_value("text_bold_color")
+#'
 #' @export
 theme_xaringan_get_value <- function(setting, css_file = NULL) {
   requires_xaringanthemer_env(css_file = css_file)

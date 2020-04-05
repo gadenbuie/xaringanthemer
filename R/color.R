@@ -4,6 +4,15 @@
 #' @param strength The "strength" of the blend with white or black,
 #'   where 0 is entirely the original color and 1 is entirely white
 #'   (`lighten_color()`) or black (`darken_color()`).
+#' @examples
+#' blue <- "#0e6ba8"
+#' blue_light <- lighten_color(blue, strength = 0.33)
+#' blue_dark <- darken_color(blue, strength = 0.33)
+#'
+#' if (requireNamespace("scales", quietly = TRUE)) {
+#'   scales::show_col(c(blue_light, blue, blue_dark))
+#' }
+#'
 #' @name lighten_darken_color
 NULL
 
@@ -31,6 +40,14 @@ darken_color <- function(color_hex, strength = 0.8) {
 #'   and appending to the hex color.
 #' @inheritParams lighten_darken_color
 #' @param opacity Desired opacity of the output color
+#' @examples
+#' blue <- "#0e6ba8"
+#' blue_transparent <- apply_alpha(blue)
+#'
+#' if (requireNamespace("scales", quietly = TRUE)) {
+#'   scales::show_col(c(blue, blue_transparent))
+#' }
+#'
 #' @export
 apply_alpha <- function(color_hex, opacity = 0.5) {
   paste0(color_hex, as.hexmode(round(255 * opacity, 0)))
@@ -54,6 +71,16 @@ adjust_value_color <- function(color_hex, strength = 0.5) {
 #' `substitute(darken_color(x, 0.8))`, if black text provides the best contrast.
 #' @param white Text or foreground color or expression, e.g. "#EEE" or
 #' `substitute(lighten_color(x, 0.8))`, if white text provides the best contrast.
+#' @examples
+#' light_green <- "#c4d6b0"
+#' contrast_green <- choose_dark_or_light(light_green)
+#' dark_purple <- "#381d2a"
+#' contrast_purple <- choose_dark_or_light(dark_purple)
+#'
+#' if (requireNamespace("scales", quietly = TRUE)) {
+#'   scales::show_col(c(light_green, contrast_green, dark_purple, contrast_purple))
+#' }
+#'
 #' @export
 choose_dark_or_light <- function(x, black = "#000000", white = "#FFFFFF") {
   if (is_light_color(x)) eval(black) else eval(white)
