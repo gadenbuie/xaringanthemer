@@ -27,6 +27,7 @@ setup_theme_function <- function(
       )
     ),
     "#' @template theme_params",
+    "#' @template style-usage",
     ...,
     glue::glue("{f_name} <- function("),
     as.character(

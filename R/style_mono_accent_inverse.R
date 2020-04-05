@@ -218,6 +218,7 @@
 #'   Consolas, Monaco, Liberation Mono, Lucida Console. Modifies the
 #'   `.remark-code, .remark-inline-code` classes.
 #' @template theme_params
+#' @template style-usage
 #' @template style_mono_accent_inverse
 #' @family Monotone themes
 #' @export

@@ -216,6 +216,7 @@
 #'   Consolas, Monaco, Liberation Mono, Lucida Console. Modifies the
 #'   `.remark-code, .remark-inline-code` classes.
 #' @template theme_params
+#' @template style-usage
 #' @template style_duo
 #' @family Duotone themes
 #' @export
