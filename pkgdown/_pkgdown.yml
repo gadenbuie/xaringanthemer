@@ -8,6 +8,13 @@ home:
   description: |
     Give your xaringan slides some style with xaringanthemer.
     Easy slide and plot themes for xaringan slides.
+
+template:
+  opengraph:
+    twitter:
+      creator: "@grrrck"
+      card: summary
+
 reference:
 - title: Writing CSS
   desc: Functions that write CSS from inside a xaringan R markdown document.
