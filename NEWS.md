@@ -57,3 +57,9 @@
 
 * The underlying tibble holding the theme template variables was updated to 
   work with `tibble 3.0.0` (thanks @techisdead, @SymbolixAU, #32).
+  
+* The `css-help` vignette was removed and may be re-written in the future.
+
+* Style function arguments that accept CSS property values are now documented in
+  the argument documentation, including a link to the MDN web docs page for the
+  CSS property or value (#33, thanks @TrashBirdEcology #18).
