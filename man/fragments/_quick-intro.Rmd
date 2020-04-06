@@ -5,7 +5,6 @@ First, add the `xaringan-themer.css` file to the YAML header of your xaringan sl
 ```yaml
 output:
   xaringan::moon_reader:
-    lib_dir: libs
     css: xaringan-themer.css
 ```
 

@@ -56,7 +56,6 @@ xaringan slides.
 ``` yaml
 output:
   xaringan::moon_reader:
-    lib_dir: libs
     css: xaringan-themer.css
 ```
 
@@ -228,7 +227,6 @@ To do this, your YAML header should look more-or-less like this:
 ``` yaml
 output:
   xaringan::moon_reader:
-    lib_dir: libs
     css: ["xaringan-themer.css"]
     nature:
       highlightStyle: solarized-dark
