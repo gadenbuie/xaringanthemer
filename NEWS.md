@@ -63,3 +63,5 @@
 * Style function arguments that accept CSS property values are now documented in
   the argument documentation, including a link to the MDN web docs page for the
   CSS property or value (#33, thanks @TrashBirdEcology #18).
+
+* Style functions return the CSS text directly when `outfile = NULL`.
