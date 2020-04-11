@@ -137,8 +137,7 @@ Easy slide and plot themes for xaringan slides.
 <p>First, add the <code>xaringan-themer.css</code> file to the YAML header of your xaringan slides.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="fu">output:</span></a>
 <a class="sourceLine" id="cb3-2" data-line-number="2">  <span class="fu">xaringan:</span><span class="at">:moon_reader:</span></a>
-<a class="sourceLine" id="cb3-3" data-line-number="3">    <span class="fu">lib_dir:</span><span class="at"> libs</span></a>
-<a class="sourceLine" id="cb3-4" data-line-number="4">    <span class="fu">css:</span><span class="at"> xaringan-themer.css</span></a></code></pre></div>
+<a class="sourceLine" id="cb3-3" data-line-number="3">    <span class="fu">css:</span><span class="at"> xaringan-themer.css</span></a></code></pre></div>
 <p>Then, in a hidden chunk just after the knitr setup chunk, load <strong>xaringanthemer</strong> and try one of the <a href="#themes">theme functions</a>.</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb4-1" data-line-number="1">```{r xaringan-themer, include = FALSE}</a>
 <a class="sourceLine" id="cb4-2" data-line-number="2">library(xaringanthemer)</a>
@@ -153,7 +152,7 @@ Easy slide and plot themes for xaringan slides.
 <div id="tab-completion" class="section level3">
 <h3 class="hasAnchor">
 <a href="#tab-completion" class="anchor"></a>Tab Completion</h3>
-<p><strong>xaringanthemer</strong> is <kbd>Tab</kbd> friendly â <a href="#theme-settings">use autocomplete to explore</a> the <a href="vignettes/template-variables.html">template variables</a> that you can adjust in each of the themes!</p>
+<p><strong>xaringanthemer</strong> is <kbd>Tab</kbd> friendly – <a href="#theme-settings">use autocomplete to explore</a> the <a href="vignettes/template-variables.html">template variables</a> that you can adjust in each of the themes!</p>
 <p><img src="https://raw.githubusercontent.com/gadenbuie/xaringanthemer/assets/example-rstudio-completion.gif" alt="Demonstration of argument auto-completion with RStudio"></p>
 </div>
 <div id="r-markdown-template-in-rstudio" class="section level3">
@@ -204,7 +203,7 @@ Easy slide and plot themes for xaringan slides.
 <h4 class="hasAnchor">
 <a href="#style_mono_accent_inverse" class="anchor"></a><code>style_mono_accent_inverse()</code>
 </h4>
-<p>An âinvertedâ default xaringan theme with a single color used for color accents on select elements (headers, bold text, etc.).</p>
+<p>An “inverted” default xaringan theme with a single color used for color accents on select elements (headers, bold text, etc.).</p>
 <div class="sourceCode" id="cb8"><pre class="r"><span class="fu"><a href="reference/style_mono_accent_inverse.html">style_mono_accent_inverse</a></span>(<span class="kw">base_color</span> <span class="kw">=</span> <span class="st">"#3C989E"</span>)</pre></div>
 <p><img src="https://raw.githubusercontent.com/gadenbuie/xaringanthemer/assets/example_mono_accent_inverse.png"></p>
 </div>
@@ -233,7 +232,7 @@ Easy slide and plot themes for xaringan slides.
 <h4 class="hasAnchor">
 <a href="#style_duo_accent_inverse" class="anchor"></a><code>style_duo_accent_inverse()</code>
 </h4>
-<p>An âinvertedâ default Xaringan theme with two accent colors.</p>
+<p>An “inverted” default Xaringan theme with two accent colors.</p>
 <div class="sourceCode" id="cb11"><pre class="r"><span class="fu"><a href="reference/style_duo_accent_inverse.html">style_duo_accent_inverse</a></span>(<span class="kw">primary_color</span> <span class="kw">=</span> <span class="st">"#006747"</span>, <span class="kw">secondary_color</span> <span class="kw">=</span> <span class="st">"#CFC493"</span>)</pre></div>
 <p><img src="https://raw.githubusercontent.com/gadenbuie/xaringanthemer/assets/example_duo_accent_inverse.png"></p>
 </div>
@@ -258,12 +257,11 @@ Easy slide and plot themes for xaringan slides.
 <p>To do this, your YAML header should look more-or-less like this:</p>
 <div class="sourceCode" id="cb14"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb14-1" data-line-number="1"><span class="fu">output:</span></a>
 <a class="sourceLine" id="cb14-2" data-line-number="2">  <span class="fu">xaringan:</span><span class="at">:moon_reader:</span></a>
-<a class="sourceLine" id="cb14-3" data-line-number="3">    <span class="fu">lib_dir:</span><span class="at"> libs</span></a>
-<a class="sourceLine" id="cb14-4" data-line-number="4">    <span class="fu">css:</span><span class="at"> </span><span class="kw">[</span><span class="st">"xaringan-themer.css"</span><span class="kw">]</span></a>
-<a class="sourceLine" id="cb14-5" data-line-number="5">    <span class="fu">nature:</span></a>
-<a class="sourceLine" id="cb14-6" data-line-number="6">      <span class="fu">highlightStyle:</span><span class="at"> solarized-dark</span></a>
-<a class="sourceLine" id="cb14-7" data-line-number="7">      <span class="fu">highlightLines:</span><span class="at"> true</span></a>
-<a class="sourceLine" id="cb14-8" data-line-number="8">      <span class="fu">countIncrementalSlides:</span><span class="at"> false</span></a></code></pre></div>
+<a class="sourceLine" id="cb14-3" data-line-number="3">    <span class="fu">css:</span><span class="at"> </span><span class="kw">[</span><span class="st">"xaringan-themer.css"</span><span class="kw">]</span></a>
+<a class="sourceLine" id="cb14-4" data-line-number="4">    <span class="fu">nature:</span></a>
+<a class="sourceLine" id="cb14-5" data-line-number="5">      <span class="fu">highlightStyle:</span><span class="at"> solarized-dark</span></a>
+<a class="sourceLine" id="cb14-6" data-line-number="6">      <span class="fu">highlightLines:</span><span class="at"> true</span></a>
+<a class="sourceLine" id="cb14-7" data-line-number="7">      <span class="fu">countIncrementalSlides:</span><span class="at"> false</span></a></code></pre></div>
 </div>
 </div>
 </div>
@@ -281,7 +279,7 @@ Easy slide and plot themes for xaringan slides.
 <li><code>text_slide_number_color</code></li>
 <li><code>text_font_size</code></li>
 <li><code>text_slide_number_font_size</code></li>
-<li><em>and more â¦</em></li>
+<li><em>and more …</em></li>
 </ul>
 <p>And here are the title slide theme options:</p>
 <ul>
@@ -311,13 +309,13 @@ Easy slide and plot themes for xaringan slides.
 <h3 class="hasAnchor">
 <a href="#custom-and-google-font-fonts" class="anchor"></a>Custom and <em>Google Font</em> Fonts</h3>
 <p><strong>xaringanthemer</strong> makes it easy to use <a href="https://fonts.google.com">Google Fonts</a> in your presentations (provided you have an internet connection during the presentation) or to fully specify your font files.</p>
-<p>To use <a href="https://fonts.google.com">Google Fonts</a>, set the <code>&lt;type&gt;_font_google</code> theme arguments â <code>text_font_google</code>, <code>header_font_google</code>, <code>code_font_google</code> â using the <code><a href="reference/google_font.html">google_font()</a></code> helper. The help documentation in <code><a href="reference/google_font.html">?google_font</a></code> provides more info.</p>
+<p>To use <a href="https://fonts.google.com">Google Fonts</a>, set the <code>&lt;type&gt;_font_google</code> theme arguments – <code>text_font_google</code>, <code>header_font_google</code>, <code>code_font_google</code> — using the <code><a href="reference/google_font.html">google_font()</a></code> helper. The help documentation in <code><a href="reference/google_font.html">?google_font</a></code> provides more info.</p>
 <div class="sourceCode" id="cb16"><pre class="r"><span class="fu"><a href="reference/style_mono_light.html">style_mono_light</a></span>(
   <span class="kw">header_font_google</span> <span class="kw">=</span> <span class="fu"><a href="reference/google_font.html">google_font</a></span>(<span class="st">"Josefin Slab"</span>, <span class="st">"600"</span>),
   <span class="kw">text_font_google</span>   <span class="kw">=</span> <span class="fu"><a href="reference/google_font.html">google_font</a></span>(<span class="st">"Work Sans"</span>, <span class="st">"300"</span>, <span class="st">"300i"</span>),
   <span class="kw">code_font_google</span>   <span class="kw">=</span> <span class="fu"><a href="reference/google_font.html">google_font</a></span>(<span class="st">"IBM Plex Mono"</span>)
 )</pre></div>
-<p>If you set an <code>&lt;type&gt;_font_google</code> theme arguments, then <code>&lt;type&gt;_font_family</code>, <code>&lt;type&gt;_font_weight</code> and <code>&lt;type&gt;_font_url</code> are overwritten â where <code>&lt;type&gt;</code> is one of <code>header</code>, <code>text</code>, or <code>code</code>.</p>
+<p>If you set an <code>&lt;type&gt;_font_google</code> theme arguments, then <code>&lt;type&gt;_font_family</code>, <code>&lt;type&gt;_font_weight</code> and <code>&lt;type&gt;_font_url</code> are overwritten – where <code>&lt;type&gt;</code> is one of <code>header</code>, <code>text</code>, or <code>code</code>.</p>
 <p>To use a font hosted outside of Google fonts, you need to provide both <code>&lt;type&gt;_font_family</code> and <code>&lt;type&gt;_font_url</code>. For example, suppose you want to use a code font with ligatures for your code chunks, such as <a href="https://github.com/tonsky/FiraCode">Fira Code</a>, which would be declared with <code>code_font_family</code>. The <a href="https://github.com/tonsky/FiraCode#browser-support">browser usage</a> section of the Fira Code README provides a CSS URL to be used with an <code>@import</code> statement that you can use with the <code>code_font_url</code> argument.</p>
 <div class="sourceCode" id="cb17"><pre class="r"><span class="fu"><a href="reference/style_solarized_dark.html">style_solarized_dark</a></span>(
   <span class="kw">code_font_family</span> <span class="kw">=</span> <span class="st">"Fira Code"</span>,
@@ -354,7 +352,7 @@ Easy slide and plot themes for xaringan slides.
   <span class="kw">green</span> <span class="kw">=</span> <span class="st">"#136f63"</span>,
   <span class="kw">white</span> <span class="kw">=</span> <span class="st">"#FFFFFF"</span>,
 )</pre></div>
-<p>and creates CSS classes from the color name that set the text color â e.g.Â <code>.red</code> â or that set the background color â e.g.Â <code>.bg-red</code>. If you use custom CSS in your slides, the color name is also stored in a CSS variable â e.g.Â <code><a href="https://rdrr.io/r/stats/cor.html">var(--red)</a></code>.</p>
+<p>and creates CSS classes from the color name that set the text color — e.g. <code>.red</code> — or that set the background color — e.g. <code>.bg-red</code>. If you use custom CSS in your slides, the color name is also stored in a CSS variable — e.g. <code><a href="https://rdrr.io/r/stats/cor.html">var(--red)</a></code>.</p>
 <p>So slide text like this</p>
 <div class="sourceCode" id="cb20"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb20-1" data-line-number="1">This **.red[simple]** .white.bg-purple[demo] </a>
 <a class="sourceLine" id="cb20-2" data-line-number="2">_.orange[shows]_ the colors .green[in action].</a></code></pre></div>
@@ -391,7 +389,7 @@ Easy slide and plot themes for xaringan slides.
 <hr>
 <p><strong>xaringanthemer</strong> was built by <a href="https://www.garrickadenbuie.com">Garrick Aden-Buie</a> (<a href="https://twitter.com/grrrck">@grrrck</a>).</p>
 <p>Big thank you to <a href="https://yihui.name">Yihui Xie</a>, especially for <a href="https://github.com/yihui/xaringan">xaringan</a>. Also thanks to <a href="http://gnab.org">Ole Petter Bang</a> for <a href="https://github.com/gnab/remark">remark.js</a>.</p>
-<p>Feel free to <a href="https://github.com/gadenbuie/xaringanthemer/issues">file an issue</a> if you find a bug or have a theme suggestion â or better yet, submit a pull request!</p>
+<p>Feel free to <a href="https://github.com/gadenbuie/xaringanthemer/issues">file an issue</a> if you find a bug or have a theme suggestion – or better yet, submit a pull request!</p>
 </div>
 </div>
   </div>
@@ -439,7 +437,7 @@ Easy slide and plot themes for xaringan slides.
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
 </div>
 
       </footer>
