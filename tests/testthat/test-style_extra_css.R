@@ -73,6 +73,13 @@ describe("style_extra_css", {
       strsplit(third_exp, "\n")[[1]]
     )
   })
+
+  it("only adds prepends `heading` once", {
+    css <- list(b = list(color = "red"), i = list(color = "blue"))
+    out <- style_extra_css(css, outfile = NULL, heading = "Extra CSS")
+    expect_equal(length(out), 1L)
+    expect_equal(sum(grepl("Extra CSS", out)), 1L)
+  })
 })
 
 

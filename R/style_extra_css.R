@@ -40,7 +40,7 @@ style_extra_css <- function(
   has_heading <- !is.null(heading)
   x <- paste0(
     if (has_heading) paste0("/* ", heading, " */\n"),
-    list2css(css)
+    paste(list2css(css), collapse = "\n")
   )
   if (append) x <- paste0(if (has_heading) "\n\n" else "\n", x)
   if (is.null(outfile)) return(x)
