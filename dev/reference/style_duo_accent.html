@@ -201,24 +201,20 @@ accents on select elements (headers, bold text, etc.).</p>
   <span class='kw'>header_background_ignore_classes</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"normal"</span>, <span class='st'>"inverse"</span>, <span class='st'>"title"</span>, <span class='st'>"middle"</span>, <span class='st'>"bottom"</span>),
   <span class='kw'>text_slide_number_font_size</span> <span class='kw'>=</span> <span class='st'>"0.9em"</span>,
   <span class='kw'>text_font_google</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>text_font_family</span> <span class='kw'>=</span> <span class='st'>"Noto Sans"</span>,
-  <span class='kw'>text_font_weight</span> <span class='kw'>=</span> <span class='st'>"normal"</span>,
-
-    <span class='kw'>text_font_url</span> <span class='kw'>=</span> <span class='st'>"https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&amp;display=swap"</span>,
-
-    <span class='kw'>text_font_family_fallback</span> <span class='kw'>=</span> <span class='st'>"-apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial"</span>,
+  <span class='kw'>text_font_family</span> <span class='kw'>=</span> <span class='fu'><a href='style_xaringan.html'>xaringanthemer_font_default</a></span>(<span class='st'>"text_font_family"</span>),
+  <span class='kw'>text_font_weight</span> <span class='kw'>=</span> <span class='fu'><a href='style_xaringan.html'>xaringanthemer_font_default</a></span>(<span class='st'>"text_font_weight"</span>),
+  <span class='kw'>text_font_url</span> <span class='kw'>=</span> <span class='fu'><a href='style_xaringan.html'>xaringanthemer_font_default</a></span>(<span class='st'>"text_font_url"</span>),
+  <span class='kw'>text_font_family_fallback</span> <span class='kw'>=</span> <span class='fu'><a href='style_xaringan.html'>xaringanthemer_font_default</a></span>(<span class='st'>"text_font_family_fallback"</span>),
   <span class='kw'>text_font_base</span> <span class='kw'>=</span> <span class='st'>"sans-serif"</span>,
   <span class='kw'>header_font_google</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>header_font_family</span> <span class='kw'>=</span> <span class='st'>"Cabin"</span>,
-  <span class='kw'>header_font_weight</span> <span class='kw'>=</span> <span class='st'>"600"</span>,
-
-    <span class='kw'>header_font_url</span> <span class='kw'>=</span> <span class='st'>"https://fonts.googleapis.com/css?family=Cabin:600,600i&amp;display=swap"</span>,
+  <span class='kw'>header_font_family</span> <span class='kw'>=</span> <span class='fu'><a href='style_xaringan.html'>xaringanthemer_font_default</a></span>(<span class='st'>"header_font_family"</span>),
+  <span class='kw'>header_font_weight</span> <span class='kw'>=</span> <span class='fu'><a href='style_xaringan.html'>xaringanthemer_font_default</a></span>(<span class='st'>"header_font_weight"</span>),
+  <span class='kw'>header_font_url</span> <span class='kw'>=</span> <span class='fu'><a href='style_xaringan.html'>xaringanthemer_font_default</a></span>(<span class='st'>"header_font_url"</span>),
   <span class='kw'>code_font_google</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>code_font_family</span> <span class='kw'>=</span> <span class='st'>"Source Code Pro"</span>,
+  <span class='kw'>code_font_family</span> <span class='kw'>=</span> <span class='fu'><a href='style_xaringan.html'>xaringanthemer_font_default</a></span>(<span class='st'>"code_font_family"</span>),
   <span class='kw'>code_font_size</span> <span class='kw'>=</span> <span class='st'>"0.9rem"</span>,
-
-    <span class='kw'>code_font_url</span> <span class='kw'>=</span> <span class='st'>"https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700&amp;display=swap"</span>,
-  <span class='kw'>code_font_family_fallback</span> <span class='kw'>=</span> <span class='st'>"Menlo, Consolas, Monaco, Liberation Mono, Lucida Console"</span>,
+  <span class='kw'>code_font_url</span> <span class='kw'>=</span> <span class='fu'><a href='style_xaringan.html'>xaringanthemer_font_default</a></span>(<span class='st'>"code_font_url"</span>),
+  <span class='kw'>code_font_family_fallback</span> <span class='kw'>=</span> <span class='fu'><a href='style_xaringan.html'>xaringanthemer_font_default</a></span>(<span class='st'>"code_font_family_fallback"</span>),
   <span class='kw'>colors</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
   <span class='kw'>extra_css</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
   <span class='kw'>extra_fonts</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
@@ -584,32 +580,33 @@ to <code>NULL</code>. Modifies the <code>body</code> element.</p></td>
     <tr>
       <th>text_font_family</th>
       <td><p>Body Text Font Family (xaringan default is
-<code>'Droid Serif'</code>). Defaults to Noto Sans. Modifies the <code>body</code> element. The
-value of this variable is also stored as a CSS variable that can be
-referenced with <code><a href='https://rdrr.io/r/stats/cor.html'>var(--text-font-family)</a></code> in any argument of a style
-function or in custom CSS.</p></td>
+<code>'Droid Serif'</code>). Defaults to
+<code><a href='style_xaringan.html'>xaringanthemer_font_default("text_font_family")</a></code>. Modifies the <code>body</code>
+element. The value of this variable is also stored as a CSS variable that
+can be referenced with <code><a href='https://rdrr.io/r/stats/cor.html'>var(--text-font-family)</a></code> in any argument of a
+style function or in custom CSS.</p></td>
     </tr>
     <tr>
       <th>text_font_weight</th>
-      <td><p>Body Text Font Weight. Defaults to normal. Modifies
-the <code>body</code> element. Accepts CSS
+      <td><p>Body Text Font Weight. Defaults to
+<code><a href='style_xaringan.html'>xaringanthemer_font_default("text_font_weight")</a></code>. Modifies the <code>body</code>
+element. Accepts CSS
 <a href='https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight'>font-weight</a>
 property values.</p></td>
     </tr>
     <tr>
       <th>text_font_url</th>
       <td><p>Body Text Font URL(s). Defaults to
-https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&amp;display=swap.
-Modifies the <code>@import url()</code> elements.</p></td>
+<code><a href='style_xaringan.html'>xaringanthemer_font_default("text_font_url")</a></code>. Modifies the
+<code>@import url()</code> elements.</p></td>
     </tr>
     <tr>
       <th>text_font_family_fallback</th>
       <td><p>Body Text Font Fallbacks. Defaults to
--apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue,
-helvetica, Ubuntu, roboto, noto, segoe ui, arial. Modifies the <code>body</code>
-element. The value of this variable is also stored as a CSS variable that
-can be referenced with <code><a href='https://rdrr.io/r/stats/cor.html'>var(--text-font-family-fallback)</a></code> in any argument
-of a style function or in custom CSS.</p></td>
+<code><a href='style_xaringan.html'>xaringanthemer_font_default("text_font_family_fallback")</a></code>. Modifies the
+<code>body</code> element. The value of this variable is also stored as a CSS
+variable that can be referenced with <code><a href='https://rdrr.io/r/stats/cor.html'>var(--text-font-family-fallback)</a></code> in
+any argument of a style function or in custom CSS.</p></td>
     </tr>
     <tr>
       <th>text_font_base</th>
@@ -627,14 +624,16 @@ Defaults to <code>NULL</code>. Modifies the <code>body</code> element.</p></td>
     <tr>
       <th>header_font_family</th>
       <td><p>Header Font Family (xaringan default is
-<code>'Yanone Kaffeesatz'</code>). Defaults to Cabin. Modifies the <code>h1, h2, h3</code>
-elements. The value of this variable is also stored as a CSS variable that
-can be referenced with <code><a href='https://rdrr.io/r/stats/cor.html'>var(--header-font-family)</a></code> in any argument of a
-style function or in custom CSS.</p></td>
+<code>'Yanone Kaffeesatz'</code>). Defaults to
+<code><a href='style_xaringan.html'>xaringanthemer_font_default("header_font_family")</a></code>. Modifies the
+<code>h1, h2, h3</code> elements. The value of this variable is also stored as a CSS
+variable that can be referenced with <code><a href='https://rdrr.io/r/stats/cor.html'>var(--header-font-family)</a></code> in any
+argument of a style function or in custom CSS.</p></td>
     </tr>
     <tr>
       <th>header_font_weight</th>
-      <td><p>Header Font Weight. Defaults to 600. Modifies the
+      <td><p>Header Font Weight. Defaults to
+<code><a href='style_xaringan.html'>xaringanthemer_font_default("header_font_weight")</a></code>. Modifies the
 <code>h1, h2, h3</code> elements. Accepts CSS
 <a href='https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight'>font-weight</a>
 property values.</p></td>
@@ -642,8 +641,8 @@ property values.</p></td>
     <tr>
       <th>header_font_url</th>
       <td><p>Header Font URL. Defaults to
-https://fonts.googleapis.com/css?family=Cabin:600,600i&amp;display=swap.
-Modifies the <code>@import url</code> elements.</p></td>
+<code><a href='style_xaringan.html'>xaringanthemer_font_default("header_font_url")</a></code>. Modifies the
+<code>@import url</code> elements.</p></td>
     </tr>
     <tr>
       <th>code_font_google</th>
@@ -652,9 +651,10 @@ to <code>NULL</code>. Modifies the <code>body</code> element.</p></td>
     </tr>
     <tr>
       <th>code_font_family</th>
-      <td><p>Code Font Family. Defaults to Source Code Pro.
-Modifies the <code>.remark-code, .remark-inline-code</code> classes. The value of
-this variable is also stored as a CSS variable that can be referenced with
+      <td><p>Code Font Family. Defaults to
+<code><a href='style_xaringan.html'>xaringanthemer_font_default("code_font_family")</a></code>. Modifies the
+<code>.remark-code, .remark-inline-code</code> classes. The value of this variable is
+also stored as a CSS variable that can be referenced with
 <code><a href='https://rdrr.io/r/stats/cor.html'>var(--code-font-family)</a></code> in any argument of a style function or in custom
 CSS.</p></td>
     </tr>
@@ -670,13 +670,13 @@ argument of a style function or in custom CSS.</p></td>
     <tr>
       <th>code_font_url</th>
       <td><p>Code Font URL. Defaults to
-https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700&amp;display=swap.
-Modifies the <code>@import url</code> elements.</p></td>
+<code><a href='style_xaringan.html'>xaringanthemer_font_default("code_font_url")</a></code>. Modifies the <code>@import url</code>
+elements.</p></td>
     </tr>
     <tr>
       <th>code_font_family_fallback</th>
-      <td><p>Code Font Fallback. Defaults to Menlo,
-Consolas, Monaco, Liberation Mono, Lucida Console. Modifies the
+      <td><p>Code Font Fallback. Defaults to
+<code><a href='style_xaringan.html'>xaringanthemer_font_default("code_font_family_fallback")</a></code>. Modifies the
 <code>.remark-code, .remark-inline-code</code> classes.</p></td>
     </tr>
     <tr>
@@ -728,7 +728,7 @@ argument, use that name instead of the default file name.<div class="yaml"></p><
 <code><a href='style_mono_light.html'>style_mono_light</a>()</code>,
 <code><a href='style_solarized_dark.html'>style_solarized_dark</a>()</code>,
 <code><a href='style_solarized_light.html'>style_solarized_light</a>()</code>,
-<code><a href='style_xaringan.html'>style_xaringan</a>()</code></p>
+<code><a href='style_xaringan.html'>xaringanthemer_font_default</a>()</code></p>
 <p>Other Duotone themes: 
 <code><a href='style_duo_accent_inverse.html'>style_duo_accent_inverse</a>()</code>,
 <code><a href='style_duo.html'>style_duo</a>()</code></p></div>
