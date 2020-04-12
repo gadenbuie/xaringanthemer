@@ -913,7 +913,7 @@ requires_xaringanthemer_env <- function(
 #' - `header_color`
 #' - `header_font_family`
 #' - `header_font_google`
-#' - `hedaer_font_is_google`
+#' - `header_font_is_google`
 #' - `header_font_url`
 #' - `header_font_weight`
 #' - `header_h1_font_size`

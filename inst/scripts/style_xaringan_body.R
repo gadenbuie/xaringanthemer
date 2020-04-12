@@ -1,3 +1,32 @@
+force(text_font_family)
+force(text_font_weight)
+force(text_font_url)
+force(text_font_family_fallback)
+force(header_font_family)
+force(header_font_weight)
+force(header_font_url)
+force(code_font_family)
+force(code_font_url)
+force(code_font_family_fallback)
+
+# the defaults are google fonts
+is_default <- function(type, suffix) {
+  # check if font arg value is from xaringanthemer_font_default
+  var <- paste0(type, "_", suffix)
+  inherits(
+    get(var, envir = parent.frame(2), inherits = FALSE),
+    "xaringanthemer_default"
+  )
+}
+for (var in c("text", "header", "code")) {
+  suffixes <- c("font_family", "font_weight", "font_url")
+  if (var == "code") suffixes <- setdiff(suffixes, "font_weight")
+  var_is_google <- all(vapply(suffixes, is_default, logical(1), type = var))
+  var_is_google <- as.integer(var_is_google)
+  r_set_font_is_google <- glue::glue("{var}_font_is_google <- {var_is_google}")
+  eval(parse(text = r_set_font_is_google))
+}
+
 # Make sure font names are wrapped in quotes if they have spaces
 f_args <- names(formals(sys.function()))
 for (var in f_args[grepl("font_family$", f_args)]) {
@@ -5,8 +34,6 @@ for (var in f_args[grepl("font_family$", f_args)]) {
   if (!is.null(var_value)) {
     eval(parse(text = paste0(var, "<-quote_elements_w_spaces(", var, ")")))
   }
-  # set an is_google flag default of FALSE that is possibly overwritten later
-  eval(parse(text = paste0(sub("font_family$", "font_is_google", var), "<-0")))
 }
 
 # Warn if base_font_size isn't absolute
@@ -34,33 +61,16 @@ for (var in f_args[grepl("font_google$", f_args)]) {
   if (group == "text") {
     text_font_family <- quote_elements_w_spaces(gf$family)
     text_font_weight <- gf$weights %||% "normal"
-    text_font_weight <- substr(text_font_weight, 1, regexpr(",", text_font_weight)[1] - 1)
+    if (grepl(",", text_font_weight)) {
+      # Use first font weight if multiple are imported
+      text_font_weight <- substr(text_font_weight, 1, regexpr(",", text_font_weight)[1] - 1)
+    }
     text_font_url <- gf$url
   } else {
     eval(parse(text = paste0(group, "_font_family <- quote_elements_w_spaces(gf$family)")))
     eval(parse(text = paste0(group, "_font_url <- gf$url")))
   }
   eval(parse(text = paste0(group, "_font_is_google <- 1")))
-}
-
-is_default <- function(type, suffix, reference = style_xaringan) {
-  var <- paste0(type, "_", suffix)
-  default_value <- formals(reference)[[var]]
-  if (suffix == "font_family") {
-    default_value <- quote_elements_w_spaces(default_value)
-  }
-
-  get(var, envir = parent.frame(2), inherits = FALSE) == default_value
-}
-
-# the defaults are google fonts
-for (var in c("text", "header", "code")) {
-  suffixes <- c("font_family", "font_weight", "font_url")
-  if (var == "code") suffixes <- setdiff(suffixes, "font_weight")
-  var_is_google <- all(vapply(suffixes, is_default, logical(1), type = var))
-  if (var_is_google) {
-    eval(parse(text = paste0(var, "_font_is_google <- 1")))
-  }
 }
 
 extra_font_imports <- if (is.null(extra_fonts)) "" else list2fonts(extra_fonts)

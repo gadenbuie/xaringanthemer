@@ -195,23 +195,24 @@
 #' @param text_font_google Use `google_font()` to specify body font. Defaults
 #'   to `NULL`. Modifies the `body` element.
 #' @param text_font_family Body Text Font Family (xaringan default is
-#'   `'Droid Serif'`). Defaults to Noto Sans. Modifies the `body` element. The
-#'   value of this variable is also stored as a CSS variable that can be
-#'   referenced with `var(--text-font-family)` in any argument of a style
-#'   function or in custom CSS.
-#' @param text_font_weight Body Text Font Weight. Defaults to normal. Modifies
-#'   the `body` element. Accepts CSS
+#'   `'Droid Serif'`). Defaults to
+#'   `xaringanthemer_font_default("text_font_family")`. Modifies the `body`
+#'   element. The value of this variable is also stored as a CSS variable that
+#'   can be referenced with `var(--text-font-family)` in any argument of a
+#'   style function or in custom CSS.
+#' @param text_font_weight Body Text Font Weight. Defaults to
+#'   `xaringanthemer_font_default("text_font_weight")`. Modifies the `body`
+#'   element. Accepts CSS
 #'   [font-weight](https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight)
 #'   property values.
 #' @param text_font_url Body Text Font URL(s). Defaults to
-#'   https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&display=swap.
-#'   Modifies the `@import url()` elements.
+#'   `xaringanthemer_font_default("text_font_url")`. Modifies the
+#'   `@import url()` elements.
 #' @param text_font_family_fallback Body Text Font Fallbacks. Defaults to
-#'   -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue,
-#'   helvetica, Ubuntu, roboto, noto, segoe ui, arial. Modifies the `body`
-#'   element. The value of this variable is also stored as a CSS variable that
-#'   can be referenced with `var(--text-font-family-fallback)` in any argument
-#'   of a style function or in custom CSS.
+#'   `xaringanthemer_font_default("text_font_family_fallback")`. Modifies the
+#'   `body` element. The value of this variable is also stored as a CSS
+#'   variable that can be referenced with `var(--text-font-family-fallback)` in
+#'   any argument of a style function or in custom CSS.
 #' @param text_font_base Body Text Base Font (Total Failure Fallback). Defaults
 #'   to sans-serif. Modifies the `body` element. The value of this variable is
 #'   also stored as a CSS variable that can be referenced with
@@ -220,22 +221,25 @@
 #' @param header_font_google Use `google_font()` to specify header font.
 #'   Defaults to `NULL`. Modifies the `body` element.
 #' @param header_font_family Header Font Family (xaringan default is
-#'   `'Yanone Kaffeesatz'`). Defaults to Cabin. Modifies the `h1, h2, h3`
-#'   elements. The value of this variable is also stored as a CSS variable that
-#'   can be referenced with `var(--header-font-family)` in any argument of a
-#'   style function or in custom CSS.
-#' @param header_font_weight Header Font Weight. Defaults to 600. Modifies the
+#'   `'Yanone Kaffeesatz'`). Defaults to
+#'   `xaringanthemer_font_default("header_font_family")`. Modifies the
+#'   `h1, h2, h3` elements. The value of this variable is also stored as a CSS
+#'   variable that can be referenced with `var(--header-font-family)` in any
+#'   argument of a style function or in custom CSS.
+#' @param header_font_weight Header Font Weight. Defaults to
+#'   `xaringanthemer_font_default("header_font_weight")`. Modifies the
 #'   `h1, h2, h3` elements. Accepts CSS
 #'   [font-weight](https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight)
 #'   property values.
 #' @param header_font_url Header Font URL. Defaults to
-#'   https://fonts.googleapis.com/css?family=Cabin:600,600i&display=swap.
-#'   Modifies the `@import url` elements.
+#'   `xaringanthemer_font_default("header_font_url")`. Modifies the
+#'   `@import url` elements.
 #' @param code_font_google Use `google_font()` to specify code font. Defaults
 #'   to `NULL`. Modifies the `body` element.
-#' @param code_font_family Code Font Family. Defaults to Source Code Pro.
-#'   Modifies the `.remark-code, .remark-inline-code` classes. The value of
-#'   this variable is also stored as a CSS variable that can be referenced with
+#' @param code_font_family Code Font Family. Defaults to
+#'   `xaringanthemer_font_default("code_font_family")`. Modifies the
+#'   `.remark-code, .remark-inline-code` classes. The value of this variable is
+#'   also stored as a CSS variable that can be referenced with
 #'   `var(--code-font-family)` in any argument of a style function or in custom
 #'   CSS.
 #' @param code_font_size Code Text Font Size. Defaults to 0.9rem. Modifies the
@@ -245,10 +249,10 @@
 #'   variable that can be referenced with `var(--code-font-size)` in any
 #'   argument of a style function or in custom CSS.
 #' @param code_font_url Code Font URL. Defaults to
-#'   https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700&display=swap.
-#'   Modifies the `@import url` elements.
-#' @param code_font_family_fallback Code Font Fallback. Defaults to Menlo,
-#'   Consolas, Monaco, Liberation Mono, Lucida Console. Modifies the
+#'   `xaringanthemer_font_default("code_font_url")`. Modifies the `@import url`
+#'   elements.
+#' @param code_font_family_fallback Code Font Fallback. Defaults to
+#'   `xaringanthemer_font_default("code_font_family_fallback")`. Modifies the
 #'   `.remark-code, .remark-inline-code` classes.
 #' @template theme_params
 #' @template style-usage
@@ -303,20 +307,20 @@ style_duo <- function(
   header_background_ignore_classes = c('normal', 'inverse', 'title', 'middle', 'bottom'),
   text_slide_number_font_size = "0.9em",
   text_font_google = NULL,
-  text_font_family = "Noto Sans",
-  text_font_weight = "normal",
-  text_font_url = "https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&display=swap",
-  text_font_family_fallback = "-apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial",
+  text_font_family = xaringanthemer_font_default("text_font_family"),
+  text_font_weight = xaringanthemer_font_default("text_font_weight"),
+  text_font_url = xaringanthemer_font_default("text_font_url"),
+  text_font_family_fallback = xaringanthemer_font_default("text_font_family_fallback"),
   text_font_base = "sans-serif",
   header_font_google = NULL,
-  header_font_family = "Cabin",
-  header_font_weight = "600",
-  header_font_url = "https://fonts.googleapis.com/css?family=Cabin:600,600i&display=swap",
+  header_font_family = xaringanthemer_font_default("header_font_family"),
+  header_font_weight = xaringanthemer_font_default("header_font_weight"),
+  header_font_url = xaringanthemer_font_default("header_font_url"),
   code_font_google = NULL,
-  code_font_family = "Source Code Pro",
+  code_font_family = xaringanthemer_font_default("code_font_family"),
   code_font_size = "0.9rem",
-  code_font_url = "https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700&display=swap",
-  code_font_family_fallback = "Menlo, Consolas, Monaco, Liberation Mono, Lucida Console",
+  code_font_url = xaringanthemer_font_default("code_font_url"),
+  code_font_family_fallback = xaringanthemer_font_default("code_font_family_fallback"),
   colors = NULL,
   extra_css = NULL,
   extra_fonts = NULL,

@@ -53,7 +53,7 @@ Style settings used by xaringanthemer include:
 \item \code{header_color}
 \item \code{header_font_family}
 \item \code{header_font_google}
-\item \code{hedaer_font_is_google}
+\item \code{header_font_is_google}
 \item \code{header_font_url}
 \item \code{header_font_weight}
 \item \code{header_h1_font_size}

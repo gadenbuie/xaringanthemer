@@ -63,7 +63,7 @@ html {
 
 body {
   font-family: var(--text-font-family), var(--text-font-family-fallback), var(--text-font-base);
-  font-weight: ;
+  font-weight: normal;
   color: var(--text-color);
 }
 h1, h2, h3 {
