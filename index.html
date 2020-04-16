@@ -118,19 +118,19 @@ Easy slide and plot themes for xaringan slides.
 <a href="#quick-intro" class="anchor"></a>Quick Intro</h2>
 <!-- Set link to theme-settings, template-variables, theme functions -->
 <p>First, add the <code>xaringan-themer.css</code> file to the YAML header of your xaringan slides.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="fu">output:</span></a>
-<a class="sourceLine" id="cb3-2" data-line-number="2">  <span class="fu">xaringan:</span><span class="at">:moon_reader:</span></a>
-<a class="sourceLine" id="cb3-3" data-line-number="3">    <span class="fu">css:</span><span class="at"> xaringan-themer.css</span></a></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">output</span><span class="kw">:</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="at">  xaringan:</span><span class="fu">:moon_reader</span><span class="kw">:</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a><span class="at">    </span><span class="fu">css</span><span class="kw">:</span><span class="at"> xaringan-themer.css</span></span></code></pre></div>
 <p>Then, in a hidden chunk just after the knitr setup chunk, load <strong>xaringanthemer</strong> and try one of the <a href="#themes">theme functions</a>.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb4-1" data-line-number="1">```{r xaringan-themer, include = FALSE}</a>
-<a class="sourceLine" id="cb4-2" data-line-number="2">library(xaringanthemer)</a>
-<a class="sourceLine" id="cb4-3" data-line-number="3">style_mono_light(</a>
-<a class="sourceLine" id="cb4-4" data-line-number="4">  base_color = "#1c5253",</a>
-<a class="sourceLine" id="cb4-5" data-line-number="5">  header_font_google = google_font("Josefin Sans"),</a>
-<a class="sourceLine" id="cb4-6" data-line-number="6">  text_font_google   = google_font("Montserrat", "300", "300i"),</a>
-<a class="sourceLine" id="cb4-7" data-line-number="7">  code_font_google   = google_font("Droid Mono")</a>
-<a class="sourceLine" id="cb4-8" data-line-number="8">)</a>
-<a class="sourceLine" id="cb4-9" data-line-number="9">```</a></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1"></a><span class="bn">```{r xaringan-themer, include = FALSE}</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="bn">library(xaringanthemer)</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="bn">style_mono_light(</span></span>
+<span id="cb4-4"><a href="#cb4-4"></a><span class="bn">  base_color = "#1c5253",</span></span>
+<span id="cb4-5"><a href="#cb4-5"></a><span class="bn">  header_font_google = google_font("Josefin Sans"),</span></span>
+<span id="cb4-6"><a href="#cb4-6"></a><span class="bn">  text_font_google   = google_font("Montserrat", "300", "300i"),</span></span>
+<span id="cb4-7"><a href="#cb4-7"></a><span class="bn">  code_font_google   = google_font("Droid Mono")</span></span>
+<span id="cb4-8"><a href="#cb4-8"></a><span class="bn">)</span></span>
+<span id="cb4-9"><a href="#cb4-9"></a><span class="bn">```</span></span></code></pre></div>
 <p><img src="https://raw.githubusercontent.com/gadenbuie/xaringanthemer/assets/example_mono_light_1c5253.png" alt="Example title and normal slides using a green xaringanthemer theme" data-external="1"></p>
 <div id="matching-ggplot-themes" class="section level3">
 <h3 class="hasAnchor">
@@ -203,7 +203,7 @@ Easy slide and plot themes for xaringan slides.
 <ul class="list-unstyled">
 <li><a href="https://CRAN.R-project.org/package=xaringanthemer"><img src="https://www.r-pkg.org/badges/version/xaringanthemer" alt="CRAN status"></a></li>
 <li><a href="https://www.tidyverse.org/lifecycle/#stable"><img src="https://img.shields.io/badge/lifecycle-stable-brightgreen.svg" alt="Lifecycle: stable"></a></li>
-<li><a href="https://travis-ci.com/gadenbuie/xaringanthemer"><img src="https://travis-ci.com/gadenbuie/xaringanthemer.svg?branch=master" alt="travis"></a></li>
+<li><a href="https://github.com/gadenbuie/xaringanthemer/actions"><img src="https://github.com/gadenbuie/xaringanthemer/workflows/CI%20by%20%7Btic%7D/badge.svg?branch=master" alt="CI by {tic}"></a></li>
 <li><a href="https://codecov.io/github/gadenbuie/xaringanthemer"><img src="https://img.shields.io/codecov/c/github/gadenbuie/xaringanthemer" alt="Codecov"></a></li>
 </ul>
 </div>

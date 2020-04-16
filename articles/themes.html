@@ -194,13 +194,13 @@
 <div class="sourceCode" id="cb9"><html><body><pre class="r"><span class="fu"><a href="../reference/style_solarized_dark.html">style_solarized_dark</a></span>()</pre></body></html></div>
 <p><img src="https://raw.githubusercontent.com/gadenbuie/xaringanthemer/assets/example_solarized_dark.png" data-external="1"></p>
 <p>To do this, your YAML header should look more-or-less like this:</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb10-1" data-line-number="1"><span class="fu">output:</span></a>
-<a class="sourceLine" id="cb10-2" data-line-number="2">  <span class="fu">xaringan:</span><span class="at">:moon_reader:</span></a>
-<a class="sourceLine" id="cb10-3" data-line-number="3">    <span class="fu">css:</span><span class="at"> </span><span class="kw">[</span><span class="st">"xaringan-themer.css"</span><span class="kw">]</span></a>
-<a class="sourceLine" id="cb10-4" data-line-number="4">    <span class="fu">nature:</span></a>
-<a class="sourceLine" id="cb10-5" data-line-number="5">      <span class="fu">highlightStyle:</span><span class="at"> solarized-dark</span></a>
-<a class="sourceLine" id="cb10-6" data-line-number="6">      <span class="fu">highlightLines:</span><span class="at"> true</span></a>
-<a class="sourceLine" id="cb10-7" data-line-number="7">      <span class="fu">countIncrementalSlides:</span><span class="at"> false</span></a></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">output</span><span class="kw">:</span></span>
+<span id="cb10-2"><a href="#cb10-2"></a><span class="at">  xaringan:</span><span class="fu">:moon_reader</span><span class="kw">:</span></span>
+<span id="cb10-3"><a href="#cb10-3"></a><span class="at">    </span><span class="fu">css</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">"xaringan-themer.css"</span><span class="kw">]</span></span>
+<span id="cb10-4"><a href="#cb10-4"></a><span class="at">    </span><span class="fu">nature</span><span class="kw">:</span></span>
+<span id="cb10-5"><a href="#cb10-5"></a><span class="at">      </span><span class="fu">highlightStyle</span><span class="kw">:</span><span class="at"> solarized-dark</span></span>
+<span id="cb10-6"><a href="#cb10-6"></a><span class="at">      </span><span class="fu">highlightLines</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb10-7"><a href="#cb10-7"></a><span class="at">      </span><span class="fu">countIncrementalSlides</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span></code></pre></div>
 </div>
 </div>
 <div id="colors" class="section level2">
@@ -215,10 +215,10 @@
   <span class="kw">green</span> <span class="kw">=</span> <span class="st">"#136f63"</span>,
   <span class="kw">white</span> <span class="kw">=</span> <span class="st">"#FFFFFF"</span>,
 )</pre></body></html></div>
-<p>and creates CSS classes from the color name that set the text color — e.g. <code>.red</code> — or that set the background color — e.g. <code>.bg-red</code>. If you use custom CSS in your slides, the color name is also stored in a CSS variable — e.g. <code><a href="https://rdrr.io/r/stats/cor.html">var(--red)</a></code>.</p>
+<p>and creates CSS classes from the color name that set the text color — e.g. <code>.red</code> — or that set the background color — e.g. <code>.bg-red</code>. If you use custom CSS in your slides, the color name is also stored in a CSS variable — e.g. <code><a href="https://rdrr.io/r/stats/cor.html">var(--red)</a></code>.</p>
 <p>So slide text like this</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb12-1" data-line-number="1">This **.red[simple]** .white.bg-purple[demo] </a>
-<a class="sourceLine" id="cb12-2" data-line-number="2">_.orange[shows]_ the colors .green[in action].</a></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb12-1"><a href="#cb12-1"></a>This **.red[simple]** .white.bg-purple[demo] </span>
+<span id="cb12-2"><a href="#cb12-2"></a>_.orange[shows]_ the colors .green[in action].</span></code></pre></div>
 <p>will be rendered in HTML as</p>
 <blockquote>
 This <strong><span style="color: #f34213">simple</span></strong> <span style="color:#FFFFFF;background-color:#3e2f5b;">demo</span> <em style="color:#ff8811">shows</em> the colors <span style="color:#136f63">in action</span>.
