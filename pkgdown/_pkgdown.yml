@@ -1,9 +1,9 @@
 authors:
   Garrick Aden-Buie:
     href: https://www.garrickadenbuie.com
+
 url: https://pkg.garrickadenbuie.com/xaringanthemer/
-development:
-  mode: auto
+
 home:
   description: |
     Give your xaringan slides some style with xaringanthemer.
@@ -49,6 +49,7 @@ reference:
     - ends_with("color")
     - apply_alpha
     - choose_dark_or_light
+
 navbar:
   left:
     intro:
