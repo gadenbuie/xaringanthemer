@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Choose dark or light color — choose_dark_or_light • xaringanthemer</title>
+<title>Add Extra CSS Styles — style_extra_css • xaringanthemer</title>
 
 
 <!-- jquery -->
@@ -41,10 +41,10 @@
   <link href="../extra.css" rel="stylesheet">
   
 
-<meta property="og:title" content="Choose dark or light color — choose_dark_or_light" />
-<meta property="og:description" content="Takes a color input as x and returns either the black or white color (or
-expression) if dark or light text should be used over the input color for
-best contrast. Follows W3C Recommendations." />
+<meta property="og:title" content="Add Extra CSS Styles — style_extra_css" />
+<meta property="og:description" content="Adds css elements to target outfile, typically a xaringanthemer css file.
+The css argument takes a list of CSS classes and definitions (see examples below)
+and appends CSS rules to outfile." />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:creator" content="@grrrck" />
 <meta name="twitter:site" content="@grrrck" />
@@ -140,52 +140,82 @@ best contrast. Follows W3C Recommendations." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Choose dark or light color</h1>
-    <small class="dont-index">Source: <a href='https://github.com/gadenbuie/xaringanthemer/blob/master/R/color.R'><code>R/color.R</code></a></small>
-    <div class="hidden name"><code>choose_dark_or_light.Rd</code></div>
+    <h1>Add Extra CSS Styles</h1>
+    <small class="dont-index">Source: <a href='https://github.com/gadenbuie/xaringanthemer/blob/master/R/style_extra_css.R'><code>R/style_extra_css.R</code></a></small>
+    <div class="hidden name"><code>style_extra_css.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Takes a color input as <code>x</code> and returns either the black or white color (or
-expression) if dark or light text should be used over the input color for
-best contrast. Follows W3C Recommendations.</p>
+    <p>Adds css elements to target <code>outfile</code>, typically a xaringanthemer css file.
+The <code>css</code> argument takes a list of CSS classes and definitions (see examples below)
+and appends CSS rules to <code>outfile</code>.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>choose_dark_or_light</span>(<span class='no'>x</span>, <span class='kw'>black</span> <span class='kw'>=</span> <span class='st'>"#000000"</span>, <span class='kw'>white</span> <span class='kw'>=</span> <span class='st'>"#FFFFFF"</span>)</pre>
+    <pre class="usage"><span class='fu'>style_extra_css</span>(
+  <span class='no'>css</span>,
+  <span class='kw'>outfile</span> <span class='kw'>=</span> <span class='st'>"xaringan-themer.css"</span>,
+  <span class='kw'>append</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>,
+  <span class='kw'>heading</span> <span class='kw'>=</span> <span class='st'>"Extra CSS"</span>
+)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>x</th>
-      <td><p>The background color (hex)</p></td>
+      <th>css</th>
+      <td><p>A named list of CSS definitions each containing a named list
+of CSS property-value pairs, i.e.
+<code><a href='https://rdrr.io/r/base/list.html'>list(".class-id" = list("css-property" = "value"))</a></code></p></td>
     </tr>
     <tr>
-      <th>black</th>
-      <td><p>Text or foreground color, e.g. "#222" or
-<code><a href='https://rdrr.io/r/base/substitute.html'>substitute(darken_color(x, 0.8))</a></code>, if black text provides the best contrast.</p></td>
+      <th>outfile</th>
+      <td><p>Customized xaringan CSS output file name, default is "xaringan-themer.css"</p></td>
     </tr>
     <tr>
-      <th>white</th>
-      <td><p>Text or foreground color or expression, e.g. "#EEE" or
-<code><a href='https://rdrr.io/r/base/substitute.html'>substitute(lighten_color(x, 0.8))</a></code>, if white text provides the best contrast.</p></td>
+      <th>append</th>
+      <td><p>If <code>TRUE</code> output will be appended to <code>outfile</code>; otherwise,
+it will overwrite the contents of <code>outfile</code>.</p></td>
+    </tr>
+    <tr>
+      <th>heading</th>
+      <td><p>Heading added above extra CSS. Use <code>NULL</code> to disable.</p></td>
     </tr>
     </table>
 
-    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
+    <h2 class="hasAnchor" id="css-list"><a class="anchor" href="#css-list"></a>css list</h2>
 
-    <p><a href='https://stackoverflow.com/a/3943023/2022615'>https://stackoverflow.com/a/3943023/2022615</a></p>
+    
+
+<p>The <code>css</code> input must be a named list of css properties and values within a
+named list of class identifiers, for example
+<code><a href='https://rdrr.io/r/base/list.html'>list(".class-id" = list("css-property" = "value"))</a></code>.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>light_green</span> <span class='kw'>&lt;-</span> <span class='st'>"#c4d6b0"</span>
-<span class='no'>contrast_green</span> <span class='kw'>&lt;-</span> <span class='fu'>choose_dark_or_light</span>(<span class='no'>light_green</span>)
-<span class='no'>dark_purple</span> <span class='kw'>&lt;-</span> <span class='st'>"#381d2a"</span>
-<span class='no'>contrast_purple</span> <span class='kw'>&lt;-</span> <span class='fu'>choose_dark_or_light</span>(<span class='no'>dark_purple</span>)
-
-<span class='kw'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/ns-load.html'>requireNamespace</a></span>(<span class='st'>"scales"</span>, <span class='kw'>quietly</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)) {
-  <span class='kw pkg'>scales</span><span class='kw ns'>::</span><span class='fu'><a href='https://scales.r-lib.org//reference/show_col.html'>show_col</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='no'>light_green</span>, <span class='no'>contrast_green</span>, <span class='no'>dark_purple</span>, <span class='no'>contrast_purple</span>))
-}</div><div class='img'><img src='choose_dark_or_light-1.png' alt='' width='700' height='433' /></div><div class='input'>
-</div></pre>
+    <pre class="examples"><div class='input'><span class='fu'>style_extra_css</span>(
+  <span class='kw'>outfile</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/showConnections.html'>stdout</a></span>(),
+  <span class='kw'>css</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(
+    <span class='st'>".red"</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>color</span> <span class='kw'>=</span> <span class='st'>"red"</span>),
+    <span class='st'>".small"</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='st'>"font-size"</span> <span class='kw'>=</span> <span class='st'>"90%"</span>),
+    <span class='st'>".full-width"</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(
+      <span class='kw'>display</span> <span class='kw'>=</span> <span class='st'>"flex"</span>,
+      <span class='kw'>width</span> <span class='kw'>=</span> <span class='st'>"100%"</span>,
+      <span class='kw'>flex</span> <span class='kw'>=</span> <span class='st'>"1 1 auto"</span>
+    )
+  )
+)</div><div class='output co'>#&gt; 
+#&gt; 
+#&gt; /* Extra CSS */
+#&gt; .red {
+#&gt;   color: red;
+#&gt; }
+#&gt; .small {
+#&gt;   font-size: 90%;
+#&gt; }
+#&gt; .full-width {
+#&gt;   display: flex;
+#&gt;   width: 100%;
+#&gt;   flex: 1 1 auto;
+#&gt; }</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

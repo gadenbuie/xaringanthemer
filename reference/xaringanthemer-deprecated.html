@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Choose dark or light color — choose_dark_or_light • xaringanthemer</title>
+<title>Deprecated or renamed functions — xaringanthemer-deprecated • xaringanthemer</title>
 
 
 <!-- jquery -->
@@ -41,10 +41,19 @@
   <link href="../extra.css" rel="stylesheet">
   
 
-<meta property="og:title" content="Choose dark or light color — choose_dark_or_light" />
-<meta property="og:description" content="Takes a color input as x and returns either the black or white color (or
-expression) if dark or light text should be used over the input color for
-best contrast. Follows W3C Recommendations." />
+<meta property="og:title" content="Deprecated or renamed functions — xaringanthemer-deprecated" />
+<meta property="og:description" content="These functions in xaringanthemer have been deprecated or renamed.
+Use style_xaringan() instead of write_xaringan_theme().
+Use style_extra_css() instead of write_extra_css().
+Use style_mono_light() instead of mono_light().
+Use style_mono_dark() instead of mono_dark().
+Use style_mono_accent() instead of mono_accent().
+Use style_mono_accent_inverse() instead of mono_accent_inverse().
+Use style_duo() instead of duo().
+Use style_duo_accent() instead of duo_accent().
+Use style_duo_accent_inverse() instead of duo_accent_inverse().
+Use style_solarized_light() instead of solarized_light().
+Use style_solarized_dark() instead of solarized_dark()." />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:creator" content="@grrrck" />
 <meta name="twitter:site" content="@grrrck" />
@@ -140,52 +149,50 @@ best contrast. Follows W3C Recommendations." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Choose dark or light color</h1>
-    <small class="dont-index">Source: <a href='https://github.com/gadenbuie/xaringanthemer/blob/master/R/color.R'><code>R/color.R</code></a></small>
-    <div class="hidden name"><code>choose_dark_or_light.Rd</code></div>
+    <h1>Deprecated or renamed functions</h1>
+    <small class="dont-index">Source: <a href='https://github.com/gadenbuie/xaringanthemer/blob/master/R/xaringanthemer-deprecated.R'><code>R/xaringanthemer-deprecated.R</code></a></small>
+    <div class="hidden name"><code>xaringanthemer-deprecated.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Takes a color input as <code>x</code> and returns either the black or white color (or
-expression) if dark or light text should be used over the input color for
-best contrast. Follows W3C Recommendations.</p>
+    <p>These functions in xaringanthemer have been deprecated or renamed.</p>
+<p>Use <code><a href='style_xaringan.html'>style_xaringan()</a></code> instead of <code>write_xaringan_theme()</code>.</p>
+<p>Use <code><a href='style_extra_css.html'>style_extra_css()</a></code> instead of <code>write_extra_css()</code>.</p>
+<p>Use <code><a href='style_mono_light.html'>style_mono_light()</a></code> instead of <code>mono_light()</code>.</p>
+<p>Use <code><a href='style_mono_dark.html'>style_mono_dark()</a></code> instead of <code>mono_dark()</code>.</p>
+<p>Use <code><a href='style_mono_accent.html'>style_mono_accent()</a></code> instead of <code>mono_accent()</code>.</p>
+<p>Use <code><a href='style_mono_accent_inverse.html'>style_mono_accent_inverse()</a></code> instead of <code>mono_accent_inverse()</code>.</p>
+<p>Use <code><a href='style_duo.html'>style_duo()</a></code> instead of <code>duo()</code>.</p>
+<p>Use <code><a href='style_duo_accent.html'>style_duo_accent()</a></code> instead of <code>duo_accent()</code>.</p>
+<p>Use <code><a href='style_duo_accent_inverse.html'>style_duo_accent_inverse()</a></code> instead of <code>duo_accent_inverse()</code>.</p>
+<p>Use <code><a href='style_solarized_light.html'>style_solarized_light()</a></code> instead of <code>solarized_light()</code>.</p>
+<p>Use <code><a href='style_solarized_dark.html'>style_solarized_dark()</a></code> instead of <code>solarized_dark()</code>.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>choose_dark_or_light</span>(<span class='no'>x</span>, <span class='kw'>black</span> <span class='kw'>=</span> <span class='st'>"#000000"</span>, <span class='kw'>white</span> <span class='kw'>=</span> <span class='st'>"#FFFFFF"</span>)</pre>
+    <pre class="usage"><span class='fu'>write_xaringan_theme</span>(<span class='no'>...</span>)
 
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
-    <table class="ref-arguments">
-    <colgroup><col class="name" /><col class="desc" /></colgroup>
-    <tr>
-      <th>x</th>
-      <td><p>The background color (hex)</p></td>
-    </tr>
-    <tr>
-      <th>black</th>
-      <td><p>Text or foreground color, e.g. "#222" or
-<code><a href='https://rdrr.io/r/base/substitute.html'>substitute(darken_color(x, 0.8))</a></code>, if black text provides the best contrast.</p></td>
-    </tr>
-    <tr>
-      <th>white</th>
-      <td><p>Text or foreground color or expression, e.g. "#EEE" or
-<code><a href='https://rdrr.io/r/base/substitute.html'>substitute(lighten_color(x, 0.8))</a></code>, if white text provides the best contrast.</p></td>
-    </tr>
-    </table>
+<span class='fu'>write_extra_css</span>(<span class='no'>...</span>)
 
-    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
+<span class='fu'>mono_light</span>(<span class='no'>...</span>)
 
-    <p><a href='https://stackoverflow.com/a/3943023/2022615'>https://stackoverflow.com/a/3943023/2022615</a></p>
+<span class='fu'>mono_dark</span>(<span class='no'>...</span>)
 
-    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>light_green</span> <span class='kw'>&lt;-</span> <span class='st'>"#c4d6b0"</span>
-<span class='no'>contrast_green</span> <span class='kw'>&lt;-</span> <span class='fu'>choose_dark_or_light</span>(<span class='no'>light_green</span>)
-<span class='no'>dark_purple</span> <span class='kw'>&lt;-</span> <span class='st'>"#381d2a"</span>
-<span class='no'>contrast_purple</span> <span class='kw'>&lt;-</span> <span class='fu'>choose_dark_or_light</span>(<span class='no'>dark_purple</span>)
+<span class='fu'>mono_accent</span>(<span class='no'>...</span>)
 
-<span class='kw'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/ns-load.html'>requireNamespace</a></span>(<span class='st'>"scales"</span>, <span class='kw'>quietly</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)) {
-  <span class='kw pkg'>scales</span><span class='kw ns'>::</span><span class='fu'><a href='https://scales.r-lib.org//reference/show_col.html'>show_col</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='no'>light_green</span>, <span class='no'>contrast_green</span>, <span class='no'>dark_purple</span>, <span class='no'>contrast_purple</span>))
-}</div><div class='img'><img src='choose_dark_or_light-1.png' alt='' width='700' height='433' /></div><div class='input'>
-</div></pre>
+<span class='fu'>mono_accent_inverse</span>(<span class='no'>...</span>)
+
+<span class='fu'>duo</span>(<span class='no'>...</span>)
+
+<span class='fu'>duo_accent</span>(<span class='no'>...</span>)
+
+<span class='fu'>duo_accent_inverse</span>(<span class='no'>...</span>)
+
+<span class='fu'>solarized_light</span>(<span class='no'>...</span>)
+
+<span class='fu'>solarized_dark</span>(<span class='no'>...</span>)</pre>
+
+
+
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
