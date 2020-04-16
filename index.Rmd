@@ -47,4 +47,4 @@ library(xaringanthemer)
 ## Features
 
 There's a lot more that **xaringanthemer** can do!
-[Discover xaringanthemer's features.](https://pkg.garrickadenbuie.com/xaringanthemer/features.html)
+[Discover xaringanthemer's features.](https://pkg.garrickadenbuie.com/xaringanthemer/articles/xaringanthemer.html)

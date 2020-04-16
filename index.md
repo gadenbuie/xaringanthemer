@@ -117,4 +117,4 @@ Presentation* from the New R Markdown Document menu in RStudio.
 
 There’s a lot more that **xaringanthemer** can do\! [Discover
 xaringanthemer’s
-features.](https://pkg.garrickadenbuie.com/xaringanthemer/features.html)
+features.](https://pkg.garrickadenbuie.com/xaringanthemer/articles/xaringanthemer.html)

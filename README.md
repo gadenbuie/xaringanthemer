@@ -39,4 +39,4 @@ remotes::install_github("gadenbuie/xaringanthemer")
 
 There’s a lot more that **xaringanthemer** can do\! [Discover
 xaringanthemer’s
-features.](https://pkg.garrickadenbuie.com/xaringanthemer/features.html)
+features.](https://pkg.garrickadenbuie.com/xaringanthemer/articles/xaringanthemer.html)
