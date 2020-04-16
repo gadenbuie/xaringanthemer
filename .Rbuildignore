@@ -20,3 +20,7 @@
 ^doc$
 ^Meta$
 ^index\.md$
+^\.ccache$
+^\.github$
+^clang-.*
+^gfortran.*
