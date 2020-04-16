@@ -16,6 +16,7 @@ Create beautifully color-cordinated and customized
 \seealso{
 Useful links:
 \itemize{
+  \item \url{https://pkg.garrickadenbuie.com/xaringanthemer}
   \item \url{https://github.com/gadenbuie/xaringanthemer}
   \item Report bugs at \url{https://github.com/gadenbuie/xaringanthemer/issues}
 }

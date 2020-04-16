@@ -126,10 +126,10 @@ full_length_hex <- function(x) {
   varname <- substitute(x)
   stop_not_hex <- function() {
     stop(str_wrap(
-      "`", deparse(varname), "` is not a hexadecimal color: ", x, ". ",
-      "If you used valid CSS colors in your xaringan theme, please convert ",
-      "these colors to hexadecimal form, as this is the format required by ",
-      "ggplot2."
+      "`", deparse(varname), "` is not a hexadecimal color: \"", x, "\". ",
+      "theme_xaringan() requires colors to be specified in hexadecimal format.",
+      " If you used valid CSS colors in your xaringan theme, please convert ",
+      "these colors to hex format, e.g. \"#1a2b3c\"."
     ), call. = FALSE)
   }
   if (!grepl("^#", x) || grepl("[^#0-9a-fA-F]", x)) {

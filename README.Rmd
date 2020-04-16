@@ -10,7 +10,7 @@ knitr::opts_chunk$set(
   results = "asis",
   echo = FALSE,
   comment = "#>",
-  fig.path = "man/figures/README-",
+  fig.path = "man/figures/index-",
   out.width = "100%"
 )
 IS_README <- TRUE
@@ -29,130 +29,12 @@ library(xaringanthemer)
 ```{r child="man/fragments/_tagline-gif.Rmd"}
 ```
 
-```{r toc, results='asis', echo=FALSE, message=FALSE, eval=FALSE}
-devtools::source_gist("c83e078bf8c81b035e32c3fc0cf04ee8", filename = 'render_toc.R')
-x <- render_toc("README.Rmd", toc_depth = 3)
-gsub("    -", "-", sub("^-.+?\n", "", x))
-```
-
-- [Installation](#installation)
-- [Quick Intro](#quick-intro)
-- [Themes](#themes)
-    - [Monotone](#monotone)
-    - [Duotone](#duotone)
-    - [Solarized](#solarized)
-- [Theme Settings](#theme-settings)
-- [Colors](#colors)
-- [Fonts](#fonts)
-- [Adding Custom CSS](#adding-custom-css)
-
 ## Installation
 
 ```{r child="man/fragments/_installation.Rmd"}
 ```
 
-## Quick Intro
+## Features
 
-[theme-functions]: #themes
-[theme-settings]: #theme-settings
-[template-variables]: vignettes/template-variables.md
-
-```{r child="man/fragments/_quick-intro.Rmd"}
-```
-
-## Themes
-
-```{r child="man/fragments/_themes.Rmd"}
-```
-
-## Theme Settings
-
-The theme functions listed above are wrappers around the central function of this package, `style_xaringan()`.
-If you want to start from the default **xaringan** theme and make a few modifications, start there.
-
-All of the [theme template variables][template-variables] are repeated in each of the theme functions (instead of relying on `...`) so that you can use autocompletion to find and change the defaults for any theme function.
-To override the default value of any theme functions, set the appropriate argument in the theme function.
-A table of all template variables is included in [`vignette("template-variables", "xaringanthemer")`][template-variables].
-
-As an example, try typing out `style_duo_accent(` and then press <kbd>Tab</kbd> to see all of the theme options.
-
-The arguments of each theme function are named so that you can first think of the element you want to change, then the property of that element.
-
-Here are some of the `text_` theme options:
-
-```{r, results='asis', echo=FALSE}
-load(here::here("R", "sysdata.rda"))
-tvv <- template_variables$variable
-cat(paste0("- `", tvv[grepl("^text_", tvv)][1:5], "`"), sep = "\n")
-cat("- *and more ...*")
-```
-
-And here are the title slide theme options:
-
-```{r results='asis', echo=FALSE}
-cat(paste0("- `", tvv[grepl("^title_slide_", tvv)], "`"), sep = "\n")
-```
-
-## Fonts
-
-[adding-custom-css]: #adding-custom-css
-
-```{r child="man/fragments/_fonts.Rmd"}
-```
-
-## Colors
-
-```{r child="man/fragments/_colors.Rmd"}
-```
-
-## Adding Custom CSS
-
-You can also add custom CSS classes using the `extra_css` argument in the theme functions.
-This argument takes a named list of CSS definitions each containing a named list of CSS property-value pairs.
-
-```r
-extra_css <- list(
-  ".small" = list("font-size" = "90%"),
-  ".full-width" = list(
-    display = "flex",
-    width   = "100%",
-    flex    = "1 1 auto"
-  )
-)
-```
-
-If you would rather keep your additional css definitions in a separate file, you can call `style_extra_css()` separately.
-Just be sure to include your new CSS file in the list of applied files in your YAML header.
-
-```r
-style_extra_css(css = extra_css, outfile = "custom.css")
-```
-
-```{r results='asis', echo=FALSE}
-extra_css <- list(
-  ".small" = list("font-size" = "90%"),
-  ".full-width" = list(
-    display = "flex",
-    width   = "100%",
-    flex    = "1 1 auto"
-  )
-)
-cat(
-  "\n```css",
-  "/* Extra CSS */",
-  xaringanthemer:::list2css(extra_css),
-  "```",
-  sep = "\n"
-)
-```
-
-This is most helpful when wanting to define helper classes to work with the [remark.js][remarkjs] `.class[]` syntax.
-Using the above example, we could add slide text `.small[in smaller font size]`.
-
-
-```{r child="man/fragments/_thanks.Rmd"}
-```
-
-```{r include=FALSE}
-rm("IS_README")
-```
+There's a lot more that **xaringanthemer** can do!
+[Discover xaringanthemer's features.](https://pkg.garrickadenbuie.com/xaringanthemer/features.html)

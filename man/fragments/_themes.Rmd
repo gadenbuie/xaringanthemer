@@ -23,7 +23,10 @@ See the [Colors](#colors) section for more information.
 ```{r include=FALSE}
 IS_README <- exists("IS_README") && IS_README
 include_graphic <- function(img_path) {
-  glue::glue("![](https://raw.githubusercontent.com/gadenbuie/xaringanthemer/assets/{img_path})")
+  glue::glue(
+    '<img src="https://raw.githubusercontent.com/gadenbuie/', 
+    'xaringanthemer/assets/{img_path}" data-external="1" />'
+  )
 }
 ```
 

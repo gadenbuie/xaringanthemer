@@ -13,11 +13,16 @@ knitr::opts_chunk$set(
   results = "asis",
   echo = FALSE,
   comment = "#>",
-  fig.path = "man/figures/README-",
+  fig.path = "man/figures/index-",
   out.width = "100%"
 )
 library(xaringanthemer)
 ```
+
+```{css echo=FALSE}
+img { max-width: 100%; }
+```
+
 [xaringan]: https://github.com/yihui/xaringan
 [remarkjs]: https://github.com/gnab/remark
 

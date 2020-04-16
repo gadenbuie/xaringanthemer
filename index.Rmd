@@ -2,7 +2,7 @@
 output: github_document
 ---
 
-<!-- index.md is generated from index.Rmd. Please edit that file -->
+<!-- README.md is generated from README.Rmd. Please edit that file -->
 
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(
@@ -10,14 +10,21 @@ knitr::opts_chunk$set(
   results = "asis",
   echo = FALSE,
   comment = "#>",
-  fig.path = "man/figures/README-",
+  fig.path = "man/figures/index-",
   out.width = "100%"
 )
+IS_README <- TRUE
 library(xaringanthemer)
 ```
 
 # xaringanthemer
 
+<!-- badges: start -->
+[![CRAN status](https://www.r-pkg.org/badges/version/xaringanthemer)](https://CRAN.R-project.org/package=xaringanthemer)
+[![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://www.tidyverse.org/lifecycle/#stable)
+[![travis](https://travis-ci.com/gadenbuie/xaringanthemer.svg?branch=master)](https://travis-ci.com/gadenbuie/xaringanthemer)
+[![Codecov](https://img.shields.io/codecov/c/github/gadenbuie/xaringanthemer)](https://codecov.io/github/gadenbuie/xaringanthemer)
+<!-- badges: end -->
 
 ```{r child="man/fragments/_tagline-gif.Rmd"}
 ```
@@ -27,11 +34,17 @@ library(xaringanthemer)
 ```{r child="man/fragments/_installation.Rmd"}
 ```
 
-## Usage
+## Quick Intro
 
-[theme-functions]: articles/singles/themes.html
-[theme-settings]: articles/xaringanthemer.html#theme-settings
-[template-variables]: articles/template-variables.html
+[theme-functions]: #themes
+[theme-settings]: #theme-settings
+[template-variables]: vignettes/template-variables.md
+[ggplot2]: https://ggplot2.tidyverse.org
 
 ```{r child="man/fragments/_quick-intro.Rmd"}
 ```
+
+## Features
+
+There's a lot more that **xaringanthemer** can do!
+[Discover xaringanthemer's features.](https://pkg.garrickadenbuie.com/xaringanthemer/features.html)

@@ -17,3 +17,6 @@
 ^vignettes/themes\.Rmd$
 ^data-raw$
 ^.history$
+^doc$
+^Meta$
+^index\.md$

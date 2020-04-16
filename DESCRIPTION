@@ -15,7 +15,8 @@ Description: Create beautifully color-cordinated and customized
     your slides' 'R Markdown' source file or in a separate external
     script.
 License: MIT + file LICENSE
-URL: https://github.com/gadenbuie/xaringanthemer
+URL: https://pkg.garrickadenbuie.com/xaringanthemer,
+    https://github.com/gadenbuie/xaringanthemer
 BugReports: https://github.com/gadenbuie/xaringanthemer/issues
 Depends:
     R (>= 2.10)

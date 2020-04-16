@@ -7,6 +7,6 @@ install.packages("xaringanthemer")
 or you can install the development version of xaringanthemer from [GitHub](https://github.com/gadenbuie/xaringanthemer).
 
 ```r
-# install.packages("devtools")
-devtools::install_github("gadenbuie/xaringanthemer")
+# install.packages("remotes")
+remotes::install_github("gadenbuie/xaringanthemer")
 ```

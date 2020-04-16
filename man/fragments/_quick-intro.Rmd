@@ -1,5 +1,9 @@
 <!-- Set link to theme-settings, template-variables, theme functions -->
 
+```{r include=FALSE}
+if (!exists("IS_README")) IS_README <- FALSE
+```
+
 First, add the `xaringan-themer.css` file to the YAML header of your xaringan slides.
 
 ```yaml
@@ -22,19 +26,66 @@ style_mono_light(
 ```
 ````
 
-<img src="https://raw.githubusercontent.com/gadenbuie/xaringanthemer/assets/example_mono_light_1c5253.png" alt="Example title and normal slides using a green xaringanthemer theme" />
+<img src="https://raw.githubusercontent.com/gadenbuie/xaringanthemer/assets/example_mono_light_1c5253.png" alt="Example title and normal slides using a green xaringanthemer theme" data-external="1" />
+
+### Matching ggplot Themes
+
+[showtext]: https://github.com/yixuan/showtext
+
+**xaringanthemer** even provides a [ggplot2] theme 
+with `theme_xaringan()`
+that uses the colors and fonts from your slide theme.
+Built on the [showtext] package,
+and designed to work seamlessly with [Google Fonts](https://fonts.google.com).
+
+Color and fill scales are also provided
+for matching sequential color scales based on 
+the primary color used in your slides.
+See `?scale_xaringan` for more details.
+
+```{r xaringanthemer-ggplot-setup, include=FALSE, eval=IS_README}
+style_mono_light(
+  base_color = "#1c5253",
+  header_font_google = google_font("Josefin Sans"),
+  text_font_google   = google_font("Montserrat", "300", "300i"),
+  code_font_google   = google_font("Droid Mono"),
+  outfile = NULL
+)
+```
+
+```{r theme_xaringan_demo, echo=TRUE, warning=FALSE, fig.width=13, fig.height=5.5, eval=IS_README}
+library(ggplot2)
+ggplot(diamonds) +
+  aes(cut, fill = cut) +
+  geom_bar(show.legend = FALSE) +
+  labs(
+    x = "Cut",
+    y = "Count",
+    title = "A Fancy diamonds Plot"
+  ) +
+  theme_xaringan(background_color = "#FFFFFF") +
+  scale_xaringan_fill_discrete()
+```
+
+```{r link-to-plot-image, echo=FALSE, eval=!IS_README, results='asis'}
+if (identical(Sys.getenv("IN_PKGDOWN"), "true")) {
+  cat("![](../reference/figures/index-theme_xaringan_demo-1.png)")
+} else {
+  cat('<img src="../man/figures/index-theme_xaringan_demo-1.png" data-external="1" />')
+}
+```
+
 
 ### Tab Completion
 
 **xaringanthemer** is <kbd>Tab</kbd> friendly -- [use autocomplete to explore][theme-settings] the [template variables][template-variables] that you can adjust in each of the themes!
 
-
-<img src="https://raw.githubusercontent.com/gadenbuie/xaringanthemer/assets/example-rstudio-completion.gif" alt="Demonstration of argument auto-completion with RStudio" />
+<img src="https://raw.githubusercontent.com/gadenbuie/xaringanthemer/assets/example-rstudio-completion.gif" alt="Demonstration of argument auto-completion with RStudio" data-external="1" />
 
 ### R Markdown Template in RStudio
 
 You can also skip the above and just create a *Ninja Themed Presentation* from the New R Markdown Document menu in RStudio.
 
 <center>
-<img src="https://raw.githubusercontent.com/gadenbuie/xaringanthemer/assets/rmarkdown-template-screenshot.png" alt="The 'New R Markdown Document' menu in RStudio" />
+<img src="https://raw.githubusercontent.com/gadenbuie/xaringanthemer/assets/rmarkdown-template-screenshot.png" alt="The 'New R Markdown Document' menu in RStudio" data-external="1" />
 </center>

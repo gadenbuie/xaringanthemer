@@ -52,7 +52,7 @@ reference:
 navbar:
   left:
     intro:
-      text: Get started
+      text: Features
       href: articles/xaringanthemer.html
     reference:
       text: Reference
