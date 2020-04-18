@@ -48,11 +48,6 @@ class: inverse, center, middle
 
 ---
 
-```{r xaringan-themer, include=FALSE}
-library(xaringanthemer)
-
-```
-
 # Hello World
 
 Install the **xaringan** package from [Github](https://github.com/yihui/xaringan):
