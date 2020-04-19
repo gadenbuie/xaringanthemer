@@ -319,7 +319,7 @@ theme_xaringan_base <- function(
     theme_xaringan_set_defaults(text_color, background_color, accent_color, accent_secondary_color)
   }
 
-  ggplot2::theme(
+  theme <- ggplot2::theme(
     line = ggplot2::element_line(color = blend(0.2)),
     rect = ggplot2::element_rect(fill = background_color),
     text = ggplot2::element_text(
@@ -357,6 +357,10 @@ theme_xaringan_base <- function(
       color = blend(0.3)
     )
   )
+
+  if (utils::packageVersion("ggplot2") >= package_version("3.3.0")) {
+    theme + ggplot2::theme(plot.title.position = "plot")
+  } else theme
 }
 
 #' Set and Restore ggplot2 geom Defaults
