@@ -6,6 +6,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Custom Xaringan CSS Themes • xaringanthemer</title>
+<!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="apple-touch-icon.png">
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="apple-touch-icon-60x60.png">
 <!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="bootstrap-toc.css">
 <script src="bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
@@ -16,6 +22,7 @@
 <meta property="og:description" content="Give your xaringan slides some style with xaringanthemer.
 Easy slide and plot themes for xaringan slides.
 ">
+<meta property="og:image" content="https://pkg.garrickadenbuie.com/xaringanthemer/logo.png">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:creator" content="@grrrck">
 <meta name="twitter:site" content="@grrrck">
@@ -97,9 +104,10 @@ Easy slide and plot themes for xaringan slides.
 
       </header><div class="row">
   <div class="contents col-md-9">
-<div id="xaringanthemer" class="section level1">
+<div id="xaringanthemer-" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
-<a href="#xaringanthemer" class="anchor"></a>xaringanthemer</h1></div>
+<a href="#xaringanthemer-" class="anchor"></a>xaringanthemer <img src="reference/figures/logo.png" align="right" height="175px">
+</h1></div>
 <!-- badges: start -->
 
 <p>Give your <a href="https://github.com/yihui/xaringan">xaringan</a> slides some style with <strong>xaringanthemer</strong> within your <code>slides.Rmd</code> file without (much) CSS.</p>
@@ -124,14 +132,14 @@ Easy slide and plot themes for xaringan slides.
 <p>Then, in a hidden chunk just after the knitr setup chunk, load <strong>xaringanthemer</strong> and try one of the <a href="#themes">theme functions</a>.</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1"></a><span class="bn">```{r xaringan-themer, include = FALSE}</span></span>
 <span id="cb4-2"><a href="#cb4-2"></a><span class="bn">library(xaringanthemer)</span></span>
-<span id="cb4-3"><a href="#cb4-3"></a><span class="bn">style_mono_light(</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="bn">style_mono_accent(</span></span>
 <span id="cb4-4"><a href="#cb4-4"></a><span class="bn">  base_color = "#1c5253",</span></span>
 <span id="cb4-5"><a href="#cb4-5"></a><span class="bn">  header_font_google = google_font("Josefin Sans"),</span></span>
 <span id="cb4-6"><a href="#cb4-6"></a><span class="bn">  text_font_google   = google_font("Montserrat", "300", "300i"),</span></span>
-<span id="cb4-7"><a href="#cb4-7"></a><span class="bn">  code_font_google   = google_font("Droid Mono")</span></span>
+<span id="cb4-7"><a href="#cb4-7"></a><span class="bn">  code_font_google   = google_font("Fira Mono")</span></span>
 <span id="cb4-8"><a href="#cb4-8"></a><span class="bn">)</span></span>
 <span id="cb4-9"><a href="#cb4-9"></a><span class="bn">```</span></span></code></pre></div>
-<p><img src="https://raw.githubusercontent.com/gadenbuie/xaringanthemer/assets/example_mono_light_1c5253.png" alt="Example title and normal slides using a green xaringanthemer theme" data-external="1"></p>
+<p><img src="https://raw.githubusercontent.com/gadenbuie/xaringanthemer/assets/example_mono_accent_1c5253.png" alt="Example title and normal slides using a green xaringanthemer theme" data-external="1"></p>
 <div id="matching-ggplot-themes" class="section level3">
 <h3 class="hasAnchor">
 <a href="#matching-ggplot-themes" class="anchor"></a>Matching ggplot Themes</h3>
