@@ -1,0 +1,45 @@
+---
+title: "Presentation Ninja"
+subtitle: "&#x2694;&#xFE0F; xaringan +<br/>&#x1F60E; xaringanthemer"  
+author: 
+  - "Yihui Xie"
+  - "Garrick Aden-Buie"
+date: '`r Sys.Date()`'
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: xaringan-themer.css
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+```{r xaringan-themer, include=FALSE, eval=FALSE}
+library(xaringanthemer)
+style_duo_accent(
+  primary_color = "#1381B0",
+  secondary_color = "#FF961C",
+  inverse_header_color = "#FFFFFF"
+)
+```
+
+# Hello World
+
+Install the **xaringan** package from [Github](https://github.com/yihui/xaringan):
+
+```{r eval=FALSE, tidy=FALSE}
+devtools::install_github("yihui/xaringan")
+```
+
+You are recommended to use the [RStudio IDE](https://www.rstudio.com/products/rstudio/), but you do not have to.
+
+- Create a new R Markdown document from the menu `File -> New File -> R Markdown -> From Template -> Ninja Presentation`;<sup>1</sup>
+
+- Click the `Knit` button to compile it;
+
+- or use the [RStudio Addin](https://rstudio.github.io/rstudioaddins/)<sup>2</sup> "Infinite Moon Reader" to live preview the slides (every time you update and save the Rmd document, the slides will be automatically reloaded in RStudio Viewer.
