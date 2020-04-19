@@ -247,8 +247,8 @@ template_duo <- set_default(
 
 template_duo_accent <- tibble::tribble(
   ~ variable, ~ default, ~ element, ~ description, ~ css_variable
-  , "primary_color", "#006747", "multiple", "Duotone Primary Color", "--primary"
-  , "secondary_color", "#CFC493", "multiple", "Duotone Secondary Color", "--secondary"
+  , "primary_color", "#035AA6", "multiple", "Duotone Primary Color", "--primary"
+  , "secondary_color", "#03A696", "multiple", "Duotone Secondary Color", "--secondary"
   , "white_color", "#FFFFFF", "multiple", "Brightest color used", "--white"
   , "black_color", "#000000", "multiple", "Darkest color used", "--black"
 )

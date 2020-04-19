@@ -5,8 +5,8 @@
 \title{Duotone Accent Theme}
 \usage{
 style_duo_accent(
-  primary_color = "#006747",
-  secondary_color = "#CFC493",
+  primary_color = "#035AA6",
+  secondary_color = "#03A696",
   white_color = "#FFFFFF",
   black_color = "#000000",
   text_color = black_color,
@@ -77,12 +77,12 @@ style_duo_accent(
 )
 }
 \arguments{
-\item{primary_color}{Duotone Primary Color. Defaults to #006747. Used in
+\item{primary_color}{Duotone Primary Color. Defaults to #035AA6. Used in
 multiple CSS rules. The value of this variable is also stored as a CSS
 variable that can be referenced with \code{var(--primary)} in any argument of a
 style function or in custom CSS.}
 
-\item{secondary_color}{Duotone Secondary Color. Defaults to #CFC493. Used in
+\item{secondary_color}{Duotone Secondary Color. Defaults to #03A696. Used in
 multiple CSS rules. The value of this variable is also stored as a CSS
 variable that can be referenced with \code{var(--secondary)} in any argument of
 a style function or in custom CSS.}
