@@ -646,13 +646,13 @@ scale_xaringan_continuous <- function(
   aes_type <- match.arg(aes_type)
   color <- hex2HCL(get_theme_accent_color(color, inverse))
 
-  colors <- colorspace::sequential_hcl(
+  colors <- suppressWarnings(colorspace::sequential_hcl(
     n = 12,
     c1 = color[1, "C"],
     l1 = color[1, "L"],
     h1 = color[1, "H"],
     rev = TRUE
-  )
+  ))
 
   rescaler <- function(x, ...) {
     scales::rescale(x, to = c(begin, end), from = range(x, na.rm = TRUE))
