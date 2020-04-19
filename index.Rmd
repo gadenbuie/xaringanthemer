@@ -17,7 +17,7 @@ IS_README <- TRUE
 library(xaringanthemer)
 ```
 
-# xaringanthemer
+# xaringanthemer <img src="man/figures/logo.png" align="right" height="175px" />
 
 <!-- badges: start -->
 [![CRAN status](https://www.r-pkg.org/badges/version/xaringanthemer)](https://CRAN.R-project.org/package=xaringanthemer)

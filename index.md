@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# xaringanthemer
+# xaringanthemer <img src="man/figures/logo.png" align="right" height="175px" />
 
 <!-- badges: start -->
 
@@ -55,16 +55,16 @@ Then, in a hidden chunk just after the knitr setup chunk, load
 ```` markdown
 ```{r xaringan-themer, include = FALSE}
 library(xaringanthemer)
-style_mono_light(
+style_mono_accent(
   base_color = "#1c5253",
   header_font_google = google_font("Josefin Sans"),
   text_font_google   = google_font("Montserrat", "300", "300i"),
-  code_font_google   = google_font("Droid Mono")
+  code_font_google   = google_font("Fira Mono")
 )
 ```
 ````
 
-<img src="https://raw.githubusercontent.com/gadenbuie/xaringanthemer/assets/example_mono_light_1c5253.png" alt="Example title and normal slides using a green xaringanthemer theme" data-external="1" />
+<img src="https://raw.githubusercontent.com/gadenbuie/xaringanthemer/assets/example_mono_accent_1c5253.png" alt="Example title and normal slides using a green xaringanthemer theme" data-external="1" />
 
 ### Matching ggplot Themes
 
