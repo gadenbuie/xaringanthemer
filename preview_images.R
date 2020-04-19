@@ -1,5 +1,5 @@
 
-preview_images <- function(template, theme) {
+preview_images <- function(template, theme, browser_preview = FALSE) {
   template <- normalizePath(template)
   tmpdir <- tempfile()
   dir.create(tmpdir)
@@ -14,8 +14,10 @@ preview_images <- function(template, theme) {
 
   message("Preparing slides")
   rmarkdown::render("slides.Rmd", output_file = slides_html, quiet = TRUE)
+  if (browser_preview) browseURL(slides_html)
 
   message("Printing to pdf")
+  # xaringan::decktape(slides_html, slides_pdf)
   pagedown::chrome_print(slides_html, output = slides_pdf)
 
   pages <- pdftools::pdf_info(slides_pdf)$pages

@@ -1,0 +1,72 @@
+---
+title: "Presentation Ninja"
+subtitle: "&#x2694;&#xFE0F; xaringan +<br/>&#x1F60E; xaringanthemer"
+author:
+  - "Yihui Xie"
+  - "Garrick Aden-Buie"
+date: '`r Sys.Date()`'
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: xaringan-themer.css
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+library(xaringanthemer)
+```
+
+```{r xaringan-themer, eval=FALSE, include=FALSE}
+library(xaringanthemer)
+style_mono_accent(
+  base_color = "#DC322F",
+  text_font_google = google_font("Kelly Slab"),
+  header_font_google = google_font("Oleo Script")
+)
+```
+
+# Hello theme_xaringan()!
+
+Make plots that fit right in with your slides, thanks to `theme_xaringan()`!
+
+```{r ggplot2-demo, echo=FALSE, warning=FALSE, fig.width = 16*0.66, fig.height = 7*0.66, dpi = 300}
+library(ggplot2)
+ggplot(diamonds) +
+  aes(cut, fill = cut) +
+  geom_bar(show.legend = FALSE) +
+  labs(
+    x = "Cut",
+    y = "Count",
+    title = "A Fancy diamonds Plot"
+  ) +
+  theme_xaringan() +
+  scale_xaringan_fill_discrete()
+```
+
+Use `scale_xaringan_fill_discrete()` for the fill color scale.
+
+---
+class: inverse
+
+# Or theme_xaringan_inverse()!
+
+Use `theme_xaringan_inverse()` to make plots that match your inverse slide theme.
+
+```{r ggplot2-inverse, echo=FALSE, warning=FALSE, fig.width = 16*0.66, fig.height = 7*0.66, dpi = 300}
+ggplot(diamonds) +
+  aes(cut, fill = cut) +
+  geom_bar(show.legend = FALSE) +
+  labs(
+    x = "Cut",
+    y = "Count",
+    title = "A Fancy diamonds Plot"
+  ) +
+  theme_xaringan_inverse() +
+  scale_xaringan_fill_discrete(inverse = TRUE)
+```
+
+Add `inverse = TRUE` to `scale_xaringan_fill_discrete()`.
