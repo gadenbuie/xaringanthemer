@@ -52,21 +52,22 @@ reference:
 
 navbar:
   left:
-    intro:
-      text: Features
+    - text: Features
       href: articles/xaringanthemer.html
-    reference:
-      text: Reference
+    - text: Reference
       href: reference/index.html
-    themes:
-      text: Themes
+    - text: Themes
       href: articles/themes.html
-    fonts:
-      text: Fonts
-      href: articles/fonts.html
-    template-vars:
-      text: Template Variables
-      href: articles/template-variables.html
+    - text: ggplot2 Themes
+      href: articles/ggplot2-themes.html
+    - text: More
+      menu:
+        fonts:
+          text: Fonts
+          href: articles/fonts.html
+        template-vars:
+          text: Template Variables
+          href: articles/template-variables.html
   right:
     news:
       icon: fa fa-newspaper-o fa-lg
