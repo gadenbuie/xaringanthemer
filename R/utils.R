@@ -63,6 +63,8 @@ google_font <- function(family, ..., languages = NULL) {
   )
 }
 
+is_google_font <- function(x) inherits(x, "google_font")
+
 #' @title List Valid Google Language Codes
 #' @description Gives a list of valid Language Codes for Google Fonts, or
 #'   validates that the language codes given are valid.

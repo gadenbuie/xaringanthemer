@@ -208,14 +208,16 @@ theme_xaringan_inverse <- function(
 #'   defaults, see [theme_xaringan_restore_defaults()].
 #' @param text_font Font to use for text elements, passed to
 #'   [sysfonts::font_add_google()], if available and `text_font_use_google` is
-#'   `TRUE`. Inherits from `text_font_family`.
+#'   `TRUE`. Inherits from `text_font_family`. If manually specified, can be a
+#'   [google_font()].
 #' @param text_font_use_google Is `text_font` available on [Google
 #'   Fonts](https://fonts.google.com)?
 #' @param text_font_size Base text font size, inherits from `text_font_size`, or
 #'   defaults to 11.
 #' @param title_font Font to use for title elements, passed to
 #'   [sysfonts::font_add_google()], if available and `title_font_use_google` is
-#'   `TRUE`. Inherits from `title_font_family`.
+#'   `TRUE`. Inherits from `title_font_family`. If manually specified, can be a
+#'   [google_font()].
 #' @param title_font_use_google Is `title_font` available on [Google
 #'   Fonts](https://fonts.google.com)?
 #' @param title_font_size Base text font size, inherits from `title_font_size`,
@@ -296,6 +298,9 @@ theme_xaringan_base <- function(
 
   text_font_size <- text_font_size %||% web_to_point(xaringanthemer_env$text_font_size, scale = 1.25) %||% 11
   title_font_size <- title_font_size %||% web_to_point(xaringanthemer_env$header_h3_font_size, scale = 0.8) %||% 14
+
+  text_font_use_google  <- text_font_use_google  %||% is_google_font(text_font)
+  title_font_use_google <- title_font_use_google %||% is_google_font(title_font)
 
   text_font <- if (!is.null(text_font)) {
     register_font(text_font, identical(text_font_use_google, TRUE) && use_showtext)
@@ -382,6 +387,9 @@ theme_xaringan_base <- function(
 #' [theme_xaringan_inverse()].
 #'
 #' @family xaringanthemer ggplot2 themes
+#' @param text_font Font to use for text elements, passed to
+#'   [sysfonts::font_add_google()], if available and `text_font_use_google` is
+#'   `TRUE`. Inherits from `text_font_family`. Must be a length-one character.
 #' @inheritParams theme_xaringan
 #' @inheritParams theme_xaringan_base
 #' @return Invisibly returns a list of the current ggplot2 geom defaults
@@ -394,6 +402,7 @@ theme_xaringan_set_defaults <- function(
   text_font = NULL
 ) {
   requires_package("ggplot2")
+  text_font %||% stopifnot(is.character(text_font) && length(text_font) == 1)
 
   blend <- color_blender(text_color, background_color)
 
@@ -789,6 +798,7 @@ register_font <- function(
   if (is.null(family) || !use_showtext) {
     return(NULL)
   }
+  if (is_google_font(family)) family <- family$family
   family <- gsub("['\"]", "", family)
 
   if (!identical(xaringanthemer_env$showtext_auto, TRUE)) {

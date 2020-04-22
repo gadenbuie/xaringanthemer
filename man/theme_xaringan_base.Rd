@@ -42,7 +42,8 @@ defaults.}
 
 \item{text_font}{Font to use for text elements, passed to
 \code{\link[sysfonts:font_add_google]{sysfonts::font_add_google()}}, if available and \code{text_font_use_google} is
-\code{TRUE}. Inherits from \code{text_font_family}.}
+\code{TRUE}. Inherits from \code{text_font_family}. If manually specified, can be a
+\code{\link[=google_font]{google_font()}}.}
 
 \item{text_font_use_google}{Is \code{text_font} available on \href{https://fonts.google.com}{Google Fonts}?}
 
@@ -51,7 +52,8 @@ defaults to 11.}
 
 \item{title_font}{Font to use for title elements, passed to
 \code{\link[sysfonts:font_add_google]{sysfonts::font_add_google()}}, if available and \code{title_font_use_google} is
-\code{TRUE}. Inherits from \code{title_font_family}.}
+\code{TRUE}. Inherits from \code{title_font_family}. If manually specified, can be a
+\code{\link[=google_font]{google_font()}}.}
 
 \item{title_font_use_google}{Is \code{title_font} available on \href{https://fonts.google.com}{Google Fonts}?}
 
