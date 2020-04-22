@@ -39,7 +39,7 @@ or `theme_xaringan_inverse()` to match the style of your inverse slides.
   used in your xaringan theme.
 
 - If you use Google Fonts in your slides, the ggplot2 themes use the showtext 
-  package to [automatically use match the title and axis text fonts](#fonts)
+  package to [automatically match the title and axis text fonts](#fonts)
   of your plots to the heading and text fonts in your xaringan theme.
 
 <!--  
