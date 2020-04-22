@@ -25,7 +25,6 @@ Imports:
     glue,
     methods,
     purrr,
-    tibble,
     utils,
     whisker
 Suggests: 
