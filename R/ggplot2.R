@@ -402,7 +402,6 @@ theme_xaringan_set_defaults <- function(
   text_font = NULL
 ) {
   requires_package("ggplot2")
-  text_font %||% stopifnot(is.character(text_font) && length(text_font) == 1)
 
   blend <- color_blender(text_color, background_color)
 
