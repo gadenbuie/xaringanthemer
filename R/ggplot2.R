@@ -308,15 +308,21 @@ theme_xaringan_base <- function(
     get_theme_font("header")
   }
 
-  text_font %||% "sans"
-  title_font %||% "sans"
+  text_font  <- text_font %||% "sans"
+  title_font <- title_font %||% "sans"
 
   if (set_ggplot_defaults) {
     accent_color <- accent_color %||% xaringanthemer_env$header_color %||% text_color
     accent_secondary_color <- accent_secondary_color %||% xaringanthemer_env$text_bold_color %||% accent_color
     accent_color <- full_length_hex(accent_color)
     accent_secondary_color <- full_length_hex(accent_secondary_color)
-    theme_xaringan_set_defaults(text_color, background_color, accent_color, accent_secondary_color)
+    theme_xaringan_set_defaults(
+      text_color = text_color,
+      background_color = background_color,
+      accent_color = accent_color,
+      accent_secondary_color = accent_secondary_color,
+      text_font = text_font
+    )
   }
 
   theme <- ggplot2::theme(
@@ -459,7 +465,6 @@ theme_xaringan_restore_defaults <- function() {
     return(invisible())
   }
 
-
   old_default <- xaringanthemer_env$old_ggplot_defaults
   old_default_not_std <- vapply(old_default, function(x) length(x) > 0, logical(1))
   old_default <- old_default[old_default_not_std]
@@ -476,12 +481,16 @@ theme_xaringan_restore_defaults <- function() {
 }
 
 safely_set_geom <- function(geom, new) {
+  warn <- function(x) {
+    rlang::warn(x$message)
+    invisible()
+  }
   tryCatch(
     {
       ggplot2::update_geom_defaults(geom, new)
     },
-    error = function(e) invisible(),
-    warning = function(w) invisible()
+    error = warn,
+    warning = warn
   )
 }
 

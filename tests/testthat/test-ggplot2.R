@@ -102,6 +102,23 @@ describe("theme_xaringan()", {
       })
     )
   })
+
+  it("correctly overwrites geom default values", {
+    fonts <- with_clean_session(function() {
+      style <- xaringanthemer::style_xaringan(outfile = NULL)
+
+      g <- ggplot2::ggplot(mtcars, ggplot2::aes(x = cyl, y = disp, label = carb))
+      fonts <- list()
+      plot1 <- g + ggplot2::geom_text() + xaringanthemer::theme_xaringan()
+      fonts[[1]] <- plot1$layers[[1]]$geom$default_aes$family
+      plot2 <- g + ggplot2::geom_text() + xaringanthemer::theme_xaringan(text_font = "Ranga", text_font_use_google = TRUE)
+      fonts[[2]] <- plot2$layers[[1]]$geom$default_aes$family
+      fonts
+    })
+
+    expect_equal(fonts[[1]], "Noto Sans")
+    expect_equal(fonts[[2]], "Ranga")
+  })
 })
 
 describe("theme_xaringan_inverse()", {
