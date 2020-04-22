@@ -491,7 +491,7 @@ theme_xaringan_restore_defaults <- function() {
 
 safely_set_geom <- function(geom, new) {
   warn <- function(x) {
-    rlang::warn(x$message)
+    warning(x$message, call. = TRUE, immediate. = TRUE)
     invisible()
   }
   tryCatch(
