@@ -103,10 +103,22 @@ xaringan slide colors and styles as styled by xaringanthemer." />
   <a href="../articles/themes.html">Themes</a>
 </li>
 <li>
-  <a href="../articles/fonts.html">Fonts</a>
+  <a href="../articles/ggplot2-themes.html">ggplot2 Themes</a>
 </li>
-<li>
-  <a href="../articles/template-variables.html">Template Variables</a>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    More
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="../articles/fonts.html">Fonts</a>
+    </li>
+    <li>
+      <a href="../articles/template-variables.html">Template Variables</a>
+    </li>
+  </ul>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -216,7 +228,8 @@ defaults, see <code><a href='theme_xaringan_set_defaults.html'>theme_xaringan_re
       <th>text_font</th>
       <td><p>Font to use for text elements, passed to
 <code><a href='https://rdrr.io/pkg/sysfonts/man/font_add_google.html'>sysfonts::font_add_google()</a></code>, if available and <code>text_font_use_google</code> is
-<code>TRUE</code>. Inherits from <code>text_font_family</code>.</p></td>
+<code>TRUE</code>. Inherits from <code>text_font_family</code>. If manually specified, can be a
+<code><a href='google_font.html'>google_font()</a></code>.</p></td>
     </tr>
     <tr>
       <th>text_font_use_google</th>
@@ -231,7 +244,8 @@ defaults to 11.</p></td>
       <th>title_font</th>
       <td><p>Font to use for title elements, passed to
 <code><a href='https://rdrr.io/pkg/sysfonts/man/font_add_google.html'>sysfonts::font_add_google()</a></code>, if available and <code>title_font_use_google</code> is
-<code>TRUE</code>. Inherits from <code>title_font_family</code>.</p></td>
+<code>TRUE</code>. Inherits from <code>title_font_family</code>. If manually specified, can be a
+<code><a href='google_font.html'>google_font()</a></code>.</p></td>
     </tr>
     <tr>
       <th>title_font_use_google</th>
