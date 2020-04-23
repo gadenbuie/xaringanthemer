@@ -8,7 +8,7 @@ Authors@R:
            role = c("aut", "cre"),
            email = "garrick@adenbuie.com",
            comment = c(ORCID = "0000-0002-7111-0077"))
-Description: Create beautifully color-cordinated and customized
+Description: Create beautifully color-coordinated and customized
     themes for your 'xaringan' slides, without writing any CSS. Complete
     your slide theme with 'ggplot2' themes that match the font and colors
     used in your slides.  Customized styles can be created directly in
