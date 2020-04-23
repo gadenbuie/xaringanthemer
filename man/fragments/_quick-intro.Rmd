@@ -43,6 +43,8 @@ for matching sequential color scales based on
 the primary color used in your slides.
 See `?scale_xaringan` for more details.
 
+More details and examples can be found in `vignette("ggplot2-themes")`.
+
 ```{r xaringanthemer-ggplot-setup, include=FALSE, eval=IS_README}
 style_mono_accent(
   base_color = "#1c5253",

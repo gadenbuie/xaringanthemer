@@ -75,7 +75,8 @@ A ggplot2 theme
 \strong{Lifecycle:} \href{https://www.tidyverse.org/lifecycle/#maturing}{Maturing}
 
 A \pkg{ggplot2} xaringanthemer plot theme to seamlessly match the "inverse"
-\pkg{xaringan} slide colors and styles as styled by \link{xaringanthemer}.
+\pkg{xaringan} slide colors and styles as styled by \link{xaringanthemer}. See
+\code{vignette("ggplot2-themes")} for more information and examples.
 }
 \examples{
 # Requires ggplot2

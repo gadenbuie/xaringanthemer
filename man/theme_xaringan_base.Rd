@@ -71,13 +71,14 @@ A ggplot2 theme
 \description{
 \strong{Lifecycle:} \href{https://www.tidyverse.org/lifecycle/#maturing}{Maturing}
 
-Provides a base plot theme for \pkg{ggplot2} to match the \pkg{xaringan} slide theme
-created by \link{xaringanthemer}. The theme is designed to create a general plot
-style from two colors, a \code{background_color} and a \code{text_color} (or foreground
-color). Also accepts an \code{accent_color} and an \code{accent_secondary_color} that are
-\link{xaringanthemer} is not required for the base theme. Use
-\code{\link[=theme_xaringan]{theme_xaringan()}} or \code{\link[=theme_xaringan_inverse]{theme_xaringan_inverse()}} in xaringan slides styled by
-xaringanthemer for a plot theme that matches the slide style.
+Provides a base plot theme for \pkg{ggplot2} to match the \pkg{xaringan}
+slide theme created by \link{xaringanthemer}. The theme is designed to create a
+general plot style from two colors, a \code{background_color} and a \code{text_color}
+(or foreground color). Also accepts an \code{accent_color} and an
+\code{accent_secondary_color} that are \link{xaringanthemer} is not required for the
+base theme. Use \code{\link[=theme_xaringan]{theme_xaringan()}} or \code{\link[=theme_xaringan_inverse]{theme_xaringan_inverse()}} in xaringan
+slides styled by xaringanthemer for a plot theme that matches the slide
+style.  See \code{vignette("ggplot2-themes")} for more information and examples.
 }
 \examples{
 # Requires ggplot2

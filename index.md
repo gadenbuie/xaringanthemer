@@ -78,6 +78,8 @@ Color and fill scales are also provided for matching sequential color
 scales based on the primary color used in your slides. See
 `?scale_xaringan` for more details.
 
+More details and examples can be found in `vignette("ggplot2-themes")`.
+
 ``` r
 library(ggplot2)
 ggplot(diamonds) +

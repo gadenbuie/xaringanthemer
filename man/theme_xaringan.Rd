@@ -76,7 +76,7 @@ A ggplot2 theme
 
 Creates \pkg{ggplot2} themes to match the xaringanthemer theme used in the
 \pkg{xaringan} slides that seamlessly matches the "normal" slide colors and
-styles.
+styles. See \code{vignette("ggplot2-themes")} for more information and examples.
 }
 \examples{
 # Requires ggplot2

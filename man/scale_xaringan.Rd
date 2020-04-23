@@ -99,7 +99,9 @@ value of \code{inverse_header_color}}
 \strong{Lifecycle:} \href{https://www.tidyverse.org/lifecycle/#maturing}{Maturing}
 
 Color and fill single-color scales for discrete and continuous values,
-created using the primary accent color of the xaringanthemer styles.
+created using the primary accent color of the xaringanthemer styles.  See
+\code{vignette("ggplot2-themes")} for more information and examples of
+\pkg{xaringanthemer}'s \pkg{ggplot2}-related functions.
 }
 \examples{
 # Requires ggplot2
