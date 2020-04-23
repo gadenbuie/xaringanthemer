@@ -42,12 +42,10 @@ or `theme_xaringan_inverse()` to match the style of your inverse slides.
   package to [automatically match the title and axis text fonts](#fonts)
   of your plots to the heading and text fonts in your xaringan theme.
 
-<!--  
 - I've done my best to set up everything so that _it just works_, but sometimes
   the showtext package adds a bit of complication to the routine data 
   visualization workflow. At the end of this vignette I include
   [a few tips](#tips) for working with showtext.
--->
 
 ## Setup Your Theme
 
@@ -373,7 +371,75 @@ g_diamonds_with_text +
   )
 ```
 
-<!-- ## Tips for using the showtext package {#tips} -->
+## Tips for using the showtext package {#tips}
+
+Working with fonts is notoriously frustrating,
+but [showtext] and [sysfonts] do a great job ensuring that 
+Google Fonts and custom fonts work on all platforms.
+As you've seen in the examples above, 
+the process is mostly seamless,
+but there are a few caveats and 
+places where the methods used by these packages may interrupt a typical ggplot2 workflow.
+
+### R Markdown
+
+To use the showtext package in R Markdown, 
+knitr requires that the `fig.showtext` chunk option be set to `TRUE`,
+either in the chunk producing the figure or globally in the document.
+
+xaringanthemer tries to set this chunk option for you,
+but in some circumstances it's possible to call `theme_xaringan()`
+in a way that xaringanthemer can't set this option for you.
+When this happens,
+xaringanthemer will produce an error:
+
+```
+Error in verify_fig_showtext(fn) : 
+  To use theme_xaringan_base() with knitr, you need to set the chunk
+  option `fig.showtext = TRUE` for this chunk. Or you can set this option
+  globally with `knitr::opts_chunk$set(fig.showtext = TRUE)`.
+```
+
+If you find yourself facing this error,
+follow the instructions and choose one of the two suggestions:
+
+1. Add `fig.showtext = TRUE` to the chunk producing the figure
+
+2. Or set the option globally in your `setup` chunk with
+   `knitr::opts_chunk$set(fig.showtext = TRUE)`.
+
+### MacOS
+
+On MacOS, you'll need to have `xquartz` installed for `sysfonts` to work properly.
+If you use [homebrew](https://brew.sh/), 
+you can install `xquartz` with
+
+```bash
+brew cask install xquartz
+```
+
+### In RStudio
+
+showtext and RStudio's graphic device don't always work well together.
+Depending on your version of RStudio,
+if you try to preview plots that use `theme_xaringan()`,
+the fonts in the preview will still be the default sans font
+or you may not see a plot at all.
+
+To work around this, open a new `quartz()` (MacOS) or `x11()` (Windows/Unix) plot device.
+The plots will then render in a separate window.
+I usually create a `quartz()` device with a similar size ratio to my slides.
+
+```{r eval=FALSE}
+## On Windows
+# x11(width = 16 * 2/3, height = 9 * 2/3)
+
+## On MacOS
+quartz(width = 16 * 2/3, height = 9 * 2/3)
+## run plot code to preview in separate window
+dev.off() # call when done to close the device
+```
+
 
 [ggplot2]: https://ggplot2.tidyverse.org
 [xaringan]: https://github.com/yihui/xaringan
