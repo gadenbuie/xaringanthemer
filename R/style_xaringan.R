@@ -366,6 +366,31 @@ style_xaringan <- function(
     )
   }
   
+  # If certain colors aren't in hexadecimal it may cause problems with theme_xaringan()
+  # TODO: at some point I'd rather be able to process CSS colors or variables
+  colors_used_by_theme_xaringan <- list(
+    background_color = background_color,
+    text_color = text_color,
+    header_color = header_color,
+    text_bold_color = text_bold_color,
+    inverse_background_color = inverse_background_color,
+    inverse_text_color = inverse_text_color,
+    inverse_header_color = inverse_header_color
+  )
+  colors_used_by_theme_xaringan <- purrr::discard(colors_used_by_theme_xaringan, is.null)
+  colors_are_hex <- purrr::map_lgl(colors_used_by_theme_xaringan, check_color_is_hex, throw = NULL)
+  
+  if (any(!colors_are_hex)) {
+    colors_better_as_hex <- names(colors_used_by_theme_xaringan)[!colors_are_hex]
+    colors_better_as_hex <- paste(colors_better_as_hex, collapse = ", ")
+    warning(
+      glue::glue("Colors that will be used by `theme_xaringan()` need to be in ",
+                 "hexadecimal format: {colors_better_as_hex}"),
+      immediate. = TRUE,
+      call. = FALSE
+    )
+  }
+  
   # Use font_..._google args to overwrite font args
   for (var in f_args[grepl("font_google$", f_args)]) {
     gf <- eval(parse(text = var))
