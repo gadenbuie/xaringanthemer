@@ -137,20 +137,15 @@ img { max-width: 100%; border: none; }
 <li><p>The ggplot2 themes <a href="#setup-your-theme">uses the colors and themes</a> from the <strong>xaringanthemer</strong> style functions, if you set your theme inside your slides. Otherwise, it <a href="#using-xaringan-themer-css">draws from the <code>xaringan-themer.css</code> file</a>.</p></li>
 <li><p>The themes <a href="#colors">pick appropriate colors</a> for titles, grid lines, and axis text, and also sets the default colors of geoms like <code><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">ggplot2::geom_point()</a></code> and <code><a href="https://ggplot2.tidyverse.org/reference/geom_text.html">ggplot2::geom_text()</a></code>. There are also monotone <a href="#scale-xaringan">color and fill scales</a> based around the primary accent color used in your xaringan theme.</p></li>
 <li><p>If you use Google Fonts in your slides, the ggplot2 themes use the showtext package to <a href="#fonts">automatically match the title and axis text fonts</a> of your plots to the heading and text fonts in your xaringan theme.</p></li>
+<li><p>I’ve done my best to set up everything so that <em>it just works</em>, but sometimes the showtext package adds a bit of complication to the routine data visualization workflow. At the end of this vignette I include <a href="#tips">a few tips</a> for working with showtext.</p></li>
 </ul>
-<!--  
-- I've done my best to set up everything so that _it just works_, but sometimes
-  the showtext package adds a bit of complication to the routine data 
-  visualization workflow. At the end of this vignette I include
-  [a few tips](#tips) for working with showtext.
--->
 </div>
 <div id="setup-your-theme" class="section level2">
 <h2 class="hasAnchor">
 <a href="#setup-your-theme" class="anchor"></a>Setup Your Theme</h2>
 <p><code><a href="../reference/theme_xaringan.html">theme_xaringan()</a></code> is designed to automatically use the fonts and colors you used for your slides’ style theme. Here I’m going to use a moderately customized color theme based on <code><a href="../reference/style_mono_accent.html">style_mono_accent()</a></code>, that results in the xaringan theme previewed in the slides above.</p>
 <p>I’ve also picked out a few fonts from <a href="https://fonts.google.com">Google Fonts</a> that I would probably never use in a real presentation, but they’re flashy enough to make it easy to see that we’re not using the standard default fonts.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1"></a><span class="bn">```{r xaringan-themer, include=FALSE}</span></span>
+<div class="sourceCode" id="cb1"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1"></a><span class="bn">```{r xaringan-themer, include=FALSE, warning=FALSE}</span></span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="bn">library(xaringanthemer)</span></span>
 <span id="cb1-3"><a href="#cb1-3"></a><span class="bn">style_mono_accent(</span></span>
 <span id="cb1-4"><a href="#cb1-4"></a><span class="bn">  base_color = "#DC322F",               # bright red</span></span>
@@ -314,7 +309,45 @@ img { max-width: 100%; border: none; }
     <span class="kw">title_font</span> <span class="kw">=</span> <span class="st">"GlacialIndifferenceRegular"</span>
   )</pre></body></html></div>
 <p><img src="ggplot2-themes_files/figure-html/sysfonts-custom-font-1.png" width="960"></p>
-<!-- ## Tips for using the showtext package {#tips} -->
+</div>
+</div>
+<div id="tips" class="section level2">
+<h2 class="hasAnchor">
+<a href="#tips" class="anchor"></a>Tips for using the showtext package</h2>
+<p>Working with fonts is notoriously frustrating, but <a href="https://github.com/yixuan/showtext">showtext</a> and <a href="https://github.com/yixuan/sysfonts">sysfonts</a> do a great job ensuring that Google Fonts and custom fonts work on all platforms. As you’ve seen in the examples above, the process is mostly seamless, but there are a few caveats and places where the methods used by these packages may interrupt a typical ggplot2 workflow.</p>
+<div id="r-markdown" class="section level3">
+<h3 class="hasAnchor">
+<a href="#r-markdown" class="anchor"></a>R Markdown</h3>
+<p>To use the showtext package in R Markdown, knitr requires that the <code>fig.showtext</code> chunk option be set to <code>TRUE</code>, either in the chunk producing the figure or globally in the document.</p>
+<p>xaringanthemer tries to set this chunk option for you, but in some circumstances it’s possible to call <code><a href="../reference/theme_xaringan.html">theme_xaringan()</a></code> in a way that xaringanthemer can’t set this option for you. When this happens, xaringanthemer will produce an error:</p>
+<pre><code>Error in verify_fig_showtext(fn) : 
+  To use theme_xaringan_base() with knitr, you need to set the chunk
+  option `fig.showtext = TRUE` for this chunk. Or you can set this option
+  globally with `knitr::opts_chunk$set(fig.showtext = TRUE)`.</code></pre>
+<p>If you find yourself facing this error, follow the instructions and choose one of the two suggestions:</p>
+<ol style="list-style-type: decimal">
+<li><p>Add <code>fig.showtext = TRUE</code> to the chunk producing the figure</p></li>
+<li><p>Or set the option globally in your <code>setup</code> chunk with <code>knitr::opts_chunk$set(fig.showtext = TRUE)</code>.</p></li>
+</ol>
+</div>
+<div id="macos" class="section level3">
+<h3 class="hasAnchor">
+<a href="#macos" class="anchor"></a>MacOS</h3>
+<p>On MacOS, you’ll need to have <code>xquartz</code> installed for <code>sysfonts</code> to work properly. If you use <a href="https://brew.sh/">homebrew</a>, you can install <code>xquartz</code> with</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1"></a><span class="ex">brew</span> cask install xquartz</span></code></pre></div>
+</div>
+<div id="in-rstudio" class="section level3">
+<h3 class="hasAnchor">
+<a href="#in-rstudio" class="anchor"></a>In RStudio</h3>
+<p>showtext and RStudio’s graphic device don’t always work well together. Depending on your version of RStudio, if you try to preview plots that use <code><a href="../reference/theme_xaringan.html">theme_xaringan()</a></code>, the fonts in the preview will still be the default sans font or you may not see a plot at all.</p>
+<p>To work around this, open a new <code><a href="https://rdrr.io/r/grDevices/quartz.html">quartz()</a></code> (MacOS) or <code><a href="https://rdrr.io/r/grDevices/x11.html">x11()</a></code> (Windows/Unix) plot device. The plots will then render in a separate window. I usually create a <code><a href="https://rdrr.io/r/grDevices/quartz.html">quartz()</a></code> device with a similar size ratio to my slides.</p>
+<div class="sourceCode" id="cb18"><html><body><pre class="r"><span class="co">## On Windows</span>
+<span class="co"># x11(width = 16 * 2/3, height = 9 * 2/3)</span>
+
+<span class="co">## On MacOS</span>
+<span class="fu"><a href="https://rdrr.io/r/grDevices/quartz.html">quartz</a></span>(<span class="kw">width</span> <span class="kw">=</span> <span class="fl">16</span> * <span class="fl">2</span>/<span class="fl">3</span>, <span class="kw">height</span> <span class="kw">=</span> <span class="fl">9</span> * <span class="fl">2</span>/<span class="fl">3</span>)
+<span class="co">## run plot code to preview in separate window</span>
+<span class="fu"><a href="https://rdrr.io/r/grDevices/dev.html">dev.off</a></span>() <span class="co"># call when done to close the device</span></pre></body></html></div>
 </div>
 </div>
   </div>

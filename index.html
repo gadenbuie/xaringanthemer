@@ -142,7 +142,7 @@ Easy slide and plot themes for xaringan slides.
 <span id="cb3-2"><a href="#cb3-2"></a><span class="at">  xaringan:</span><span class="fu">:moon_reader</span><span class="kw">:</span></span>
 <span id="cb3-3"><a href="#cb3-3"></a><span class="at">    </span><span class="fu">css</span><span class="kw">:</span><span class="at"> xaringan-themer.css</span></span></code></pre></div>
 <p>Then, in a hidden chunk just after the knitr setup chunk, load <strong>xaringanthemer</strong> and try one of the <a href="#themes">theme functions</a>.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1"></a><span class="bn">```{r xaringan-themer, include = FALSE}</span></span>
+<div class="sourceCode" id="cb4"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1"></a><span class="bn">```{r xaringan-themer, include=FALSE, warning=FALSE}</span></span>
 <span id="cb4-2"><a href="#cb4-2"></a><span class="bn">library(xaringanthemer)</span></span>
 <span id="cb4-3"><a href="#cb4-3"></a><span class="bn">style_mono_accent(</span></span>
 <span id="cb4-4"><a href="#cb4-4"></a><span class="bn">  base_color = "#1c5253",</span></span>
@@ -157,6 +157,7 @@ Easy slide and plot themes for xaringan slides.
 <a href="#matching-ggplot-themes" class="anchor"></a>Matching ggplot Themes</h3>
 <p><strong>xaringanthemer</strong> even provides a <a href="https://ggplot2.tidyverse.org">ggplot2</a> theme with <code><a href="reference/theme_xaringan.html">theme_xaringan()</a></code> that uses the colors and fonts from your slide theme. Built on the <a href="https://github.com/yixuan/showtext">showtext</a> package, and designed to work seamlessly with <a href="https://fonts.google.com">Google Fonts</a>.</p>
 <p>Color and fill scales are also provided for matching sequential color scales based on the primary color used in your slides. See <code><a href="reference/scale_xaringan.html">?scale_xaringan</a></code> for more details.</p>
+<p>More details and examples can be found in <code><a href="articles/ggplot2-themes.html">vignette("ggplot2-themes")</a></code>.</p>
 <div class="sourceCode" id="cb5"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">ggplot2</span>)
 <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span>(<span class="no">diamonds</span>) +
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(<span class="no">cut</span>, <span class="kw">fill</span> <span class="kw">=</span> <span class="no">cut</span>) +
