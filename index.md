@@ -53,7 +53,7 @@ Then, in a hidden chunk just after the knitr setup chunk, load
 **xaringanthemer** and try one of the [theme functions](#themes).
 
 ```` markdown
-```{r xaringan-themer, include = FALSE}
+```{r xaringan-themer, include=FALSE, warning=FALSE}
 library(xaringanthemer)
 style_mono_accent(
   base_color = "#1c5253",

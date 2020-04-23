@@ -63,7 +63,7 @@ but they're flashy enough to make it easy to see
 that we're not using the standard default fonts.
 
 ````markdown
-```{r xaringan-themer, include=FALSE}`r ''`
+```{r xaringan-themer, include=FALSE, warning=FALSE}`r ''`
 library(xaringanthemer)
 style_mono_accent(
   base_color = "#DC322F",               # bright red
