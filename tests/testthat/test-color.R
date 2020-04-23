@@ -42,6 +42,28 @@ describe("full_length_hex()", {
   })
 })
 
+describe("check_color_is_hex", {
+  it("returns TRUE when color is valid hex", {
+    expect_true(check_color_is_hex("#123456"))
+    expect_true(check_color_is_hex("#abc123"))
+    expect_true(check_color_is_hex("#abc"))
+    expect_true(check_color_is_hex("#123"))
+  })
+
+  it("returns FALSE and warns if requested", {
+    expect_false(check_color_is_hex("123456", throw = NULL))
+    expect_false(check_color_is_hex("123", throw = NULL))
+    expect_false(check_color_is_hex("apple", throw = NULL))
+    expect_warning(check_color_is_hex("123456"))
+    expect_warning(check_color_is_hex("123", msg = "{color} is bad"), "123 is bad")
+    expect_warning(check_color_is_hex("apple"))
+  })
+
+  it("errors if throw = stop", {
+    expect_error(check_color_is_hex("123", throw = stop), "123 is not")
+  })
+})
+
 
 describe("lighten_color() and darken_color()", {
   it("errors if strength not in [0, 1]", {

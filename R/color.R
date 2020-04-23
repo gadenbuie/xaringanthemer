@@ -124,24 +124,33 @@ prepare_colors <- function(colors = NULL) {
 
 full_length_hex <- function(x) {
   varname <- substitute(x)
-  stop_not_hex <- function() {
-    stop(str_wrap(
-      "`", deparse(varname), "` is not a hexadecimal color: \"", x, "\". ",
-      "theme_xaringan() requires colors to be specified in hexadecimal format.",
-      " If you used valid CSS colors in your xaringan theme, please convert ",
-      "these colors to hex format, e.g. \"#1a2b3c\"."
-    ), call. = FALSE)
-  }
-  if (!grepl("^#", x) || grepl("[^#0-9a-fA-F]", x)) {
-    stop_not_hex()
-  }
+  bad_hex_msg <- str_wrap(
+    "`", deparse(varname), "` is not a hexadecimal color: \"", x, "\". ",
+    "theme_xaringan() requires colors to be specified in hexadecimal format.",
+    " If you used valid CSS colors in your xaringan theme, please convert ",
+    "these colors to hex format, e.g. \"#1a2b3c\"."
+  )
+  check_color_is_hex(x, stop, bad_hex_msg)
   x <- sub("^#", "", x)
   if (nchar(x) == 3) {
     x <- strsplit(x, character(0))[[1]]
     x <- rep(x, each = 2)
     x <- paste(x, collapse = "")
-  } else if (nchar(x) != 6) {
-    stop_not_hex()
   }
   paste0("#", x)
+}
+
+check_color_is_hex <- function(
+  color,
+  throw = warning,
+  msg = "{color} is not a hexadecimal color"
+) {
+  is_probably_hex <- grepl("^#", color) &&
+    !grepl("[^#0-9a-fA-F]", color) &&
+    nchar(sub("^#", "", color)) %in% c(3, 6)
+  if (!is_probably_hex) {
+    msg <- glue::glue(msg)
+    if (!is.null(throw)) throw(str_wrap(msg), call. = FALSE)
+  }
+  is_probably_hex
 }
