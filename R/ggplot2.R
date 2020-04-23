@@ -515,10 +515,10 @@ safely_set_geom <- function(geom, new) {
 #' created using the primary accent color of the xaringanthemer styles.
 #'
 #' @param ... Arguments passed on to either the \pkg{colorspace} scale
-#'   functions — one of [colorspace::scale_color_discrete_sequential],
-#'   [colorspace::scale_color_continuous_sequential],
-#'   [colorspace::scale_fill_discrete_sequential], or
-#'   [colorspace::scale_fill_continuous_sequential] — or to
+#'   functions — one of [colorspace::scale_color_discrete_sequential()],
+#'   [colorspace::scale_color_continuous_sequential()],
+#'   [colorspace::scale_fill_discrete_sequential()], or
+#'   [colorspace::scale_fill_continuous_sequential()] — or to
 #'   [ggplot2::continuous_scale] or [ggplot2::discrete_scale].
 #' @param color A color value, in hex, to override the default color. Otherwise,
 #'   the primary color of the resulting scale is chosen from the xaringanthemer

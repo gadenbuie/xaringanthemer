@@ -74,10 +74,10 @@ scale_xaringan_colour_continuous(
 One of "color", "colour", or "fill".}
 
 \item{...}{Arguments passed on to either the \pkg{colorspace} scale
-functions — one of \link[colorspace:scale_color_discrete_sequential]{colorspace::scale_color_discrete_sequential},
-\link[colorspace:scale_color_continuous_sequential]{colorspace::scale_color_continuous_sequential},
-\link[colorspace:scale_fill_discrete_sequential]{colorspace::scale_fill_discrete_sequential}, or
-\link[colorspace:scale_fill_continuous_sequential]{colorspace::scale_fill_continuous_sequential} — or to
+functions — one of \code{\link[colorspace:scale_color_discrete_sequential]{colorspace::scale_color_discrete_sequential()}},
+\code{\link[colorspace:scale_color_continuous_sequential]{colorspace::scale_color_continuous_sequential()}},
+\code{\link[colorspace:scale_fill_discrete_sequential]{colorspace::scale_fill_discrete_sequential()}}, or
+\code{\link[colorspace:scale_fill_continuous_sequential]{colorspace::scale_fill_continuous_sequential()}} — or to
 \link[ggplot2:continuous_scale]{ggplot2::continuous_scale} or \link[ggplot2:discrete_scale]{ggplot2::discrete_scale}.}
 
 \item{color}{A color value, in hex, to override the default color. Otherwise,
