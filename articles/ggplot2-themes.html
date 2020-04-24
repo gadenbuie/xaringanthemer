@@ -170,14 +170,14 @@ img { max-width: 100%; border: none; }
 <span class="no">g_base</span></pre></body></html></div>
 <div class="sourceCode" id="cb3"><html><body><pre class="r"><span class="co"># Fancy slide-matching themed plot</span>
 <span class="no">g_base</span> + <span class="fu"><a href="../reference/theme_xaringan.html">theme_xaringan</a></span>()</pre></body></html></div>
-<p><img src="ggplot2-themes_files/figure-html/ggplot2-demo-1-1.png" width="45%"><img src="ggplot2-themes_files/figure-html/ggplot2-demo-2-1.png" width="45%"></p>
+<p><img src="ggplot2-themes_files/figure-html/ggplot2-demo-1-1.png" width="48%"><img src="ggplot2-themes_files/figure-html/ggplot2-demo-2-1.png" width="48%"></p>
 <p>With <code><a href="../reference/theme_xaringan.html">theme_xaringan()</a></code> the fonts and colors match the slide theme. The default colors of points (like other geometries) has been changed as well to match the slide colors.</p>
 <p>To restore the previous default colors of ggplot2 geoms, call</p>
 <div class="sourceCode" id="cb4"><html><body><pre class="r"><span class="fu"><a href="../reference/theme_xaringan_set_defaults.html">theme_xaringan_restore_defaults</a></span>()</pre></body></html></div>
 <p>Add <code><a href="../reference/theme_xaringan_inverse.html">theme_xaringan_inverse()</a></code> to automatically create a plot that matches the inverse slide style.</p>
 <div class="sourceCode" id="cb5"><html><body><pre class="r"><span class="co"># theme_xaringan() on the left, theme_xaringan_inverse() on the right</span>
 <span class="no">g_base</span> + <span class="fu"><a href="../reference/theme_xaringan_inverse.html">theme_xaringan_inverse</a></span>()</pre></body></html></div>
-<p><img src="ggplot2-themes_files/figure-html/ggplot2-demo-2-1.png" width="45%"><img src="ggplot2-themes_files/figure-html/ggplot2-demo-inverse-1.png" width="45%"></p>
+<p><img src="ggplot2-themes_files/figure-html/ggplot2-demo-2-1.png" width="48%"><img src="ggplot2-themes_files/figure-html/ggplot2-demo-inverse-1.png" width="48%"></p>
 </div>
 <div id="using-xaringan-themer-css" class="section level2">
 <h2 class="hasAnchor">
@@ -228,7 +228,7 @@ img { max-width: 100%; border: none; }
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span>(<span class="kw">x</span> <span class="kw">=</span> <span class="st">"Highway MPG"</span>, <span class="kw">y</span> <span class="kw">=</span> <span class="st">"City MPG"</span>, <span class="kw">title</span> <span class="kw">=</span> <span class="st">"Fuel Efficiency"</span>) +
   <span class="fu"><a href="../reference/theme_xaringan_inverse.html">theme_xaringan_inverse</a></span>() +
   <span class="fu"><a href="../reference/scale_xaringan.html">scale_xaringan_color_continuous</a></span>(<span class="kw">breaks</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span>(<span class="fl">3</span>, <span class="fl">12</span>, <span class="fl">2</span>), <span class="kw">inverse</span> <span class="kw">=</span> <span class="fl">TRUE</span>, <span class="kw">begin</span> <span class="kw">=</span> <span class="fl">1</span>, <span class="kw">end</span> <span class="kw">=</span> <span class="fl">0</span>)</pre></body></html></div>
-<p><img src="ggplot2-themes_files/figure-html/scale-xaringan-1.png" width="45%"><img src="ggplot2-themes_files/figure-html/scale-xaringan-2.png" width="45%"></p>
+<p><img src="ggplot2-themes_files/figure-html/scale-xaringan-1.png" width="48%"><img src="ggplot2-themes_files/figure-html/scale-xaringan-2.png" width="48%"></p>
 <p>In general, these color scales aren’t great at representing the underlying data. In both examples above, the color and fill scales duplicate information displayed via other aesthetics (the height of the bar or the size of the point). I recommend using these scales primarily for style, although the scales can be more or less effective depending on your color scheme.</p>
 <p>The scales come with a few more options:</p>
 <ul>
