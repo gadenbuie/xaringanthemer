@@ -97,7 +97,7 @@ Adding `theme_xaringan()` to a ggplot,
 like this demonstration plot using the `mpg` dataset from ggplot2,
 changes the colors and fonts of your plot theme.
 
-```{r ggplot2-demo-1, out.width = "45%", fig.show="hide"}
+```{r ggplot2-demo-1, out.width = "48%", fig.show="hide"}
 library(ggplot2)
 
 g_base <- ggplot(mpg) + 
@@ -114,7 +114,7 @@ g_base
 g_base + theme_xaringan()
 ```
 
-<img src="`r knitr::fig_chunk("ggplot2-demo-1", "png")`" width="45%" /><img src="`r knitr::fig_chunk("ggplot2-demo-2", "png")`" width="45%" />
+<img src="`r knitr::fig_chunk("ggplot2-demo-1", "png")`" width="48%" /><img src="`r knitr::fig_chunk("ggplot2-demo-2", "png")`" width="48%" />
 
 With `theme_xaringan()` the fonts and colors match the slide theme.
 The default colors of points (like other geometries) has been changed as well
@@ -134,7 +134,7 @@ that matches the inverse slide style.
 g_base + theme_xaringan_inverse()
 ```
 
-<img src="`r knitr::fig_chunk("ggplot2-demo-2", "png")`" width="45%" /><img src="`r knitr::fig_chunk("ggplot2-demo-inverse", "png")`" width="45%" />
+<img src="`r knitr::fig_chunk("ggplot2-demo-2", "png")`" width="48%" /><img src="`r knitr::fig_chunk("ggplot2-demo-inverse", "png")`" width="48%" />
 
 
 ## Using `theme_xaringan()` without calling a style function {#using-xaringan-themer-css}
@@ -230,7 +230,7 @@ based on the primary accent color in your slides.
 Color scales matching the inverse slides are possible
 by setting the argument `inverse = TRUE`.
 
-```{r scale-xaringan, fig.width = 9, fig.height = 5, out.width="45%", fig.show="hold", echo = TRUE}
+```{r scale-xaringan, fig.width = 9, fig.height = 5, out.width="48%", fig.show="hold", echo = TRUE}
 ggplot(diamonds, aes(x = cut)) +
   geom_bar(aes(fill = ..count..), show.legend = FALSE) +
   labs(x = NULL, y = "Count", title = "Diamond Cut Quality") +
