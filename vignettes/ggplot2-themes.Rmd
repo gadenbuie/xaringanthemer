@@ -145,7 +145,7 @@ instead of rebuilding your theme with every new slide deck.
 
 In these cases, `theme_xaringan()` will look for a CSS file
 written by **xaringanthemer** in your slides' directory 
-or in a subfolder under the same directory
+or in a sub-folder under the same directory
 that it can use to determine the colors and fonts used in your slides.
 
 If you happen to have multiple slide themes
@@ -263,7 +263,7 @@ The scales come with a few more options:
 - Invert the direction of the discrete scales with `direction = -1`.
 
 - Control the range of the continuous color scale used with `begin` and `end`.
-  You can also invert the direction of the continous color scale by setting
+  You can also invert the direction of the continuous color scale by setting
   `begin = 1` and `end = 0`.
 
 ## Fonts
@@ -320,7 +320,7 @@ so that it can be used in your plots.
 I found a nice open source font called 
 [Glacial Indifference](https://fontlibrary.org/en/font/glacial-indifference)
 by Alfredo Marco Pradil
-avilable at [fontlibrary.org](https://fontlibrary.org).
+available at [fontlibrary.org](https://fontlibrary.org).
 In my theme style function,
 I would use
 
@@ -333,7 +333,7 @@ style_mono_accent(
 
 but sysfonts won't know where to find the TTF font files for this font.
 
-To register the font with sysfont, we use `sysfonts::font_add()`,
+To register the font with sysfonts, we use `sysfonts::font_add()`,
 but first we need to download the font file —
 the `sysfonts::font_add()` function requires the font file to be local.
 

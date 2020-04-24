@@ -9,7 +9,7 @@ template_variables <- tibble::tribble(
   , "text_slide_number_color", "{inverse_background_color}", ".remark-slide-number", "Slide Number Color", NA_character_
   , "padding", "16px 64px 16px 64px", ".remark-slide-content", "Slide Padding in `top right [bottom left]` format", NA_character_
   , "background_image", "{NULL}", ".remark-slide-content", "Background image applied to each *and every* slide. Set `title_slide_background_image = \"none\"` to remove the background image from the title slide", NA_character_
-  , "background_size", "{NULL}", ".remark-slide-content", "Background image size, requires `background_image` to be set. If `background_image` is set, `background_size` will default to `cover` so the backround fills the screen. If both `background_image` and `background_position` are set, will default to 100 percent", NA_character_
+  , "background_size", "{NULL}", ".remark-slide-content", "Background image size, requires `background_image` to be set. If `background_image` is set, `background_size` will default to `cover` so the background fills the screen. If both `background_image` and `background_position` are set, will default to 100 percent", NA_character_
   , "background_position", "{NULL}", ".remark-slide-content", "Background image position, requires `background_image` to be set, and it is recommended to adjust `background_size`", NA_character_
   , "code_highlight_color", "rgba(255,255,0,0.5)", ".remark-code-line-highlighted", "Code Line Highlight", "--code-highlight-color"
   , "code_inline_color", "#000", ".remark-inline-code", "Inline Code Color", NA_character_

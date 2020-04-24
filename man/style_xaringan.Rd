@@ -119,7 +119,7 @@ from the title slide. Defaults to \code{NULL}. Modifies the
 
 \item{background_size}{Background image size, requires \code{background_image} to
 be set. If \code{background_image} is set, \code{background_size} will default to
-\code{cover} so the backround fills the screen. If both \code{background_image} and
+\code{cover} so the background fills the screen. If both \code{background_image} and
 \code{background_position} are set, will default to 100 percent. Defaults to
 \code{NULL}. Modifies the \code{.remark-slide-content} class. Accepts CSS
 \href{https://developer.mozilla.org/en-US/docs/Web/CSS/background-size}{background-size}
@@ -405,7 +405,7 @@ Creates a customized Xaringan theme CSS file.
 }
 \section{Functions}{
 \itemize{
-\item \code{xaringanthemer_font_default}: Default values for font family, wieght, URLs and
+\item \code{xaringanthemer_font_default}: Default values for font family, weight, URLs and
 font fallbacks.
 }}
 

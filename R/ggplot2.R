@@ -507,7 +507,7 @@ safely_set_geom <- function(geom, new) {
 
 # Color Scales ------------------------------------------------------------
 
-#' Xaringan Themer ggplot2 Scales
+#' Themed ggplot2 Scales
 #'
 #' @description
 #'

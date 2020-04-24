@@ -46,7 +46,7 @@
 #'   `.remark-slide-content` class.
 #' @param background_size Background image size, requires `background_image` to
 #'   be set. If `background_image` is set, `background_size` will default to
-#'   `cover` so the backround fills the screen. If both `background_image` and
+#'   `cover` so the background fills the screen. If both `background_image` and
 #'   `background_position` are set, will default to 100 percent. Defaults to
 #'   `NULL`. Modifies the `.remark-slide-content` class. Accepts CSS
 #'   [background-size](https://developer.mozilla.org/en-US/docs/Web/CSS/background-size)

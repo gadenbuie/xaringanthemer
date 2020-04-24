@@ -1,4 +1,4 @@
-#' @describeIn style_xaringan Default values for font family, wieght, URLs and
+#' @describeIn style_xaringan Default values for font family, weight, URLs and
 #'   font fallbacks.
 #' @param font_arg A font argument from the \pkg{xaringanthemer} `style_`
 #'   function family.

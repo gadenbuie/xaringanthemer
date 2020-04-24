@@ -10,7 +10,7 @@
 \alias{scale_xaringan_fill_continuous}
 \alias{scale_xaringan_color_continuous}
 \alias{scale_xaringan_colour_continuous}
-\title{Xaringan Themer ggplot2 Scales}
+\title{Themed ggplot2 Scales}
 \usage{
 scale_xaringan_discrete(
   aes_type = c("color", "colour", "fill"),
