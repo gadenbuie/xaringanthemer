@@ -128,7 +128,7 @@
 <style type="text/css">
 img { max-width: 100%; }
 </style>
-<p>Jump to: <a href="#quick-intro">Quick Intro</a>, <a href="#themes">Themes</a>, <a href="#theme-settings">Theme Settings</a>, <a href="#adding-custom-css">Adding Custom CSS</a>, <a href="#fonts">Fonts</a></p>
+<p>Jump to: <a href="#quick-intro">Quick Intro</a>, <a href="#themes">Themes</a>, <a href="#theme-settings">Theme Settings</a>, <a href="#fonts">Fonts</a>, <a href="#colors">Colors</a>, <a href="#adding-custom-css">Adding Custom CSS</a></p>
 <div id="quick-intro" class="section level2">
 <h2 class="hasAnchor">
 <a href="#quick-intro" class="anchor"></a>Quick Intro</h2>
@@ -312,10 +312,37 @@ img { max-width: 100%; }
 <h2 class="hasAnchor">
 <a href="#fonts" class="anchor"></a>Fonts</h2>
 <!-- Need to set [adding-custom-css] -->
+<p><link href="https://fonts.googleapis.com/css2?family=Cabin:wght@600&amp;family=Noto+Sans&amp;display=swap" rel="stylesheet"></p>
+<style type="text/css">
+.cabin {
+  font-family: Cabin;
+  font-weight: 600
+}
+.noto-sans {
+  font-family: 'Noto Sans';
+}
+.font-preview {
+  padding: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  font-size: 1.25em;
+}
+</style>
 <div id="default-fonts" class="section level3">
 <h3 class="hasAnchor">
 <a href="#default-fonts" class="anchor"></a>Default Fonts</h3>
-<p><strong>xaringanthemer</strong> by default uses a different set of default fonts for heading and body fonts. The new defaults use <a href="https://fonts.google.com/specimen/Cabin">Cabin</a> for headings and <a href="https://fonts.google.com/specimen/Noto+Sans">Noto Sans</a> for body text. These fonts are easier to read on screens and at a distance during presentations, and they support a wide variety of languages and weights. Another reason for the change is that the xaringan (remarkjs) default body font, <em>Droid Serif</em>, is no longer officially included in Google Fonts.</p>
+<p>The default heading and body fonts used in <strong>xaringanthemer</strong> are different than the xaringan default fonts. In xaringanthemer, <a href="https://fonts.google.com/specimen/Cabin">Cabin</a> is used for headings and <a href="https://fonts.google.com/specimen/Noto+Sans">Noto Sans</a> for body text.</p>
+<div class="font-preview">
+<p style="font-size: 1.5em" class="cabin">
+A Cabin in the Clearing
+</p>
+<p class="noto-sans">
+Pack my box with five dozen liquor jugs. Amazingly few discotheques provide jukeboxes.
+</p>
+</div>
+<p>These fonts are easier to read on screens and at a distance during presentations, and they support a wide variety of languages and weights. Another reason for the change is that the xaringan (remarkjs) default body font, <em>Droid Serif</em>, is no longer officially included in Google Fonts.</p>
 <p>If you would like to use the fonts from the <a href="https://slides.yihui.name/xaringan/">default xaringan theme</a>, you can use the following arguments in your style function.</p>
 <div class="sourceCode" id="cb14"><html><body><pre class="r"><span class="fu"><a href="../reference/style_xaringan.html">style_xaringan</a></span>(
   <span class="kw">text_font_family</span> <span class="kw">=</span> <span class="st">"Droid Serif"</span>,
@@ -362,7 +389,7 @@ img { max-width: 100%; }
 <h2 class="hasAnchor">
 <a href="#colors" class="anchor"></a>Colors</h2>
 <p>When designing your xaringan theme, you may have additional colors in your desired color palette beyond those used in the accent colors of the mono and duotone styles.</p>
-<p>The <code>style*()</code> functions in xaringanthemer include a <code>colors</code> argument that lets you quickly define a additional colors to use in your slides. This argument takes a vector of named colors</p>
+<p>The <code>style*()</code> functions in xaringanthemer include a <code>colors</code> argument that lets you quickly define additional colors to use in your slides. This argument takes a vector of named colors</p>
 <div class="sourceCode" id="cb18"><html><body><pre class="r"><span class="no">colors</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(
   <span class="kw">red</span> <span class="kw">=</span> <span class="st">"#f34213"</span>,
   <span class="kw">purple</span> <span class="kw">=</span> <span class="st">"#3e2f5b"</span>,

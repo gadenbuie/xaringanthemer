@@ -126,10 +126,37 @@
     
     
 <!-- Need to set [adding-custom-css] -->
+<p><link href="https://fonts.googleapis.com/css2?family=Cabin:wght@600&amp;family=Noto+Sans&amp;display=swap" rel="stylesheet"></p>
+<style type="text/css">
+.cabin {
+  font-family: Cabin;
+  font-weight: 600
+}
+.noto-sans {
+  font-family: 'Noto Sans';
+}
+.font-preview {
+  padding: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  font-size: 1.25em;
+}
+</style>
 <div id="default-fonts" class="section level3">
 <h3 class="hasAnchor">
 <a href="#default-fonts" class="anchor"></a>Default Fonts</h3>
-<p><strong>xaringanthemer</strong> by default uses a different set of default fonts for heading and body fonts. The new defaults use <a href="https://fonts.google.com/specimen/Cabin">Cabin</a> for headings and <a href="https://fonts.google.com/specimen/Noto+Sans">Noto Sans</a> for body text. These fonts are easier to read on screens and at a distance during presentations, and they support a wide variety of languages and weights. Another reason for the change is that the xaringan (remarkjs) default body font, <em>Droid Serif</em>, is no longer officially included in Google Fonts.</p>
+<p>The default heading and body fonts used in <strong>xaringanthemer</strong> are different than the xaringan default fonts. In xaringanthemer, <a href="https://fonts.google.com/specimen/Cabin">Cabin</a> is used for headings and <a href="https://fonts.google.com/specimen/Noto+Sans">Noto Sans</a> for body text.</p>
+<div class="font-preview">
+<p style="font-size: 1.5em" class="cabin">
+A Cabin in the Clearing
+</p>
+<p class="noto-sans">
+Pack my box with five dozen liquor jugs. Amazingly few discotheques provide jukeboxes.
+</p>
+</div>
+<p>These fonts are easier to read on screens and at a distance during presentations, and they support a wide variety of languages and weights. Another reason for the change is that the xaringan (remarkjs) default body font, <em>Droid Serif</em>, is no longer officially included in Google Fonts.</p>
 <p>If you would like to use the fonts from the <a href="https://slides.yihui.name/xaringan/">default xaringan theme</a>, you can use the following arguments in your style function.</p>
 <div class="sourceCode" id="cb1"><html><body><pre class="r"><span class="fu"><a href="../reference/style_xaringan.html">style_xaringan</a></span>(
   <span class="kw">text_font_family</span> <span class="kw">=</span> <span class="st">"Droid Serif"</span>,
