@@ -25,18 +25,13 @@ img { max-width: 100%; }
 [xaringan]: https://github.com/yihui/xaringan
 [remarkjs]: https://github.com/gnab/remark
 
-```{r toc, results='asis', echo=FALSE, message=FALSE, eval=FALSE}
-devtools::source_gist("c83e078bf8c81b035e32c3fc0cf04ee8", filename = 'render_toc.R')
-x <- render_toc("README.Rmd", toc_depth = 3)
-gsub("    -", "-", sub("^-.+?\n", "", x))
-```
-
 Jump to: 
 [Quick Intro](#quick-intro), 
 [Themes](#themes), 
 [Theme Settings](#theme-settings), 
-[Adding Custom CSS](#adding-custom-css), 
-[Fonts](#fonts)
+[Fonts](#fonts),
+[Colors](#colors),
+[Adding Custom CSS](#adding-custom-css)
 
 ## Quick Intro
 

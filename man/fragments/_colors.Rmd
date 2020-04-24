@@ -4,7 +4,7 @@ beyond those used in the accent colors of the mono and duotone styles.
 
 The `style*()` functions in xaringanthemer
 include a `colors` argument that lets you 
-quickly define a additional colors to use in your slides.
+quickly define additional colors to use in your slides.
 This argument takes a vector of named colors
 
 ```r

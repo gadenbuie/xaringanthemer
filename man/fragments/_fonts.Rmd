@@ -2,14 +2,42 @@
 
 [google-fonts]: https://fonts.google.com
 
+<link href="https://fonts.googleapis.com/css2?family=Cabin:wght@600&family=Noto+Sans&display=swap" rel="stylesheet">
+
+```{css echo=FALSE}
+.cabin {
+  font-family: Cabin;
+  font-weight: 600
+}
+.noto-sans {
+  font-family: 'Noto Sans';
+}
+.font-preview {
+  padding: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  font-size: 1.25em;
+}
+```
+
 ### Default Fonts
 
-**xaringanthemer** by default uses a different set of default fonts for heading and body fonts. 
-The new defaults use 
+The default heading and body fonts used in **xaringanthemer**
+are different than the xaringan default fonts.
+In xaringanthemer,
 [Cabin](https://fonts.google.com/specimen/Cabin)
-for headings and 
+is used for headings and 
 [Noto Sans](https://fonts.google.com/specimen/Noto+Sans)
-for body text. 
+for body text.
+
+<div class="font-preview">
+<p style="font-size: 1.5em" class="cabin">A Cabin in the Clearing</p>
+<p class="noto-sans">Pack my box with five dozen liquor jugs. Amazingly few discotheques provide jukeboxes.</p>
+</div>
+
+
 These fonts are easier to read on screens and at a distance during presentations, 
 and they support a wide variety of languages and weights. 
 Another reason for the change is that the xaringan (remarkjs) default body font, 
