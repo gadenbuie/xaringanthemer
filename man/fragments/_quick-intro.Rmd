@@ -1,7 +1,7 @@
 <!-- Set link to theme-settings, template-variables, theme functions -->
 
 ```{r include=FALSE}
-if (!exists("IS_README")) IS_README <- FALSE
+IN_PKGDOWN <- identical(Sys.getenv("IN_PKGDOWN"), "true")
 ```
 
 First, add the `xaringan-themer.css` file to the YAML header of your xaringan slides.
@@ -45,7 +45,7 @@ See `?scale_xaringan` for more details.
 
 More details and examples can be found in `vignette("ggplot2-themes")`.
 
-```{r xaringanthemer-ggplot-setup, include=FALSE, eval=IS_README}
+```{r xaringanthemer-ggplot-setup, include=FALSE, eval=!IN_PKGDOWN}
 style_mono_accent(
   base_color = "#1c5253",
   header_font_google = google_font("Josefin Sans"),
@@ -55,7 +55,7 @@ style_mono_accent(
 )
 ```
 
-```{r theme_xaringan_demo, echo=TRUE, warning=FALSE, fig.width=13, fig.height=5.5, eval=IS_README}
+```{r theme_xaringan_demo, echo=TRUE, warning=FALSE, fig.width=13, fig.height=5.5, eval=!IN_PKGDOWN, fig.showtext=TRUE}
 library(ggplot2)
 ggplot(diamonds) +
   aes(cut, fill = cut) +
@@ -69,12 +69,8 @@ ggplot(diamonds) +
   scale_xaringan_fill_discrete()
 ```
 
-```{r link-to-plot-image, echo=FALSE, eval=!IS_README, results='asis'}
-if (identical(Sys.getenv("IN_PKGDOWN"), "true")) {
-  cat("![](../reference/figures/index-theme_xaringan_demo-1.png)")
-} else {
-  cat('<img src="../man/figures/index-theme_xaringan_demo-1.png" data-external="1" />')
-}
+```{r link-to-plot-image, echo=FALSE, eval=IN_PKGDOWN, results='asis'}
+cat("![](../reference/figures/index-theme_xaringan_demo-1.png)")
 ```
 
 

@@ -13,7 +13,6 @@ knitr::opts_chunk$set(
   results = "asis",
   echo = FALSE,
   comment = "#>",
-  fig.path = "man/figures/index-",
   out.width = "100%"
 )
 library(xaringanthemer)
