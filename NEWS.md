@@ -1,4 +1,4 @@
-# xaringanthemer 0.3.0 (dev)
+# xaringanthemer 0.3.0
 
 * Adds `theme_xaringan()`, a ggplot2 theme that automatically uses the colors
   and font styles of your xaringanthemer style. Also adds 

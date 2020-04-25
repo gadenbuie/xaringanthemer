@@ -24,3 +24,5 @@
 ^\.github$
 ^clang-.*
 ^gfortran.*
+^cran-comments\.md$
+^CRAN-RELEASE$
