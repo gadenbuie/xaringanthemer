@@ -30,7 +30,6 @@ Imports:
 Suggests: 
     callr,
     ggplot2,
-    here,
     knitr,
     rmarkdown,
     scales,
