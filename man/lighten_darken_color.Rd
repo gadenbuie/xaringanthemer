@@ -17,6 +17,10 @@ darken_color(color_hex, strength = 0.8)
 where 0 is entirely the original color and 1 is entirely white
 (\code{lighten_color()}) or black (\code{darken_color()}).}
 }
+\value{
+A character string with the lightened or darkened color in
+hexadecimal format.
+}
 \description{
 Produces a linear blend of the color with white or black.
 }

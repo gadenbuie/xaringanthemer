@@ -14,6 +14,9 @@ google_language_codes(
 \arguments{
 \item{language_codes}{Vector of potential Google language codes}
 }
+\value{
+A vector of Google Font language codes matching \code{language_codes}.
+}
 \description{
 Gives a list of valid Language Codes for Google Fonts, or
 validates that the language codes given are valid.

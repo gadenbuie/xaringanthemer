@@ -15,6 +15,10 @@ choose_dark_or_light(x, black = "#000000", white = "#FFFFFF")
 \item{white}{Text or foreground color or expression, e.g. "#EEE" or
 \code{substitute(lighten_color(x, 0.8))}, if white text provides the best contrast.}
 }
+\value{
+The \code{black} color or \code{white} color according to which color provides
+the greates contrast with the input color.
+}
 \description{
 Takes a color input as \code{x} and returns either the black or white color (or
 expression) if dark or light text should be used over the input color for

@@ -8,4 +8,8 @@
 #' xaringan::moon_reader:
 #'   css: xaringan-themer.css
 #' ````
-#
+#'
+#' @return The CSS styles are written to the file path provided in `outfile`
+#'   (by default to `xaringan-themer.css`). If `outfile` is `NULL`, the CSS is
+#'   returned directly as a character string.
+#'

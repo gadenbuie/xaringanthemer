@@ -37,6 +37,12 @@ solarized_light(...)
 
 solarized_dark(...)
 }
+\arguments{
+\item{...}{Argumets passed to the new or renamed functions.}
+}
+\value{
+The result of the new or renamed function.
+}
 \description{
 These functions in xaringanthemer have been deprecated or renamed.
 

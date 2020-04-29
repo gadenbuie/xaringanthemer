@@ -11,6 +11,9 @@ apply_alpha(color_hex, opacity = 0.5)
 
 \item{opacity}{Desired opacity of the output color}
 }
+\value{
+A character string with added opacity level as hexadecimal characters.
+}
 \description{
 Applies alpha (or opacity) to a color in hexadecimal form by
 converting opacity in the \verb{[0, 1]} range to hex in the \verb{[0, 255]} range

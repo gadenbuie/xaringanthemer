@@ -41,6 +41,7 @@ call_style_xaringan <- function() {
 #' @param ... Font weights to include, example "400", "400i"
 #' @param languages Font languages to include (dependent on the font.) See
 #'   [google_language_codes()].
+#' @return A `"google_font"` object.
 #' @export
 google_font <- function(family, ..., languages = NULL) {
   base <- "https://fonts.googleapis.com/css?family="
@@ -70,6 +71,7 @@ is_google_font <- function(x) inherits(x, "google_font")
 #'   validates that the language codes given are valid.
 #' @seealso [google_font()]
 #' @param language_codes Vector of potential Google language codes
+#' @return A vector of Google Font language codes matching `language_codes`.
 #' @export
 google_language_codes <- function(
   language_codes = c(

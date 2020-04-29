@@ -2,6 +2,8 @@
 #'
 #' These functions in xaringanthemer have been deprecated or renamed.
 #'
+#' @param ... Argumets passed to the new or renamed functions.
+#' @return The result of the new or renamed function.
 #' @name xaringanthemer-deprecated
 NULL
 

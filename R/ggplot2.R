@@ -1005,6 +1005,7 @@ requires_xaringanthemer_env <- function(
 #' theme_xaringan_get_value("header_color")
 #' theme_xaringan_get_value("text_bold_color")
 #'
+#' @return The value of the xaringanthemer style parameter.
 #' @export
 theme_xaringan_get_value <- function(setting, css_file = NULL) {
   requires_xaringanthemer_env(css_file = css_file)

@@ -16,6 +16,9 @@ lets you create a \pkg{ggplot2} theme for your \pkg{xaringan} slides, even
 if you have only saved your theme CSS file and you aren't creating your
 CSS theme with \pkg{xaringanthemer} in your slides' source file.}
 }
+\value{
+The value of the xaringanthemer style parameter.
+}
 \description{
 A helper function to retrieve the value of style settings as set by a
 xaringanthemer style function, for use in plotting and other circumstances.

@@ -14,6 +14,9 @@ google_font(family, ..., languages = NULL)
 \item{languages}{Font languages to include (dependent on the font.) See
 \code{\link[=google_language_codes]{google_language_codes()}}.}
 }
+\value{
+A \code{"google_font"} object.
+}
 \description{
 Builds Google Fonts URL from family name. Extra weights are given in the
 \code{...} parameters. Languages can be specified in \code{langauges} and must one or

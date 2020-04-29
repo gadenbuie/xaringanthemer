@@ -413,6 +413,11 @@ class with the \code{font-family} property. See the \strong{Fonts} section of
 
 \item{outfile}{Customized xaringan CSS output file name, default is "xaringan-themer.css"}
 }
+\value{
+The CSS styles are written to the file path provided in \code{outfile}
+(by default to \code{xaringan-themer.css}). If \code{outfile} is \code{NULL}, the CSS is
+returned directly as a character string.
+}
 \description{
 The default xaringan theme with a single color used for color
 accents on select elements (headers, bold text, etc.).

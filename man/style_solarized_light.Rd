@@ -394,6 +394,11 @@ class with the \code{font-family} property. See the \strong{Fonts} section of
 
 \item{outfile}{Customized xaringan CSS output file name, default is "xaringan-themer.css"}
 }
+\value{
+The CSS styles are written to the file path provided in \code{outfile}
+(by default to \code{xaringan-themer.css}). If \code{outfile} is \code{NULL}, the CSS is
+returned directly as a character string.
+}
 \description{
 A light theme based around on the solarized color scheme.
 Works well with "\code{highlightStyle: solarized-dark}" or
