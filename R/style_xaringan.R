@@ -423,7 +423,7 @@ style_xaringan <- function(
     if (is.null(val)) next
     val <- val[!is.na(val)]
     is_na <- length(val) == 0
-    if (is_na) assign(var, NULL)
+    if (is_na) assign(var, NULL, envir = sys.frame(sys.nframe()))
   }
   
   # prepare variables for template
