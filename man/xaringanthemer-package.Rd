@@ -4,7 +4,7 @@
 \name{xaringanthemer-package}
 \alias{xaringanthemer}
 \alias{xaringanthemer-package}
-\title{xaringanthemer: Custom 'Xaringan' CSS Themes}
+\title{xaringanthemer: Custom 'xaringan' CSS Themes}
 \description{
 \if{html}{\figure{logo.png}{options: align='right' alt='logo' width='120'}}
 

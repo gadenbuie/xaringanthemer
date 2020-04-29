@@ -1,6 +1,6 @@
 Type: Package
 Package: xaringanthemer
-Title: Custom 'Xaringan' CSS Themes
+Title: Custom 'xaringan' CSS Themes
 Version: 0.3.0
 Authors@R: 
     person(given = "Garrick",
