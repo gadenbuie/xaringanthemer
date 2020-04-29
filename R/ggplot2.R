@@ -819,16 +819,13 @@ register_font <- function(
   if (!requires_package(pkg = "sysfonts", fn, required = FALSE)) {
     return(family)
   } else if (family == "Droid Serif") {
-    dstmp <- tempfile("droid-serif", fileext = "ttf")
-    utils::download.file(
-      "https://github.com/google/fonts/raw/feb15862e0c66ec0e7531ca4c3ef2607071ea700/apache/droidserif/DroidSerif-Regular.ttf",
-      dstmp,
-      quiet = TRUE
-    )
-    sysfonts::font_add(
-      family = "Droid Serif",
-      regular = dstmp
-    )
+    dstmp <- download_tmp_droid_serif()
+    if (!is.null(dstmp)) {
+      sysfonts::font_add(
+        family = "Droid Serif",
+        regular = dstmp
+      )
+    }
   } else if (!family %in% sysfonts::font_families()) {
     is_default_font <- family %in% c(
       "Roboto",
@@ -866,6 +863,27 @@ register_font <- function(
     family
   )
   family
+}
+
+download_tmp_droid_serif <- function() {
+  if (isTRUE(xaringanthemer_env[["declined_droid_serif"]])) return(NULL)
+  message(
+    "Using 'Droid Serif' in `theme_xaringan()` requires downloading the font from Google Fonts into a temporary file. "
+  )
+  ok_to_download <- utils::askYesNo("Do you want to try to download this font now?")
+  if (identical(ok_to_download, FALSE)) {
+    xaringanthemer_env[["declined_droid_serif"]] <- TRUE
+  }
+  if (!isTRUE(ok_to_download)) {
+    return(NULL)
+  }
+  dstmp <- tempfile("droid-serif", fileext = "ttf")
+  utils::download.file(
+    "https://github.com/google/fonts/raw/feb15862e0c66ec0e7531ca4c3ef2607071ea700/apache/droidserif/DroidSerif-Regular.ttf",
+    dstmp,
+    quiet = TRUE
+  )
+  dstmp
 }
 
 verify_fig_showtext <- function(fn = "theme_xaringan_base") {
