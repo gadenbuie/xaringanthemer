@@ -121,12 +121,23 @@ for color accents on select elements (headers, bold text, etc.)." />
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li>
-  <a href="../news/index.html">
+        <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     <span class="fa fa fa fa-newspaper-o fa-lg"></span>
      
     
+     
+    <span class="caret"></span>
   </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="https://garrickadenbuie.com/blog/xaringanthemer-v0-3-0/">xaringan 0.3.0</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="../news/index.html">Changelog</a>
+    </li>
+  </ul>
 </li>
 <li>
   <a href="https://github.com/gadenbuie/xaringanthemer">
@@ -215,7 +226,8 @@ for color accents on select elements (headers, bold text, etc.).</p>
   <span class='kw'>header_background_text_color</span> <span class='kw'>=</span> <span class='no'>background_color</span>,
   <span class='kw'>header_background_padding</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
   <span class='kw'>header_background_content_padding_top</span> <span class='kw'>=</span> <span class='st'>"7rem"</span>,
-  <span class='kw'>header_background_ignore_classes</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"normal"</span>, <span class='st'>"inverse"</span>, <span class='st'>"title"</span>, <span class='st'>"middle"</span>, <span class='st'>"bottom"</span>),
+  <span class='kw'>header_background_ignore_classes</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"normal"</span>, <span class='st'>"inverse"</span>, <span class='st'>"title"</span>, <span class='st'>"middle"</span>,
+    <span class='st'>"bottom"</span>),
   <span class='kw'>text_slide_number_font_size</span> <span class='kw'>=</span> <span class='st'>"0.9em"</span>,
   <span class='kw'>text_font_google</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
   <span class='kw'>text_font_family</span> <span class='kw'>=</span> <span class='fu'><a href='style_xaringan.html'>xaringanthemer_font_default</a></span>(<span class='st'>"text_font_family"</span>),
