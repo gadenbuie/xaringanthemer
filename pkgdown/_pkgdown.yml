@@ -71,9 +71,13 @@ navbar:
   right:
     news:
       icon: fa fa-newspaper-o fa-lg
-      href: news/index.html
       text: ""
-      title: "Changelog"
+      menu:
+      - text: "xaringan 0.3.0"
+        href: https://garrickadenbuie.com/blog/xaringanthemer-v0-3-0/
+      - text: -------
+      - text: "Changelog"
+        href: news/index.html
     github:
       icon: fa-github fa-lg
       href: https://github.com/gadenbuie/xaringanthemer
