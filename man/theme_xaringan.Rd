@@ -98,10 +98,10 @@ if (has_ggplot2) {
   )
 
   library(ggplot2)
-  ggplot(iris) +
-    aes(Petal.Length, Petal.Width) +
+  ggplot(mpg) +
+    aes(cty, hwy) +
     geom_point() +
-    ggtitle("Yet another Iris plot") +
+    ggtitle("Fuel Efficiency of Various Cars") +
     theme_xaringan()
 }
 }

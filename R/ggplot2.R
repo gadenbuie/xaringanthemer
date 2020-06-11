@@ -44,10 +44,10 @@
 #'   )
 #'
 #'   library(ggplot2)
-#'   ggplot(iris) +
-#'     aes(Petal.Length, Petal.Width) +
+#'   ggplot(mpg) +
+#'     aes(cty, hwy) +
 #'     geom_point() +
-#'     ggtitle("Yet another Iris plot") +
+#'     ggtitle("Fuel Efficiency of Various Cars") +
 #'     theme_xaringan()
 #' }
 #' @return A ggplot2 theme
@@ -132,10 +132,10 @@ theme_xaringan <- function(
 #'   )
 #'
 #'   library(ggplot2)
-#'   ggplot(iris) +
-#'     aes(Petal.Length, Petal.Width) +
+#'   ggplot(mpg) +
+#'     aes(cty, hwy) +
 #'     geom_point() +
-#'     ggtitle("Yet another Iris plot") +
+#'     ggtitle("Fuel Efficiency of Various Cars") +
 #'     # themed to match the inverse slides: teal background with dark blue text
 #'     theme_xaringan_inverse()
 #' }
@@ -237,8 +237,8 @@ theme_xaringan_inverse <- function(
 #' if (has_ggplot2) {
 #'   library(ggplot2)
 #'
-#'   plot1 <- ggplot(iris) +
-#'     aes(Petal.Length, Petal.Width) +
+#'   plot1 <- ggplot(mpg) +
+#'     aes(cty, hwy) +
 #'     geom_point() +
 #'     theme_xaringan_base(
 #'       text_color = "#602f6b",       # imperial
@@ -249,16 +249,16 @@ theme_xaringan_inverse <- function(
 #'       set_ggplot_defaults = TRUE
 #'     ) +
 #'     labs(
-#'       title = "Basic Iris Plot",
+#'       title = "Fuel Efficiency of Various Cars",
 #'       subtitle = "+ theme_xaringan_base()",
 #'       caption = "xaringanthemer"
 #'     )
 #'
 #'   print(plot1)
 #'
-#'   plot2 <- ggplot(iris) +
-#'     aes(Sepal.Width) +
-#'     geom_histogram(binwidth = 0.1) +
+#'   plot2 <- ggplot(mpg) +
+#'     aes(hwy) +
+#'     geom_histogram(binwidth = 2) +
 #'     theme_xaringan_base(
 #'       text_color = "#a8a9c8",       # light purple
 #'       background_color = "#303163", # deep slate purple
@@ -268,7 +268,7 @@ theme_xaringan_inverse <- function(
 #'       set_ggplot_defaults = TRUE
 #'     ) +
 #'     labs(
-#'       title = "Basic Iris Plot",
+#'       title = "Highway Fuel Efficiency",
 #'       subtitle = "+ theme_xaringan_base()",
 #'       caption = "xaringanthemer"
 #'     )
