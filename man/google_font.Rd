@@ -19,7 +19,7 @@ A \code{"google_font"} object.
 }
 \description{
 Builds Google Fonts URL from family name. Extra weights are given in the
-\code{...} parameters. Languages can be specified in \code{langauges} and must one or
+\code{...} parameters. Languages can be specified in \code{languages} and must one or
 more of the language codes as given by \code{google_language_codes()}.
 }
 \examples{
