@@ -31,7 +31,7 @@ call_style_xaringan <- function() {
 #' Specify Google Font
 #'
 #' Builds Google Fonts URL from family name. Extra weights are given in the
-#' `...` parameters. Languages can be specified in `langauges` and must one or
+#' `...` parameters. Languages can be specified in `languages` and must one or
 #' more of the language codes as given by `google_language_codes()`.
 #'
 #' @examples
