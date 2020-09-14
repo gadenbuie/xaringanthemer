@@ -170,24 +170,32 @@ img { max-width: 100%; border: none; }
 <span id="cb1-12"><a href="#cb1-12"></a><span class="bn">```</span></span></code></pre></div>
 <p>If you use a hidden chunk like this one inside your slides’ R Markdown source file, <code><a href="../reference/theme_xaringan.html">theme_xaringan()</a></code> will know which colors and fonts you’ve picked.</p>
 <p>Adding <code><a href="../reference/theme_xaringan.html">theme_xaringan()</a></code> to a ggplot, like this demonstration plot using the <code>mpg</code> dataset from ggplot2, changes the colors and fonts of your plot theme.</p>
-<div class="sourceCode" id="cb2"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">ggplot2</span>)
+<div class="sourceCode" id="cb2"><pre class="downlit">
+<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="kw"><a href="http://ggplot2.tidyverse.org">ggplot2</a></span>)
 
-<span class="no">g_base</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span>(<span class="no">mpg</span>) +
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(<span class="no">hwy</span>, <span class="no">cty</span>) +
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span>() +
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span>(<span class="kw">x</span> <span class="kw">=</span> <span class="st">"Highway MPG"</span>, <span class="kw">y</span> <span class="kw">=</span> <span class="st">"City MPG"</span>, <span class="kw">title</span> <span class="kw">=</span> <span class="st">"Fuel Efficiency"</span>)
+<span class="kw">g_base</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span>(<span class="kw">mpg</span>) <span class="op">+</span> 
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(<span class="kw">hwy</span>, <span class="kw">cty</span>) <span class="op">+</span> 
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span>() <span class="op">+</span>
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span>(x = <span class="st">"Highway MPG"</span>, y = <span class="st">"City MPG"</span>, title = <span class="st">"Fuel Efficiency"</span>)
 
 <span class="co"># Basic plot with default theme</span>
-<span class="no">g_base</span></pre></body></html></div>
-<div class="sourceCode" id="cb3"><html><body><pre class="r"><span class="co"># Fancy slide-matching themed plot</span>
-<span class="no">g_base</span> + <span class="fu"><a href="../reference/theme_xaringan.html">theme_xaringan</a></span>()</pre></body></html></div>
+<span class="kw">g_base</span>
+</pre></div>
+<div class="sourceCode" id="cb3"><pre class="downlit">
+<span class="co"># Fancy slide-matching themed plot</span>
+<span class="kw">g_base</span> <span class="op">+</span> <span class="fu"><a href="../reference/theme_xaringan.html">theme_xaringan</a></span>()
+</pre></div>
 <p><img src="ggplot2-themes_files/figure-html/ggplot2-demo-1-1.png" width="48%"><img src="ggplot2-themes_files/figure-html/ggplot2-demo-2-1.png" width="48%"></p>
 <p>With <code><a href="../reference/theme_xaringan.html">theme_xaringan()</a></code> the fonts and colors match the slide theme. The default colors of points (like other geometries) has been changed as well to match the slide colors.</p>
 <p>To restore the previous default colors of ggplot2 geoms, call</p>
-<div class="sourceCode" id="cb4"><html><body><pre class="r"><span class="fu"><a href="../reference/theme_xaringan_set_defaults.html">theme_xaringan_restore_defaults</a></span>()</pre></body></html></div>
+<div class="sourceCode" id="cb4"><pre class="downlit">
+<span class="fu"><a href="../reference/theme_xaringan_set_defaults.html">theme_xaringan_restore_defaults</a></span>()
+</pre></div>
 <p>Add <code><a href="../reference/theme_xaringan_inverse.html">theme_xaringan_inverse()</a></code> to automatically create a plot that matches the inverse slide style.</p>
-<div class="sourceCode" id="cb5"><html><body><pre class="r"><span class="co"># theme_xaringan() on the left, theme_xaringan_inverse() on the right</span>
-<span class="no">g_base</span> + <span class="fu"><a href="../reference/theme_xaringan_inverse.html">theme_xaringan_inverse</a></span>()</pre></body></html></div>
+<div class="sourceCode" id="cb5"><pre class="downlit">
+<span class="co"># theme_xaringan() on the left, theme_xaringan_inverse() on the right</span>
+<span class="kw">g_base</span> <span class="op">+</span> <span class="fu"><a href="../reference/theme_xaringan_inverse.html">theme_xaringan_inverse</a></span>()
+</pre></div>
 <p><img src="ggplot2-themes_files/figure-html/ggplot2-demo-2-1.png" width="48%"><img src="ggplot2-themes_files/figure-html/ggplot2-demo-inverse-1.png" width="48%"></p>
 </div>
 <div id="using-xaringan-themer-css" class="section level2">
@@ -196,49 +204,59 @@ img { max-width: 100%; border: none; }
 <p>Once you’ve set up your custom xaringan theme, you might want to use the theme’s CSS file for new presentations instead of rebuilding your theme with every new slide deck.</p>
 <p>In these cases, <code><a href="../reference/theme_xaringan.html">theme_xaringan()</a></code> will look for a CSS file written by <strong>xaringanthemer</strong> in your slides’ directory or in a sub-folder under the same directory that it can use to determine the colors and fonts used in your slides.</p>
 <p>If you happen to have multiple slide themes written by <strong>xaringanthemer</strong> in the same directory, the one named <code>xaringan-themer.css</code> will be used. If xaringanthemer picks the wrong file, you can use the <code>css_file</code> in <code><a href="../reference/theme_xaringan.html">theme_xaringan()</a></code> to specify exactly which CSS file to use.</p>
-<div class="sourceCode" id="cb6"><html><body><pre class="r"><span class="fu"><a href="../reference/theme_xaringan.html">theme_xaringan</a></span>(<span class="kw">css_file</span> <span class="kw">=</span> <span class="st">"my-slide-style.css"</span>)</pre></body></html></div>
+<div class="sourceCode" id="cb6"><pre class="downlit">
+<span class="fu"><a href="../reference/theme_xaringan.html">theme_xaringan</a></span>(css_file = <span class="st">"my-slide-style.css"</span>)
+</pre></div>
 <p>Note that you can use <code><a href="../reference/theme_xaringan.html">theme_xaringan()</a></code> anywhere you want, not just in xaringan slides! (For example, <code><a href="../reference/theme_xaringan.html">theme_xaringan()</a></code> is working great in these vignettes!) This means that you can use your plot theme in reports and websites while maintaining a consistent look and feel or brand.</p>
 <p>Finally, you don’t even need a xaringanthemer CSS file. You can specify the key ingredients for the theme as arguments to <code><a href="../reference/theme_xaringan.html">theme_xaringan()</a></code>, namely text, background, and accent colors as well as text and title fonts.</p>
 <p>The R chunk below replicated the demonstrated theme, but doesn’t require a slide style to be set or stored in a CSS file.</p>
-<div class="sourceCode" id="cb7"><html><body><pre class="r"><span class="fu"><a href="../reference/theme_xaringan.html">theme_xaringan</a></span>(
-  <span class="kw">text_color</span> <span class="kw">=</span> <span class="st">"#3D3E38"</span>,
-  <span class="kw">background_color</span> <span class="kw">=</span> <span class="st">"#FFFFFF"</span>,
-  <span class="kw">accent_color</span> <span class="kw">=</span> <span class="st">"#DC322F"</span>,
-  <span class="kw">text_font</span> <span class="kw">=</span> <span class="st">"Kelly Slab"</span>,
-  <span class="kw">text_font_use_google</span> <span class="kw">=</span> <span class="fl">TRUE</span>,
-  <span class="kw">title_font</span> <span class="kw">=</span> <span class="st">"Oleo Script"</span>,
-  <span class="kw">title_font_use_google</span> <span class="kw">=</span> <span class="fl">TRUE</span>
-)</pre></body></html></div>
+<div class="sourceCode" id="cb7"><pre class="downlit">
+<span class="fu"><a href="../reference/theme_xaringan.html">theme_xaringan</a></span>(
+  text_color = <span class="st">"#3D3E38"</span>,
+  background_color = <span class="st">"#FFFFFF"</span>,
+  accent_color = <span class="st">"#DC322F"</span>,
+  text_font = <span class="st">"Kelly Slab"</span>,
+  text_font_use_google = <span class="fl">TRUE</span>,
+  title_font = <span class="st">"Oleo Script"</span>,
+  title_font_use_google = <span class="fl">TRUE</span>
+)
+</pre></div>
 </div>
 <div id="colors" class="section level2">
 <h2 class="hasAnchor">
 <a href="#colors" class="anchor"></a>Colors</h2>
 <p>As demonstrated above, <code><a href="../reference/theme_xaringan.html">theme_xaringan()</a></code> and <code><a href="../reference/theme_xaringan_inverse.html">theme_xaringan_inverse()</a></code> modify the default colors and fonts of geometries. This means that <code><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point()</a></code>, <code><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar()</a></code>, <code><a href="https://ggplot2.tidyverse.org/reference/geom_text.html">geom_text()</a></code> and other geoms used in your plots will reasonably match your slide themes with no extra work.</p>
-<div class="sourceCode" id="cb8"><html><body><pre class="r"><span class="no">g_diamonds</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span>(<span class="no">diamonds</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(<span class="kw">x</span> <span class="kw">=</span> <span class="no">cut</span>)) +
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span>() +
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span>(<span class="kw">x</span> <span class="kw">=</span> <span class="kw">NULL</span>, <span class="kw">y</span> <span class="kw">=</span> <span class="kw">NULL</span>, <span class="kw">title</span> <span class="kw">=</span> <span class="st">"Diamond Cut Quality"</span>) +
+<div class="sourceCode" id="cb8"><pre class="downlit">
+<span class="kw">g_diamonds</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span>(<span class="kw">diamonds</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(x = <span class="kw">cut</span>)) <span class="op">+</span>
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span>() <span class="op">+</span>
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span>(x = <span class="kw">NULL</span>, y = <span class="kw">NULL</span>, title = <span class="st">"Diamond Cut Quality"</span>) <span class="op">+</span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/lims.html">ylim</a></span>(<span class="fl">0</span>, <span class="fl">25000</span>)
 
-<span class="no">g_diamonds</span> + <span class="fu"><a href="../reference/theme_xaringan.html">theme_xaringan</a></span>()</pre></body></html></div>
+<span class="kw">g_diamonds</span> <span class="op">+</span> <span class="fu"><a href="../reference/theme_xaringan.html">theme_xaringan</a></span>()
+</pre></div>
 <p><img src="ggplot2-themes_files/figure-html/demo-geom-defaults-1.png" width="960"></p>
 <p>Whenever <code><a href="../reference/theme_xaringan.html">theme_xaringan()</a></code> or <code><a href="../reference/theme_xaringan_inverse.html">theme_xaringan_inverse()</a></code> are called, the default values of many of ggplot2 geoms are set by default. You can opt out of this by setting <code>set_ggplot_defaults = FALSE</code> when using either theme. You can also restore the geom aesthetic defaults to their original values before the first time <code><a href="../reference/theme_xaringan.html">theme_xaringan()</a></code> or <code><a href="../reference/theme_xaringan_inverse.html">theme_xaringan_inverse()</a></code> were used by running</p>
-<div class="sourceCode" id="cb9"><html><body><pre class="r"><span class="fu"><a href="../reference/theme_xaringan_set_defaults.html">theme_xaringan_restore_defaults</a></span>()</pre></body></html></div>
+<div class="sourceCode" id="cb9"><pre class="downlit">
+<span class="fu"><a href="../reference/theme_xaringan_set_defaults.html">theme_xaringan_restore_defaults</a></span>()
+</pre></div>
 <div id="scale-xaringan" class="section level3">
 <h3 class="hasAnchor">
 <a href="#scale-xaringan" class="anchor"></a>Custom Color and Fill Scales</h3>
 <p>xaringanthemer includes monotone color and fill scales to match your ggplot2 theme. The scale functions all follow the naming pattern <code>scale_xaringan_&lt;aes&gt;_&lt;data_type&gt;()</code>, where <code>&lt;aes&gt;</code> is replaced with either <code>color</code> or <code>fill</code> and <code>&lt;data_type&gt;</code> is one of <code>discrete</code> or <code>continuous</code>.</p>
 <p>These scales use <code><a href="http://colorspace.R-Forge.R-project.org//reference/hcl_palettes.html">colorspace::sequential_hcl()</a></code> to create a sequential, monotone color scale based on the primary accent color in your slides. Color scales matching the inverse slides are possible by setting the argument <code>inverse = TRUE</code>.</p>
-<div class="sourceCode" id="cb10"><html><body><pre class="r"><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span>(<span class="no">diamonds</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(<span class="kw">x</span> <span class="kw">=</span> <span class="no">cut</span>)) +
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span>(<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(<span class="kw">fill</span> <span class="kw">=</span> <span class="no">..count..</span>), <span class="kw">show.legend</span> <span class="kw">=</span> <span class="fl">FALSE</span>) +
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span>(<span class="kw">x</span> <span class="kw">=</span> <span class="kw">NULL</span>, <span class="kw">y</span> <span class="kw">=</span> <span class="st">"Count"</span>, <span class="kw">title</span> <span class="kw">=</span> <span class="st">"Diamond Cut Quality"</span>) +
-  <span class="fu"><a href="../reference/theme_xaringan.html">theme_xaringan</a></span>() +
+<div class="sourceCode" id="cb10"><pre class="downlit">
+<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span>(<span class="kw">diamonds</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(x = <span class="kw">cut</span>)) <span class="op">+</span>
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span>(<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(fill = <span class="kw">..count..</span>), show.legend = <span class="fl">FALSE</span>) <span class="op">+</span>
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span>(x = <span class="kw">NULL</span>, y = <span class="st">"Count"</span>, title = <span class="st">"Diamond Cut Quality"</span>) <span class="op">+</span>
+  <span class="fu"><a href="../reference/theme_xaringan.html">theme_xaringan</a></span>() <span class="op">+</span>
   <span class="fu"><a href="../reference/scale_xaringan.html">scale_xaringan_fill_continuous</a></span>()
 
-<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span>(<span class="no">mpg</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(<span class="kw">x</span> <span class="kw">=</span> <span class="no">hwy</span>, <span class="kw">y</span> <span class="kw">=</span> <span class="no">cty</span>)) +
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_count.html">geom_count</a></span>(<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(<span class="kw">color</span> <span class="kw">=</span> <span class="no">..n..</span>), <span class="kw">show.legend</span> <span class="kw">=</span> <span class="fl">FALSE</span>) +
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span>(<span class="kw">x</span> <span class="kw">=</span> <span class="st">"Highway MPG"</span>, <span class="kw">y</span> <span class="kw">=</span> <span class="st">"City MPG"</span>, <span class="kw">title</span> <span class="kw">=</span> <span class="st">"Fuel Efficiency"</span>) +
-  <span class="fu"><a href="../reference/theme_xaringan_inverse.html">theme_xaringan_inverse</a></span>() +
-  <span class="fu"><a href="../reference/scale_xaringan.html">scale_xaringan_color_continuous</a></span>(<span class="kw">breaks</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span>(<span class="fl">3</span>, <span class="fl">12</span>, <span class="fl">2</span>), <span class="kw">inverse</span> <span class="kw">=</span> <span class="fl">TRUE</span>, <span class="kw">begin</span> <span class="kw">=</span> <span class="fl">1</span>, <span class="kw">end</span> <span class="kw">=</span> <span class="fl">0</span>)</pre></body></html></div>
+<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span>(<span class="kw">mpg</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(x = <span class="kw">hwy</span>, y = <span class="kw">cty</span>)) <span class="op">+</span>
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_count.html">geom_count</a></span>(<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(color = <span class="kw">..n..</span>), show.legend = <span class="fl">FALSE</span>) <span class="op">+</span>
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span>(x = <span class="st">"Highway MPG"</span>, y = <span class="st">"City MPG"</span>, title = <span class="st">"Fuel Efficiency"</span>) <span class="op">+</span>
+  <span class="fu"><a href="../reference/theme_xaringan_inverse.html">theme_xaringan_inverse</a></span>() <span class="op">+</span>
+  <span class="fu"><a href="../reference/scale_xaringan.html">scale_xaringan_color_continuous</a></span>(breaks = <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span>(<span class="fl">3</span>, <span class="fl">12</span>, <span class="fl">2</span>), inverse = <span class="fl">TRUE</span>, begin = <span class="fl">1</span>, end = <span class="fl">0</span>)
+</pre></div>
 <p><img src="ggplot2-themes_files/figure-html/scale-xaringan-1.png" width="48%"><img src="ggplot2-themes_files/figure-html/scale-xaringan-2.png" width="48%"></p>
 <p>In general, these color scales aren’t great at representing the underlying data. In both examples above, the color and fill scales duplicate information displayed via other aesthetics (the height of the bar or the size of the point). I recommend using these scales primarily for style, although the scales can be more or less effective depending on your color scheme.</p>
 <p>The scales come with a few more options:</p>
@@ -264,13 +282,15 @@ img { max-width: 100%; border: none; }
 <li>
 <code>header_font_google = google_font("Oleo Script")</code>.</li>
 </ul>
-<div class="sourceCode" id="cb11"><html><body><pre class="r"><span class="no">g_diamonds_with_text</span> <span class="kw">&lt;-</span>
-  <span class="no">g_diamonds</span> +
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_text.html">geom_text</a></span>(<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(<span class="kw">y</span> <span class="kw">=</span> <span class="no">..count..</span>, <span class="kw">label</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/format.html">format</a></span>(<span class="no">..count..</span>, <span class="kw">big.mark</span> <span class="kw">=</span> <span class="st">","</span>)),
-            <span class="kw">vjust</span> <span class="kw">=</span> -<span class="fl">0.30</span>, <span class="kw">size</span> <span class="kw">=</span> <span class="fl">8</span>, <span class="kw">stat</span> <span class="kw">=</span> <span class="st">"count"</span>) +
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span>(<span class="kw">x</span> <span class="kw">=</span> <span class="st">"Cut"</span>, <span class="kw">y</span> <span class="kw">=</span> <span class="st">"Count"</span>)
+<div class="sourceCode" id="cb11"><pre class="downlit">
+<span class="kw">g_diamonds_with_text</span> <span class="op">&lt;-</span> 
+  <span class="kw">g_diamonds</span> <span class="op">+</span> 
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_text.html">geom_text</a></span>(<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(y = <span class="kw">..count..</span>, label = <span class="fu"><a href="https://rdrr.io/r/base/format.html">format</a></span>(<span class="kw">..count..</span>, big.mark = <span class="st">","</span>)),
+            vjust = <span class="op">-</span><span class="fl">0.30</span>, size = <span class="fl">8</span>, stat = <span class="st">"count"</span>) <span class="op">+</span>
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span>(x = <span class="st">"Cut"</span>, y = <span class="st">"Count"</span>)
 
-<span class="no">g_diamonds_with_text</span> + <span class="fu"><a href="../reference/theme_xaringan.html">theme_xaringan</a></span>()</pre></body></html></div>
+<span class="kw">g_diamonds_with_text</span> <span class="op">+</span> <span class="fu"><a href="../reference/theme_xaringan.html">theme_xaringan</a></span>()
+</pre></div>
 <p><img src="ggplot2-themes_files/figure-html/text%20demo-1.png" width="960"></p>
 <p><code><a href="../reference/theme_xaringan.html">theme_xaringan()</a></code> applies the header font to the plot and axis titles and the text font to the axis ticks labels and any text geoms or annotations.</p>
 </div>
@@ -278,11 +298,13 @@ img { max-width: 100%; border: none; }
 <h3 class="hasAnchor">
 <a href="#manually-specify-plot-fonts" class="anchor"></a>Manually specify plot fonts</h3>
 <p>You can also specify specific fonts for your plot theme. Both <code>text_font</code> and <code>title_font</code> in <code><a href="../reference/theme_xaringan.html">theme_xaringan()</a></code> and <code><a href="../reference/theme_xaringan_inverse.html">theme_xaringan_inverse()</a></code> accept <code><a href="../reference/google_font.html">google_font()</a></code>s directly.</p>
-<div class="sourceCode" id="cb12"><html><body><pre class="r"><span class="no">g_diamonds_with_text</span> +
+<div class="sourceCode" id="cb12"><pre class="downlit">
+<span class="kw">g_diamonds_with_text</span> <span class="op">+</span>
   <span class="fu"><a href="../reference/theme_xaringan.html">theme_xaringan</a></span>(
-    <span class="kw">text_font</span> <span class="kw">=</span> <span class="fu"><a href="../reference/google_font.html">google_font</a></span>(<span class="st">"Ranga"</span>),
-    <span class="kw">title_font</span> <span class="kw">=</span> <span class="fu"><a href="../reference/google_font.html">google_font</a></span>(<span class="st">"Holtwood One SC"</span>)
-  )</pre></body></html></div>
+    text_font = <span class="fu"><a href="../reference/google_font.html">google_font</a></span>(<span class="st">"Ranga"</span>),
+    title_font = <span class="fu"><a href="../reference/google_font.html">google_font</a></span>(<span class="st">"Holtwood One SC"</span>)
+  )
+</pre></div>
 <p><img src="ggplot2-themes_files/figure-html/text-demo-2-1.png" width="960"></p>
 </div>
 <div id="using-fonts-not-in-google-fonts" class="section level3">
@@ -297,28 +319,32 @@ img { max-width: 100%; border: none; }
 <p>but sysfonts won’t know where to find the TTF font files for this font.</p>
 <p>To register the font with sysfonts, we use <code><a href="https://rdrr.io/pkg/sysfonts/man/font_add.html">sysfonts::font_add()</a></code>, but first we need to download the font file — the <code><a href="https://rdrr.io/pkg/sysfonts/man/font_add.html">sysfonts::font_add()</a></code> function requires the font file to be local.</p>
 <p>By inspecting the CSS file at the link I used in <code>text_font_url</code>, I found a direct URL for the <code>.ttf</code> files for <em>GlacialIndifferenceRegular</em>. I’ve included the code I used to download the font to a temporary file below, but in case the URL breaks, I’ve included <em>Glacial Indifference</em> in the xaringanthemer package.</p>
-<div class="sourceCode" id="cb14"><html><body><pre class="r"><span class="no">font_url</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/file.path.html">file.path</a></span>(
+<div class="sourceCode" id="cb14"><pre class="downlit">
+<span class="kw">font_url</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/file.path.html">file.path</a></span>(
   <span class="st">"https://fontlibrary.org/assets/fonts/glacial-indifference"</span>,
-  <span class="st">"5f2cf277506e19ec77729122f27b1faf/0820b3c58fed35de298219f314635982"</span>,
+  <span class="st">"5f2cf277506e19ec77729122f27b1faf/0820b3c58fed35de298219f314635982"</span>, 
   <span class="st">"GlacialIndifferenceRegular.ttf"</span>
 )
 
-<span class="no">font_temp</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/tempfile.html">tempfile</a></span>()
-<span class="fu"><a href="https://rdrr.io/r/utils/download.file.html">download.file</a></span>(<span class="no">font_url</span>, <span class="no">font_temp</span>)</pre></body></html></div>
-<div class="sourceCode" id="cb15"><html><body><pre class="r"><span class="co"># Path to the local custom font file</span>
-<span class="no">font_temp</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html">system.file</a></span>(
-  <span class="st">"fonts/GlacialIndifferenceRegular.ttf"</span>, <span class="kw">package</span> <span class="kw">=</span> <span class="st">"xaringanthemer"</span>
+<span class="kw">font_temp</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/tempfile.html">tempfile</a></span>()
+<span class="fu"><a href="https://rdrr.io/r/utils/download.file.html">download.file</a></span>(<span class="kw">font_url</span>, <span class="kw">font_temp</span>)
+</pre></div>
+<div class="sourceCode" id="cb15"><pre class="downlit">
+<span class="co"># Path to the local custom font file</span>
+<span class="kw">font_temp</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html">system.file</a></span>(
+  <span class="st">"fonts/GlacialIndifferenceRegular.ttf"</span>, package = <span class="st">"xaringanthemer"</span>
 )
 
 <span class="co"># Register the font with sysfonts/showtext</span>
-<span class="kw pkg">sysfonts</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/sysfonts/man/font_add.html">font_add</a></span>(<span class="kw">family</span> <span class="kw">=</span> <span class="st">"GlacialIndifferenceRegular"</span>, <span class="kw">regular</span> <span class="kw">=</span> <span class="no">font_temp</span>)
+<span class="kw">sysfonts</span>::<span class="fu"><a href="https://rdrr.io/pkg/sysfonts/man/font_add.html">font_add</a></span>(family = <span class="st">"GlacialIndifferenceRegular"</span>, regular = <span class="kw">font_temp</span>)
 
 <span class="co"># Now it's available for use!</span>
-<span class="no">g_diamonds_with_text</span> +
+<span class="kw">g_diamonds_with_text</span> <span class="op">+</span>
   <span class="fu"><a href="../reference/theme_xaringan.html">theme_xaringan</a></span>(
-    <span class="kw">text_font</span> <span class="kw">=</span> <span class="st">"GlacialIndifferenceRegular"</span>,
-    <span class="kw">title_font</span> <span class="kw">=</span> <span class="st">"GlacialIndifferenceRegular"</span>
-  )</pre></body></html></div>
+    text_font = <span class="st">"GlacialIndifferenceRegular"</span>,
+    title_font = <span class="st">"GlacialIndifferenceRegular"</span>
+  )
+</pre></div>
 <p><img src="ggplot2-themes_files/figure-html/sysfonts-custom-font-1.png" width="960"></p>
 </div>
 </div>
@@ -352,13 +378,15 @@ img { max-width: 100%; border: none; }
 <a href="#in-rstudio" class="anchor"></a>In RStudio</h3>
 <p>showtext and RStudio’s graphic device don’t always work well together. Depending on your version of RStudio, if you try to preview plots that use <code><a href="../reference/theme_xaringan.html">theme_xaringan()</a></code>, the fonts in the preview will still be the default sans font or you may not see a plot at all.</p>
 <p>To work around this, open a new <code><a href="https://rdrr.io/r/grDevices/quartz.html">quartz()</a></code> (MacOS) or <code><a href="https://rdrr.io/r/grDevices/x11.html">x11()</a></code> (Windows/Unix) plot device. The plots will then render in a separate window. I usually create a <code><a href="https://rdrr.io/r/grDevices/quartz.html">quartz()</a></code> device with a similar size ratio to my slides.</p>
-<div class="sourceCode" id="cb18"><html><body><pre class="r"><span class="co">## On Windows</span>
+<div class="sourceCode" id="cb18"><pre class="downlit">
+<span class="co">## On Windows</span>
 <span class="co"># x11(width = 16 * 2/3, height = 9 * 2/3)</span>
 
 <span class="co">## On MacOS</span>
-<span class="fu"><a href="https://rdrr.io/r/grDevices/quartz.html">quartz</a></span>(<span class="kw">width</span> <span class="kw">=</span> <span class="fl">16</span> * <span class="fl">2</span>/<span class="fl">3</span>, <span class="kw">height</span> <span class="kw">=</span> <span class="fl">9</span> * <span class="fl">2</span>/<span class="fl">3</span>)
+<span class="fu"><a href="https://rdrr.io/r/grDevices/quartz.html">quartz</a></span>(width = <span class="fl">16</span> <span class="op">*</span> <span class="fl">2</span><span class="op">/</span><span class="fl">3</span>, height = <span class="fl">9</span> <span class="op">*</span> <span class="fl">2</span><span class="op">/</span><span class="fl">3</span>)
 <span class="co">## run plot code to preview in separate window</span>
-<span class="fu"><a href="https://rdrr.io/r/grDevices/dev.html">dev.off</a></span>() <span class="co"># call when done to close the device</span></pre></body></html></div>
+<span class="fu"><a href="https://rdrr.io/r/grDevices/dev.html">dev.off</a></span>() <span class="co"># call when done to close the device</span>
+</pre></div>
 </div>
 </div>
   </div>
@@ -378,7 +406,7 @@ img { max-width: 100%; border: none; }
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

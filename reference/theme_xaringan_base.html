@@ -195,19 +195,19 @@ style.  See <code><a href='../articles/ggplot2-themes.html'>vignette("ggplot2-th
     </div>
 
     <pre class="usage"><span class='fu'>theme_xaringan_base</span>(
-  <span class='no'>text_color</span>,
-  <span class='no'>background_color</span>,
-  <span class='no'>...</span>,
-  <span class='kw'>set_ggplot_defaults</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>,
-  <span class='kw'>accent_color</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>accent_secondary_color</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>text_font</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>text_font_use_google</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>text_font_size</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>title_font</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>title_font_use_google</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>title_font_size</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>use_showtext</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>
+  <span class='kw'>text_color</span>,
+  <span class='kw'>background_color</span>,
+  <span class='kw'>...</span>,
+  set_ggplot_defaults = <span class='fl'>TRUE</span>,
+  accent_color = <span class='kw'>NULL</span>,
+  accent_secondary_color = <span class='kw'>NULL</span>,
+  text_font = <span class='kw'>NULL</span>,
+  text_font_use_google = <span class='kw'>NULL</span>,
+  text_font_size = <span class='kw'>NULL</span>,
+  title_font = <span class='kw'>NULL</span>,
+  title_font_use_google = <span class='kw'>NULL</span>,
+  title_font_size = <span class='kw'>NULL</span>,
+  use_showtext = <span class='fl'>TRUE</span>
 )</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
@@ -297,49 +297,50 @@ not available locally.</p></td>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># Requires ggplot2</span>
-<span class='no'>has_ggplot2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/ns-load.html'>requireNamespace</a></span>(<span class='st'>"ggplot2"</span>, <span class='kw'>quietly</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)
+<span class='kw'>has_ggplot2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/ns-load.html'>requireNamespace</a></span>(<span class='st'>"ggplot2"</span>, quietly = <span class='fl'>TRUE</span>)
 
-<span class='kw'>if</span> (<span class='no'>has_ggplot2</span>) {
-  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>ggplot2</span>)
+<span class='co'>if</span> (<span class='kw'>has_ggplot2</span>) {
+  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='kw'><a href='http://ggplot2.tidyverse.org'>ggplot2</a></span>)
 
-  <span class='no'>plot1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span>(<span class='no'>mpg</span>) +
-    <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span>(<span class='no'>cty</span>, <span class='no'>hwy</span>) +
-    <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span>() +
+  <span class='kw'>plot1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span>(<span class='kw'>mpg</span>) <span class='op'>+</span>
+    <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span>(<span class='kw'>cty</span>, <span class='kw'>hwy</span>) <span class='op'>+</span>
+    <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span>() <span class='op'>+</span>
     <span class='fu'>theme_xaringan_base</span>(
-      <span class='kw'>text_color</span> <span class='kw'>=</span> <span class='st'>"#602f6b"</span>,       <span class='co'># imperial</span>
-      <span class='kw'>background_color</span> <span class='kw'>=</span> <span class='st'>"#f8f8f8"</span>, <span class='co'># light gray</span>
-      <span class='kw'>accent_color</span> <span class='kw'>=</span> <span class='st'>"#317873"</span>,     <span class='co'># myrtle green</span>
-      <span class='kw'>title_font</span> <span class='kw'>=</span> <span class='st'>"sans"</span>,
-      <span class='kw'>text_font</span> <span class='kw'>=</span> <span class='st'>"serif"</span>,
-      <span class='kw'>set_ggplot_defaults</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>
-    ) +
+      text_color = <span class='st'>"#602f6b"</span>,       <span class='co'># imperial</span>
+      background_color = <span class='st'>"#f8f8f8"</span>, <span class='co'># light gray</span>
+      accent_color = <span class='st'>"#317873"</span>,     <span class='co'># myrtle green</span>
+      title_font = <span class='st'>"sans"</span>,
+      text_font = <span class='st'>"serif"</span>,
+      set_ggplot_defaults = <span class='fl'>TRUE</span>
+    ) <span class='op'>+</span>
     <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span>(
-      <span class='kw'>title</span> <span class='kw'>=</span> <span class='st'>"Fuel Efficiency of Various Cars"</span>,
-      <span class='kw'>subtitle</span> <span class='kw'>=</span> <span class='st'>"+ theme_xaringan_base()"</span>,
-      <span class='kw'>caption</span> <span class='kw'>=</span> <span class='st'>"xaringanthemer"</span>
+      title = <span class='st'>"Fuel Efficiency of Various Cars"</span>,
+      subtitle = <span class='st'>"+ theme_xaringan_base()"</span>,
+      caption = <span class='st'>"xaringanthemer"</span>
     )
 
-  <span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span>(<span class='no'>plot1</span>)
+  <span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span>(<span class='kw'>plot1</span>)
 
-  <span class='no'>plot2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span>(<span class='no'>mpg</span>) +
-    <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span>(<span class='no'>hwy</span>) +
-    <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_histogram.html'>geom_histogram</a></span>(<span class='kw'>binwidth</span> <span class='kw'>=</span> <span class='fl'>2</span>) +
+  <span class='kw'>plot2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span>(<span class='kw'>mpg</span>) <span class='op'>+</span>
+    <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span>(<span class='kw'>hwy</span>) <span class='op'>+</span>
+    <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_histogram.html'>geom_histogram</a></span>(binwidth = <span class='fl'>2</span>) <span class='op'>+</span>
     <span class='fu'>theme_xaringan_base</span>(
-      <span class='kw'>text_color</span> <span class='kw'>=</span> <span class='st'>"#a8a9c8"</span>,       <span class='co'># light purple</span>
-      <span class='kw'>background_color</span> <span class='kw'>=</span> <span class='st'>"#303163"</span>, <span class='co'># deep slate purple</span>
-      <span class='kw'>accent_color</span> <span class='kw'>=</span> <span class='st'>"#ffff99"</span>,     <span class='co'># canary yellow</span>
-      <span class='kw'>title_font</span> <span class='kw'>=</span> <span class='st'>"sans"</span>,
-      <span class='kw'>text_font</span> <span class='kw'>=</span> <span class='st'>"serif"</span>,
-      <span class='kw'>set_ggplot_defaults</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>
-    ) +
+      text_color = <span class='st'>"#a8a9c8"</span>,       <span class='co'># light purple</span>
+      background_color = <span class='st'>"#303163"</span>, <span class='co'># deep slate purple</span>
+      accent_color = <span class='st'>"#ffff99"</span>,     <span class='co'># canary yellow</span>
+      title_font = <span class='st'>"sans"</span>,
+      text_font = <span class='st'>"serif"</span>,
+      set_ggplot_defaults = <span class='fl'>TRUE</span>
+    ) <span class='op'>+</span>
     <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span>(
-      <span class='kw'>title</span> <span class='kw'>=</span> <span class='st'>"Highway Fuel Efficiency"</span>,
-      <span class='kw'>subtitle</span> <span class='kw'>=</span> <span class='st'>"+ theme_xaringan_base()"</span>,
-      <span class='kw'>caption</span> <span class='kw'>=</span> <span class='st'>"xaringanthemer"</span>
+      title = <span class='st'>"Highway Fuel Efficiency"</span>,
+      subtitle = <span class='st'>"+ theme_xaringan_base()"</span>,
+      caption = <span class='st'>"xaringanthemer"</span>
     )
 
-  <span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span>(<span class='no'>plot2</span>)
-}</div><div class='img'><img src='theme_xaringan_base-1.png' alt='' width='700' height='433' /></div><div class='img'><img src='theme_xaringan_base-2.png' alt='' width='700' height='433' /></div></pre>
+  <span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span>(<span class='kw'>plot2</span>)
+}
+</div><div class='img'><img src='theme_xaringan_base-1.png' alt='' width='700' height='433' /></div><div class='img'><img src='theme_xaringan_base-2.png' alt='' width='700' height='433' /></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -355,7 +356,7 @@ not available locally.</p></td>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

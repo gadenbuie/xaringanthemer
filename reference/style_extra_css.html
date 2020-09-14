@@ -183,10 +183,10 @@ and appends CSS rules to <code>outfile</code>.</p>
     </div>
 
     <pre class="usage"><span class='fu'>style_extra_css</span>(
-  <span class='no'>css</span>,
-  <span class='kw'>outfile</span> <span class='kw'>=</span> <span class='st'>"xaringan-themer.css"</span>,
-  <span class='kw'>append</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>,
-  <span class='kw'>heading</span> <span class='kw'>=</span> <span class='st'>"Extra CSS"</span>
+  <span class='kw'>css</span>,
+  outfile = <span class='st'>"xaringan-themer.css"</span>,
+  append = <span class='fl'>TRUE</span>,
+  heading = <span class='st'>"Extra CSS"</span>
 )</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
@@ -223,17 +223,18 @@ named list of class identifiers, for example
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'>style_extra_css</span>(
-  <span class='kw'>outfile</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/showConnections.html'>stdout</a></span>(),
-  <span class='kw'>css</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(
-    <span class='st'>".red"</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>color</span> <span class='kw'>=</span> <span class='st'>"red"</span>),
-    <span class='st'>".small"</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='st'>"font-size"</span> <span class='kw'>=</span> <span class='st'>"90%"</span>),
-    <span class='st'>".full-width"</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(
-      <span class='kw'>display</span> <span class='kw'>=</span> <span class='st'>"flex"</span>,
-      <span class='kw'>width</span> <span class='kw'>=</span> <span class='st'>"100%"</span>,
-      <span class='kw'>flex</span> <span class='kw'>=</span> <span class='st'>"1 1 auto"</span>
+  outfile = <span class='fu'><a href='https://rdrr.io/r/base/showConnections.html'>stdout</a></span>(),
+  css = <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(
+    <span class='st'>".red"</span> = <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(color = <span class='st'>"red"</span>),
+    <span class='st'>".small"</span> = <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='st'>"font-size"</span> = <span class='st'>"90%"</span>),
+    <span class='st'>".full-width"</span> = <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(
+      display = <span class='st'>"flex"</span>,
+      width = <span class='st'>"100%"</span>,
+      flex = <span class='st'>"1 1 auto"</span>
     )
   )
-)</div><div class='output co'>#&gt; 
+)
+</div><div class='output co'>#&gt; 
 #&gt; 
 #&gt; /* Extra CSS */
 #&gt; .red {
@@ -262,7 +263,7 @@ named list of class identifiers, for example
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

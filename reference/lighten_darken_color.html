@@ -178,9 +178,9 @@
     <p>Produces a linear blend of the color with white or black.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>lighten_color</span>(<span class='no'>color_hex</span>, <span class='kw'>strength</span> <span class='kw'>=</span> <span class='fl'>0.7</span>)
+    <pre class="usage"><span class='fu'>lighten_color</span>(<span class='kw'>color_hex</span>, strength = <span class='fl'>0.7</span>)
 
-<span class='fu'>darken_color</span>(<span class='no'>color_hex</span>, <span class='kw'>strength</span> <span class='kw'>=</span> <span class='fl'>0.8</span>)</pre>
+<span class='fu'>darken_color</span>(<span class='kw'>color_hex</span>, strength = <span class='fl'>0.8</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -203,13 +203,14 @@ where 0 is entirely the original color and 1 is entirely white
 hexadecimal format.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>blue</span> <span class='kw'>&lt;-</span> <span class='st'>"#0e6ba8"</span>
-<span class='no'>blue_light</span> <span class='kw'>&lt;-</span> <span class='fu'>lighten_color</span>(<span class='no'>blue</span>, <span class='kw'>strength</span> <span class='kw'>=</span> <span class='fl'>0.33</span>)
-<span class='no'>blue_dark</span> <span class='kw'>&lt;-</span> <span class='fu'>darken_color</span>(<span class='no'>blue</span>, <span class='kw'>strength</span> <span class='kw'>=</span> <span class='fl'>0.33</span>)
+    <pre class="examples"><div class='input'><span class='kw'>blue</span> <span class='op'>&lt;-</span> <span class='st'>"#0e6ba8"</span>
+<span class='kw'>blue_light</span> <span class='op'>&lt;-</span> <span class='fu'>lighten_color</span>(<span class='kw'>blue</span>, strength = <span class='fl'>0.33</span>)
+<span class='kw'>blue_dark</span> <span class='op'>&lt;-</span> <span class='fu'>darken_color</span>(<span class='kw'>blue</span>, strength = <span class='fl'>0.33</span>)
 
-<span class='kw'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/ns-load.html'>requireNamespace</a></span>(<span class='st'>"scales"</span>, <span class='kw'>quietly</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)) {
-  <span class='kw pkg'>scales</span><span class='kw ns'>::</span><span class='fu'><a href='https://scales.r-lib.org//reference/show_col.html'>show_col</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='no'>blue_light</span>, <span class='no'>blue</span>, <span class='no'>blue_dark</span>))
-}</div><div class='img'><img src='lighten_darken_color-1.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='co'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/ns-load.html'>requireNamespace</a></span>(<span class='st'>"scales"</span>, quietly = <span class='fl'>TRUE</span>)) {
+  <span class='kw'>scales</span>::<span class='fu'><a href='https://scales.r-lib.org//reference/show_col.html'>show_col</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='kw'>blue_light</span>, <span class='kw'>blue</span>, <span class='kw'>blue_dark</span>))
+}
+</div><div class='img'><img src='lighten_darken_color-1.png' alt='' width='700' height='433' /></div><div class='input'>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -226,7 +227,7 @@ hexadecimal format.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

@@ -182,7 +182,7 @@ more of the language codes as given by google_language_codes()." />
 more of the language codes as given by <code><a href='google_language_codes.html'>google_language_codes()</a></code>.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>google_font</span>(<span class='no'>family</span>, <span class='no'>...</span>, <span class='kw'>languages</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
+    <pre class="usage"><span class='fu'>google_font</span>(<span class='kw'>family</span>, <span class='kw'>...</span>, languages = <span class='kw'>NULL</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -207,7 +207,8 @@ more of the language codes as given by <code><a href='google_language_codes.html
     <p>A <code>"google_font"</code> object.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>google_font</span>(<span class='st'>"Josefin Sans"</span>, <span class='st'>"400"</span>, <span class='st'>"400i"</span>, <span class='st'>"600i"</span>, <span class='st'>"700"</span>)</div><div class='output co'>#&gt; $family
+    <pre class="examples"><div class='input'><span class='fu'>google_font</span>(<span class='st'>"Josefin Sans"</span>, <span class='st'>"400"</span>, <span class='st'>"400i"</span>, <span class='st'>"600i"</span>, <span class='st'>"700"</span>)
+</div><div class='output co'>#&gt; $family
 #&gt; [1] "Josefin Sans"
 #&gt; 
 #&gt; $weights
@@ -220,7 +221,8 @@ more of the language codes as given by <code><a href='google_language_codes.html
 #&gt; [1] "https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,600i,700&amp;display=swap"
 #&gt; 
 #&gt; attr(,"class")
-#&gt; [1] "google_font"</div><div class='input'><span class='fu'>google_font</span>(<span class='st'>"Josefin Sans"</span>, <span class='kw'>languages</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"latin-ext"</span>, <span class='st'>"vietnamese"</span>))</div><div class='output co'>#&gt; $family
+#&gt; [1] "google_font"</div><div class='input'><span class='fu'>google_font</span>(<span class='st'>"Josefin Sans"</span>, languages = <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"latin-ext"</span>, <span class='st'>"vietnamese"</span>))
+</div><div class='output co'>#&gt; $family
 #&gt; [1] "Josefin Sans"
 #&gt; 
 #&gt; $weights
@@ -249,7 +251,7 @@ more of the language codes as given by <code><a href='google_language_codes.html
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

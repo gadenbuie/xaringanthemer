@@ -169,45 +169,53 @@ Pack my box with five dozen liquor jugs. Amazingly few discotheques provide juke
 </div>
 <p>These fonts are easier to read on screens and at a distance during presentations, and they support a wide variety of languages and weights. Another reason for the change is that the xaringan (remarkjs) default body font, <em>Droid Serif</em>, is no longer officially included in Google Fonts.</p>
 <p>If you would like to use the fonts from the <a href="https://slides.yihui.name/xaringan/">default xaringan theme</a>, you can use the following arguments in your style function.</p>
-<div class="sourceCode" id="cb1"><html><body><pre class="r"><span class="fu"><a href="../reference/style_xaringan.html">style_xaringan</a></span>(
-  <span class="kw">text_font_family</span> <span class="kw">=</span> <span class="st">"Droid Serif"</span>,
-  <span class="kw">text_font_url</span> <span class="kw">=</span> <span class="st">"https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic"</span>,
-  <span class="kw">header_font_google</span> <span class="kw">=</span> <span class="fu"><a href="../reference/google_font.html">google_font</a></span>(<span class="st">"Yanone Kaffeesatz"</span>)
-)</pre></body></html></div>
+<div class="sourceCode" id="cb1"><pre class="downlit">
+<span class="fu"><a href="../reference/xaringanthemer_font_default.html">style_xaringan</a></span>(
+  text_font_family = <span class="st">"Droid Serif"</span>,
+  text_font_url = <span class="st">"https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic"</span>,
+  header_font_google = <span class="fu"><a href="../reference/google_font.html">google_font</a></span>(<span class="st">"Yanone Kaffeesatz"</span>)
+)
+</pre></div>
 </div>
 <div id="custom-and-google-font-fonts" class="section level3">
 <h3 class="hasAnchor">
 <a href="#custom-and-google-font-fonts" class="anchor"></a>Custom and <em>Google Font</em> Fonts</h3>
 <p><strong>xaringanthemer</strong> makes it easy to use <a href="https://fonts.google.com">Google Fonts</a> in your presentations (provided you have an internet connection during the presentation) or to fully specify your font files.</p>
 <p>To use <a href="https://fonts.google.com">Google Fonts</a>, set the <code>&lt;type&gt;_font_google</code> theme arguments – <code>text_font_google</code>, <code>header_font_google</code>, <code>code_font_google</code> — using the <code><a href="../reference/google_font.html">google_font()</a></code> helper. The help documentation in <code><a href="../reference/google_font.html">?google_font</a></code> provides more info.</p>
-<div class="sourceCode" id="cb2"><html><body><pre class="r"><span class="fu"><a href="../reference/style_mono_light.html">style_mono_light</a></span>(
-  <span class="kw">header_font_google</span> <span class="kw">=</span> <span class="fu"><a href="../reference/google_font.html">google_font</a></span>(<span class="st">"Josefin Slab"</span>, <span class="st">"600"</span>),
-  <span class="kw">text_font_google</span>   <span class="kw">=</span> <span class="fu"><a href="../reference/google_font.html">google_font</a></span>(<span class="st">"Work Sans"</span>, <span class="st">"300"</span>, <span class="st">"300i"</span>),
-  <span class="kw">code_font_google</span>   <span class="kw">=</span> <span class="fu"><a href="../reference/google_font.html">google_font</a></span>(<span class="st">"IBM Plex Mono"</span>)
-)</pre></body></html></div>
+<div class="sourceCode" id="cb2"><pre class="downlit">
+<span class="fu"><a href="../reference/style_mono_light.html">style_mono_light</a></span>(
+  header_font_google = <span class="fu"><a href="../reference/google_font.html">google_font</a></span>(<span class="st">"Josefin Slab"</span>, <span class="st">"600"</span>),
+  text_font_google   = <span class="fu"><a href="../reference/google_font.html">google_font</a></span>(<span class="st">"Work Sans"</span>, <span class="st">"300"</span>, <span class="st">"300i"</span>),
+  code_font_google   = <span class="fu"><a href="../reference/google_font.html">google_font</a></span>(<span class="st">"IBM Plex Mono"</span>)
+)
+</pre></div>
 <p>If you set an <code>&lt;type&gt;_font_google</code> theme arguments, then <code>&lt;type&gt;_font_family</code>, <code>&lt;type&gt;_font_weight</code> and <code>&lt;type&gt;_font_url</code> are overwritten – where <code>&lt;type&gt;</code> is one of <code>header</code>, <code>text</code>, or <code>code</code>.</p>
 <p>To use a font hosted outside of Google fonts, you need to provide both <code>&lt;type&gt;_font_family</code> and <code>&lt;type&gt;_font_url</code>. For example, suppose you want to use a code font with ligatures for your code chunks, such as <a href="https://github.com/tonsky/FiraCode">Fira Code</a>, which would be declared with <code>code_font_family</code>. The <a href="https://github.com/tonsky/FiraCode#browser-support">browser usage</a> section of the Fira Code README provides a CSS URL to be used with an <code>@import</code> statement that you can use with the <code>code_font_url</code> argument.</p>
-<div class="sourceCode" id="cb3"><html><body><pre class="r"><span class="fu"><a href="../reference/style_solarized_dark.html">style_solarized_dark</a></span>(
-  <span class="kw">code_font_family</span> <span class="kw">=</span> <span class="st">"Fira Code"</span>,
-  <span class="kw">code_font_url</span> <span class="kw">=</span> <span class="st">"https://cdn.jsdelivr.net/gh/tonsky/FiraCode@2/distr/fira_code.css"</span>
-)</pre></body></html></div>
+<div class="sourceCode" id="cb3"><pre class="downlit">
+<span class="fu"><a href="../reference/style_solarized_dark.html">style_solarized_dark</a></span>(
+  code_font_family = <span class="st">"Fira Code"</span>,
+  code_font_url = <span class="st">"https://cdn.jsdelivr.net/gh/tonsky/FiraCode@2/distr/fira_code.css"</span>
+)
+</pre></div>
 <p>Remember that you need to supply either <code>&lt;type&gt;_google_font</code> using the <code><a href="../reference/google_font.html">google_font()</a></code> helper <em>or both</em> <code>&lt;type&gt;_font_family</code> and <code>&lt;type&gt;_font_url</code>.</p>
 </div>
 <div id="using-additional-fonts" class="section level3">
 <h3 class="hasAnchor">
 <a href="#using-additional-fonts" class="anchor"></a>Using Additional Fonts</h3>
 <p>If you want to use additional fonts for use in <a href="xaringanthemer.html#adding-custom-css">custom CSS definitions</a>, use the <code>extra_fonts</code> argument to pass a list of URLs or <code><a href="../reference/google_font.html">google_font()</a></code>s. Notice that you will need to add custom CSS (for example, via <code>extra_css</code>) to use the fonts imported in <code>extra_fonts</code>.</p>
-<div class="sourceCode" id="cb4"><html><body><pre class="r"><span class="fu"><a href="../reference/style_mono_light.html">style_mono_light</a></span>(
-  <span class="kw">extra_fonts</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span>(
+<div class="sourceCode" id="cb4"><pre class="downlit">
+<span class="fu"><a href="../reference/style_mono_light.html">style_mono_light</a></span>(
+  extra_fonts = <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span>(
     <span class="fu"><a href="../reference/google_font.html">google_font</a></span>(<span class="st">"Sofia"</span>),
     <span class="co"># Young Serif by uplaod.fr</span>
     <span class="st">"https://cdn.jsdelivr.net/gh/uplaod/YoungSerif/fonts/webfonts/fontface.css"</span>,
   ),
-  <span class="kw">extra_css</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span>(
-    <span class="st">".title-slide h2"</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span>(<span class="st">"font-family"</span> <span class="kw">=</span> <span class="st">"Sofia"</span>),
-    <span class="kw">blockquote</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span>(<span class="st">"font-family"</span> <span class="kw">=</span> <span class="st">"youngserifregular"</span>)
+  extra_css = <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span>(
+    <span class="st">".title-slide h2"</span> = <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span>(<span class="st">"font-family"</span> = <span class="st">"Sofia"</span>),
+    blockquote = <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span>(<span class="st">"font-family"</span> = <span class="st">"youngserifregular"</span>)
   )
-)</pre></body></html></div>
+)
+</pre></div>
 </div>
   </div>
 
@@ -224,7 +232,7 @@ Pack my box with five dozen liquor jugs. Amazingly few discotheques provide juke
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

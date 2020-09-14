@@ -182,7 +182,7 @@ expression) if dark or light text should be used over the input color for
 best contrast. Follows W3C Recommendations.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>choose_dark_or_light</span>(<span class='no'>x</span>, <span class='kw'>black</span> <span class='kw'>=</span> <span class='st'>"#000000"</span>, <span class='kw'>white</span> <span class='kw'>=</span> <span class='st'>"#FFFFFF"</span>)</pre>
+    <pre class="usage"><span class='fu'>choose_dark_or_light</span>(<span class='kw'>x</span>, black = <span class='st'>"#000000"</span>, white = <span class='st'>"#FFFFFF"</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -212,14 +212,15 @@ the greates contrast with the input color.</p>
     <p><a href='https://stackoverflow.com/a/3943023/2022615'>https://stackoverflow.com/a/3943023/2022615</a></p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>light_green</span> <span class='kw'>&lt;-</span> <span class='st'>"#c4d6b0"</span>
-<span class='no'>contrast_green</span> <span class='kw'>&lt;-</span> <span class='fu'>choose_dark_or_light</span>(<span class='no'>light_green</span>)
-<span class='no'>dark_purple</span> <span class='kw'>&lt;-</span> <span class='st'>"#381d2a"</span>
-<span class='no'>contrast_purple</span> <span class='kw'>&lt;-</span> <span class='fu'>choose_dark_or_light</span>(<span class='no'>dark_purple</span>)
+    <pre class="examples"><div class='input'><span class='kw'>light_green</span> <span class='op'>&lt;-</span> <span class='st'>"#c4d6b0"</span>
+<span class='kw'>contrast_green</span> <span class='op'>&lt;-</span> <span class='fu'>choose_dark_or_light</span>(<span class='kw'>light_green</span>)
+<span class='kw'>dark_purple</span> <span class='op'>&lt;-</span> <span class='st'>"#381d2a"</span>
+<span class='kw'>contrast_purple</span> <span class='op'>&lt;-</span> <span class='fu'>choose_dark_or_light</span>(<span class='kw'>dark_purple</span>)
 
-<span class='kw'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/ns-load.html'>requireNamespace</a></span>(<span class='st'>"scales"</span>, <span class='kw'>quietly</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)) {
-  <span class='kw pkg'>scales</span><span class='kw ns'>::</span><span class='fu'><a href='https://scales.r-lib.org//reference/show_col.html'>show_col</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='no'>light_green</span>, <span class='no'>contrast_green</span>, <span class='no'>dark_purple</span>, <span class='no'>contrast_purple</span>))
-}</div><div class='img'><img src='choose_dark_or_light-1.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='co'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/ns-load.html'>requireNamespace</a></span>(<span class='st'>"scales"</span>, quietly = <span class='fl'>TRUE</span>)) {
+  <span class='kw'>scales</span>::<span class='fu'><a href='https://scales.r-lib.org//reference/show_col.html'>show_col</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='kw'>light_green</span>, <span class='kw'>contrast_green</span>, <span class='kw'>dark_purple</span>, <span class='kw'>contrast_purple</span>))
+}
+</div><div class='img'><img src='choose_dark_or_light-1.png' alt='' width='700' height='433' /></div><div class='input'>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -236,7 +237,7 @@ the greates contrast with the input color.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>
