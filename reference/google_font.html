@@ -182,7 +182,7 @@ more of the language codes as given by google_language_codes()." />
 more of the language codes as given by <code><a href='google_language_codes.html'>google_language_codes()</a></code>.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>google_font</span>(<span class='kw'>family</span>, <span class='kw'>...</span>, languages = <span class='kw'>NULL</span>)</pre>
+    <pre class="usage"><span class='fu'>google_font</span><span class='op'>(</span><span class='va'>family</span>, <span class='va'>...</span>, languages <span class='op'>=</span> <span class='cn'>NULL</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -207,7 +207,7 @@ more of the language codes as given by <code><a href='google_language_codes.html
     <p>A <code>"google_font"</code> object.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>google_font</span>(<span class='st'>"Josefin Sans"</span>, <span class='st'>"400"</span>, <span class='st'>"400i"</span>, <span class='st'>"600i"</span>, <span class='st'>"700"</span>)
+    <pre class="examples"><div class='input'><span class='fu'>google_font</span><span class='op'>(</span><span class='st'>"Josefin Sans"</span>, <span class='st'>"400"</span>, <span class='st'>"400i"</span>, <span class='st'>"600i"</span>, <span class='st'>"700"</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; $family
 #&gt; [1] "Josefin Sans"
 #&gt; 
@@ -221,7 +221,7 @@ more of the language codes as given by <code><a href='google_language_codes.html
 #&gt; [1] "https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,600i,700&amp;display=swap"
 #&gt; 
 #&gt; attr(,"class")
-#&gt; [1] "google_font"</div><div class='input'><span class='fu'>google_font</span>(<span class='st'>"Josefin Sans"</span>, languages = <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"latin-ext"</span>, <span class='st'>"vietnamese"</span>))
+#&gt; [1] "google_font"</div><div class='input'><span class='fu'>google_font</span><span class='op'>(</span><span class='st'>"Josefin Sans"</span>, languages <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"latin-ext"</span>, <span class='st'>"vietnamese"</span><span class='op'>)</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; $family
 #&gt; [1] "Josefin Sans"
 #&gt; 
