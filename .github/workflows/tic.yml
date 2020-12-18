@@ -144,3 +144,4 @@ jobs:
         with:
           token: ${{ secrets.TIC_UPDATE }}
           event-type: status-update
+          repository: gadenbuie/status
