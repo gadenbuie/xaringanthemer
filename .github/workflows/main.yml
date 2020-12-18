@@ -6,7 +6,7 @@ on:
     # weekly Monday morning
     - cron: "0 6 * * 1"
 
-name: CI by {tic}
+name: R CMD Check
 
 jobs:
   R-CMD-check:
@@ -174,3 +174,9 @@ jobs:
       - name: "[Stage] After Deploy"
         run: Rscript -e "tic::after_deploy()"
 
+      - name: Update status dashboard at gadenbuie/status
+        uses: peter-evans/repository-dispatch@v1
+        if: github.ref == 'refs/heads/HEAD' &&  matrix.config.os == 'macOS-latest' && matrix.config.r == 'release'
+        with:
+          token: ${{ secrets.TIC_UPDATE }}
+          event-type: status-update
