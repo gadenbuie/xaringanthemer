@@ -70,7 +70,7 @@ navbar:
           href: articles/template-variables.html
   right:
     news:
-      icon: fa fa-newspaper-o fa-lg
+      icon: far fa-newspaper fa-lg
       text: ""
       menu:
       - text: "xaringan 0.3.0"
@@ -79,11 +79,11 @@ navbar:
       - text: "Changelog"
         href: news/index.html
     github:
-      icon: fa-github fa-lg
+      icon: fab fa-github fa-lg
       href: https://github.com/gadenbuie/xaringanthemer
     twitter:
-      icon: fa-twitter fa-lg
+      icon: fab fa-twitter fa-lg
       href: https://twitter.com/grrrck
     home:
-      icon: fa-home fa-lg
+      icon: fas fa-home fa-lg
       href: https://www.garrickadenbuie.com
