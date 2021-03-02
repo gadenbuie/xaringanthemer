@@ -1,3 +1,9 @@
+# xaringanthemer 0.3.0.9000
+
+- Add `inverse_link_color` to control color of links on inverse slides (thanks @dmi3kno, #44)
+
+- .pull-right[] now clears floats just for its immediate sibling
+
 # xaringanthemer 0.3.0
 
 * Adds `theme_xaringan()`, a ggplot2 theme that automatically uses the colors

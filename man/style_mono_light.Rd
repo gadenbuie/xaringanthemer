@@ -26,6 +26,7 @@ style_mono_light(
   inverse_text_color = white_color,
   inverse_text_shadow = FALSE,
   inverse_header_color = white_color,
+  inverse_link_color = link_color,
   title_slide_text_color = inverse_text_color,
   title_slide_background_color = inverse_background_color,
   title_slide_background_image = NULL,
@@ -184,6 +185,12 @@ Defaults to \code{FALSE}. Modifies the \code{.inverse} class.}
 Modifies the \verb{.inverse h1, .inverse h2, .inverse h3} classes. The value of
 this variable is also stored as a CSS variable that can be referenced with
 \code{var(--inverse-header-color)} in any argument of a style function or in
+custom CSS.}
+
+\item{inverse_link_color}{Inverse Link Color. Defaults to \code{link_color}.
+Modifies the \verb{.inverse a, .inverse a > code} classes. The value of this
+variable is also stored as a CSS variable that can be referenced with
+\code{var(--inverse-link-color)} in any argument of a style function or in
 custom CSS.}
 
 \item{title_slide_text_color}{Title Slide Text Color. Defaults to

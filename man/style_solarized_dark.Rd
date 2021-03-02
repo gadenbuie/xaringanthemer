@@ -23,6 +23,7 @@ style_solarized_dark(
   inverse_text_color = "#002b36",
   inverse_text_shadow = FALSE,
   inverse_header_color = inverse_text_color,
+  inverse_link_color = link_color,
   title_slide_text_color = inverse_text_color,
   title_slide_background_color = inverse_background_color,
   title_slide_background_image = NULL,
@@ -165,6 +166,12 @@ Defaults to \code{FALSE}. Modifies the \code{.inverse} class.}
 classes. The value of this variable is also stored as a CSS variable that
 can be referenced with \code{var(--inverse-header-color)} in any argument of a
 style function or in custom CSS.}
+
+\item{inverse_link_color}{Inverse Link Color. Defaults to \code{link_color}.
+Modifies the \verb{.inverse a, .inverse a > code} classes. The value of this
+variable is also stored as a CSS variable that can be referenced with
+\code{var(--inverse-link-color)} in any argument of a style function or in
+custom CSS.}
 
 \item{title_slide_text_color}{Title Slide Text Color. Defaults to
 \code{inverse_text_color}. Modifies the \code{.title-slide} class. The value of this

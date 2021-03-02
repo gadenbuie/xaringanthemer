@@ -51,6 +51,7 @@
   --inverse-text-color: {{inverse_text_color}};
   --inverse-background-color: {{inverse_background_color}};
   --inverse-header-color: {{inverse_header_color}};
+  --inverse-link-color: {{inverse_link_color}};
   --title-slide-background-color: {{title_slide_background_color}};
   --title-slide-text-color: {{title_slide_text_color}};
   --header-background-color: {{header_background_color}};
@@ -132,6 +133,9 @@ a, a > code {
 }
 .inverse h1, .inverse h2, .inverse h3 {
   color: var(--inverse-header-color);
+}
+.inverse a, .inverse a > code {
+  color: var(--inverse-link-color);
 }
 .title-slide, .title-slide h1, .title-slide h2, .title-slide h3 {
   color: var(--title-slide-text-color);

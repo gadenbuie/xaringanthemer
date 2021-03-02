@@ -88,6 +88,11 @@
 #'   this variable is also stored as a CSS variable that can be referenced with
 #'   `var(--inverse-header-color)` in any argument of a style function or in
 #'   custom CSS.
+#' @param inverse_link_color Inverse Link Color. Defaults to `link_color`.
+#'   Modifies the `.inverse a, .inverse a > code` classes. The value of this
+#'   variable is also stored as a CSS variable that can be referenced with
+#'   `var(--inverse-link-color)` in any argument of a style function or in
+#'   custom CSS.
 #' @param title_slide_text_color Title Slide Text Color. Defaults to
 #'   `inverse_text_color`. Modifies the `.title-slide` class. The value of this
 #'   variable is also stored as a CSS variable that can be referenced with
@@ -284,6 +289,7 @@ style_mono_accent <- function(
   inverse_text_color = white_color,
   inverse_text_shadow = FALSE,
   inverse_header_color = white_color,
+  inverse_link_color = link_color,
   title_slide_text_color = inverse_text_color,
   title_slide_background_color = inverse_background_color,
   title_slide_background_image = NULL,

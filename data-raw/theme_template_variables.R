@@ -19,6 +19,7 @@ template_variables <- tibble::tribble(
   , "inverse_text_color", "#d6d6d6", ".inverse", "Inverse Text Color", "--inverse-text-color"
   , "inverse_text_shadow", "{FALSE}", ".inverse", "Enables Shadow on text of inverse slides", NA_character_
   , "inverse_header_color", "#f3f3f3", ".inverse h1, .inverse h2, .inverse h3", "Inverse Header Color", "--inverse-header-color"
+  , "inverse_link_color", "{link_color}", ".inverse a, .inverse a > code", "Inverse Link Color", "--inverse-link-color"
   , "title_slide_text_color", "{inverse_text_color}", ".title-slide", "Title Slide Text Color", "--title-slide-text-color"
   , "title_slide_background_color", "{inverse_background_color}", ".title-slide", "Title Slide Background Color", "--title-slide-background-color"
   , "title_slide_background_image", "{NULL}", ".title-slide", "Title Slide Background Image URL", NA_character_

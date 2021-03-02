@@ -51,6 +51,7 @@
   --inverse-text-color: #1E2523;
   --inverse-background-color: #cbf7ed;
   --inverse-header-color: #1E2523;
+  --inverse-link-color: #cbf7ed;
   --title-slide-background-color: #cbf7ed;
   --title-slide-text-color: #1E2523;
   --header-background-color: #cbf7ed;
@@ -126,6 +127,9 @@ a, a > code {
 }
 .inverse h1, .inverse h2, .inverse h3 {
   color: var(--inverse-header-color);
+}
+.inverse a, .inverse a > code {
+  color: var(--inverse-link-color);
 }
 .title-slide, .title-slide h1, .title-slide h2, .title-slide h3 {
   color: var(--title-slide-text-color);
