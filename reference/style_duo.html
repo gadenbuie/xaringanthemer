@@ -202,6 +202,7 @@ colors.</p>
   inverse_text_color <span class='op'>=</span> <span class='va'>primary_color</span>,
   inverse_text_shadow <span class='op'>=</span> <span class='cn'>FALSE</span>,
   inverse_header_color <span class='op'>=</span> <span class='va'>primary_color</span>,
+  inverse_link_color <span class='op'>=</span> <span class='va'>link_color</span>,
   title_slide_text_color <span class='op'>=</span> <span class='va'>secondary_color</span>,
   title_slide_background_color <span class='op'>=</span> <span class='va'>primary_color</span>,
   title_slide_background_image <span class='op'>=</span> <span class='cn'>NULL</span>,
@@ -397,6 +398,14 @@ Defaults to <code>FALSE</code>. Modifies the <code>.inverse</code> class.</p></t
 classes. The value of this variable is also stored as a CSS variable that
 can be referenced with <code><a href='https://rdrr.io/r/stats/cor.html'>var(--inverse-header-color)</a></code> in any argument of a
 style function or in custom CSS.</p></td>
+    </tr>
+    <tr>
+      <th>inverse_link_color</th>
+      <td><p>Inverse Link Color. Defaults to <code>link_color</code>.
+Modifies the <code>.inverse a, .inverse a &gt; code</code> classes. The value of this
+variable is also stored as a CSS variable that can be referenced with
+<code><a href='https://rdrr.io/r/stats/cor.html'>var(--inverse-link-color)</a></code> in any argument of a style function or in
+custom CSS.</p></td>
     </tr>
     <tr>
       <th>title_slide_text_color</th>
