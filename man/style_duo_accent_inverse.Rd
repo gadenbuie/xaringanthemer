@@ -69,6 +69,7 @@ style_duo_accent_inverse(
   header_font_google = NULL,
   header_font_family = xaringanthemer_font_default("header_font_family"),
   header_font_weight = xaringanthemer_font_default("header_font_weight"),
+  header_font_family_fallback = "Georgia, serif",
   header_font_url = xaringanthemer_font_default("header_font_url"),
   code_font_google = NULL,
   code_font_family = xaringanthemer_font_default("code_font_family"),
@@ -388,6 +389,12 @@ argument of a style function or in custom CSS.}
 \verb{h1, h2, h3} elements. Accepts CSS
 \href{https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight}{font-weight}
 property values.}
+
+\item{header_font_family_fallback}{Header Font Family Fallback. Defaults to
+Georgia, serif. Modifies the \verb{h1, h2, h3} elements. The value of this
+variable is also stored as a CSS variable that can be referenced with
+\code{var(--header-font-family-fallback)} in any argument of a style function
+or in custom CSS.}
 
 \item{header_font_url}{Header Font URL. Defaults to
 \code{xaringanthemer_font_default("header_font_url")}. Modifies the

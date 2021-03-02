@@ -4,6 +4,8 @@
 
 - .pull-right[] now clears floats just for its immediate sibling
 
+- Add `header_font_family_fallback` to control fallback fonts for headings (thanks @mattwarkentin, #41)
+
 # xaringanthemer 0.3.0
 
 * Adds `theme_xaringan()`, a ggplot2 theme that automatically uses the colors

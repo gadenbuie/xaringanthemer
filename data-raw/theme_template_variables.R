@@ -55,6 +55,7 @@ template_variables <- tibble::tribble(
   , "header_font_google", "{NULL}", "body", "Use `google_font()` to specify header font", NA_character_
   , "header_font_family", '{xaringanthemer_font_default("header_font_family")}', "h1, h2, h3", "Header Font Family (xaringan default is `'Yanone Kaffeesatz'`)", "--header-font-family"
   , "header_font_weight", '{xaringanthemer_font_default("header_font_weight")}', "h1, h2, h3", "Header Font Weight", NA_character_
+  , "header_font_family_fallback", 'Georgia, serif', "h1, h2, h3", "Header Font Family Fallback", "--header-font-family-fallback"
   , "header_font_url", '{xaringanthemer_font_default("header_font_url")}', "@import url", "Header Font URL", NA_character_
   , "code_font_google", "{NULL}", "body", "Use `google_font()` to specify code font", NA_character_
   , "code_font_family", '{xaringanthemer_font_default("code_font_family")}', ".remark-code, .remark-inline-code", "Code Font Family", "--code-font-family"

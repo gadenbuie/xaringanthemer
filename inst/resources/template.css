@@ -31,6 +31,7 @@
   --text-font-base: {{text_font_base}};
   --header-font-family: {{header_font_family}};
   --header-font-is-google: {{header_font_is_google}};
+  --header-font-family-fallback: {{header_font_family_fallback}};
   --code-font-family: {{code_font_family}};
   --code-font-is-google: {{code_font_is_google}};
   --base-font-size: {{base_font_size}};
@@ -69,7 +70,7 @@ body {
   color: var(--text-color);
 }
 h1, h2, h3 {
-  font-family: var(--header-font-family);
+  font-family: var(--header-font-family), var(--header-font-family-fallback);
   font-weight: {{header_font_weight}};
   color: var(--header-color);
 }

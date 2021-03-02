@@ -226,6 +226,11 @@
 #'   `h1, h2, h3` elements. Accepts CSS
 #'   [font-weight](https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight)
 #'   property values.
+#' @param header_font_family_fallback Header Font Family Fallback. Defaults to
+#'   Georgia, serif. Modifies the `h1, h2, h3` elements. The value of this
+#'   variable is also stored as a CSS variable that can be referenced with
+#'   `var(--header-font-family-fallback)` in any argument of a style function
+#'   or in custom CSS.
 #' @param header_font_url Header Font URL. Defaults to
 #'   `xaringanthemer_font_default("header_font_url")`. Modifies the
 #'   `@import url` elements.
@@ -309,6 +314,7 @@ style_solarized_dark <- function(
   header_font_google = NULL,
   header_font_family = xaringanthemer_font_default("header_font_family"),
   header_font_weight = xaringanthemer_font_default("header_font_weight"),
+  header_font_family_fallback = "Georgia, serif",
   header_font_url = xaringanthemer_font_default("header_font_url"),
   code_font_google = NULL,
   code_font_family = xaringanthemer_font_default("code_font_family"),
