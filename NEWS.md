@@ -1,10 +1,12 @@
-# xaringanthemer 0.3.0.9000
+# xaringanthemer 0.3.2
 
-- Add `inverse_link_color` to control color of links on inverse slides (thanks @dmi3kno, #44)
+* Add `inverse_link_color` to control color of links on inverse slides
+  (thanks @dmi3kno, #44)
 
-- .pull-right[] now clears floats just for its immediate sibling
+* .pull-right[] now clears floats just for its immediate sibling
 
-- Add `header_font_family_fallback` to control fallback fonts for headings (thanks @mattwarkentin, #41)
+* Add `header_font_family_fallback` to control fallback fonts for headings
+  (thanks @mattwarkentin, #41)
 
 # xaringanthemer 0.3.0
 
