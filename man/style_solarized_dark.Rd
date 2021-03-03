@@ -442,7 +442,7 @@ style_solarized_dark(
 # file.edit(xaringan_themer_css)
 }
 \references{
-\url{http://ethanschoonover.com/solarized}
+\url{https://ethanschoonover.com/solarized/}
 }
 \seealso{
 Other themes: 
