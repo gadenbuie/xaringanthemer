@@ -72,7 +72,7 @@ not available locally.}
 A ggplot2 theme
 }
 \description{
-\strong{Lifecycle:} \href{https://www.tidyverse.org/lifecycle/#maturing}{Maturing}
+\ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#maturing}{\figure{lifecycle-maturing.svg}{options: alt='[Maturing]'}}}{\strong{[Maturing]}}
 
 A \pkg{ggplot2} xaringanthemer plot theme to seamlessly match the "inverse"
 \pkg{xaringan} slide colors and styles as styled by \link{xaringanthemer}. See

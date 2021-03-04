@@ -96,7 +96,7 @@ value of \code{inverse_header_color}}
 \item{end}{Number in the range of \code{[0, 1]} indicating to which point in the color scale the largest data value should be mapped.}
 }
 \description{
-\strong{Lifecycle:} \href{https://www.tidyverse.org/lifecycle/#maturing}{Maturing}
+\ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#maturing}{\figure{lifecycle-maturing.svg}{options: alt='[Maturing]'}}}{\strong{[Maturing]}}
 
 Color and fill single-color scales for discrete and continuous values,
 created using the primary accent color of the xaringanthemer styles.  See

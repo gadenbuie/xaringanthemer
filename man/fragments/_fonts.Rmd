@@ -45,7 +45,7 @@ _Droid Serif_,
 is no longer officially included in Google Fonts.
 
 If you would like to use the fonts from the
-[default xaringan theme](https://slides.yihui.name/xaringan/), 
+[default xaringan theme](https://slides.yihui.org/xaringan/), 
 you can use the following arguments in your style function.
 
 ```{r eval=FALSE, echo=TRUE}

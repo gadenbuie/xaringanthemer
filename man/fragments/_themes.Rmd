@@ -119,7 +119,7 @@ demo_function_call(style_duo_accent_inverse, 2)
 
 ### Solarized
 
-There are also two themes based around the [solarized color palette](http://ethanschoonover.com/solarized), `style_solarized_light()` and `style_solarized_dark()`.
+There are also two themes based around the [solarized color palette](https://ethanschoonover.com/solarized/), `style_solarized_light()` and `style_solarized_dark()`.
 For both themes, it is advisted to change the syntax highlighting theme to `solarized-light` or `solarized-dark` (looks great paired or constrasted).
 
 #### `style_solarized_light()`

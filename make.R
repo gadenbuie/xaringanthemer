@@ -11,5 +11,8 @@ unlink("README.html")
 message("Checking package")
 devtools::check(document = FALSE)
 
+message("Checking urls")
+urlchecker::url_check()
+
 message("Building and Installing Package with Vignettes")
 devtools::install(build_vignettes = TRUE)

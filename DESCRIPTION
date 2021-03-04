@@ -1,7 +1,7 @@
 Type: Package
 Package: xaringanthemer
 Title: Custom 'xaringan' CSS Themes
-Version: 0.3.0.9000
+Version: 0.3.3
 Authors@R: 
     person(given = "Garrick",
            family = "Aden-Buie",
@@ -15,7 +15,7 @@ Description: Create beautifully color-coordinated and customized
     your slides' 'R Markdown' source file or in a separate external
     script.
 License: MIT + file LICENSE
-URL: https://pkg.garrickadenbuie.com/xaringanthemer,
+URL: https://pkg.garrickadenbuie.com/xaringanthemer/,
     https://github.com/gadenbuie/xaringanthemer
 BugReports: https://github.com/gadenbuie/xaringanthemer/issues
 Depends:
