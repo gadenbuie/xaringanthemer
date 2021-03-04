@@ -1,4 +1,4 @@
-# xaringanthemer 0.3.2
+# xaringanthemer 0.3.3
 
 * Add `inverse_link_color` to control color of links on inverse slides
   (thanks @dmi3kno, #44)
@@ -7,6 +7,10 @@
 
 * Add `header_font_family_fallback` to control fallback fonts for headings
   (thanks @mattwarkentin, #41)
+  
+* New xaringanthemer presentation skeleton with a kitchen sink of typical
+  slide elements with the goal of making it easier to preview new themes
+  during development.
 
 # xaringanthemer 0.3.0
 
