@@ -106,7 +106,6 @@ test_that("style_xaringan() warns about non-hex colors used by theme_xaringan()"
       options(warn = 2)
       xaringanthemer::style_xaringan(text_color = "rgb(100, 100, 100)", background_color = "white", outfile = NULL)
     }),
-    regexp = "Colors.+used by.+theme_xaringan",
-    class = "callr_status_error"
+    regexp = "Colors.+used by.+theme_xaringan"
   )
 })

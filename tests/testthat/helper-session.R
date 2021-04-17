@@ -3,5 +3,16 @@ with_clean_session <- function(.f, args = list()) {
   dir.create(empty_wd)
   owd <- setwd(empty_wd)
   on.exit({setwd(owd); unlink(empty_wd, TRUE)})
-  callr::r_safe(.f, args)
+  args$.f <- .f
+  res <- callr::r_safe(function(.f, ...) {
+    tryCatch(
+      list(result = .f(...), error = NULL),
+      error = function(e) list(result = NULL, error = e$message)
+    )
+  }, args)
+  if (!is.null(res$error)) {
+    stop(res$error)
+  } else {
+    res$result
+  }
 }
