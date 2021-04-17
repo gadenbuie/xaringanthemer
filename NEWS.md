@@ -1,3 +1,7 @@
+# xaringanthemes 0.3.4
+
+* Maintenance release to avoid issues with upcoming R 4.1.0 (#49)
+
 # xaringanthemer 0.3.3
 
 * Add `inverse_link_color` to control color of links on inverse slides
