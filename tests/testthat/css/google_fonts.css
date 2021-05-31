@@ -103,6 +103,9 @@ h1, h2, h3 {
   opacity: 1;
   font-size: 0.9em;
 }
+strong {
+  font-weight: bold;
+}
 a, a > code {
   color: var(--link-color);
   text-decoration: none;

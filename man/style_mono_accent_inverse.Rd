@@ -57,6 +57,7 @@ style_mono_accent_inverse(
   text_font_google = NULL,
   text_font_family = xaringanthemer_font_default("text_font_family"),
   text_font_weight = xaringanthemer_font_default("text_font_weight"),
+  text_bold_font_weight = "bold",
   text_font_url = xaringanthemer_font_default("text_font_url"),
   text_font_family_fallback = xaringanthemer_font_default("text_font_family_fallback"),
   text_font_base = "sans-serif",
@@ -341,6 +342,9 @@ style function or in custom CSS.}
 element. Accepts CSS
 \href{https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight}{font-weight}
 property values.}
+
+\item{text_bold_font_weight}{Body Bold Text Font Weight. Defaults to bold.
+Modifies the \code{strong} element.}
 
 \item{text_font_url}{Body Text Font URL(s). Defaults to
 \code{xaringanthemer_font_default("text_font_url")}. Modifies the

@@ -1,5 +1,9 @@
 # xaringanthemer (development version)
 
+* Added `text_bold_font_weight` argument to xaringanthemer style functions with
+  a corresponding CSS rule setting the `font-weight` property of `<strong>`
+  elements (thanks @matiasandina, #50).
+
 # xaringanthemes 0.3.4
 
 * Maintenance release to avoid issues with upcoming R 4.1.0 (#49)

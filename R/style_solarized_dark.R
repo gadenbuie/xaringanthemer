@@ -200,6 +200,8 @@
 #'   element. Accepts CSS
 #'   [font-weight](https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight)
 #'   property values.
+#' @param text_bold_font_weight Body Bold Text Font Weight. Defaults to bold.
+#'   Modifies the `strong` element.
 #' @param text_font_url Body Text Font URL(s). Defaults to
 #'   `xaringanthemer_font_default("text_font_url")`. Modifies the
 #'   `@import url()` elements.
@@ -308,6 +310,7 @@ style_solarized_dark <- function(
   text_font_google = NULL,
   text_font_family = xaringanthemer_font_default("text_font_family"),
   text_font_weight = xaringanthemer_font_default("text_font_weight"),
+  text_bold_font_weight = "bold",
   text_font_url = xaringanthemer_font_default("text_font_url"),
   text_font_family_fallback = xaringanthemer_font_default("text_font_family_fallback"),
   text_font_base = "sans-serif",
