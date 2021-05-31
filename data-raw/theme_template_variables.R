@@ -49,6 +49,7 @@ template_variables <- tibble::tribble(
   , "text_font_google", "{NULL}", "body", "Use `google_font()` to specify body font", NA_character_
   , "text_font_family", '{xaringanthemer_font_default("text_font_family")}', "body", "Body Text Font Family (xaringan default is `'Droid Serif'`)", "--text-font-family"
   , "text_font_weight", '{xaringanthemer_font_default("text_font_weight")}', "body", "Body Text Font Weight", NA_character_
+  , "text_bold_font_weight", 'bold', "strong", "Body Bold Text Font Weight", NA_character_
   , "text_font_url", '{xaringanthemer_font_default("text_font_url")}', "@import url()", "Body Text Font URL(s)", NA_character_
   , "text_font_family_fallback", '{xaringanthemer_font_default("text_font_family_fallback")}', "body", "Body Text Font Fallbacks", "--text-font-family-fallback"
   , "text_font_base", "sans-serif", "body", "Body Text Base Font (Total Failure Fallback)", "--text-font-base"
