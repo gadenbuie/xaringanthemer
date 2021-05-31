@@ -1,3 +1,5 @@
+# xaringanthemer (development version)
+
 # xaringanthemes 0.3.4
 
 * Maintenance release to avoid issues with upcoming R 4.1.0 (#49)
