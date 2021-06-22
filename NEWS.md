@@ -3,6 +3,9 @@
 * Added `text_bold_font_weight` argument to xaringanthemer style functions with
   a corresponding CSS rule setting the `font-weight` property of `<strong>`
   elements (thanks @matiasandina, #50).
+  
+* Set slide number font size in `rem` so that increasing the font size at the
+  slide level doesn't result in giant slide numbers (#53).
 
 # xaringanthemes 0.3.4
 
