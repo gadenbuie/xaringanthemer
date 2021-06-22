@@ -3,6 +3,10 @@
 * Added `text_bold_font_weight` argument to xaringanthemer style functions with
   a corresponding CSS rule setting the `font-weight` property of `<strong>`
   elements (thanks @matiasandina, #50).
+  
+* The xaringanthemer slide skeleton (R Markdown template) will now render when
+  packages that are used in the template but not in xaringanthemer's Imports are
+  not installed (#52).
 
 # xaringanthemes 0.3.4
 
