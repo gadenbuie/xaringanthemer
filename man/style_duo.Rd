@@ -53,7 +53,7 @@ style_duo(
   header_background_content_padding_top = "7rem",
   header_background_ignore_classes = c("normal", "inverse", "title", "middle",
     "bottom"),
-  text_slide_number_font_size = "0.9em",
+  text_slide_number_font_size = "0.9rem",
   text_font_google = NULL,
   text_font_family = xaringanthemer_font_default("text_font_family"),
   text_font_weight = xaringanthemer_font_default("text_font_weight"),
@@ -318,7 +318,7 @@ Background will not be Applied. Defaults to
 \code{.remark-slide-content} class.}
 
 \item{text_slide_number_font_size}{Slide Number Text Font Size. Defaults to
-0.9em. Modifies the \code{.remark-slide-number} class. Accepts CSS
+0.9rem. Modifies the \code{.remark-slide-number} class. Accepts CSS
 \href{https://developer.mozilla.org/en-US/docs/Web/CSS/font-size}{font-size}
 property values.}
 
