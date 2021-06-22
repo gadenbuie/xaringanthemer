@@ -45,7 +45,7 @@ template_variables <- tibble::tribble(
   , "header_background_padding", "{NULL}", ".remark-slide-content h1", "Padding for h1 Header with Background", NA_character_
   , "header_background_content_padding_top", "7rem", ".remark-slide-content", "Top Padding for Content in Slide with Header with Background", NA_character_
   , "header_background_ignore_classes", "{c('normal', 'inverse', 'title', 'middle', 'bottom')}", ".remark-slide-content", "Slide Classes Where Header with Background will not be Applied", NA_character_
-  , "text_slide_number_font_size", "0.9em", ".remark-slide-number", "Slide Number Text Font Size", NA_character_
+  , "text_slide_number_font_size", "0.9rem", ".remark-slide-number", "Slide Number Text Font Size", NA_character_
   , "text_font_google", "{NULL}", "body", "Use `google_font()` to specify body font", NA_character_
   , "text_font_family", '{xaringanthemer_font_default("text_font_family")}', "body", "Body Text Font Family (xaringan default is `'Droid Serif'`)", "--text-font-family"
   , "text_font_weight", '{xaringanthemer_font_default("text_font_weight")}', "body", "Body Text Font Weight", NA_character_

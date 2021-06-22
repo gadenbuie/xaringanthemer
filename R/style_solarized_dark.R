@@ -184,7 +184,7 @@
 #'   `c('normal', 'inverse', 'title', 'middle', 'bottom')`. Modifies the
 #'   `.remark-slide-content` class.
 #' @param text_slide_number_font_size Slide Number Text Font Size. Defaults to
-#'   0.9em. Modifies the `.remark-slide-number` class. Accepts CSS
+#'   0.9rem. Modifies the `.remark-slide-number` class. Accepts CSS
 #'   [font-size](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size)
 #'   property values.
 #' @param text_font_google Use `google_font()` to specify body font. Defaults
@@ -306,7 +306,7 @@ style_solarized_dark <- function(
   header_background_padding = NULL,
   header_background_content_padding_top = "7rem",
   header_background_ignore_classes = c('normal', 'inverse', 'title', 'middle', 'bottom'),
-  text_slide_number_font_size = "0.9em",
+  text_slide_number_font_size = "0.9rem",
   text_font_google = NULL,
   text_font_family = xaringanthemer_font_default("text_font_family"),
   text_font_weight = xaringanthemer_font_default("text_font_weight"),

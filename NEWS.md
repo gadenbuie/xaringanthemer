@@ -8,6 +8,9 @@
   packages that are used in the template but not in xaringanthemer's Imports are
   not installed (#52).
 
+* Set slide number font size in `rem` so that increasing the font size at the
+  slide level doesn't result in giant slide numbers (#53).
+
 # xaringanthemes 0.3.4
 
 * Maintenance release to avoid issues with upcoming R 4.1.0 (#49)
