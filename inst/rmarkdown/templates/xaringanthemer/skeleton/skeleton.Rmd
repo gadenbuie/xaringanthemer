@@ -25,7 +25,7 @@ knitr::opts_chunk$set(
   echo = TRUE,
   message = FALSE, 
   warning = FALSE,
-  fig.show = requireNamespace("showtext", quietly = TRUE),
+  fig.showtext = requireNamespace("showtext", quietly = TRUE),
   hiline = TRUE
 )
 ```
