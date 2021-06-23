@@ -10,6 +10,10 @@
 
 * Set slide number font size in `rem` so that increasing the font size at the
   slide level doesn't result in giant slide numbers (#53).
+  
+* The style functions gain a `link_decoration` argument to set the
+  [`text-decoration`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration)
+  property for links (#57).
 
 # xaringanthemes 0.3.4
 
