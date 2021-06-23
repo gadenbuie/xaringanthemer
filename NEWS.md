@@ -10,6 +10,9 @@
 
 * Set slide number font size in `rem` so that increasing the font size at the
   slide level doesn't result in giant slide numbers (#53).
+  
+* xaringanthemer no longer sets the `fig.showtext` chunk option when the
+  showtext package isn't installed (#56).
 
 # xaringanthemes 0.3.4
 

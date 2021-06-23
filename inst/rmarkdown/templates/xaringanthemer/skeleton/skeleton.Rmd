@@ -25,7 +25,6 @@ knitr::opts_chunk$set(
   echo = TRUE,
   message = FALSE, 
   warning = FALSE,
-  fig.showtext = requireNamespace("showtext", quietly = TRUE),
   hiline = TRUE
 )
 ```
@@ -62,15 +61,30 @@ name: colors
 
 ## Colors
 
-- <span style="color: var(--text-color)">Text Color</span>
+.left-column[
+Text color
 
-- <span style="color: var(--header-color); font-family: var(--header-font-family);">Header Color</span>
+[Link Color](#3)
 
-- <span style="color: var(--link-color)">Link Color</span>
+**Bold Color**
 
-- <span style="color: var(--text-bold-color); font-weight: bold;">Bold Color</span>
+_Italic Color_
 
-- `inline code color`
+`Inline Code`
+]
+
+.right-column[
+Lorem ipsum dolor sit amet, [consectetur adipiscing elit (link)](#3), 
+sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+Erat nam at lectus urna.
+Pellentesque elit ullamcorper **dignissim cras tincidunt (bold)** lobortis feugiat. 
+_Eros donec ac odio tempor_ orci dapibus ultrices. 
+Id porta nibh venenatis cras sed felis eget velit aliquet.
+Aliquam id diam maecenas ultricies mi.
+Enim sit amet 
+`code_color("inline")`
+venenatis urna cursus eget nunc scelerisque viverra.
+]
 
 ---
 
@@ -87,6 +101,26 @@ This is a normal paragraph text. Only use header levels 1-4.
 ##### Possible, but not recommended `#####`
 
 ###### Definitely don't use h6 `######`
+
+---
+
+# Left-Column Headings
+
+.left-column[
+## First
+
+## Second
+
+## Third
+]
+
+.right-column[
+Dolor quis aptent mus a dictum ultricies egestas.
+
+Amet egestas neque tempor fermentum proin massa!
+
+Dolor elementum fermentum pharetra lectus arcu pulvinar.
+]
 
 ---
 class: inverse center middle
