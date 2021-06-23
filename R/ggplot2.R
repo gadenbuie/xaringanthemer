@@ -907,7 +907,10 @@ set_fig_showtext <- function() {
   if (!requireNamespace("showtext", quietly = TRUE)) {
     return(invisible())
   }
-  curr_fst <- knitr::opts_chunk$get("fig.showtext")
+
+  curr_fst_chunk <- knitr::opts_current$get("fig.showtext")
+  curr_fst <- curr_fst_chunk %||% knitr::opts_chunk$get("fig.showtext")
+
   if (!is.null(curr_fst) && identical(curr_fst, FALSE)) {
     return(invisible())
   }
