@@ -197,7 +197,7 @@ styles. See <code><a href='../articles/ggplot2-themes.html'>vignette("ggplot2-th
   title_font <span class='op'>=</span> <span class='cn'>NULL</span>,
   title_font_use_google <span class='op'>=</span> <span class='cn'>NULL</span>,
   title_font_size <span class='op'>=</span> <span class='cn'>NULL</span>,
-  use_showtext <span class='op'>=</span> <span class='cn'>TRUE</span>
+  use_showtext <span class='op'>=</span> <span class='cn'>NULL</span>
 <span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
@@ -271,10 +271,11 @@ or defaults to 14.</p></td>
     </tr>
     <tr>
       <th>use_showtext</th>
-      <td><p>If <code>TRUE</code> (default) the <span class="pkg">showtext</span> package will be
+      <td><p>If <code>TRUE</code> the <span class="pkg">showtext</span> package will be
 used to register Google fonts. Set to <code>FALSE</code> to disable this feature
 entirely, which may result in errors during plotting if the fonts used are
-not available locally.</p></td>
+not available locally. The default is <code>TRUE</code> when the <span class="pkg">showtext</span>
+package is installed.</p></td>
     </tr>
     </table>
 
