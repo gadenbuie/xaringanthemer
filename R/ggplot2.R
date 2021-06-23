@@ -903,6 +903,17 @@ verify_fig_showtext <- function(fn = "theme_xaringan_base") {
   ))
 }
 
+set_fig_showtext <- function() {
+  if (!requireNamespace("showtext", quietly = TRUE)) {
+    return(invisible())
+  }
+  curr_fst <- knitr::opts_chunk$get("fig.showtext")
+  if (!is.null(curr_fst) && identical(curr_fst, FALSE)) {
+    return(invisible())
+  }
+  knitr::opts_chunk$set(fig.showtext = TRUE)
+}
+
 requires_xaringanthemer_env <- function(
   css_file = NULL,
   try_css = TRUE,

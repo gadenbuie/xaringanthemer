@@ -12,7 +12,8 @@
   slide level doesn't result in giant slide numbers (#53).
   
 * xaringanthemer no longer sets the `fig.showtext` chunk option when the
-  showtext package isn't installed (#56).
+  showtext package isn't installed and also when `fig.showtext = FALSE` 
+  (thanks @mikedecr #36, #56).
  
 * The style functions gain a `link_decoration` argument to set the
   [`text-decoration`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration)

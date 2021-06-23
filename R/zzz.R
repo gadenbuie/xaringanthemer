@@ -2,17 +2,13 @@
 .onLoad <- function(libname, pkgname, ...) {
 
   if ("knitr" %in% loadedNamespaces()) {
-    if (requireNamespace("showtext", quietly = TRUE)) {
-      knitr::opts_chunk$set(fig.showtext = TRUE)
-    }
+    set_fig_showtext()
   }
 
   setHook(
     packageEvent("knitr", "onLoad"),
     function(...) {
-      if (requireNamespace("showtext", quietly = TRUE)) {
-        knitr::opts_chunk$set(fig.showtext = TRUE)
-      }
+      set_fig_showtext()
     }
   )
 
