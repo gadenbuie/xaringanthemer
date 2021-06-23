@@ -279,6 +279,10 @@
 #' @param code_font_family_fallback Code Font Fallback. Defaults to
 #'   `xaringanthemer_font_default("code_font_family_fallback")`. Modifies the
 #'   `.remark-code, .remark-inline-code` classes.
+#' @param link_decoration Text decoration of links. Defaults to none. Modifies
+#'   the `a, a > code` elements. Accepts CSS
+#'   [text-decoration](https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration)
+#'   property values.
 #' @template theme_params
 #' @template style-usage
 #' @template style_duo_accent_inverse
@@ -351,6 +355,7 @@ style_duo_accent_inverse <- function(
   code_font_size = "0.9rem",
   code_font_url = xaringanthemer_font_default("code_font_url"),
   code_font_family_fallback = xaringanthemer_font_default("code_font_family_fallback"),
+  link_decoration = "none",
   colors = NULL,
   extra_css = NULL,
   extra_fonts = NULL,

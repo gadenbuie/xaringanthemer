@@ -63,6 +63,7 @@ template_variables <- tibble::tribble(
   , "code_font_size", "0.9rem", ".remark-inline", "Code Text Font Size", "--code-font-size"
   , "code_font_url", '{xaringanthemer_font_default("code_font_url")}', "@import url", "Code Font URL", NA_character_
   , "code_font_family_fallback", '{xaringanthemer_font_default("code_font_family_fallback")}', ".remark-code, .remark-inline-code", "Code Font Fallback", NA_character_
+  , "link_decoration", "none", "a, a > code", "Text decoration of links", NA_character_
 )
 
 set_default <- function(tv, ..., set_var = "default") {
@@ -99,7 +100,8 @@ template_variables <- set_default(
   text_slide_number_font_size = mdn_font_size,
   text_font_weight = mdn_font_weight,
   header_font_weight = mdn_font_weight,
-  code_font_size = mdn_font_size
+  code_font_size = mdn_font_size,
+  link_decoration = "[text-decoration](https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration)"
 )
 
 template_mono_light <- tibble::tribble(

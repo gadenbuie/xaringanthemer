@@ -13,6 +13,10 @@
   
 * xaringanthemer no longer sets the `fig.showtext` chunk option when the
   showtext package isn't installed (#56).
+ 
+* The style functions gain a `link_decoration` argument to set the
+  [`text-decoration`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration)
+  property for links (#57).
 
 # xaringanthemes 0.3.4
 
