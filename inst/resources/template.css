@@ -116,7 +116,7 @@ strong {
 }
 a, a > code {
   color: var(--link-color);
-  text-decoration: none;
+  text-decoration: {{link_decoration}};
 }
 .footnote {
   position: absolute;{{#footnote_color}}
