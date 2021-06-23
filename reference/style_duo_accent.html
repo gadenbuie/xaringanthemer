@@ -252,6 +252,7 @@ accents on select elements (headers, bold text, etc.).</p>
   code_font_size <span class='op'>=</span> <span class='st'>"0.9rem"</span>,
   code_font_url <span class='op'>=</span> <span class='fu'><a href='xaringanthemer_font_default.html'>xaringanthemer_font_default</a></span><span class='op'>(</span><span class='st'>"code_font_url"</span><span class='op'>)</span>,
   code_font_family_fallback <span class='op'>=</span> <span class='fu'><a href='xaringanthemer_font_default.html'>xaringanthemer_font_default</a></span><span class='op'>(</span><span class='st'>"code_font_family_fallback"</span><span class='op'>)</span>,
+  link_decoration <span class='op'>=</span> <span class='st'>"none"</span>,
   colors <span class='op'>=</span> <span class='cn'>NULL</span>,
   extra_css <span class='op'>=</span> <span class='cn'>NULL</span>,
   extra_fonts <span class='op'>=</span> <span class='cn'>NULL</span>,
@@ -736,6 +737,13 @@ elements.</p></td>
       <td><p>Code Font Fallback. Defaults to
 <code><a href='xaringanthemer_font_default.html'>xaringanthemer_font_default("code_font_family_fallback")</a></code>. Modifies the
 <code>.remark-code, .remark-inline-code</code> classes.</p></td>
+    </tr>
+    <tr>
+      <th>link_decoration</th>
+      <td><p>Text decoration of links. Defaults to none. Modifies
+the <code>a, a &gt; code</code> elements. Accepts CSS
+<a href='https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration'>text-decoration</a>
+property values.</p></td>
     </tr>
     <tr>
       <th>colors</th>
