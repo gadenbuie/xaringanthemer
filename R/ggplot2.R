@@ -66,7 +66,7 @@ theme_xaringan <- function(
   title_font = NULL,
   title_font_use_google = NULL,
   title_font_size = NULL,
-  use_showtext = TRUE
+  use_showtext = NULL
 ) {
   requires_xaringanthemer_env(css_file = css_file, try_css = TRUE)
   requires_package(fn = "xaringan_theme")
@@ -155,7 +155,7 @@ theme_xaringan_inverse <- function(
   title_font = NULL,
   title_font_use_google = NULL,
   title_font_size = NULL,
-  use_showtext = TRUE
+  use_showtext = NULL
 ) {
   requires_xaringanthemer_env(css_file = css_file, try_css = TRUE)
   requires_package(fn = "xaringan_theme")
@@ -224,10 +224,11 @@ theme_xaringan_inverse <- function(
 #'   Fonts](https://fonts.google.com)?
 #' @param title_font_size Base text font size, inherits from `title_font_size`,
 #'   or defaults to 14.
-#' @param use_showtext If `TRUE` (default) the \pkg{showtext} package will be
+#' @param use_showtext If `TRUE` the \pkg{showtext} package will be
 #'   used to register Google fonts. Set to `FALSE` to disable this feature
 #'   entirely, which may result in errors during plotting if the fonts used are
-#'   not available locally.
+#'   not available locally. The default is `TRUE` when the \pkg{showtext}
+#'   package is installed.
 #' @param ... Ignored
 #'
 #' @examples
@@ -291,7 +292,7 @@ theme_xaringan_base <- function(
   title_font = NULL,
   title_font_use_google = NULL,
   title_font_size = NULL,
-  use_showtext = TRUE
+  use_showtext = NULL
 ) {
   text_color <- full_length_hex(text_color)
   background_color <- full_length_hex(background_color)
@@ -304,6 +305,9 @@ theme_xaringan_base <- function(
   text_font_use_google  <- text_font_use_google  %||% is_google_font(text_font)
   title_font_use_google <- title_font_use_google %||% is_google_font(title_font)
 
+  if (is.null(use_showtext)) {
+    use_showtext <- requires_package("showtext", "theme_xaringan", required = FALSE)
+  }
   text_font <- if (!is.null(text_font)) {
     register_font(text_font, identical(text_font_use_google, TRUE) && use_showtext)
   } else {
