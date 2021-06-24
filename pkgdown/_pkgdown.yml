@@ -9,6 +9,9 @@ home:
     Give your xaringan slides some style with xaringanthemer.
     Easy slide and plot themes for xaringan slides.
 
+development:
+  mode: auto
+
 template:
   opengraph:
     twitter:
