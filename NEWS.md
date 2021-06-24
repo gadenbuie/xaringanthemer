@@ -1,23 +1,23 @@
-# xaringanthemer (development version)
+# xaringanthemer 0.4.0
 
 * Added `text_bold_font_weight` argument to xaringanthemer style functions with
   a corresponding CSS rule setting the `font-weight` property of `<strong>`
   elements (thanks @matiasandina, #50).
-  
-* The xaringanthemer slide skeleton (R Markdown template) will now render when
-  packages that are used in the template but not in xaringanthemer's Imports are
-  not installed (#52).
-
-* Set slide number font size in `rem` so that increasing the font size at the
-  slide level doesn't result in giant slide numbers (#53).
-  
-* xaringanthemer no longer sets the `fig.showtext` chunk option when the
-  showtext package isn't installed and also when `fig.showtext = FALSE` 
-  (thanks @mikedecr #36, #56).
  
 * The style functions gain a `link_decoration` argument to set the
   [`text-decoration`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration)
   property for links (#57).
+  
+* Set slide number font size in `rem` so that increasing the font size at the
+  slide level doesn't result in giant slide numbers (#53).
+
+* The xaringanthemer slide skeleton (R Markdown template) will now render when
+  packages that are used in the template but not in xaringanthemer's Imports are
+  not installed (#52).
+  
+* xaringanthemer no longer sets the `fig.showtext` chunk option when the
+  showtext package isn't installed and also when `fig.showtext = FALSE` 
+  (thanks @mikedecr #36, #56).
 
 # xaringanthemes 0.3.4
 
