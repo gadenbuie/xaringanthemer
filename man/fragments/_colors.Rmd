@@ -13,7 +13,7 @@ colors = c(
   purple = "#3e2f5b",
   orange = "#ff8811",
   green = "#136f63",
-  white = "#FFFFFF",
+  white = "#FFFFFF"
 )
 ```
 
