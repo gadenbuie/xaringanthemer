@@ -7,7 +7,7 @@ articles:
   template-variables: template-variables.html
   themes: themes.html
   xaringanthemer: xaringanthemer.html
-last_built: 2021-09-09T04:37Z
+last_built: 2021-09-10T04:37Z
 urls:
   reference: https://pkg.garrickadenbuie.com/xaringanthemer//reference
   article: https://pkg.garrickadenbuie.com/xaringanthemer//articles
