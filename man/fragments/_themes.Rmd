@@ -14,7 +14,7 @@ For example, `style_mono_accent()` uses a single color as an accent color.
 Note that the colors used below are for demonstration only,
 the point of the `style_` functions is for you to choose your own color palette!
 
-If you color palette uses more than two colors,
+If your color palette uses more than two colors,
 you can add additional colors with the `colors` argument.
 See the [Colors](#colors) section for more information.
 
