@@ -227,6 +227,7 @@ table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
   min-width: min(50ch, 100%);
 }
 .remark-slide-content.left pre {
+  margin-left: unset;
   margin-right: auto;
 }
 .remark-slide-content.center pre {
@@ -235,6 +236,7 @@ table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
 }
 .remark-slide-content.right pre {
   margin-left: auto;
+  margin-right: unset;
 }
 
 /* Slide Header Background for h1 elements */
