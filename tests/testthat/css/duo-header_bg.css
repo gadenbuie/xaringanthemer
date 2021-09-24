@@ -219,7 +219,6 @@ table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
   text-align: start;
   width: max-content;
   max-width: 100%;
-  margin-left: auto;
 }
 .remark-slide-content.left pre,
 .remark-slide-content.right pre {
