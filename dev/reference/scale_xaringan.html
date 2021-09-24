@@ -6,8 +6,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Xaringan Themer ggplot2 Scales — scale_xaringan • xaringanthemer</title>
+<title>Themed ggplot2 Scales — scale_xaringan • xaringanthemer</title>
 
+<!-- favicons -->
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -41,10 +48,13 @@
   <link href="../extra.css" rel="stylesheet">
   
 
-<meta property="og:title" content="Xaringan Themer ggplot2 Scales — scale_xaringan" />
-<meta property="og:description" content="Lifecycle: Maturing
+<meta property="og:title" content="Themed ggplot2 Scales — scale_xaringan" />
+<meta property="og:description" content="
 Color and fill single-color scales for discrete and continuous values,
-created using the primary accent color of the xaringanthemer styles." />
+created using the primary accent color of the xaringanthemer styles.  See
+vignette(&quot;ggplot2-themes&quot;) for more information and examples of
+xaringanthemer's ggplot2-related functions." />
+<meta property="og:image" content="https://pkg.garrickadenbuie.com/xaringanthemer/logo.png" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:creator" content="@grrrck" />
 <meta name="twitter:site" content="@grrrck" />
@@ -79,7 +89,7 @@ created using the primary accent color of the xaringanthemer styles." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">xaringanthemer</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.2.0.9100</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.4.0.9000</span>
       </span>
     </div>
 
@@ -95,35 +105,58 @@ created using the primary accent color of the xaringanthemer styles." />
   <a href="../articles/themes.html">Themes</a>
 </li>
 <li>
-  <a href="../articles/fonts.html">Fonts</a>
+  <a href="../articles/ggplot2-themes.html">ggplot2 Themes</a>
 </li>
-<li>
-  <a href="../articles/template-variables.html">Template Variables</a>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    More
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="../articles/fonts.html">Fonts</a>
+    </li>
+    <li>
+      <a href="../articles/template-variables.html">Template Variables</a>
+    </li>
+  </ul>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li>
-  <a href="../news/index.html">
-    <span class="fa fa fa fa-newspaper-o fa-lg"></span>
+        <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="far fa-newspaper fa-lg"></span>
      
     
+     
+    <span class="caret"></span>
   </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="https://garrickadenbuie.com/blog/xaringanthemer-v0-3-0/">xaringan 0.3.0</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="../news/index.html">Changelog</a>
+    </li>
+  </ul>
 </li>
 <li>
   <a href="https://github.com/gadenbuie/xaringanthemer">
-    <span class="fa fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
 <li>
   <a href="https://twitter.com/grrrck">
-    <span class="fa fa-twitter fa-lg"></span>
+    <span class="fab fa-twitter fa-lg"></span>
      
   </a>
 </li>
 <li>
   <a href="https://www.garrickadenbuie.com">
-    <span class="fa fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -140,73 +173,75 @@ created using the primary accent color of the xaringanthemer styles." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Xaringan Themer ggplot2 Scales</h1>
+    <h1>Themed ggplot2 Scales</h1>
     <small class="dont-index">Source: <a href='https://github.com/gadenbuie/xaringanthemer/blob/master/R/ggplot2.R'><code>R/ggplot2.R</code></a></small>
     <div class="hidden name"><code>scale_xaringan.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p><strong>Lifecycle:</strong> <a href='https://www.tidyverse.org/lifecycle/#maturing'>Maturing</a></p>
+    <p><a href='https://lifecycle.r-lib.org/articles/stages.html#maturing'><img src='figures/lifecycle-maturing.svg' alt='[Maturing]' /></a></p>
 <p>Color and fill single-color scales for discrete and continuous values,
-created using the primary accent color of the xaringanthemer styles.</p>
+created using the primary accent color of the xaringanthemer styles.  See
+<code><a href='../articles/ggplot2-themes.html'>vignette("ggplot2-themes")</a></code> for more information and examples of
+<span class="pkg">xaringanthemer</span>'s <span class="pkg">ggplot2</span>-related functions.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>scale_xaringan_discrete</span>(
-  <span class='kw'>aes_type</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"color"</span>, <span class='st'>"colour"</span>, <span class='st'>"fill"</span>),
-  <span class='no'>...</span>,
-  <span class='kw'>color</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>direction</span> <span class='kw'>=</span> <span class='fl'>1</span>,
-  <span class='kw'>inverse</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>
-)
+    <pre class="usage"><span class='fu'>scale_xaringan_discrete</span><span class='op'>(</span>
+  aes_type <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"color"</span>, <span class='st'>"colour"</span>, <span class='st'>"fill"</span><span class='op'>)</span>,
+  <span class='va'>...</span>,
+  color <span class='op'>=</span> <span class='cn'>NULL</span>,
+  direction <span class='op'>=</span> <span class='fl'>1</span>,
+  inverse <span class='op'>=</span> <span class='cn'>FALSE</span>
+<span class='op'>)</span>
 
-<span class='fu'>scale_xaringan_fill_discrete</span>(<span class='no'>...</span>, <span class='kw'>color</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>direction</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>inverse</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)
+<span class='fu'>scale_xaringan_fill_discrete</span><span class='op'>(</span><span class='va'>...</span>, color <span class='op'>=</span> <span class='cn'>NULL</span>, direction <span class='op'>=</span> <span class='fl'>1</span>, inverse <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span>
 
-<span class='fu'>scale_xaringan_color_discrete</span>(
-  <span class='no'>...</span>,
-  <span class='kw'>color</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>direction</span> <span class='kw'>=</span> <span class='fl'>1</span>,
-  <span class='kw'>inverse</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>
-)
+<span class='fu'>scale_xaringan_color_discrete</span><span class='op'>(</span>
+  <span class='va'>...</span>,
+  color <span class='op'>=</span> <span class='cn'>NULL</span>,
+  direction <span class='op'>=</span> <span class='fl'>1</span>,
+  inverse <span class='op'>=</span> <span class='cn'>FALSE</span>
+<span class='op'>)</span>
 
-<span class='fu'>scale_xaringan_colour_discrete</span>(
-  <span class='no'>...</span>,
-  <span class='kw'>color</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>direction</span> <span class='kw'>=</span> <span class='fl'>1</span>,
-  <span class='kw'>inverse</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>
-)
+<span class='fu'>scale_xaringan_colour_discrete</span><span class='op'>(</span>
+  <span class='va'>...</span>,
+  color <span class='op'>=</span> <span class='cn'>NULL</span>,
+  direction <span class='op'>=</span> <span class='fl'>1</span>,
+  inverse <span class='op'>=</span> <span class='cn'>FALSE</span>
+<span class='op'>)</span>
 
-<span class='fu'>scale_xaringan_continuous</span>(
-  <span class='kw'>aes_type</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"color"</span>, <span class='st'>"colour"</span>, <span class='st'>"fill"</span>),
-  <span class='no'>...</span>,
-  <span class='kw'>color</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>begin</span> <span class='kw'>=</span> <span class='fl'>0</span>,
-  <span class='kw'>end</span> <span class='kw'>=</span> <span class='fl'>1</span>,
-  <span class='kw'>inverse</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>
-)
+<span class='fu'>scale_xaringan_continuous</span><span class='op'>(</span>
+  aes_type <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"color"</span>, <span class='st'>"colour"</span>, <span class='st'>"fill"</span><span class='op'>)</span>,
+  <span class='va'>...</span>,
+  color <span class='op'>=</span> <span class='cn'>NULL</span>,
+  begin <span class='op'>=</span> <span class='fl'>0</span>,
+  end <span class='op'>=</span> <span class='fl'>1</span>,
+  inverse <span class='op'>=</span> <span class='cn'>FALSE</span>
+<span class='op'>)</span>
 
-<span class='fu'>scale_xaringan_fill_continuous</span>(
-  <span class='no'>...</span>,
-  <span class='kw'>color</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>begin</span> <span class='kw'>=</span> <span class='fl'>0</span>,
-  <span class='kw'>end</span> <span class='kw'>=</span> <span class='fl'>1</span>,
-  <span class='kw'>inverse</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>
-)
+<span class='fu'>scale_xaringan_fill_continuous</span><span class='op'>(</span>
+  <span class='va'>...</span>,
+  color <span class='op'>=</span> <span class='cn'>NULL</span>,
+  begin <span class='op'>=</span> <span class='fl'>0</span>,
+  end <span class='op'>=</span> <span class='fl'>1</span>,
+  inverse <span class='op'>=</span> <span class='cn'>FALSE</span>
+<span class='op'>)</span>
 
-<span class='fu'>scale_xaringan_color_continuous</span>(
-  <span class='no'>...</span>,
-  <span class='kw'>color</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>begin</span> <span class='kw'>=</span> <span class='fl'>0</span>,
-  <span class='kw'>end</span> <span class='kw'>=</span> <span class='fl'>1</span>,
-  <span class='kw'>inverse</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>
-)
+<span class='fu'>scale_xaringan_color_continuous</span><span class='op'>(</span>
+  <span class='va'>...</span>,
+  color <span class='op'>=</span> <span class='cn'>NULL</span>,
+  begin <span class='op'>=</span> <span class='fl'>0</span>,
+  end <span class='op'>=</span> <span class='fl'>1</span>,
+  inverse <span class='op'>=</span> <span class='cn'>FALSE</span>
+<span class='op'>)</span>
 
-<span class='fu'>scale_xaringan_colour_continuous</span>(
-  <span class='no'>...</span>,
-  <span class='kw'>color</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>begin</span> <span class='kw'>=</span> <span class='fl'>0</span>,
-  <span class='kw'>end</span> <span class='kw'>=</span> <span class='fl'>1</span>,
-  <span class='kw'>inverse</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>
-)</pre>
+<span class='fu'>scale_xaringan_colour_continuous</span><span class='op'>(</span>
+  <span class='va'>...</span>,
+  color <span class='op'>=</span> <span class='cn'>NULL</span>,
+  begin <span class='op'>=</span> <span class='fl'>0</span>,
+  end <span class='op'>=</span> <span class='fl'>1</span>,
+  inverse <span class='op'>=</span> <span class='cn'>FALSE</span>
+<span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -219,10 +254,10 @@ One of "color", "colour", or "fill".</p></td>
     <tr>
       <th>...</th>
       <td><p>Arguments passed on to either the <span class="pkg">colorspace</span> scale
-functions — one of <a href='http://colorspace.R-Forge.R-project.org//reference/scale_colour_discrete_sequential.html'>colorspace::scale_color_discrete_sequential</a>,
-<a href='http://colorspace.R-Forge.R-project.org//reference/scale_colour_continuous_sequential.html'>colorspace::scale_color_continuous_sequential</a>,
-<a href='http://colorspace.R-Forge.R-project.org//reference/scale_colour_discrete_sequential.html'>colorspace::scale_fill_discrete_sequential</a>, or
-<a href='http://colorspace.R-Forge.R-project.org//reference/scale_colour_continuous_sequential.html'>colorspace::scale_fill_continuous_sequential</a> — or to
+functions — one of <code><a href='https://colorspace.R-Forge.R-project.org//reference/scale_colour_discrete_sequential.html'>colorspace::scale_color_discrete_sequential()</a></code>,
+<code><a href='https://colorspace.R-Forge.R-project.org//reference/scale_colour_continuous_sequential.html'>colorspace::scale_color_continuous_sequential()</a></code>,
+<code><a href='https://colorspace.R-Forge.R-project.org//reference/scale_colour_discrete_sequential.html'>colorspace::scale_fill_discrete_sequential()</a></code>, or
+<code><a href='https://colorspace.R-Forge.R-project.org//reference/scale_colour_continuous_sequential.html'>colorspace::scale_fill_continuous_sequential()</a></code> — or to
 <a href='https://ggplot2.tidyverse.org/reference/continuous_scale.html'>ggplot2::continuous_scale</a> or <a href='https://ggplot2.tidyverse.org/reference/discrete_scale.html'>ggplot2::discrete_scale</a>.</p></td>
     </tr>
     <tr>
@@ -255,50 +290,51 @@ value of <code>inverse_header_color</code></p></td>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># Requires ggplot2</span>
-<span class='no'>has_ggplot2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/ns-load.html'>requireNamespace</a></span>(<span class='st'>"ggplot2"</span>, <span class='kw'>quietly</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)
+<span class='va'>has_ggplot2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/ns-load.html'>requireNamespace</a></span><span class='op'>(</span><span class='st'>"ggplot2"</span>, quietly <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
 
-<span class='kw'>if</span> (<span class='no'>has_ggplot2</span>) {
-  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>ggplot2</span>)
+<span class='kw'>if</span> <span class='op'>(</span><span class='va'>has_ggplot2</span><span class='op'>)</span> <span class='op'>{</span>
+  <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://ggplot2.tidyverse.org'>ggplot2</a></span><span class='op'>)</span>
   <span class='co'># Saving the theme to a temp file because this is an example</span>
-  <span class='no'>path_to_css_file</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/tempfile.html'>tempfile</a></span>(<span class='kw'>fileext</span> <span class='kw'>=</span> <span class='st'>".css"</span>)
+  <span class='va'>path_to_css_file</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/tempfile.html'>tempfile</a></span><span class='op'>(</span>fileext <span class='op'>=</span> <span class='st'>".css"</span><span class='op'>)</span>
 
   <span class='co'># Create the xaringan theme: dark blue background with teal green accents</span>
-  <span class='fu'><a href='style_duo.html'>style_duo</a></span>(
-    <span class='kw'>primary_color</span> <span class='kw'>=</span> <span class='st'>"#002b36"</span>,
-    <span class='kw'>secondary_color</span> <span class='kw'>=</span> <span class='st'>"#31b09e"</span>,
+  <span class='fu'><a href='style_duo.html'>style_duo</a></span><span class='op'>(</span>
+    primary_color <span class='op'>=</span> <span class='st'>"#002b36"</span>,
+    secondary_color <span class='op'>=</span> <span class='st'>"#31b09e"</span>,
     <span class='co'># Using basic fonts for this example, but the plot theme will</span>
     <span class='co'># automatically use your theme font if you use Google fonts</span>
-    <span class='kw'>text_font_family</span> <span class='kw'>=</span> <span class='st'>"sans"</span>,
-    <span class='kw'>header_font_family</span> <span class='kw'>=</span> <span class='st'>"serif"</span>,
-    <span class='kw'>outfile</span> <span class='kw'>=</span> <span class='no'>path_to_css_file</span>
-  )
+    text_font_family <span class='op'>=</span> <span class='st'>"sans"</span>,
+    header_font_family <span class='op'>=</span> <span class='st'>"serif"</span>,
+    outfile <span class='op'>=</span> <span class='va'>path_to_css_file</span>
+  <span class='op'>)</span>
 
   <span class='co'># Here's some very basic example data</span>
-  <span class='no'>ex</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span>(
-    <span class='kw'>name</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"Couple"</span>, <span class='st'>"Few"</span>, <span class='st'>"Lots"</span>, <span class='st'>"Many"</span>),
-    <span class='kw'>n</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>2</span>, <span class='fl'>3</span>, <span class='fl'>5</span>, <span class='fl'>7</span>)
-  )
+  <span class='va'>ex</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span>
+    name <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Couple"</span>, <span class='st'>"Few"</span>, <span class='st'>"Lots"</span>, <span class='st'>"Many"</span><span class='op'>)</span>,
+    n <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>2</span>, <span class='fl'>3</span>, <span class='fl'>5</span>, <span class='fl'>7</span><span class='op'>)</span>
+  <span class='op'>)</span>
 
   <span class='co'># Fill color scales demo</span>
-  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span>(<span class='no'>ex</span>) +
-    <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span>(<span class='no'>name</span>, <span class='no'>n</span>, <span class='kw'>fill</span> <span class='kw'>=</span> <span class='no'>n</span>) +
-    <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_bar.html'>geom_col</a></span>() +
-    <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>ggtitle</a></span>(<span class='st'>"Matching fill scales"</span>) +
+  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='va'>ex</span><span class='op'>)</span> <span class='op'>+</span>
+    <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span><span class='va'>name</span>, <span class='va'>n</span>, fill <span class='op'>=</span> <span class='va'>n</span><span class='op'>)</span> <span class='op'>+</span>
+    <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_bar.html'>geom_col</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span>
+    <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>ggtitle</a></span><span class='op'>(</span><span class='st'>"Matching fill scales"</span><span class='op'>)</span> <span class='op'>+</span>
     <span class='co'># themed to match the slides: dark blue background with teal text</span>
-    <span class='fu'><a href='theme_xaringan.html'>theme_xaringan</a></span>() +
+    <span class='fu'><a href='theme_xaringan.html'>theme_xaringan</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span>
     <span class='co'># Fill color matches teal text</span>
-    <span class='fu'>scale_xaringan_fill_continuous</span>()
+    <span class='fu'>scale_xaringan_fill_continuous</span><span class='op'>(</span><span class='op'>)</span>
 
   <span class='co'># Color scales demo</span>
-  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span>(<span class='no'>ex</span>) +
-    <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span>(<span class='no'>name</span>, <span class='kw'>y</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>color</span> <span class='kw'>=</span> <span class='no'>name</span>) +
-    <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span>(<span class='kw'>size</span> <span class='kw'>=</span> <span class='fl'>10</span>) +
-    <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>ggtitle</a></span>(<span class='st'>"Matching color scales"</span>) +
+  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='va'>ex</span><span class='op'>)</span> <span class='op'>+</span>
+    <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span><span class='va'>name</span>, y <span class='op'>=</span> <span class='fl'>1</span>, color <span class='op'>=</span> <span class='va'>name</span><span class='op'>)</span> <span class='op'>+</span>
+    <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span>size <span class='op'>=</span> <span class='fl'>10</span><span class='op'>)</span> <span class='op'>+</span>
+    <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>ggtitle</a></span><span class='op'>(</span><span class='st'>"Matching color scales"</span><span class='op'>)</span> <span class='op'>+</span>
     <span class='co'># themed to match the slides: dark blue background with teal text</span>
-    <span class='fu'><a href='theme_xaringan.html'>theme_xaringan</a></span>() +
+    <span class='fu'><a href='theme_xaringan.html'>theme_xaringan</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span>
     <span class='co'># Fill color matches teal text</span>
-    <span class='fu'>scale_xaringan_color_discrete</span>(<span class='kw'>direction</span> <span class='kw'>=</span> -<span class='fl'>1</span>)
-}</div><div class='img'><img src='scale_xaringan-1.png' alt='' width='700' height='433' /></div><div class='input'>
+    <span class='fu'>scale_xaringan_color_discrete</span><span class='op'>(</span>direction <span class='op'>=</span> <span class='op'>-</span><span class='fl'>1</span><span class='op'>)</span>
+<span class='op'>}</span>
+</div><div class='img'><img src='scale_xaringan-1.png' alt='' width='700' height='433' /></div><div class='input'>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -315,7 +351,7 @@ value of <code>inverse_header_color</code></p></td>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

@@ -8,6 +8,13 @@
 
 <title>Deprecated or renamed functions — xaringanthemer-deprecated • xaringanthemer</title>
 
+<!-- favicons -->
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -54,6 +61,7 @@ Use style_duo_accent() instead of duo_accent().
 Use style_duo_accent_inverse() instead of duo_accent_inverse().
 Use style_solarized_light() instead of solarized_light().
 Use style_solarized_dark() instead of solarized_dark()." />
+<meta property="og:image" content="https://pkg.garrickadenbuie.com/xaringanthemer/logo.png" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:creator" content="@grrrck" />
 <meta name="twitter:site" content="@grrrck" />
@@ -88,7 +96,7 @@ Use style_solarized_dark() instead of solarized_dark()." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">xaringanthemer</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.2.0.9100</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.4.0.9000</span>
       </span>
     </div>
 
@@ -104,35 +112,58 @@ Use style_solarized_dark() instead of solarized_dark()." />
   <a href="../articles/themes.html">Themes</a>
 </li>
 <li>
-  <a href="../articles/fonts.html">Fonts</a>
+  <a href="../articles/ggplot2-themes.html">ggplot2 Themes</a>
 </li>
-<li>
-  <a href="../articles/template-variables.html">Template Variables</a>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    More
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="../articles/fonts.html">Fonts</a>
+    </li>
+    <li>
+      <a href="../articles/template-variables.html">Template Variables</a>
+    </li>
+  </ul>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li>
-  <a href="../news/index.html">
-    <span class="fa fa fa fa-newspaper-o fa-lg"></span>
+        <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="far fa-newspaper fa-lg"></span>
      
     
+     
+    <span class="caret"></span>
   </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="https://garrickadenbuie.com/blog/xaringanthemer-v0-3-0/">xaringan 0.3.0</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="../news/index.html">Changelog</a>
+    </li>
+  </ul>
 </li>
 <li>
   <a href="https://github.com/gadenbuie/xaringanthemer">
-    <span class="fa fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
 <li>
   <a href="https://twitter.com/grrrck">
-    <span class="fa fa-twitter fa-lg"></span>
+    <span class="fab fa-twitter fa-lg"></span>
      
   </a>
 </li>
 <li>
   <a href="https://www.garrickadenbuie.com">
-    <span class="fa fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -156,7 +187,7 @@ Use style_solarized_dark() instead of solarized_dark()." />
 
     <div class="ref-description">
     <p>These functions in xaringanthemer have been deprecated or renamed.</p>
-<p>Use <code><a href='style_xaringan.html'>style_xaringan()</a></code> instead of <code>write_xaringan_theme()</code>.</p>
+<p>Use <code><a href='xaringanthemer_font_default.html'>style_xaringan()</a></code> instead of <code>write_xaringan_theme()</code>.</p>
 <p>Use <code><a href='style_extra_css.html'>style_extra_css()</a></code> instead of <code>write_extra_css()</code>.</p>
 <p>Use <code><a href='style_mono_light.html'>style_mono_light()</a></code> instead of <code>mono_light()</code>.</p>
 <p>Use <code><a href='style_mono_dark.html'>style_mono_dark()</a></code> instead of <code>mono_dark()</code>.</p>
@@ -169,29 +200,40 @@ Use style_solarized_dark() instead of solarized_dark()." />
 <p>Use <code><a href='style_solarized_dark.html'>style_solarized_dark()</a></code> instead of <code>solarized_dark()</code>.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>write_xaringan_theme</span>(<span class='no'>...</span>)
+    <pre class="usage"><span class='fu'>write_xaringan_theme</span><span class='op'>(</span><span class='va'>...</span><span class='op'>)</span>
 
-<span class='fu'>write_extra_css</span>(<span class='no'>...</span>)
+<span class='fu'>write_extra_css</span><span class='op'>(</span><span class='va'>...</span><span class='op'>)</span>
 
-<span class='fu'>mono_light</span>(<span class='no'>...</span>)
+<span class='fu'>mono_light</span><span class='op'>(</span><span class='va'>...</span><span class='op'>)</span>
 
-<span class='fu'>mono_dark</span>(<span class='no'>...</span>)
+<span class='fu'>mono_dark</span><span class='op'>(</span><span class='va'>...</span><span class='op'>)</span>
 
-<span class='fu'>mono_accent</span>(<span class='no'>...</span>)
+<span class='fu'>mono_accent</span><span class='op'>(</span><span class='va'>...</span><span class='op'>)</span>
 
-<span class='fu'>mono_accent_inverse</span>(<span class='no'>...</span>)
+<span class='fu'>mono_accent_inverse</span><span class='op'>(</span><span class='va'>...</span><span class='op'>)</span>
 
-<span class='fu'>duo</span>(<span class='no'>...</span>)
+<span class='fu'>duo</span><span class='op'>(</span><span class='va'>...</span><span class='op'>)</span>
 
-<span class='fu'>duo_accent</span>(<span class='no'>...</span>)
+<span class='fu'>duo_accent</span><span class='op'>(</span><span class='va'>...</span><span class='op'>)</span>
 
-<span class='fu'>duo_accent_inverse</span>(<span class='no'>...</span>)
+<span class='fu'>duo_accent_inverse</span><span class='op'>(</span><span class='va'>...</span><span class='op'>)</span>
 
-<span class='fu'>solarized_light</span>(<span class='no'>...</span>)
+<span class='fu'>solarized_light</span><span class='op'>(</span><span class='va'>...</span><span class='op'>)</span>
 
-<span class='fu'>solarized_dark</span>(<span class='no'>...</span>)</pre>
+<span class='fu'>solarized_dark</span><span class='op'>(</span><span class='va'>...</span><span class='op'>)</span></pre>
 
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>...</th>
+      <td><p>Argumets passed to the new or renamed functions.</p></td>
+    </tr>
+    </table>
 
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>The result of the new or renamed function.</p>
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -208,7 +250,7 @@ Use style_solarized_dark() instead of solarized_dark()." />
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

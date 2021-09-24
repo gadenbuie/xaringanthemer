@@ -6,8 +6,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>xaringanthemer: Custom 'Xaringan' CSS Themes — xaringanthemer-package • xaringanthemer</title>
+<title>xaringanthemer: Custom 'xaringan' CSS Themes — xaringanthemer-package • xaringanthemer</title>
 
+<!-- favicons -->
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -41,13 +48,15 @@
   <link href="../extra.css" rel="stylesheet">
   
 
-<meta property="og:title" content="xaringanthemer: Custom 'Xaringan' CSS Themes — xaringanthemer-package" />
-<meta property="og:description" content="Create beautifully color-cordinated and customized
+<meta property="og:title" content="xaringanthemer: Custom 'xaringan' CSS Themes — xaringanthemer-package" />
+<meta property="og:description" content="
+Create beautifully color-coordinated and customized
     themes for your 'xaringan' slides, without writing any CSS. Complete
     your slide theme with 'ggplot2' themes that match the font and colors
     used in your slides.  Customized styles can be created directly in
     your slides' 'R Markdown' source file or in a separate external
     script." />
+<meta property="og:image" content="https://pkg.garrickadenbuie.com/xaringanthemer/logo.png" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:creator" content="@grrrck" />
 <meta name="twitter:site" content="@grrrck" />
@@ -82,7 +91,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">xaringanthemer</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.2.0.9100</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.4.0.9000</span>
       </span>
     </div>
 
@@ -98,35 +107,58 @@
   <a href="../articles/themes.html">Themes</a>
 </li>
 <li>
-  <a href="../articles/fonts.html">Fonts</a>
+  <a href="../articles/ggplot2-themes.html">ggplot2 Themes</a>
 </li>
-<li>
-  <a href="../articles/template-variables.html">Template Variables</a>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    More
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="../articles/fonts.html">Fonts</a>
+    </li>
+    <li>
+      <a href="../articles/template-variables.html">Template Variables</a>
+    </li>
+  </ul>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li>
-  <a href="../news/index.html">
-    <span class="fa fa fa fa-newspaper-o fa-lg"></span>
+        <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="far fa-newspaper fa-lg"></span>
      
     
+     
+    <span class="caret"></span>
   </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="https://garrickadenbuie.com/blog/xaringanthemer-v0-3-0/">xaringan 0.3.0</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="../news/index.html">Changelog</a>
+    </li>
+  </ul>
 </li>
 <li>
   <a href="https://github.com/gadenbuie/xaringanthemer">
-    <span class="fa fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
 <li>
   <a href="https://twitter.com/grrrck">
-    <span class="fa fa-twitter fa-lg"></span>
+    <span class="fab fa-twitter fa-lg"></span>
      
   </a>
 </li>
 <li>
   <a href="https://www.garrickadenbuie.com">
-    <span class="fa fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -143,13 +175,14 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>xaringanthemer: Custom 'Xaringan' CSS Themes</h1>
+    <h1>xaringanthemer: Custom 'xaringan' CSS Themes</h1>
     <small class="dont-index">Source: <a href='https://github.com/gadenbuie/xaringanthemer/blob/master/R/xaringanthemer-package.R'><code>R/xaringanthemer-package.R</code></a></small>
     <div class="hidden name"><code>xaringanthemer-package.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Create beautifully color-cordinated and customized
+    <p><img src='figures/logo.png' align='right' alt='logo' width='120' /></p>
+<p>Create beautifully color-coordinated and customized
     themes for your 'xaringan' slides, without writing any CSS. Complete
     your slide theme with 'ggplot2' themes that match the font and colors
     used in your slides.  Customized styles can be created directly in
@@ -162,12 +195,15 @@
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>Useful links:</p><ul>
-<li><p><a href='https://pkg.garrickadenbuie.com/xaringanthemer'>https://pkg.garrickadenbuie.com/xaringanthemer</a></p></li>
+<li><p><a href='https://pkg.garrickadenbuie.com/xaringanthemer/'>https://pkg.garrickadenbuie.com/xaringanthemer/</a></p></li>
 <li><p><a href='https://github.com/gadenbuie/xaringanthemer'>https://github.com/gadenbuie/xaringanthemer</a></p></li>
 <li><p>Report bugs at <a href='https://github.com/gadenbuie/xaringanthemer/issues'>https://github.com/gadenbuie/xaringanthemer/issues</a></p></li>
 </ul>
 
 </div>
+    <h2 class="hasAnchor" id="author"><a class="anchor" href="#author"></a>Author</h2>
+
+    <p><strong>Maintainer</strong>: Garrick Aden-Buie <a href='mailto:garrick@adenbuie.com'>garrick@adenbuie.com</a> (<a href='https://orcid.org/0000-0002-7111-0077'>ORCID</a>)</p>
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -184,7 +220,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

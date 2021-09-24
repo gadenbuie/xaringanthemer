@@ -8,6 +8,13 @@
 
 <title>Changelog • xaringanthemer</title>
 
+<!-- favicons -->
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -42,6 +49,7 @@
   
 
 <meta property="og:title" content="Changelog" />
+<meta property="og:image" content="https://pkg.garrickadenbuie.com/xaringanthemer/logo.png" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:creator" content="@grrrck" />
 <meta name="twitter:site" content="@grrrck" />
@@ -76,7 +84,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">xaringanthemer</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.2.0.9100</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.4.0.9000</span>
       </span>
     </div>
 
@@ -92,35 +100,58 @@
   <a href="../articles/themes.html">Themes</a>
 </li>
 <li>
-  <a href="../articles/fonts.html">Fonts</a>
+  <a href="../articles/ggplot2-themes.html">ggplot2 Themes</a>
 </li>
-<li>
-  <a href="../articles/template-variables.html">Template Variables</a>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    More
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="../articles/fonts.html">Fonts</a>
+    </li>
+    <li>
+      <a href="../articles/template-variables.html">Template Variables</a>
+    </li>
+  </ul>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li>
-  <a href="../news/index.html">
-    <span class="fa fa fa fa-newspaper-o fa-lg"></span>
+        <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="far fa-newspaper fa-lg"></span>
      
     
+     
+    <span class="caret"></span>
   </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="https://garrickadenbuie.com/blog/xaringanthemer-v0-3-0/">xaringan 0.3.0</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="../news/index.html">Changelog</a>
+    </li>
+  </ul>
 </li>
 <li>
   <a href="https://github.com/gadenbuie/xaringanthemer">
-    <span class="fa fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
 <li>
   <a href="https://twitter.com/grrrck">
-    <span class="fa fa-twitter fa-lg"></span>
+    <span class="fab fa-twitter fa-lg"></span>
      
   </a>
 </li>
 <li>
   <a href="https://www.garrickadenbuie.com">
-    <span class="fa fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -141,13 +172,50 @@
       <small>Source: <a href='https://github.com/gadenbuie/xaringanthemer/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
     </div>
 
-    <div id="xaringanthemer-0-3-0-dev" class="section level1">
+    <div id="xaringanthemer-development-version" class="section level1">
+<h1 class="page-header" data-toc-text="development version">
+<a href="#xaringanthemer-development-version" class="anchor"></a>xaringanthemer (development version)<small> Unreleased </small>
+</h1>
+</div>
+    <div id="xaringanthemer-040" class="section level1">
+<h1 class="page-header" data-toc-text="0.4.0">
+<a href="#xaringanthemer-040" class="anchor"></a>xaringanthemer 0.4.0<small> 2021-06-24 </small>
+</h1>
+<ul>
+<li><p>Added <code>text_bold_font_weight</code> argument to xaringanthemer style functions with a corresponding CSS rule setting the <code>font-weight</code> property of <code>&lt;strong&gt;</code> elements (thanks <a href='https://github.com/matiasandina'>@matiasandina</a>, <a href='https://github.com/gadenbuie/xaringanthemer/issues/50'>#50</a>).</p></li>
+<li><p>The style functions gain a <code>link_decoration</code> argument to set the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration"><code>text-decoration</code></a> property for links (<a href='https://github.com/gadenbuie/xaringanthemer/issues/57'>#57</a>).</p></li>
+<li><p>Set slide number font size in <code>rem</code> so that increasing the font size at the slide level doesn’t result in giant slide numbers (<a href='https://github.com/gadenbuie/xaringanthemer/issues/53'>#53</a>).</p></li>
+<li><p>The xaringanthemer slide skeleton (R Markdown template) will now render when packages that are used in the template but not in xaringanthemer’s Imports are not installed (<a href='https://github.com/gadenbuie/xaringanthemer/issues/52'>#52</a>).</p></li>
+<li><p>xaringanthemer no longer sets the <code>fig.showtext</code> chunk option when the showtext package isn’t installed and also when <code>fig.showtext = FALSE</code> (thanks <a href='https://github.com/mikedecr'>@mikedecr</a> <a href='https://github.com/gadenbuie/xaringanthemer/issues/36'>#36</a>, <a href='https://github.com/gadenbuie/xaringanthemer/issues/56'>#56</a>).</p></li>
+</ul>
+</div>
+    <div id="xaringanthemes-034" class="section level1">
+<h1 class="page-header" data-toc-text="0.3.4">
+<a href="#xaringanthemes-034" class="anchor"></a>xaringanthemes 0.3.4<small> 2021-04-18 </small>
+</h1>
+<ul>
+<li>Maintenance release to avoid issues with upcoming R 4.1.0 (<a href='https://github.com/gadenbuie/xaringanthemer/issues/49'>#49</a>)</li>
+</ul>
+</div>
+    <div id="xaringanthemer-033" class="section level1">
+<h1 class="page-header" data-toc-text="0.3.3">
+<a href="#xaringanthemer-033" class="anchor"></a>xaringanthemer 0.3.3<small> 2021-03-04 </small>
+</h1>
+<ul>
+<li><p>Add <code>inverse_link_color</code> to control color of links on inverse slides (thanks <a href='https://github.com/dmi3kno'>@dmi3kno</a>, <a href='https://github.com/gadenbuie/xaringanthemer/issues/44'>#44</a>)</p></li>
+<li><p>.pull-right[] now clears floats just for its immediate sibling</p></li>
+<li><p>Add <code>header_font_family_fallback</code> to control fallback fonts for headings (thanks <a href='https://github.com/mattwarkentin'>@mattwarkentin</a>, <a href='https://github.com/gadenbuie/xaringanthemer/issues/41'>#41</a>)</p></li>
+<li><p>New xaringanthemer presentation skeleton with a kitchen sink of typical slide elements with the goal of making it easier to preview new themes during development.</p></li>
+</ul>
+</div>
+    <div id="xaringanthemer-030" class="section level1">
 <h1 class="page-header" data-toc-text="0.3.0">
-<a href="#xaringanthemer-0-3-0-dev" class="anchor"></a>xaringanthemer 0.3.0 (dev)</h1>
+<a href="#xaringanthemer-030" class="anchor"></a>xaringanthemer 0.3.0<small> 2020-05-04 </small>
+</h1>
 <ul>
 <li><p>Adds <code><a href="../reference/theme_xaringan.html">theme_xaringan()</a></code>, a ggplot2 theme that automatically uses the colors and font styles of your xaringanthemer style. Also adds <code><a href="../reference/scale_xaringan.html">scale_xaringan_discrete()</a></code> and <code><a href="../reference/scale_xaringan.html">scale_xaringan_continuous()</a></code> functions that use your slides’ primary colors for the color or fill aesthetics. These theme functions can recover the primary colors used in a xaringanthemer (&gt;= 0.3.0) CSS file even if you don’t call the style function directly in your slides.</p></li>
-<li><p>Renamed all xaringanthemer functions that create CSS styles to use the prefix “<code>style_</code>”. For example, <code><a href="../reference/xaringanthemer-deprecated.html">mono_light()</a></code> is now <code><a href="../reference/style_mono_light.html">style_mono_light()</a></code>. Additionally, <code><a href="../reference/xaringanthemer-deprecated.html">write_xaringan_theme()</a></code> is now <code><a href="../reference/style_xaringan.html">style_xaringan()</a></code> and <code><a href="../reference/xaringanthemer-deprecated.html">write_extra_css()</a></code> is <code><a href="../reference/style_extra_css.html">style_extra_css()</a></code>. Overall, this change makes the xarignanthemer API much cleaner and easier to navigate. Previous function names are deprecated but still work.</p></li>
-<li><p>Added <code>background_header_auto</code> parameter that adds a background under the first <code>h1</code> element (i.e. <code># Slide Title</code>) on a slide. When enabled, the background is added automatically to slides, as long as they aren’t <code>inverse</code>, <code>center</code>, <code>middle</code>, or <code>bottom</code>-styled slides. When disabled, you can still enable slide title headers by adding the <code>header_background</code> class to a slide. (thanks, <a href='https://github.com/Btibert3'>@Btibert3</a>, <a href='https://github.com/gadenbuie/xaringanthemer/issues/10'>#10</a>)</p></li>
+<li><p>Renamed all xaringanthemer functions that create CSS styles to use the prefix “<code>style_</code>”. For example, <code><a href="../reference/xaringanthemer-deprecated.html">mono_light()</a></code> is now <code><a href="../reference/style_mono_light.html">style_mono_light()</a></code>. Additionally, <code><a href="../reference/xaringanthemer-deprecated.html">write_xaringan_theme()</a></code> is now <code><a href="../reference/xaringanthemer_font_default.html">style_xaringan()</a></code> and <code><a href="../reference/xaringanthemer-deprecated.html">write_extra_css()</a></code> is <code><a href="../reference/style_extra_css.html">style_extra_css()</a></code>. Overall, this change makes the xarignanthemer API much cleaner and easier to navigate. Previous function names are deprecated but still work.</p></li>
+<li><p>Added <code>background_header_auto</code> parameter that adds a background under the first <code>h1</code> element (i.e. <code># Slide Title</code>) on a slide. When enabled, the background is added automatically to slides, as long as they aren’t <code>inverse</code>, <code>center</code>, <code>middle</code>, or <code>bottom</code>-styled slides. When disabled, you can still enable slide title headers by adding the <code>header_background</code> class to a slide. (thanks, <a href='https://github.com/Btibert3'>@Btibert3</a>, <a href='https://github.com/gadenbuie/xaringanthemer/issues/10'>#10</a>)</p></li>
 <li><p>The underlying template now uses the <code>whisker</code> package.</p></li>
 <li><p>xaringanthemer styles now use CSS variables throughout. Most of the settings used in defining a style are stored in CSS variables. The variable names are documented in their corresponding arguments. For example, the color selected for <code>background_color</code> is stored in the variable <code>--background-color</code>. These variables can be used in custom CSS rules or in other arguments in any style functions, for example as <code><a href="https://rdrr.io/r/stats/cor.html">var(--background-color)</a></code>.</p></li>
 <li><p>xaringanthemer now uses a different set of default fonts for heading and body fonts. The new defaults use <a href="https://fonts.google.com/specimen/Cabin">Cabin</a> for headings and <a href="https://fonts.google.com/specimen/Noto+Sans">Noto Sans</a> for body text. These fonts are easier to read on screens and at a distance during presentations, and they support a wide variety of languages and weights. Another reason for the change is that the xaringan (remarkjs) default body font, <em>Droid Serif</em>, is no longer officially included in Google Fonts.</p></li>
@@ -183,7 +251,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

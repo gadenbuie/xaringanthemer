@@ -8,6 +8,13 @@
 
 <title>Duotone Accent Inverse Theme — style_duo_accent_inverse • xaringanthemer</title>
 
+<!-- favicons -->
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -44,6 +51,7 @@
 <meta property="og:title" content="Duotone Accent Inverse Theme — style_duo_accent_inverse" />
 <meta property="og:description" content="An &quot;inverted&quot; default xaringan theme with a two colors used
 for color accents on select elements (headers, bold text, etc.)." />
+<meta property="og:image" content="https://pkg.garrickadenbuie.com/xaringanthemer/logo.png" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:creator" content="@grrrck" />
 <meta name="twitter:site" content="@grrrck" />
@@ -78,7 +86,7 @@ for color accents on select elements (headers, bold text, etc.)." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">xaringanthemer</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.2.0.9100</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.4.0.9000</span>
       </span>
     </div>
 
@@ -94,35 +102,58 @@ for color accents on select elements (headers, bold text, etc.)." />
   <a href="../articles/themes.html">Themes</a>
 </li>
 <li>
-  <a href="../articles/fonts.html">Fonts</a>
+  <a href="../articles/ggplot2-themes.html">ggplot2 Themes</a>
 </li>
-<li>
-  <a href="../articles/template-variables.html">Template Variables</a>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    More
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="../articles/fonts.html">Fonts</a>
+    </li>
+    <li>
+      <a href="../articles/template-variables.html">Template Variables</a>
+    </li>
+  </ul>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li>
-  <a href="../news/index.html">
-    <span class="fa fa fa fa-newspaper-o fa-lg"></span>
+        <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="far fa-newspaper fa-lg"></span>
      
     
+     
+    <span class="caret"></span>
   </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="https://garrickadenbuie.com/blog/xaringanthemer-v0-3-0/">xaringan 0.3.0</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="../news/index.html">Changelog</a>
+    </li>
+  </ul>
 </li>
 <li>
   <a href="https://github.com/gadenbuie/xaringanthemer">
-    <span class="fa fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
 <li>
   <a href="https://twitter.com/grrrck">
-    <span class="fa fa-twitter fa-lg"></span>
+    <span class="fab fa-twitter fa-lg"></span>
      
   </a>
 </li>
 <li>
   <a href="https://www.garrickadenbuie.com">
-    <span class="fa fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -149,92 +180,99 @@ for color accents on select elements (headers, bold text, etc.)." />
 for color accents on select elements (headers, bold text, etc.).</p>
     </div>
 
-    <pre class="usage"><span class='fu'>style_duo_accent_inverse</span>(
-  <span class='kw'>primary_color</span> <span class='kw'>=</span> <span class='st'>"#006747"</span>,
-  <span class='kw'>secondary_color</span> <span class='kw'>=</span> <span class='st'>"#CFC493"</span>,
-  <span class='kw'>white_color</span> <span class='kw'>=</span> <span class='st'>"#FFFFFF"</span>,
-  <span class='kw'>black_color</span> <span class='kw'>=</span> <span class='st'>"#000000"</span>,
-  <span class='kw'>text_color</span> <span class='kw'>=</span> <span class='no'>white_color</span>,
-  <span class='kw'>header_color</span> <span class='kw'>=</span> <span class='no'>primary_color</span>,
-  <span class='kw'>background_color</span> <span class='kw'>=</span> <span class='no'>black_color</span>,
-  <span class='kw'>link_color</span> <span class='kw'>=</span> <span class='fu'><a href='choose_dark_or_light.html'>choose_dark_or_light</a></span>(<span class='no'>secondary_color</span>, <span class='no'>secondary_color</span>, <span class='no'>primary_color</span>),
-  <span class='kw'>text_bold_color</span> <span class='kw'>=</span> <span class='fu'><a href='choose_dark_or_light.html'>choose_dark_or_light</a></span>(<span class='no'>secondary_color</span>, <span class='no'>secondary_color</span>,
-    <span class='no'>primary_color</span>),
-  <span class='kw'>text_slide_number_color</span> <span class='kw'>=</span> <span class='no'>primary_color</span>,
-  <span class='kw'>padding</span> <span class='kw'>=</span> <span class='st'>"16px 64px 16px 64px"</span>,
-  <span class='kw'>background_image</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>background_size</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>background_position</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>code_highlight_color</span> <span class='kw'>=</span> <span class='st'>"rgba(255,255,0,0.5)"</span>,
-  <span class='kw'>code_inline_color</span> <span class='kw'>=</span> <span class='fu'><a href='choose_dark_or_light.html'>choose_dark_or_light</a></span>(<span class='no'>secondary_color</span>, <span class='no'>secondary_color</span>,
-    <span class='no'>primary_color</span>),
-  <span class='kw'>code_inline_background_color</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>code_inline_font_size</span> <span class='kw'>=</span> <span class='st'>"1em"</span>,
-  <span class='kw'>inverse_background_color</span> <span class='kw'>=</span> <span class='no'>secondary_color</span>,
-  <span class='kw'>inverse_text_color</span> <span class='kw'>=</span> <span class='fu'><a href='choose_dark_or_light.html'>choose_dark_or_light</a></span>(<span class='no'>secondary_color</span>, <span class='no'>black_color</span>, <span class='no'>white_color</span>),
-  <span class='kw'>inverse_text_shadow</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
-  <span class='kw'>inverse_header_color</span> <span class='kw'>=</span> <span class='fu'><a href='choose_dark_or_light.html'>choose_dark_or_light</a></span>(<span class='no'>secondary_color</span>, <span class='no'>black_color</span>, <span class='no'>white_color</span>),
-  <span class='kw'>title_slide_text_color</span> <span class='kw'>=</span> <span class='fu'><a href='choose_dark_or_light.html'>choose_dark_or_light</a></span>(<span class='no'>primary_color</span>, <span class='no'>black_color</span>, <span class='no'>white_color</span>),
-  <span class='kw'>title_slide_background_color</span> <span class='kw'>=</span> <span class='no'>primary_color</span>,
-  <span class='kw'>title_slide_background_image</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>title_slide_background_size</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>title_slide_background_position</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>footnote_color</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>footnote_font_size</span> <span class='kw'>=</span> <span class='st'>"0.9em"</span>,
-  <span class='kw'>footnote_position_bottom</span> <span class='kw'>=</span> <span class='st'>"60px"</span>,
-  <span class='kw'>left_column_subtle_color</span> <span class='kw'>=</span> <span class='fu'><a href='apply_alpha.html'>apply_alpha</a></span>(<span class='no'>primary_color</span>, <span class='fl'>0.6</span>),
-  <span class='kw'>left_column_selected_color</span> <span class='kw'>=</span> <span class='no'>primary_color</span>,
-  <span class='kw'>blockquote_left_border_color</span> <span class='kw'>=</span> <span class='fu'><a href='apply_alpha.html'>apply_alpha</a></span>(<span class='no'>secondary_color</span>, <span class='fl'>0.5</span>),
-  <span class='kw'>table_border_color</span> <span class='kw'>=</span> <span class='st'>"#666"</span>,
-  <span class='kw'>table_row_border_color</span> <span class='kw'>=</span> <span class='st'>"#ddd"</span>,
-  <span class='kw'>table_row_even_background_color</span> <span class='kw'>=</span> <span class='fu'><a href='lighten_darken_color.html'>darken_color</a></span>(<span class='fu'><a href='choose_dark_or_light.html'>choose_dark_or_light</a></span>(<span class='no'>primary_color</span>,
-    <span class='no'>secondary_color</span>, <span class='no'>primary_color</span>), <span class='fl'>0.2</span>),
-  <span class='kw'>base_font_size</span> <span class='kw'>=</span> <span class='st'>"20px"</span>,
-  <span class='kw'>text_font_size</span> <span class='kw'>=</span> <span class='st'>"1rem"</span>,
-  <span class='kw'>header_h1_font_size</span> <span class='kw'>=</span> <span class='st'>"2.75rem"</span>,
-  <span class='kw'>header_h2_font_size</span> <span class='kw'>=</span> <span class='st'>"2.25rem"</span>,
-  <span class='kw'>header_h3_font_size</span> <span class='kw'>=</span> <span class='st'>"1.75rem"</span>,
-  <span class='kw'>header_background_auto</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
-  <span class='kw'>header_background_color</span> <span class='kw'>=</span> <span class='no'>header_color</span>,
-  <span class='kw'>header_background_text_color</span> <span class='kw'>=</span> <span class='no'>background_color</span>,
-  <span class='kw'>header_background_padding</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>header_background_content_padding_top</span> <span class='kw'>=</span> <span class='st'>"7rem"</span>,
-  <span class='kw'>header_background_ignore_classes</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"normal"</span>, <span class='st'>"inverse"</span>, <span class='st'>"title"</span>, <span class='st'>"middle"</span>, <span class='st'>"bottom"</span>),
-  <span class='kw'>text_slide_number_font_size</span> <span class='kw'>=</span> <span class='st'>"0.9em"</span>,
-  <span class='kw'>text_font_google</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>text_font_family</span> <span class='kw'>=</span> <span class='fu'><a href='style_xaringan.html'>xaringanthemer_font_default</a></span>(<span class='st'>"text_font_family"</span>),
-  <span class='kw'>text_font_weight</span> <span class='kw'>=</span> <span class='fu'><a href='style_xaringan.html'>xaringanthemer_font_default</a></span>(<span class='st'>"text_font_weight"</span>),
-  <span class='kw'>text_font_url</span> <span class='kw'>=</span> <span class='fu'><a href='style_xaringan.html'>xaringanthemer_font_default</a></span>(<span class='st'>"text_font_url"</span>),
-  <span class='kw'>text_font_family_fallback</span> <span class='kw'>=</span> <span class='fu'><a href='style_xaringan.html'>xaringanthemer_font_default</a></span>(<span class='st'>"text_font_family_fallback"</span>),
-  <span class='kw'>text_font_base</span> <span class='kw'>=</span> <span class='st'>"sans-serif"</span>,
-  <span class='kw'>header_font_google</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>header_font_family</span> <span class='kw'>=</span> <span class='fu'><a href='style_xaringan.html'>xaringanthemer_font_default</a></span>(<span class='st'>"header_font_family"</span>),
-  <span class='kw'>header_font_weight</span> <span class='kw'>=</span> <span class='fu'><a href='style_xaringan.html'>xaringanthemer_font_default</a></span>(<span class='st'>"header_font_weight"</span>),
-  <span class='kw'>header_font_url</span> <span class='kw'>=</span> <span class='fu'><a href='style_xaringan.html'>xaringanthemer_font_default</a></span>(<span class='st'>"header_font_url"</span>),
-  <span class='kw'>code_font_google</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>code_font_family</span> <span class='kw'>=</span> <span class='fu'><a href='style_xaringan.html'>xaringanthemer_font_default</a></span>(<span class='st'>"code_font_family"</span>),
-  <span class='kw'>code_font_size</span> <span class='kw'>=</span> <span class='st'>"0.9rem"</span>,
-  <span class='kw'>code_font_url</span> <span class='kw'>=</span> <span class='fu'><a href='style_xaringan.html'>xaringanthemer_font_default</a></span>(<span class='st'>"code_font_url"</span>),
-  <span class='kw'>code_font_family_fallback</span> <span class='kw'>=</span> <span class='fu'><a href='style_xaringan.html'>xaringanthemer_font_default</a></span>(<span class='st'>"code_font_family_fallback"</span>),
-  <span class='kw'>colors</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>extra_css</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>extra_fonts</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>outfile</span> <span class='kw'>=</span> <span class='st'>"xaringan-themer.css"</span>
-)</pre>
+    <pre class="usage"><span class='fu'>style_duo_accent_inverse</span><span class='op'>(</span>
+  primary_color <span class='op'>=</span> <span class='st'>"#035AA6"</span>,
+  secondary_color <span class='op'>=</span> <span class='st'>"#03A696"</span>,
+  white_color <span class='op'>=</span> <span class='st'>"#FFFFFF"</span>,
+  black_color <span class='op'>=</span> <span class='st'>"#000000"</span>,
+  text_color <span class='op'>=</span> <span class='va'>white_color</span>,
+  header_color <span class='op'>=</span> <span class='va'>primary_color</span>,
+  background_color <span class='op'>=</span> <span class='va'>black_color</span>,
+  link_color <span class='op'>=</span> <span class='fu'><a href='choose_dark_or_light.html'>choose_dark_or_light</a></span><span class='op'>(</span><span class='va'>secondary_color</span>, <span class='va'>secondary_color</span>, <span class='va'>primary_color</span><span class='op'>)</span>,
+  text_bold_color <span class='op'>=</span> <span class='fu'><a href='choose_dark_or_light.html'>choose_dark_or_light</a></span><span class='op'>(</span><span class='va'>secondary_color</span>, <span class='va'>secondary_color</span>,
+    <span class='va'>primary_color</span><span class='op'>)</span>,
+  text_slide_number_color <span class='op'>=</span> <span class='va'>primary_color</span>,
+  padding <span class='op'>=</span> <span class='st'>"16px 64px 16px 64px"</span>,
+  background_image <span class='op'>=</span> <span class='cn'>NULL</span>,
+  background_size <span class='op'>=</span> <span class='cn'>NULL</span>,
+  background_position <span class='op'>=</span> <span class='cn'>NULL</span>,
+  code_highlight_color <span class='op'>=</span> <span class='st'>"rgba(255,255,0,0.5)"</span>,
+  code_inline_color <span class='op'>=</span> <span class='fu'><a href='choose_dark_or_light.html'>choose_dark_or_light</a></span><span class='op'>(</span><span class='va'>secondary_color</span>, <span class='va'>secondary_color</span>,
+    <span class='va'>primary_color</span><span class='op'>)</span>,
+  code_inline_background_color <span class='op'>=</span> <span class='cn'>NULL</span>,
+  code_inline_font_size <span class='op'>=</span> <span class='st'>"1em"</span>,
+  inverse_background_color <span class='op'>=</span> <span class='va'>secondary_color</span>,
+  inverse_text_color <span class='op'>=</span> <span class='fu'><a href='choose_dark_or_light.html'>choose_dark_or_light</a></span><span class='op'>(</span><span class='va'>secondary_color</span>, <span class='va'>black_color</span>, <span class='va'>white_color</span><span class='op'>)</span>,
+  inverse_text_shadow <span class='op'>=</span> <span class='cn'>FALSE</span>,
+  inverse_header_color <span class='op'>=</span> <span class='fu'><a href='choose_dark_or_light.html'>choose_dark_or_light</a></span><span class='op'>(</span><span class='va'>secondary_color</span>, <span class='va'>black_color</span>,
+    <span class='va'>white_color</span><span class='op'>)</span>,
+  inverse_link_color <span class='op'>=</span> <span class='va'>link_color</span>,
+  title_slide_text_color <span class='op'>=</span> <span class='fu'><a href='choose_dark_or_light.html'>choose_dark_or_light</a></span><span class='op'>(</span><span class='va'>primary_color</span>, <span class='va'>black_color</span>,
+    <span class='va'>white_color</span><span class='op'>)</span>,
+  title_slide_background_color <span class='op'>=</span> <span class='va'>primary_color</span>,
+  title_slide_background_image <span class='op'>=</span> <span class='cn'>NULL</span>,
+  title_slide_background_size <span class='op'>=</span> <span class='cn'>NULL</span>,
+  title_slide_background_position <span class='op'>=</span> <span class='cn'>NULL</span>,
+  footnote_color <span class='op'>=</span> <span class='cn'>NULL</span>,
+  footnote_font_size <span class='op'>=</span> <span class='st'>"0.9em"</span>,
+  footnote_position_bottom <span class='op'>=</span> <span class='st'>"60px"</span>,
+  left_column_subtle_color <span class='op'>=</span> <span class='fu'><a href='apply_alpha.html'>apply_alpha</a></span><span class='op'>(</span><span class='va'>primary_color</span>, <span class='fl'>0.6</span><span class='op'>)</span>,
+  left_column_selected_color <span class='op'>=</span> <span class='va'>primary_color</span>,
+  blockquote_left_border_color <span class='op'>=</span> <span class='fu'><a href='apply_alpha.html'>apply_alpha</a></span><span class='op'>(</span><span class='va'>secondary_color</span>, <span class='fl'>0.5</span><span class='op'>)</span>,
+  table_border_color <span class='op'>=</span> <span class='st'>"#666"</span>,
+  table_row_border_color <span class='op'>=</span> <span class='st'>"#ddd"</span>,
+  table_row_even_background_color <span class='op'>=</span> <span class='fu'><a href='lighten_darken_color.html'>darken_color</a></span><span class='op'>(</span><span class='fu'><a href='choose_dark_or_light.html'>choose_dark_or_light</a></span><span class='op'>(</span><span class='va'>primary_color</span>,
+    <span class='va'>secondary_color</span>, <span class='va'>primary_color</span><span class='op'>)</span>, <span class='fl'>0.2</span><span class='op'>)</span>,
+  base_font_size <span class='op'>=</span> <span class='st'>"20px"</span>,
+  text_font_size <span class='op'>=</span> <span class='st'>"1rem"</span>,
+  header_h1_font_size <span class='op'>=</span> <span class='st'>"2.75rem"</span>,
+  header_h2_font_size <span class='op'>=</span> <span class='st'>"2.25rem"</span>,
+  header_h3_font_size <span class='op'>=</span> <span class='st'>"1.75rem"</span>,
+  header_background_auto <span class='op'>=</span> <span class='cn'>FALSE</span>,
+  header_background_color <span class='op'>=</span> <span class='va'>header_color</span>,
+  header_background_text_color <span class='op'>=</span> <span class='va'>background_color</span>,
+  header_background_padding <span class='op'>=</span> <span class='cn'>NULL</span>,
+  header_background_content_padding_top <span class='op'>=</span> <span class='st'>"7rem"</span>,
+  header_background_ignore_classes <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"normal"</span>, <span class='st'>"inverse"</span>, <span class='st'>"title"</span>, <span class='st'>"middle"</span>,
+    <span class='st'>"bottom"</span><span class='op'>)</span>,
+  text_slide_number_font_size <span class='op'>=</span> <span class='st'>"0.9rem"</span>,
+  text_font_google <span class='op'>=</span> <span class='cn'>NULL</span>,
+  text_font_family <span class='op'>=</span> <span class='fu'><a href='xaringanthemer_font_default.html'>xaringanthemer_font_default</a></span><span class='op'>(</span><span class='st'>"text_font_family"</span><span class='op'>)</span>,
+  text_font_weight <span class='op'>=</span> <span class='fu'><a href='xaringanthemer_font_default.html'>xaringanthemer_font_default</a></span><span class='op'>(</span><span class='st'>"text_font_weight"</span><span class='op'>)</span>,
+  text_bold_font_weight <span class='op'>=</span> <span class='st'>"bold"</span>,
+  text_font_url <span class='op'>=</span> <span class='fu'><a href='xaringanthemer_font_default.html'>xaringanthemer_font_default</a></span><span class='op'>(</span><span class='st'>"text_font_url"</span><span class='op'>)</span>,
+  text_font_family_fallback <span class='op'>=</span> <span class='fu'><a href='xaringanthemer_font_default.html'>xaringanthemer_font_default</a></span><span class='op'>(</span><span class='st'>"text_font_family_fallback"</span><span class='op'>)</span>,
+  text_font_base <span class='op'>=</span> <span class='st'>"sans-serif"</span>,
+  header_font_google <span class='op'>=</span> <span class='cn'>NULL</span>,
+  header_font_family <span class='op'>=</span> <span class='fu'><a href='xaringanthemer_font_default.html'>xaringanthemer_font_default</a></span><span class='op'>(</span><span class='st'>"header_font_family"</span><span class='op'>)</span>,
+  header_font_weight <span class='op'>=</span> <span class='fu'><a href='xaringanthemer_font_default.html'>xaringanthemer_font_default</a></span><span class='op'>(</span><span class='st'>"header_font_weight"</span><span class='op'>)</span>,
+  header_font_family_fallback <span class='op'>=</span> <span class='st'>"Georgia, serif"</span>,
+  header_font_url <span class='op'>=</span> <span class='fu'><a href='xaringanthemer_font_default.html'>xaringanthemer_font_default</a></span><span class='op'>(</span><span class='st'>"header_font_url"</span><span class='op'>)</span>,
+  code_font_google <span class='op'>=</span> <span class='cn'>NULL</span>,
+  code_font_family <span class='op'>=</span> <span class='fu'><a href='xaringanthemer_font_default.html'>xaringanthemer_font_default</a></span><span class='op'>(</span><span class='st'>"code_font_family"</span><span class='op'>)</span>,
+  code_font_size <span class='op'>=</span> <span class='st'>"0.9rem"</span>,
+  code_font_url <span class='op'>=</span> <span class='fu'><a href='xaringanthemer_font_default.html'>xaringanthemer_font_default</a></span><span class='op'>(</span><span class='st'>"code_font_url"</span><span class='op'>)</span>,
+  code_font_family_fallback <span class='op'>=</span> <span class='fu'><a href='xaringanthemer_font_default.html'>xaringanthemer_font_default</a></span><span class='op'>(</span><span class='st'>"code_font_family_fallback"</span><span class='op'>)</span>,
+  link_decoration <span class='op'>=</span> <span class='st'>"none"</span>,
+  colors <span class='op'>=</span> <span class='cn'>NULL</span>,
+  extra_css <span class='op'>=</span> <span class='cn'>NULL</span>,
+  extra_fonts <span class='op'>=</span> <span class='cn'>NULL</span>,
+  outfile <span class='op'>=</span> <span class='st'>"xaringan-themer.css"</span>
+<span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>primary_color</th>
-      <td><p>Duotone Primary Color. Defaults to #006747. Used in
+      <td><p>Duotone Primary Color. Defaults to #035AA6. Used in
 multiple CSS rules. The value of this variable is also stored as a CSS
 variable that can be referenced with <code><a href='https://rdrr.io/r/stats/cor.html'>var(--primary)</a></code> in any argument of a
 style function or in custom CSS.</p></td>
     </tr>
     <tr>
       <th>secondary_color</th>
-      <td><p>Duotone Secondary Color. Defaults to #CFC493. Used in
+      <td><p>Duotone Secondary Color. Defaults to #03A696. Used in
 multiple CSS rules. The value of this variable is also stored as a CSS
 variable that can be referenced with <code><a href='https://rdrr.io/r/stats/cor.html'>var(--secondary)</a></code> in any argument of
 a style function or in custom CSS.</p></td>
@@ -315,7 +353,7 @@ from the title slide. Defaults to <code>NULL</code>. Modifies the
       <th>background_size</th>
       <td><p>Background image size, requires <code>background_image</code> to
 be set. If <code>background_image</code> is set, <code>background_size</code> will default to
-<code>cover</code> so the backround fills the screen. If both <code>background_image</code> and
+<code>cover</code> so the background fills the screen. If both <code>background_image</code> and
 <code>background_position</code> are set, will default to 100 percent. Defaults to
 <code>NULL</code>. Modifies the <code>.remark-slide-content</code> class. Accepts CSS
 <a href='https://developer.mozilla.org/en-US/docs/Web/CSS/background-size'>background-size</a>
@@ -386,6 +424,14 @@ Defaults to <code>FALSE</code>. Modifies the <code>.inverse</code> class.</p></t
 Modifies the <code>.inverse h1, .inverse h2, .inverse h3</code> classes. The value of
 this variable is also stored as a CSS variable that can be referenced with
 <code><a href='https://rdrr.io/r/stats/cor.html'>var(--inverse-header-color)</a></code> in any argument of a style function or in
+custom CSS.</p></td>
+    </tr>
+    <tr>
+      <th>inverse_link_color</th>
+      <td><p>Inverse Link Color. Defaults to <code>link_color</code>.
+Modifies the <code>.inverse a, .inverse a &gt; code</code> classes. The value of this
+variable is also stored as a CSS variable that can be referenced with
+<code><a href='https://rdrr.io/r/stats/cor.html'>var(--inverse-link-color)</a></code> in any argument of a style function or in
 custom CSS.</p></td>
     </tr>
     <tr>
@@ -570,7 +616,7 @@ Background will not be Applied. Defaults to
     <tr>
       <th>text_slide_number_font_size</th>
       <td><p>Slide Number Text Font Size. Defaults to
-0.9em. Modifies the <code>.remark-slide-number</code> class. Accepts CSS
+0.9rem. Modifies the <code>.remark-slide-number</code> class. Accepts CSS
 <a href='https://developer.mozilla.org/en-US/docs/Web/CSS/font-size'>font-size</a>
 property values.</p></td>
     </tr>
@@ -583,7 +629,7 @@ to <code>NULL</code>. Modifies the <code>body</code> element.</p></td>
       <th>text_font_family</th>
       <td><p>Body Text Font Family (xaringan default is
 <code>'Droid Serif'</code>). Defaults to
-<code><a href='style_xaringan.html'>xaringanthemer_font_default("text_font_family")</a></code>. Modifies the <code>body</code>
+<code><a href='xaringanthemer_font_default.html'>xaringanthemer_font_default("text_font_family")</a></code>. Modifies the <code>body</code>
 element. The value of this variable is also stored as a CSS variable that
 can be referenced with <code><a href='https://rdrr.io/r/stats/cor.html'>var(--text-font-family)</a></code> in any argument of a
 style function or in custom CSS.</p></td>
@@ -591,21 +637,26 @@ style function or in custom CSS.</p></td>
     <tr>
       <th>text_font_weight</th>
       <td><p>Body Text Font Weight. Defaults to
-<code><a href='style_xaringan.html'>xaringanthemer_font_default("text_font_weight")</a></code>. Modifies the <code>body</code>
+<code><a href='xaringanthemer_font_default.html'>xaringanthemer_font_default("text_font_weight")</a></code>. Modifies the <code>body</code>
 element. Accepts CSS
 <a href='https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight'>font-weight</a>
 property values.</p></td>
     </tr>
     <tr>
+      <th>text_bold_font_weight</th>
+      <td><p>Body Bold Text Font Weight. Defaults to bold.
+Modifies the <code>strong</code> element.</p></td>
+    </tr>
+    <tr>
       <th>text_font_url</th>
       <td><p>Body Text Font URL(s). Defaults to
-<code><a href='style_xaringan.html'>xaringanthemer_font_default("text_font_url")</a></code>. Modifies the
+<code><a href='xaringanthemer_font_default.html'>xaringanthemer_font_default("text_font_url")</a></code>. Modifies the
 <code>@import url()</code> elements.</p></td>
     </tr>
     <tr>
       <th>text_font_family_fallback</th>
       <td><p>Body Text Font Fallbacks. Defaults to
-<code><a href='style_xaringan.html'>xaringanthemer_font_default("text_font_family_fallback")</a></code>. Modifies the
+<code><a href='xaringanthemer_font_default.html'>xaringanthemer_font_default("text_font_family_fallback")</a></code>. Modifies the
 <code>body</code> element. The value of this variable is also stored as a CSS
 variable that can be referenced with <code><a href='https://rdrr.io/r/stats/cor.html'>var(--text-font-family-fallback)</a></code> in
 any argument of a style function or in custom CSS.</p></td>
@@ -627,7 +678,7 @@ Defaults to <code>NULL</code>. Modifies the <code>body</code> element.</p></td>
       <th>header_font_family</th>
       <td><p>Header Font Family (xaringan default is
 <code>'Yanone Kaffeesatz'</code>). Defaults to
-<code><a href='style_xaringan.html'>xaringanthemer_font_default("header_font_family")</a></code>. Modifies the
+<code><a href='xaringanthemer_font_default.html'>xaringanthemer_font_default("header_font_family")</a></code>. Modifies the
 <code>h1, h2, h3</code> elements. The value of this variable is also stored as a CSS
 variable that can be referenced with <code><a href='https://rdrr.io/r/stats/cor.html'>var(--header-font-family)</a></code> in any
 argument of a style function or in custom CSS.</p></td>
@@ -635,15 +686,23 @@ argument of a style function or in custom CSS.</p></td>
     <tr>
       <th>header_font_weight</th>
       <td><p>Header Font Weight. Defaults to
-<code><a href='style_xaringan.html'>xaringanthemer_font_default("header_font_weight")</a></code>. Modifies the
+<code><a href='xaringanthemer_font_default.html'>xaringanthemer_font_default("header_font_weight")</a></code>. Modifies the
 <code>h1, h2, h3</code> elements. Accepts CSS
 <a href='https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight'>font-weight</a>
 property values.</p></td>
     </tr>
     <tr>
+      <th>header_font_family_fallback</th>
+      <td><p>Header Font Family Fallback. Defaults to
+Georgia, serif. Modifies the <code>h1, h2, h3</code> elements. The value of this
+variable is also stored as a CSS variable that can be referenced with
+<code><a href='https://rdrr.io/r/stats/cor.html'>var(--header-font-family-fallback)</a></code> in any argument of a style function
+or in custom CSS.</p></td>
+    </tr>
+    <tr>
       <th>header_font_url</th>
       <td><p>Header Font URL. Defaults to
-<code><a href='style_xaringan.html'>xaringanthemer_font_default("header_font_url")</a></code>. Modifies the
+<code><a href='xaringanthemer_font_default.html'>xaringanthemer_font_default("header_font_url")</a></code>. Modifies the
 <code>@import url</code> elements.</p></td>
     </tr>
     <tr>
@@ -654,7 +713,7 @@ to <code>NULL</code>. Modifies the <code>body</code> element.</p></td>
     <tr>
       <th>code_font_family</th>
       <td><p>Code Font Family. Defaults to
-<code><a href='style_xaringan.html'>xaringanthemer_font_default("code_font_family")</a></code>. Modifies the
+<code><a href='xaringanthemer_font_default.html'>xaringanthemer_font_default("code_font_family")</a></code>. Modifies the
 <code>.remark-code, .remark-inline-code</code> classes. The value of this variable is
 also stored as a CSS variable that can be referenced with
 <code><a href='https://rdrr.io/r/stats/cor.html'>var(--code-font-family)</a></code> in any argument of a style function or in custom
@@ -672,14 +731,21 @@ argument of a style function or in custom CSS.</p></td>
     <tr>
       <th>code_font_url</th>
       <td><p>Code Font URL. Defaults to
-<code><a href='style_xaringan.html'>xaringanthemer_font_default("code_font_url")</a></code>. Modifies the <code>@import url</code>
+<code><a href='xaringanthemer_font_default.html'>xaringanthemer_font_default("code_font_url")</a></code>. Modifies the <code>@import url</code>
 elements.</p></td>
     </tr>
     <tr>
       <th>code_font_family_fallback</th>
       <td><p>Code Font Fallback. Defaults to
-<code><a href='style_xaringan.html'>xaringanthemer_font_default("code_font_family_fallback")</a></code>. Modifies the
+<code><a href='xaringanthemer_font_default.html'>xaringanthemer_font_default("code_font_family_fallback")</a></code>. Modifies the
 <code>.remark-code, .remark-inline-code</code> classes.</p></td>
+    </tr>
+    <tr>
+      <th>link_decoration</th>
+      <td><p>Text decoration of links. Defaults to none. Modifies
+the <code>a, a &gt; code</code> elements. Accepts CSS
+<a href='https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration'>text-decoration</a>
+property values.</p></td>
     </tr>
     <tr>
       <th>colors</th>
@@ -711,14 +777,20 @@ class with the <code>font-family</code> property. See the <strong>Fonts</strong>
     </tr>
     </table>
 
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>The CSS styles are written to the file path provided in <code>outfile</code>
+(by default to <code>xaringan-themer.css</code>). If <code>outfile</code> is <code>NULL</code>, the CSS is
+returned directly as a character string.</p>
     <h2 class="hasAnchor" id="usage"><a class="anchor" href="#usage"></a>Usage</h2>
 
     <p>To use the styles created by this theme function, make sure
 that you use <code>xaringan-themer.css</code> as your CSS file in your slides' YAML
 header. If you change the name of the output file using the <code>outfile</code>
-argument, use that name instead of the default file name.<div class="yaml"></p><pre><span class='no'>output</span>:
-<span class='kw pkg'>xaringan</span><span class='kw ns'>::</span><span class='no'><a href='https://rdrr.io/pkg/xaringan/man/moon_reader.html'>moon_reader</a></span>:
-  <span class='no'>css</span>: <span class='no'>xaringan</span>-<span class='no'>themer.css</span></pre><p></div></p>
+argument, use that name instead of the default file name.<div class="yaml"></p><pre><span class='va'>output</span><span class='op'>:</span>
+<span class='fu'>xaringan</span><span class='fu'>::</span><span class='va'><a href='https://rdrr.io/pkg/xaringan/man/moon_reader.html'>moon_reader</a></span><span class='op'>:</span>
+  <span class='va'>css</span><span class='op'>:</span> <span class='va'>xaringan</span><span class='op'>-</span><span class='va'>themer.css</span>
+</pre><p></div></p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>Other themes: 
@@ -730,24 +802,25 @@ argument, use that name instead of the default file name.<div class="yaml"></p><
 <code><a href='style_mono_light.html'>style_mono_light</a>()</code>,
 <code><a href='style_solarized_dark.html'>style_solarized_dark</a>()</code>,
 <code><a href='style_solarized_light.html'>style_solarized_light</a>()</code>,
-<code><a href='style_xaringan.html'>xaringanthemer_font_default</a>()</code></p>
+<code><a href='xaringanthemer_font_default.html'>xaringanthemer_font_default</a>()</code></p>
 <p>Other Duotone themes: 
 <code><a href='style_duo_accent.html'>style_duo_accent</a>()</code>,
 <code><a href='style_duo.html'>style_duo</a>()</code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># Create a xaringan style in a temporary file</span>
-<span class='no'>xaringan_themer_css</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/tempfile.html'>tempfile</a></span>(<span class='st'>"xaringan-themer-"</span>, <span class='kw'>fileext</span> <span class='kw'>=</span> <span class='st'>".css"</span>)
+<span class='va'>xaringan_themer_css</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/tempfile.html'>tempfile</a></span><span class='op'>(</span><span class='st'>"xaringan-themer-"</span>, fileext <span class='op'>=</span> <span class='st'>".css"</span><span class='op'>)</span>
 
-<span class='fu'>style_duo_accent_inverse</span>(
-  <span class='kw'>primary_color</span> <span class='kw'>=</span> <span class='st'>"#006747"</span>,
-  <span class='kw'>secondary_color</span> <span class='kw'>=</span> <span class='st'>"#cfc493"</span>,
-  <span class='kw'>outfile</span> <span class='kw'>=</span> <span class='no'>xaringan_themer_css</span> <span class='co'># omit in your slides to write the</span>
+<span class='fu'>style_duo_accent_inverse</span><span class='op'>(</span>
+  primary_color <span class='op'>=</span> <span class='st'>"#006747"</span>,
+  secondary_color <span class='op'>=</span> <span class='st'>"#cfc493"</span>,
+  outfile <span class='op'>=</span> <span class='va'>xaringan_themer_css</span> <span class='co'># omit in your slides to write the</span>
                                 <span class='co'># styles to xaringan-themer.css</span>
-)
+<span class='op'>)</span>
 
 <span class='co'># View the CSS:</span>
-<span class='co'># file.edit(xaringan_themer_css)</span></div></pre>
+<span class='co'># file.edit(xaringan_themer_css)</span>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -763,7 +836,7 @@ argument, use that name instead of the default file name.<div class="yaml"></p><
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

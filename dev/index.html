@@ -5,17 +5,24 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Custom Xaringan CSS Themes • xaringanthemer</title>
+<title>Custom xaringan CSS Themes • xaringanthemer</title>
+<!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="apple-touch-icon.png">
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="apple-touch-icon-60x60.png">
 <!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="bootstrap-toc.css">
 <script src="bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="pkgdown.css" rel="stylesheet">
 <script src="pkgdown.js"></script><link href="extra.css" rel="stylesheet">
-<meta property="og:title" content="Custom Xaringan CSS Themes">
+<meta property="og:title" content="Custom xaringan CSS Themes">
 <meta property="og:description" content="Give your xaringan slides some style with xaringanthemer.
 Easy slide and plot themes for xaringan slides.
 ">
+<meta property="og:image" content="https://pkg.garrickadenbuie.com/xaringanthemer/logo.png">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:creator" content="@grrrck">
 <meta name="twitter:site" content="@grrrck">
@@ -38,7 +45,7 @@ Easy slide and plot themes for xaringan slides.
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">xaringanthemer</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.2.0.9100</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.4.0.9000</span>
       </span>
     </div>
 
@@ -54,35 +61,58 @@ Easy slide and plot themes for xaringan slides.
   <a href="articles/themes.html">Themes</a>
 </li>
 <li>
-  <a href="articles/fonts.html">Fonts</a>
+  <a href="articles/ggplot2-themes.html">ggplot2 Themes</a>
 </li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    More
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
 <li>
-  <a href="articles/template-variables.html">Template Variables</a>
+      <a href="articles/fonts.html">Fonts</a>
+    </li>
+    <li>
+      <a href="articles/template-variables.html">Template Variables</a>
+    </li>
+  </ul>
 </li>
       </ul>
 <ul class="nav navbar-nav navbar-right">
-<li>
-  <a href="news/index.html">
-    <span class="fa fa fa fa-newspaper-o fa-lg"></span>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="far fa-newspaper fa-lg"></span>
      
     
+     
+    <span class="caret"></span>
   </a>
+  <ul class="dropdown-menu" role="menu">
+<li>
+      <a href="https://garrickadenbuie.com/blog/xaringanthemer-v0-3-0/">xaringan 0.3.0</a>
+    </li>
+    <li class="divider">
+    <li>
+      <a href="news/index.html">Changelog</a>
+    </li>
+  </ul>
 </li>
 <li>
   <a href="https://github.com/gadenbuie/xaringanthemer">
-    <span class="fa fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
 <li>
   <a href="https://twitter.com/grrrck">
-    <span class="fa fa-twitter fa-lg"></span>
+    <span class="fab fa-twitter fa-lg"></span>
      
   </a>
 </li>
 <li>
   <a href="https://www.garrickadenbuie.com">
-    <span class="fa fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -98,9 +128,10 @@ Easy slide and plot themes for xaringan slides.
 
       </header><div class="row">
   <div class="contents col-md-9">
-<div id="xaringanthemer" class="section level1">
+<div id="xaringanthemer-" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
-<a href="#xaringanthemer" class="anchor"></a>xaringanthemer</h1></div>
+<a href="#xaringanthemer-" class="anchor"></a>xaringanthemer <img src="reference/figures/logo.png" align="right" height="175px">
+</h1></div>
 <!-- badges: start -->
 
 <p>Give your <a href="https://github.com/yihui/xaringan">xaringan</a> slides some style with <strong>xaringanthemer</strong> within your <code>slides.Rmd</code> file without (much) CSS.</p>
@@ -109,46 +140,50 @@ Easy slide and plot themes for xaringan slides.
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
 <p>You can install <strong>xaringanthemer</strong> from CRAN</p>
-<div class="sourceCode" id="cb1"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"xaringanthemer"</span>)</pre></div>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"xaringanthemer"</span><span class="op">)</span></code></pre></div>
 <p>or you can install the development version of xaringanthemer from <a href="https://github.com/gadenbuie/xaringanthemer">GitHub</a>.</p>
-<div class="sourceCode" id="cb2"><pre class="r"><span class="co"># install.packages("remotes")</span>
-<span class="kw pkg">remotes</span><span class="kw ns">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span>(<span class="st">"gadenbuie/xaringanthemer"</span>)</pre></div>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># install.packages("remotes")</span>
+<span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"gadenbuie/xaringanthemer"</span><span class="op">)</span></code></pre></div>
 </div>
 <div id="quick-intro" class="section level2">
 <h2 class="hasAnchor">
 <a href="#quick-intro" class="anchor"></a>Quick Intro</h2>
 <!-- Set link to theme-settings, template-variables, theme functions -->
 <p>First, add the <code>xaringan-themer.css</code> file to the YAML header of your xaringan slides.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="fu">output:</span></a>
-<a class="sourceLine" id="cb3-2" data-line-number="2">  <span class="fu">xaringan:</span><span class="at">:moon_reader:</span></a>
-<a class="sourceLine" id="cb3-3" data-line-number="3">    <span class="fu">css:</span><span class="at"> xaringan-themer.css</span></a></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">output</span><span class="kw">:</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="at">  xaringan:</span><span class="fu">:moon_reader</span><span class="kw">:</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a><span class="at">    </span><span class="fu">css</span><span class="kw">:</span><span class="at"> xaringan-themer.css</span></span></code></pre></div>
 <p>Then, in a hidden chunk just after the knitr setup chunk, load <strong>xaringanthemer</strong> and try one of the <a href="#themes">theme functions</a>.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb4-1" data-line-number="1">```{r xaringan-themer, include = FALSE}</a>
-<a class="sourceLine" id="cb4-2" data-line-number="2">library(xaringanthemer)</a>
-<a class="sourceLine" id="cb4-3" data-line-number="3">style_mono_light(</a>
-<a class="sourceLine" id="cb4-4" data-line-number="4">  base_color = "#1c5253",</a>
-<a class="sourceLine" id="cb4-5" data-line-number="5">  header_font_google = google_font("Josefin Sans"),</a>
-<a class="sourceLine" id="cb4-6" data-line-number="6">  text_font_google   = google_font("Montserrat", "300", "300i"),</a>
-<a class="sourceLine" id="cb4-7" data-line-number="7">  code_font_google   = google_font("Droid Mono")</a>
-<a class="sourceLine" id="cb4-8" data-line-number="8">)</a>
-<a class="sourceLine" id="cb4-9" data-line-number="9">```</a></code></pre></div>
-<p><img src="https://raw.githubusercontent.com/gadenbuie/xaringanthemer/assets/example_mono_light_1c5253.png" alt="Example title and normal slides using a green xaringanthemer theme" data-external="1"></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1"></a><span class="bn">```{r xaringan-themer, include=FALSE, warning=FALSE}</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="bn">library(xaringanthemer)</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="bn">style_mono_accent(</span></span>
+<span id="cb4-4"><a href="#cb4-4"></a><span class="bn">  base_color = "#1c5253",</span></span>
+<span id="cb4-5"><a href="#cb4-5"></a><span class="bn">  header_font_google = google_font("Josefin Sans"),</span></span>
+<span id="cb4-6"><a href="#cb4-6"></a><span class="bn">  text_font_google   = google_font("Montserrat", "300", "300i"),</span></span>
+<span id="cb4-7"><a href="#cb4-7"></a><span class="bn">  code_font_google   = google_font("Fira Mono")</span></span>
+<span id="cb4-8"><a href="#cb4-8"></a><span class="bn">)</span></span>
+<span id="cb4-9"><a href="#cb4-9"></a><span class="bn">```</span></span></code></pre></div>
+<p><img src="https://raw.githubusercontent.com/gadenbuie/xaringanthemer/assets/example_mono_accent_1c5253.png" alt="Example title and normal slides using a green xaringanthemer theme" data-external="1"></p>
 <div id="matching-ggplot-themes" class="section level3">
 <h3 class="hasAnchor">
 <a href="#matching-ggplot-themes" class="anchor"></a>Matching ggplot Themes</h3>
 <p><strong>xaringanthemer</strong> even provides a <a href="https://ggplot2.tidyverse.org">ggplot2</a> theme with <code><a href="reference/theme_xaringan.html">theme_xaringan()</a></code> that uses the colors and fonts from your slide theme. Built on the <a href="https://github.com/yixuan/showtext">showtext</a> package, and designed to work seamlessly with <a href="https://fonts.google.com">Google Fonts</a>.</p>
 <p>Color and fill scales are also provided for matching sequential color scales based on the primary color used in your slides. See <code><a href="reference/scale_xaringan.html">?scale_xaringan</a></code> for more details.</p>
-<div class="sourceCode" id="cb5"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">ggplot2</span>)
-<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span>(<span class="no">diamonds</span>) +
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(<span class="no">cut</span>, <span class="kw">fill</span> <span class="kw">=</span> <span class="no">cut</span>) +
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span>(<span class="kw">show.legend</span> <span class="kw">=</span> <span class="fl">FALSE</span>) +
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span>(
-    <span class="kw">x</span> <span class="kw">=</span> <span class="st">"Cut"</span>,
-    <span class="kw">y</span> <span class="kw">=</span> <span class="st">"Count"</span>,
-    <span class="kw">title</span> <span class="kw">=</span> <span class="st">"A Fancy diamonds Plot"</span>
-  ) +
-  <span class="fu"><a href="reference/theme_xaringan.html">theme_xaringan</a></span>(<span class="kw">background_color</span> <span class="kw">=</span> <span class="st">"#FFFFFF"</span>) +
-  <span class="fu"><a href="reference/scale_xaringan.html">scale_xaringan_fill_discrete</a></span>()</pre></div>
+<p>More details and examples can be found in <code><a href="articles/ggplot2-themes.html">vignette("ggplot2-themes")</a></code>.</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span>
+<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">diamonds</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">cut</span>, fill <span class="op">=</span> <span class="va">cut</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span>show.legend <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>
+    x <span class="op">=</span> <span class="st">"Cut"</span>,
+    y <span class="op">=</span> <span class="st">"Count"</span>,
+    title <span class="op">=</span> <span class="st">"A Fancy diamonds Plot"</span>
+  <span class="op">)</span> <span class="op">+</span>
+  <span class="fu"><a href="reference/theme_xaringan.html">theme_xaringan</a></span><span class="op">(</span>background_color <span class="op">=</span> <span class="st">"#FFFFFF"</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu"><a href="reference/scale_xaringan.html">scale_xaringan_fill_discrete</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
 <p><img src="reference/figures/index-theme_xaringan_demo-1.png" width="100%"></p>
 </div>
 <div id="tab-completion" class="section level3">
@@ -169,7 +204,7 @@ Easy slide and plot themes for xaringan slides.
 <div id="features" class="section level2">
 <h2 class="hasAnchor">
 <a href="#features" class="anchor"></a>Features</h2>
-<p>There’s a lot more that <strong>xaringanthemer</strong> can do! <a href="https://pkg.garrickadenbuie.com/xaringanthemer/features.html">Discover xaringanthemer’s features.</a></p>
+<p>There’s a lot more that <strong>xaringanthemer</strong> can do! <a href="https://pkg.garrickadenbuie.com/xaringanthemer/articles/xaringanthemer.html">Discover xaringanthemer’s features.</a></p>
 </div>
 </div>
   </div>
@@ -178,6 +213,8 @@ Easy slide and plot themes for xaringan slides.
     <div class="links">
 <h2>Links</h2>
 <ul class="list-unstyled">
+<li>Download from CRAN at <br><a href="https://cloud.r-project.org/package=xaringanthemer">https://​cloud.r-project.org/​package=xaringanthemer</a>
+</li>
 <li>Browse source code at <br><a href="https://github.com/gadenbuie/xaringanthemer/">https://​github.com/​gadenbuie/​xaringanthemer/​</a>
 </li>
 <li>Report a bug at <br><a href="https://github.com/gadenbuie/xaringanthemer/issues">https://​github.com/​gadenbuie/​xaringanthemer/​issues</a>
@@ -204,7 +241,7 @@ Easy slide and plot themes for xaringan slides.
 <ul class="list-unstyled">
 <li><a href="https://CRAN.R-project.org/package=xaringanthemer"><img src="https://www.r-pkg.org/badges/version/xaringanthemer" alt="CRAN status"></a></li>
 <li><a href="https://www.tidyverse.org/lifecycle/#stable"><img src="https://img.shields.io/badge/lifecycle-stable-brightgreen.svg" alt="Lifecycle: stable"></a></li>
-<li><a href="https://travis-ci.com/gadenbuie/xaringanthemer"><img src="https://travis-ci.com/gadenbuie/xaringanthemer.svg?branch=master" alt="travis"></a></li>
+<li><a href="https://github.com/gadenbuie/xaringanthemer/actions"><img src="https://github.com/gadenbuie/xaringanthemer/workflows/CI%20by%20%7Btic%7D/badge.svg?branch=master" alt="CI by {tic}"></a></li>
 <li><a href="https://codecov.io/github/gadenbuie/xaringanthemer"><img src="https://img.shields.io/codecov/c/github/gadenbuie/xaringanthemer" alt="Codecov"></a></li>
 </ul>
 </div>
@@ -217,7 +254,7 @@ Easy slide and plot themes for xaringan slides.
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

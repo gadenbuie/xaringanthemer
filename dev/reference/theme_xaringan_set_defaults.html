@@ -8,6 +8,13 @@
 
 <title>Set and Restore ggplot2 geom Defaults — theme_xaringan_set_defaults • xaringanthemer</title>
 
+<!-- favicons -->
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -42,12 +49,13 @@
   
 
 <meta property="og:title" content="Set and Restore ggplot2 geom Defaults — theme_xaringan_set_defaults" />
-<meta property="og:description" content="Lifecycle: Maturing
+<meta property="og:description" content="
 Set ggplot2 geom defaults to match theme_xaringan() with
 theme_xaringan_set_defaults() and restore the standard or previously-set
 defaults with theme_xaringan_restore_defaults(). By default,
 theme_xaringan_set_defaults() is run with theme_xaringan() or
 theme_xaringan_inverse()." />
+<meta property="og:image" content="https://pkg.garrickadenbuie.com/xaringanthemer/logo.png" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:creator" content="@grrrck" />
 <meta name="twitter:site" content="@grrrck" />
@@ -82,7 +90,7 @@ theme_xaringan_inverse()." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">xaringanthemer</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.2.0.9100</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.4.0.9000</span>
       </span>
     </div>
 
@@ -98,35 +106,58 @@ theme_xaringan_inverse()." />
   <a href="../articles/themes.html">Themes</a>
 </li>
 <li>
-  <a href="../articles/fonts.html">Fonts</a>
+  <a href="../articles/ggplot2-themes.html">ggplot2 Themes</a>
 </li>
-<li>
-  <a href="../articles/template-variables.html">Template Variables</a>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    More
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="../articles/fonts.html">Fonts</a>
+    </li>
+    <li>
+      <a href="../articles/template-variables.html">Template Variables</a>
+    </li>
+  </ul>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li>
-  <a href="../news/index.html">
-    <span class="fa fa fa fa-newspaper-o fa-lg"></span>
+        <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="far fa-newspaper fa-lg"></span>
      
     
+     
+    <span class="caret"></span>
   </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="https://garrickadenbuie.com/blog/xaringanthemer-v0-3-0/">xaringan 0.3.0</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="../news/index.html">Changelog</a>
+    </li>
+  </ul>
 </li>
 <li>
   <a href="https://github.com/gadenbuie/xaringanthemer">
-    <span class="fa fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
 <li>
   <a href="https://twitter.com/grrrck">
-    <span class="fa fa-twitter fa-lg"></span>
+    <span class="fab fa-twitter fa-lg"></span>
      
   </a>
 </li>
 <li>
   <a href="https://www.garrickadenbuie.com">
-    <span class="fa fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -149,7 +180,7 @@ theme_xaringan_inverse()." />
     </div>
 
     <div class="ref-description">
-    <p><strong>Lifecycle:</strong> <a href='https://www.tidyverse.org/lifecycle/#maturing'>Maturing</a></p>
+    <p><a href='https://lifecycle.r-lib.org/articles/stages.html#maturing'><img src='figures/lifecycle-maturing.svg' alt='[Maturing]' /></a></p>
 <p>Set <span class="pkg">ggplot2</span> <em>geom</em> defaults to match <code><a href='theme_xaringan.html'>theme_xaringan()</a></code> with
 <code>theme_xaringan_set_defaults()</code> and restore the standard or previously-set
 defaults with <code>theme_xaringan_restore_defaults()</code>. By default,
@@ -157,15 +188,15 @@ defaults with <code>theme_xaringan_restore_defaults()</code>. By default,
 <code><a href='theme_xaringan_inverse.html'>theme_xaringan_inverse()</a></code>.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>theme_xaringan_set_defaults</span>(
-  <span class='kw'>text_color</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>background_color</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>accent_color</span> <span class='kw'>=</span> <span class='no'>text_color</span>,
-  <span class='kw'>accent_secondary_color</span> <span class='kw'>=</span> <span class='no'>accent_color</span>,
-  <span class='kw'>text_font</span> <span class='kw'>=</span> <span class='kw'>NULL</span>
-)
+    <pre class="usage"><span class='fu'>theme_xaringan_set_defaults</span><span class='op'>(</span>
+  text_color <span class='op'>=</span> <span class='cn'>NULL</span>,
+  background_color <span class='op'>=</span> <span class='cn'>NULL</span>,
+  accent_color <span class='op'>=</span> <span class='va'>text_color</span>,
+  accent_secondary_color <span class='op'>=</span> <span class='va'>accent_color</span>,
+  text_font <span class='op'>=</span> <span class='cn'>NULL</span>
+<span class='op'>)</span>
 
-<span class='fu'>theme_xaringan_restore_defaults</span>()</pre>
+<span class='fu'>theme_xaringan_restore_defaults</span><span class='op'>(</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -193,7 +224,7 @@ defaults with <code>theme_xaringan_restore_defaults()</code>. By default,
       <th>text_font</th>
       <td><p>Font to use for text elements, passed to
 <code><a href='https://rdrr.io/pkg/sysfonts/man/font_add_google.html'>sysfonts::font_add_google()</a></code>, if available and <code>text_font_use_google</code> is
-<code>TRUE</code>. Inherits from <code>text_font_family</code>.</p></td>
+<code>TRUE</code>. Inherits from <code>text_font_family</code>. Must be a length-one character.</p></td>
     </tr>
     </table>
 
@@ -230,7 +261,7 @@ defaults with <code>theme_xaringan_restore_defaults()</code>. By default,
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

@@ -8,6 +8,13 @@
 
 <title>The ggplot2 xaringanthemer base plot theme — theme_xaringan_base • xaringanthemer</title>
 
+<!-- favicons -->
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -42,14 +49,16 @@
   
 
 <meta property="og:title" content="The ggplot2 xaringanthemer base plot theme — theme_xaringan_base" />
-<meta property="og:description" content="Lifecycle: Maturing
-Provides a base plot theme for ggplot2 to match the xaringan slide theme
-created by xaringanthemer. The theme is designed to create a general plot
-style from two colors, a background_color and a text_color (or foreground
-color). Also accepts an accent_color and an accent_secondary_color that are
-xaringanthemer is not required for the base theme. Use
-theme_xaringan() or theme_xaringan_inverse() in xaringan slides styled by
-xaringanthemer for a plot theme that matches the slide style." />
+<meta property="og:description" content="
+Provides a base plot theme for ggplot2 to match the xaringan
+slide theme created by xaringanthemer. The theme is designed to create a
+general plot style from two colors, a background_color and a text_color
+(or foreground color). Also accepts an accent_color and an
+accent_secondary_color that are xaringanthemer is not required for the
+base theme. Use theme_xaringan() or theme_xaringan_inverse() in xaringan
+slides styled by xaringanthemer for a plot theme that matches the slide
+style.  See vignette(&quot;ggplot2-themes&quot;) for more information and examples." />
+<meta property="og:image" content="https://pkg.garrickadenbuie.com/xaringanthemer/logo.png" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:creator" content="@grrrck" />
 <meta name="twitter:site" content="@grrrck" />
@@ -84,7 +93,7 @@ xaringanthemer for a plot theme that matches the slide style." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">xaringanthemer</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.2.0.9100</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.4.0.9000</span>
       </span>
     </div>
 
@@ -100,35 +109,58 @@ xaringanthemer for a plot theme that matches the slide style." />
   <a href="../articles/themes.html">Themes</a>
 </li>
 <li>
-  <a href="../articles/fonts.html">Fonts</a>
+  <a href="../articles/ggplot2-themes.html">ggplot2 Themes</a>
 </li>
-<li>
-  <a href="../articles/template-variables.html">Template Variables</a>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    More
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="../articles/fonts.html">Fonts</a>
+    </li>
+    <li>
+      <a href="../articles/template-variables.html">Template Variables</a>
+    </li>
+  </ul>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li>
-  <a href="../news/index.html">
-    <span class="fa fa fa fa-newspaper-o fa-lg"></span>
+        <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="far fa-newspaper fa-lg"></span>
      
     
+     
+    <span class="caret"></span>
   </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="https://garrickadenbuie.com/blog/xaringanthemer-v0-3-0/">xaringan 0.3.0</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="../news/index.html">Changelog</a>
+    </li>
+  </ul>
 </li>
 <li>
   <a href="https://github.com/gadenbuie/xaringanthemer">
-    <span class="fa fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
 <li>
   <a href="https://twitter.com/grrrck">
-    <span class="fa fa-twitter fa-lg"></span>
+    <span class="fab fa-twitter fa-lg"></span>
      
   </a>
 </li>
 <li>
   <a href="https://www.garrickadenbuie.com">
-    <span class="fa fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -151,31 +183,32 @@ xaringanthemer for a plot theme that matches the slide style." />
     </div>
 
     <div class="ref-description">
-    <p><strong>Lifecycle:</strong> <a href='https://www.tidyverse.org/lifecycle/#maturing'>Maturing</a></p>
-<p>Provides a base plot theme for <span class="pkg">ggplot2</span> to match the <span class="pkg">xaringan</span> slide theme
-created by <a href='xaringanthemer-package.html'>xaringanthemer</a>. The theme is designed to create a general plot
-style from two colors, a <code>background_color</code> and a <code>text_color</code> (or foreground
-color). Also accepts an <code>accent_color</code> and an <code>accent_secondary_color</code> that are
-<a href='xaringanthemer-package.html'>xaringanthemer</a> is not required for the base theme. Use
-<code><a href='theme_xaringan.html'>theme_xaringan()</a></code> or <code><a href='theme_xaringan_inverse.html'>theme_xaringan_inverse()</a></code> in xaringan slides styled by
-xaringanthemer for a plot theme that matches the slide style.</p>
+    <p><a href='https://lifecycle.r-lib.org/articles/stages.html#maturing'><img src='figures/lifecycle-maturing.svg' alt='[Maturing]' /></a></p>
+<p>Provides a base plot theme for <span class="pkg">ggplot2</span> to match the <span class="pkg">xaringan</span>
+slide theme created by <a href='xaringanthemer-package.html'>xaringanthemer</a>. The theme is designed to create a
+general plot style from two colors, a <code>background_color</code> and a <code>text_color</code>
+(or foreground color). Also accepts an <code>accent_color</code> and an
+<code>accent_secondary_color</code> that are <a href='xaringanthemer-package.html'>xaringanthemer</a> is not required for the
+base theme. Use <code><a href='theme_xaringan.html'>theme_xaringan()</a></code> or <code><a href='theme_xaringan_inverse.html'>theme_xaringan_inverse()</a></code> in xaringan
+slides styled by xaringanthemer for a plot theme that matches the slide
+style.  See <code><a href='../articles/ggplot2-themes.html'>vignette("ggplot2-themes")</a></code> for more information and examples.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>theme_xaringan_base</span>(
-  <span class='no'>text_color</span>,
-  <span class='no'>background_color</span>,
-  <span class='no'>...</span>,
-  <span class='kw'>set_ggplot_defaults</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>,
-  <span class='kw'>accent_color</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>accent_secondary_color</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>text_font</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>text_font_use_google</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>text_font_size</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>title_font</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>title_font_use_google</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>title_font_size</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>use_showtext</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>
-)</pre>
+    <pre class="usage"><span class='fu'>theme_xaringan_base</span><span class='op'>(</span>
+  <span class='va'>text_color</span>,
+  <span class='va'>background_color</span>,
+  <span class='va'>...</span>,
+  set_ggplot_defaults <span class='op'>=</span> <span class='cn'>TRUE</span>,
+  accent_color <span class='op'>=</span> <span class='cn'>NULL</span>,
+  accent_secondary_color <span class='op'>=</span> <span class='cn'>NULL</span>,
+  text_font <span class='op'>=</span> <span class='cn'>NULL</span>,
+  text_font_use_google <span class='op'>=</span> <span class='cn'>NULL</span>,
+  text_font_size <span class='op'>=</span> <span class='cn'>NULL</span>,
+  title_font <span class='op'>=</span> <span class='cn'>NULL</span>,
+  title_font_use_google <span class='op'>=</span> <span class='cn'>NULL</span>,
+  title_font_size <span class='op'>=</span> <span class='cn'>NULL</span>,
+  use_showtext <span class='op'>=</span> <span class='cn'>NULL</span>
+<span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -215,7 +248,8 @@ defaults.</p></td>
       <th>text_font</th>
       <td><p>Font to use for text elements, passed to
 <code><a href='https://rdrr.io/pkg/sysfonts/man/font_add_google.html'>sysfonts::font_add_google()</a></code>, if available and <code>text_font_use_google</code> is
-<code>TRUE</code>. Inherits from <code>text_font_family</code>.</p></td>
+<code>TRUE</code>. Inherits from <code>text_font_family</code>. If manually specified, can be a
+<code><a href='google_font.html'>google_font()</a></code>.</p></td>
     </tr>
     <tr>
       <th>text_font_use_google</th>
@@ -230,7 +264,8 @@ defaults to 11.</p></td>
       <th>title_font</th>
       <td><p>Font to use for title elements, passed to
 <code><a href='https://rdrr.io/pkg/sysfonts/man/font_add_google.html'>sysfonts::font_add_google()</a></code>, if available and <code>title_font_use_google</code> is
-<code>TRUE</code>. Inherits from <code>title_font_family</code>.</p></td>
+<code>TRUE</code>. Inherits from <code>title_font_family</code>. If manually specified, can be a
+<code><a href='google_font.html'>google_font()</a></code>.</p></td>
     </tr>
     <tr>
       <th>title_font_use_google</th>
@@ -243,10 +278,11 @@ or defaults to 14.</p></td>
     </tr>
     <tr>
       <th>use_showtext</th>
-      <td><p>If <code>TRUE</code> (default) the <span class="pkg">showtext</span> package will be
+      <td><p>If <code>TRUE</code> the <span class="pkg">showtext</span> package will be
 used to register Google fonts. Set to <code>FALSE</code> to disable this feature
 entirely, which may result in errors during plotting if the fonts used are
-not available locally.</p></td>
+not available locally. The default is <code>TRUE</code> when the <span class="pkg">showtext</span>
+package is installed.</p></td>
     </tr>
     </table>
 
@@ -262,49 +298,50 @@ not available locally.</p></td>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># Requires ggplot2</span>
-<span class='no'>has_ggplot2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/ns-load.html'>requireNamespace</a></span>(<span class='st'>"ggplot2"</span>, <span class='kw'>quietly</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)
+<span class='va'>has_ggplot2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/ns-load.html'>requireNamespace</a></span><span class='op'>(</span><span class='st'>"ggplot2"</span>, quietly <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
 
-<span class='kw'>if</span> (<span class='no'>has_ggplot2</span>) {
-  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>ggplot2</span>)
+<span class='kw'>if</span> <span class='op'>(</span><span class='va'>has_ggplot2</span><span class='op'>)</span> <span class='op'>{</span>
+  <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://ggplot2.tidyverse.org'>ggplot2</a></span><span class='op'>)</span>
 
-  <span class='no'>plot1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span>(<span class='no'>iris</span>) +
-    <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span>(<span class='no'>Petal.Length</span>, <span class='no'>Petal.Width</span>) +
-    <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span>() +
-    <span class='fu'>theme_xaringan_base</span>(
-      <span class='kw'>text_color</span> <span class='kw'>=</span> <span class='st'>"#602f6b"</span>,       <span class='co'># imperial</span>
-      <span class='kw'>background_color</span> <span class='kw'>=</span> <span class='st'>"#f8f8f8"</span>, <span class='co'># light gray</span>
-      <span class='kw'>accent_color</span> <span class='kw'>=</span> <span class='st'>"#317873"</span>,     <span class='co'># myrtle green</span>
-      <span class='kw'>title_font</span> <span class='kw'>=</span> <span class='st'>"sans"</span>,
-      <span class='kw'>text_font</span> <span class='kw'>=</span> <span class='st'>"serif"</span>,
-      <span class='kw'>set_ggplot_defaults</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>
-    ) +
-    <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span>(
-      <span class='kw'>title</span> <span class='kw'>=</span> <span class='st'>"Basic Iris Plot"</span>,
-      <span class='kw'>subtitle</span> <span class='kw'>=</span> <span class='st'>"+ theme_xaringan_base()"</span>,
-      <span class='kw'>caption</span> <span class='kw'>=</span> <span class='st'>"xaringanthemer"</span>
-    )
+  <span class='va'>plot1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='va'>mpg</span><span class='op'>)</span> <span class='op'>+</span>
+    <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span><span class='va'>cty</span>, <span class='va'>hwy</span><span class='op'>)</span> <span class='op'>+</span>
+    <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span>
+    <span class='fu'>theme_xaringan_base</span><span class='op'>(</span>
+      text_color <span class='op'>=</span> <span class='st'>"#602f6b"</span>,       <span class='co'># imperial</span>
+      background_color <span class='op'>=</span> <span class='st'>"#f8f8f8"</span>, <span class='co'># light gray</span>
+      accent_color <span class='op'>=</span> <span class='st'>"#317873"</span>,     <span class='co'># myrtle green</span>
+      title_font <span class='op'>=</span> <span class='st'>"sans"</span>,
+      text_font <span class='op'>=</span> <span class='st'>"serif"</span>,
+      set_ggplot_defaults <span class='op'>=</span> <span class='cn'>TRUE</span>
+    <span class='op'>)</span> <span class='op'>+</span>
+    <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>
+      title <span class='op'>=</span> <span class='st'>"Fuel Efficiency of Various Cars"</span>,
+      subtitle <span class='op'>=</span> <span class='st'>"+ theme_xaringan_base()"</span>,
+      caption <span class='op'>=</span> <span class='st'>"xaringanthemer"</span>
+    <span class='op'>)</span>
 
-  <span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span>(<span class='no'>plot1</span>)
+  <span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span><span class='op'>(</span><span class='va'>plot1</span><span class='op'>)</span>
 
-  <span class='no'>plot2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span>(<span class='no'>iris</span>) +
-    <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span>(<span class='no'>Sepal.Width</span>) +
-    <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_histogram.html'>geom_histogram</a></span>(<span class='kw'>binwidth</span> <span class='kw'>=</span> <span class='fl'>0.1</span>) +
-    <span class='fu'>theme_xaringan_base</span>(
-      <span class='kw'>text_color</span> <span class='kw'>=</span> <span class='st'>"#a8a9c8"</span>,       <span class='co'># light purple</span>
-      <span class='kw'>background_color</span> <span class='kw'>=</span> <span class='st'>"#303163"</span>, <span class='co'># deep slate purple</span>
-      <span class='kw'>accent_color</span> <span class='kw'>=</span> <span class='st'>"#ffff99"</span>,     <span class='co'># canary yellow</span>
-      <span class='kw'>title_font</span> <span class='kw'>=</span> <span class='st'>"sans"</span>,
-      <span class='kw'>text_font</span> <span class='kw'>=</span> <span class='st'>"serif"</span>,
-      <span class='kw'>set_ggplot_defaults</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>
-    ) +
-    <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span>(
-      <span class='kw'>title</span> <span class='kw'>=</span> <span class='st'>"Basic Iris Plot"</span>,
-      <span class='kw'>subtitle</span> <span class='kw'>=</span> <span class='st'>"+ theme_xaringan_base()"</span>,
-      <span class='kw'>caption</span> <span class='kw'>=</span> <span class='st'>"xaringanthemer"</span>
-    )
+  <span class='va'>plot2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='va'>mpg</span><span class='op'>)</span> <span class='op'>+</span>
+    <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span><span class='va'>hwy</span><span class='op'>)</span> <span class='op'>+</span>
+    <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_histogram.html'>geom_histogram</a></span><span class='op'>(</span>binwidth <span class='op'>=</span> <span class='fl'>2</span><span class='op'>)</span> <span class='op'>+</span>
+    <span class='fu'>theme_xaringan_base</span><span class='op'>(</span>
+      text_color <span class='op'>=</span> <span class='st'>"#a8a9c8"</span>,       <span class='co'># light purple</span>
+      background_color <span class='op'>=</span> <span class='st'>"#303163"</span>, <span class='co'># deep slate purple</span>
+      accent_color <span class='op'>=</span> <span class='st'>"#ffff99"</span>,     <span class='co'># canary yellow</span>
+      title_font <span class='op'>=</span> <span class='st'>"sans"</span>,
+      text_font <span class='op'>=</span> <span class='st'>"serif"</span>,
+      set_ggplot_defaults <span class='op'>=</span> <span class='cn'>TRUE</span>
+    <span class='op'>)</span> <span class='op'>+</span>
+    <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>
+      title <span class='op'>=</span> <span class='st'>"Highway Fuel Efficiency"</span>,
+      subtitle <span class='op'>=</span> <span class='st'>"+ theme_xaringan_base()"</span>,
+      caption <span class='op'>=</span> <span class='st'>"xaringanthemer"</span>
+    <span class='op'>)</span>
 
-  <span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span>(<span class='no'>plot2</span>)
-}</div><div class='img'><img src='theme_xaringan_base-1.png' alt='' width='700' height='433' /></div><div class='img'><img src='theme_xaringan_base-2.png' alt='' width='700' height='433' /></div></pre>
+  <span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span><span class='op'>(</span><span class='va'>plot2</span><span class='op'>)</span>
+<span class='op'>}</span>
+</div><div class='img'><img src='theme_xaringan_base-1.png' alt='' width='700' height='433' /></div><div class='img'><img src='theme_xaringan_base-2.png' alt='' width='700' height='433' /></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -320,7 +357,7 @@ not available locally.</p></td>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>
