@@ -1,5 +1,8 @@
 
 test_theme_file <- function(theme = "duo", theme_file = paste0(theme, ".css"), ...) {
+  local_edition(2)
+  on.exit(local_edition(3))
+
   theme_fun <- switch(
     theme,
     "duo" = style_duo,
@@ -14,11 +17,15 @@ test_theme_file <- function(theme = "duo", theme_file = paste0(theme, ".css"), .
     style_xaringan
   )
 
-  theme_css <- theme_fun(outfile = NULL, ..., text_font_google = google_font("Noto Serif"))
+  tmpfile <- tempfile()
+  on.exit(unlink(tmpfile), add = TRUE)
+
+  theme_fun(outfile = tmpfile, ..., text_font_google = google_font("Noto Serif"))
+  theme_css <- readLines(tmpfile)
   # Mask package version in test files
   theme_css <- sub("( \\*  Version: )[\\d.-]+", "\\1a.b.c.d.eeee", theme_css, perl = TRUE)
   theme_css <- paste(theme_css, collapse = "\n")
-  expect_snapshot(cat(theme_css))
+  expect_known_output(cat(theme_css), test_path("css", theme_file))
 }
 
 test_that("style_duo()",                 { test_theme_file("duo") })
