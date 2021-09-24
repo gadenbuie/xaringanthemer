@@ -1,5 +1,10 @@
 # xaringanthemer (development version)
 
+* Text alignment in code blocks in `left`, `center`, or `right` aligned slides 
+  no longer matches the slide text. Instead, the code block width is reduced,
+  if possible, and the block is pushed to the left, center, or right using
+  margins (#68).
+
 # xaringanthemer 0.4.0
 
 * Added `text_bold_font_weight` argument to xaringanthemer style functions with
