@@ -1,4 +1,3 @@
-context("test-helpers")
 
 test_that("element_description", {
   text_in <- c("multiple", NA, "", ".remark-slide-content", "h1", "pre, code")
