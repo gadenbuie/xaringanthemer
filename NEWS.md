@@ -1,3 +1,5 @@
+# xaringanthemer (development version)
+
 # xaringanthemer 0.4.0
 
 * Added `text_bold_font_weight` argument to xaringanthemer style functions with
