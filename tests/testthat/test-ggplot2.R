@@ -502,10 +502,10 @@ describe("scale_xaringan_*", {
 test_that("register_font() returns the name of the font family if {showtext} is missing", {
   text_font_family <- xaringanthemer_font_default("text_font_family")
 
-  family_showtext_missing <- testthat::with_mock(
-    `xaringanthemer:::requires_package` = function(pkg, ...) pkg != "showtext",
-    register_font(text_font_family, google = TRUE)
-  )
+  # Pretend like {showtext} is missing
+  mockery::stub(register_font, "requires_package", function(pkg, ...) pkg != "showtext")
+
+  family_showtext_missing <- register_font(text_font_family, google = TRUE)
 
   expect_equal(family_showtext_missing, text_font_family)
 })
@@ -515,10 +515,10 @@ test_that("register_font() returns the name of the font family if {sysfonts} is 
 
   text_font_family <- xaringanthemer_font_default("text_font_family")
 
-  family_sysfonts_missing <- testthat::with_mock(
-    `xaringanthemer:::requires_package` = function(pkg, ...) pkg != "sysfonts",
-    register_font(text_font_family, google = TRUE)
-  )
+  # Pretend like {sysfonts} is missing
+  mockery::stub(register_font, "requires_package", function(pkg, ...) pkg != "sysfonts")
+
+  family_sysfonts_missing <- register_font(text_font_family, google = TRUE)
 
   expect_equal(family_sysfonts_missing, text_font_family)
 })

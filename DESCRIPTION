@@ -28,6 +28,7 @@ Imports:
     utils,
     whisker
 Suggests: 
+    mockery,
     callr,
     ggplot2,
     knitr,
