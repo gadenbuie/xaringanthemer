@@ -1,6 +1,8 @@
-context("test-themes")
 
 test_theme_file <- function(theme = "duo", theme_file = paste0(theme, ".css"), ...) {
+  local_edition(2)
+  on.exit(local_edition(3))
+
   theme_fun <- switch(
     theme,
     "duo" = style_duo,
@@ -16,6 +18,7 @@ test_theme_file <- function(theme = "duo", theme_file = paste0(theme, ".css"), .
   )
 
   tmpfile <- tempfile()
+  on.exit(unlink(tmpfile), add = TRUE)
 
   theme_fun(outfile = tmpfile, ..., text_font_google = google_font("Noto Serif"))
   theme_css <- readLines(tmpfile)
@@ -25,20 +28,22 @@ test_theme_file <- function(theme = "duo", theme_file = paste0(theme, ".css"), .
   expect_known_output(cat(theme_css), test_path("css", theme_file))
 }
 
-test_that("style_duo()", test_theme_file("duo"))
-test_that("style_duo_accent()", test_theme_file("duo_accent"))
-test_that("style_duo_accent_inverse()", test_theme_file("duo_accent_inverse"))
-test_that("style_mono_accent()", test_theme_file("mono_accent"))
-test_that("style_mono_accent_inverse()", test_theme_file("mono_accent_inverse"))
-test_that("style_mono_dark()", test_theme_file("mono_dark"))
-test_that("style_mono_light()", test_theme_file("mono_light"))
-test_that("style_solarized_dark()", test_theme_file("solarized_dark"))
-test_that("style_solarized_light()", test_theme_file("solarized_light"))
-test_that("google fonts in theme", test_theme_file(
-  "google_fonts",
-  header_font_google = google_font("IBM Plex Serif", "700"),
-  code_font_google = google_font("IBM Plex Mono")
-))
+test_that("style_duo()",                 { test_theme_file("duo") })
+test_that("style_duo_accent()",          { test_theme_file("duo_accent") })
+test_that("style_duo_accent_inverse()",  { test_theme_file("duo_accent_inverse") })
+test_that("style_mono_accent()",         { test_theme_file("mono_accent") })
+test_that("style_mono_accent_inverse()", { test_theme_file("mono_accent_inverse") })
+test_that("style_mono_dark()",           { test_theme_file("mono_dark") })
+test_that("style_mono_light()",          { test_theme_file("mono_light") })
+test_that("style_solarized_dark()",      { test_theme_file("solarized_dark") })
+test_that("style_solarized_light()",     { test_theme_file("solarized_light") })
+test_that("google fonts in theme", {
+  test_theme_file(
+    "google_fonts",
+    header_font_google = google_font("IBM Plex Serif", "700"),
+    code_font_google = google_font("IBM Plex Mono")
+  )
+})
 
 test_that("header_background_auto = TRUE", {
   test_theme_file("duo", "duo-header_bg.css", header_background_auto = TRUE)
