@@ -68,7 +68,7 @@ describe("find and choose xaringan themer files", {
   it("chooses the first from the list if ambiguous", {
     file.rename("xaringan-themer.css", "xaringan.css")
     candidates <- find_xaringan_themer_css()
-    picked <- expect_message(choose_xaringan_themer_css(candidates))
+    expect_message(picked <- choose_xaringan_themer_css(candidates))
     expect_equal(candidates, c("./mono_light.css", "./xaringan.css"))
     expect_equal(picked, "./mono_light.css")
     expect_equal(read_css_vars()$text_color, "#18273F")
