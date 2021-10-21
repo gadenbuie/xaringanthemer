@@ -121,8 +121,8 @@ prepare_colors <- function(colors = NULL) {
       call. = FALSE)
   }
 
-  if (any(grepl("^[_-]|[ .>~*:|+}]", names(colors)))) {
-    stop("Color names in `colors` must be valid CSS classes", call. = FALSE)
+  if (any(grepl("^[_-]|[ .>~*:|+}/]", names(colors)))) {
+    warning("Color names in `colors` must be valid CSS classes", call. = FALSE)
   }
 
   whisker::iteratelist(colors, "color_name")
