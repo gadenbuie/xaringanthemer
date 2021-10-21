@@ -125,7 +125,7 @@ prepare_colors <- function(colors = NULL) {
   if (length(maybe_bad_css) > 0) {
     warning(
       "Color names in `colors` must be valid CSS classes: ",
-      paste0("'", maybe_bad_css, "'", collapse = ", ")
+      paste0("'", maybe_bad_css, "'", collapse = ", "),
       call. = FALSE
     )
   }
