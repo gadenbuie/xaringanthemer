@@ -121,7 +121,7 @@ prepare_colors <- function(colors = NULL) {
       call. = FALSE)
   }
 
-  if (any(!grepl("^-?[_a-zA-Z]+[_a-zA-Z0-9-]*", names(colors)))) {
+  if (any(grepl("^[_-]|[ .>~*:|+}]", names(colors)))) {
     stop("Color names in `colors` must be valid CSS classes", call. = FALSE)
   }
 
