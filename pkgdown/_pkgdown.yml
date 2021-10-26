@@ -76,7 +76,7 @@ navbar:
       icon: far fa-newspaper fa-lg
       text: ""
       menu:
-      - text: "xaringan 0.3.0"
+      - text: "xaringanthemer 0.3.0"
         href: https://garrickadenbuie.com/blog/xaringanthemer-v0-3-0/
       - text: -------
       - text: "Changelog"
