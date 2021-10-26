@@ -1,5 +1,5 @@
 ## tic GitHub Actions template: linux-macos-windows-deploy
-## revision date: 2020-12-11
+## revision date: 2021-06-27
 on:
   workflow_dispatch:
   push:
@@ -14,6 +14,7 @@ name: tic
 jobs:
   all:
     runs-on: ${{ matrix.config.os }}
+    timeout-minutes: 30
 
     name: ${{ matrix.config.os }} (${{ matrix.config.r }})
 
@@ -23,9 +24,9 @@ jobs:
         config:
           # use a different tic template type if you do not want to build on all listed platforms
           - { os: windows-latest, r: "release" }
-          - { os: macOS-latest, r: "release", pkgdown: "true", latex: "true" }
+          - { os: macOS-latest, r: "release" }
           - { os: ubuntu-latest, r: "devel" }
-          - { os: ubuntu-latest, r: "release" }
+          - { os: ubuntu-latest, r: "release", pkgdown: "true", latex: "true" }
 
     env:
       # otherwise remotes::fun() errors cause the build to fail. Example: Unavailability of binaries
@@ -44,7 +45,7 @@ jobs:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
 
     steps:
-      - uses: actions/checkout@v2.3.4
+      - uses: actions/checkout@v2
 
       - uses: r-lib/actions/setup-r@master
         with:
@@ -70,27 +71,21 @@ jobs:
 
       - name: "[Cache] Cache R packages"
         if: runner.os != 'Windows'
-        uses: pat-s/always-upload-cache@v2.1.3
+        uses: pat-s/always-upload-cache@v2
         with:
           path: ${{ env.R_LIBS_USER }}
           key: ${{ runner.os }}-r-${{ matrix.config.r }}-${{steps.date.outputs.date}}
           restore-keys: ${{ runner.os }}-r-${{ matrix.config.r }}-${{steps.date.outputs.date}}
+
+      - name: "[Stage] [Linux] Install required system libs"
+        if: runner.os == 'Linux'
+        run: sudo apt install libcurl4-openssl-dev libgit2-dev
 
       # for some strange Windows reason this step and the next one need to be decoupled
       - name: "[Stage] Prepare"
         run: |
           Rscript -e "if (!requireNamespace('remotes')) install.packages('remotes', type = 'source')"
           Rscript -e "if (getRversion() < '3.2' && !requireNamespace('curl')) install.packages('curl', type = 'source')"
-
-      - name: "[Stage] [Linux] Install curl and libgit2"
-        if: runner.os == 'Linux'
-        run: sudo apt install libcurl4-openssl-dev libgit2-dev
-
-      # install xquartz for {sysfonts}
-      - name: "[macOS] xquartz"
-        if: runner.os == 'macOS'
-        run: |
-          brew install --cask xquartz
 
       - name: "[Stage] [macOS] Install libgit2"
         if: runner.os == 'macOS'
@@ -103,6 +98,16 @@ jobs:
       - name: "[Stage] [Linux] Install system libs for pkgdown"
         if: runner.os == 'Linux' && matrix.config.pkgdown != ''
         run: sudo apt install libharfbuzz-dev libfribidi-dev
+
+      # Try to automatically check for system dependencies and install them
+      # Note: this might not catch all required system libs and manual action might be needed
+      - name: "[Stage] [Linux] Install linux system dependencies"
+        if: runner.os == 'Linux'
+        run: |
+          while read -r cmd
+          do
+            eval sudo $cmd
+          done < <(Rscript -e 'writeLines(remotes::system_requirements("ubuntu", "20.04"))')
 
       - name: "[Stage] Install"
         if: matrix.config.os != 'macOS-latest' || matrix.config.r != 'devel'
@@ -124,7 +129,7 @@ jobs:
 
       - name: "[Stage] Upload R CMD check artifacts"
         if: failure()
-        uses: actions/upload-artifact@v2.2.1
+        uses: actions/upload-artifact@v2
         with:
           name: ${{ runner.os }}-r${{ matrix.config.r }}-results
           path: check
@@ -137,11 +142,3 @@ jobs:
 
       - name: "[Stage] After Deploy"
         run: Rscript -e "tic::after_deploy()"
-
-      - name: "[Status] Update dashboard at gadenbuie/status"
-        uses: peter-evans/repository-dispatch@v1
-        if: (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main') &&  matrix.config.os == 'macOS-latest' && matrix.config.r == 'release'
-        with:
-          token: ${{ secrets.TIC_UPDATE }}
-          event-type: status-update
-          repository: gadenbuie/status
