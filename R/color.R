@@ -124,7 +124,7 @@ prepare_colors <- function(colors = NULL) {
   maybe_bad_css <- unique(grep("^[_-]|[ .>~*:|+}/]", names(colors), value = TRUE))
   if (length(maybe_bad_css) > 0) {
     warning(
-      "Color names in `colors` must be valid CSS classes: ",
+      "Color names in `colors` should be valid CSS classes: ",
       paste0("'", maybe_bad_css, "'", collapse = ", "),
       call. = FALSE
     )
