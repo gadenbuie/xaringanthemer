@@ -13,8 +13,22 @@ describe("prepare_colors()", {
 
   it("requires valid CSS names", {
     expect_error(prepare_colors(c("light blue" = "#88f")))
-    expect_error(prepare_colors(c("light/blue" = "#88f")))
+    expect_warning(prepare_colors(c("light/blue" = "#88f")), "light/blue")
+    expect_warning(prepare_colors(c("-lightblue" = "#88f")), "-lightblue")
+    expect_warning(prepare_colors(c("_lightblue" = "#88f")), "_lightblue")
+    
+    colors <- c("light_blue" = "#88f", "light-blue" = "#88f")
+    expect_silent(
+      expect_equal(
+        prepare_colors(colors),
+        list(
+          list(color_name = "light_blue", value = "#88f"),
+          list(color_name = "light-blue", value = "#88f")
+        )
+      )
+    )
   })
+
 
   it("returns list with color_name and value for each color", {
     colors <- c('test' = "#4ed4ed")
