@@ -1,9 +1,16 @@
+<!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
+
 # xaringanthemer (development version)
 
 * Text alignment in code blocks in `left`, `center`, or `right` aligned slides 
   no longer matches the slide text. Instead, the code block width is reduced,
   if possible, and the block is pushed to the left, center, or right using
   margins (#68).
+  
+* The style functions are now more permissive about color names in the `color`
+  argument. Color names should be valid CSS classes that can also be used as CSS
+  variable names, but the `style_` function only stops with an error if the
+  color name contains spaces. (@jdlom #69)
 
 # xaringanthemer 0.4.0
 
