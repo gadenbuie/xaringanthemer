@@ -275,17 +275,21 @@ CSS theme with <span class="pkg">xaringanthemer</span> in your slides' source fi
 
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='co'># Create a xaringanthemer style in a temporary file for this example</span>
-<span class='va'>xaringan_themer_css</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/tempfile.html'>tempfile</a></span><span class='op'>(</span><span class='st'>"xaringan-themer"</span>, fileext <span class='op'>=</span> <span class='st'>".css"</span><span class='op'>)</span>
-
-<span class='fu'><a href='style_solarized_light.html'>style_solarized_light</a></span><span class='op'>(</span>outfile <span class='op'>=</span> <span class='va'>xaringan_themer_css</span><span class='op'>)</span>
-
-<span class='fu'>theme_xaringan_get_value</span><span class='op'>(</span><span class='st'>"text_color"</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; [1] "#657b83"</div><div class='input'><span class='fu'>theme_xaringan_get_value</span><span class='op'>(</span><span class='st'>"background_color"</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; [1] "#fdf6e3"</div><div class='input'><span class='fu'>theme_xaringan_get_value</span><span class='op'>(</span><span class='st'>"header_color"</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; [1] "#dc322f"</div><div class='input'><span class='fu'>theme_xaringan_get_value</span><span class='op'>(</span><span class='st'>"text_bold_color"</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; [1] "#d33682"</div><div class='input'>
-</div></pre>
+    <pre class="examples"><span class='r-in'><span class='co'># Create a xaringanthemer style in a temporary file for this example</span></span>
+<span class='r-in'><span class='va'>xaringan_themer_css</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/tempfile.html'>tempfile</a></span><span class='op'>(</span><span class='st'>"xaringan-themer"</span>, fileext <span class='op'>=</span> <span class='st'>".css"</span><span class='op'>)</span></span>
+<span class='r-in'></span>
+<span class='r-in'><span class='fu'><a href='style_solarized_light.html'>style_solarized_light</a></span><span class='op'>(</span>outfile <span class='op'>=</span> <span class='va'>xaringan_themer_css</span><span class='op'>)</span></span>
+<span class='r-in'></span>
+<span class='r-in'><span class='fu'>theme_xaringan_get_value</span><span class='op'>(</span><span class='st'>"text_color"</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "#657b83"</span>
+<span class='r-in'><span class='fu'>theme_xaringan_get_value</span><span class='op'>(</span><span class='st'>"background_color"</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "#fdf6e3"</span>
+<span class='r-in'><span class='fu'>theme_xaringan_get_value</span><span class='op'>(</span><span class='st'>"header_color"</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "#dc322f"</span>
+<span class='r-in'><span class='fu'>theme_xaringan_get_value</span><span class='op'>(</span><span class='st'>"text_bold_color"</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "#d33682"</span>
+<span class='r-in'></span>
+</pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
