@@ -10,7 +10,7 @@ status](https://www.r-pkg.org/badges/version/xaringanthemer)](https://CRAN.R-pro
 [![Lifecycle:
 stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://www.tidyverse.org/lifecycle/#stable)
 [![CI by
-{tic}](https://github.com/gadenbuie/xaringanthemer/workflows/CI%20by%20%7Btic%7D/badge.svg?branch=master)](https://github.com/gadenbuie/xaringanthemer/actions)
+{tic}](https://github.com/gadenbuie/xaringanthemer/workflows/CI%20by%20%7Btic%7D/badge.svg?branch=main)](https://github.com/gadenbuie/xaringanthemer/actions)
 [![Codecov](https://img.shields.io/codecov/c/github/gadenbuie/xaringanthemer)](https://codecov.io/github/gadenbuie/xaringanthemer)
 <!-- badges: end -->
 
@@ -101,7 +101,7 @@ ggplot(diamonds) +
 **xaringanthemer** is <kbd>Tab</kbd> friendly – [use autocomplete to
 explore](#theme-settings) the [template
 variables](vignettes/template-variables.md) that you can adjust in each
-of the themes\!
+of the themes!
 
 <img src="https://raw.githubusercontent.com/gadenbuie/xaringanthemer/assets/example-rstudio-completion.gif" alt="Demonstration of argument auto-completion with RStudio" data-external="1" />
 
@@ -111,13 +111,11 @@ You can also skip the above and just create a *Ninja Themed
 Presentation* from the New R Markdown Document menu in RStudio.
 
 <center>
-
 <img src="https://raw.githubusercontent.com/gadenbuie/xaringanthemer/assets/rmarkdown-template-screenshot.png" alt="The 'New R Markdown Document' menu in RStudio" data-external="1" />
-
 </center>
 
 ## Features
 
-There’s a lot more that **xaringanthemer** can do\! [Discover
+There’s a lot more that **xaringanthemer** can do! [Discover
 xaringanthemer’s
 features.](https://pkg.garrickadenbuie.com/xaringanthemer/articles/xaringanthemer.html)
