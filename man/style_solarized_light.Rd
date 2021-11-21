@@ -433,7 +433,7 @@ Works well with "\code{highlightStyle: solarized-dark}" or
  To use the styles created by this theme function, make sure
 that you use \code{xaringan-themer.css} as your CSS file in your slides' YAML
 header. If you change the name of the output file using the \code{outfile}
-argument, use that name instead of the default file name.\if{html}{\out{<div class="yaml">}}\preformatted{output:
+argument, use that name instead of the default file name.\if{html}{\out{<div class="sourceCode yaml">}}\preformatted{output:
 xaringan::moon_reader:
   css: xaringan-themer.css
 }\if{html}{\out{</div>}}

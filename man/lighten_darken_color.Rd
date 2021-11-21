@@ -32,5 +32,4 @@ blue_dark <- darken_color(blue, strength = 0.33)
 if (requireNamespace("scales", quietly = TRUE)) {
   scales::show_col(c(blue_light, blue, blue_dark))
 }
-
 }

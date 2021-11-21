@@ -26,5 +26,4 @@ blue_transparent <- apply_alpha(blue)
 if (requireNamespace("scales", quietly = TRUE)) {
   scales::show_col(c(blue, blue_transparent))
 }
-
 }

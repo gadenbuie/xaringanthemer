@@ -8,12 +8,7 @@
 \description{
 \if{html}{\figure{logo.png}{options: align='right' alt='logo' width='120'}}
 
-Create beautifully color-coordinated and customized
-    themes for your 'xaringan' slides, without writing any CSS. Complete
-    your slide theme with 'ggplot2' themes that match the font and colors
-    used in your slides.  Customized styles can be created directly in
-    your slides' 'R Markdown' source file or in a separate external
-    script.
+Create beautifully color-coordinated and customized themes for your 'xaringan' slides, without writing any CSS. Complete your slide theme with 'ggplot2' themes that match the font and colors used in your slides. Customized styles can be created directly in your slides' 'R Markdown' source file or in a separate external script.
 }
 \seealso{
 Useful links:

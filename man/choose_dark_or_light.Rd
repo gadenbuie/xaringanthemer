@@ -33,7 +33,6 @@ contrast_purple <- choose_dark_or_light(dark_purple)
 if (requireNamespace("scales", quietly = TRUE)) {
   scales::show_col(c(light_green, contrast_green, dark_purple, contrast_purple))
 }
-
 }
 \references{
 \url{https://stackoverflow.com/a/3943023/2022615}
