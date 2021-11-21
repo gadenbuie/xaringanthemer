@@ -42,7 +42,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">xaringanthemer</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.4.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.4.1</span>
       </span>
     </div>
 
@@ -87,7 +87,7 @@
   </a>
   <ul class="dropdown-menu" role="menu">
 <li>
-      <a href="https://garrickadenbuie.com/blog/xaringanthemer-v0-3-0/">xaringan 0.3.0</a>
+      <a href="https://garrickadenbuie.com/blog/xaringanthemer-v0-3-0/">xaringanthemer 0.3.0</a>
     </li>
     <li class="divider">
     <li>
@@ -139,7 +139,7 @@
 <p><strong>xaringanthemer</strong> includes a number of functions that provide themed <strong>xaringan</strong> styles. All of the styling functions start with the <code>style_</code> prefix.</p>
 <p>The goal of each style function is to quickly set up a coordinated color palette for your slides based on one or two starter colors. Styles based on one color start with <code>style_mono_</code> and styles based on two colors start with <code>style_duo_</code>. How the starter colors are used is described in the final portion of the style function name. For example, <code><a href="../reference/style_mono_accent.html">style_mono_accent()</a></code> uses a single color as an accent color.</p>
 <p>Note that the colors used below are for demonstration only, the point of the <code>style_</code> functions is for you to choose your own color palette!</p>
-<p>If you color palette uses more than two colors, you can add additional colors with the <code>colors</code> argument. See the <a href="#colors">Colors</a> section for more information.</p>
+<p>If your color palette uses more than two colors, you can add additional colors with the <code>colors</code> argument. See the <a href="#colors">Colors</a> section for more information.</p>
 <div id="monotone" class="section level3">
 <h3 class="hasAnchor">
 <a href="#monotone" class="anchor"></a>Monotone</h3>
@@ -255,7 +255,7 @@
   green <span class="op">=</span> <span class="st">"#136f63"</span>,
   white <span class="op">=</span> <span class="st">"#FFFFFF"</span>
 <span class="op">)</span></code></pre></div>
-<p>and creates CSS classes from the color name that set the text color — e.g. <code>.red</code> — or that set the background color — e.g. <code>.bg-red</code>. If you use custom CSS in your slides, the color name is also stored in a CSS variable — e.g. <code><a href="https://rdrr.io/r/stats/cor.html">var(--red)</a></code>.</p>
+<p>and creates CSS classes from the color name that set the text color — e.g. <code>.red</code> — or that set the background color — e.g. <code>.bg-red</code>. If you use custom CSS in your slides, the color name is also stored in a CSS variable — e.g. <code>var(--red)</code>.</p>
 <p>So slide text like this</p>
 <div class="sourceCode" id="cb12"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb12-1"><a href="#cb12-1"></a>This **.red[simple]** .white.bg-purple[demo] </span>
 <span id="cb12-2"><a href="#cb12-2"></a>_.orange[shows]_ the colors .green[in action].</span></code></pre></div>

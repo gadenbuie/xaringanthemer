@@ -42,7 +42,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">xaringanthemer</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.4.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.4.1</span>
       </span>
     </div>
 
@@ -87,7 +87,7 @@
   </a>
   <ul class="dropdown-menu" role="menu">
 <li>
-      <a href="https://garrickadenbuie.com/blog/xaringanthemer-v0-3-0/">xaringan 0.3.0</a>
+      <a href="https://garrickadenbuie.com/blog/xaringanthemer-v0-3-0/">xaringanthemer 0.3.0</a>
     </li>
     <li class="divider">
     <li>
@@ -266,7 +266,7 @@ img { max-width: 100%; border: none; }
 <h3 class="hasAnchor">
 <a href="#automatically-match-slide-and-plot-fonts" class="anchor"></a>Automatically match slide and plot fonts</h3>
 <p>xaringanthemer uses the <a href="https://github.com/yixuan/showtext">showtext</a> and <a href="https://github.com/yixuan/sysfonts">sysfonts</a> packages by Yixuan Qiu to automatically download and register <a href="https://fonts.google.com">Google Fonts</a> for use with your ggplot2 plots.</p>
-<p>In your slide theme, use the <code>&lt;type&gt;_font_google</code> argument with the <code><a href="../reference/google_font.html">google_font("&lt;font name&gt;")</a></code> helper (or the default xaringanthemer fonts) and <code><a href="../reference/theme_xaringan.html">theme_xaringan()</a></code> will handle the rest. In our demo theme, we used <code><a href="../reference/style_mono_accent.html">style_mono_accent()</a></code> with</p>
+<p>In your slide theme, use the <code>&lt;type&gt;_font_google</code> argument with the <code>google_font("&lt;font name&gt;")</code> helper (or the default xaringanthemer fonts) and <code><a href="../reference/theme_xaringan.html">theme_xaringan()</a></code> will handle the rest. In our demo theme, we used <code><a href="../reference/style_mono_accent.html">style_mono_accent()</a></code> with</p>
 <ul>
 <li>
 <code>text_font_google = google_font("Kelley Slab")</code> and</li>
@@ -301,10 +301,10 @@ img { max-width: 100%; border: none; }
 <a href="#using-fonts-not-in-google-fonts" class="anchor"></a>Using fonts not in Google Fonts</h3>
 <p>If you want to use a font that isn’t in the Google Fonts collection, you need to manually register the font with sysfonts so that it can be used in your plots.</p>
 <p>I found a nice open source font called <a href="https://fontlibrary.org/en/font/glacial-indifference">Glacial Indifference</a> by Alfredo Marco Pradil available at <a href="https://fontlibrary.org">fontlibrary.org</a>. In my theme style function, I would use</p>
-<pre><code><a href="../reference/style_mono_accent.html">style_mono_accent(
+<pre><code>style_mono_accent(
   text_font_family = "GlacialIndifferenceRegular",
   text_font_url = "https://fontlibrary.org/face/glacial-indifference"
-)</a></code></pre>
+)</code></pre>
 <p>but sysfonts won’t know where to find the TTF font files for this font.</p>
 <p>To register the font with sysfonts, we use <code><a href="https://rdrr.io/pkg/sysfonts/man/font_add.html">sysfonts::font_add()</a></code>, but first we need to download the font file — the <code><a href="https://rdrr.io/pkg/sysfonts/man/font_add.html">sysfonts::font_add()</a></code> function requires the font file to be local.</p>
 <p>By inspecting the CSS file at the link I used in <code>text_font_url</code>, I found a direct URL for the <code>.ttf</code> files for <em>GlacialIndifferenceRegular</em>. I’ve included the code I used to download the font to a temporary file below, but in case the URL breaks, I’ve included <em>Glacial Indifference</em> in the xaringanthemer package.</p>

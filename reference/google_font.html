@@ -87,7 +87,7 @@ more of the language codes as given by google_language_codes()." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">xaringanthemer</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.4.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.4.1</span>
       </span>
     </div>
 
@@ -132,7 +132,7 @@ more of the language codes as given by google_language_codes()." />
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="https://garrickadenbuie.com/blog/xaringanthemer-v0-3-0/">xaringan 0.3.0</a>
+      <a href="https://garrickadenbuie.com/blog/xaringanthemer-v0-3-0/">xaringanthemer 0.3.0</a>
     </li>
     <li class="divider"></li>
     <li>
@@ -207,35 +207,37 @@ more of the language codes as given by <code><a href='google_language_codes.html
     <p>A <code>"google_font"</code> object.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>google_font</span><span class='op'>(</span><span class='st'>"Josefin Sans"</span>, <span class='st'>"400"</span>, <span class='st'>"400i"</span>, <span class='st'>"600i"</span>, <span class='st'>"700"</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; $family
-#&gt; [1] "Josefin Sans"
-#&gt; 
-#&gt; $weights
-#&gt; [1] "400,400i,600i,700"
-#&gt; 
-#&gt; $languages
-#&gt; NULL
-#&gt; 
-#&gt; $url
-#&gt; [1] "https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,600i,700&amp;display=swap"
-#&gt; 
-#&gt; attr(,"class")
-#&gt; [1] "google_font"</div><div class='input'><span class='fu'>google_font</span><span class='op'>(</span><span class='st'>"Josefin Sans"</span>, languages <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"latin-ext"</span>, <span class='st'>"vietnamese"</span><span class='op'>)</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; $family
-#&gt; [1] "Josefin Sans"
-#&gt; 
-#&gt; $weights
-#&gt; NULL
-#&gt; 
-#&gt; $languages
-#&gt; [1] "latin-ext,vietnamese"
-#&gt; 
-#&gt; $url
-#&gt; [1] "https://fonts.googleapis.com/css?family=Josefin+Sans&amp;subset=latin-ext,vietnamese&amp;display=swap"
-#&gt; 
-#&gt; attr(,"class")
-#&gt; [1] "google_font"</div></pre>
+    <pre class="examples"><span class='r-in'><span class='fu'>google_font</span><span class='op'>(</span><span class='st'>"Josefin Sans"</span>, <span class='st'>"400"</span>, <span class='st'>"400i"</span>, <span class='st'>"600i"</span>, <span class='st'>"700"</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $family</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Josefin Sans"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $weights</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "400,400i,600i,700"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $languages</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> NULL</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $url</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,600i,700&amp;display=swap"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> attr(,"class")</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "google_font"</span>
+<span class='r-in'><span class='fu'>google_font</span><span class='op'>(</span><span class='st'>"Josefin Sans"</span>, languages <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"latin-ext"</span>, <span class='st'>"vietnamese"</span><span class='op'>)</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $family</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Josefin Sans"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $weights</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> NULL</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $languages</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "latin-ext,vietnamese"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $url</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "https://fonts.googleapis.com/css?family=Josefin+Sans&amp;subset=latin-ext,vietnamese&amp;display=swap"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> attr(,"class")</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "google_font"</span>
+</pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
