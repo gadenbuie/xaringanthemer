@@ -71,7 +71,7 @@ describe("find and choose xaringan themer files", {
     expect_message(picked <- choose_xaringan_themer_css(candidates))
     expect_equal(candidates, c("./mono_light.css", "./xaringan.css"))
     expect_equal(picked, "./mono_light.css")
-    expect_equal(read_css_vars()$text_color, "#18273F")
+    expect_message(expect_equal(read_css_vars()$text_color, "#18273F"))
   })
 
   it("throws error if no xaringan themer css files", {
