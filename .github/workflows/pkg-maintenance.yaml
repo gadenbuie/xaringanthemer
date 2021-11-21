@@ -68,7 +68,7 @@ jobs:
           fi
           if [ -f "README.Rmd" ]; then
             Rscript -e 'devtools::build_readme(quiet = FALSE)'
-            git add man/figures/README* README.md && git commit -m 'Re-build README.Rmd (GitHub Actions)' || echo "No readme changes to commit"
+            git add README.md && git commit -m 'Re-build README.Rmd (GitHub Actions)' || echo "No readme changes to commit"
           else
             echo "No README.Rmd to build"
           fi
