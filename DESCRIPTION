@@ -3,17 +3,13 @@ Package: xaringanthemer
 Title: Custom 'xaringan' CSS Themes
 Version: 0.4.0.9000
 Authors@R: 
-    person(given = "Garrick",
-           family = "Aden-Buie",
-           role = c("aut", "cre"),
-           email = "garrick@adenbuie.com",
+    person("Garrick", "Aden-Buie", , "garrick@adenbuie.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-7111-0077"))
-Description: Create beautifully color-coordinated and customized
-    themes for your 'xaringan' slides, without writing any CSS. Complete
-    your slide theme with 'ggplot2' themes that match the font and colors
-    used in your slides.  Customized styles can be created directly in
-    your slides' 'R Markdown' source file or in a separate external
-    script.
+Description: Create beautifully color-coordinated and customized themes
+    for your 'xaringan' slides, without writing any CSS. Complete your
+    slide theme with 'ggplot2' themes that match the font and colors used
+    in your slides.  Customized styles can be created directly in your
+    slides' 'R Markdown' source file or in a separate external script.
 License: MIT + file LICENSE
 URL: https://pkg.garrickadenbuie.com/xaringanthemer/,
     https://github.com/gadenbuie/xaringanthemer
@@ -28,10 +24,10 @@ Imports:
     utils,
     whisker
 Suggests: 
-    mockery,
     callr,
     ggplot2,
     knitr,
+    mockery,
     rmarkdown,
     scales,
     showtext,
@@ -40,8 +36,8 @@ Suggests:
     xaringan
 VignetteBuilder: 
     knitr
-Config/testthat/edition: 3
 Config/Needs/website: pkgdown
+Config/testthat/edition: 3
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
