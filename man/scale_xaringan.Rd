@@ -149,5 +149,4 @@ if (has_ggplot2) {
     # Fill color matches teal text
     scale_xaringan_color_discrete(direction = -1)
 }
-
 }

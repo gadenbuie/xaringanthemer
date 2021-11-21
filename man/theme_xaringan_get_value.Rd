@@ -103,5 +103,4 @@ theme_xaringan_get_value("text_color")
 theme_xaringan_get_value("background_color")
 theme_xaringan_get_value("header_color")
 theme_xaringan_get_value("text_bold_color")
-
 }

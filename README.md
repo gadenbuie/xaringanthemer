@@ -40,6 +40,6 @@ remotes::install_github("gadenbuie/xaringanthemer")
 
 ## Features
 
-There’s a lot more that **xaringanthemer** can do! [Discover
+There’s a lot more that **xaringanthemer** can do\! [Discover
 xaringanthemer’s
 features.](https://pkg.garrickadenbuie.com/xaringanthemer/articles/xaringanthemer.html)
