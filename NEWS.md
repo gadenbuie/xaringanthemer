@@ -11,6 +11,9 @@
   argument. Color names should be valid CSS classes that can also be used as CSS
   variable names, but the `style_` function only stops with an error if the
   color name contains spaces. (@jdlom #69)
+  
+* Fixed an issue that caused problems rendering the xaringanthemer R Markdown
+  template if the showtext package isn't installed (thanks @beatrizmilz, #65).
 
 # xaringanthemer 0.4.0
 

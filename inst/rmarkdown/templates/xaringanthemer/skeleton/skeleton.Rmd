@@ -304,17 +304,19 @@ library(ggplot2)
 
 ---
 
-```{r plot-example-themed, eval=requireNamespace("ggplot2", quietly=TRUE)}
+```{r plot-example-themed, eval=requireNamespace("showtext", quietly=TRUE) && requireNamespace("ggplot2", quietly=TRUE)}
 g + xaringanthemer::theme_xaringan(text_font_size = 16, title_font_size = 18) +
   ggtitle("A Plot About Cars")
 ```
+
+.footnote[Requires `{showtext}`]
 
 ---
 layout: false
 
 ## Square image
 
-<center><img src="https://octodex.github.com/images/labtocat.png" height="400px" /></center>
+<center><img src="https://octodex.github.com/images/labtocat.png" alt="GithHub Octocat" height="400px" /></center>
 
 .footnote[GitHub Octocat]
 
@@ -322,7 +324,7 @@ layout: false
 
 ### Wide image
 
-![](https://guides.github.com/activities/hello-world/branching.png)
+![A wide image with a diagram of branching in git.](https://docs.github.com/assets/images/help/repository/branching.png)
 
 .footnote[Wide images scale to 100% slide width]
 
@@ -331,11 +333,11 @@ layout: false
 ## Two images
 
 .pull-left[
-![](https://octodex.github.com/images/motherhubbertocat.png)
+![A GitHub Octocat, style "mother hubber"](https://octodex.github.com/images/motherhubbertocat.png)
 ]
 
 .pull-right[
-![](https://octodex.github.com/images/dinotocat.png)
+![A GitHub Octocat, style "dinotcat"](https://octodex.github.com/images/dinotocat.png)
 ]
 
 ---
