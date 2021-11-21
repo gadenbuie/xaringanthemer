@@ -16,7 +16,7 @@ describe("prepare_colors()", {
     expect_warning(prepare_colors(c("light/blue" = "#88f")), "light/blue")
     expect_warning(prepare_colors(c("-lightblue" = "#88f")), "-lightblue")
     expect_warning(prepare_colors(c("_lightblue" = "#88f")), "_lightblue")
-    
+
     colors <- c("light_blue" = "#88f", "light-blue" = "#88f")
     expect_silent(
       expect_equal(

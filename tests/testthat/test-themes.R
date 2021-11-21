@@ -80,10 +80,10 @@ test_that("default fonts are correctly identified as google font", {
   })
 
   expect_equal(theme_vars$text_font_family,
-               quote_elements_w_spaces(xaringanthemer_font_default("text_font_family")))
+    quote_elements_w_spaces(xaringanthemer_font_default("text_font_family")))
   expect_true(theme_vars$text_font_is_google)
   expect_equal(theme_vars$header_font_family,
-               quote_elements_w_spaces(xaringanthemer_font_default("header_font_family")))
+    quote_elements_w_spaces(xaringanthemer_font_default("header_font_family")))
   expect_true(theme_vars$header_font_is_google)
 })
 

@@ -422,8 +422,8 @@ theme_xaringan_set_defaults <- function(
     "boxplot"    = list(color = text_color),
     "contour"    = list(color = text_color),
     "density"    = list(color = text_color,
-                        fill  = text_color,
-                        alpha = 0.1),
+      fill  = text_color,
+      alpha = 0.1),
     "dotplot"    = list(color = accent_color),
     "errorbarh"  = list(color = text_color),
     "crossbar"   = list(color = text_color),
@@ -436,17 +436,17 @@ theme_xaringan_set_defaults <- function(
     "step"       = list(color = text_color),
     "point"      = list(color = accent_color),
     "polygon"    = list(color = accent_color,
-                        fill  = accent_color),
+      fill  = accent_color),
     "quantile"   = list(color = text_color),
     "rug"        = list(color = blend(0.5)),
     "segment"    = list(color = text_color),
     "smooth"     = list(fill  = blend(0.75),
-                        color = accent_secondary_color),
+      color = accent_secondary_color),
     "spoke"      = list(color = text_color),
     "label"      = list(color = text_color,
-                        family= text_font %||% get_theme_font("text")),
+      family= text_font %||% get_theme_font("text")),
     "text"       = list(color = text_color,
-                        family= text_font %||% get_theme_font("text")),
+      family= text_font %||% get_theme_font("text")),
     "rect"       = list(fill  = text_color),
     "tile"       = list(fill  = text_color),
     "violin"     = list(fill  = text_color),
@@ -587,7 +587,6 @@ safely_set_geom <- function(geom, new) {
 #'     # Fill color matches teal text
 #'     scale_xaringan_color_discrete(direction = -1)
 #' }
-#'
 #' @name scale_xaringan
 NULL
 
@@ -1022,7 +1021,6 @@ requires_xaringanthemer_env <- function(
 #' theme_xaringan_get_value("background_color")
 #' theme_xaringan_get_value("header_color")
 #' theme_xaringan_get_value("text_bold_color")
-#'
 #' @return The value of the xaringanthemer style parameter.
 #' @export
 theme_xaringan_get_value <- function(setting, css_file = NULL) {

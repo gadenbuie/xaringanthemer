@@ -119,7 +119,7 @@ list2css <- function(css) {
 list2fonts <- function(fonts) {
   if (
     length(setdiff(names(google_font('fam')), names(fonts))) == 0 &&
-    !inherits(fonts, "google_font")
+      !inherits(fonts, "google_font")
   ) {
     # concatenating a string and a google_font() provides a wacky list
     stop(
