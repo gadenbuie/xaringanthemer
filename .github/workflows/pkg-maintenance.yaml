@@ -1,0 +1,167 @@
+# Workflow inspired by:
+#   - https://github.com/rstudio/shinycoreci/blob/master/.github/workflows/call-rituals.yaml
+#   - https://github.com/r-lib/actions/blob/master/examples/lint.yaml
+#   - https://github.com/r-lib/actions/blob/master/examples/render-rmarkdown.yaml
+
+on:
+  pull_request:
+  push:
+    branches: main
+
+name: Package Maintenance
+
+jobs:
+  pkg-maintenance:
+    runs-on: ubuntu-latest
+
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+      # only add lintr annotations
+      LINTR_COMMENT_BOT: false
+
+    steps:
+      - uses: actions/checkout@v2
+
+        # Make sure the PR branch is checked out for pull requests
+      - name: Git Pull (PR)
+        if: github.event_name == 'pull_request'
+        uses: r-lib/actions/pr-fetch@v1
+        with:
+          repo-token: ${{ github.token }}
+
+      - name: Git Config
+        run: |
+          git config user.name "${GITHUB_ACTOR}"
+          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+
+      - uses: r-lib/actions/setup-r@v1
+        with:
+          use-public-rspm: true
+
+      - uses: r-lib/actions/setup-pandoc@v1
+
+      - uses: r-lib/actions/setup-r-dependencies@v1
+        with:
+          extra-packages: |
+            lintr
+            styler
+            devtools
+            rmarkdown
+
+      - name: Tidy Description
+        run: |
+          Rscript -e 'usethis::use_tidy_description()'
+          git add -u && git commit -m 'Tidy DESCRIPTION (GitHub Actions)' || echo "No DESCRIPTION changes to commit"
+
+      - name: Document
+        run: |
+          Rscript -e 'roxygen2::roxygenise()'
+          git add man/\* NAMESPACE && git commit -m 'Document (GitHub Actions)' || echo "No documentation changes to commit"
+
+      - name: Build README and index
+        run: |
+          if [ -f "index.Rmd" ]; then
+            Rscript -e 'rmarkdown::render("index.Rmd", quiet = FALSE, output_options = list(html_preview = FALSE))'
+            git add index.md && git commit -m 'Re-build index.Rmd (GitHub Actions)' || echo "No index.Rmd changes to commit"
+          else
+            echo "No index.Rmd to build"
+          fi
+          if [ -f "README.Rmd" ]; then
+            Rscript -e 'devtools::build_readme(quiet = FALSE)'
+            git add man/figures/README\* README.md && git commit -m 'Re-build README.Rmd (GitHub Actions)' || echo "No readme changes to commit"
+          else
+            echo "No README.Rmd to build"
+          fi
+
+      - name: URL redirects
+        if: github.event_name == 'push'
+        run: |
+          Rscript -e 'pak::pkg_install("r-lib/urlchecker"); urlchecker::url_update()'
+          git add -u && git commit -m 'Update links (GitHub Actions)' || echo "No link changes to commit"
+
+      - name: Whitespace - Fix indents and trailing
+        run: |
+          # tabs to spaces and remove trailing whitespace
+          transform_indent_two_spaces <- styler::create_style_guide(
+            style_guide_name = "Indent with two spaces",
+            style_guide_version = "1.0.0",
+            indention = local({
+              ts <- styler::tidyverse_style()$indention
+              ts$unindent_fun_dec <- NULL
+              ts$update_indention_ref_fun_dec <- NULL
+              ts
+            }),
+            reindention = styler::specify_reindention(indention = 2, comments_only = FALSE)
+          )
+
+          styler::style_pkg(transformers = transform_indent_two_spaces)
+        shell: Rscript {0}
+
+      - name: Whitespace - Commit
+        run: |
+          git add -u && git commit -m 'Fix whitespace (GitHub Actions)' || echo 'No whitespace changes to commit'
+
+        # When pushing to main causes package maintenance, create a pull request
+      - name: Create Pull Request
+        id: create-pull-request
+        if: github.event_name == 'push'
+        uses: peter-evans/create-pull-request@v3
+        with:
+          base: main
+          branch: auto-pkg-maintenance
+          commit-message: "Package maintenance (Github Actions)"
+          title: "Automated package maintenance"
+          body: >
+            Automated package maintenance changes from
+            <${{github.server_url}}/${{github.repository}}/actions/runs/${{github.run_id}}>
+
+      - name: Notify Pull Request
+        if: steps.create-pull-request.outputs.pull-request-operation
+        run: |
+          echo "::notice title=Package Maintenance:: Pull request #${{ steps.create-pull-request.outputs.pull-request-number }} ${{ steps.create-pull-request.outputs.pull-request-operation }}: ${{ steps.create-pull-request.outputs.pull-request-url }}"
+
+        # If we're in a PR, then push back to the PR branch
+      - name: Git Push (PR)
+        uses: r-lib/actions/pr-push@v1
+        if: github.event_name == 'pull_request'
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Lint Package
+        if: github.event_name == 'pull_request'
+        run: |
+          # lint package and add notice-style file annotations
+          Sys.setlocale(locale = "C")
+          Sys.setenv(R_CLI_NUM_COLORS = 1)
+          lints <- lintr::lint_package(cache = FALSE)
+          informal_linters <- c(
+            "closed_curly_linter",
+            "commas_linter",
+            "function_left_parentheses_linter",
+            "line_length_linter",
+            "object_length_linter",
+            "object_name_linter",
+            "open_curly_linter",
+            "paren_brace_linter",
+            "pipe_continuation_linter",
+            "single_quotes_linter",
+            "spaces_inside_linter",
+            "spaces_left_parentheses_linter",
+            "trailing_blank_lines_linter",
+            "trailing_whitespace_linter"
+          )
+          for (lint in lints) {
+            msg <- sprintf(
+              "\n::%s file=%s,line=%d,col=%d,endColumn=%d,title=%s::%s",
+              if (lint$linter %in% informal_linters) "notice" else "warning",
+              lint$filename,
+              lint$line_number,
+              lint$ranges[[1]][[1]],
+              lint$ranges[[1]][[2]],
+              paste("lintr", lint$type, lint$linter, sep = " - "),
+              # print lintr message as GHA-compatible multiline log message
+              paste(capture.output(print(lint)), collapse = "%0A")
+            )
+            cat(msg)
+          }
+        shell: Rscript {0}
