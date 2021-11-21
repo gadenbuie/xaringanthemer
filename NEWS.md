@@ -1,6 +1,6 @@
 <!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
 
-# xaringanthemer (development version)
+# xaringanthemer 0.4.1
 
 * Text alignment in code blocks in `left`, `center`, or `right` aligned slides 
   no longer matches the slide text. Instead, the code block width is reduced,
