@@ -4,7 +4,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="xaringanthemer">
 <title>Xaringan CSS Theme Generator • xaringanthemer</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
@@ -12,12 +13,12 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png">
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png">
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png">
-<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="../bootstrap-toc.css">
-<script src="../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
+<script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="../deps/bootstrap-5.1.0/bootstrap.min.css" rel="stylesheet">
+<script src="../deps/bootstrap-5.1.0/bootstrap.bundle.min.js"></script><link href="../deps/_IBM%20Plex%20Mono-0.4.0/font.css" rel="stylesheet">
+<!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
-<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
-<script src="../pkgdown.js"></script><link href="../extra.css" rel="stylesheet">
+<!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><link href="../extra.css" rel="stylesheet">
 <meta property="og:title" content="Xaringan CSS Theme Generator">
 <meta property="og:description" content="xaringanthemer">
 <meta property="og:image" content="https://pkg.garrickadenbuie.com/xaringanthemer/logo.png">
@@ -29,109 +30,90 @@
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 </head>
-<body data-spy="scroll" data-target="#toc">
-    <div class="container template-article">
-      <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <span class="navbar-brand">
-        <a class="navbar-link" href="../index.html">xaringanthemer</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.4.1</span>
-      </span>
-    </div>
+<body>
+    <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
+    
 
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-<li>
-  <a href="../articles/xaringanthemer.html">Features</a>
+    <nav class="navbar fixed-top navbar-light navbar-expand-lg bg-light"><div class="container">
+    
+    <a class="navbar-brand me-2" href="../index.html">xaringanthemer</a>
+
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.4.1</small>
+
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar" class="collapse navbar-collapse ms-2">
+      <ul class="navbar-nav me-auto">
+<li class="active nav-item">
+  <a class="nav-link" href="../articles/xaringanthemer.html">Features</a>
 </li>
-<li>
-  <a href="../reference/index.html">Reference</a>
+<li class="nav-item">
+  <a class="nav-link" href="../reference/index.html">Reference</a>
 </li>
-<li>
-  <a href="../articles/themes.html">Themes</a>
-</li>
-<li>
-  <a href="../articles/ggplot2-themes.html">ggplot2 Themes</a>
-</li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    More
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-<li>
-      <a href="../articles/fonts.html">Fonts</a>
-    </li>
-    <li>
-      <a href="../articles/template-variables.html">Template Variables</a>
-    </li>
-  </ul>
+<li class="nav-item dropdown">
+  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-themes">Themes</a>
+  <div class="dropdown-menu" aria-labelledby="dropdown-themes">
+    <h6 class="dropdown-header" data-toc-skip>Themes</h6>
+    <a class="dropdown-item" href="../articles/themes.html">Slide Themes</a>
+    <a class="dropdown-item" href="../articles/ggplot2-themes.html">ggplot2 Themes</a>
+    <div class="dropdown-divider"></div>
+    <h6 class="dropdown-header" data-toc-skip>More Customization</h6>
+    <a class="dropdown-item" href="../articles/fonts.html">Fonts</a>
+    <a class="dropdown-item" href="../articles/template-variables.html">Template Variables</a>
+  </div>
 </li>
       </ul>
-<ul class="nav navbar-nav navbar-right">
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    <span class="far fa-newspaper fa-lg"></span>
+<form class="form-inline my-2 my-lg-0" role="search">
+        <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="../search.json" id="search-input" placeholder="Search for" autocomplete="off">
+</form>
+
+      <ul class="navbar-nav">
+<li class="nav-item dropdown">
+  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown--">
+    <span class="far fa far fa-newspaper fa-lg"></span>
      
     
-     
-    <span class="caret"></span>
   </a>
-  <ul class="dropdown-menu" role="menu">
-<li>
-      <a href="https://garrickadenbuie.com/blog/xaringanthemer-v0-3-0/">xaringanthemer 0.3.0</a>
-    </li>
-    <li class="divider">
-    <li>
-      <a href="../news/index.html">Changelog</a>
-    </li>
-  </ul>
+  <div class="dropdown-menu" aria-labelledby="dropdown--">
+    <a class="external-link dropdown-item" href="https://garrickadenbuie.com/blog/xaringanthemer-v0-3-0/">xaringanthemer 0.3.0</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="../news/index.html">Changelog</a>
+  </div>
 </li>
-<li>
-  <a href="https://github.com/gadenbuie/xaringanthemer">
-    <span class="fab fa-github fa-lg"></span>
+<li class="nav-item">
+  <a class="external-link nav-link" href="https://github.com/gadenbuie/xaringanthemer">
+    <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
 </li>
-<li>
-  <a href="https://twitter.com/grrrck">
-    <span class="fab fa-twitter fa-lg"></span>
+<li class="nav-item">
+  <a class="external-link nav-link" href="https://twitter.com/grrrck">
+    <span class="fab fa fab fa-twitter fa-lg"></span>
      
   </a>
 </li>
-<li>
-  <a href="https://www.garrickadenbuie.com">
-    <span class="fas fa-home fa-lg"></span>
+<li class="nav-item">
+  <a class="external-link nav-link" href="https://www.garrickadenbuie.com">
+    <span class="fas fa fas fa-home fa-lg"></span>
      
   </a>
 </li>
       </ul>
 </div>
-<!--/.nav-collapse -->
+
+    
   </div>
-<!--/.container -->
-</div>
-<!--/.navbar -->
-
-      
-
-      </header><script src="xaringanthemer_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
-  <div class="col-md-9 contents">
-    <div class="page-header toc-ignore">
-      <h1 data-toc-skip>Xaringan CSS Theme Generator</h1>
+</nav><div class="container template-article">
+<script src="xaringanthemer_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
+  <main id="main"><div class="page-header">
+      <img src="../logo.png" class="logo" alt=""><h1>Xaringan CSS Theme Generator</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/gadenbuie/xaringanthemer/blob/master/vignettes/xaringanthemer.Rmd"><code>vignettes/xaringanthemer.Rmd</code></a></small>
-      <div class="hidden name"><code>xaringanthemer.Rmd</code></div>
-
+      <small class="dont-index">Source: <a href="https://github.com/gadenbuie/xaringanthemer/blob/HEAD/vignettes/xaringanthemer.Rmd" class="external-link"><code>vignettes/xaringanthemer.Rmd</code></a></small>
+      <div class="d-none name"><code>xaringanthemer.Rmd</code></div>
     </div>
 
     
@@ -140,9 +122,9 @@
 img { max-width: 100%; }
 </style>
 <p>Jump to: <a href="#quick-intro">Quick Intro</a>, <a href="#themes">Themes</a>, <a href="#theme-settings">Theme Settings</a>, <a href="#fonts">Fonts</a>, <a href="#colors">Colors</a>, <a href="#adding-custom-css">Adding Custom CSS</a></p>
-<div id="quick-intro" class="section level2">
-<h2 class="hasAnchor">
-<a href="#quick-intro" class="anchor"></a>Quick Intro</h2>
+<div class="section level2">
+<h2 id="quick-intro">Quick Intro<a class="anchor" aria-label="anchor" href="#quick-intro"></a>
+</h2>
 <!-- Set link to theme-settings, template-variables, theme functions -->
 <p>First, add the <code>xaringan-themer.css</code> file to the YAML header of your xaringan slides.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">output</span><span class="kw">:</span></span>
@@ -159,18 +141,18 @@ img { max-width: 100%; }
 <span id="cb2-8"><a href="#cb2-8"></a><span class="bn">)</span></span>
 <span id="cb2-9"><a href="#cb2-9"></a><span class="bn">```</span></span></code></pre></div>
 <p><img src="https://raw.githubusercontent.com/gadenbuie/xaringanthemer/assets/example_mono_accent_1c5253.png" alt="Example title and normal slides using a green xaringanthemer theme" data-external="1"></p>
-<div id="matching-ggplot-themes" class="section level3">
-<h3 class="hasAnchor">
-<a href="#matching-ggplot-themes" class="anchor"></a>Matching ggplot Themes</h3>
-<p><strong>xaringanthemer</strong> even provides a [ggplot2] theme with <code><a href="../reference/theme_xaringan.html">theme_xaringan()</a></code> that uses the colors and fonts from your slide theme. Built on the <a href="https://github.com/yixuan/showtext">showtext</a> package, and designed to work seamlessly with <a href="https://fonts.google.com">Google Fonts</a>.</p>
+<div class="section level3">
+<h3 id="matching-ggplot-themes">Matching ggplot Themes<a class="anchor" aria-label="anchor" href="#matching-ggplot-themes"></a>
+</h3>
+<p><strong>xaringanthemer</strong> even provides a [ggplot2] theme with <code><a href="../reference/theme_xaringan.html">theme_xaringan()</a></code> that uses the colors and fonts from your slide theme. Built on the <a href="https://github.com/yixuan/showtext" class="external-link">showtext</a> package, and designed to work seamlessly with <a href="https://fonts.google.com" class="external-link">Google Fonts</a>.</p>
 <p>Color and fill scales are also provided for matching sequential color scales based on the primary color used in your slides. See <code><a href="../reference/scale_xaringan.html">?scale_xaringan</a></code> for more details.</p>
 <p>More details and examples can be found in <code><a href="../articles/ggplot2-themes.html">vignette("ggplot2-themes")</a></code>.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span>
-<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">diamonds</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">cut</span>, fill <span class="op">=</span> <span class="va">cut</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span>show.legend <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span>
+<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">diamonds</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span><span class="va">cut</span>, fill <span class="op">=</span> <span class="va">cut</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html" class="external-link">geom_bar</a></span><span class="op">(</span>show.legend <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>
     x <span class="op">=</span> <span class="st">"Cut"</span>,
     y <span class="op">=</span> <span class="st">"Count"</span>,
     title <span class="op">=</span> <span class="st">"A Fancy diamonds Plot"</span>
@@ -179,62 +161,62 @@ img { max-width: 100%; }
   <span class="fu"><a href="../reference/scale_xaringan.html">scale_xaringan_fill_discrete</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
 <p><img src="../reference/figures/index-theme_xaringan_demo-1.png"></p>
 </div>
-<div id="tab-completion" class="section level3">
-<h3 class="hasAnchor">
-<a href="#tab-completion" class="anchor"></a>Tab Completion</h3>
+<div class="section level3">
+<h3 id="tab-completion">Tab Completion<a class="anchor" aria-label="anchor" href="#tab-completion"></a>
+</h3>
 <p><strong>xaringanthemer</strong> is <kbd>Tab</kbd> friendly – <a href="#theme-settings">use autocomplete to explore</a> the <a href="template-variables.html">template variables</a> that you can adjust in each of the themes!</p>
 <p><img src="https://raw.githubusercontent.com/gadenbuie/xaringanthemer/assets/example-rstudio-completion.gif" alt="Demonstration of argument auto-completion with RStudio" data-external="1"></p>
 </div>
-<div id="r-markdown-template-in-rstudio" class="section level3">
-<h3 class="hasAnchor">
-<a href="#r-markdown-template-in-rstudio" class="anchor"></a>R Markdown Template in RStudio</h3>
+<div class="section level3">
+<h3 id="r-markdown-template-in-rstudio">R Markdown Template in RStudio<a class="anchor" aria-label="anchor" href="#r-markdown-template-in-rstudio"></a>
+</h3>
 <p>You can also skip the above and just create a <em>Ninja Themed Presentation</em> from the New R Markdown Document menu in RStudio.</p>
 <center>
 <img src="https://raw.githubusercontent.com/gadenbuie/xaringanthemer/assets/rmarkdown-template-screenshot.png" alt="The 'New R Markdown Document' menu in RStudio" data-external="1">
 </center>
 </div>
 </div>
-<div id="themes" class="section level2">
-<h2 class="hasAnchor">
-<a href="#themes" class="anchor"></a>Themes</h2>
+<div class="section level2">
+<h2 id="themes">Themes<a class="anchor" aria-label="anchor" href="#themes"></a>
+</h2>
 <p><strong>xaringanthemer</strong> includes a number of functions that provide themed <strong>xaringan</strong> styles. All of the styling functions start with the <code>style_</code> prefix.</p>
 <p>The goal of each style function is to quickly set up a coordinated color palette for your slides based on one or two starter colors. Styles based on one color start with <code>style_mono_</code> and styles based on two colors start with <code>style_duo_</code>. How the starter colors are used is described in the final portion of the style function name. For example, <code><a href="../reference/style_mono_accent.html">style_mono_accent()</a></code> uses a single color as an accent color.</p>
 <p>Note that the colors used below are for demonstration only, the point of the <code>style_</code> functions is for you to choose your own color palette!</p>
 <p>If your color palette uses more than two colors, you can add additional colors with the <code>colors</code> argument. See the <a href="#colors">Colors</a> section for more information.</p>
-<div id="monotone" class="section level3">
-<h3 class="hasAnchor">
-<a href="#monotone" class="anchor"></a>Monotone</h3>
+<div class="section level3">
+<h3 id="monotone">Monotone<a class="anchor" aria-label="anchor" href="#monotone"></a>
+</h3>
 <p>Use these functions to automatically create a consistent color palette for your slides, based around a single color.</p>
-<div id="style_mono_light" class="section level4">
-<h4 class="hasAnchor">
-<a href="#style_mono_light" class="anchor"></a><code>style_mono_light()</code>
+<div class="section level4">
+<h4 id="style_mono_light">
+<code>style_mono_light()</code><a class="anchor" aria-label="anchor" href="#style_mono_light"></a>
 </h4>
 <p>A light theme based around a single color.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/style_mono_light.html">style_mono_light</a></span><span class="op">(</span>base_color <span class="op">=</span> <span class="st">"#23395b"</span><span class="op">)</span></code></pre></div>
 <p><img src="https://raw.githubusercontent.com/gadenbuie/xaringanthemer/assets/example_mono_light.png" data-external="1"></p>
 </div>
-<div id="style_mono_dark" class="section level4">
-<h4 class="hasAnchor">
-<a href="#style_mono_dark" class="anchor"></a><code>style_mono_dark()</code>
+<div class="section level4">
+<h4 id="style_mono_dark">
+<code>style_mono_dark()</code><a class="anchor" aria-label="anchor" href="#style_mono_dark"></a>
 </h4>
 <p>A dark theme based around a single color.</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/style_mono_dark.html">style_mono_dark</a></span><span class="op">(</span>base_color <span class="op">=</span> <span class="st">"#cbf7ed"</span><span class="op">)</span></code></pre></div>
 <p><img src="https://raw.githubusercontent.com/gadenbuie/xaringanthemer/assets/example_mono_dark.png" data-external="1"></p>
 </div>
-<div id="style_mono_accent" class="section level4">
-<h4 class="hasAnchor">
-<a href="#style_mono_accent" class="anchor"></a><code>style_mono_accent()</code>
+<div class="section level4">
+<h4 id="style_mono_accent">
+<code>style_mono_accent()</code><a class="anchor" aria-label="anchor" href="#style_mono_accent"></a>
 </h4>
 <p>The default xaringan theme with a single color used for color accents on select elements (headers, bold text, etc.).</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/style_mono_accent.html">style_mono_accent</a></span><span class="op">(</span>base_color <span class="op">=</span> <span class="st">"#43418A"</span><span class="op">)</span></code></pre></div>
 <p><img src="https://raw.githubusercontent.com/gadenbuie/xaringanthemer/assets/example_mono_accent.png" data-external="1"></p>
 </div>
-<div id="style_mono_accent_inverse" class="section level4">
-<h4 class="hasAnchor">
-<a href="#style_mono_accent_inverse" class="anchor"></a><code>style_mono_accent_inverse()</code>
+<div class="section level4">
+<h4 id="style_mono_accent_inverse">
+<code>style_mono_accent_inverse()</code><a class="anchor" aria-label="anchor" href="#style_mono_accent_inverse"></a>
 </h4>
 <p>An “inverted” default xaringan theme with a single color used for color accents on select elements (headers, bold text, etc.).</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
@@ -242,31 +224,31 @@ img { max-width: 100%; }
 <p><img src="https://raw.githubusercontent.com/gadenbuie/xaringanthemer/assets/example_mono_accent_inverse.png" data-external="1"></p>
 </div>
 </div>
-<div id="duotone" class="section level3">
-<h3 class="hasAnchor">
-<a href="#duotone" class="anchor"></a>Duotone</h3>
+<div class="section level3">
+<h3 id="duotone">Duotone<a class="anchor" aria-label="anchor" href="#duotone"></a>
+</h3>
 <p>These themes build from two (ideally) complementary colors.</p>
-<div id="style_duo" class="section level4">
-<h4 class="hasAnchor">
-<a href="#style_duo" class="anchor"></a><code>style_duo()</code>
+<div class="section level4">
+<h4 id="style_duo">
+<code>style_duo()</code><a class="anchor" aria-label="anchor" href="#style_duo"></a>
 </h4>
 <p>A two-colored theme based on a primary and secondary color.</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/style_duo.html">style_duo</a></span><span class="op">(</span>primary_color <span class="op">=</span> <span class="st">"#1F4257"</span>, secondary_color <span class="op">=</span> <span class="st">"#F97B64"</span><span class="op">)</span></code></pre></div>
 <p><img src="https://raw.githubusercontent.com/gadenbuie/xaringanthemer/assets/example_duo.png" data-external="1"></p>
 </div>
-<div id="style_duo_accent" class="section level4">
-<h4 class="hasAnchor">
-<a href="#style_duo_accent" class="anchor"></a><code>style_duo_accent()</code>
+<div class="section level4">
+<h4 id="style_duo_accent">
+<code>style_duo_accent()</code><a class="anchor" aria-label="anchor" href="#style_duo_accent"></a>
 </h4>
 <p>The default Xaringan theme with two accent colors.</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/style_duo_accent.html">style_duo_accent</a></span><span class="op">(</span>primary_color <span class="op">=</span> <span class="st">"#035AA6"</span>, secondary_color <span class="op">=</span> <span class="st">"#03A696"</span><span class="op">)</span></code></pre></div>
 <p><img src="https://raw.githubusercontent.com/gadenbuie/xaringanthemer/assets/example_duo_accent.png" data-external="1"></p>
 </div>
-<div id="style_duo_accent_inverse" class="section level4">
-<h4 class="hasAnchor">
-<a href="#style_duo_accent_inverse" class="anchor"></a><code>style_duo_accent_inverse()</code>
+<div class="section level4">
+<h4 id="style_duo_accent_inverse">
+<code>style_duo_accent_inverse()</code><a class="anchor" aria-label="anchor" href="#style_duo_accent_inverse"></a>
 </h4>
 <p>An “inverted” default Xaringan theme with two accent colors.</p>
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
@@ -274,21 +256,21 @@ img { max-width: 100%; }
 <p><img src="https://raw.githubusercontent.com/gadenbuie/xaringanthemer/assets/example_duo_accent_inverse.png" data-external="1"></p>
 </div>
 </div>
-<div id="solarized" class="section level3">
-<h3 class="hasAnchor">
-<a href="#solarized" class="anchor"></a>Solarized</h3>
-<p>There are also two themes based around the <a href="https://ethanschoonover.com/solarized/">solarized color palette</a>, <code><a href="../reference/style_solarized_light.html">style_solarized_light()</a></code> and <code><a href="../reference/style_solarized_dark.html">style_solarized_dark()</a></code>. For both themes, it is advisted to change the syntax highlighting theme to <code>solarized-light</code> or <code>solarized-dark</code> (looks great paired or constrasted).</p>
-<div id="style_solarized_light" class="section level4">
-<h4 class="hasAnchor">
-<a href="#style_solarized_light" class="anchor"></a><code>style_solarized_light()</code>
+<div class="section level3">
+<h3 id="solarized">Solarized<a class="anchor" aria-label="anchor" href="#solarized"></a>
+</h3>
+<p>There are also two themes based around the <a href="https://ethanschoonover.com/solarized/" class="external-link">solarized color palette</a>, <code><a href="../reference/style_solarized_light.html">style_solarized_light()</a></code> and <code><a href="../reference/style_solarized_dark.html">style_solarized_dark()</a></code>. For both themes, it is advisted to change the syntax highlighting theme to <code>solarized-light</code> or <code>solarized-dark</code> (looks great paired or constrasted).</p>
+<div class="section level4">
+<h4 id="style_solarized_light">
+<code>style_solarized_light()</code><a class="anchor" aria-label="anchor" href="#style_solarized_light"></a>
 </h4>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/style_solarized_light.html">style_solarized_light</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
 <p><img src="https://raw.githubusercontent.com/gadenbuie/xaringanthemer/assets/example_solarized_light.png" data-external="1"></p>
 </div>
-<div id="style_solarized_dark" class="section level4">
-<h4 class="hasAnchor">
-<a href="#style_solarized_dark" class="anchor"></a><code>style_solarized_dark()</code>
+<div class="section level4">
+<h4 id="style_solarized_dark">
+<code>style_solarized_dark()</code><a class="anchor" aria-label="anchor" href="#style_solarized_dark"></a>
 </h4>
 <div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/style_solarized_dark.html">style_solarized_dark</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
@@ -304,10 +286,10 @@ img { max-width: 100%; }
 </div>
 </div>
 </div>
-<div id="theme-settings" class="section level2">
-<h2 class="hasAnchor">
-<a href="#theme-settings" class="anchor"></a>Theme Settings</h2>
-<p>The theme functions listed above are just wrappers around the central function of this package, <code><a href="../reference/xaringanthemer_font_default.html">style_xaringan()</a></code>. If you want to start from the default <strong>xaringan</strong> theme and make a few modifications, start there.</p>
+<div class="section level2">
+<h2 id="theme-settings">Theme Settings<a class="anchor" aria-label="anchor" href="#theme-settings"></a>
+</h2>
+<p>The theme functions listed above are just wrappers around the central function of this package, <code><a href="../reference/style_xaringan.html">style_xaringan()</a></code>. If you want to start from the default <strong>xaringan</strong> theme and make a few modifications, start there.</p>
 <p>All of the theme template variables are repeated in each of the theme functions (instead of relying on <code>...</code>) so that you can use autocompletion to find and change the defaults for any theme function. To override the default value of any theme functions, set the appropriate argument in the theme function. A table of all template variables is included in <a href="template-variables.html"><code>vignette("template-variables", "xaringanthemer")</code></a>.</p>
 <p>As an example, try loading <code>xaringanthemer</code>, type out <code>style_duo_theme(</code> and then press <kbd>Tab</kbd> to see all of the theme options.</p>
 <p>All of the theme options are named so that you first think of the element you want to change, then the property of that element.</p>
@@ -329,9 +311,9 @@ img { max-width: 100%; }
 <li><code>title_slide_background_position</code></li>
 </ul>
 </div>
-<div id="fonts" class="section level2">
-<h2 class="hasAnchor">
-<a href="#fonts" class="anchor"></a>Fonts</h2>
+<div class="section level2">
+<h2 id="fonts">Fonts<a class="anchor" aria-label="anchor" href="#fonts"></a>
+</h2>
 <!-- Need to set [adding-custom-css] -->
 <p><link href="https://fonts.googleapis.com/css2?family=Cabin:wght@600&amp;family=Noto+Sans&amp;display=swap" rel="stylesheet"></p>
 <style type="text/css">
@@ -351,10 +333,10 @@ img { max-width: 100%; }
   font-size: 1.25em;
 }
 </style>
-<div id="default-fonts" class="section level3">
-<h3 class="hasAnchor">
-<a href="#default-fonts" class="anchor"></a>Default Fonts</h3>
-<p>The default heading and body fonts used in <strong>xaringanthemer</strong> are different than the xaringan default fonts. In xaringanthemer, <a href="https://fonts.google.com/specimen/Cabin">Cabin</a> is used for headings and <a href="https://fonts.google.com/specimen/Noto+Sans">Noto Sans</a> for body text.</p>
+<div class="section level3">
+<h3 id="default-fonts">Default Fonts<a class="anchor" aria-label="anchor" href="#default-fonts"></a>
+</h3>
+<p>The default heading and body fonts used in <strong>xaringanthemer</strong> are different than the xaringan default fonts. In xaringanthemer, <a href="https://fonts.google.com/specimen/Cabin" class="external-link">Cabin</a> is used for headings and <a href="https://fonts.google.com/specimen/Noto+Sans" class="external-link">Noto Sans</a> for body text.</p>
 <div class="font-preview">
 <p style="font-size: 1.5em" class="cabin">
 A Cabin in the Clearing
@@ -364,19 +346,19 @@ Pack my box with five dozen liquor jugs. Amazingly few discotheques provide juke
 </p>
 </div>
 <p>These fonts are easier to read on screens and at a distance during presentations, and they support a wide variety of languages and weights. Another reason for the change is that the xaringan (remarkjs) default body font, <em>Droid Serif</em>, is no longer officially included in Google Fonts.</p>
-<p>If you would like to use the fonts from the <a href="https://slides.yihui.org/xaringan/">default xaringan theme</a>, you can use the following arguments in your style function.</p>
+<p>If you would like to use the fonts from the <a href="https://slides.yihui.org/xaringan/" class="external-link">default xaringan theme</a>, you can use the following arguments in your style function.</p>
 <div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="../reference/xaringanthemer_font_default.html">style_xaringan</a></span><span class="op">(</span>
+<code class="sourceCode R"><span class="fu"><a href="../reference/style_xaringan.html">style_xaringan</a></span><span class="op">(</span>
   text_font_family <span class="op">=</span> <span class="st">"Droid Serif"</span>,
   text_font_url <span class="op">=</span> <span class="st">"https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic"</span>,
   header_font_google <span class="op">=</span> <span class="fu"><a href="../reference/google_font.html">google_font</a></span><span class="op">(</span><span class="st">"Yanone Kaffeesatz"</span><span class="op">)</span>
 <span class="op">)</span></code></pre></div>
 </div>
-<div id="custom-and-google-font-fonts" class="section level3">
-<h3 class="hasAnchor">
-<a href="#custom-and-google-font-fonts" class="anchor"></a>Custom and <em>Google Font</em> Fonts</h3>
-<p><strong>xaringanthemer</strong> makes it easy to use <a href="https://fonts.google.com">Google Fonts</a> in your presentations (provided you have an internet connection during the presentation) or to fully specify your font files.</p>
-<p>To use <a href="https://fonts.google.com">Google Fonts</a>, set the <code>&lt;type&gt;_font_google</code> theme arguments – <code>text_font_google</code>, <code>header_font_google</code>, <code>code_font_google</code> — using the <code><a href="../reference/google_font.html">google_font()</a></code> helper. The help documentation in <code><a href="../reference/google_font.html">?google_font</a></code> provides more info.</p>
+<div class="section level3">
+<h3 id="custom-and-google-font-fonts">Custom and <em>Google Font</em> Fonts<a class="anchor" aria-label="anchor" href="#custom-and-google-font-fonts"></a>
+</h3>
+<p><strong>xaringanthemer</strong> makes it easy to use <a href="https://fonts.google.com" class="external-link">Google Fonts</a> in your presentations (provided you have an internet connection during the presentation) or to fully specify your font files.</p>
+<p>To use <a href="https://fonts.google.com" class="external-link">Google Fonts</a>, set the <code>&lt;type&gt;_font_google</code> theme arguments – <code>text_font_google</code>, <code>header_font_google</code>, <code>code_font_google</code> — using the <code><a href="../reference/google_font.html">google_font()</a></code> helper. The help documentation in <code><a href="../reference/google_font.html">?google_font</a></code> provides more info.</p>
 <div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/style_mono_light.html">style_mono_light</a></span><span class="op">(</span>
   header_font_google <span class="op">=</span> <span class="fu"><a href="../reference/google_font.html">google_font</a></span><span class="op">(</span><span class="st">"Josefin Slab"</span>, <span class="st">"600"</span><span class="op">)</span>,
@@ -384,7 +366,7 @@ Pack my box with five dozen liquor jugs. Amazingly few discotheques provide juke
   code_font_google   <span class="op">=</span> <span class="fu"><a href="../reference/google_font.html">google_font</a></span><span class="op">(</span><span class="st">"IBM Plex Mono"</span><span class="op">)</span>
 <span class="op">)</span></code></pre></div>
 <p>If you set an <code>&lt;type&gt;_font_google</code> theme arguments, then <code>&lt;type&gt;_font_family</code>, <code>&lt;type&gt;_font_weight</code> and <code>&lt;type&gt;_font_url</code> are overwritten – where <code>&lt;type&gt;</code> is one of <code>header</code>, <code>text</code>, or <code>code</code>.</p>
-<p>To use a font hosted outside of Google fonts, you need to provide both <code>&lt;type&gt;_font_family</code> and <code>&lt;type&gt;_font_url</code>. For example, suppose you want to use a code font with ligatures for your code chunks, such as <a href="https://github.com/tonsky/FiraCode">Fira Code</a>, which would be declared with <code>code_font_family</code>. The <a href="https://github.com/tonsky/FiraCode#browser-support">browser usage</a> section of the Fira Code README provides a CSS URL to be used with an <code>@import</code> statement that you can use with the <code>code_font_url</code> argument.</p>
+<p>To use a font hosted outside of Google fonts, you need to provide both <code>&lt;type&gt;_font_family</code> and <code>&lt;type&gt;_font_url</code>. For example, suppose you want to use a code font with ligatures for your code chunks, such as <a href="https://github.com/tonsky/FiraCode" class="external-link">Fira Code</a>, which would be declared with <code>code_font_family</code>. The <a href="https://github.com/tonsky/FiraCode#browser-support" class="external-link">browser usage</a> section of the Fira Code README provides a CSS URL to be used with an <code>@import</code> statement that you can use with the <code>code_font_url</code> argument.</p>
 <div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/style_solarized_dark.html">style_solarized_dark</a></span><span class="op">(</span>
   code_font_family <span class="op">=</span> <span class="st">"Fira Code"</span>,
@@ -392,31 +374,31 @@ Pack my box with five dozen liquor jugs. Amazingly few discotheques provide juke
 <span class="op">)</span></code></pre></div>
 <p>Remember that you need to supply either <code>&lt;type&gt;_google_font</code> using the <code><a href="../reference/google_font.html">google_font()</a></code> helper <em>or both</em> <code>&lt;type&gt;_font_family</code> and <code>&lt;type&gt;_font_url</code>.</p>
 </div>
-<div id="using-additional-fonts" class="section level3">
-<h3 class="hasAnchor">
-<a href="#using-additional-fonts" class="anchor"></a>Using Additional Fonts</h3>
+<div class="section level3">
+<h3 id="using-additional-fonts">Using Additional Fonts<a class="anchor" aria-label="anchor" href="#using-additional-fonts"></a>
+</h3>
 <p>If you want to use additional fonts for use in <a href="#adding-custom-css">custom CSS definitions</a>, use the <code>extra_fonts</code> argument to pass a list of URLs or <code><a href="../reference/google_font.html">google_font()</a></code>s. Notice that you will need to add custom CSS (for example, via <code>extra_css</code>) to use the fonts imported in <code>extra_fonts</code>.</p>
 <div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/style_mono_light.html">style_mono_light</a></span><span class="op">(</span>
-  extra_fonts <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>
+  extra_fonts <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>
     <span class="fu"><a href="../reference/google_font.html">google_font</a></span><span class="op">(</span><span class="st">"Sofia"</span><span class="op">)</span>,
     <span class="co"># Young Serif by uplaod.fr</span>
     <span class="st">"https://cdn.jsdelivr.net/gh/uplaod/YoungSerif/fonts/webfonts/fontface.css"</span>,
   <span class="op">)</span>,
-  extra_css <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>
-    <span class="st">".title-slide h2"</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="st">"font-family"</span> <span class="op">=</span> <span class="st">"Sofia"</span><span class="op">)</span>,
-    blockquote <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="st">"font-family"</span> <span class="op">=</span> <span class="st">"youngserifregular"</span><span class="op">)</span>
+  extra_css <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>
+    <span class="st">".title-slide h2"</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="st">"font-family"</span> <span class="op">=</span> <span class="st">"Sofia"</span><span class="op">)</span>,
+    blockquote <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="st">"font-family"</span> <span class="op">=</span> <span class="st">"youngserifregular"</span><span class="op">)</span>
   <span class="op">)</span>
 <span class="op">)</span></code></pre></div>
 </div>
 </div>
-<div id="colors" class="section level2">
-<h2 class="hasAnchor">
-<a href="#colors" class="anchor"></a>Colors</h2>
+<div class="section level2">
+<h2 id="colors">Colors<a class="anchor" aria-label="anchor" href="#colors"></a>
+</h2>
 <p>When designing your xaringan theme, you may have additional colors in your desired color palette beyond those used in the accent colors of the mono and duotone styles.</p>
 <p>The <code>style*()</code> functions in xaringanthemer include a <code>colors</code> argument that lets you quickly define additional colors to use in your slides. This argument takes a vector of named colors</p>
 <div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">colors</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span>
+<code class="sourceCode R"><span class="va">colors</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span>
   red <span class="op">=</span> <span class="st">"#f34213"</span>,
   purple <span class="op">=</span> <span class="st">"#3e2f5b"</span>,
   orange <span class="op">=</span> <span class="st">"#ff8811"</span>,
@@ -433,14 +415,14 @@ This <strong><span style="color: #f34213">simple</span></strong> <span style="co
 </blockquote>
 <p>Note that the color names in <code>colors</code> need to be valid CSS names, so <code>"purple-light"</code> will work, but <code>"purple light"</code> will not.</p>
 </div>
-<div id="adding-custom-css" class="section level2">
-<h2 class="hasAnchor">
-<a href="#adding-custom-css" class="anchor"></a>Adding Custom CSS</h2>
+<div class="section level2">
+<h2 id="adding-custom-css">Adding Custom CSS<a class="anchor" aria-label="anchor" href="#adding-custom-css"></a>
+</h2>
 <p>You can also add custom CSS classes using the <code>extra_css</code> argument in the theme functions. This argument takes a named list of CSS definitions each containing a named list of CSS property-value pairs.</p>
 <div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">extra_css</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>
-  <span class="st">".small"</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="st">"font-size"</span> <span class="op">=</span> <span class="st">"90%"</span><span class="op">)</span>,
-  <span class="st">".full-width"</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>
+<code class="sourceCode R"><span class="va">extra_css</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>
+  <span class="st">".small"</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="st">"font-size"</span> <span class="op">=</span> <span class="st">"90%"</span><span class="op">)</span>,
+  <span class="st">".full-width"</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>
     display <span class="op">=</span> <span class="st">"flex"</span>,
     width   <span class="op">=</span> <span class="st">"100%"</span>,
     flex    <span class="op">=</span> <span class="st">"1 1 auto"</span>
@@ -458,37 +440,34 @@ This <strong><span style="color: #f34213">simple</span></strong> <span style="co
 <span id="cb22-7"><a href="#cb22-7"></a>  <span class="kw">width</span>: <span class="dv">100</span><span class="dt">%</span><span class="op">;</span></span>
 <span id="cb22-8"><a href="#cb22-8"></a>  <span class="kw">flex</span>: <span class="dv">1</span> <span class="dv">1</span> <span class="bu">auto</span><span class="op">;</span></span>
 <span id="cb22-9"><a href="#cb22-9"></a>}</span></code></pre></div>
-<p>This is most helpful when wanting to define helper classes to work with the <a href="https://github.com/gnab/remark">remark.js</a> <code>.class[]</code> syntax. Using the above example, we could add slide text <code>.small[in smaller font size]</code>.</p>
+<p>This is most helpful when wanting to define helper classes to work with the <a href="https://github.com/gnab/remark" class="external-link">remark.js</a> <code>.class[]</code> syntax. Using the above example, we could add slide text <code>.small[in smaller font size]</code>.</p>
 <hr>
-<p><strong>xaringanthemer</strong> was built by <a href="https://www.garrickadenbuie.com">Garrick Aden-Buie</a> (<a href="https://twitter.com/grrrck">@grrrck</a>).</p>
-<p>Big thank you to <a href="https://yihui.org">Yihui Xie</a>, especially for <a href="https://github.com/yihui/xaringan">xaringan</a>. Also thanks to <a href="http://www.gnab.org/">Ole Petter Bang</a> for <a href="https://github.com/gnab/remark">remark.js</a>.</p>
-<p>Feel free to <a href="https://github.com/gadenbuie/xaringanthemer/issues">file an issue</a> if you find a bug or have a theme suggestion – or better yet, submit a pull request!</p>
+<p><strong>xaringanthemer</strong> was built by <a href="https://www.garrickadenbuie.com" class="external-link">Garrick Aden-Buie</a> (<a href="https://twitter.com/grrrck" class="external-link">@grrrck</a>).</p>
+<p>Big thank you to <a href="https://yihui.org" class="external-link">Yihui Xie</a>, especially for <a href="https://github.com/yihui/xaringan" class="external-link">xaringan</a>. Also thanks to <a href="http://www.gnab.org/" class="external-link">Ole Petter Bang</a> for <a href="https://github.com/gnab/remark" class="external-link">remark.js</a>.</p>
+<p>Feel free to <a href="https://github.com/gadenbuie/xaringanthemer/issues" class="external-link">file an issue</a> if you find a bug or have a theme suggestion – or better yet, submit a pull request!</p>
 </div>
-  </div>
-
-  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
-
-        <nav id="toc" data-toggle="toc"><h2 data-toc-skip>Contents</h2>
-    </nav>
-</div>
-
+  </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
+    </nav></aside>
 </div>
 
 
 
-      <footer><div class="copyright">
-  <p>Developed by <a href="https://www.garrickadenbuie.com">Garrick Aden-Buie</a>.</p>
+    <footer><div class="pkgdown-footer-left">
+  <p></p>
+<p>Developed by <a href="https://www.garrickadenbuie.com" class="external-link">Garrick Aden-Buie</a>.</p>
 </div>
 
-<div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+<div class="pkgdown-footer-right">
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.1.</p>
 </div>
 
-      </footer>
+    </footer>
 </div>
 
   
 
+  
 
   </body>
 </html>

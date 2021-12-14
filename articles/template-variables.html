@@ -4,7 +4,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="xaringanthemer">
 <title>Template Variables • xaringanthemer</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
@@ -12,12 +13,12 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png">
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png">
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png">
-<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="../bootstrap-toc.css">
-<script src="../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
+<script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="../deps/bootstrap-5.1.0/bootstrap.min.css" rel="stylesheet">
+<script src="../deps/bootstrap-5.1.0/bootstrap.bundle.min.js"></script><link href="../deps/_IBM%20Plex%20Mono-0.4.0/font.css" rel="stylesheet">
+<!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
-<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
-<script src="../pkgdown.js"></script><link href="../extra.css" rel="stylesheet">
+<!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><link href="../extra.css" rel="stylesheet">
 <meta property="og:title" content="Template Variables">
 <meta property="og:description" content="xaringanthemer">
 <meta property="og:image" content="https://pkg.garrickadenbuie.com/xaringanthemer/logo.png">
@@ -29,109 +30,90 @@
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 </head>
-<body data-spy="scroll" data-target="#toc">
-    <div class="container template-article">
-      <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <span class="navbar-brand">
-        <a class="navbar-link" href="../index.html">xaringanthemer</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.4.1</span>
-      </span>
-    </div>
+<body>
+    <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
+    
 
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-<li>
-  <a href="../articles/xaringanthemer.html">Features</a>
+    <nav class="navbar fixed-top navbar-light navbar-expand-lg bg-light"><div class="container">
+    
+    <a class="navbar-brand me-2" href="../index.html">xaringanthemer</a>
+
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.4.1</small>
+
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar" class="collapse navbar-collapse ms-2">
+      <ul class="navbar-nav me-auto">
+<li class="nav-item">
+  <a class="nav-link" href="../articles/xaringanthemer.html">Features</a>
 </li>
-<li>
-  <a href="../reference/index.html">Reference</a>
+<li class="nav-item">
+  <a class="nav-link" href="../reference/index.html">Reference</a>
 </li>
-<li>
-  <a href="../articles/themes.html">Themes</a>
-</li>
-<li>
-  <a href="../articles/ggplot2-themes.html">ggplot2 Themes</a>
-</li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    More
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-<li>
-      <a href="../articles/fonts.html">Fonts</a>
-    </li>
-    <li>
-      <a href="../articles/template-variables.html">Template Variables</a>
-    </li>
-  </ul>
+<li class="active nav-item dropdown">
+  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-themes">Themes</a>
+  <div class="dropdown-menu" aria-labelledby="dropdown-themes">
+    <h6 class="dropdown-header" data-toc-skip>Themes</h6>
+    <a class="dropdown-item" href="../articles/themes.html">Slide Themes</a>
+    <a class="dropdown-item" href="../articles/ggplot2-themes.html">ggplot2 Themes</a>
+    <div class="dropdown-divider"></div>
+    <h6 class="dropdown-header" data-toc-skip>More Customization</h6>
+    <a class="dropdown-item" href="../articles/fonts.html">Fonts</a>
+    <a class="dropdown-item" href="../articles/template-variables.html">Template Variables</a>
+  </div>
 </li>
       </ul>
-<ul class="nav navbar-nav navbar-right">
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    <span class="far fa-newspaper fa-lg"></span>
+<form class="form-inline my-2 my-lg-0" role="search">
+        <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="../search.json" id="search-input" placeholder="Search for" autocomplete="off">
+</form>
+
+      <ul class="navbar-nav">
+<li class="nav-item dropdown">
+  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown--">
+    <span class="far fa far fa-newspaper fa-lg"></span>
      
     
-     
-    <span class="caret"></span>
   </a>
-  <ul class="dropdown-menu" role="menu">
-<li>
-      <a href="https://garrickadenbuie.com/blog/xaringanthemer-v0-3-0/">xaringanthemer 0.3.0</a>
-    </li>
-    <li class="divider">
-    <li>
-      <a href="../news/index.html">Changelog</a>
-    </li>
-  </ul>
+  <div class="dropdown-menu" aria-labelledby="dropdown--">
+    <a class="external-link dropdown-item" href="https://garrickadenbuie.com/blog/xaringanthemer-v0-3-0/">xaringanthemer 0.3.0</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="../news/index.html">Changelog</a>
+  </div>
 </li>
-<li>
-  <a href="https://github.com/gadenbuie/xaringanthemer">
-    <span class="fab fa-github fa-lg"></span>
+<li class="nav-item">
+  <a class="external-link nav-link" href="https://github.com/gadenbuie/xaringanthemer">
+    <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
 </li>
-<li>
-  <a href="https://twitter.com/grrrck">
-    <span class="fab fa-twitter fa-lg"></span>
+<li class="nav-item">
+  <a class="external-link nav-link" href="https://twitter.com/grrrck">
+    <span class="fab fa fab fa-twitter fa-lg"></span>
      
   </a>
 </li>
-<li>
-  <a href="https://www.garrickadenbuie.com">
-    <span class="fas fa-home fa-lg"></span>
+<li class="nav-item">
+  <a class="external-link nav-link" href="https://www.garrickadenbuie.com">
+    <span class="fas fa fas fa-home fa-lg"></span>
      
   </a>
 </li>
       </ul>
 </div>
-<!--/.nav-collapse -->
+
+    
   </div>
-<!--/.container -->
-</div>
-<!--/.navbar -->
-
-      
-
-      </header><script src="template-variables_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
-  <div class="col-md-9 contents">
-    <div class="page-header toc-ignore">
-      <h1 data-toc-skip>Template Variables</h1>
+</nav><div class="container template-article">
+<script src="template-variables_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
+  <main id="main"><div class="page-header">
+      <img src="../logo.png" class="logo" alt=""><h1>Template Variables</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/gadenbuie/xaringanthemer/blob/master/vignettes/template-variables.Rmd"><code>vignettes/template-variables.Rmd</code></a></small>
-      <div class="hidden name"><code>template-variables.Rmd</code></div>
-
+      <small class="dont-index">Source: <a href="https://github.com/gadenbuie/xaringanthemer/blob/HEAD/vignettes/template-variables.Rmd" class="external-link"><code>vignettes/template-variables.Rmd</code></a></small>
+      <div class="d-none name"><code>template-variables.Rmd</code></div>
     </div>
 
     
@@ -141,7 +123,7 @@
 <p>Use this table to find the template variable you would like to modify. You can also use this table to find the CSS class or element associated with a particular template item.</p>
 <p>Note that some theme functions, like <code><a href="../reference/style_mono_accent.html">style_mono_accent()</a></code>, have additional parameters and a specific set of default values unique to the theme. However, with any theme function you can override the theme’s defaults by directly setting any of the arguments listed below when calling the theme function.</p>
 <p>To be concrete, <code><a href="../reference/style_mono_accent.html">style_mono_accent()</a></code> has three additional arguments: <code>base_color</code> (the accent color), <code>white_color</code>, and <code>black_color</code>. In this theme, the background slide color defaults to <code>white_color</code>, but you can choose a different slide background color by setting <code>background_color</code>, for example <code>background_color = "#EAEAEA"</code>.</p>
-<table class="table">
+<table style="width:100%;" class="table">
 <colgroup>
 <col width="7%">
 <col width="48%">
@@ -211,7 +193,7 @@
 <td align="left"><code>padding</code></td>
 <td align="left">Slide Padding in <code>top right [bottom left]</code> format</td>
 <td align="left">.remark-slide-content</td>
-<td align="left"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/padding">padding</a></td>
+<td align="left"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/padding" class="external-link">padding</a></td>
 <td align="left">16px 64px 16px 64px</td>
 <td align="left"></td>
 </tr>
@@ -227,7 +209,7 @@
 <td align="left"><code>background_size</code></td>
 <td align="left">Background image size, requires <code>background_image</code> to be set. If <code>background_image</code> is set, <code>background_size</code> will default to <code>cover</code> so the background fills the screen. If both <code>background_image</code> and <code>background_position</code> are set, will default to 100 percent</td>
 <td align="left">.remark-slide-content</td>
-<td align="left"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-size">background-size</a></td>
+<td align="left"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-size" class="external-link">background-size</a></td>
 <td align="left">NULL</td>
 <td align="left"></td>
 </tr>
@@ -236,7 +218,7 @@
 <td align="left">Background image position, requires <code>background_image</code> to be set, and it is recommended to adjust <code>background_size</code>
 </td>
 <td align="left">.remark-slide-content</td>
-<td align="left"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-position">background-position</a></td>
+<td align="left"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-position" class="external-link">background-position</a></td>
 <td align="left">NULL</td>
 <td align="left"></td>
 </tr>
@@ -268,7 +250,7 @@
 <td align="left"><code>code_inline_font_size</code></td>
 <td align="left">Inline Code Text Font Size</td>
 <td align="left">.remark-inline-code</td>
-<td align="left"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-size">font-size</a></td>
+<td align="left"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-size" class="external-link">font-size</a></td>
 <td align="left">1em</td>
 <td align="left"><code>--code-inline-font-size</code></td>
 </tr>
@@ -340,7 +322,7 @@
 <td align="left"><code>title_slide_background_size</code></td>
 <td align="left">Title Slide Background Image Size, defaults to “cover” if background image is set</td>
 <td align="left">.title-slide</td>
-<td align="left"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-size">background-size</a></td>
+<td align="left"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-size" class="external-link">background-size</a></td>
 <td align="left">NULL</td>
 <td align="left"></td>
 </tr>
@@ -348,7 +330,7 @@
 <td align="left"><code>title_slide_background_position</code></td>
 <td align="left">Title Slide Background Image Position</td>
 <td align="left">.title-slide</td>
-<td align="left"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-position">background-position</a></td>
+<td align="left"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-position" class="external-link">background-position</a></td>
 <td align="left">NULL</td>
 <td align="left"></td>
 </tr>
@@ -364,7 +346,7 @@
 <td align="left"><code>footnote_font_size</code></td>
 <td align="left">Footnote font size</td>
 <td align="left">.footnote</td>
-<td align="left"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-size">font-size</a></td>
+<td align="left"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-size" class="external-link">font-size</a></td>
 <td align="left">0.9em</td>
 <td align="left"></td>
 </tr>
@@ -372,7 +354,7 @@
 <td align="left"><code>footnote_position_bottom</code></td>
 <td align="left">Footnote location from bottom of screen</td>
 <td align="left">.footnote</td>
-<td align="left"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position_value">position</a></td>
+<td align="left"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position_value" class="external-link">position</a></td>
 <td align="left">60px</td>
 <td align="left"></td>
 </tr>
@@ -436,7 +418,7 @@
 <td align="left"><code>text_font_size</code></td>
 <td align="left">Slide Body Text Font Size</td>
 <td align="left">.remark-slide-content</td>
-<td align="left"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-size">font-size</a></td>
+<td align="left"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-size" class="external-link">font-size</a></td>
 <td align="left">1rem</td>
 <td align="left"><code>--text-font-size</code></td>
 </tr>
@@ -444,7 +426,7 @@
 <td align="left"><code>header_h1_font_size</code></td>
 <td align="left">h1 Header Text Font Size</td>
 <td align="left">.remark-slide-content h1</td>
-<td align="left"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-size">font-size</a></td>
+<td align="left"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-size" class="external-link">font-size</a></td>
 <td align="left">2.75rem</td>
 <td align="left"><code>--header-h1-font-size</code></td>
 </tr>
@@ -452,7 +434,7 @@
 <td align="left"><code>header_h2_font_size</code></td>
 <td align="left">h2 Header Text Font Size</td>
 <td align="left">.remark-slide-content h2</td>
-<td align="left"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-size">font-size</a></td>
+<td align="left"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-size" class="external-link">font-size</a></td>
 <td align="left">2.25rem</td>
 <td align="left"><code>--header-h2-font-size</code></td>
 </tr>
@@ -460,7 +442,7 @@
 <td align="left"><code>header_h3_font_size</code></td>
 <td align="left">h3 Header Text Font Size</td>
 <td align="left">.remark-slide-content h3</td>
-<td align="left"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-size">font-size</a></td>
+<td align="left"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-size" class="external-link">font-size</a></td>
 <td align="left">1.75rem</td>
 <td align="left"><code>--header-h3-font-size</code></td>
 </tr>
@@ -492,7 +474,7 @@
 <td align="left"><code>header_background_padding</code></td>
 <td align="left">Padding for h1 Header with Background</td>
 <td align="left">.remark-slide-content h1</td>
-<td align="left"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/padding">padding</a></td>
+<td align="left"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/padding" class="external-link">padding</a></td>
 <td align="left">NULL</td>
 <td align="left"></td>
 </tr>
@@ -516,7 +498,7 @@
 <td align="left"><code>text_slide_number_font_size</code></td>
 <td align="left">Slide Number Text Font Size</td>
 <td align="left">.remark-slide-number</td>
-<td align="left"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-size">font-size</a></td>
+<td align="left"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-size" class="external-link">font-size</a></td>
 <td align="left">0.9rem</td>
 <td align="left"></td>
 </tr>
@@ -540,7 +522,7 @@
 <td align="left"><code>text_font_weight</code></td>
 <td align="left">Body Text Font Weight</td>
 <td align="left">body</td>
-<td align="left"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight">font-weight</a></td>
+<td align="left"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight" class="external-link">font-weight</a></td>
 <td align="left">xaringanthemer_font_default(“text_font_weight”)</td>
 <td align="left"></td>
 </tr>
@@ -597,7 +579,7 @@
 <td align="left"><code>header_font_weight</code></td>
 <td align="left">Header Font Weight</td>
 <td align="left">h1, h2, h3</td>
-<td align="left"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight">font-weight</a></td>
+<td align="left"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight" class="external-link">font-weight</a></td>
 <td align="left">xaringanthemer_font_default(“header_font_weight”)</td>
 <td align="left"></td>
 </tr>
@@ -638,7 +620,7 @@
 <td align="left"><code>code_font_size</code></td>
 <td align="left">Code Text Font Size</td>
 <td align="left">.remark-inline</td>
-<td align="left"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-size">font-size</a></td>
+<td align="left"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-size" class="external-link">font-size</a></td>
 <td align="left">0.9rem</td>
 <td align="left"><code>--code-font-size</code></td>
 </tr>
@@ -663,35 +645,32 @@
 <td align="left"><code>link_decoration</code></td>
 <td align="left">Text decoration of links</td>
 <td align="left">a, a &gt; code</td>
-<td align="left"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration">text-decoration</a></td>
+<td align="left"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration" class="external-link">text-decoration</a></td>
 <td align="left">none</td>
 <td align="left"></td>
 </tr>
 </tbody>
-</table>
-</div>
-
-  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
-
-      </div>
-
+</table></main>
 </div>
 
 
 
-      <footer><div class="copyright">
-  <p>Developed by <a href="https://www.garrickadenbuie.com">Garrick Aden-Buie</a>.</p>
+    <footer><div class="pkgdown-footer-left">
+  <p></p>
+<p>Developed by <a href="https://www.garrickadenbuie.com" class="external-link">Garrick Aden-Buie</a>.</p>
 </div>
 
-<div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+<div class="pkgdown-footer-right">
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.1.</p>
 </div>
 
-      </footer>
+    </footer>
 </div>
 
   
 
+  
 
   </body>
 </html>
