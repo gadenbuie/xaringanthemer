@@ -17,6 +17,69 @@ template:
     twitter:
       creator: "@grrrck"
       card: summary
+  bootstrap: 5
+  bslib:
+    bg: "#f9fafa"
+    fg: "#0e181e"
+    light:
+    primary: "#0b535d"   # blue-20
+    secondary: "#4a466f" # purple-20
+    info: "#4a636c"      # slate-30
+    success: "#7ab26f"   # green-60
+    warning: "#ef8c02"   # orange-60
+    danger: "#c94150"    # red-40
+    navbar-light-color: "#0b535d"
+    code_bg: "#f9fafa"
+    pre_bg: "#f9fafa"
+    heading_font: avenir
+    code_font: {google: "IBM Plex Mono"}
+    font-size-base: 1.1rem
+    pkgdown-nav-height: 72px
+    border-radius: 0
+    border-radius-sm: 0
+    border-radius-lg: 0
+    base_font: |
+      -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif
+
+navbar:
+  type: light
+  left:
+    - text: Features
+      href: articles/xaringanthemer.html
+    - text: Reference
+      href: reference/index.html
+    - text: Themes
+      menu:
+        - text: Themes
+        - text: Slide Themes
+          href: articles/themes.html
+        - text: ggplot2 Themes
+          href: articles/ggplot2-themes.html
+        - text: -------
+        - text: More Customization
+        - text: Fonts
+          href: articles/fonts.html
+        - text: Template Variables
+          href: articles/template-variables.html
+  right:
+    news:
+      icon: far fa-newspaper fa-lg
+      text: ""
+      menu:
+      - text: "xaringanthemer 0.3.0"
+        href: https://garrickadenbuie.com/blog/xaringanthemer-v0-3-0/
+      - text: -------
+      - text: "Changelog"
+        href: news/index.html
+    github:
+      icon: fab fa-github fa-lg
+      href: https://github.com/gadenbuie/xaringanthemer
+    twitter:
+      icon: fab fa-twitter fa-lg
+      href: https://twitter.com/grrrck
+    home:
+      icon: fas fa-home fa-lg
+      href: https://www.garrickadenbuie.com
 
 reference:
 - title: Writing CSS
@@ -52,41 +115,3 @@ reference:
     - ends_with("color")
     - apply_alpha
     - choose_dark_or_light
-
-navbar:
-  left:
-    - text: Features
-      href: articles/xaringanthemer.html
-    - text: Reference
-      href: reference/index.html
-    - text: Themes
-      href: articles/themes.html
-    - text: ggplot2 Themes
-      href: articles/ggplot2-themes.html
-    - text: More
-      menu:
-        fonts:
-          text: Fonts
-          href: articles/fonts.html
-        template-vars:
-          text: Template Variables
-          href: articles/template-variables.html
-  right:
-    news:
-      icon: far fa-newspaper fa-lg
-      text: ""
-      menu:
-      - text: "xaringanthemer 0.3.0"
-        href: https://garrickadenbuie.com/blog/xaringanthemer-v0-3-0/
-      - text: -------
-      - text: "Changelog"
-        href: news/index.html
-    github:
-      icon: fab fa-github fa-lg
-      href: https://github.com/gadenbuie/xaringanthemer
-    twitter:
-      icon: fab fa-twitter fa-lg
-      href: https://twitter.com/grrrck
-    home:
-      icon: fas fa-home fa-lg
-      href: https://www.garrickadenbuie.com
