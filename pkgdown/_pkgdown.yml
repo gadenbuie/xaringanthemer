@@ -13,33 +13,7 @@ development:
   mode: auto
 
 template:
-  opengraph:
-    twitter:
-      creator: "@grrrck"
-      card: summary
-  bootstrap: 5
-  bslib:
-    bg: "#f9fafa"
-    fg: "#0e181e"
-    light:
-    primary: "#0b535d"   # blue-20
-    secondary: "#4a466f" # purple-20
-    info: "#4a636c"      # slate-30
-    success: "#7ab26f"   # green-60
-    warning: "#ef8c02"   # orange-60
-    danger: "#c94150"    # red-40
-    navbar-light-color: "#0b535d"
-    code_bg: "#f9fafa"
-    pre_bg: "#f9fafa"
-    heading_font: {google: "Poppins"}
-    code_font: {google: "IBM Plex Mono"}
-    font-size-base: 1.1rem
-    pkgdown-nav-height: 72px
-    border-radius: 0
-    border-radius-sm: 0
-    border-radius-lg: 0
-    base_font: |
-      -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif
+  package: grkgdown
 
 navbar:
   type: light
