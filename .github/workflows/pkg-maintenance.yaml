@@ -8,3 +8,5 @@ name: Package Maintenance
 jobs:
   auto-pkg-maintenance:
     uses: rstudio/education-workflows/.github/workflows/auto-pkg-maintenance.yaml@v1
+    with:
+      extra-pacakges: any::showtext, any::sysfonts, any::ggplot2
