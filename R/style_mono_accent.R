@@ -83,11 +83,11 @@
 #'   in any argument of a style function or in custom CSS.
 #' @param inverse_text_shadow Enables Shadow on text of inverse slides.
 #'   Defaults to `FALSE`. Modifies the `.inverse` class.
-#' @param inverse_header_color Inverse Header Color. Defaults to `white_color`.
-#'   Modifies the `.inverse h1, .inverse h2, .inverse h3` classes. The value of
-#'   this variable is also stored as a CSS variable that can be referenced with
-#'   `var(--inverse-header-color)` in any argument of a style function or in
-#'   custom CSS.
+#' @param inverse_header_color Inverse Header Color. Defaults to
+#'   `inverse_text_color`. Modifies the `.inverse h1, .inverse h2, .inverse h3`
+#'   classes. The value of this variable is also stored as a CSS variable that
+#'   can be referenced with `var(--inverse-header-color)` in any argument of a
+#'   style function or in custom CSS.
 #' @param inverse_link_color Inverse Link Color. Defaults to `link_color`.
 #'   Modifies the `.inverse a, .inverse a > code` classes. The value of this
 #'   variable is also stored as a CSS variable that can be referenced with
@@ -299,7 +299,7 @@ style_mono_accent <- function(
   inverse_background_color = base_color,
   inverse_text_color = white_color,
   inverse_text_shadow = FALSE,
-  inverse_header_color = white_color,
+  inverse_header_color = inverse_text_color,
   inverse_link_color = link_color,
   title_slide_text_color = inverse_text_color,
   title_slide_background_color = inverse_background_color,
