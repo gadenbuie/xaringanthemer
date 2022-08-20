@@ -3,7 +3,7 @@
 Color and fill single-color scales for discrete and continuous values,
 created using the primary accent color of the xaringanthemer styles.  See
 vignette(&quot;ggplot2-themes&quot;) for more information and examples of
-xaringanthemer's ggplot2-related functions."><title>Themed ggplot2 Scales — scale_xaringan • xaringanthemer</title><!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png"><link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png"><link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png"><link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png"><link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png"><link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png"><script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><link href="../deps/bootstrap-5.1.0/bootstrap.min.css" rel="stylesheet"><script src="../deps/bootstrap-5.1.0/bootstrap.bundle.min.js"></script><link href="../deps/_IBM%20Plex%20Mono-0.4.0/font.css" rel="stylesheet"><link href="../deps/_Poppins-0.4.0/font.css" rel="stylesheet"><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous"><!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><link href="../extra.css" rel="stylesheet"><meta property="og:title" content="Themed ggplot2 Scales — scale_xaringan"><meta property="og:description" content="
+xaringanthemer's ggplot2-related functions."><title>Themed ggplot2 Scales — scale_xaringan • xaringanthemer</title><!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png"><link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png"><link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png"><link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png"><link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png"><link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png"><script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><link href="../deps/bootstrap-5.1.3/bootstrap.min.css" rel="stylesheet"><script src="../deps/bootstrap-5.1.3/bootstrap.bundle.min.js"></script><link href="../deps/IBM_Plex_Mono-0.4.2/font.css" rel="stylesheet"><link href="../deps/Outfit-0.4.2/font.css" rel="stylesheet"><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous"><!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><link href="../extra.css" rel="stylesheet"><meta property="og:title" content="Themed ggplot2 Scales — scale_xaringan"><meta property="og:description" content="
 Color and fill single-color scales for discrete and continuous values,
 created using the primary accent color of the xaringanthemer styles.  See
 vignette(&quot;ggplot2-themes&quot;) for more information and examples of
@@ -18,14 +18,14 @@ xaringanthemer's ggplot2-related functions."><meta property="og:image" content="
     
     <a class="navbar-brand me-2" href="../index.html">xaringanthemer</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.4.1</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.4.2</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div id="navbar" class="collapse navbar-collapse ms-2">
+    <div id="navbar" class="collapse navbar-collapse ms-3">
       <ul class="navbar-nav me-auto"><li class="nav-item">
   <a class="nav-link" href="../articles/xaringanthemer.html">Features</a>
 </li>
@@ -99,62 +99,62 @@ created using the primary accent color of the xaringanthemer styles.  See
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">scale_xaringan_discrete</span><span class="op">(</span>
-  aes_type <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"color"</span>, <span class="st">"colour"</span>, <span class="st">"fill"</span><span class="op">)</span>,
-  <span class="va">...</span>,
-  color <span class="op">=</span> <span class="cn">NULL</span>,
-  direction <span class="op">=</span> <span class="fl">1</span>,
-  inverse <span class="op">=</span> <span class="cn">FALSE</span>
-<span class="op">)</span>
-
-<span class="fu">scale_xaringan_fill_discrete</span><span class="op">(</span><span class="va">...</span>, color <span class="op">=</span> <span class="cn">NULL</span>, direction <span class="op">=</span> <span class="fl">1</span>, inverse <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span>
-
-<span class="fu">scale_xaringan_color_discrete</span><span class="op">(</span>
-  <span class="va">...</span>,
-  color <span class="op">=</span> <span class="cn">NULL</span>,
-  direction <span class="op">=</span> <span class="fl">1</span>,
-  inverse <span class="op">=</span> <span class="cn">FALSE</span>
-<span class="op">)</span>
-
-<span class="fu">scale_xaringan_colour_discrete</span><span class="op">(</span>
-  <span class="va">...</span>,
-  color <span class="op">=</span> <span class="cn">NULL</span>,
-  direction <span class="op">=</span> <span class="fl">1</span>,
-  inverse <span class="op">=</span> <span class="cn">FALSE</span>
-<span class="op">)</span>
-
-<span class="fu">scale_xaringan_continuous</span><span class="op">(</span>
-  aes_type <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"color"</span>, <span class="st">"colour"</span>, <span class="st">"fill"</span><span class="op">)</span>,
-  <span class="va">...</span>,
-  color <span class="op">=</span> <span class="cn">NULL</span>,
-  begin <span class="op">=</span> <span class="fl">0</span>,
-  end <span class="op">=</span> <span class="fl">1</span>,
-  inverse <span class="op">=</span> <span class="cn">FALSE</span>
-<span class="op">)</span>
-
-<span class="fu">scale_xaringan_fill_continuous</span><span class="op">(</span>
-  <span class="va">...</span>,
-  color <span class="op">=</span> <span class="cn">NULL</span>,
-  begin <span class="op">=</span> <span class="fl">0</span>,
-  end <span class="op">=</span> <span class="fl">1</span>,
-  inverse <span class="op">=</span> <span class="cn">FALSE</span>
-<span class="op">)</span>
-
-<span class="fu">scale_xaringan_color_continuous</span><span class="op">(</span>
-  <span class="va">...</span>,
-  color <span class="op">=</span> <span class="cn">NULL</span>,
-  begin <span class="op">=</span> <span class="fl">0</span>,
-  end <span class="op">=</span> <span class="fl">1</span>,
-  inverse <span class="op">=</span> <span class="cn">FALSE</span>
-<span class="op">)</span>
-
-<span class="fu">scale_xaringan_colour_continuous</span><span class="op">(</span>
-  <span class="va">...</span>,
-  color <span class="op">=</span> <span class="cn">NULL</span>,
-  begin <span class="op">=</span> <span class="fl">0</span>,
-  end <span class="op">=</span> <span class="fl">1</span>,
-  inverse <span class="op">=</span> <span class="cn">FALSE</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">scale_xaringan_discrete</span><span class="op">(</span></span>
+<span>  aes_type <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"color"</span>, <span class="st">"colour"</span>, <span class="st">"fill"</span><span class="op">)</span>,</span>
+<span>  <span class="va">...</span>,</span>
+<span>  color <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  direction <span class="op">=</span> <span class="fl">1</span>,</span>
+<span>  inverse <span class="op">=</span> <span class="cn">FALSE</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">scale_xaringan_fill_discrete</span><span class="op">(</span><span class="va">...</span>, color <span class="op">=</span> <span class="cn">NULL</span>, direction <span class="op">=</span> <span class="fl">1</span>, inverse <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">scale_xaringan_color_discrete</span><span class="op">(</span></span>
+<span>  <span class="va">...</span>,</span>
+<span>  color <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  direction <span class="op">=</span> <span class="fl">1</span>,</span>
+<span>  inverse <span class="op">=</span> <span class="cn">FALSE</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">scale_xaringan_colour_discrete</span><span class="op">(</span></span>
+<span>  <span class="va">...</span>,</span>
+<span>  color <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  direction <span class="op">=</span> <span class="fl">1</span>,</span>
+<span>  inverse <span class="op">=</span> <span class="cn">FALSE</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">scale_xaringan_continuous</span><span class="op">(</span></span>
+<span>  aes_type <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"color"</span>, <span class="st">"colour"</span>, <span class="st">"fill"</span><span class="op">)</span>,</span>
+<span>  <span class="va">...</span>,</span>
+<span>  color <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  begin <span class="op">=</span> <span class="fl">0</span>,</span>
+<span>  end <span class="op">=</span> <span class="fl">1</span>,</span>
+<span>  inverse <span class="op">=</span> <span class="cn">FALSE</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">scale_xaringan_fill_continuous</span><span class="op">(</span></span>
+<span>  <span class="va">...</span>,</span>
+<span>  color <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  begin <span class="op">=</span> <span class="fl">0</span>,</span>
+<span>  end <span class="op">=</span> <span class="fl">1</span>,</span>
+<span>  inverse <span class="op">=</span> <span class="cn">FALSE</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">scale_xaringan_color_continuous</span><span class="op">(</span></span>
+<span>  <span class="va">...</span>,</span>
+<span>  color <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  begin <span class="op">=</span> <span class="fl">0</span>,</span>
+<span>  end <span class="op">=</span> <span class="fl">1</span>,</span>
+<span>  inverse <span class="op">=</span> <span class="cn">FALSE</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">scale_xaringan_colour_continuous</span><span class="op">(</span></span>
+<span>  <span class="va">...</span>,</span>
+<span>  color <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  begin <span class="op">=</span> <span class="fl">0</span>,</span>
+<span>  end <span class="op">=</span> <span class="fl">1</span>,</span>
+<span>  inverse <span class="op">=</span> <span class="cn">FALSE</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -162,77 +162,90 @@ created using the primary accent color of the xaringanthemer styles.  See
     <dl><dt>aes_type</dt>
 <dd><p>The type of aesthetic to which the scale is being applied.
 One of "color", "colour", or "fill".</p></dd>
+
+
 <dt>...</dt>
 <dd><p>Arguments passed on to either the <span class="pkg">colorspace</span> scale
-functions — one of <code><a href="https://colorspace.R-Forge.R-project.org//reference/scale_colour_discrete_sequential.html" class="external-link">colorspace::scale_color_discrete_sequential()</a></code>,
-<code><a href="https://colorspace.R-Forge.R-project.org//reference/scale_colour_continuous_sequential.html" class="external-link">colorspace::scale_color_continuous_sequential()</a></code>,
-<code><a href="https://colorspace.R-Forge.R-project.org//reference/scale_colour_discrete_sequential.html" class="external-link">colorspace::scale_fill_discrete_sequential()</a></code>, or
-<code><a href="https://colorspace.R-Forge.R-project.org//reference/scale_colour_continuous_sequential.html" class="external-link">colorspace::scale_fill_continuous_sequential()</a></code> — or to
+functions — one of <code><a href="https://colorspace.R-Forge.R-project.org/reference/scale_colour_discrete_sequential.html" class="external-link">colorspace::scale_color_discrete_sequential()</a></code>,
+<code><a href="https://colorspace.R-Forge.R-project.org/reference/scale_colour_continuous_sequential.html" class="external-link">colorspace::scale_color_continuous_sequential()</a></code>,
+<code><a href="https://colorspace.R-Forge.R-project.org/reference/scale_colour_discrete_sequential.html" class="external-link">colorspace::scale_fill_discrete_sequential()</a></code>, or
+<code><a href="https://colorspace.R-Forge.R-project.org/reference/scale_colour_continuous_sequential.html" class="external-link">colorspace::scale_fill_continuous_sequential()</a></code> — or to
 <a href="https://ggplot2.tidyverse.org/reference/continuous_scale.html" class="external-link">ggplot2::continuous_scale</a> or <a href="https://ggplot2.tidyverse.org/reference/discrete_scale.html" class="external-link">ggplot2::discrete_scale</a>.</p></dd>
+
+
 <dt>color</dt>
 <dd><p>A color value, in hex, to override the default color. Otherwise,
 the primary color of the resulting scale is chosen from the xaringanthemer
 slide styles.</p></dd>
+
+
 <dt>direction</dt>
 <dd><p>Direction of the discrete scale. Use values less than 0 to
 reverse the direction, e.g. <code>direction = -1</code>.</p></dd>
+
+
 <dt>inverse</dt>
 <dd><p>If <code>color</code> is not supplied and <code>inverse = TRUE</code>, a primary
 color is chosen to work well with the inverse slide styles, namely the
 value of <code>inverse_header_color</code></p></dd>
+
+
 <dt>begin</dt>
 <dd><p>Number in the range of <code>[0, 1]</code> indicating to which point in the color scale the smallest data value should be mapped.</p></dd>
+
+
 <dt>end</dt>
 <dd><p>Number in the range of <code>[0, 1]</code> indicating to which point in the color scale the largest data value should be mapped.</p></dd>
+
 </dl></div>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="co"># Requires ggplot2</span></span>
-<span class="r-in"><span class="va">has_ggplot2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/ns-load.html" class="external-link">requireNamespace</a></span><span class="op">(</span><span class="st">"ggplot2"</span>, quietly <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="kw">if</span> <span class="op">(</span><span class="va">has_ggplot2</span><span class="op">)</span> <span class="op">{</span></span>
-<span class="r-in">  <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span></span>
-<span class="r-in">  <span class="co"># Saving the theme to a temp file because this is an example</span></span>
-<span class="r-in">  <span class="va">path_to_css_file</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/tempfile.html" class="external-link">tempfile</a></span><span class="op">(</span>fileext <span class="op">=</span> <span class="st">".css"</span><span class="op">)</span></span>
-<span class="r-in"></span>
-<span class="r-in">  <span class="co"># Create the xaringan theme: dark blue background with teal green accents</span></span>
-<span class="r-in">  <span class="fu"><a href="style_duo.html">style_duo</a></span><span class="op">(</span></span>
-<span class="r-in">    primary_color <span class="op">=</span> <span class="st">"#002b36"</span>,</span>
-<span class="r-in">    secondary_color <span class="op">=</span> <span class="st">"#31b09e"</span>,</span>
-<span class="r-in">    <span class="co"># Using basic fonts for this example, but the plot theme will</span></span>
-<span class="r-in">    <span class="co"># automatically use your theme font if you use Google fonts</span></span>
-<span class="r-in">    text_font_family <span class="op">=</span> <span class="st">"sans"</span>,</span>
-<span class="r-in">    header_font_family <span class="op">=</span> <span class="st">"serif"</span>,</span>
-<span class="r-in">    outfile <span class="op">=</span> <span class="va">path_to_css_file</span></span>
-<span class="r-in">  <span class="op">)</span></span>
-<span class="r-in"></span>
-<span class="r-in">  <span class="co"># Here's some very basic example data</span></span>
-<span class="r-in">  <span class="va">ex</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span></span>
-<span class="r-in">    name <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Couple"</span>, <span class="st">"Few"</span>, <span class="st">"Lots"</span>, <span class="st">"Many"</span><span class="op">)</span>,</span>
-<span class="r-in">    n <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">2</span>, <span class="fl">3</span>, <span class="fl">5</span>, <span class="fl">7</span><span class="op">)</span></span>
-<span class="r-in">  <span class="op">)</span></span>
-<span class="r-in"></span>
-<span class="r-in">  <span class="co"># Fill color scales demo</span></span>
-<span class="r-in">  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">ex</span><span class="op">)</span> <span class="op">+</span></span>
-<span class="r-in">    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span><span class="va">name</span>, <span class="va">n</span>, fill <span class="op">=</span> <span class="va">n</span><span class="op">)</span> <span class="op">+</span></span>
-<span class="r-in">    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html" class="external-link">geom_col</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span class="r-in">    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">ggtitle</a></span><span class="op">(</span><span class="st">"Matching fill scales"</span><span class="op">)</span> <span class="op">+</span></span>
-<span class="r-in">    <span class="co"># themed to match the slides: dark blue background with teal text</span></span>
-<span class="r-in">    <span class="fu"><a href="theme_xaringan.html">theme_xaringan</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span class="r-in">    <span class="co"># Fill color matches teal text</span></span>
-<span class="r-in">    <span class="fu">scale_xaringan_fill_continuous</span><span class="op">(</span><span class="op">)</span></span>
-<span class="r-in"></span>
-<span class="r-in">  <span class="co"># Color scales demo</span></span>
-<span class="r-in">  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">ex</span><span class="op">)</span> <span class="op">+</span></span>
-<span class="r-in">    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span><span class="va">name</span>, y <span class="op">=</span> <span class="fl">1</span>, color <span class="op">=</span> <span class="va">name</span><span class="op">)</span> <span class="op">+</span></span>
-<span class="r-in">    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html" class="external-link">geom_point</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">10</span><span class="op">)</span> <span class="op">+</span></span>
-<span class="r-in">    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">ggtitle</a></span><span class="op">(</span><span class="st">"Matching color scales"</span><span class="op">)</span> <span class="op">+</span></span>
-<span class="r-in">    <span class="co"># themed to match the slides: dark blue background with teal text</span></span>
-<span class="r-in">    <span class="fu"><a href="theme_xaringan.html">theme_xaringan</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span class="r-in">    <span class="co"># Fill color matches teal text</span></span>
-<span class="r-in">    <span class="fu">scale_xaringan_color_discrete</span><span class="op">(</span>direction <span class="op">=</span> <span class="op">-</span><span class="fl">1</span><span class="op">)</span></span>
-<span class="r-in"><span class="op">}</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># Requires ggplot2</span></span></span>
+<span class="r-in"><span><span class="va">has_ggplot2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/ns-load.html" class="external-link">requireNamespace</a></span><span class="op">(</span><span class="st">"ggplot2"</span>, quietly <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="va">has_ggplot2</span><span class="op">)</span> <span class="op">{</span></span></span>
+<span class="r-in"><span>  <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span></span></span>
+<span class="r-in"><span>  <span class="co"># Saving the theme to a temp file because this is an example</span></span></span>
+<span class="r-in"><span>  <span class="va">path_to_css_file</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/tempfile.html" class="external-link">tempfile</a></span><span class="op">(</span>fileext <span class="op">=</span> <span class="st">".css"</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span>  <span class="co"># Create the xaringan theme: dark blue background with teal green accents</span></span></span>
+<span class="r-in"><span>  <span class="fu"><a href="style_duo.html">style_duo</a></span><span class="op">(</span></span></span>
+<span class="r-in"><span>    primary_color <span class="op">=</span> <span class="st">"#002b36"</span>,</span></span>
+<span class="r-in"><span>    secondary_color <span class="op">=</span> <span class="st">"#31b09e"</span>,</span></span>
+<span class="r-in"><span>    <span class="co"># Using basic fonts for this example, but the plot theme will</span></span></span>
+<span class="r-in"><span>    <span class="co"># automatically use your theme font if you use Google fonts</span></span></span>
+<span class="r-in"><span>    text_font_family <span class="op">=</span> <span class="st">"sans"</span>,</span></span>
+<span class="r-in"><span>    header_font_family <span class="op">=</span> <span class="st">"serif"</span>,</span></span>
+<span class="r-in"><span>    outfile <span class="op">=</span> <span class="va">path_to_css_file</span></span></span>
+<span class="r-in"><span>  <span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span>  <span class="co"># Here's some very basic example data</span></span></span>
+<span class="r-in"><span>  <span class="va">ex</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span></span></span>
+<span class="r-in"><span>    name <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Couple"</span>, <span class="st">"Few"</span>, <span class="st">"Lots"</span>, <span class="st">"Many"</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>    n <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">2</span>, <span class="fl">3</span>, <span class="fl">5</span>, <span class="fl">7</span><span class="op">)</span></span></span>
+<span class="r-in"><span>  <span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span>  <span class="co"># Fill color scales demo</span></span></span>
+<span class="r-in"><span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">ex</span><span class="op">)</span> <span class="op">+</span></span></span>
+<span class="r-in"><span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span><span class="va">name</span>, <span class="va">n</span>, fill <span class="op">=</span> <span class="va">n</span><span class="op">)</span> <span class="op">+</span></span></span>
+<span class="r-in"><span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html" class="external-link">geom_col</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span></span>
+<span class="r-in"><span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">ggtitle</a></span><span class="op">(</span><span class="st">"Matching fill scales"</span><span class="op">)</span> <span class="op">+</span></span></span>
+<span class="r-in"><span>    <span class="co"># themed to match the slides: dark blue background with teal text</span></span></span>
+<span class="r-in"><span>    <span class="fu"><a href="theme_xaringan.html">theme_xaringan</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span></span>
+<span class="r-in"><span>    <span class="co"># Fill color matches teal text</span></span></span>
+<span class="r-in"><span>    <span class="fu">scale_xaringan_fill_continuous</span><span class="op">(</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span>  <span class="co"># Color scales demo</span></span></span>
+<span class="r-in"><span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">ex</span><span class="op">)</span> <span class="op">+</span></span></span>
+<span class="r-in"><span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span><span class="va">name</span>, y <span class="op">=</span> <span class="fl">1</span>, color <span class="op">=</span> <span class="va">name</span><span class="op">)</span> <span class="op">+</span></span></span>
+<span class="r-in"><span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html" class="external-link">geom_point</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">10</span><span class="op">)</span> <span class="op">+</span></span></span>
+<span class="r-in"><span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">ggtitle</a></span><span class="op">(</span><span class="st">"Matching color scales"</span><span class="op">)</span> <span class="op">+</span></span></span>
+<span class="r-in"><span>    <span class="co"># themed to match the slides: dark blue background with teal text</span></span></span>
+<span class="r-in"><span>    <span class="fu"><a href="theme_xaringan.html">theme_xaringan</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span></span>
+<span class="r-in"><span>    <span class="co"># Fill color matches teal text</span></span></span>
+<span class="r-in"><span>    <span class="fu">scale_xaringan_color_discrete</span><span class="op">(</span>direction <span class="op">=</span> <span class="op">-</span><span class="fl">1</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="op">}</span></span></span>
 <span class="r-plt img"><img src="scale_xaringan-1.png" alt="" width="700" height="433"></span>
 </code></pre></div>
     </div>
@@ -245,14 +258,12 @@ value of <code>inverse_header_color</code></p></dd>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.1.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
 </div>
 
     </footer></div>
 
   
 
-  
-
-  </body></html>
+  <script>window.jQuery('.navbar-brand + small').addClass(['badge', 'bg-secondary', 'text-light']).removeClass('text-muted')</script></body></html>
 

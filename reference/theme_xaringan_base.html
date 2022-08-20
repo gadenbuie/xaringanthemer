@@ -7,7 +7,7 @@ general plot style from two colors, a background_color and a text_color
 accent_secondary_color that are xaringanthemer is not required for the
 base theme. Use theme_xaringan() or theme_xaringan_inverse() in xaringan
 slides styled by xaringanthemer for a plot theme that matches the slide
-style.  See vignette("ggplot2-themes") for more information and examples.'><title>The ggplot2 xaringanthemer base plot theme — theme_xaringan_base • xaringanthemer</title><!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png"><link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png"><link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png"><link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png"><link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png"><link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png"><script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><link href="../deps/bootstrap-5.1.0/bootstrap.min.css" rel="stylesheet"><script src="../deps/bootstrap-5.1.0/bootstrap.bundle.min.js"></script><link href="../deps/_IBM%20Plex%20Mono-0.4.0/font.css" rel="stylesheet"><link href="../deps/_Poppins-0.4.0/font.css" rel="stylesheet"><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous"><!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><link href="../extra.css" rel="stylesheet"><meta property="og:title" content="The ggplot2 xaringanthemer base plot theme — theme_xaringan_base"><meta property="og:description" content='
+style.  See vignette("ggplot2-themes") for more information and examples.'><title>The ggplot2 xaringanthemer base plot theme — theme_xaringan_base • xaringanthemer</title><!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png"><link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png"><link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png"><link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png"><link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png"><link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png"><script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><link href="../deps/bootstrap-5.1.3/bootstrap.min.css" rel="stylesheet"><script src="../deps/bootstrap-5.1.3/bootstrap.bundle.min.js"></script><link href="../deps/IBM_Plex_Mono-0.4.2/font.css" rel="stylesheet"><link href="../deps/Outfit-0.4.2/font.css" rel="stylesheet"><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous"><!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><link href="../extra.css" rel="stylesheet"><meta property="og:title" content="The ggplot2 xaringanthemer base plot theme — theme_xaringan_base"><meta property="og:description" content='
 Provides a base plot theme for ggplot2 to match the xaringan
 slide theme created by xaringanthemer. The theme is designed to create a
 general plot style from two colors, a background_color and a text_color
@@ -26,14 +26,14 @@ style.  See vignette("ggplot2-themes") for more information and examples.'><meta
     
     <a class="navbar-brand me-2" href="../index.html">xaringanthemer</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.4.1</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.4.2</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div id="navbar" class="collapse navbar-collapse ms-2">
+    <div id="navbar" class="collapse navbar-collapse ms-3">
       <ul class="navbar-nav me-auto"><li class="nav-item">
   <a class="nav-link" href="../articles/xaringanthemer.html">Features</a>
 </li>
@@ -111,74 +111,101 @@ style.  See <code><a href="../articles/ggplot2-themes.html">vignette("ggplot2-th
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">theme_xaringan_base</span><span class="op">(</span>
-  <span class="va">text_color</span>,
-  <span class="va">background_color</span>,
-  <span class="va">...</span>,
-  set_ggplot_defaults <span class="op">=</span> <span class="cn">TRUE</span>,
-  accent_color <span class="op">=</span> <span class="cn">NULL</span>,
-  accent_secondary_color <span class="op">=</span> <span class="cn">NULL</span>,
-  text_font <span class="op">=</span> <span class="cn">NULL</span>,
-  text_font_use_google <span class="op">=</span> <span class="cn">NULL</span>,
-  text_font_size <span class="op">=</span> <span class="cn">NULL</span>,
-  title_font <span class="op">=</span> <span class="cn">NULL</span>,
-  title_font_use_google <span class="op">=</span> <span class="cn">NULL</span>,
-  title_font_size <span class="op">=</span> <span class="cn">NULL</span>,
-  use_showtext <span class="op">=</span> <span class="cn">NULL</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">theme_xaringan_base</span><span class="op">(</span></span>
+<span>  <span class="va">text_color</span>,</span>
+<span>  <span class="va">background_color</span>,</span>
+<span>  <span class="va">...</span>,</span>
+<span>  set_ggplot_defaults <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  accent_color <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  accent_secondary_color <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  text_font <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  text_font_use_google <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  text_font_size <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  title_font <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  title_font_use_google <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  title_font_size <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  use_showtext <span class="op">=</span> <span class="cn">NULL</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
     <dl><dt>text_color</dt>
 <dd><p>Color for text and foreground</p></dd>
+
+
 <dt>background_color</dt>
 <dd><p>Color for background</p></dd>
+
+
 <dt>...</dt>
 <dd><p>Ignored</p></dd>
+
+
 <dt>set_ggplot_defaults</dt>
 <dd><p>Should defaults be set for <span class="pkg">ggplot2</span> <em>geoms</em>?
 Defaults to TRUE. To restore ggplot's defaults, or the previously set geom
 defaults, see <code><a href="theme_xaringan_set_defaults.html">theme_xaringan_restore_defaults()</a></code>.</p></dd>
+
+
 <dt>accent_color</dt>
 <dd><p>Color for titles and accents, inherits from
 <code>header_color</code> or <code>text_color</code>. Used for the <code>title</code> base setting in
 <code><a href="https://ggplot2.tidyverse.org/reference/theme.html" class="external-link">ggplot2::theme()</a></code>, and additionally for setting the <code>color</code> or <code>fill</code> of
 <span class="pkg">ggplot2</span> geom defaults.</p></dd>
+
+
 <dt>accent_secondary_color</dt>
 <dd><p>Color for secondary accents, inherits from
 <code>text_bold_color</code> or <code>accent_color</code>. Used only when setting <span class="pkg">ggplot2</span> geom
 defaults.</p></dd>
+
+
 <dt>text_font</dt>
 <dd><p>Font to use for text elements, passed to
 <code><a href="https://rdrr.io/pkg/sysfonts/man/font_add_google.html" class="external-link">sysfonts::font_add_google()</a></code>, if available and <code>text_font_use_google</code> is
 <code>TRUE</code>. Inherits from <code>text_font_family</code>. If manually specified, can be a
 <code><a href="google_font.html">google_font()</a></code>.</p></dd>
+
+
 <dt>text_font_use_google</dt>
 <dd><p>Is <code>text_font</code> available on <a href="https://fonts.google.com" class="external-link">Google Fonts</a>?</p></dd>
+
+
 <dt>text_font_size</dt>
 <dd><p>Base text font size, inherits from <code>text_font_size</code>, or
 defaults to 11.</p></dd>
+
+
 <dt>title_font</dt>
 <dd><p>Font to use for title elements, passed to
 <code><a href="https://rdrr.io/pkg/sysfonts/man/font_add_google.html" class="external-link">sysfonts::font_add_google()</a></code>, if available and <code>title_font_use_google</code> is
 <code>TRUE</code>. Inherits from <code>title_font_family</code>. If manually specified, can be a
 <code><a href="google_font.html">google_font()</a></code>.</p></dd>
+
+
 <dt>title_font_use_google</dt>
 <dd><p>Is <code>title_font</code> available on <a href="https://fonts.google.com" class="external-link">Google Fonts</a>?</p></dd>
+
+
 <dt>title_font_size</dt>
 <dd><p>Base text font size, inherits from <code>title_font_size</code>,
 or defaults to 14.</p></dd>
+
+
 <dt>use_showtext</dt>
 <dd><p>If <code>TRUE</code> the <span class="pkg">showtext</span> package will be
 used to register Google fonts. Set to <code>FALSE</code> to disable this feature
 entirely, which may result in errors during plotting if the fonts used are
 not available locally. The default is <code>TRUE</code> when the <span class="pkg">showtext</span>
 package is installed.</p></dd>
+
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>A ggplot2 theme</p>
+    
+
+<p>A ggplot2 theme</p>
     </div>
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
@@ -190,50 +217,50 @@ package is installed.</p></dd>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="co"># Requires ggplot2</span></span>
-<span class="r-in"><span class="va">has_ggplot2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/ns-load.html" class="external-link">requireNamespace</a></span><span class="op">(</span><span class="st">"ggplot2"</span>, quietly <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="kw">if</span> <span class="op">(</span><span class="va">has_ggplot2</span><span class="op">)</span> <span class="op">{</span></span>
-<span class="r-in">  <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span></span>
-<span class="r-in"></span>
-<span class="r-in">  <span class="va">plot1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">mpg</span><span class="op">)</span> <span class="op">+</span></span>
-<span class="r-in">    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span><span class="va">cty</span>, <span class="va">hwy</span><span class="op">)</span> <span class="op">+</span></span>
-<span class="r-in">    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html" class="external-link">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span class="r-in">    <span class="fu">theme_xaringan_base</span><span class="op">(</span></span>
-<span class="r-in">      text_color <span class="op">=</span> <span class="st">"#602f6b"</span>,       <span class="co"># imperial</span></span>
-<span class="r-in">      background_color <span class="op">=</span> <span class="st">"#f8f8f8"</span>, <span class="co"># light gray</span></span>
-<span class="r-in">      accent_color <span class="op">=</span> <span class="st">"#317873"</span>,     <span class="co"># myrtle green</span></span>
-<span class="r-in">      title_font <span class="op">=</span> <span class="st">"sans"</span>,</span>
-<span class="r-in">      text_font <span class="op">=</span> <span class="st">"serif"</span>,</span>
-<span class="r-in">      set_ggplot_defaults <span class="op">=</span> <span class="cn">TRUE</span></span>
-<span class="r-in">    <span class="op">)</span> <span class="op">+</span></span>
-<span class="r-in">    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span></span>
-<span class="r-in">      title <span class="op">=</span> <span class="st">"Fuel Efficiency of Various Cars"</span>,</span>
-<span class="r-in">      subtitle <span class="op">=</span> <span class="st">"+ theme_xaringan_base()"</span>,</span>
-<span class="r-in">      caption <span class="op">=</span> <span class="st">"xaringanthemer"</span></span>
-<span class="r-in">    <span class="op">)</span></span>
-<span class="r-in"></span>
-<span class="r-in">  <span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">plot1</span><span class="op">)</span></span>
-<span class="r-in"></span>
-<span class="r-in">  <span class="va">plot2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">mpg</span><span class="op">)</span> <span class="op">+</span></span>
-<span class="r-in">    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span><span class="va">hwy</span><span class="op">)</span> <span class="op">+</span></span>
-<span class="r-in">    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_histogram.html" class="external-link">geom_histogram</a></span><span class="op">(</span>binwidth <span class="op">=</span> <span class="fl">2</span><span class="op">)</span> <span class="op">+</span></span>
-<span class="r-in">    <span class="fu">theme_xaringan_base</span><span class="op">(</span></span>
-<span class="r-in">      text_color <span class="op">=</span> <span class="st">"#a8a9c8"</span>,       <span class="co"># light purple</span></span>
-<span class="r-in">      background_color <span class="op">=</span> <span class="st">"#303163"</span>, <span class="co"># deep slate purple</span></span>
-<span class="r-in">      accent_color <span class="op">=</span> <span class="st">"#ffff99"</span>,     <span class="co"># canary yellow</span></span>
-<span class="r-in">      title_font <span class="op">=</span> <span class="st">"sans"</span>,</span>
-<span class="r-in">      text_font <span class="op">=</span> <span class="st">"serif"</span>,</span>
-<span class="r-in">      set_ggplot_defaults <span class="op">=</span> <span class="cn">TRUE</span></span>
-<span class="r-in">    <span class="op">)</span> <span class="op">+</span></span>
-<span class="r-in">    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span></span>
-<span class="r-in">      title <span class="op">=</span> <span class="st">"Highway Fuel Efficiency"</span>,</span>
-<span class="r-in">      subtitle <span class="op">=</span> <span class="st">"+ theme_xaringan_base()"</span>,</span>
-<span class="r-in">      caption <span class="op">=</span> <span class="st">"xaringanthemer"</span></span>
-<span class="r-in">    <span class="op">)</span></span>
-<span class="r-in"></span>
-<span class="r-in">  <span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">plot2</span><span class="op">)</span></span>
-<span class="r-in"><span class="op">}</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># Requires ggplot2</span></span></span>
+<span class="r-in"><span><span class="va">has_ggplot2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/ns-load.html" class="external-link">requireNamespace</a></span><span class="op">(</span><span class="st">"ggplot2"</span>, quietly <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="va">has_ggplot2</span><span class="op">)</span> <span class="op">{</span></span></span>
+<span class="r-in"><span>  <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span>  <span class="va">plot1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">mpg</span><span class="op">)</span> <span class="op">+</span></span></span>
+<span class="r-in"><span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span><span class="va">cty</span>, <span class="va">hwy</span><span class="op">)</span> <span class="op">+</span></span></span>
+<span class="r-in"><span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html" class="external-link">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span></span>
+<span class="r-in"><span>    <span class="fu">theme_xaringan_base</span><span class="op">(</span></span></span>
+<span class="r-in"><span>      text_color <span class="op">=</span> <span class="st">"#602f6b"</span>,       <span class="co"># imperial</span></span></span>
+<span class="r-in"><span>      background_color <span class="op">=</span> <span class="st">"#f8f8f8"</span>, <span class="co"># light gray</span></span></span>
+<span class="r-in"><span>      accent_color <span class="op">=</span> <span class="st">"#317873"</span>,     <span class="co"># myrtle green</span></span></span>
+<span class="r-in"><span>      title_font <span class="op">=</span> <span class="st">"sans"</span>,</span></span>
+<span class="r-in"><span>      text_font <span class="op">=</span> <span class="st">"serif"</span>,</span></span>
+<span class="r-in"><span>      set_ggplot_defaults <span class="op">=</span> <span class="cn">TRUE</span></span></span>
+<span class="r-in"><span>    <span class="op">)</span> <span class="op">+</span></span></span>
+<span class="r-in"><span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span></span></span>
+<span class="r-in"><span>      title <span class="op">=</span> <span class="st">"Fuel Efficiency of Various Cars"</span>,</span></span>
+<span class="r-in"><span>      subtitle <span class="op">=</span> <span class="st">"+ theme_xaringan_base()"</span>,</span></span>
+<span class="r-in"><span>      caption <span class="op">=</span> <span class="st">"xaringanthemer"</span></span></span>
+<span class="r-in"><span>    <span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">plot1</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span>  <span class="va">plot2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">mpg</span><span class="op">)</span> <span class="op">+</span></span></span>
+<span class="r-in"><span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span><span class="va">hwy</span><span class="op">)</span> <span class="op">+</span></span></span>
+<span class="r-in"><span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_histogram.html" class="external-link">geom_histogram</a></span><span class="op">(</span>binwidth <span class="op">=</span> <span class="fl">2</span><span class="op">)</span> <span class="op">+</span></span></span>
+<span class="r-in"><span>    <span class="fu">theme_xaringan_base</span><span class="op">(</span></span></span>
+<span class="r-in"><span>      text_color <span class="op">=</span> <span class="st">"#a8a9c8"</span>,       <span class="co"># light purple</span></span></span>
+<span class="r-in"><span>      background_color <span class="op">=</span> <span class="st">"#303163"</span>, <span class="co"># deep slate purple</span></span></span>
+<span class="r-in"><span>      accent_color <span class="op">=</span> <span class="st">"#ffff99"</span>,     <span class="co"># canary yellow</span></span></span>
+<span class="r-in"><span>      title_font <span class="op">=</span> <span class="st">"sans"</span>,</span></span>
+<span class="r-in"><span>      text_font <span class="op">=</span> <span class="st">"serif"</span>,</span></span>
+<span class="r-in"><span>      set_ggplot_defaults <span class="op">=</span> <span class="cn">TRUE</span></span></span>
+<span class="r-in"><span>    <span class="op">)</span> <span class="op">+</span></span></span>
+<span class="r-in"><span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span></span></span>
+<span class="r-in"><span>      title <span class="op">=</span> <span class="st">"Highway Fuel Efficiency"</span>,</span></span>
+<span class="r-in"><span>      subtitle <span class="op">=</span> <span class="st">"+ theme_xaringan_base()"</span>,</span></span>
+<span class="r-in"><span>      caption <span class="op">=</span> <span class="st">"xaringanthemer"</span></span></span>
+<span class="r-in"><span>    <span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">plot2</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="op">}</span></span></span>
 <span class="r-plt img"><img src="theme_xaringan_base-1.png" alt="" width="700" height="433"></span>
 <span class="r-plt img"><img src="theme_xaringan_base-2.png" alt="" width="700" height="433"></span>
 </code></pre></div>
@@ -247,14 +274,12 @@ package is installed.</p></dd>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.1.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
 </div>
 
     </footer></div>
 
   
 
-  
-
-  </body></html>
+  <script>window.jQuery('.navbar-brand + small').addClass(['badge', 'bg-secondary', 'text-light']).removeClass('text-muted')</script></body></html>
 
