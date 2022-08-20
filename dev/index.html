@@ -4,7 +4,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Give your xaringan slides some style with xaringanthemer.
+Easy slide and plot themes for xaringan slides.
+">
 <title>Custom xaringan CSS Themes • xaringanthemer</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -12,12 +15,13 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="apple-touch-icon-120x120.png">
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="apple-touch-icon-76x76.png">
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="apple-touch-icon-60x60.png">
-<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="bootstrap-toc.css">
-<script src="bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
+<script src="deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="deps/bootstrap-5.1.3/bootstrap.min.css" rel="stylesheet">
+<script src="deps/bootstrap-5.1.3/bootstrap.bundle.min.js"></script><link href="deps/IBM_Plex_Mono-0.4.2/font.css" rel="stylesheet">
+<link href="deps/Outfit-0.4.2/font.css" rel="stylesheet">
+<!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
-<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="pkgdown.css" rel="stylesheet">
-<script src="pkgdown.js"></script><link href="extra.css" rel="stylesheet">
+<!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="pkgdown.js"></script><link href="extra.css" rel="stylesheet">
 <meta property="og:title" content="Custom xaringan CSS Themes">
 <meta property="og:description" content="Give your xaringan slides some style with xaringanthemer.
 Easy slide and plot themes for xaringan slides.
@@ -32,237 +36,223 @@ Easy slide and plot themes for xaringan slides.
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 </head>
-<body data-spy="scroll" data-target="#toc">
-    <div class="container template-home">
-      <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <span class="navbar-brand">
-        <a class="navbar-link" href="index.html">xaringanthemer</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.4.0.9000</span>
-      </span>
-    </div>
+<body>
+    <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
+    
 
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-<li>
-  <a href="articles/xaringanthemer.html">Features</a>
+    <nav class="navbar fixed-top navbar-light navbar-expand-lg bg-light"><div class="container">
+    
+    <a class="navbar-brand me-2" href="index.html">xaringanthemer</a>
+
+    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">0.4.1.9000</small>
+
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar" class="collapse navbar-collapse ms-3">
+      <ul class="navbar-nav me-auto">
+<li class="nav-item">
+  <a class="nav-link" href="articles/xaringanthemer.html">Features</a>
 </li>
-<li>
-  <a href="reference/index.html">Reference</a>
+<li class="nav-item">
+  <a class="nav-link" href="reference/index.html">Reference</a>
 </li>
-<li>
-  <a href="articles/themes.html">Themes</a>
-</li>
-<li>
-  <a href="articles/ggplot2-themes.html">ggplot2 Themes</a>
-</li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    More
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-<li>
-      <a href="articles/fonts.html">Fonts</a>
-    </li>
-    <li>
-      <a href="articles/template-variables.html">Template Variables</a>
-    </li>
-  </ul>
+<li class="nav-item dropdown">
+  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-themes">Themes</a>
+  <div class="dropdown-menu" aria-labelledby="dropdown-themes">
+    <h6 class="dropdown-header" data-toc-skip>Themes</h6>
+    <a class="dropdown-item" href="articles/themes.html">Slide Themes</a>
+    <a class="dropdown-item" href="articles/ggplot2-themes.html">ggplot2 Themes</a>
+    <div class="dropdown-divider"></div>
+    <h6 class="dropdown-header" data-toc-skip>More Customization</h6>
+    <a class="dropdown-item" href="articles/fonts.html">Fonts</a>
+    <a class="dropdown-item" href="articles/template-variables.html">Template Variables</a>
+  </div>
 </li>
       </ul>
-<ul class="nav navbar-nav navbar-right">
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    <span class="far fa-newspaper fa-lg"></span>
+<form class="form-inline my-2 my-lg-0" role="search">
+        <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="search.json" id="search-input" placeholder="Search for" autocomplete="off">
+</form>
+
+      <ul class="navbar-nav">
+<li class="nav-item dropdown">
+  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown--">
+    <span class="far fa far fa-newspaper fa-lg"></span>
      
     
-     
-    <span class="caret"></span>
   </a>
-  <ul class="dropdown-menu" role="menu">
-<li>
-      <a href="https://garrickadenbuie.com/blog/xaringanthemer-v0-3-0/">xaringanthemer 0.3.0</a>
-    </li>
-    <li class="divider">
-    <li>
-      <a href="news/index.html">Changelog</a>
-    </li>
-  </ul>
+  <div class="dropdown-menu" aria-labelledby="dropdown--">
+    <a class="external-link dropdown-item" href="https://garrickadenbuie.com/blog/xaringanthemer-v0-3-0/">xaringanthemer 0.3.0</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="news/index.html">Changelog</a>
+  </div>
 </li>
-<li>
-  <a href="https://github.com/gadenbuie/xaringanthemer">
-    <span class="fab fa-github fa-lg"></span>
+<li class="nav-item">
+  <a class="external-link nav-link" href="https://github.com/gadenbuie/xaringanthemer">
+    <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
 </li>
-<li>
-  <a href="https://twitter.com/grrrck">
-    <span class="fab fa-twitter fa-lg"></span>
+<li class="nav-item">
+  <a class="external-link nav-link" href="https://twitter.com/grrrck">
+    <span class="fab fa fab fa-twitter fa-lg"></span>
      
   </a>
 </li>
-<li>
-  <a href="https://www.garrickadenbuie.com">
-    <span class="fas fa-home fa-lg"></span>
+<li class="nav-item">
+  <a class="external-link nav-link" href="https://www.garrickadenbuie.com">
+    <span class="fas fa fas fa-home fa-lg"></span>
      
   </a>
 </li>
       </ul>
 </div>
-<!--/.nav-collapse -->
+
+    
   </div>
-<!--/.container -->
+</nav><div class="container template-home">
+<div class="row">
+  <main id="main" class="col-md-9"><div class="section level1">
+<div class="page-header">
+<img src="logo.png" class="logo" alt=""><h1 id="xaringanthemer-">xaringanthemer <a class="anchor" aria-label="anchor" href="#xaringanthemer-"></a>
+</h1>
 </div>
-<!--/.navbar -->
-
-      
-
-      </header><div class="row">
-  <div class="contents col-md-9">
-<div id="xaringanthemer-" class="section level1">
-<div class="page-header"><h1 class="hasAnchor">
-<a href="#xaringanthemer-" class="anchor"></a>xaringanthemer <img src="reference/figures/logo.png" align="right" height="175px">
-</h1></div>
 <!-- badges: start -->
-
-<p>Give your <a href="https://github.com/yihui/xaringan">xaringan</a> slides some style with <strong>xaringanthemer</strong> within your <code>slides.Rmd</code> file without (much) CSS.</p>
+<p>Give your <a href="https://github.com/yihui/xaringan" class="external-link">xaringan</a> slides some style with <strong>xaringanthemer</strong> within your <code>slides.Rmd</code> file without (much) CSS.</p>
 <p><img src="https://raw.githubusercontent.com/gadenbuie/xaringanthemer/assets/examples.gif" alt="Animation previewing many xaringanthemer themes"></p>
-<div id="installation" class="section level2">
-<h2 class="hasAnchor">
-<a href="#installation" class="anchor"></a>Installation</h2>
+<div class="section level2">
+<h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
+</h2>
 <p>You can install <strong>xaringanthemer</strong> from CRAN</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"xaringanthemer"</span><span class="op">)</span></code></pre></div>
-<p>or you can install the development version of xaringanthemer from <a href="https://github.com/gadenbuie/xaringanthemer">GitHub</a>.</p>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"xaringanthemer"</span><span class="op">)</span></span></code></pre></div>
+<p>or you can install the development version of xaringanthemer from <a href="https://github.com/gadenbuie/xaringanthemer" class="external-link">GitHub</a>.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># install.packages("remotes")</span>
-<span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"gadenbuie/xaringanthemer"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="co"># install.packages("remotes")</span></span>
+<span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"gadenbuie/xaringanthemer"</span><span class="op">)</span></span></code></pre></div>
 </div>
-<div id="quick-intro" class="section level2">
-<h2 class="hasAnchor">
-<a href="#quick-intro" class="anchor"></a>Quick Intro</h2>
-<!-- Set link to theme-settings, template-variables, theme functions -->
-<p>First, add the <code>xaringan-themer.css</code> file to the YAML header of your xaringan slides.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">output</span><span class="kw">:</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a><span class="at">  xaringan:</span><span class="fu">:moon_reader</span><span class="kw">:</span></span>
-<span id="cb3-3"><a href="#cb3-3"></a><span class="at">    </span><span class="fu">css</span><span class="kw">:</span><span class="at"> xaringan-themer.css</span></span></code></pre></div>
+<div class="section level2">
+<h2 id="quick-intro">Quick Intro<a class="anchor" aria-label="anchor" href="#quick-intro"></a>
+</h2>
+<!-- Set link to theme-settings, template-variables, theme functions --><p>First, add the <code>xaringan-themer.css</code> file to the YAML header of your xaringan slides.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">output</span><span class="kw">:</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="at">  xaringan:</span><span class="fu">:moon_reader</span><span class="kw">:</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">css</span><span class="kw">:</span><span class="at"> xaringan-themer.css</span></span></code></pre></div>
 <p>Then, in a hidden chunk just after the knitr setup chunk, load <strong>xaringanthemer</strong> and try one of the <a href="#themes">theme functions</a>.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1"></a><span class="bn">```{r xaringan-themer, include=FALSE, warning=FALSE}</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a><span class="bn">library(xaringanthemer)</span></span>
-<span id="cb4-3"><a href="#cb4-3"></a><span class="bn">style_mono_accent(</span></span>
-<span id="cb4-4"><a href="#cb4-4"></a><span class="bn">  base_color = "#1c5253",</span></span>
-<span id="cb4-5"><a href="#cb4-5"></a><span class="bn">  header_font_google = google_font("Josefin Sans"),</span></span>
-<span id="cb4-6"><a href="#cb4-6"></a><span class="bn">  text_font_google   = google_font("Montserrat", "300", "300i"),</span></span>
-<span id="cb4-7"><a href="#cb4-7"></a><span class="bn">  code_font_google   = google_font("Fira Mono")</span></span>
-<span id="cb4-8"><a href="#cb4-8"></a><span class="bn">)</span></span>
-<span id="cb4-9"><a href="#cb4-9"></a><span class="bn">```</span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r xaringan-themer, include=FALSE, warning=FALSE}</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="in">library(xaringanthemer)</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="in">style_mono_accent(</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="in">  base_color = "#1c5253",</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="in">  header_font_google = google_font("Josefin Sans"),</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="in">  text_font_google   = google_font("Montserrat", "300", "300i"),</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="in">  code_font_google   = google_font("Fira Mono")</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="in">)</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div>
 <p><img src="https://raw.githubusercontent.com/gadenbuie/xaringanthemer/assets/example_mono_accent_1c5253.png" alt="Example title and normal slides using a green xaringanthemer theme" data-external="1"></p>
-<div id="matching-ggplot-themes" class="section level3">
-<h3 class="hasAnchor">
-<a href="#matching-ggplot-themes" class="anchor"></a>Matching ggplot Themes</h3>
-<p><strong>xaringanthemer</strong> even provides a <a href="https://ggplot2.tidyverse.org">ggplot2</a> theme with <code><a href="reference/theme_xaringan.html">theme_xaringan()</a></code> that uses the colors and fonts from your slide theme. Built on the <a href="https://github.com/yixuan/showtext">showtext</a> package, and designed to work seamlessly with <a href="https://fonts.google.com">Google Fonts</a>.</p>
+<div class="section level3">
+<h3 id="matching-ggplot-themes">Matching ggplot Themes<a class="anchor" aria-label="anchor" href="#matching-ggplot-themes"></a>
+</h3>
+<p><strong>xaringanthemer</strong> even provides a <a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a> theme with <code><a href="reference/theme_xaringan.html">theme_xaringan()</a></code> that uses the colors and fonts from your slide theme. Built on the <a href="https://github.com/yixuan/showtext" class="external-link">showtext</a> package, and designed to work seamlessly with <a href="https://fonts.google.com" class="external-link">Google Fonts</a>.</p>
 <p>Color and fill scales are also provided for matching sequential color scales based on the primary color used in your slides. See <code><a href="reference/scale_xaringan.html">?scale_xaringan</a></code> for more details.</p>
 <p>More details and examples can be found in <code><a href="articles/ggplot2-themes.html">vignette("ggplot2-themes")</a></code>.</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span>
-<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">diamonds</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">cut</span>, fill <span class="op">=</span> <span class="va">cut</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span>show.legend <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>
-    x <span class="op">=</span> <span class="st">"Cut"</span>,
-    y <span class="op">=</span> <span class="st">"Count"</span>,
-    title <span class="op">=</span> <span class="st">"A Fancy diamonds Plot"</span>
-  <span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="reference/theme_xaringan.html">theme_xaringan</a></span><span class="op">(</span>background_color <span class="op">=</span> <span class="st">"#FFFFFF"</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="reference/scale_xaringan.html">scale_xaringan_fill_discrete</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">diamonds</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span><span class="va">cut</span>, fill <span class="op">=</span> <span class="va">cut</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html" class="external-link">geom_bar</a></span><span class="op">(</span>show.legend <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span></span>
+<span>    x <span class="op">=</span> <span class="st">"Cut"</span>,</span>
+<span>    y <span class="op">=</span> <span class="st">"Count"</span>,</span>
+<span>    title <span class="op">=</span> <span class="st">"A Fancy diamonds Plot"</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="reference/theme_xaringan.html">theme_xaringan</a></span><span class="op">(</span>background_color <span class="op">=</span> <span class="st">"#FFFFFF"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="reference/scale_xaringan.html">scale_xaringan_fill_discrete</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/index-theme_xaringan_demo-1.png" width="100%"></p>
 </div>
-<div id="tab-completion" class="section level3">
-<h3 class="hasAnchor">
-<a href="#tab-completion" class="anchor"></a>Tab Completion</h3>
+<div class="section level3">
+<h3 id="tab-completion">Tab Completion<a class="anchor" aria-label="anchor" href="#tab-completion"></a>
+</h3>
 <p><strong>xaringanthemer</strong> is <kbd>Tab</kbd> friendly – <a href="#theme-settings">use autocomplete to explore</a> the <a href="vignettes/template-variables.html">template variables</a> that you can adjust in each of the themes!</p>
 <p><img src="https://raw.githubusercontent.com/gadenbuie/xaringanthemer/assets/example-rstudio-completion.gif" alt="Demonstration of argument auto-completion with RStudio" data-external="1"></p>
 </div>
-<div id="r-markdown-template-in-rstudio" class="section level3">
-<h3 class="hasAnchor">
-<a href="#r-markdown-template-in-rstudio" class="anchor"></a>R Markdown Template in RStudio</h3>
+<div class="section level3">
+<h3 id="r-markdown-template-in-rstudio">R Markdown Template in RStudio<a class="anchor" aria-label="anchor" href="#r-markdown-template-in-rstudio"></a>
+</h3>
 <p>You can also skip the above and just create a <em>Ninja Themed Presentation</em> from the New R Markdown Document menu in RStudio.</p>
-<center>
-<p><img src="https://raw.githubusercontent.com/gadenbuie/xaringanthemer/assets/rmarkdown-template-screenshot.png" alt="The 'New R Markdown Document' menu in RStudio" data-external="1"></p>
-</center>
+<center><p><img src="https://raw.githubusercontent.com/gadenbuie/xaringanthemer/assets/rmarkdown-template-screenshot.png" alt="The 'New R Markdown Document' menu in RStudio" data-external="1"></p></center>
 </div>
 </div>
-<div id="features" class="section level2">
-<h2 class="hasAnchor">
-<a href="#features" class="anchor"></a>Features</h2>
+<div class="section level2">
+<h2 id="features">Features<a class="anchor" aria-label="anchor" href="#features"></a>
+</h2>
 <p>There’s a lot more that <strong>xaringanthemer</strong> can do! <a href="https://pkg.garrickadenbuie.com/xaringanthemer/articles/xaringanthemer.html">Discover xaringanthemer’s features.</a></p>
 </div>
 </div>
-  </div>
-
-  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
-    <div class="links">
-<h2>Links</h2>
+  </main><aside class="col-md-3"><div class="links">
+<h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
-<li>Download from CRAN at <br><a href="https://cloud.r-project.org/package=xaringanthemer">https://​cloud.r-project.org/​package=xaringanthemer</a>
-</li>
-<li>Browse source code at <br><a href="https://github.com/gadenbuie/xaringanthemer/">https://​github.com/​gadenbuie/​xaringanthemer/​</a>
-</li>
-<li>Report a bug at <br><a href="https://github.com/gadenbuie/xaringanthemer/issues">https://​github.com/​gadenbuie/​xaringanthemer/​issues</a>
-</li>
+<li><a href="https://cloud.r-project.org/package=xaringanthemer" class="external-link">View on CRAN</a></li>
+<li><a href="https://github.com/gadenbuie/xaringanthemer/" class="external-link">Browse source code</a></li>
+<li><a href="https://github.com/gadenbuie/xaringanthemer/issues" class="external-link">Report a bug</a></li>
 </ul>
 </div>
+
 <div class="license">
-<h2>License</h2>
+<h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
 <li><a href="LICENSE.html">Full license</a></li>
-<li><small><a href="https://opensource.org/licenses/mit-license.php">MIT</a> + file <a href="LICENSE-text.html">LICENSE</a></small></li>
+<li><small><a href="https://opensource.org/licenses/mit-license.php" class="external-link">MIT</a> + file <a href="LICENSE-text.html">LICENSE</a></small></li>
 </ul>
 </div>
+
+
+<div class="citation">
+<h2 data-toc-skip>Citation</h2>
+<ul class="list-unstyled">
+<li><a href="authors.html#citation">Citing xaringanthemer</a></li>
+</ul>
+</div>
+
 <div class="developers">
-<h2>Developers</h2>
+<h2 data-toc-skip>Developers</h2>
 <ul class="list-unstyled">
 <li>
-<a href="https://www.garrickadenbuie.com">Garrick Aden-Buie</a> <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0002-7111-0077" target="orcid.widget" aria-label="ORCID"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
+<a href="https://www.garrickadenbuie.com" class="external-link">Garrick Aden-Buie</a> <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0002-7111-0077" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
 </ul>
 </div>
 
-  <div class="dev-status">
-<h2>Dev status</h2>
+<div class="dev-status">
+<h2 data-toc-skip>Dev status</h2>
 <ul class="list-unstyled">
-<li><a href="https://CRAN.R-project.org/package=xaringanthemer"><img src="https://www.r-pkg.org/badges/version/xaringanthemer" alt="CRAN status"></a></li>
-<li><a href="https://gadenbuie.r-universe.dev"><img src="https://gadenbuie.r-universe.dev/badges/xaringanthemer" alt="xaringanthemer status badge"></a></li>
-<li><a href="https://lifecycle.r-lib.org/articles/stages.html"><img src="https://img.shields.io/badge/lifecycle-stable-brightgreen.svg" alt="Lifecycle: stable"></a></li>
-<li><a href="https://github.com/gadenbuie/xaringanthemer/actions"><img src="https://github.com/gadenbuie/xaringanthemer/workflows/R-CMD-check/badge.svg?branch=main" alt="R-CMD-Check status badge"></a></li>
-<li><a href="https://codecov.io/github/gadenbuie/xaringanthemer"><img src="https://img.shields.io/codecov/c/github/gadenbuie/xaringanthemer" alt="Codecov"></a></li>
+<li><a href="https://CRAN.R-project.org/package=xaringanthemer" class="external-link"><img src="https://www.r-pkg.org/badges/version/xaringanthemer" alt="CRAN status"></a></li>
+<li><a href="https://gadenbuie.r-universe.dev" class="external-link"><img src="https://gadenbuie.r-universe.dev/badges/xaringanthemer" alt="xaringanthemer status badge"></a></li>
+<li><a href="https://lifecycle.r-lib.org/articles/stages.html" class="external-link"><img src="https://img.shields.io/badge/lifecycle-stable-brightgreen.svg" alt="Lifecycle: stable"></a></li>
+<li><a href="https://github.com/gadenbuie/xaringanthemer/actions" class="external-link"><img src="https://github.com/gadenbuie/xaringanthemer/workflows/R-CMD-check/badge.svg?branch=main" alt="R-CMD-Check status badge"></a></li>
+<li><a href="https://codecov.io/github/gadenbuie/xaringanthemer" class="external-link"><img src="https://img.shields.io/codecov/c/github/gadenbuie/xaringanthemer" alt="Codecov"></a></li>
 </ul>
 </div>
-</div>
-</div>
 
-
-      <footer><div class="copyright">
-  <p>Developed by <a href="https://www.garrickadenbuie.com">Garrick Aden-Buie</a>.</p>
+  </aside>
 </div>
 
-<div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+
+    <footer><div class="pkgdown-footer-left">
+  <p></p>
+<p>Developed by <a href="https://www.garrickadenbuie.com" class="external-link">Garrick Aden-Buie</a>.</p>
 </div>
 
-      </footer>
+<div class="pkgdown-footer-right">
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
+</div>
+
+    </footer>
 </div>
 
   
 
-
-  </body>
+  <script>window.jQuery('.navbar-brand + small').addClass(['badge', 'bg-secondary', 'text-light']).removeClass('text-muted')</script>
+</body>
 </html>
