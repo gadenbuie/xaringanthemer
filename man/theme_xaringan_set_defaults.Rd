@@ -47,10 +47,10 @@ defaults with \code{theme_xaringan_restore_defaults()}. By default,
 }
 \section{Functions}{
 \itemize{
-\item \code{theme_xaringan_restore_defaults}: Restore previous or standard
+\item \code{theme_xaringan_restore_defaults()}: Restore previous or standard
 \pkg{ggplot2} \emph{geom} defaults.
-}}
 
+}}
 \seealso{
 Other xaringanthemer ggplot2 themes: 
 \code{\link{theme_xaringan_base}()},

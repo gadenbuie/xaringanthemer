@@ -6,7 +6,7 @@
 \alias{xaringanthemer-package}
 \title{xaringanthemer: Custom 'xaringan' CSS Themes}
 \description{
-\if{html}{\figure{logo.png}{options: align='right' alt='logo' width='120'}}
+\if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
 
 Create beautifully color-coordinated and customized themes for your 'xaringan' slides, without writing any CSS. Complete your slide theme with 'ggplot2' themes that match the font and colors used in your slides. Customized styles can be created directly in your slides' 'R Markdown' source file or in a separate external script.
 }

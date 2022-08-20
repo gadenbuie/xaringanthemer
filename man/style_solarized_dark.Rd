@@ -48,8 +48,7 @@ style_solarized_dark(
   header_background_text_color = background_color,
   header_background_padding = NULL,
   header_background_content_padding_top = "7rem",
-  header_background_ignore_classes = c("normal", "inverse", "title", "middle",
-    "bottom"),
+  header_background_ignore_classes = c("normal", "inverse", "title", "middle", "bottom"),
   text_slide_number_font_size = "0.9rem",
   text_font_google = NULL,
   text_font_family = xaringanthemer_font_default("text_font_family"),
@@ -433,7 +432,9 @@ Works well with "\code{highlightStyle: solarized-dark}" or
  To use the styles created by this theme function, make sure
 that you use \code{xaringan-themer.css} as your CSS file in your slides' YAML
 header. If you change the name of the output file using the \code{outfile}
-argument, use that name instead of the default file name.\if{html}{\out{<div class="sourceCode yaml">}}\preformatted{output:
+argument, use that name instead of the default file name.
+
+\if{html}{\out{<div class="sourceCode yaml">}}\preformatted{output:
 xaringan::moon_reader:
   css: xaringan-themer.css
 }\if{html}{\out{</div>}}

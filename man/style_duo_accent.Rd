@@ -13,8 +13,7 @@ style_duo_accent(
   header_color = primary_color,
   background_color = white_color,
   link_color = choose_dark_or_light(secondary_color, primary_color, secondary_color),
-  text_bold_color = choose_dark_or_light(secondary_color, primary_color,
-    secondary_color),
+  text_bold_color = choose_dark_or_light(secondary_color, primary_color, secondary_color),
   text_slide_number_color = primary_color,
   padding = "16px 64px 16px 64px",
   background_image = NULL,
@@ -28,11 +27,9 @@ style_duo_accent(
   inverse_background_color = secondary_color,
   inverse_text_color = choose_dark_or_light(secondary_color, black_color, white_color),
   inverse_text_shadow = FALSE,
-  inverse_header_color = choose_dark_or_light(secondary_color, black_color,
-    white_color),
+  inverse_header_color = choose_dark_or_light(secondary_color, black_color, white_color),
   inverse_link_color = link_color,
-  title_slide_text_color = choose_dark_or_light(primary_color, black_color,
-    white_color),
+  title_slide_text_color = choose_dark_or_light(primary_color, black_color, white_color),
   title_slide_background_color = primary_color,
   title_slide_background_image = NULL,
   title_slide_background_size = NULL,
@@ -56,8 +53,7 @@ style_duo_accent(
   header_background_text_color = background_color,
   header_background_padding = NULL,
   header_background_content_padding_top = "7rem",
-  header_background_ignore_classes = c("normal", "inverse", "title", "middle",
-    "bottom"),
+  header_background_ignore_classes = c("normal", "inverse", "title", "middle", "bottom"),
   text_slide_number_font_size = "0.9rem",
   text_font_google = NULL,
   text_font_family = xaringanthemer_font_default("text_font_family"),
@@ -466,7 +462,9 @@ accents on select elements (headers, bold text, etc.).
  To use the styles created by this theme function, make sure
 that you use \code{xaringan-themer.css} as your CSS file in your slides' YAML
 header. If you change the name of the output file using the \code{outfile}
-argument, use that name instead of the default file name.\if{html}{\out{<div class="sourceCode yaml">}}\preformatted{output:
+argument, use that name instead of the default file name.
+
+\if{html}{\out{<div class="sourceCode yaml">}}\preformatted{output:
 xaringan::moon_reader:
   css: xaringan-themer.css
 }\if{html}{\out{</div>}}
