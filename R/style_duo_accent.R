@@ -361,6 +361,10 @@ style_duo_accent <- function(
   outfile = "xaringan-themer.css"
 ) {
   # DO NOT EDIT - Generated from inst/scripts/generate_theme_functions.R
+  primary_color <- unname(primary_color)
+  secondary_color <- unname(secondary_color)
+  white_color <- unname(white_color)
+  black_color <- unname(black_color)
   colors <- c(primary = primary_color, secondary = secondary_color, white = white_color, black = black_color, colors)
   eval(parse(text = call_style_xaringan()))
 }

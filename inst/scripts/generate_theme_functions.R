@@ -91,9 +91,11 @@ pack_inline_code <- function(x) {
 
 include_theme_colors <- function(theme_colors = NULL) {
   if (is.null(theme_colors)) return(NULL)
+  unname <- glue::glue("{theme_colors} <- unname({theme_colors})")
+  unname <- paste(unname, collapse = "\n  ")
   x <- glue::glue('{names(theme_colors)} = {theme_colors}')
   x <- paste(x, collapse = ", ")
-  glue::glue("  colors <- c({x}, colors)")
+  glue::glue("  {unname}\n  colors <- c({x}, colors)", .trim = FALSE)
 }
 
 # ---- Write Xaringan Theme Function ----

@@ -347,6 +347,8 @@ style_duo <- function(
   outfile = "xaringan-themer.css"
 ) {
   # DO NOT EDIT - Generated from inst/scripts/generate_theme_functions.R
+  primary_color <- unname(primary_color)
+  secondary_color <- unname(secondary_color)
   colors <- c(primary = primary_color, secondary = secondary_color, colors)
   eval(parse(text = call_style_xaringan()))
 }

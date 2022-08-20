@@ -351,6 +351,9 @@ style_mono_accent <- function(
   outfile = "xaringan-themer.css"
 ) {
   # DO NOT EDIT - Generated from inst/scripts/generate_theme_functions.R
+  base_color <- unname(base_color)
+  white_color <- unname(white_color)
+  black_color <- unname(black_color)
   colors <- c(base = base_color, white = white_color, black = black_color, colors)
   eval(parse(text = call_style_xaringan()))
 }
