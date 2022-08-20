@@ -1,5 +1,16 @@
 <!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
 
+# xaringanthemer 0.4.2
+
+- Use `.table-unshaded` class on a tables to prevent xaringanthemer's table heading and row shading (thanks @dragonattheend, #74)
+
+- Use `inverse_text_color` as the default for `inverse_header_color` in most places (#60)
+
+- Fixed a bug that happened when providing named values for key theme colors (#62)
+
+- Re-document for CRAN
+
+
 # xaringanthemer 0.4.1
 
 * Text alignment in code blocks in `left`, `center`, or `right` aligned slides 
