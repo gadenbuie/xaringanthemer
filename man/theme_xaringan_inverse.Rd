@@ -109,8 +109,8 @@ if (has_ggplot2) {
 }
 \seealso{
 Other xaringanthemer ggplot2 themes: 
+\code{\link{theme_xaringan}()},
 \code{\link{theme_xaringan_base}()},
-\code{\link{theme_xaringan_set_defaults}()},
-\code{\link{theme_xaringan}()}
+\code{\link{theme_xaringan_set_defaults}()}
 }
 \concept{xaringanthemer ggplot2 themes}

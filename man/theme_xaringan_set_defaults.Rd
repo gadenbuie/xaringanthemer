@@ -53,8 +53,8 @@ defaults with \code{theme_xaringan_restore_defaults()}. By default,
 }}
 \seealso{
 Other xaringanthemer ggplot2 themes: 
+\code{\link{theme_xaringan}()},
 \code{\link{theme_xaringan_base}()},
-\code{\link{theme_xaringan_inverse}()},
-\code{\link{theme_xaringan}()}
+\code{\link{theme_xaringan_inverse}()}
 }
 \concept{xaringanthemer ggplot2 themes}

@@ -457,11 +457,11 @@ style_solarized_dark(
 }
 \seealso{
 Other themes: 
-\code{\link{style_duo_accent_inverse}()},
-\code{\link{style_duo_accent}()},
 \code{\link{style_duo}()},
-\code{\link{style_mono_accent_inverse}()},
+\code{\link{style_duo_accent}()},
+\code{\link{style_duo_accent_inverse}()},
 \code{\link{style_mono_accent}()},
+\code{\link{style_mono_accent_inverse}()},
 \code{\link{style_mono_dark}()},
 \code{\link{style_mono_light}()},
 \code{\link{style_solarized_light}()},
