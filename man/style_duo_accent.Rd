@@ -485,10 +485,10 @@ style_duo_accent(
 }
 \seealso{
 Other themes: 
-\code{\link{style_duo_accent_inverse}()},
 \code{\link{style_duo}()},
-\code{\link{style_mono_accent_inverse}()},
+\code{\link{style_duo_accent_inverse}()},
 \code{\link{style_mono_accent}()},
+\code{\link{style_mono_accent_inverse}()},
 \code{\link{style_mono_dark}()},
 \code{\link{style_mono_light}()},
 \code{\link{style_solarized_dark}()},
@@ -496,8 +496,8 @@ Other themes:
 \code{\link{xaringanthemer_font_default}()}
 
 Other Duotone themes: 
-\code{\link{style_duo_accent_inverse}()},
-\code{\link{style_duo}()}
+\code{\link{style_duo}()},
+\code{\link{style_duo_accent_inverse}()}
 }
 \concept{Duotone themes}
 \concept{themes}
