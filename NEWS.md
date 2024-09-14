@@ -1,3 +1,5 @@
+# xaringanthemer (development version)
+
 <!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
 
 # xaringanthemer 0.4.2
