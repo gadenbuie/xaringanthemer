@@ -22,6 +22,7 @@ xaringanthemer_font_default <- function(font_arg) {
   x
 }
 
-print.xaringanthemer_default <- function(x) {
+#' @export
+print.xaringanthemer_default <- function(x, ...) {
   print(unclass(x))
 }

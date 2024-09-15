@@ -101,7 +101,8 @@ google_language_codes <- function(
   unique(match.arg(language_codes, several.ok = TRUE))
 }
 
-print.google_font <- function(x) {
+#' @export
+print.google_font <- function(x, ...) {
   cat(
     "Family: ",
     x$family,
