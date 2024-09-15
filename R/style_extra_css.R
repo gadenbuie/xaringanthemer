@@ -61,7 +61,7 @@ list2css <- function(css) {
   if (is.null(names(css))) {
     stop("All elements in `css` list must be named", call. = FALSE)
   }
-  if (purrr::vec_depth(css) != 3) {
+  if (purrr::pluck_depth(css) != 3) {
     stop(str_wrap(
       "`css` list must be a named list within a named list, e.g.:\n",
       '  list(".class-id" = list("css-property" = "value"))'
