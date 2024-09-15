@@ -1,4 +1,3 @@
-
 #' A Plot Theme for ggplot2 by xaringanthemer
 #'
 #' @description
