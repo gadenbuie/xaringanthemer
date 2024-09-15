@@ -1,4 +1,4 @@
-# xaringanthemer (development version)
+# xaringanthemer 0.4.3
 
 - Update the spelling of `colour` for compatibility with ggplot2 >= 3.5.1 (@teunbrand #79).
 
