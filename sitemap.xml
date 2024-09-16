@@ -1,114 +1,40 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://pkg.garrickadenbuie.com/xaringanthemer/404.html</loc>
-  </url>
-  <url>
-    <loc>https://pkg.garrickadenbuie.com/xaringanthemer/LICENSE-text.html</loc>
-  </url>
-  <url>
-    <loc>https://pkg.garrickadenbuie.com/xaringanthemer/LICENSE.html</loc>
-  </url>
-  <url>
-    <loc>https://pkg.garrickadenbuie.com/xaringanthemer/articles/fonts.html</loc>
-  </url>
-  <url>
-    <loc>https://pkg.garrickadenbuie.com/xaringanthemer/articles/ggplot2-themes.html</loc>
-  </url>
-  <url>
-    <loc>https://pkg.garrickadenbuie.com/xaringanthemer/articles/index.html</loc>
-  </url>
-  <url>
-    <loc>https://pkg.garrickadenbuie.com/xaringanthemer/articles/template-variables.html</loc>
-  </url>
-  <url>
-    <loc>https://pkg.garrickadenbuie.com/xaringanthemer/articles/themes.html</loc>
-  </url>
-  <url>
-    <loc>https://pkg.garrickadenbuie.com/xaringanthemer/articles/xaringanthemer.html</loc>
-  </url>
-  <url>
-    <loc>https://pkg.garrickadenbuie.com/xaringanthemer/authors.html</loc>
-  </url>
-  <url>
-    <loc>https://pkg.garrickadenbuie.com/xaringanthemer/index.html</loc>
-  </url>
-  <url>
-    <loc>https://pkg.garrickadenbuie.com/xaringanthemer/news/index.html</loc>
-  </url>
-  <url>
-    <loc>https://pkg.garrickadenbuie.com/xaringanthemer/reference/apply_alpha.html</loc>
-  </url>
-  <url>
-    <loc>https://pkg.garrickadenbuie.com/xaringanthemer/reference/choose_dark_or_light.html</loc>
-  </url>
-  <url>
-    <loc>https://pkg.garrickadenbuie.com/xaringanthemer/reference/google_font.html</loc>
-  </url>
-  <url>
-    <loc>https://pkg.garrickadenbuie.com/xaringanthemer/reference/google_language_codes.html</loc>
-  </url>
-  <url>
-    <loc>https://pkg.garrickadenbuie.com/xaringanthemer/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>https://pkg.garrickadenbuie.com/xaringanthemer/reference/lighten_darken_color.html</loc>
-  </url>
-  <url>
-    <loc>https://pkg.garrickadenbuie.com/xaringanthemer/reference/scale_xaringan.html</loc>
-  </url>
-  <url>
-    <loc>https://pkg.garrickadenbuie.com/xaringanthemer/reference/style_duo.html</loc>
-  </url>
-  <url>
-    <loc>https://pkg.garrickadenbuie.com/xaringanthemer/reference/style_duo_accent.html</loc>
-  </url>
-  <url>
-    <loc>https://pkg.garrickadenbuie.com/xaringanthemer/reference/style_duo_accent_inverse.html</loc>
-  </url>
-  <url>
-    <loc>https://pkg.garrickadenbuie.com/xaringanthemer/reference/style_extra_css.html</loc>
-  </url>
-  <url>
-    <loc>https://pkg.garrickadenbuie.com/xaringanthemer/reference/style_mono_accent.html</loc>
-  </url>
-  <url>
-    <loc>https://pkg.garrickadenbuie.com/xaringanthemer/reference/style_mono_accent_inverse.html</loc>
-  </url>
-  <url>
-    <loc>https://pkg.garrickadenbuie.com/xaringanthemer/reference/style_mono_dark.html</loc>
-  </url>
-  <url>
-    <loc>https://pkg.garrickadenbuie.com/xaringanthemer/reference/style_mono_light.html</loc>
-  </url>
-  <url>
-    <loc>https://pkg.garrickadenbuie.com/xaringanthemer/reference/style_solarized_dark.html</loc>
-  </url>
-  <url>
-    <loc>https://pkg.garrickadenbuie.com/xaringanthemer/reference/style_solarized_light.html</loc>
-  </url>
-  <url>
-    <loc>https://pkg.garrickadenbuie.com/xaringanthemer/reference/style_xaringan.html</loc>
-  </url>
-  <url>
-    <loc>https://pkg.garrickadenbuie.com/xaringanthemer/reference/theme_xaringan.html</loc>
-  </url>
-  <url>
-    <loc>https://pkg.garrickadenbuie.com/xaringanthemer/reference/theme_xaringan_base.html</loc>
-  </url>
-  <url>
-    <loc>https://pkg.garrickadenbuie.com/xaringanthemer/reference/theme_xaringan_get_value.html</loc>
-  </url>
-  <url>
-    <loc>https://pkg.garrickadenbuie.com/xaringanthemer/reference/theme_xaringan_inverse.html</loc>
-  </url>
-  <url>
-    <loc>https://pkg.garrickadenbuie.com/xaringanthemer/reference/theme_xaringan_set_defaults.html</loc>
-  </url>
-  <url>
-    <loc>https://pkg.garrickadenbuie.com/xaringanthemer/reference/xaringanthemer-deprecated.html</loc>
-  </url>
-  <url>
-    <loc>https://pkg.garrickadenbuie.com/xaringanthemer/reference/xaringanthemer-package.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>https://pkg.garrickadenbuie.com/xaringanthemer/404.html</loc></url>
+<url><loc>https://pkg.garrickadenbuie.com/xaringanthemer/LICENSE-text.html</loc></url>
+<url><loc>https://pkg.garrickadenbuie.com/xaringanthemer/LICENSE.html</loc></url>
+<url><loc>https://pkg.garrickadenbuie.com/xaringanthemer/articles/fonts.html</loc></url>
+<url><loc>https://pkg.garrickadenbuie.com/xaringanthemer/articles/ggplot2-themes.html</loc></url>
+<url><loc>https://pkg.garrickadenbuie.com/xaringanthemer/articles/index.html</loc></url>
+<url><loc>https://pkg.garrickadenbuie.com/xaringanthemer/articles/template-variables.html</loc></url>
+<url><loc>https://pkg.garrickadenbuie.com/xaringanthemer/articles/themes.html</loc></url>
+<url><loc>https://pkg.garrickadenbuie.com/xaringanthemer/articles/xaringanthemer.html</loc></url>
+<url><loc>https://pkg.garrickadenbuie.com/xaringanthemer/authors.html</loc></url>
+<url><loc>https://pkg.garrickadenbuie.com/xaringanthemer/index.html</loc></url>
+<url><loc>https://pkg.garrickadenbuie.com/xaringanthemer/news/index.html</loc></url>
+<url><loc>https://pkg.garrickadenbuie.com/xaringanthemer/reference/apply_alpha.html</loc></url>
+<url><loc>https://pkg.garrickadenbuie.com/xaringanthemer/reference/choose_dark_or_light.html</loc></url>
+<url><loc>https://pkg.garrickadenbuie.com/xaringanthemer/reference/google_font.html</loc></url>
+<url><loc>https://pkg.garrickadenbuie.com/xaringanthemer/reference/google_language_codes.html</loc></url>
+<url><loc>https://pkg.garrickadenbuie.com/xaringanthemer/reference/index.html</loc></url>
+<url><loc>https://pkg.garrickadenbuie.com/xaringanthemer/reference/lighten_darken_color.html</loc></url>
+<url><loc>https://pkg.garrickadenbuie.com/xaringanthemer/reference/scale_xaringan.html</loc></url>
+<url><loc>https://pkg.garrickadenbuie.com/xaringanthemer/reference/style_duo.html</loc></url>
+<url><loc>https://pkg.garrickadenbuie.com/xaringanthemer/reference/style_duo_accent.html</loc></url>
+<url><loc>https://pkg.garrickadenbuie.com/xaringanthemer/reference/style_duo_accent_inverse.html</loc></url>
+<url><loc>https://pkg.garrickadenbuie.com/xaringanthemer/reference/style_extra_css.html</loc></url>
+<url><loc>https://pkg.garrickadenbuie.com/xaringanthemer/reference/style_mono_accent.html</loc></url>
+<url><loc>https://pkg.garrickadenbuie.com/xaringanthemer/reference/style_mono_accent_inverse.html</loc></url>
+<url><loc>https://pkg.garrickadenbuie.com/xaringanthemer/reference/style_mono_dark.html</loc></url>
+<url><loc>https://pkg.garrickadenbuie.com/xaringanthemer/reference/style_mono_light.html</loc></url>
+<url><loc>https://pkg.garrickadenbuie.com/xaringanthemer/reference/style_solarized_dark.html</loc></url>
+<url><loc>https://pkg.garrickadenbuie.com/xaringanthemer/reference/style_solarized_light.html</loc></url>
+<url><loc>https://pkg.garrickadenbuie.com/xaringanthemer/reference/style_xaringan.html</loc></url>
+<url><loc>https://pkg.garrickadenbuie.com/xaringanthemer/reference/theme_xaringan.html</loc></url>
+<url><loc>https://pkg.garrickadenbuie.com/xaringanthemer/reference/theme_xaringan_base.html</loc></url>
+<url><loc>https://pkg.garrickadenbuie.com/xaringanthemer/reference/theme_xaringan_get_value.html</loc></url>
+<url><loc>https://pkg.garrickadenbuie.com/xaringanthemer/reference/theme_xaringan_inverse.html</loc></url>
+<url><loc>https://pkg.garrickadenbuie.com/xaringanthemer/reference/theme_xaringan_set_defaults.html</loc></url>
+<url><loc>https://pkg.garrickadenbuie.com/xaringanthemer/reference/xaringanthemer-deprecated.html</loc></url>
+<url><loc>https://pkg.garrickadenbuie.com/xaringanthemer/reference/xaringanthemer-package.html</loc></url>
 </urlset>
+

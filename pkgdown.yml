@@ -1,5 +1,5 @@
-pandoc: 2.14.2
-pkgdown: 2.0.6
+pandoc: 3.1.11
+pkgdown: 2.1.0
 pkgdown_sha: ~
 articles:
   fonts: fonts.html
@@ -7,8 +7,7 @@ articles:
   template-variables: template-variables.html
   themes: themes.html
   xaringanthemer: xaringanthemer.html
-last_built: 2022-08-20T22:52Z
+last_built: 2024-09-16T01:35Z
 urls:
   reference: https://pkg.garrickadenbuie.com/xaringanthemer/reference
   article: https://pkg.garrickadenbuie.com/xaringanthemer/articles
-
