@@ -13,7 +13,7 @@ README.html
 .history/
 
 # Directories that start with _
-_*/
+/_*/
 
 ## https://github.com/github/gitignore/blob/master/R.gitignore
 # History files

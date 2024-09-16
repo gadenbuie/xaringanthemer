@@ -1,4 +1,3 @@
-
 test_theme_file <- function(theme = "duo", theme_file = paste0(theme, ".css"), ...) {
   local_edition(2)
   on.exit(local_edition(3))

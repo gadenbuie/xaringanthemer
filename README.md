@@ -13,7 +13,7 @@ badge](https://gadenbuie.r-universe.dev/badges/xaringanthemer)](https://gadenbui
 stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html)
 [![R-CMD-Check status
 badge](https://github.com/gadenbuie/xaringanthemer/workflows/R-CMD-check/badge.svg?branch=main)](https://github.com/gadenbuie/xaringanthemer/actions)
-[![Codecov](https://img.shields.io/codecov/c/github/gadenbuie/xaringanthemer)](https://codecov.io/github/gadenbuie/xaringanthemer)
+[![Codecov](https://img.shields.io/codecov/c/github/gadenbuie/xaringanthemer)](https://app.codecov.io/github/gadenbuie/xaringanthemer)
 <!-- badges: end -->
 
 Give your [xaringan](https://github.com/yihui/xaringan) slides some
@@ -40,6 +40,6 @@ remotes::install_github("gadenbuie/xaringanthemer")
 
 ## Features
 
-There’s a lot more that **xaringanthemer** can do\! [Discover
+There’s a lot more that **xaringanthemer** can do! [Discover
 xaringanthemer’s
 features.](https://pkg.garrickadenbuie.com/xaringanthemer/articles/xaringanthemer.html)

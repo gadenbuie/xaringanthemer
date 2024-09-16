@@ -265,7 +265,7 @@ test_that("theme_xaringan_restore_defaults() restores defaults", {
   expect_equal(res$after_set$line_colour, "#0088ff")
   expect_equal(res$after_set$bar_fill, "#FF8800")
   expect_equal(res$after_restore$line_colour, res$original$colour)
-  expect_equal(res$after_restore$bar_fill, res$original$fil)
+  expect_equal(res$after_restore$bar_fill, res$original$fill)
 })
 
 describe("theme_xaringan_get_value()", {
