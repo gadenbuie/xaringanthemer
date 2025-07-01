@@ -17,7 +17,8 @@ scale_xaringan_discrete(
   ...,
   color = NULL,
   direction = 1,
-  inverse = FALSE
+  inverse = FALSE,
+  na.value = "grey50"
 )
 
 scale_xaringan_fill_discrete(..., color = NULL, direction = 1, inverse = FALSE)
@@ -92,11 +93,11 @@ reverse the direction, e.g. \code{direction = -1}.}
 color is chosen to work well with the inverse slide styles, namely the
 value of \code{inverse_header_color}}
 
+\item{na.value}{Color to be used for missing data points.}
+
 \item{begin}{Number in the range of \code{[0, 1]} indicating to which point in the color scale the smallest data value should be mapped.}
 
 \item{end}{Number in the range of \code{[0, 1]} indicating to which point in the color scale the largest data value should be mapped.}
-
-\item{na.value}{Color to be used for missing data points.}
 }
 \description{
 \ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#maturing}{\figure{lifecycle-maturing.svg}{options: alt='[Maturing]'}}}{\strong{[Maturing]}}

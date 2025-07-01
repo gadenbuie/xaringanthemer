@@ -596,7 +596,8 @@ scale_xaringan_discrete <- function(
   ...,
   color = NULL,
   direction = 1,
-  inverse = FALSE
+  inverse = FALSE,
+  na.value = "grey50"
 ) {
   requires_package("ggplot2", "scale_xaringan_discrete")
 
@@ -613,7 +614,7 @@ scale_xaringan_discrete <- function(
     )
   }
 
-  ggplot2::discrete_scale(aes_type, "manual", pal, ...)
+  ggplot2::discrete_scale(aes_type, "manual", pal, ..., na.value = na.value)
 }
 
 #' @rdname scale_xaringan
