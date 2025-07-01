@@ -596,7 +596,8 @@ scale_xaringan_discrete <- function(
   ...,
   color = NULL,
   direction = 1,
-  inverse = FALSE
+  inverse = FALSE,
+  na.value = "grey50"
 ) {
   requires_package("ggplot2", "scale_xaringan_discrete")
 
@@ -613,7 +614,7 @@ scale_xaringan_discrete <- function(
     )
   }
 
-  ggplot2::discrete_scale(aes_type, "manual", pal, ...)
+  ggplot2::discrete_scale(aes_type, "manual", pal, ..., na.value = na.value)
 }
 
 #' @rdname scale_xaringan
@@ -662,7 +663,8 @@ scale_xaringan_continuous <- function(
   color = NULL,
   begin = 0,
   end = 1,
-  inverse = FALSE
+  inverse = FALSE,
+  na.value = "grey50"
 ) {
   requires_package("ggplot2", "scale_xaringan_continuous")
   requires_package("scales", "scale_xaringan_continuous")
@@ -687,6 +689,7 @@ scale_xaringan_continuous <- function(
     palette = scales::gradient_n_pal(colors, values = NULL),
     rescaler = rescaler,
     oob = scales::censor,
+    na.value = na.value,
     ...
   )
 }

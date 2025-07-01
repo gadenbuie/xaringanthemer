@@ -17,7 +17,8 @@ scale_xaringan_discrete(
   ...,
   color = NULL,
   direction = 1,
-  inverse = FALSE
+  inverse = FALSE,
+  na.value = "grey50"
 )
 
 scale_xaringan_fill_discrete(..., color = NULL, direction = 1, inverse = FALSE)
@@ -42,7 +43,8 @@ scale_xaringan_continuous(
   color = NULL,
   begin = 0,
   end = 1,
-  inverse = FALSE
+  inverse = FALSE,
+  na.value = "grey50"
 )
 
 scale_xaringan_fill_continuous(
@@ -90,6 +92,8 @@ reverse the direction, e.g. \code{direction = -1}.}
 \item{inverse}{If \code{color} is not supplied and \code{inverse = TRUE}, a primary
 color is chosen to work well with the inverse slide styles, namely the
 value of \code{inverse_header_color}}
+
+\item{na.value}{Color to be used for missing data points.}
 
 \item{begin}{Number in the range of \code{[0, 1]} indicating to which point in the color scale the smallest data value should be mapped.}
 
