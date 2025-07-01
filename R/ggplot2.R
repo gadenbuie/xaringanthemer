@@ -662,7 +662,8 @@ scale_xaringan_continuous <- function(
   color = NULL,
   begin = 0,
   end = 1,
-  inverse = FALSE
+  inverse = FALSE,
+  na.value = NA
 ) {
   requires_package("ggplot2", "scale_xaringan_continuous")
   requires_package("scales", "scale_xaringan_continuous")
@@ -687,6 +688,7 @@ scale_xaringan_continuous <- function(
     palette = scales::gradient_n_pal(colors, values = NULL),
     rescaler = rescaler,
     oob = scales::censor,
+    na.value = na.value,
     ...
   )
 }
