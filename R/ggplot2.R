@@ -663,7 +663,7 @@ scale_xaringan_continuous <- function(
   begin = 0,
   end = 1,
   inverse = FALSE,
-  na.value = NA
+  na.value = "grey50"
 ) {
   requires_package("ggplot2", "scale_xaringan_continuous")
   requires_package("scales", "scale_xaringan_continuous")
