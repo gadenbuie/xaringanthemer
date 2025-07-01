@@ -43,7 +43,7 @@ scale_xaringan_continuous(
   begin = 0,
   end = 1,
   inverse = FALSE,
-  na.value = NA
+  na.value = "grey50"
 )
 
 scale_xaringan_fill_continuous(
