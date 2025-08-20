@@ -339,20 +339,7 @@ the `sysfonts::font_add()` function requires the font file to be local.
 
 By inspecting the CSS file at the link I used in `text_font_url`,
 I found a direct URL for the `.ttf` files for _GlacialIndifferenceRegular_.
-I've included the code I used to download the font to a temporary file below,
-but in case the URL breaks, I've included _Glacial Indifference_
-in the xaringanthemer package.
-
-```{r eval=FALSE}
-font_url <- file.path(
-  "https://fontlibrary.org/assets/fonts/glacial-indifference/",
-  "5f2cf277506e19ec77729122f27b1faf/0820b3c58fed35de298219f314635982",
-  "GlacialIndifferenceRegular.ttf"
-)
-
-font_temp <- tempfile()
-download.file(font_url, font_temp)
-```
+I've included _Glacial Indifference_ in the xaringanthemer package.
 
 ```{r sysfonts-custom-font, fig.width = 10}
 # Path to the local custom font file
