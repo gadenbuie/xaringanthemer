@@ -1,4 +1,4 @@
-# xaringanthemer (development version)
+# xaringanthemer 0.4.4
 
 - `scale_xaringan_continuous()` and `scale_xaringan_discrete()` now set
   `na.value = "grey50"` by default for compatibility with ggplot2 > 3.5.2
