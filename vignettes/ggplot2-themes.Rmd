@@ -318,7 +318,7 @@ you need to manually register the font with sysfonts
 so that it can be used in your plots.
 
 I found a nice open source font called
-[Glacial Indifference](https://fontlibrary.org/en/font/glacial-indifference)
+**Glacial Indifference**
 by Alfredo Marco Pradil
 available at [fontlibrary.org](https://fontlibrary.org).
 In my theme style function,
