@@ -1,3 +1,5 @@
+# xaringanthemer (development version)
+
 # xaringanthemer 0.4.4
 
 - `scale_xaringan_continuous()` and `scale_xaringan_discrete()` now set
