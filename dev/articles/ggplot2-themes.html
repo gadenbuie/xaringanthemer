@@ -29,7 +29,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">xaringanthemer</a>
 
-    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">0.4.3.9000</small>
+    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">0.4.4.9000</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -344,8 +344,8 @@ accept <code><a href="../reference/google_font.html">google_font()</a></code>s d
 <p>If you want to use a font that isn’t in the Google Fonts collection,
 you need to manually register the font with sysfonts so that it can be
 used in your plots.</p>
-<p>I found a nice open source font called <a href="https://fontlibrary.org/en/font/glacial-indifference" class="external-link">Glacial
-Indifference</a> by Alfredo Marco Pradil available at <a href="https://fontlibrary.org" class="external-link">fontlibrary.org</a>. In my theme style
+<p>I found a nice open source font called <strong>Glacial
+Indifference</strong> by Alfredo Marco Pradil available at <a href="https://fontlibrary.org" class="external-link">fontlibrary.org</a>. In my theme style
 function, I would use</p>
 <pre><code><span><span class="fu"><a href="../reference/style_mono_accent.html">style_mono_accent</a></span><span class="op">(</span></span>
 <span>  text_font_family <span class="op">=</span> <span class="st">"GlacialIndifferenceRegular"</span>,</span>
@@ -360,19 +360,9 @@ font file to be local.</p>
 <p>By inspecting the CSS file at the link I used in
 <code>text_font_url</code>, I found a direct URL for the
 <code>.ttf</code> files for <em>GlacialIndifferenceRegular</em>. I’ve
-included the code I used to download the font to a temporary file below,
-but in case the URL breaks, I’ve included <em>Glacial Indifference</em>
-in the xaringanthemer package.</p>
+included <em>Glacial Indifference</em> in the xaringanthemer
+package.</p>
 <div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">font_url</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/file.path.html" class="external-link">file.path</a></span><span class="op">(</span></span>
-<span>  <span class="st">"https://fontlibrary.org/assets/fonts/glacial-indifference/"</span>,</span>
-<span>  <span class="st">"5f2cf277506e19ec77729122f27b1faf/0820b3c58fed35de298219f314635982"</span>,</span>
-<span>  <span class="st">"GlacialIndifferenceRegular.ttf"</span></span>
-<span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">font_temp</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/tempfile.html" class="external-link">tempfile</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/download.file.html" class="external-link">download.file</a></span><span class="op">(</span><span class="va">font_url</span>, <span class="va">font_temp</span><span class="op">)</span></span></code></pre></div>
-<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Path to the local custom font file</span></span>
 <span><span class="va">font_temp</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span></span>
 <span>  <span class="st">"fonts/GlacialIndifferenceRegular.ttf"</span>, package <span class="op">=</span> <span class="st">"xaringanthemer"</span></span>
@@ -428,7 +418,7 @@ figure</p></li>
 <p>On MacOS, you’ll need to have <code>xquartz</code> installed for
 <code>sysfonts</code> to work properly. If you use <a href="https://brew.sh/" class="external-link">homebrew</a>, you can install
 <code>xquartz</code> with</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a><span class="ex">brew</span> cask install xquartz</span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a><span class="ex">brew</span> cask install xquartz</span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="in-rstudio">In RStudio<a class="anchor" aria-label="anchor" href="#in-rstudio"></a>
@@ -442,7 +432,7 @@ all.</p>
 <code><a href="https://rdrr.io/r/grDevices/x11.html" class="external-link">x11()</a></code> (Windows/Unix) plot device. The plots will then
 render in a separate window. I usually create a <code><a href="https://rdrr.io/r/grDevices/quartz.html" class="external-link">quartz()</a></code>
 device with a similar size ratio to my slides.</p>
-<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## On Windows</span></span>
 <span><span class="co"># x11(width = 16 * 2/3, height = 9 * 2/3)</span></span>
 <span></span>
